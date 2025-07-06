@@ -46,18 +46,18 @@ export default function OrbitingCircles({
             "--duration": duration,
             "--radius": radius,
             "--delay": -delay,
+            animationTimingFunction: "linear",
+            animationName: "orbit",
+            animationDuration: `${duration}s`,
+            animationDelay: `${-delay}s`,
+            transform: `rotate(0deg) translateX(${radius}px) rotate(0deg)`,
           } as React.CSSProperties
         }
         className={cn(
-          "absolute flex size-full transform-gpu animate-spin items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1s)] [animation-duration:calc(var(--duration)*1s)] dark:bg-white/10",
+          "absolute flex size-full transform-gpu animate-spin items-center justify-center rounded-full border bg-black/10 [animation-direction:reverse] dark:bg-white/10",
           { "[animation-direction:reverse]": reverse },
           className,
         )}
-        style={{
-          animationTimingFunction: "linear",
-          transform: `rotate(0deg) translateX(${radius}px) rotate(0deg)`,
-          animationName: "orbit",
-        }}
       >
         <div
           className={cn(
@@ -72,7 +72,7 @@ export default function OrbitingCircles({
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes orbit {
           from {
             transform: rotate(0deg) translateX(${radius}px) rotate(0deg);

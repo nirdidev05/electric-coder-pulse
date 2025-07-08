@@ -4,6 +4,10 @@ import { useSpringValue, animated } from '@react-spring/web';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import OrbitingCircles from './ui/orbiting-circles';
+import { RollingText } from '@/components/ui/rolling';
+import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+import { HighlightText } from '@/components/animate-ui/text/highlight';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,41 +54,40 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <motion.h1
-              className="text-5xl lg:text-7xl font-bold leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              <span className="gradient-text">BENBOUTA</span>
-              <br />
-              <span className="text-foreground">Walid</span>
-            </motion.h1>
-
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="space-y-2"
-            >
-              <h2 className="text-2xl lg:text-3xl text-secondary font-semibold">
-                AI Engineer & Data Scientist
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Final-year ESI student • Competition Winner • AI Innovator
-              </p>
-            </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2, duration: 0.8 }}
+>
+  <RollingText
+    className="text-5xl lg:text-7xl font-bold leading-tight gradient-text"
+    text="BENBOUTA"
+  />
+  <RollingText
+    className="text-5xl lg:text-7xl font-bold leading-tight text-foreground"
+    text="Walid"
+  />
+</motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="text-lg text-muted-foreground max-w-lg leading-relaxed"
-            >
-              Creating intelligent, responsible AI solutions for real-world applications 
-              in North Africa & beyond. Specializing in Deep Learning, NLP, and Data Visualization.
-            </motion.p>
+           <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4, duration: 0.8 }}
+  className="space-y-2"
+>
+  <HighlightText
+    className="text-2xl lg:text-3xl text-secondary font-semibold"
+    text="AI Engineer & Data Scientist"
+  />
+  <p className="text-lg text-muted-foreground">
+    Final-year ESI student • Competition Winner • AI Innovator • Web Developer • lifelong learner
+  </p>
+</motion.div>
 
+            <TypingAnimation className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+  Crafting bold, responsible AI from raw data to real-world impact.
+  With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.
+</TypingAnimation>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -107,15 +110,19 @@ const Hero = () => {
                 Get In Touch
               </animated.button>
 
-              <motion.a
-                href="/resume.pdf"
-                target="_blank"
-                className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Download Resume
-              </motion.a>
+              <InteractiveHoverButton
+  asChild
+  className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+>
+  <a
+    href="/walid's%20CV%20(1).pdf"
+    download
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download Resume
+  </a>
+</InteractiveHoverButton>
             </motion.div>
           </motion.div>
 
@@ -134,49 +141,70 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Orbiting social icons */}
-              <OrbitingCircles radius={80} duration={15} delay={0}>
-                <a
-                  href="https://github.com/nirdidev05"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full h-full flex items-center justify-center hover:text-primary transition-colors"
-                >
-                  <Github size={20} />
-                </a>
+              {/* Orbiting tech logos */}
+              <OrbitingCircles radius={100} duration={18} delay={0}>
+                <img
+                  src="/kafka.png"
+                  alt="Apache Kafka"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
-
-              <OrbitingCircles radius={80} duration={15} delay={5}>
-                <a
-                  href="https://www.linkedin.com/in/benbouta-walid-416870291/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full h-full flex items-center justify-center hover:text-primary transition-colors"
-                >
-                  <Linkedin size={20} />
-                </a>
+             <OrbitingCircles radius={100} duration={18} delay={6}>
+                <img
+                  src="/optuna.png"
+                  alt="Optuna"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
-
-              <OrbitingCircles radius={80} duration={15} delay={10}>
-                <a
-                  href="mailto:benboutawalid@gmail.com"
-                  className="w-full h-full flex items-center justify-center hover:text-primary transition-colors"
-                >
-                  <Mail size={20} />
-                </a>
+              <OrbitingCircles radius={100} duration={18} delay={6}>
+                <img
+                  src="/optuna.png"
+                  alt="Optuna"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
-
-              {/* Outer ring with tech stack */}
-              <OrbitingCircles radius={120} duration={25} delay={0} reverse>
-                <div className="text-xs font-semibold">Python</div>
+              <OrbitingCircles radius={100} duration={18} delay={9}>
+                <img
+                  src="/python.png"
+                  alt="Python"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
-
-              <OrbitingCircles radius={120} duration={25} delay={8} reverse>
-                <div className="text-xs font-semibold">PyTorch</div>
+              <OrbitingCircles radius={100} duration={18} delay={12}>
+                <img
+                  src="/pytorch-icon-size_256.png"
+                  alt="PyTorch"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
-
-              <OrbitingCircles radius={120} duration={25} delay={16} reverse>
-                <div className="text-xs font-semibold">React</div>
+              <OrbitingCircles radius={100} duration={18} delay={15}>
+                <img
+                  src="/R.png"
+                  alt="R"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
+              </OrbitingCircles>
+              <OrbitingCircles radius={100} duration={18} delay={18}>
+                <img
+                  src="/sql.png"
+                  alt="SQL"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
+              </OrbitingCircles>
+              <OrbitingCircles radius={100} duration={18} delay={21}>
+                <img
+                  src="/Tensorflow.png"
+                  alt="TensorFlow"
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </OrbitingCircles>
             </div>
           </motion.div>

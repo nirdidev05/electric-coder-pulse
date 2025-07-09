@@ -12,6 +12,7 @@ export interface Translation {
     greeting: string;
     name: string;
     title: string;
+    me:string;
     description: string;
     getInTouch: string;
     downloadResume: string;
@@ -20,6 +21,7 @@ export interface Translation {
   // About Section
   about: {
     title: string;
+    me:string;
     subtitle: string;
     journey: {
       title: string;
@@ -90,12 +92,14 @@ const translations: Record<string, Translation> = {
       greeting: "Hello, I'm",
       name: "Walid BENBOUTA",
       title: "AI Engineer & Data Scientist",
+      me:"Crafting bold, responsible AI from raw data to real-world impact. With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.",
       description: "Transforming data into intelligent solutions that drive innovation and solve real-world problems.",
       getInTouch: "Get In Touch",
       downloadResume: "Download Resume"
     },
     about: {
-      title: "About",
+      title: "About ",
+      me:"Me",
       subtitle: "Passionate about creating intelligent solutions that make a difference",
       journey: {
         title: "My Journey",
@@ -153,7 +157,7 @@ const translations: Record<string, Translation> = {
   
   fr: {
     nav: {
-      about: "À propos",
+      about: "À propos Moi",
       projects: "Projets",
       achievements: "Réalisations", 
       contact: "Contact"
@@ -162,12 +166,14 @@ const translations: Record<string, Translation> = {
       greeting: "Bonjour, je suis",
       name: "Walid BENBOUTA",
       title: "Ingénieur IA & Data Scientist",
+      me:"Je crée une IA audacieuse et responsable, à partir de données brutes et pour un impact concret. Fort de mon expertise en IA, science des données et apprentissage profond, je transforme les données en informations par l'exploration, la modélisation et le déploiement. Récompensé lors des plus grands concours algériens, je construis des systèmes intelligents qui parlent, pensent et résolvent des problèmes.",
       description: "Transformer les données en solutions intelligentes qui stimulent l'innovation et résolvent les problèmes du monde réel.",
       getInTouch: "Contactez-moi",
       downloadResume: "Télécharger CV"
     },
     about: {
-      title: "À propos",
+      title: "À propos ",
+      me:"Moi",
       subtitle: "Passionné par la création de solutions intelligentes qui font la différence",
       journey: {
         title: "Mon Parcours",
@@ -234,12 +240,14 @@ const translations: Record<string, Translation> = {
       greeting: "Hallo, ich bin",
       name: "Walid BENBOUTA", 
       title: "KI-Ingenieur & Data Scientist",
+      me:"Ich habe eine kühne und verantwortungsbewusste IA geschaffen, die aus rohen Menschen besteht und einen stoßfesten Beton ausgießt. Ich verfüge über mein Fachwissen in IA, die Wissensvermittlung und die umfassende Ausbildung, ich wandele die Daten in Informationen für die Erkundung, die Modellierung und den Einsatz um. Für mehr als 100.000 Teilnehmer in Algerien wurden die intelligenten Systeme, mit denen ich gesprochen habe, konstruiert, nachgedacht und die Probleme gelöst.",
       description: "Daten in intelligente Lösungen transformieren, die Innovation vorantreiben und reale Probleme lösen.",
       getInTouch: "Kontakt aufnehmen",
       downloadResume: "Lebenslauf herunterladen"
     },
     about: {
-      title: "Über mich",
+      title: "Über ",
+      me:"Mich",
       subtitle: "Leidenschaftlich über die Erschaffung intelligenter Lösungen, die einen Unterschied machen",
       journey: {
         title: "Mein Werdegang",
@@ -306,12 +314,14 @@ const translations: Record<string, Translation> = {
       greeting: "Hola, soy",
       name: "Walid BENBOUTA",
       title: "Ingeniero de IA & Científico de Datos",
+      me:"Creo IA audaz y responsable a partir de datos sin procesar para lograr un impacto concreto. Basándome en mi experiencia en IA, ciencia de datos y aprendizaje profundo, transformo los datos en conocimiento mediante la exploración, el modelado y la implementación. Tras haber ganado premios en importantes competiciones argelinas, construyo sistemas inteligentes que hablan, piensan y resuelven problemas.",
       description: "Transformando datos en soluciones inteligentes que impulsan la innovación y resuelven problemas del mundo real.",
       getInTouch: "Contactar",
       downloadResume: "Descargar CV"
     },
     about: {
-      title: "Acerca de",
+      title: "Acerca de ",
+      me:"mí",
       subtitle: "Apasionado por crear soluciones inteligentes que marcan la diferencia",
       journey: {
         title: "Mi Trayectoria",
@@ -376,14 +386,16 @@ const translations: Record<string, Translation> = {
     },
     hero: {
       greeting: "مرحباً، أنا",
-      name: "وليد بن بوطة",
+      name: "وليد بن بوتة",
       title: "مهندس ذكاء اصطناعي وعالم بيانات",
+      me:"أُنشئ ذكاءً اصطناعيًا جريئًا ومسؤولًا من البيانات الخام لتحقيق تأثير ملموس. بالاعتماد على خبرتي في الذكاء الاصطناعي وعلوم البيانات والتعلم العميق، أُحوّل البيانات إلى معرفة من خلال الاستكشاف والنمذجة والتطبيق. بعد فوزي بجوائز في مسابقات جزائرية كبرى، أبني أنظمة ذكية تتحدث وتفكر وتحل المشكلات.",
       description: "تحويل البيانات إلى حلول ذكية تقود الابتكار وتحل مشاكل العالم الحقيقي.",
       getInTouch: "تواصل معي",
       downloadResume: "تحميل السيرة الذاتية"
     },
     about: {
-      title: "نبذة عني",
+      title: "نبذة  ",
+      me:"عني",
       subtitle: "شغوف بإنشاء حلول ذكية تحدث فرقاً",
       journey: {
         title: "رحلتي",

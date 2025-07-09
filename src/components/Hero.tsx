@@ -84,8 +84,7 @@ const Hero = () => {
 </motion.div>
 
             <TypingAnimation className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-  Crafting bold, responsible AI from raw data to real-world impact.
-  With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.
+              {t.hero.me}
 </TypingAnimation>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

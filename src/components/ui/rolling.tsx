@@ -86,7 +86,7 @@ export const RollingText = React.forwardRef<HTMLSpanElement, RollingTextProps>(
               visible: { y: "0%" },
             }}
             transition={{
-              ...transition,
+              duration: transition.duration || 0.5,
               delay: (transition.delay || 0) + i * 0.05,
             }}
             style={{ display: "inline-block" }}

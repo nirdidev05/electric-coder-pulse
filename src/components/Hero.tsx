@@ -110,19 +110,16 @@ const Hero = () => {
                 Get In Touch
               </animated.button>
 
-              <InteractiveHoverButton
-  asChild
-  className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300"
->
-  <a
-    href="/walid's%20CV%20(1).pdf"
-    download
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Download Resume
-  </a>
-</InteractiveHoverButton>
+              <a
+                href="/walid's%20CV%20(1).pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <InteractiveHoverButton className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  Download Resume
+                </InteractiveHoverButton>
+              </a>
             </motion.div>
           </motion.div>
 

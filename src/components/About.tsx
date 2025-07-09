@@ -46,17 +46,37 @@ const About = () => {
               onMouseLeave={() => scaleValue.start(1)}
               className="bg-background/50 p-8 rounded-2xl border border-border"
             >
-              <h3 className="text-2xl font-bold mb-4 text-primary">My Journey</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                As a final-year student at ESI (École Nationale Supérieure d'Informatique, Algeria), 
-                I've built a strong foundation in AI and Data Science through both academic excellence 
-                and competitive programming.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                My vision is to create intelligent, responsible AI solutions for real-world applications 
-                in North Africa and beyond, bridging the gap between cutting-edge technology and 
-                practical implementation.
-              </p>
+              <h3 className="text-2xl font-bold mb-6 text-primary">My Journey</h3>
+              
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p className="text-foreground/90 font-medium">
+                  As a final-year student at the National Higher School of Computer Science (ESI Algiers), specializing in Information Systems, I've cultivated a passion for data that goes beyond theory.
+                </p>
+                
+                <p>
+                  From my early years, a strong background in mathematics and computer science shaped my analytical mindset — and ESI gave me the perfect playground to turn that curiosity into skill.
+                </p>
+                
+                <p>
+                  Over the years, I've built a solid foundation in databases, algorithms, and software engineering, reinforced by hands-on experience in data engineering and business intelligence. I've designed automated ETL pipelines, modeled data warehouses, built interactive dashboards with real-time KPIs, and integrated APIs to streamline decision-making across complex systems.
+                </p>
+                
+                <p className="text-primary/90 font-medium italic border-l-4 border-primary/30 pl-4">
+                  My focus has always been clear: turn raw data into meaningful insight.
+                </p>
+                
+                <p>
+                  Professionally, I contributed to impactful projects such as RNA — a platform enhancing commune management in Algeria — where I tackled large-scale data analysis and full-stack development. I've also led academic projects, including a zero-paper e-commerce solution, a hotel management system, and an e-tourism prototype, often working as a full-stack developer and data analyst.
+                </p>
+                
+                <p>
+                  What drives me is the thrill of solving real-world problems with elegant, data-driven solutions. I don't just write code — I build intelligent systems that empower people to make smarter decisions. Whether it's optimizing queries for massive datasets or transforming scattered business data into clear visual stories, I bring rigor, creativity, and a commitment to excellence.
+                </p>
+                
+                <p className="text-secondary/90 font-semibold pt-2">
+                  I aspire to bridge the gap between traditional information systems and the transformative power of AI. With a hybrid profile in data engineering, machine learning, and system integration, I'm ready to help shape the next generation of intelligent organizations.
+                </p>
+              </div>
             </animated.div>
 
             <motion.div

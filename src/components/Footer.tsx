@@ -26,19 +26,19 @@ const socialLinks = [
 
 const footerLinks = {
   projects: [
-    { name: 'AI Projects', href: '/projects/ai' },
-    { name: 'Research Papers', href: '/research' },
-    { name: 'Open Source', href: '/opensource' },
+    { name: 'View Projects', href: '#projects' },
+    { name: 'Achievements', href: '#achievements' },
+    { name: 'Resume', href: '/walid\'s CV (1).pdf' },
   ],
   resources: [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Publications', href: '/publications' },
-    { name: 'Tech Stack', href: '/stack' },
+    { name: 'About Me', href: '#about' },
+    { name: 'Tech Stack', href: '#about' },
+    { name: 'Experience', href: '#about' },
   ],
   contact: [
-    { name: 'About Me', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Resume', href: '/resume' },
+    { name: 'Get in Touch', href: '#contact' },
+    { name: 'GitHub', href: 'https://github.com/nirdidev05' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile' },
   ],
 };
 

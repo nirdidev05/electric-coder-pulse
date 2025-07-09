@@ -8,10 +8,12 @@ import { RollingText } from '@/components/ui/rolling';
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import { HighlightText } from '@/components/animate-ui/text/highlight';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  const t = useTranslation();
 
   const opacity = useSpringValue(0.7, {
     config: { mass: 2, friction: 5, tension: 80 },
@@ -54,18 +56,15 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <motion.div
+           <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.2, duration: 0.8 }}
 >
+  <p className="text-lg text-muted-foreground mb-2">{t.hero.greeting}</p>
   <RollingText
     className="text-5xl lg:text-7xl font-bold leading-tight gradient-text"
-    text="BENBOUTA"
-  />
-  <RollingText
-    className="text-5xl lg:text-7xl font-bold leading-tight text-foreground"
-    text="Walid"
+    text={t.hero.name}
   />
 </motion.div>
 
@@ -77,10 +76,10 @@ const Hero = () => {
 >
   <HighlightText
     className="text-2xl lg:text-3xl text-secondary font-semibold"
-    text="AI Engineer & Data Scientist"
+    text={t.hero.title}
   />
-  <p className="text-lg text-muted-foreground">
-    Final-year ESI student • Competition Winner • AI Innovator • Web Developer • lifelong learner
+  <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+    {t.hero.description}
   </p>
 </motion.div>
 
@@ -107,7 +106,7 @@ const Hero = () => {
                   setIsHovering(false);
                 }}
               >
-                Get In Touch
+                {t.hero.getInTouch}
               </animated.button>
 
               <a
@@ -117,7 +116,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <InteractiveHoverButton className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Download Resume
+                  {t.hero.downloadResume}
                 </InteractiveHoverButton>
               </a>
             </motion.div>

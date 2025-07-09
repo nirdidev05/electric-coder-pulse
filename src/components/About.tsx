@@ -1,11 +1,13 @@
 
 import { motion } from 'framer-motion';
 import { useSpringValue, animated } from '@react-spring/web';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const About = () => {
   const scaleValue = useSpringValue(1, {
     config: { mass: 1, friction: 10, tension: 200 },
   });
+  const t = useTranslation();
 
   const techStack = [
     'Python', 'PyTorch', 'React', 'Tailwind CSS', 

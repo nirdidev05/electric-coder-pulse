@@ -9,10 +9,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useLanguage, type Language } from '@/contexts/LanguageContext';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
+  const t = useTranslation();
 
   const languages: { code: Language; name: string; flag: string }[] = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -20,6 +22,13 @@ const Navigation = () => {
     { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'es', name: 'Español', flag: '🇪🇸' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  ];
+
+  const navItems = [
+    { key: 'about', label: t.nav.about },
+    { key: 'projects', label: t.nav.projects },
+    { key: 'achievements', label: t.nav.achievements },
+    { key: 'contact', label: t.nav.contact }
   ];
 
   const currentLanguage = languages.find(lang => lang.code === language) || languages[0];
@@ -56,15 +65,15 @@ const Navigation = () => {
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {['about', 'projects', 'achievements', 'contact'].map((item) => (
+            {navItems.map((item) => (
               <motion.button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.key}
+                onClick={() => scrollToSection(item.key)}
                 className="text-muted-foreground hover:text-primary transition-colors capitalize relative"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {item}
+                {item.label}
                 <motion.div
                   className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
                   initial={{ scaleX: 0 }}

@@ -50,6 +50,49 @@ export interface Translation {
   projects: {
     title: string;
     subtitle: string;
+    readMore: string;
+    backToProjects: string;
+    projectDetails: {
+      overview: string;
+      technologies: string;
+      challenges: string;
+      results: string;
+      keyFeatures: string;
+    };
+    items: {
+      dataAnalytics: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
+      nlpSentiment: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
+      computerVision: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
+      dataVisualization: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
+    };
   };
   
   // Achievements Section
@@ -130,7 +173,78 @@ const translations: Record<string, Translation> = {
     },
     projects: {
       title: "Projects",
-      subtitle: "Showcasing innovative solutions and technical expertise"
+      subtitle: "Showcasing innovative solutions and technical expertise",
+      readMore: "Read More",
+      backToProjects: "Back to Projects",
+      projectDetails: {
+        overview: "Project Overview",
+        technologies: "Technologies Used",
+        challenges: "Challenges Faced",
+        results: "Results & Impact",
+        keyFeatures: "Key Features"
+      },
+      items: {
+        dataAnalytics: {
+          title: "AI-Powered Data Analytics Platform",
+          description: "Advanced analytics platform using PyTorch and React for real-time data insights and predictive modeling.",
+          overview: "This comprehensive data analytics platform leverages the power of artificial intelligence to transform raw data into actionable insights. Built with cutting-edge technologies, it provides real-time analytics, predictive modeling, and interactive visualizations that enable businesses to make data-driven decisions with confidence. The platform integrates seamlessly with existing data sources and provides a user-friendly interface for both technical and non-technical users.",
+          challenges: "The main challenges included handling large-scale data processing in real-time, ensuring accurate predictive models across diverse datasets, and creating an intuitive interface that could serve both data scientists and business users. Additionally, optimizing performance while maintaining data security and implementing scalable architecture for growing data volumes required careful planning and execution.",
+          results: "Successfully deployed a platform that processes over 10TB of data daily, providing 99.9% uptime and reducing analysis time by 75%. The predictive models achieved 94% accuracy, leading to improved business outcomes and strategic decision-making. User adoption exceeded expectations with 89% satisfaction rate.",
+          keyFeatures: [
+            "Real-time data processing and analytics",
+            "Advanced machine learning algorithms for predictive modeling", 
+            "Interactive dashboards with customizable visualizations",
+            "Automated report generation and scheduling",
+            "API integration for seamless data connectivity",
+            "Role-based access control and data security"
+          ]
+        },
+        nlpSentiment: {
+          title: "NLP Sentiment Analysis Engine",
+          description: "Multi-language sentiment analysis system optimized for North African dialects and languages.",
+          overview: "A sophisticated natural language processing engine specifically designed to understand and analyze sentiment in North African dialects and languages. This project addresses the unique linguistic challenges of the region, incorporating cultural context and colloquial expressions to provide accurate sentiment analysis for Arabic, Berber, and French texts commonly used in North Africa.",
+          challenges: "Developing accurate sentiment analysis for North African dialects required extensive linguistic research and custom model training. The scarcity of labeled datasets for regional dialects, handling code-switching between languages, and understanding cultural context in sentiment expression posed significant technical and research challenges.",
+          results: "Achieved 87% accuracy for Algerian dialect sentiment analysis, 92% for standard Arabic, and 89% for French text analysis. The system successfully processes mixed-language content and has been adopted by 3 major social media monitoring companies in the region.",
+          keyFeatures: [
+            "Multi-language support for Arabic, French, and Berber",
+            "Dialect-specific sentiment analysis for North African variants",
+            "Real-time processing with API integration",
+            "Cultural context understanding for accurate interpretation",
+            "Batch processing capabilities for large datasets",
+            "Confidence scoring and uncertainty handling"
+          ]
+        },
+        computerVision: {
+          title: "Computer Vision GAN Project",
+          description: "Generative Adversarial Network for creating high-quality synthetic images with custom conditioning.",
+          overview: "An advanced computer vision project utilizing Generative Adversarial Networks (GANs) to create photorealistic synthetic images with precise control over various attributes. The system enables users to generate high-quality images based on specific conditions, making it valuable for data augmentation, creative applications, and research purposes.",
+          challenges: "Training stable GANs required extensive experimentation with architectures and hyperparameters. Ensuring mode collapse prevention, achieving consistent quality across different image categories, and implementing effective conditioning mechanisms while maintaining generation speed were primary technical hurdles.",
+          results: "Successfully generated images with 256x256 resolution achieving FID score of 15.2, surpassing baseline models by 23%. The system can generate diverse, high-quality images across 50+ categories with controllable attributes, reducing synthetic data generation time by 60%.",
+          keyFeatures: [
+            "High-resolution image generation (up to 1024x1024)",
+            "Conditional generation with attribute control",
+            "Style transfer and image-to-image translation",
+            "Data augmentation for training dataset enhancement",
+            "Real-time generation with optimized inference",
+            "Quality assessment and automatic filtering"
+          ]
+        },
+        dataVisualization: {
+          title: "Interactive Data Visualization Suite",
+          description: "Comprehensive data visualization toolkit built with modern web technologies and advanced charting libraries.",
+          overview: "A powerful and flexible data visualization suite that transforms complex datasets into intuitive, interactive visual representations. Built with modern web technologies, this platform provides a comprehensive set of tools for creating stunning visualizations, from simple charts to complex multi-dimensional data explorations.",
+          challenges: "Creating a balance between powerful functionality and user-friendly interface required extensive UX research. Handling large datasets efficiently while maintaining smooth interactions, ensuring cross-browser compatibility, and providing real-time collaboration features presented significant technical challenges.",
+          results: "Delivered a platform serving 500+ daily active users, supporting datasets up to 1M records with sub-second rendering. Improved data comprehension by 68% according to user studies, and reduced time-to-insight by 45% compared to traditional tools.",
+          keyFeatures: [
+            "20+ chart types with customization options",
+            "Real-time data binding and live updates",
+            "Interactive filtering and drill-down capabilities",
+            "Collaborative sharing and commenting features",
+            "Export capabilities for various formats",
+            "Responsive design for mobile and desktop"
+          ]
+        }
+      }
     },
     achievements: {
       title: "Achievements",
@@ -204,7 +318,78 @@ const translations: Record<string, Translation> = {
     },
     projects: {
       title: "Projets",
-      subtitle: "Présentation de solutions innovantes et d'expertise technique"
+      subtitle: "Présentation de solutions innovantes et d'expertise technique",
+      readMore: "Lire la Suite",
+      backToProjects: "Retour aux Projets",
+      projectDetails: {
+        overview: "Aperçu du Projet",
+        technologies: "Technologies Utilisées",
+        challenges: "Défis Rencontrés",
+        results: "Résultats et Impact",
+        keyFeatures: "Caractéristiques Clés"
+      },
+      items: {
+        dataAnalytics: {
+          title: "Plateforme d'Analyse de Données IA",
+          description: "Plateforme d'analyse avancée utilisant PyTorch et React pour des insights de données en temps réel et la modélisation prédictive.",
+          overview: "Cette plateforme complète d'analyse de données exploite la puissance de l'intelligence artificielle pour transformer les données brutes en insights exploitables. Construite avec des technologies de pointe, elle fournit des analyses en temps réel, de la modélisation prédictive et des visualisations interactives qui permettent aux entreprises de prendre des décisions basées sur les données avec confiance.",
+          challenges: "Les principaux défis incluaient le traitement de données à grande échelle en temps réel, assurer des modèles prédictifs précis sur des jeux de données divers, et créer une interface intuitive pouvant servir à la fois les data scientists et les utilisateurs métier.",
+          results: "Déploiement réussi d'une plateforme qui traite plus de 10 To de données quotidiennement, avec 99,9% de disponibilité et réduction du temps d'analyse de 75%. Les modèles prédictifs atteignent 94% de précision.",
+          keyFeatures: [
+            "Traitement et analyse de données en temps réel",
+            "Algorithmes d'apprentissage automatique avancés",
+            "Tableaux de bord interactifs avec visualisations personnalisables",
+            "Génération automatique de rapports",
+            "Intégration API pour connectivité de données",
+            "Contrôle d'accès basé sur les rôles"
+          ]
+        },
+        nlpSentiment: {
+          title: "Moteur d'Analyse de Sentiment NLP",
+          description: "Système d'analyse de sentiment multilingue optimisé pour les dialectes et langues d'Afrique du Nord.",
+          overview: "Un moteur sophistiqué de traitement du langage naturel spécialement conçu pour comprendre et analyser le sentiment dans les dialectes et langues d'Afrique du Nord, incorporant le contexte culturel et les expressions colloquiales.",
+          challenges: "Développer une analyse de sentiment précise pour les dialectes nord-africains nécessitait une recherche linguistique extensive et un entraînement de modèles personnalisés. La rareté des jeux de données étiquetés pour les dialectes régionaux posait des défis techniques importants.",
+          results: "Atteint 87% de précision pour l'analyse de sentiment en dialecte algérien, 92% pour l'arabe standard, et 89% pour l'analyse de texte français. Le système traite avec succès le contenu multilingue.",
+          keyFeatures: [
+            "Support multilingue pour arabe, français et berbère",
+            "Analyse de sentiment spécifique aux dialectes",
+            "Traitement en temps réel avec intégration API",
+            "Compréhension du contexte culturel",
+            "Capacités de traitement par lots",
+            "Notation de confiance et gestion d'incertitude"
+          ]
+        },
+        computerVision: {
+          title: "Projet GAN de Vision par Ordinateur",
+          description: "Réseau Antagoniste Génératif pour créer des images synthétiques de haute qualité avec conditionnement personnalisé.",
+          overview: "Un projet avancé de vision par ordinateur utilisant des Réseaux Antagonistes Génératifs (GANs) pour créer des images synthétiques photoréalistes avec un contrôle précis sur divers attributs.",
+          challenges: "L'entraînement de GANs stables nécessitait une expérimentation extensive avec les architectures et hyperparamètres. Prévenir l'effondrement de mode et maintenir une qualité constante était un défi technique majeur.",
+          results: "Génération réussie d'images avec résolution 256x256 atteignant un score FID de 15,2, surpassant les modèles de référence de 23%. Le système peut générer des images diverses et de haute qualité.",
+          keyFeatures: [
+            "Génération d'images haute résolution (jusqu'à 1024x1024)",
+            "Génération conditionnelle avec contrôle d'attributs",
+            "Transfert de style et traduction image-à-image",
+            "Augmentation de données pour amélioration des jeux d'entraînement",
+            "Génération en temps réel avec inférence optimisée",
+            "Évaluation de qualité et filtrage automatique"
+          ]
+        },
+        dataVisualization: {
+          title: "Suite de Visualisation de Données Interactive",
+          description: "Boîte à outils complète de visualisation de données construite avec des technologies web modernes et des bibliothèques de graphiques avancées.",
+          overview: "Une suite puissante et flexible de visualisation de données qui transforme des jeux de données complexes en représentations visuelles intuitives et interactives.",
+          challenges: "Créer un équilibre entre fonctionnalité puissante et interface conviviale nécessitait une recherche UX extensive. Gérer efficacement de gros jeux de données tout en maintenant des interactions fluides présentait des défis techniques significatifs.",
+          results: "Livraison d'une plateforme servant 500+ utilisateurs actifs quotidiens, supportant des jeux de données jusqu'à 1M d'enregistrements avec rendu sub-seconde. Amélioration de la compréhension des données de 68%.",
+          keyFeatures: [
+            "20+ types de graphiques avec options de personnalisation",
+            "Liaison de données en temps réel et mises à jour en direct",
+            "Capacités de filtrage interactif et exploration",
+            "Fonctionnalités de partage collaboratif",
+            "Capacités d'export pour divers formats",
+            "Design responsive pour mobile et bureau"
+          ]
+        }
+      }
     },
     achievements: {
       title: "Réalisations",
@@ -278,7 +463,78 @@ const translations: Record<string, Translation> = {
     },
     projects: {
       title: "Projekte", 
-      subtitle: "Innovative Lösungen und technische Expertise präsentieren"
+      subtitle: "Innovative Lösungen und technische Expertise präsentieren",
+      readMore: "Mehr Lesen",
+      backToProjects: "Zurück zu Projekten",
+      projectDetails: {
+        overview: "Projektübersicht",
+        technologies: "Verwendete Technologien",
+        challenges: "Herausforderungen",
+        results: "Ergebnisse & Auswirkungen",
+        keyFeatures: "Hauptmerkmale"
+      },
+      items: {
+        dataAnalytics: {
+          title: "KI-gestützte Datenanalyseplattform",
+          description: "Erweiterte Analyseplattform mit PyTorch und React für Echtzeit-Dateneinblicke und prädiktive Modellierung.",
+          overview: "Diese umfassende Datenanalyseplattform nutzt die Kraft der künstlichen Intelligenz, um rohe Daten in verwertbare Erkenntnisse zu transformieren. Mit modernsten Technologien gebaut, bietet sie Echtzeitanalysen, prädiktive Modellierung und interaktive Visualisierungen.",
+          challenges: "Die Hauptherausforderungen umfassten die Handhabung großflächiger Datenverarbeitung in Echtzeit, die Gewährleistung präziser prädiktiver Modelle über diverse Datensätze hinweg und die Schaffung einer intuitiven Benutzeroberfläche.",
+          results: "Erfolgreiche Bereitstellung einer Plattform, die täglich über 10TB Daten verarbeitet, 99,9% Verfügbarkeit bietet und die Analysezeit um 75% reduziert. Die prädiktiven Modelle erreichen 94% Genauigkeit.",
+          keyFeatures: [
+            "Echtzeit-Datenverarbeitung und -analyse",
+            "Erweiterte maschinelle Lernalgorithmen",
+            "Interaktive Dashboards mit anpassbaren Visualisierungen",
+            "Automatisierte Berichtserstellung",
+            "API-Integration für nahtlose Datenkonnektivität",
+            "Rollenbasierte Zugriffskontrolle"
+          ]
+        },
+        nlpSentiment: {
+          title: "NLP-Sentiment-Analyse-Engine",
+          description: "Mehrsprachiges Sentiment-Analysesystem, optimiert für nordafrikanische Dialekte und Sprachen.",
+          overview: "Eine hochentwickelte Natural Language Processing-Engine, speziell entwickelt, um Sentiment in nordafrikanischen Dialekten und Sprachen zu verstehen und zu analysieren.",
+          challenges: "Die Entwicklung präziser Sentiment-Analyse für nordafrikanische Dialekte erforderte umfangreiche linguistische Forschung und benutzerdefiniertes Modelltraining.",
+          results: "87% Genauigkeit für algerische Dialekt-Sentiment-Analyse erreicht, 92% für Standardarabisch und 89% für französische Textanalyse.",
+          keyFeatures: [
+            "Mehrsprachige Unterstützung für Arabisch, Französisch und Berber",
+            "Dialektspezifische Sentiment-Analyse",
+            "Echtzeitverarbeitung mit API-Integration",
+            "Kulturelles Kontextverständnis",
+            "Batch-Verarbeitungsfähigkeiten",
+            "Vertrauensbewertung und Unsicherheitsbehandlung"
+          ]
+        },
+        computerVision: {
+          title: "Computer Vision GAN Projekt",
+          description: "Generative Adversarial Network zur Erstellung hochwertiger synthetischer Bilder mit benutzerdefinierter Konditionierung.",
+          overview: "Ein fortgeschrittenes Computer Vision Projekt, das Generative Adversarial Networks (GANs) nutzt, um fotorealistische synthetische Bilder mit präziser Kontrolle über verschiedene Attribute zu erstellen.",
+          challenges: "Das Training stabiler GANs erforderte umfangreiche Experimente mit Architekturen und Hyperparametern. Die Verhinderung von Mode-Kollaps war eine primäre technische Hürde.",
+          results: "Erfolgreiche Generierung von Bildern mit 256x256 Auflösung, die einen FID-Score von 15,2 erreichen und Baseline-Modelle um 23% übertreffen.",
+          keyFeatures: [
+            "Hochauflösende Bildgenerierung (bis zu 1024x1024)",
+            "Bedingte Generierung mit Attributkontrolle",
+            "Stiltransfer und Bild-zu-Bild-Übersetzung",
+            "Datenaugmentation für Trainingsdatensatz-Verbesserung",
+            "Echtzeitgenerierung mit optimierter Inferenz",
+            "Qualitätsbewertung und automatische Filterung"
+          ]
+        },
+        dataVisualization: {
+          title: "Interaktive Datenvisualisierungs-Suite",
+          description: "Umfassendes Datenvisualisierungs-Toolkit mit modernen Webtechnologien und erweiterten Diagrammbibliotheken.",
+          overview: "Eine mächtige und flexible Datenvisualisierungs-Suite, die komplexe Datensätze in intuitive, interaktive visuelle Darstellungen transformiert.",
+          challenges: "Das Schaffen eines Gleichgewichts zwischen mächtiger Funktionalität und benutzerfreundlicher Oberfläche erforderte umfangreiche UX-Forschung.",
+          results: "Lieferung einer Plattform mit 500+ täglichen aktiven Nutzern, die Datensätze bis zu 1M Datensätzen mit Sub-Sekunden-Rendering unterstützt.",
+          keyFeatures: [
+            "20+ Diagrammtypen mit Anpassungsoptionen",
+            "Echtzeit-Datenbindung und Live-Updates",
+            "Interaktive Filter- und Drill-Down-Fähigkeiten",
+            "Kollaborative Sharing- und Kommentarfunktionen",
+            "Export-Funktionen für verschiedene Formate",
+            "Responsive Design für Mobil und Desktop"
+          ]
+        }
+      }
     },
     achievements: {
       title: "Erfolge",
@@ -352,7 +608,78 @@ const translations: Record<string, Translation> = {
     },
     projects: {
       title: "Proyectos",
-      subtitle: "Mostrando soluciones innovadoras y experiencia técnica"
+      subtitle: "Mostrando soluciones innovadoras y experiencia técnica",
+      readMore: "Leer Más",
+      backToProjects: "Volver a Proyectos",
+      projectDetails: {
+        overview: "Resumen del Proyecto",
+        technologies: "Tecnologías Utilizadas",
+        challenges: "Desafíos Enfrentados",
+        results: "Resultados e Impacto",
+        keyFeatures: "Características Clave"
+      },
+      items: {
+        dataAnalytics: {
+          title: "Plataforma de Análisis de Datos con IA",
+          description: "Plataforma de análisis avanzada que utiliza PyTorch y React para insights de datos en tiempo real y modelado predictivo.",
+          overview: "Esta plataforma integral de análisis de datos aprovecha el poder de la inteligencia artificial para transformar datos sin procesar en insights accionables. Construida con tecnologías de vanguardia, proporciona análisis en tiempo real, modelado predictivo y visualizaciones interactivas.",
+          challenges: "Los principales desafíos incluyeron manejar el procesamiento de datos a gran escala en tiempo real, asegurar modelos predictivos precisos en conjuntos de datos diversos, y crear una interfaz intuitiva.",
+          results: "Implementación exitosa de una plataforma que procesa más de 10TB de datos diariamente, proporcionando 99.9% de tiempo de actividad y reduciendo el tiempo de análisis en 75%.",
+          keyFeatures: [
+            "Procesamiento y análisis de datos en tiempo real",
+            "Algoritmos avanzados de aprendizaje automático",
+            "Paneles interactivos con visualizaciones personalizables",
+            "Generación automática de informes",
+            "Integración API para conectividad de datos",
+            "Control de acceso basado en roles"
+          ]
+        },
+        nlpSentiment: {
+          title: "Motor de Análisis de Sentimientos NLP",
+          description: "Sistema de análisis de sentimientos multiidioma optimizado para dialectos y lenguas del Norte de África.",
+          overview: "Un motor sofisticado de procesamiento de lenguaje natural diseñado específicamente para entender y analizar sentimientos en dialectos y lenguas del Norte de África.",
+          challenges: "Desarrollar análisis de sentimientos preciso para dialectos norteafricanos requería investigación lingüística extensa y entrenamiento de modelos personalizados.",
+          results: "Logró 87% de precisión para análisis de sentimientos en dialecto argelino, 92% para árabe estándar, y 89% para análisis de texto francés.",
+          keyFeatures: [
+            "Soporte multiidioma para árabe, francés y bereber",
+            "Análisis de sentimientos específico para dialectos",
+            "Procesamiento en tiempo real con integración API",
+            "Comprensión del contexto cultural",
+            "Capacidades de procesamiento por lotes",
+            "Puntuación de confianza y manejo de incertidumbre"
+          ]
+        },
+        computerVision: {
+          title: "Proyecto GAN de Visión por Computadora",
+          description: "Red Generativa Adversarial para crear imágenes sintéticas de alta calidad con condicionamiento personalizado.",
+          overview: "Un proyecto avanzado de visión por computadora que utiliza Redes Generativas Adversariales (GANs) para crear imágenes sintéticas fotorrealistas con control preciso sobre varios atributos.",
+          challenges: "Entrenar GANs estables requería experimentación extensa con arquitecturas e hiperparámetros. Prevenir el colapso de modo era un obstáculo técnico primario.",
+          results: "Generación exitosa de imágenes con resolución 256x256 logrando puntaje FID de 15.2, superando modelos base por 23%.",
+          keyFeatures: [
+            "Generación de imágenes de alta resolución (hasta 1024x1024)",
+            "Generación condicional con control de atributos",
+            "Transferencia de estilo y traducción imagen-a-imagen",
+            "Aumento de datos para mejora de conjuntos de entrenamiento",
+            "Generación en tiempo real con inferencia optimizada",
+            "Evaluación de calidad y filtrado automático"
+          ]
+        },
+        dataVisualization: {
+          title: "Suite de Visualización de Datos Interactiva",
+          description: "Kit de herramientas integral de visualización de datos construido con tecnologías web modernas y bibliotecas de gráficos avanzadas.",
+          overview: "Una suite poderosa y flexible de visualización de datos que transforma conjuntos de datos complejos en representaciones visuales intuitivas e interactivas.",
+          challenges: "Crear un equilibrio entre funcionalidad poderosa e interfaz amigable requería investigación UX extensa.",
+          results: "Entrega de una plataforma sirviendo 500+ usuarios activos diarios, soportando conjuntos de datos hasta 1M registros con renderizado sub-segundo.",
+          keyFeatures: [
+            "20+ tipos de gráficos con opciones de personalización",
+            "Enlace de datos en tiempo real y actualizaciones en vivo",
+            "Capacidades de filtrado interactivo y exploración",
+            "Funciones de compartir colaborativo",
+            "Capacidades de exportación para varios formatos",
+            "Diseño responsivo para móvil y escritorio"
+          ]
+        }
+      }
     },
     achievements: {
       title: "Logros",
@@ -426,7 +753,78 @@ const translations: Record<string, Translation> = {
     },
     projects: {
       title: "المشاريع",
-      subtitle: "عرض الحلول المبتكرة والخبرة التقنية"
+      subtitle: "عرض الحلول المبتكرة والخبرة التقنية",
+      readMore: "اقرأ المزيد",
+      backToProjects: "العودة للمشاريع",
+      projectDetails: {
+        overview: "نظرة عامة على المشروع",
+        technologies: "التقنيات المستخدمة",
+        challenges: "التحديات المواجهة",
+        results: "النتائج والتأثير",
+        keyFeatures: "الميزات الرئيسية"
+      },
+      items: {
+        dataAnalytics: {
+          title: "منصة تحليل البيانات بالذكاء الاصطناعي",
+          description: "منصة تحليل متقدمة تستخدم PyTorch و React للحصول على رؤى البيانات في الوقت الفعلي والنمذجة التنبؤية.",
+          overview: "تستفيد منصة تحليل البيانات الشاملة هذه من قوة الذكاء الاصطناعي لتحويل البيانات الخام إلى رؤى قابلة للتنفيذ. مبنية بتقنيات متطورة، توفر تحليلات في الوقت الفعلي ونمذجة تنبؤية وتصورات تفاعلية.",
+          challenges: "تضمنت التحديات الرئيسية التعامل مع معالجة البيانات واسعة النطاق في الوقت الفعلي، وضمان نماذج تنبؤية دقيقة عبر مجموعات بيانات متنوعة، وإنشاء واجهة بديهية.",
+          results: "نشر ناجح لمنصة تعالج أكثر من 10 تيرابايت من البيانات يومياً، توفر 99.9% من وقت التشغيل وتقلل وقت التحليل بنسبة 75%. النماذج التنبؤية حققت 94% دقة.",
+          keyFeatures: [
+            "معالجة وتحليل البيانات في الوقت الفعلي",
+            "خوارزميات تعلم آلي متقدمة",
+            "لوحات معلومات تفاعلية مع تصورات قابلة للتخصيص",
+            "إنشاء تقارير آلية",
+            "تكامل API للاتصال السلس بالبيانات",
+            "التحكم في الوصول القائم على الأدوار"
+          ]
+        },
+        nlpSentiment: {
+          title: "محرك تحليل المشاعر NLP",
+          description: "نظام تحليل مشاعر متعدد اللغات محسن للهجات واللغات الشمال أفريقية.",
+          overview: "محرك متطور لمعالجة اللغات الطبيعية مصمم خصيصاً لفهم وتحليل المشاعر في اللهجات واللغات الشمال أفريقية.",
+          challenges: "تطوير تحليل مشاعر دقيق للهجات الشمال أفريقية تطلب بحثاً لغوياً مكثفاً وتدريب نماذج مخصصة.",
+          results: "حقق 87% دقة لتحليل مشاعر اللهجة الجزائرية، 92% للعربية المعيارية، و89% لتحليل النص الفرنسي.",
+          keyFeatures: [
+            "دعم متعدد اللغات للعربية والفرنسية والأمازيغية",
+            "تحليل مشاعر خاص باللهجات",
+            "معالجة في الوقت الفعلي مع تكامل API",
+            "فهم السياق الثقافي",
+            "قدرات المعالجة المجمعة",
+            "تسجيل الثقة والتعامل مع عدم اليقين"
+          ]
+        },
+        computerVision: {
+          title: "مشروع GAN للرؤية الحاسوبية",
+          description: "الشبكة التنافسية التوليدية لإنشاء صور اصطناعية عالية الجودة مع تكييف مخصص.",
+          overview: "مشروع رؤية حاسوبية متقدم يستخدم الشبكات التنافسية التوليدية (GANs) لإنشاء صور اصطناعية واقعية مع تحكم دقيق في مختلف السمات.",
+          challenges: "تدريب GANs مستقرة تطلب تجريب مكثف مع الهياكل والمعاملات الفائقة. منع انهيار الوضع كان عقبة تقنية أساسية.",
+          results: "إنشاء ناجح للصور بدقة 256x256 محققة نتيجة FID 15.2، متفوقة على النماذج الأساسية بنسبة 23%.",
+          keyFeatures: [
+            "إنشاء صور عالية الدقة (حتى 1024x1024)",
+            "إنشاء مشروط مع تحكم في السمات",
+            "نقل الأسلوب والترجمة من صورة إلى صورة",
+            "زيادة البيانات لتحسين مجموعات التدريب",
+            "إنشاء في الوقت الفعلي مع استنتاج محسن",
+            "تقييم الجودة والتصفية التلقائية"
+          ]
+        },
+        dataVisualization: {
+          title: "مجموعة تصور البيانات التفاعلية",
+          description: "مجموعة أدوات شاملة لتصور البيانات مبنية بتقنيات الويب الحديثة ومكتبات الرسوم البيانية المتقدمة.",
+          overview: "مجموعة قوية ومرنة لتصور البيانات تحول مجموعات البيانات المعقدة إلى تمثيلات بصرية بديهية وتفاعلية.",
+          challenges: "إنشاء توازن بين الوظائف القوية والواجهة سهلة الاستخدام تطلب بحث UX مكثف.",
+          results: "تسليم منصة تخدم 500+ مستخدم نشط يومياً، تدعم مجموعات البيانات حتى مليون سجل مع عرض أقل من الثانية.",
+          keyFeatures: [
+            "20+ نوع من الرسوم البيانية مع خيارات التخصيص",
+            "ربط البيانات في الوقت الفعلي والتحديثات المباشرة",
+            "قدرات التصفية التفاعلية والاستكشاف",
+            "ميزات المشاركة التعاونية",
+            "قدرات التصدير لصيغ مختلفة",
+            "تصميم متجاوب للجوال وسطح المكتب"
+          ]
+        }
+      }
     },
     achievements: {
       title: "الإنجازات",

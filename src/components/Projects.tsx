@@ -2,35 +2,42 @@
 import { motion } from 'framer-motion';
 import { useSpringValue, animated } from '@react-spring/web';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const t = useTranslation();
 
   const projects = [
     {
-      title: "AI-Powered Data Analytics Platform",
-      description: "Advanced analytics platform using PyTorch and React for real-time data insights and predictive modeling.",
+      id: "data-analytics",
+      title: t.projects.items.dataAnalytics.title,
+      description: t.projects.items.dataAnalytics.description,
       tech: ["Python", "PyTorch", "React", "SQL"],
       category: "Data Science",
       status: "Featured"
     },
     {
-      title: "NLP Sentiment Analysis Engine",
-      description: "Multi-language sentiment analysis system optimized for North African dialects and languages.",
+      id: "nlp-sentiment",
+      title: t.projects.items.nlpSentiment.title,
+      description: t.projects.items.nlpSentiment.description,
       tech: ["Python", "NLP", "Transformers", "FastAPI"],
       category: "AI/ML",
       status: "In Progress"
     },
     {
-      title: "Computer Vision GAN Project",
-      description: "Generative Adversarial Network for creating high-quality synthetic images with custom conditioning.",
+      id: "computer-vision",
+      title: t.projects.items.computerVision.title,
+      description: t.projects.items.computerVision.description,
       tech: ["PyTorch", "GANs", "OpenCV", "Python"],
       category: "Deep Learning",
       status: "Completed"
     },
     {
-      title: "Interactive Data Visualization Suite",
-      description: "Comprehensive data visualization toolkit built with modern web technologies and advanced charting libraries.",
+      id: "data-visualization",
+      title: t.projects.items.dataVisualization.title,
+      description: t.projects.items.dataVisualization.description,
       tech: ["React", "D3.js", "Python", "Tailwind"],
       category: "Frontend",
       status: "Featured"
@@ -103,7 +110,28 @@ const Projects = () => {
                 >
                   {tech}
                 </motion.span>
-              ))}
+                ))}
+            </div>
+
+            {/* Read More Button */}
+            <div className="mt-6">
+              <Link
+                to={`/project/${project.id}`}
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+              >
+                {t.projects.readMore}
+                <motion.svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="group-hover:translate-x-1 transition-transform"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </motion.svg>
+              </Link>
             </div>
           </div>
 
@@ -130,10 +158,10 @@ const Projects = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text">{t.projects.title}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Showcasing innovative AI solutions and cutting-edge applications
+            {t.projects.subtitle}
           </p>
         </motion.div>
 

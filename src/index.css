@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import technical font for project details */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 /* AI Portfolio Design System - Professional Dark Theme */
 
 @layer base {
@@ -48,6 +51,11 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Technical font class for project details */
+  .font-technical {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
   }
 }
 

@@ -11,7 +11,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-<ScrollProgress className="top-[65px] z-20 bg-gradient-to-r from-blue-600 via-green-300 to-white" />      <Hero />
+      <ScrollProgress className="top-[65px] z-50 h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
+      <Hero />
       <About />
       <Projects />
       <Achievements />

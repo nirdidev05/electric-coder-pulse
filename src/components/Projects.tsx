@@ -1,10 +1,14 @@
 import { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(0);
   const t = useTranslation();
+  
+  const PROJECTS_PER_PAGE = 4;
 
   const projects = useMemo(() => [
     {
@@ -47,6 +51,25 @@ const Projects = () => {
 
   const handleMouseLeave = useCallback(() => {
     setHoveredProject(null);
+  }, []);
+
+  // Pagination logic
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  const currentProjects = useMemo(() => {
+    const startIndex = currentPage * PROJECTS_PER_PAGE;
+    return projects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
+  }, [projects, currentPage]);
+
+  const handlePreviousPage = useCallback(() => {
+    setCurrentPage(prev => Math.max(0, prev - 1));
+  }, []);
+
+  const handleNextPage = useCallback(() => {
+    setCurrentPage(prev => Math.min(totalPages - 1, prev + 1));
+  }, [totalPages]);
+
+  const handlePageClick = useCallback((pageIndex: number) => {
+    setCurrentPage(pageIndex);
   }, []);
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
@@ -141,12 +164,47 @@ const Projects = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {currentProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center mt-12 mb-8 gap-4">
+            <button
+              onClick={handlePreviousPage}
+              disabled={currentPage === 0}
+              className="p-2 rounded-lg bg-background border border-border hover:border-primary/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            
+            <div className="flex gap-2">
+              {Array.from({ length: totalPages }, (_, index) => (
+                <button
+                  key={index}
+                  onClick={() => handlePageClick(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentPage === index 
+                      ? 'bg-primary scale-125' 
+                      : 'bg-border hover:bg-primary/50'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            <button
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages - 1}
+              className="p-2 rounded-lg bg-background border border-border hover:border-primary/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        )}
+
+        <div className="text-center mt-8">
           <a
             href="https://github.com/nirdidev05"
             target="_blank"

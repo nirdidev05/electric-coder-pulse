@@ -2,10 +2,16 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Code, Target, Lightbulb, Trophy, CheckCircle } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import GANProject from './projects/GAN';
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
   const t = useTranslation();
+
+  // Route to specialized project pages
+  if (projectId === 'computer-vision') {
+    return <GANProject />;
+  }
 
   const projectsData = {
     'data-analytics': {

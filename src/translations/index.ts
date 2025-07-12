@@ -126,15 +126,22 @@ export interface Translation {
   // Contact Section
   contact: {
     title: string;
+    centerOrbText: string;
     subtitle: string;
-    form: {
-      name: string;
+    methods: {
       email: string;
-      message: string;
-      send: string;
+      github: string;
+      linkedin: string;
+    };
+    getInTouch: string;
+    opportunities: {
+      title: string;
+      aiEngineering: string;
+      researchProjects: string;
+      freelance: string;
+      speaking: string;
     };
   };
-  
   // Footer
   footer: {
     description: string;
@@ -296,15 +303,23 @@ const translations: Record<string, Translation> = {
   },
 
     contact: {
-      title: "Contact",
-      subtitle: "Let's connect and build something amazing together",
-      form: {
-        name: "Name",
-        email: "Email",
-        message: "Message",
-        send: "Send Message"
-      }
+    title: "Let's Connect",
+    centerOrbText: "Connect",
+    subtitle: "Ready to collaborate on innovative AI projects or discuss opportunities in data science",
+    methods: {
+      email: "Email",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
+    getInTouch: "Get In Touch",
+    opportunities: {
+      title: "Open to Opportunities",
+      aiEngineering: "AI Engineering Positions",
+      researchProjects: "Collaborative Research Projects",
+      freelance: "Consulting & Freelance Work",
+      speaking: "Speaking & Workshop Opportunities",
+    },
+  },
     footer: {
       description: "AI Engineer & Data Scientist passionate about creating intelligent solutions.",
       quickLinks: "Quick Links",
@@ -463,15 +478,23 @@ const translations: Record<string, Translation> = {
     },
   },
     contact: {
-      title: "Contact",
-      subtitle: "Connectons-nous et construisons quelque chose d'incroyable ensemble",
-      form: {
-        name: "Nom",
-        email: "Email",
-        message: "Message",
-        send: "Envoyer"
-      }
+    title: "Connectons-nous",
+    centerOrbText: "Connecter",
+    subtitle: "Prêt à collaborer sur des projets d'IA innovants ou à discuter d'opportunités en science des données",
+    methods: {
+      email: "E-mail",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
+    getInTouch: "Contactez-moi",
+    opportunities: {
+      title: "Ouvert aux Opportunités",
+      aiEngineering: "Postes d'Ingénierie IA",
+      researchProjects: "Projets de Recherche Collaboratifs",
+      freelance: "Travail de Consulting & Freelance",
+      speaking: "Opportunités de Conférences & Ateliers",
+    },
+  },
     footer: {
       description: "Ingénieur IA & Data Scientist passionné par la création de solutions intelligentes.",
       quickLinks: "Liens Rapides",
@@ -630,15 +653,23 @@ const translations: Record<string, Translation> = {
     },
   },
     contact: {
-      title: "Kontakt",
-      subtitle: "Lassen Sie uns verbinden und gemeinsam etwas Erstaunliches schaffen",
-      form: {
-        name: "Name",
-        email: "E-Mail",
-        message: "Nachricht", 
-        send: "Nachricht senden"
-      }
+    title: "Lass verbinden",
+    centerOrbText: "Verbinden",
+    subtitle: "Bereit zur Zusammenarbeit an innovativen KI-Projekten oder zur Diskussion von Möglichkeiten im Bereich Data Science",
+    methods: {
+      email: "E-Mail",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
+    getInTouch: "Kontakt aufnehmen",
+    opportunities: {
+      title: "Offen für Gelegenheiten",
+      aiEngineering: "KI-Ingenieurpositionen",
+      researchProjects: "Kollaborative Forschungsprojekte",
+      freelance: "Beratung & Freiberufliche Arbeit",
+      speaking: "Vortrags- & Workshop-Möglichkeiten",
+    },
+  },
     footer: {
       description: "KI-Ingenieur & Data Scientist mit Leidenschaft für intelligente Lösungen.",
       quickLinks: "Quick Links",
@@ -798,15 +829,23 @@ const translations: Record<string, Translation> = {
   },
 
     contact: {
-      title: "Contacto",
-      subtitle: "Conectemos y construyamos algo increíble juntos",
-      form: {
-        name: "Nombre",
-        email: "Email",
-        message: "Mensaje",
-        send: "Enviar Mensaje"
-      }
+    title: "Conectemos",
+    centerOrbText: "Conectar",
+    subtitle: "Listo para colaborar en proyectos innovadores de IA o discutir oportunidades en ciencia de datos",
+    methods: {
+      email: "Correo electrónico",
+      github: "GitHub",
+      linkedin: "LinkedIn",
     },
+    getInTouch: "Ponerse en contacto",
+    opportunities: {
+      title: "Abierto a Oportunidades",
+      aiEngineering: "Puestos de Ingeniería de IA",
+      researchProjects: "Proyectos de Investigación Colaborativos",
+      freelance: "Trabajo de Consultoría y Freelance",
+      speaking: "Oportunidades para Charlas y Talleres",
+    },
+  },
     footer: {
       description: "Ingeniero de IA & Científico de Datos apasionado por crear soluciones inteligentes.",
       quickLinks: "Enlaces Rápidos",
@@ -965,16 +1004,24 @@ const translations: Record<string, Translation> = {
     },
   },
 
-    contact: {
-      title: "التواصل",
-      subtitle: "لنتواصل ونبني شيئاً مذهلاً معاً",
-      form: {
-        name: "الاسم",
-        email: "البريد الإلكتروني",
-        message: "الرسالة",
-        send: "إرسال الرسالة"
-      }
+   contact: {
+    title: "دعنا نتواصل",
+    centerOrbText: "تواصل",
+    subtitle: "مستعد للتعاون في مشاريع الذكاء الاصطناعي المبتكرة أو لمناقشة الفرص في علم البيانات",
+    methods: {
+      email: "البريد الإلكتروني",
+      github: "جيت هاب",
+      linkedin: "لينكد إن",
     },
+    getInTouch: "تواصل معي",
+    opportunities: {
+      title: "متاح للفرص",
+      aiEngineering: "مناصب هندسة الذكاء الاصطناعي",
+      researchProjects: "مشاريع بحثية تعاونية",
+      freelance: "استشارات وعمل حر",
+      speaking: "فرص التحدث وورش العمل",
+    },
+  },
     footer: {
       description: "مهندس ذكاء اصطناعي وعالم بيانات شغوف بإنشاء حلول ذكية.",
       quickLinks: "روابط سريعة",

@@ -1,7 +1,4 @@
-
-import { motion } from 'framer-motion';
-import { useSpringValue, animated } from '@react-spring/web';
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
 
@@ -9,7 +6,7 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const t = useTranslation();
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: "data-analytics",
       title: t.projects.items.dataAnalytics.title,
@@ -42,43 +39,30 @@ const Projects = () => {
       category: "Frontend",
       status: "Featured"
     }
-  ];
+  ], [t]);
+
+  const handleMouseEnter = useCallback((index: number) => {
+    setHoveredProject(index);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setHoveredProject(null);
+  }, []);
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
-    const scaleValue = useSpringValue(1, {
-      config: { mass: 1, friction: 10, tension: 200 },
-    });
-
-    const glowOpacity = useSpringValue(0, {
-      config: { mass: 1, friction: 8, tension: 120 },
-    });
+    const isHovered = hoveredProject === index;
 
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.1, duration: 0.6 }}
-        className="relative"
-      >
-        <animated.div
-          style={{ 
-            scale: scaleValue,
-            boxShadow: glowOpacity.to(opacity => 
-              `0 0 ${opacity * 30}px hsla(var(--primary), ${opacity * 0.3})`
-            )
-          }}
-          onMouseEnter={() => {
-            scaleValue.start(1.05);
-            glowOpacity.start(1);
-            setHoveredProject(index);
-          }}
-          onMouseLeave={() => {
-            scaleValue.start(1);
-            glowOpacity.start(0);
-            setHoveredProject(null);
-          }}
-          className="bg-background/80 backdrop-blur-sm p-8 rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 h-full cursor-pointer relative overflow-hidden"
+      <div className="relative">
+        <div
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+          className={`
+            bg-background/80 backdrop-blur-sm border border-border 
+            rounded-2xl p-8 h-full cursor-pointer overflow-hidden
+            transition-all duration-300 ease-out
+            ${isHovered ? 'border-primary/50 shadow-lg shadow-primary/10 transform -translate-y-2' : ''}
+          `}
         >
           {/* Status badge */}
           <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${
@@ -99,104 +83,88 @@ const Projects = () => {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {project.tech.map((tech: string, techIndex: number) => (
-                <motion.span
+              {project.tech.map((tech: string) => (
+                <span
                   key={tech}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (index * 0.1) + (techIndex * 0.05) + 0.3, duration: 0.3 }}
                   className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/20"
                 >
                   {tech}
-                </motion.span>
-                ))}
+                </span>
+              ))}
             </div>
 
             {/* Read More Button */}
             <div className="mt-6">
               <Link
                 to={`/project/${project.id}`}
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors group"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-300 group"
               >
                 {t.projects.readMore}
-                <motion.svg
+                <svg
                   width="16"
                   height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  className="group-hover:translate-x-1 transition-transform"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"/>
-                </motion.svg>
+                </svg>
               </Link>
             </div>
           </div>
 
           {/* Hover effect overlay */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: hoveredProject === index ? 0.1 : 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl"
+          <div 
+            className={`
+              absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 
+              rounded-2xl transition-opacity duration-300
+              ${isHovered ? 'opacity-100' : 'opacity-0'}
+            `}
           />
-        </animated.div>
-      </motion.div>
+        </div>
+      </div>
     );
   };
 
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">{t.projects.title}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             {t.projects.subtitle}
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-center mt-12"
-        >
+        <div className="text-center mt-12">
           <a
             href="https://github.com/nirdidev05"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary/20 hover:border-primary"
+            className="inline-flex items-center gap-2 bg-primary/10 hover:bg-primary hover:text-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold transition-all duration-300 border border-primary/20 hover:border-primary group"
           >
             View All Projects on GitHub
-            <motion.svg
+            <svg
               width="16"
               height="16"
               viewBox="0 0 24 24"
               fill="currentColor"
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
+              className="transition-transform duration-300 group-hover:translate-x-1"
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-            </motion.svg>
+            </svg>
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

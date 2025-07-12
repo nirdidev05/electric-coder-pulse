@@ -1,13 +1,12 @@
 import { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const t = useTranslation();
-  
+
   const PROJECTS_PER_PAGE = 4;
 
   const projects = useMemo(() => [
@@ -17,7 +16,8 @@ const Projects = () => {
       description: t.projects.items.dataAnalytics.description,
       tech: ["Python", "PyTorch", "React", "SQL"],
       category: "Data Science",
-      status: "Featured"
+      status: "Featured",
+      component: "DataAnalytics"
     },
     {
       id: "nlp-sentiment",
@@ -25,7 +25,8 @@ const Projects = () => {
       description: t.projects.items.nlpSentiment.description,
       tech: ["Python", "NLP", "Transformers", "FastAPI"],
       category: "AI/ML",
-      status: "In Progress"
+      status: "In Progress",
+      component: "NLPSentiment"
     },
     {
       id: "computer-vision",
@@ -33,7 +34,8 @@ const Projects = () => {
       description: t.projects.items.computerVision.description,
       tech: ["PyTorch", "GANs", "OpenCV", "Python"],
       category: "Deep Learning",
-      status: "Completed"
+      status: "Completed",
+      component: "GAN"
     },
     {
       id: "data-visualization",
@@ -41,9 +43,52 @@ const Projects = () => {
       description: t.projects.items.dataVisualization.description,
       tech: ["React", "D3.js", "Python", "Tailwind"],
       category: "Frontend",
-      status: "Featured"
+      status: "Featured",
+      component: "DataVisualization"
+    },
+    {
+      id: "web-scraping",
+      title: "Web Scraping Tool",
+      description: "Advanced web scraping tool with proxy rotation and anti-detection features",
+      tech: ["Python", "Selenium", "BeautifulSoup", "Scrapy"],
+      category: "Automation",
+      status: "Completed",
+      component: "WebScraping"
+    },
+    {
+      id: "blockchain-app",
+      title: "Blockchain DApp",
+      description: "Decentralized application built on Ethereum with smart contracts",
+      tech: ["Solidity", "Web3.js", "React", "Truffle"],
+      category: "Blockchain",
+      status: "In Progress",
+      component: "BlockchainApp"
+    },
+    {
+      id: "mobile-app",
+      title: "Cross-Platform Mobile App",
+      description: "React Native application with real-time chat and notifications",
+      tech: ["React Native", "Firebase", "Redux", "TypeScript"],
+      category: "Mobile",
+      status: "Featured",
+      component: "MobileApp"
+    },
+    {
+      id: "api-gateway",
+      title: "Microservices API Gateway",
+      description: "High-performance API gateway with load balancing and authentication",
+      tech: ["Node.js", "Express", "Redis", "Docker"],
+      category: "Backend",
+      status: "Completed",
+      component: "APIGateway"
     }
   ], [t]);
+
+  // Pagination calculations
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  const startIndex = currentPage * PROJECTS_PER_PAGE;
+  const endIndex = startIndex + PROJECTS_PER_PAGE;
+  const currentProjects = projects.slice(startIndex, endIndex);
 
   const handleMouseEnter = useCallback((index: number) => {
     setHoveredProject(index);
@@ -53,24 +98,29 @@ const Projects = () => {
     setHoveredProject(null);
   }, []);
 
-  // Pagination logic
-  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
-  const currentProjects = useMemo(() => {
-    const startIndex = currentPage * PROJECTS_PER_PAGE;
-    return projects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
-  }, [projects, currentPage]);
-
-  const handlePreviousPage = useCallback(() => {
-    setCurrentPage(prev => Math.max(0, prev - 1));
-  }, []);
-
-  const handleNextPage = useCallback(() => {
-    setCurrentPage(prev => Math.min(totalPages - 1, prev + 1));
+  const handlePageChange = useCallback((page: number) => {
+    if (page >= 0 && page < totalPages) {
+      setCurrentPage(page);
+      setHoveredProject(null);
+    }
   }, [totalPages]);
 
-  const handlePageClick = useCallback((pageIndex: number) => {
-    setCurrentPage(pageIndex);
-  }, []);
+  const handlePreviousPage = useCallback(() => {
+    handlePageChange(currentPage - 1);
+  }, [currentPage, handlePageChange]);
+
+  const handleNextPage = useCallback(() => {
+    handlePageChange(currentPage + 1);
+  }, [currentPage, handlePageChange]);
+
+  // Security function to validate project component name
+  const isValidProjectComponent = (component: string): boolean => {
+    const allowedComponents = [
+      'DataAnalytics', 'NLPSentiment', 'GAN', 'DataVisualization',
+      'WebScraping', 'BlockchainApp', 'MobileApp', 'APIGateway'
+    ];
+    return allowedComponents.includes(component);
+  };
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
     const isHovered = hoveredProject === index;
@@ -116,25 +166,42 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* Read More Button */}
+            {/* Read More Button - FIXED: Using project.id instead of project.path */}
             <div className="mt-6">
-              <Link
-                to={`/project/${project.id}`}
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-300 group"
-              >
-                {t.projects.readMore}
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="transition-transform duration-300 group-hover:translate-x-1"
+              {isValidProjectComponent(project.component) ? (
+                <Link
+                  to={`/project/${project.id}`}
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-300 group"
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
+                  {t.projects.readMore}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </Link>
+              ) : (
+                <span className="inline-flex items-center gap-2 text-muted-foreground font-medium cursor-not-allowed">
+                  {t.projects.readMore}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="opacity-50"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </span>
+              )}
             </div>
           </div>
 
@@ -147,6 +214,85 @@ const Projects = () => {
             `}
           />
         </div>
+      </div>
+    );
+  };
+
+  const PaginationControls = () => {
+    if (totalPages <= 1) return null;
+
+    return (
+      <div className="flex items-center justify-center gap-4 mt-12">
+        {/* Previous Button */}
+        <button
+          onClick={handlePreviousPage}
+          disabled={currentPage === 0}
+          className={`
+            p-2 rounded-full transition-all duration-300
+            ${currentPage === 0 
+              ? 'text-muted-foreground cursor-not-allowed opacity-50' 
+              : 'text-primary hover:bg-primary/10 hover:text-primary-foreground'
+            }
+          `}
+          aria-label="Previous page"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="rotate-180"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+
+        {/* Page Numbers */}
+        <div className="flex gap-2">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index}
+              onClick={() => handlePageChange(index)}
+              className={`
+                w-10 h-10 rounded-full text-sm font-semibold transition-all duration-300
+                ${currentPage === index
+                  ? 'bg-primary text-primary-foreground shadow-lg' 
+                  : 'text-muted-foreground hover:bg-primary/10 hover:text-primary'
+                }
+              `}
+              aria-label={`Go to page ${index + 1}`}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages - 1}
+          className={`
+            p-2 rounded-full transition-all duration-300
+            ${currentPage === totalPages - 1 
+              ? 'text-muted-foreground cursor-not-allowed opacity-50' 
+              : 'text-primary hover:bg-primary/10 hover:text-primary-foreground'
+            }
+          `}
+          aria-label="Next page"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
       </div>
     );
   };
@@ -170,41 +316,9 @@ const Projects = () => {
         </div>
 
         {/* Pagination Controls */}
-        {totalPages > 1 && (
-          <div className="flex justify-center items-center mt-12 mb-8 gap-4">
-            <button
-              onClick={handlePreviousPage}
-              disabled={currentPage === 0}
-              className="p-2 rounded-lg bg-background border border-border hover:border-primary/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            
-            <div className="flex gap-2">
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handlePageClick(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    currentPage === index 
-                      ? 'bg-primary scale-125' 
-                      : 'bg-border hover:bg-primary/50'
-                  }`}
-                />
-              ))}
-            </div>
-            
-            <button
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages - 1}
-              className="p-2 rounded-lg bg-background border border-border hover:border-primary/50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
-        )}
+        <PaginationControls />
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-12">
           <a
             href="https://github.com/nirdidev05"
             target="_blank"

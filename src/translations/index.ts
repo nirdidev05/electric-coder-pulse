@@ -96,9 +96,31 @@ export interface Translation {
   };
   
   // Achievements Section
-  achievements: {
+ achievements: {
     title: string;
     subtitle: string;
+    stats: {
+      competitionWins: string;
+      dataScienceProjects: string;
+      yearsExperience: string;
+    };
+    competitions: {
+      place3rd: string;
+      place2nd: string;
+      place1st: string;
+      ingehack: {
+        event: string;
+        description: string;
+      };
+      algeriaDataCup: {
+        event: string;
+        description: string;
+      };
+      haickAiChallenge: {
+        event: string;
+        description: string;
+      };
+    };
   };
   
   // Contact Section
@@ -246,10 +268,33 @@ const translations: Record<string, Translation> = {
         }
       }
     },
-    achievements: {
-      title: "Achievements",
-      subtitle: "Recognition and milestones in my journey"
+   achievements: {
+    title: "Competition Achievements",
+    subtitle: "Recognition for excellence in AI innovation, data science mastery, and competitive programming across Algeria's tech landscape",
+    stats: {
+      competitionWins: "Competition Wins",
+      dataScienceProjects: "DataScience Projects",
+      yearsExperience: "Years Experience",
     },
+    competitions: {
+      place3rd: "3rd Place",
+      place2nd: "2nd Place",
+      place1st: "1st Place",
+      ingehack: {
+        event: "IngeHack",
+        description: "A hybrid between hackathon and datathon focused on building AI agents. I developed an intelligent system for parsing, extracting, and classifying resume data using NLP techniques such as entity recognition and skill matching. The solution was optimized for deployment in a competitive environment.",
+      },
+      algeriaDataCup: {
+        event: "Algeria Data Cup (ADC)",
+        description: "A national AI competition organized by the École Nationale Polytechnique in Algiers, focused on solving real-world challenges. I worked on building a predictive model for daily meal forecasting at BNP Paribas, handling data cleaning, integration, exploratory analysis, feature engineering, and training advanced regression models. The experience also strengthened my teamwork and stress management skills in a high-pressure environment.",
+      },
+      haickAiChallenge: {
+        event: "HAiCK AI Challenge",
+        description: "An elite competition held at ESI Algiers by the School of AI, spotlighting cutting-edge machine learning and AI research. I developed a high-performance financial prediction system that combined advanced news processing with TF-IDF embeddings, PCA-based dimensionality reduction, and a custom sentiment lexicon to capture market trends. The model featured multi-asset correlation modeling, news impact differentiation, and stability constraints to ensure robust, accurate forecasts across diverse market scenarios—leading our team to outperform 12 others in the TSA Challenge.",
+      },
+    },
+  },
+
     contact: {
       title: "Contact",
       subtitle: "Let's connect and build something amazing together",
@@ -391,10 +436,32 @@ const translations: Record<string, Translation> = {
         }
       }
     },
-    achievements: {
-      title: "Réalisations",
-      subtitle: "Reconnaissance et jalons de mon parcours"
+   achievements: {
+    title: "Réalisations Compétition",
+    subtitle: "Reconnaissance pour l'excellence en innovation IA, maîtrise de la science des données et programmation compétitive à travers le paysage technologique algérien",
+    stats: {
+      competitionWins: "Compétitions Gagnées",
+      dataScienceProjects: "Projets de Science des Données",
+      yearsExperience: "Années d'Expérience",
     },
+    competitions: {
+      place3rd: "3ème Place",
+      place2nd: "2ème Place",
+      place1st: "1ère Place",
+      ingehack: {
+        event: "IngeHack",
+        description: "Un hybride entre hackathon et datathon axé sur la construction d'agents IA. J'ai développé un système intelligent pour l'analyse, l'extraction et la classification de données de CV en utilisant des techniques de PNL telles que la reconnaissance d'entités et la correspondance de compétences. La solution a été optimisée pour un déploiement dans un environnement compétitif.",
+      },
+      algeriaDataCup: {
+        event: "Algeria Data Cup (ADC)",
+        description: "Une compétition nationale d'IA organisée par l'École Nationale Polytechnique d'Alger, axée sur la résolution de défis du monde réel. J'ai travaillé sur la construction d'un modèle prédictif pour la prévision quotidienne des repas chez BNP Paribas, gérant le nettoyage des données, l'intégration, l'analyse exploratoire, l'ingénierie des fonctionnalités et l'entraînement de modèles de régression avancés. L'expérience a également renforcé mes compétences en travail d'équipe et en gestion du stress dans un environnement sous pression.",
+      },
+      haickAiChallenge: {
+        event: "HAiCK AI Challenge",
+        description: "Une compétition d'élite tenue à l'ESI Alger par la School of AI, mettant en lumière la recherche de pointe en apprentissage automatique et en IA. J'ai développé un système de prédiction financière haute performance combinant un traitement avancé des nouvelles avec des embeddings TF-IDF, une réduction de dimensionnalité basée sur la PCA et un lexique de sentiment personnalisé pour capturer les tendances du marché. Le modèle comportait une modélisation de corrélation multi-actifs, une différenciation de l'impact des nouvelles et des contraintes de stabilité pour assurer des prévisions robustes et précises dans divers scénarios de marché — menant notre équipe à surpasser 12 autres dans le défi TSA.",
+      },
+    },
+  },
     contact: {
       title: "Contact",
       subtitle: "Connectons-nous et construisons quelque chose d'incroyable ensemble",
@@ -536,10 +603,32 @@ const translations: Record<string, Translation> = {
         }
       }
     },
-    achievements: {
-      title: "Erfolge",
-      subtitle: "Anerkennung und Meilensteine meiner Reise"
+   achievements: {
+    title: "Wettbewerbserfolge",
+    subtitle: "Anerkennung für Exzellenz in KI-Innovation, Datenwissenschaft und wettbewerbsorientierter Programmierung in Algeriens Technologielandschaft",
+    stats: {
+      competitionWins: "Wettbewerbserfolge",
+      dataScienceProjects: "Data-Science-Projekte",
+      yearsExperience: "Jahre Erfahrung",
     },
+    competitions: {
+      place3rd: "3. Platz",
+      place2nd: "2. Platz",
+      place1st: "1. Platz",
+      ingehack: {
+        event: "IngeHack",
+        description: "Ein Hybrid aus Hackathon und Datathon, der sich auf die Entwicklung von KI-Agenten konzentrierte. Ich entwickelte ein intelligentes System zum Parsen, Extrahieren und Klassifizieren von Lebenslaufdaten unter Verwendung von NLP-Techniken wie Entitätserkennung und Fähigkeitenabgleich. Die Lösung wurde für den Einsatz in einer Wettbewerbsumgebung optimiert.",
+      },
+      algeriaDataCup: {
+        event: "Algeria Data Cup (ADC)",
+        description: "Ein nationaler KI-Wettbewerb, organisiert von der École Nationale Polytechnique in Algier, der sich auf die Lösung realer Herausforderungen konzentrierte. Ich arbeitete an der Entwicklung eines prädiktiven Modells für die tägliche Essensprognose bei BNP Paribas, kümmerte mich um Datenbereinigung, Integration, explorative Analyse, Feature-Engineering und das Training fortschrittlicher Regressionsmodelle. Die Erfahrung stärkte auch meine Teamfähigkeit und Stressbewältigung in einem Hochdruckumfeld.",
+      },
+      haickAiChallenge: {
+        event: "HAiCK AI Challenge",
+        description: "Ein Elite-Wettbewerb, der an der ESI Algier von der School of AI veranstaltet wurde und Spitzenforschung im Bereich des maschinellen Lernens und der KI beleuchtete. Ich entwickelte ein leistungsstarkes Finanzvorhersagesystem, das fortschrittliche Nachrichtenverarbeitung mit TF-IDF-Einbettungen, PCA-basierter Dimensionsreduktion und einem benutzerdefinierten Stimmungslexikon kombinierte, um Markttrends zu erfassen. Das Modell umfasste Multi-Asset-Korrelationsmodellierung, Differenzierung der Nachrichtenwirkung und Stabilitätsbeschränkungen, um robuste, genaue Prognosen in verschiedenen Marktszenarien zu gewährleisten – was unser Team dazu brachte, 12 andere im TSA-Challenge zu übertreffen.",
+      },
+    },
+  },
     contact: {
       title: "Kontakt",
       subtitle: "Lassen Sie uns verbinden und gemeinsam etwas Erstaunliches schaffen",
@@ -681,10 +770,33 @@ const translations: Record<string, Translation> = {
         }
       }
     },
-    achievements: {
-      title: "Logros",
-      subtitle: "Reconocimiento e hitos en mi trayectoria"
+   achievements: {
+    title: "Logros Competiciones",
+    subtitle: "Reconocimiento por la excelencia en innovación de IA, dominio de la ciencia de datos y programación competitiva en el panorama tecnológico de Argelia",
+    stats: {
+      competitionWins: "Victorias en Competiciones",
+      dataScienceProjects: "Proyectos de Ciencia de Datos",
+      yearsExperience: "Años de Experiencia",
     },
+    competitions: {
+      place3rd: "3er Lugar",
+      place2nd: "2do Lugar",
+      place1st: "1er Lugar",
+      ingehack: {
+        event: "IngeHack",
+        description: "Un híbrido entre hackathon y datathon centrado en la construcción de agentes de IA. Desarrollé un sistema inteligente para analizar, extraer y clasificar datos de currículums utilizando técnicas de PNL como el reconocimiento de entidades y la coincidencia de habilidades. La solución se optimizó para su implementación en un entorno competitivo.",
+      },
+      algeriaDataCup: {
+        event: "Algeria Data Cup (ADC)",
+        description: "Una competición nacional de IA organizada por la École Nationale Polytechnique de Argel, centrada en la resolución de desafíos del mundo real. Trabajé en la construcción de un modelo predictivo para la previsión diaria de comidas en BNP Paribas, gestionando la limpieza de datos, la integración, el análisis exploratorio, la ingeniería de características y el entrenamiento de modelos de regresión avanzados. La experiencia también fortaleció mis habilidades de trabajo en equipo y gestión del estrés en un entorno de alta presión.",
+      },
+      haickAiChallenge: {
+        event: "HAiCK AI Challenge",
+        description: "Una competición de élite celebrada en ESI Argel por la School of AI, destacando la investigación de vanguardia en aprendizaje automático e IA. Desarrollé un sistema de predicción financiera de alto rendimiento que combinaba el procesamiento avanzado de noticias con incrustaciones TF-IDF, reducción de dimensionalidad basada en PCA y un léxico de sentimiento personalizado para capturar las tendencias del mercado. El modelo presentaba modelado de correlación multi-activo, diferenciación del impacto de las noticias y restricciones de estabilidad para garantizar pronósticos robustos y precisos en diversos escenarios de mercado, lo que llevó a nuestro equipo a superar a otros 12 en el TSA Challenge.",
+      },
+    },
+  },
+
     contact: {
       title: "Contacto",
       subtitle: "Conectemos y construyamos algo increíble juntos",
@@ -826,10 +938,33 @@ const translations: Record<string, Translation> = {
         }
       }
     },
-    achievements: {
-      title: "الإنجازات",
-      subtitle: "التقدير والمعالم في رحلتي"
+   achievements: {
+    title: "إنجازات المسابقات",
+    subtitle: "تقدير التميز في ابتكار الذكاء الاصطناعي، وإتقان علم البيانات، والبرمجة التنافسية في المشهد التكنولوجي الجزائري",
+    stats: {
+      competitionWins: "عدد المسابقات الفائزة",
+      dataScienceProjects: "مشاريع علم البيانات",
+      yearsExperience: "سنوات الخبرة",
     },
+    competitions: {
+      place3rd: "المركز الثالث",
+      place2nd: "المركز الثاني",
+      place1st: "المركز الأول",
+      ingehack: {
+        event: "إنجيه هاك",
+        description: "مزيج بين هاكاثون وداتاثون يركز على بناء وكلاء الذكاء الاصطناعي. لقد طوّرت نظامًا ذكيًا لتحليل واستخراج وتصنيف بيانات السيرة الذاتية باستخدام تقنيات معالجة اللغة الطبيعية مثل التعرف على الكيانات ومطابقة المهارات. تم تحسين الحل للنشر في بيئة تنافسية.",
+      },
+      algeriaDataCup: {
+        event: "كأس الجزائر للبيانات (ADC)",
+        description: "مسابقة وطنية للذكاء الاصطناعي نظمتها المدرسة الوطنية متعددة التقنيات بالجزائر العاصمة، تركز على حل تحديات العالم الحقيقي. لقد عملت على بناء نموذج تنبؤي لتوقعات الوجبات اليومية في BNP Paribas، وتوليت تنظيف البيانات، ودمجها، والتحليل الاستكشافي، وهندسة الميزات، وتدريب نماذج الانحدار المتقدمة. كما عززت التجربة مهاراتي في العمل الجماعي وإدارة الإجهاد في بيئة عالية الضغط.",
+      },
+      haickAiChallenge: {
+        event: "تحدي هايك للذكاء الاصطناعي",
+        description: "مسابقة نخبوية أقيمت في المدرسة العليا للمعلوماتية بالجزائر العاصمة من قبل مدرسة الذكاء الاصطناعي، تسلط الضوء على أحدث أبحاث التعلم الآلي والذكاء الاصطناعي. لقد طوّرت نظامًا عالي الأداء للتنبؤ المالي يجمع بين معالجة الأخبار المتقدمة مع تضمينات TF-IDF، وتقليل الأبعاد القائم على PCA، ومعجم مشاعر مخصص لالتقاط اتجاهات السوق. يتميز النموذج بنمذجة الارتباط متعدد الأصول، وتمايز تأثير الأخبار، وقيود الاستقرار لضمان توقعات قوية ودقيقة عبر سيناريوهات السوق المتنوعة – مما أدى إلى تفوق فريقنا على 12 فريقًا آخر في تحدي TSA.",
+      },
+    },
+  },
+
     contact: {
       title: "التواصل",
       subtitle: "لنتواصل ونبني شيئاً مذهلاً معاً",

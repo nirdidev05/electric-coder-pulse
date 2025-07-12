@@ -144,11 +144,33 @@ export interface Translation {
   };
   // Footer
   footer: {
-    description: string;
-    quickLinks: string;
-    resources: string;
-    contact: string;
-    copyright: string;
+    brandName: string; // "Mr. Benbouta Walid"
+    tagline: string;
+    sectionTitles: {
+      projects: string;
+      resources: string;
+      contact: string;
+    };
+    links: {
+      projects: {
+        viewProjects: string;
+        achievements: string;
+        resume: string;
+      };
+      resources: {
+        aboutMe: string;
+        techStack: string;
+        experience: string;
+      };
+      contact: {
+        getInTouch: string;
+        github: string;
+        linkedin: string;
+      };
+    };
+    copyrightName: string; // "BENBOUTA Walid" for copyright
+    roleEngineer: string;
+    roleGraduate: string;
   };
 }
 
@@ -321,13 +343,36 @@ const translations: Record<string, Translation> = {
     },
   },
     footer: {
-      description: "AI Engineer & Data Scientist passionate about creating intelligent solutions.",
-      quickLinks: "Quick Links",
+    brandName: "Mr. Benbouta Walid",
+    tagline: "Pioneering AI solutions with a focus on responsible innovation and real-world impact in North Africa and beyond.",
+    sectionTitles: {
+      projects: "Projects",
       resources: "Resources",
       contact: "Contact",
-      copyright: "All rights reserved."
-    }
+    },
+    links: {
+      projects: {
+        viewProjects: "View Projects",
+        achievements: "Achievements",
+        resume: "Resume",
+      },
+      resources: {
+        aboutMe: "About Me",
+        techStack: "Tech Stack",
+        experience: "Experience",
+      },
+      contact: {
+        getInTouch: "Get in Touch",
+        github: "GitHub",
+        linkedin: "LinkedIn",
+      },
+    },
+    copyrightName: "BENBOUTA Walid",
+    roleEngineer: "AI Engineer",
+    roleGraduate: "ESI Graduate",
   },
+},
+
   
   fr: {
     nav: {
@@ -495,14 +540,37 @@ const translations: Record<string, Translation> = {
       speaking: "Opportunités de Conférences & Ateliers",
     },
   },
-    footer: {
-      description: "Ingénieur IA & Data Scientist passionné par la création de solutions intelligentes.",
-      quickLinks: "Liens Rapides",
+   footer: {
+    brandName: "M. Benbouta Walid",
+    tagline: "Pionnier des solutions d'IA, axé sur l'innovation responsable et l'impact réel en Afrique du Nord et au-delà.",
+    sectionTitles: {
+      projects: "Projets",
       resources: "Ressources",
       contact: "Contact",
-      copyright: "Tous droits réservés."
-    }
+    },
+    links: {
+      projects: {
+        viewProjects: "Voir les Projets",
+        achievements: "Réalisations",
+        resume: "CV",
+      },
+      resources: {
+        aboutMe: "À propos de moi",
+        techStack: "Pile Technologique",
+        experience: "Expérience",
+      },
+      contact: {
+        getInTouch: "Contactez-moi",
+        github: "GitHub",
+        linkedin: "LinkedIn",
+      },
+    },
+    copyrightName: "BENBOUTA Walid",
+    roleEngineer: "Ingénieur IA",
+    roleGraduate: "Diplômé ESI",
   },
+},
+
   
   de: {
     nav: {
@@ -671,13 +739,35 @@ const translations: Record<string, Translation> = {
     },
   },
     footer: {
-      description: "KI-Ingenieur & Data Scientist mit Leidenschaft für intelligente Lösungen.",
-      quickLinks: "Quick Links",
+    brandName: "Herr Benbouta Walid",
+    tagline: "Pionier für KI-Lösungen mit Schwerpunkt auf verantwortungsvoller Innovation und realer Wirkung in Nordafrika und darüber hinaus.",
+    sectionTitles: {
+      projects: "Projekte",
       resources: "Ressourcen",
       contact: "Kontakt",
-      copyright: "Alle Rechte vorbehalten."
-    }
+    },
+    links: {
+      projects: {
+        viewProjects: "Projekte ansehen",
+        achievements: "Erfolge",
+        resume: "Lebenslauf",
+      },
+      resources: {
+        aboutMe: "Über mich",
+        techStack: "Tech Stack",
+        experience: "Erfahrung",
+      },
+      contact: {
+        getInTouch: "Kontakt aufnehmen",
+        github: "GitHub",
+        linkedin: "LinkedIn",
+      },
+    },
+    copyrightName: "BENBOUTA Walid",
+    roleEngineer: "KI-Ingenieur",
+    roleGraduate: "ESI-Absolvent",
   },
+},
   
   es: {
     nav: {
@@ -846,14 +936,36 @@ const translations: Record<string, Translation> = {
       speaking: "Oportunidades para Charlas y Talleres",
     },
   },
-    footer: {
-      description: "Ingeniero de IA & Científico de Datos apasionado por crear soluciones inteligentes.",
-      quickLinks: "Enlaces Rápidos",
+   footer: {
+    brandName: "Sr. Benbouta Walid",
+    tagline: "Pionero en soluciones de IA con un enfoque en la innovación responsable y el impacto en el mundo real en el norte de África y más allá.",
+    sectionTitles: {
+      projects: "Proyectos",
       resources: "Recursos",
       contact: "Contacto",
-      copyright: "Todos los derechos reservados."
-    }
+    },
+    links: {
+      projects: {
+        viewProjects: "Ver Proyectos",
+        achievements: "Logros",
+        resume: "Currículum",
+      },
+      resources: {
+        aboutMe: "Acerca de mí",
+        techStack: "Pila Tecnológica",
+        experience: "Experiencia",
+      },
+      contact: {
+        getInTouch: "Ponerse en contacto",
+        github: "GitHub",
+        linkedin: "LinkedIn",
+      },
+    },
+    copyrightName: "BENBOUTA Walid",
+    roleEngineer: "Ingeniero de IA",
+    roleGraduate: "Graduado de ESI",
   },
+},
   
   ar: {
     nav: {
@@ -1023,12 +1135,35 @@ const translations: Record<string, Translation> = {
     },
   },
     footer: {
-      description: "مهندس ذكاء اصطناعي وعالم بيانات شغوف بإنشاء حلول ذكية.",
-      quickLinks: "روابط سريعة",
+    brandName: "السيد بن بوتة وليد",
+    tagline: "رواد حلول الذكاء الاصطناعي مع التركيز على الابتكار المسؤول والتأثير الفعلي في شمال إفريقيا وما بعدها.",
+    sectionTitles: {
+      projects: "المشاريع",
       resources: "الموارد",
       contact: "التواصل",
-      copyright: "جميع الحقوق محفوظة."
-    }
+    },
+    links: {
+      projects: {
+        viewProjects: "عرض المشاريع",
+        achievements: "الإنجازات",
+        resume: "السيرة الذاتية",
+      },
+      resources: {
+        aboutMe: "نبذة عني",
+        techStack: "المكدس التقني",
+        experience: "الخبرة",
+      },
+      contact: {
+        getInTouch: "تواصل معي",
+        github: "جيت هاب",
+        linkedin: "لينكد إن",
+      },
+    },
+    copyrightName: "بن بوتة وليد",
+    roleEngineer: "مهندس ذكاء اصطناعي",
+    roleGraduate: "خريج المدرسة العليا للمعلوماتية",
+  },
+
   }
 };
 

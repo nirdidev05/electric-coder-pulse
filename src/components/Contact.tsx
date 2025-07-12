@@ -1,32 +1,37 @@
-
+// src/Contact.js (updated part)
 import { motion } from 'framer-motion';
 import { useSpringValue, animated } from '@react-spring/web';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import OrbitingCircles from './ui/orbiting-circles';
-
+import { useTranslation } from '@/hooks/useTranslation';
 const Contact = () => {
+  const  t  = useTranslation(); // Use the translation hook
+
   const formScale = useSpringValue(1, {
     config: { mass: 1, friction: 10, tension: 200 },
   });
 
+  // Note: The 'value' and 'href' fields for contactMethods remain static (email, URLs)
+  // as they are not text meant for translation, but rather identifiers/links.
+  // We only translate the 'label'.
   const contactMethods = [
     {
       icon: Mail,
-      label: "Email",
+      label: t.contact.methods.email, // Translate this label
       value: "benboutawalid@gmail.com",
       href: "mailto:benboutawalid@gmail.com",
       color: "text-primary"
     },
     {
       icon: Github,
-      label: "GitHub", 
+      label: t.contact.methods.github, // Translate this label
       value: "nirdidev05",
       href: "https://github.com/nirdidev05",
       color: "text-foreground"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t.contact.methods.linkedin, // Translate this label
       value: "benbouta-walid",
       href: "https://www.linkedin.com/in/benbouta-walid-416870291/",
       color: "text-secondary"
@@ -44,10 +49,14 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Let's <span className="gradient-text">Connect</span>
+            {/* Split "Let's Connect" for styling if 'Connect' has a gradient */}
+            {t.contact.title.includes(' ') ? t.contact.title.split(' ')[0] + ' ' : ''}
+            <span className="gradient-text">
+              {t.contact.title.includes(' ') ? t.contact.title.split(' ')[1] : t.contact.title}
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on innovative AI projects or discuss opportunities in data science
+            {t.contact.subtitle}
           </p>
         </motion.div>
 
@@ -67,16 +76,16 @@ const Contact = () => {
                   className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center animate-float"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <span className="text-2xl font-bold">Connect</span>
+                  <span className="text-2xl font-bold">{t.contact.centerOrbText}</span>
                 </motion.div>
               </div>
 
-              {/* Orbiting contact methods */}
+              {/* Orbiting contact methods (labels already translated from contactMethods array) */}
               {contactMethods.map((contact, index) => (
-                <OrbitingCircles 
+                <OrbitingCircles
                   key={contact.label}
-                  radius={100} 
-                  duration={20} 
+                  radius={100}
+                  duration={20}
                   delay={index * 7}
                 >
                   <motion.a
@@ -108,9 +117,10 @@ const Contact = () => {
               onMouseLeave={() => formScale.start(1)}
               className="bg-background/80 backdrop-blur-sm p-8 rounded-2xl border border-border"
             >
-              <h3 className="text-2xl font-bold mb-6 gradient-text">Get In Touch</h3>
-              
+              <h3 className="text-2xl font-bold mb-6 gradient-text">{t.contact.getInTouch}</h3>
+
               <div className="space-y-6">
+                {/* Contact methods (labels already translated from contactMethods array) */}
                 {contactMethods.map((contact, index) => (
                   <motion.a
                     key={contact.label}
@@ -143,23 +153,23 @@ const Contact = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="bg-gradient-to-br from-primary/10 to-secondary/10 p-8 rounded-2xl border border-primary/20"
             >
-              <h4 className="text-xl font-bold mb-4">Open to Opportunities</h4>
+              <h4 className="text-xl font-bold mb-4">{t.contact.opportunities.title}</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  AI Engineering Positions
+                  {t.contact.opportunities.aiEngineering}
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                  Collaborative Research Projects
+                  {t.contact.opportunities.researchProjects}
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
-                  Consulting & Freelance Work
+                  {t.contact.opportunities.freelance}
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  Speaking & Workshop Opportunities
+                  {t.contact.opportunities.speaking}
                 </li>
               </ul>
             </motion.div>

@@ -56,7 +56,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto items-start">
+            <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
           {/* My Journey (Left) - Modern Redesign */}
           <div className="relative">
             <motion.h3 
@@ -115,7 +115,7 @@ const About = () => {
                         type: "spring",
                         stiffness: 100 
                       }}
-                      className={`relative flex ${isLeft ? 'justify-start' : 'justify-end'} lg:${isLeft ? 'justify-start' : 'justify-end'} justify-center`}
+                      className={`relative flex ${isLeft ? 'justify-start' : 'justify-end'}`}
                     >
                       {/* Connection Line to Next Item */}
                       {idx < journeySteps.length - 1 && (
@@ -124,7 +124,7 @@ const About = () => {
                           whileInView={{ scaleY: 1 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: idx * 0.15 + 0.3 }}
-                          className={`absolute top-full left-1/2 transform -translate-x-1/2 lg:left-auto lg:transform-none lg:${isLeft ? 'left-36' : 'right-36'} w-0.5 h-8 bg-gradient-to-b from-primary/40 to-secondary/30 origin-top z-10`}
+                          className={`absolute top-full ${isLeft ? 'left-36' : 'right-36'} w-0.5 h-8 bg-gradient-to-b from-primary/40 to-secondary/30 origin-top z-10`}
                         />
                       )}
                       
@@ -135,7 +135,7 @@ const About = () => {
                           rotateY: isLeft ? 2 : -2,
                           rotateX: -1
                         }}
-                        className="relative group cursor-pointer w-full max-w-sm mx-auto lg:max-w-none lg:mx-0"
+                        className="relative group cursor-pointer w-80 max-w-full"
                       >
                         {/* Glow Effect */}
                         <div className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
@@ -152,7 +152,9 @@ const About = () => {
                         }`}>
                           {/* Icon Bubble */}
                           <motion.div 
-                            className={`absolute -right-6 lg:${isLeft ? '-right-6' : '-left-6'} top-6 w-12 h-12 rounded-full border-2 border-primary/20 bg-background flex items-center justify-center shadow-lg`}
+                            className={`absolute ${
+                              isLeft ? '-right-6' : '-left-6'
+                            } top-6 w-12 h-12 rounded-full border-2 border-primary/20 bg-background flex items-center justify-center shadow-lg`}
                             whileHover={{ scale: 1.1, rotate: 360 }}
                             transition={{ duration: 0.3 }}
                           >
@@ -160,7 +162,7 @@ const About = () => {
                           </motion.div>
                           
                           {/* Content */}
-                          <div className={`pr-4 lg:${isLeft ? 'pr-4' : 'pl-4'}`}>
+                          <div className={isLeft ? 'pr-4' : 'pl-4'}>
                             <motion.p 
                               className={`text-base leading-relaxed ${
                                 step.highlight

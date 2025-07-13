@@ -369,7 +369,7 @@ const translations: Record<string, Translation> = {
     },
     copyrightName: "BENBOUTA Walid",
     roleEngineer: "AI Engineer",
-    roleGraduate: "ESI Graduate",
+    roleGraduate: "futur State Engineer in Computer Science",
   },
 },
 
@@ -567,7 +567,7 @@ const translations: Record<string, Translation> = {
     },
     copyrightName: "BENBOUTA Walid",
     roleEngineer: "Ingénieur IA",
-    roleGraduate: "Diplômé ESI",
+    roleGraduate: "Futur ingénieur d'État en informatique",
   },
 },
 
@@ -765,7 +765,7 @@ const translations: Record<string, Translation> = {
     },
     copyrightName: "BENBOUTA Walid",
     roleEngineer: "KI-Ingenieur",
-    roleGraduate: "ESI-Absolvent",
+    roleGraduate: "Angehender Staatsingenieur/in der Informatik",
   },
 },
   
@@ -963,7 +963,7 @@ const translations: Record<string, Translation> = {
     },
     copyrightName: "BENBOUTA Walid",
     roleEngineer: "Ingeniero de IA",
-    roleGraduate: "Graduado de ESI",
+    roleGraduate: "Futurus Ingeniarius Publicus in Scientia Computatrali",
   },
 },
   
@@ -1161,7 +1161,7 @@ const translations: Record<string, Translation> = {
     },
     copyrightName: "بن بوتة وليد",
     roleEngineer: "مهندس ذكاء اصطناعي",
-    roleGraduate: "خريج المدرسة العليا للمعلوماتية",
+    roleGraduate: "مهندس دولة مستقبلي في علوم الحاسوب",
   },
 
   }

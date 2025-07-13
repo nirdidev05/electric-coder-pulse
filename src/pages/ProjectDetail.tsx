@@ -1,5 +1,6 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
 
 // Lazy load project components
 const DataAnalytics = lazy(() => import('./projects/DataAnalytics'));
@@ -10,6 +11,7 @@ const WebScraping = lazy(() => import('./projects/WebScraping'));
 const BlockchainApp = lazy(() => import('./projects/BlockchainApp'));
 const MobileApp = lazy(() => import('./projects/MobileApp'));
 const APIGateway = lazy(() => import('./projects/APIGateway'));
+
 // Loading component
 const ProjectLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -29,8 +31,8 @@ const ProjectError = ({ projectId }: { projectId: string }) => (
       <p className="text-muted-foreground mb-6">
         The project "{projectId}" could not be found or is not available.
       </p>
-      <a
-        href="/"
+      <Link
+        to="/"
         className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors"
       >
         <svg
@@ -45,14 +47,14 @@ const ProjectError = ({ projectId }: { projectId: string }) => (
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>
         Back to Home
-      </a>
+      </Link>
     </div>
   </div>
 );
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
-
+  
   // Project mapping with security validation
   const projectComponents: Record<string, React.LazyExoticComponent<() => JSX.Element>> = {
     'data-analytics': DataAnalytics,
@@ -64,15 +66,15 @@ const ProjectDetail = () => {
     'mobile-app': MobileApp,
     'api-gateway': APIGateway,
   };
-
+  
   // Validate project ID
   if (!id || !projectComponents[id]) {
     return <ProjectError projectId={id || 'unknown'} />;
   }
-
+  
   // Get the component
   const ProjectComponent = projectComponents[id];
-
+  
   return (
     <Suspense fallback={<ProjectLoader />}>
       <ProjectComponent />

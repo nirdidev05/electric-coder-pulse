@@ -124,7 +124,87 @@ const Projects = () => {
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
     const isHovered = hoveredProject === index;
+    const isValidComponent = isValidProjectComponent(project.component);
 
+    // If valid component, wrap entire card in Link
+    if (isValidComponent) {
+      return (
+        <Link
+          to={`/project/${project.id}`}
+          className="relative block h-full"
+          onMouseEnter={() => handleMouseEnter(index)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div
+            className={`
+              bg-background/80 backdrop-blur-sm border border-border 
+              rounded-2xl p-8 h-full cursor-pointer overflow-hidden
+              transition-all duration-300 ease-out
+              ${isHovered ? 'border-primary/50 shadow-lg shadow-primary/10 transform -translate-y-2' : ''}
+            `}
+          >
+            {/* Status badge */}
+            <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold ${
+              project.status === 'Featured' 
+                ? 'bg-accent/20 text-accent border border-accent/30' 
+                : project.status === 'In Progress'
+                ? 'bg-warning/20 text-warning border border-warning/30'
+                : 'bg-secondary/20 text-secondary border border-secondary/30'
+            }`}>
+              {project.status}
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <span className="text-sm text-muted-foreground font-medium">{project.category}</span>
+                <h3 className="text-xl font-bold mt-1 mb-3">{project.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech: string) => (
+                  <span
+                    key={tech}
+                    className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium border border-primary/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Read More indicator */}
+              <div className="mt-6">
+                <div className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-300 group">
+                  {t.projects.readMore}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Hover effect overlay */}
+            <div 
+              className={`
+                absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 
+                rounded-2xl transition-opacity duration-300
+                ${isHovered ? 'opacity-100' : 'opacity-0'}
+              `}
+            />
+          </div>
+        </Link>
+      );
+    }
+
+    // If invalid component, render non-clickable card
     return (
       <div className="relative">
         <div
@@ -132,9 +212,8 @@ const Projects = () => {
           onMouseLeave={handleMouseLeave}
           className={`
             bg-background/80 backdrop-blur-sm border border-border 
-            rounded-2xl p-8 h-full cursor-pointer overflow-hidden
+            rounded-2xl p-8 h-full overflow-hidden opacity-60
             transition-all duration-300 ease-out
-            ${isHovered ? 'border-primary/50 shadow-lg shadow-primary/10 transform -translate-y-2' : ''}
           `}
         >
           {/* Status badge */}
@@ -166,53 +245,24 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* Read More Button - FIXED: Using project.id instead of project.path */}
+            {/* Disabled Read More */}
             <div className="mt-6">
-              {isValidProjectComponent(project.component) ? (
-                <Link
-                  to={`/project/${project.id}`}
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors duration-300 group"
+              <span className="inline-flex items-center gap-2 text-muted-foreground font-medium cursor-not-allowed">
+                {t.projects.readMore}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="opacity-50"
                 >
-                  {t.projects.readMore}
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </Link>
-              ) : (
-                <span className="inline-flex items-center gap-2 text-muted-foreground font-medium cursor-not-allowed">
-                  {t.projects.readMore}
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    className="opacity-50"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              )}
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
             </div>
           </div>
-
-          {/* Hover effect overlay */}
-          <div 
-            className={`
-              absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 
-              rounded-2xl transition-opacity duration-300
-              ${isHovered ? 'opacity-100' : 'opacity-0'}
-            `}
-          />
         </div>
       </div>
     );

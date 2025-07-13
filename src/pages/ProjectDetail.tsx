@@ -2,7 +2,14 @@ import { useParams, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 // Lazy load project components
+const DataAnalytics = lazy(() => import('./projects/DataAnalytics'));
+const NLPSentiment = lazy(() => import('./projects/NLPSentiment'));
 const GAN = lazy(() => import('./projects/GAN'));
+const DataVisualization = lazy(() => import('./projects/DataVisualization'));
+const WebScraping = lazy(() => import('./projects/WebScraping'));
+const BlockchainApp = lazy(() => import('./projects/BlockchainApp'));
+const MobileApp = lazy(() => import('./projects/MobileApp'));
+const APIGateway = lazy(() => import('./projects/APIGateway'));
 // Loading component
 const ProjectLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
@@ -48,8 +55,14 @@ const ProjectDetail = () => {
 
   // Project mapping with security validation
   const projectComponents: Record<string, React.LazyExoticComponent<() => JSX.Element>> = {
+    'data-analytics': DataAnalytics,
+    'nlp-sentiment': NLPSentiment,
     'computer-vision': GAN,
-  
+    'data-visualization': DataVisualization,
+    'web-scraping': WebScraping,
+    'blockchain-app': BlockchainApp,
+    'mobile-app': MobileApp,
+    'api-gateway': APIGateway,
   };
 
   // Validate project ID

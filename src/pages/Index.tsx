@@ -9,9 +9,9 @@ import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Navigation />
-      <ScrollProgress className="top-[65px] z-50 h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
+      <ScrollProgress className="top-[65px] z-50 h-1 sm:h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
       <Hero />
       <About />
       <Projects />

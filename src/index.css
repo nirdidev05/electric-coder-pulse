@@ -87,6 +87,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Enhanced mobile scrolling and interaction */
+@media (max-width: 768px) {
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better focus styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
+
 /* Custom cursor styles */
 .cursor-trail {
   pointer-events: none;

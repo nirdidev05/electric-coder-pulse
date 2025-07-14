@@ -7,8 +7,12 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProjectDetail from "./pages/ProjectDetail";
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from "@vercel/analytics"
+
 const queryClient = new QueryClient();
+
+// Initialize Vercel Analytics
+inject();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -22,7 +26,6 @@ const App = () => (
             <Route path="/project/:id" element={<ProjectDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <Analytics />
         </BrowserRouter>
       </TooltipProvider>
     </LanguageProvider>

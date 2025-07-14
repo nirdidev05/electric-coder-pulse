@@ -264,7 +264,7 @@ const Navigation = () => {
                         <motion.button
                           key={lang.code}
                           onClick={() => {
-                            setLanguage(lang.code);
+                            setLanguage(lang.code as Language);
                             setIsLanguageDropdownOpen(false);
                           }}
                           className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-slate-800/50 transition-colors first:rounded-t-lg last:rounded-b-lg ${
@@ -406,7 +406,7 @@ const Navigation = () => {
                       <motion.button
                         key={lang.code}
                         onClick={() => {
-                          setLanguage(lang.code);
+                          setLanguage(lang.code as Language);
                           setIsMobileMenuOpen(false);
                         }}
                         className={`flex items-center space-x-2 p-3 rounded-lg border transition-all duration-300 ${

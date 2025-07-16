@@ -261,26 +261,27 @@ const About = () => {
 
                   {/* AI/ML Frameworks - Blue to White */}
                   <div>
-                    <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">AI/ML Frameworks</h4>
-                    <div className="flex flex-wrap gap-3">
-                      {["PyTorch", "TensorFlow", "Optuna", "transformers"].map((tech, idx) => (
-                        <motion.div
-                          key={tech}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: idx * 0.1 + 0.2 }}
-                          whileHover={{ scale: 1.05, y: -2 }}
-                          className="relative group"
-                        >
-                          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-white/20 rounded-xl blur-md group-hover:blur-lg transition-all duration-300" />
-                          <span className="relative bg-gradient-to-r from-blue-500/15 to-white/15 border border-blue-500/30 px-4 py-2 rounded-xl font-semibold text-blue-400 backdrop-blur-sm">
-                            {tech}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
+  <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">AI/ML Frameworks</h4>
+  <div className="flex flex-wrap gap-x-8 gap-y-3">
+    {["PyTorch", "TensorFlow", "Optuna", "transformers"].map((tech, idx) => (
+      <motion.div
+        key={tech}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: idx * 0.1 + 0.2 }}
+        whileHover={{ scale: 1.05, y: -2 }}
+        className="relative group"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-white/20 rounded-xl blur-md group-hover:blur-lg transition-all duration-300" />
+        <span className="relative bg-gradient-to-r from-blue-500/15 to-white/15 border border-blue-500/30 px-4 py-2 rounded-xl font-semibold text-blue-400 backdrop-blur-sm">
+          {tech}
+        </span>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
 
                   {/* AI Specializations - Green to Blue */}
                   <div>

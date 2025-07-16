@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Code } from "lucide-react"
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface CodeSampleProps {
   title: string
@@ -10,6 +11,8 @@ interface CodeSampleProps {
 }
 
 export function CodeSample({ title, code, references }: CodeSampleProps) {
+  const t = useTranslation()
+
   return (
     <Card className="border-border">
       <CardHeader>
@@ -26,7 +29,7 @@ export function CodeSample({ title, code, references }: CodeSampleProps) {
         </div>
         {references && (
           <div className="mt-4 pt-4 border-t">
-            <h4 className="text-sm font-medium mb-2">Références Scientifiques</h4>
+            <h4 className="text-sm font-medium mb-2">{t.gan.common.references}</h4>
             <ul className="text-xs space-y-1 text-muted-foreground">
               {references.map((ref, index) => (
                 <li key={index}>• {ref}</li>

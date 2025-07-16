@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Database, ChevronDown, FlipHorizontal, Cpu } from "lucide-react"
 import { CodeSample } from "../code-sample"
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface DataAugmentationSectionProps {
   expandedCards: Record<string, boolean>
@@ -10,16 +11,18 @@ interface DataAugmentationSectionProps {
 }
 
 export function DataAugmentationSection({ expandedCards, toggleCard }: DataAugmentationSectionProps) {
+  const t = useTranslation();
+  
   return (
     <div className="space-y-8">
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Database size={24} />
-            <span>Stratégies d'Augmentation Avancées</span>
+            <span>{t.gan.dataAugmentation.title}</span>
           </CardTitle>
           <CardDescription>
-            Approches complémentaires pour enrichir le corpus et équilibrer les thèmes tactiques rares
+            {t.gan.dataAugmentation.subtitle}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -28,72 +31,55 @@ export function DataAugmentationSection({ expandedCards, toggleCard }: DataAugme
               <div className="bg-primary/5 p-4 rounded-lg border border-primary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <FlipHorizontal size={20} className="text-primary" />
-                  <h4 className="font-semibold text-primary">Augmentations Géométriques</h4>
+                  <h4 className="font-semibold text-primary">{t.gan.dataAugmentation.geometric.title}</h4>
                 </div>
                 <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>
-                    • <strong>Miroir Horizontal:</strong> Échange colonnes a↔h, b↔g, préservation à 98% des relations
-                    tactiques
-                  </li>
-                  <li>
-                    • <strong>Rotation 180°:</strong> Symétrie centrale + inversion des couleurs, génère puzzles
-                    "miroir"
-                  </li>
-                  <li>
-                    • <strong>Taux de Validité:</strong> ~95% (transformations préservent la légalité)
-                  </li>
+                  <li>• <strong>{t.gan.dataAugmentation.geometric.horizontalMirror}</strong></li>
+                  <li>• <strong>{t.gan.dataAugmentation.geometric.rotation180}</strong></li>
+                  <li>• <strong>{t.gan.dataAugmentation.geometric.advantage}:</strong> {t.gan.dataAugmentation.geometric.complexity}</li>
                 </ul>
               </div>
 
               <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/20">
                 <div className="flex items-center gap-2 mb-2">
                   <Cpu size={20} className="text-secondary" />
-                  <h4 className="font-semibold text-secondary">Augmentations Paramétriques</h4>
+                  <h4 className="font-semibold text-secondary">{t.gan.dataAugmentation.parametric.title}</h4>
                 </div>
                 <ul className="text-sm space-y-2 text-muted-foreground">
-                  <li>
-                    • <strong>Génération de Mats:</strong> Placement intelligent de pièces attaquantes (Dame, Tour, Fou)
-                  </li>
-                  <li>
-                    • <strong>Insertion de Fourchettes:</strong> Cavaliers sur cases créant double menace
-                  </li>
-                  <li>
-                    • <strong>Création de Clouages:</strong> Alignement pièces longue portée + roi adverse
-                  </li>
-                  <li>
-                    • <strong>Taux de Validité:</strong> ~85% (vérification post-génération)
-                  </li>
+                  <li>• <strong>{t.gan.dataAugmentation.parametric.thematicGenerators}</strong></li>
+                  <li>• <strong>{t.gan.dataAugmentation.parametric.materialAnalysis}</strong></li>
+                  <li>• <strong>{t.gan.dataAugmentation.parametric.advantage}:</strong> {t.gan.dataAugmentation.parametric.successRate}</li>
                 </ul>
               </div>
             </div>
 
             <div className="space-y-4">
               <div className="bg-accent/5 p-4 rounded-lg border border-accent/20">
-                <h4 className="font-semibold mb-3 text-accent">Résultats Quantitatifs</h4>
+                <h4 className="font-semibold mb-3 text-accent">{t.gan.common.results}</h4>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="text-center p-2 bg-background rounded">
                     <div className="font-bold text-lg text-primary">50,000</div>
-                    <div className="text-muted-foreground">Puzzles/thème</div>
+                    <div className="text-muted-foreground">{t.gan.dataAugmentation.results.puzzlesPerTheme}</div>
                   </div>
                   <div className="text-center p-2 bg-background rounded">
                     <div className="font-bold text-lg text-secondary">2-10x</div>
-                    <div className="text-muted-foreground">Multiplication classes rares</div>
+                    <div className="text-muted-foreground">{t.gan.dataAugmentation.results.rareClassMultiplication}</div>
                   </div>
                   <div className="text-center p-2 bg-background rounded">
                     <div className="font-bold text-lg text-accent">90%</div>
-                    <div className="text-muted-foreground">Cohérence thématique</div>
+                    <div className="text-muted-foreground">{t.gan.dataAugmentation.results.thematicCoherence}</div>
                   </div>
                   <div className="text-center p-2 bg-background rounded">
                     <div className="font-bold text-lg text-primary">2.8x</div>
-                    <div className="text-muted-foreground">Amélioration entropie</div>
+                    <div className="text-muted-foreground">{t.gan.dataAugmentation.results.entropyImprovement}</div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-muted/50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Équilibrage Matériel</h4>
+                <h4 className="font-semibold mb-2">{t.gan.dataAugmentation.materialBalance.title}</h4>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Diversification des paramètres globaux : équilibre matériel, activité des pièces, mobilité
+                  {t.gan.dataAugmentation.materialBalance.description}
                 </p>
                 <div className="font-mono text-xs bg-background p-2 rounded">
                   Ratio_mobilité = (#coups_Blancs + 1) / (#coups_Noirs + 1)
@@ -105,11 +91,9 @@ export function DataAugmentationSection({ expandedCards, toggleCard }: DataAugme
           {expandedCards.dataAugDetails && (
             <div className="mt-6 pt-6 border-t space-y-6">
               <div>
-                <h4 className="font-semibold mb-3">Implémentation des Transformations Géométriques</h4>
+                <h4 className="font-semibold mb-3">{t.gan.dataAugmentation.implementation.title}</h4>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Les transformations sont appliquées directement au niveau du tenseur 8×8×N. Pour le miroir horizontal,
-                  inversion des indices de colonnes (0↦7, 1↦6, ...). Pour la rotation 180°, combinaison flip
-                  vertical+horizontal + échange des canaux pièces blanches/noires.
+                  {t.gan.dataAugmentation.implementation.description}
                 </p>
 
                 <div className="bg-background/80 p-4 rounded-lg">
@@ -125,43 +109,31 @@ export function DataAugmentationSection({ expandedCards, toggleCard }: DataAugme
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3">Génération Thématique Spécialisée</h4>
+                <h4 className="font-semibold mb-3">{t.gan.dataAugmentation.thematicGeneration.title}</h4>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-primary/5 p-3 rounded border border-primary/20">
-                    <h5 className="font-medium text-primary mb-1">Mat en 1 Coup</h5>
-                    <p className="text-xs text-muted-foreground">
-                      1. Identifier roi ennemi
-                      <br />
-                      2. Analyser cases d'attaque
-                      <br />
-                      3. Placer pièce offensive
-                      <br />
-                      4. Vérifier mat imparable
-                    </p>
+                    <h5 className="font-medium text-primary mb-1">{t.gan.dataAugmentation.thematicGeneration.mateIn1.title}</h5>
+                    <div className="text-xs text-muted-foreground">
+                      {t.gan.dataAugmentation.thematicGeneration.mateIn1.steps.map((step, index) => (
+                        <div key={index}>{index + 1}. {step}</div>
+                      ))}
+                    </div>
                   </div>
                   <div className="bg-secondary/5 p-3 rounded border border-secondary/20">
-                    <h5 className="font-medium text-secondary mb-1">Fourchette</h5>
-                    <p className="text-xs text-muted-foreground">
-                      1. Placer Cavalier case vide
-                      <br />
-                      2. Vérifier attaque ≥2 pièces
-                      <br />
-                      3. Privilégier Roi + pièce lourde
-                      <br />
-                      4. Valider absence défense
-                    </p>
+                    <h5 className="font-medium text-secondary mb-1">{t.gan.dataAugmentation.thematicGeneration.fork.title}</h5>
+                    <div className="text-xs text-muted-foreground">
+                      {t.gan.dataAugmentation.thematicGeneration.fork.steps.map((step, index) => (
+                        <div key={index}>{index + 1}. {step}</div>
+                      ))}
+                    </div>
                   </div>
                   <div className="bg-accent/5 p-3 rounded border border-accent/20">
-                    <h5 className="font-medium text-accent mb-1">Clouage</h5>
-                    <p className="text-xs text-muted-foreground">
-                      1. Localiser roi adverse
-                      <br />
-                      2. Placer Tour/Fou aligné
-                      <br />
-                      3. Insérer pièce intermédiaire
-                      <br />
-                      4. Vérifier immobilisation
-                    </p>
+                    <h5 className="font-medium text-accent mb-1">{t.gan.dataAugmentation.thematicGeneration.pin.title}</h5>
+                    <div className="text-xs text-muted-foreground">
+                      {t.gan.dataAugmentation.thematicGeneration.pin.steps.map((step, index) => (
+                        <div key={index}>{index + 1}. {step}</div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -172,7 +144,7 @@ export function DataAugmentationSection({ expandedCards, toggleCard }: DataAugme
             onClick={() => toggleCard("dataAugDetails")}
             className="mt-4 text-sm flex items-center gap-1 text-primary"
           >
-            {expandedCards.dataAugDetails ? "Masquer les détails" : "Afficher l'implémentation détaillée"}
+            {expandedCards.dataAugDetails ? t.gan.dataAugmentation.hideImplementation : t.gan.dataAugmentation.showImplementation}
             <ChevronDown size={16} className={expandedCards.dataAugDetails ? "rotate-180" : ""} />
           </button>
         </CardContent>

@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { CheckCircle, ChevronDown, AlertTriangle, Target } from "lucide-react"
 import { CodeSample } from "../code-sample"
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface ValidationSectionProps {
   expandedCards: Record<string, boolean>
@@ -10,16 +11,18 @@ interface ValidationSectionProps {
 }
 
 export function ValidationSection({ expandedCards, toggleCard }: ValidationSectionProps) {
+  const t = useTranslation();
+
   return (
     <div className="space-y-8">
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <CheckCircle size={24} />
-            <span>Pipeline de Validation Automatique</span>
+            <span>{t.gan.validation.title}</span>
           </CardTitle>
           <CardDescription>
-            Système multi-étapes garantissant la légalité et la qualité tactique des puzzles générés
+            {t.gan.validation.subtitle}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -27,39 +30,36 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
             <div className="bg-primary/5 p-4 rounded-lg border border-primary/20">
               <div className="flex items-center gap-2 mb-2">
                 <CheckCircle size={20} className="text-primary" />
-                <h4 className="font-semibold text-primary">1. Légalité Position</h4>
+                <h4 className="font-semibold text-primary">{t.gan.validation.legalityPosition.title}</h4>
               </div>
               <ul className="text-sm space-y-1 text-muted-foreground">
-                <li>• Validation python-chess</li>
-                <li>• Contrôle nombre de rois</li>
-                <li>• Vérification pions/promotion</li>
-                <li>• Test cohérence matérielle</li>
+                {t.gan.validation.legalityPosition.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
 
             <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/20">
               <div className="flex items-center gap-2 mb-2">
                 <Target size={20} className="text-secondary" />
-                <h4 className="font-semibold text-secondary">2. Solution Tactique</h4>
+                <h4 className="font-semibold text-secondary">{t.gan.validation.tacticalSolution.title}</h4>
               </div>
               <ul className="text-sm space-y-1 text-muted-foreground">
-                <li>• Analyse Stockfish profondeur 12</li>
-                <li>• Vérification unicité solution</li>
-                <li>• Test avantage décisif (+3 points)</li>
-                <li>• Validation thème spécifique</li>
+                {t.gan.validation.tacticalSolution.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
 
             <div className="bg-accent/5 p-4 rounded-lg border border-accent/20">
               <div className="flex items-center gap-2 mb-2">
                 <AlertTriangle size={20} className="text-accent" />
-                <h4 className="font-semibold text-accent">3. Filtrage Qualité</h4>
+                <h4 className="font-semibold text-accent">{t.gan.validation.qualityFiltering.title}</h4>
               </div>
               <ul className="text-sm space-y-1 text-muted-foreground">
-                <li>• Détection doublons (Zobrist)</li>
-                <li>• Élimination positions triviales</li>
-                <li>• Contrôle réalisme (discriminateur)</li>
-                <li>• Validation cohérence thématique</li>
+                {t.gan.validation.qualityFiltering.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -70,7 +70,7 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
               <div>
                 <div className="flex justify-between mb-1">
                   <span>Augmentations Géométriques:</span>
-                  <span className="font-bold text-primary">~95%</span>
+                  <span className="font-bold text-primary">{t.gan.validation.successRates.geometric}</span>
                 </div>
                 <div className="w-full bg-background rounded-full h-2">
                   <div className="bg-primary h-2 rounded-full" style={{ width: "95%" }}></div>
@@ -79,7 +79,7 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
               <div>
                 <div className="flex justify-between mb-1">
                   <span>Augmentations Paramétriques:</span>
-                  <span className="font-bold text-secondary">~85%</span>
+                  <span className="font-bold text-secondary">{t.gan.validation.successRates.parametric}</span>
                 </div>
                 <div className="w-full bg-background rounded-full h-2">
                   <div className="bg-secondary h-2 rounded-full" style={{ width: "85%" }}></div>
@@ -91,13 +91,12 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
           {expandedCards.validationDetails && (
             <div className="mt-6 pt-6 border-t space-y-6">
               <div>
-                <h4 className="font-semibold mb-3">Validation Spécialisée par Thème</h4>
+                <h4 className="font-semibold mb-3">{t.gan.validation.specialized.title}</h4>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h5 className="font-medium mb-2">Mat en 1 Coup</h5>
+                    <h5 className="font-medium mb-2">{t.gan.validation.specialized.mateIn1.title}</h5>
                     <p className="text-sm text-muted-foreground mb-2">
-                      Vérification simple : génération de tous les coups légaux et test board.is_checkmate() pour
-                      chacun. Acceptation de solutions multiples si toutes mènent au mat immédiat.
+                      {t.gan.validation.specialized.mateIn1.description}
                     </p>
                     <div className="bg-background/80 p-2 rounded text-xs font-mono">
                       for move in board.legal_moves:
@@ -106,10 +105,9 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
                     </div>
                   </div>
                   <div>
-                    <h5 className="font-medium mb-2">Gain Matériel</h5>
+                    <h5 className="font-medium mb-2">{t.gan.validation.specialized.materialGain.title}</h5>
                     <p className="text-sm text-muted-foreground mb-2">
-                      Analyse Stockfish pour chaque coup possible. Puzzle valide si un coup obtient un score ≥+3 points
-                      supérieur aux alternatives.
+                      {t.gan.validation.specialized.materialGain.description}
                     </p>
                     <div className="bg-background/80 p-2 rounded text-xs font-mono">
                       best_score = engine.analyse(board, depth=12)
@@ -124,24 +122,24 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
                 <h4 className="font-semibold mb-3">Métriques de Qualité Avancées</h4>
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-primary/5 p-3 rounded border border-primary/20">
-                    <h5 className="font-medium text-primary mb-1">Cohérence Thématique</h5>
+                    <h5 className="font-medium text-primary mb-1">{t.gan.validation.qualityMetrics.thematicCoherence.title}</h5>
                     <div className="text-2xl font-bold text-primary">90%</div>
                     <p className="text-xs text-muted-foreground">
-                      Puzzles générés respectant le thème prévu (validation discriminateur + manuelle)
+                      {t.gan.validation.qualityMetrics.thematicCoherence.description}
                     </p>
                   </div>
                   <div className="bg-secondary/5 p-3 rounded border border-secondary/20">
-                    <h5 className="font-medium text-secondary mb-1">Originalité</h5>
+                    <h5 className="font-medium text-secondary mb-1">{t.gan.validation.qualityMetrics.originality.title}</h5>
                     <div className="text-2xl font-bold text-secondary">88%</div>
                     <p className="text-xs text-muted-foreground">
-                      Puzzles uniques non présents dans le dataset original (détection Zobrist)
+                      {t.gan.validation.qualityMetrics.originality.description}
                     </p>
                   </div>
                   <div className="bg-accent/5 p-3 rounded border border-accent/20">
-                    <h5 className="font-medium text-accent mb-1">Réalisme</h5>
+                    <h5 className="font-medium text-accent mb-1">{t.gan.validation.qualityMetrics.realism.title}</h5>
                     <div className="text-2xl font-bold text-accent">92%</div>
                     <p className="text-xs text-muted-foreground">
-                      Positions jugées plausibles par le discriminateur (score qualité élevé)
+                      {t.gan.validation.qualityMetrics.realism.description}
                     </p>
                   </div>
                 </div>
@@ -153,7 +151,7 @@ export function ValidationSection({ expandedCards, toggleCard }: ValidationSecti
             onClick={() => toggleCard("validationDetails")}
             className="mt-4 text-sm flex items-center gap-1 text-primary"
           >
-            {expandedCards.validationDetails ? "Masquer les détails" : "Afficher les métriques détaillées"}
+            {expandedCards.validationDetails ? t.gan.validation.hideMetrics : t.gan.validation.showMetrics}
             <ChevronDown size={16} className={expandedCards.validationDetails ? "rotate-180" : ""} />
           </button>
         </CardContent>

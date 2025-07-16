@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Cpu, ChevronDown, Brain, Target, Layers } from "lucide-react"
 import { CodeSample } from "../code-sample"
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface GANArchitectureSectionProps {
   expandedCards: Record<string, boolean>
@@ -10,16 +11,18 @@ interface GANArchitectureSectionProps {
 }
 
 export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchitectureSectionProps) {
+  const t = useTranslation();
+  
   return (
     <div className="space-y-8">
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Brain size={24} />
-            <span>Architecture GAN Conditionnelle Avancée</span>
+            <span>{t.gan.ganArchitecture.title}</span>
           </CardTitle>
           <CardDescription>
-            Système antagoniste avec générateur thématique et discriminateur multi-têtes pour contrôle qualité
+            {t.gan.ganArchitecture.subtitle}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -27,68 +30,50 @@ export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchite
             <div className="bg-primary/5 p-4 rounded-lg border border-primary/20">
               <div className="flex items-center gap-2 mb-3">
                 <Cpu size={20} className="text-primary" />
-                <h4 className="font-semibold text-primary">Générateur Conditionnel G</h4>
+                <h4 className="font-semibold text-primary">{t.gan.ganArchitecture.conditionalGenerator.title}</h4>
               </div>
               <ul className="text-sm space-y-2 text-muted-foreground">
-                <li>
-                  • <strong>Entrée:</strong> z ∈ ℝ¹²⁸ (bruit latent) + y ∈ ℝᵀ (thème one-hot)
-                </li>
-                <li>
-                  • <strong>Architecture:</strong> FC layers → Deconv → 8×8×12 output
-                </li>
-                <li>
-                  • <strong>Conditionnement:</strong> Embedding thématique dense (32D)
-                </li>
-                <li>
-                  • <strong>Contraintes:</strong> Softmax par case (exclusivité pièces)
-                </li>
+                <li>• <strong>{t.gan.ganArchitecture.conditionalGenerator.input.split(':')[0]}:</strong> {t.gan.ganArchitecture.conditionalGenerator.input.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.conditionalGenerator.architecture.split(':')[0]}:</strong> {t.gan.ganArchitecture.conditionalGenerator.architecture.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.conditionalGenerator.conditioning.split(':')[0]}:</strong> {t.gan.ganArchitecture.conditionalGenerator.conditioning.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.conditionalGenerator.constraints.split(':')[0]}:</strong> {t.gan.ganArchitecture.conditionalGenerator.constraints.split(':')[1]}</li>
               </ul>
             </div>
 
             <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/20">
               <div className="flex items-center gap-2 mb-3">
                 <Target size={20} className="text-secondary" />
-                <h4 className="font-semibold text-secondary">Discriminateur Multi-Têtes D</h4>
+                <h4 className="font-semibold text-secondary">{t.gan.ganArchitecture.multiHeadDiscriminator.title}</h4>
               </div>
               <ul className="text-sm space-y-2 text-muted-foreground">
-                <li>
-                  • <strong>Tête Validité:</strong> Réel vs Généré (BCE loss)
-                </li>
-                <li>
-                  • <strong>Tête Thème:</strong> Classification tactique (CE loss)
-                </li>
-                <li>
-                  • <strong>Tête Qualité:</strong> Score puzzle (régression/classification)
-                </li>
-                <li>
-                  • <strong>Architecture:</strong> CNN → Feature extraction → 3 branches FC
-                </li>
+                <li>• <strong>{t.gan.ganArchitecture.multiHeadDiscriminator.validityHead.split(':')[0]}:</strong> {t.gan.ganArchitecture.multiHeadDiscriminator.validityHead.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.multiHeadDiscriminator.themeHead.split(':')[0]}:</strong> {t.gan.ganArchitecture.multiHeadDiscriminator.themeHead.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.multiHeadDiscriminator.qualityHead.split(':')[0]}:</strong> {t.gan.ganArchitecture.multiHeadDiscriminator.qualityHead.split(':')[1]}</li>
+                <li>• <strong>{t.gan.ganArchitecture.multiHeadDiscriminator.architecture.split(':')[0]}:</strong> {t.gan.ganArchitecture.multiHeadDiscriminator.architecture.split(':')[1]}</li>
               </ul>
             </div>
           </div>
 
           <div className="bg-muted/50 p-4 rounded-lg mb-4">
-            <h4 className="font-semibold mb-2">Fonction Objectif Minimax Étendue</h4>
+            <h4 className="font-semibold mb-2">{t.gan.ganArchitecture.objectiveFunction.title}</h4>
             <div className="font-mono text-sm bg-background p-3 rounded mb-2">
               L<sub>D</sub> = L<sub>adv</sub> + λ₁L<sub>theme</sub> + λ₂L<sub>qual</sub>
             </div>
             <div className="text-xs text-muted-foreground">
-              Où L<sub>adv</sub> = BCE(D(x), 1) + BCE(D(G(z|y)), 0) pour la discrimination réel/faux
+              {t.gan.ganArchitecture.objectiveFunction.description}
             </div>
           </div>
 
           {expandedCards.ganArchDetails && (
             <div className="mt-6 pt-6 border-t space-y-6">
               <div>
-                <h4 className="font-semibold mb-3">Détails du Générateur Conditionnel</h4>
+                <h4 className="font-semibold mb-3">{t.gan.ganArchitecture.conditionalGenerator.title}</h4>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Le générateur intègre le conditionnement thématique via une couche d'embedding qui transforme le
-                  vecteur one-hot du thème en représentation dense. Cette approche permet un contrôle fin sur le type de
-                  puzzle généré tout en préservant la flexibilité créative.
+                  {t.gan.ganArchitecture.hybridApproach.conditionalFilling.description}
                 </p>
 
                 <div className="bg-background/80 p-4 rounded-lg">
-                  <h5 className="font-medium mb-2">Architecture Détaillée</h5>
+                  <h5 className="font-medium mb-2">{t.gan.common.details}</h5>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span>Input Layer:</span>
@@ -115,30 +100,29 @@ export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchite
               </div>
 
               <div>
-                <h4 className="font-semibold mb-3">Discriminateur Multi-Tâches</h4>
+                <h4 className="font-semibold mb-3">{t.gan.ganArchitecture.multiHeadDiscriminator.title}</h4>
                 <p className="text-sm text-muted-foreground mb-4">
-                  L'architecture multi-têtes permet un apprentissage riche en fournissant plusieurs signaux de
-                  supervision. Chaque tête se spécialise dans un aspect de l'évaluation des puzzles.
+                  {t.gan.ganArchitecture.hybridApproach.description}
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-primary/5 p-3 rounded border border-primary/20">
-                    <h5 className="font-medium text-primary mb-1">Tête Validité</h5>
-                    <p className="text-xs text-muted-foreground mb-2">Distingue puzzles réels des générés</p>
+                    <h5 className="font-medium text-primary mb-1">{t.gan.ganArchitecture.multiHeadDiscriminator.validityHead.split(':')[0]}</h5>
+                    <p className="text-xs text-muted-foreground mb-2">{t.gan.ganArchitecture.multiHeadDiscriminator.validityHead.split(':')[1]}</p>
                     <div className="font-mono text-xs">
                       L<sub>adv</sub> = -E[log D(x)] - E[log(1-D(G(z)))]
                     </div>
                   </div>
                   <div className="bg-secondary/5 p-3 rounded border border-secondary/20">
-                    <h5 className="font-medium text-secondary mb-1">Tête Thème</h5>
-                    <p className="text-xs text-muted-foreground mb-2">Classifie le thème tactique</p>
+                    <h5 className="font-medium text-secondary mb-1">{t.gan.ganArchitecture.multiHeadDiscriminator.themeHead.split(':')[0]}</h5>
+                    <p className="text-xs text-muted-foreground mb-2">{t.gan.ganArchitecture.multiHeadDiscriminator.themeHead.split(':')[1]}</p>
                     <div className="font-mono text-xs">
                       L<sub>theme</sub> = -E[log P(y|x)]
                     </div>
                   </div>
                   <div className="bg-accent/5 p-3 rounded border border-accent/20">
-                    <h5 className="font-medium text-accent mb-1">Tête Qualité</h5>
-                    <p className="text-xs text-muted-foreground mb-2">Évalue la qualité du puzzle</p>
+                    <h5 className="font-medium text-accent mb-1">{t.gan.ganArchitecture.multiHeadDiscriminator.qualityHead.split(':')[0]}</h5>
+                    <p className="text-xs text-muted-foreground mb-2">{t.gan.ganArchitecture.multiHeadDiscriminator.qualityHead.split(':')[1]}</p>
                     <div className="font-mono text-xs">
                       L<sub>qual</sub> = MSE(Q(x), q<sub>target</sub>)
                     </div>
@@ -152,7 +136,7 @@ export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchite
             onClick={() => toggleCard("ganArchDetails")}
             className="mt-4 text-sm flex items-center gap-1 text-primary"
           >
-            {expandedCards.ganArchDetails ? "Masquer les détails" : "Afficher l'architecture détaillée"}
+            {expandedCards.ganArchDetails ? t.gan.ganArchitecture.hideDetails : t.gan.ganArchitecture.showDetails}
             <ChevronDown size={16} className={expandedCards.ganArchDetails ? "rotate-180" : ""} />
           </button>
         </CardContent>
@@ -162,57 +146,53 @@ export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchite
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Layers size={24} />
-            <span>Approche Hybride : Templates + Génération Guidée</span>
+            <span>{t.gan.ganArchitecture.hybridApproach.title}</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground mb-4">
-            Pour stabiliser l'apprentissage et augmenter le taux de réussite, nous combinons des templates validés avec
-            des modifications guidées par le modèle, plutôt que de générer entièrement ex nihilo.
+            {t.gan.ganArchitecture.hybridApproach.description}
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-primary/5 p-4 rounded-lg border border-primary/20">
-              <h4 className="font-semibold text-primary mb-2">Remplissage Conditionnel</h4>
+              <h4 className="font-semibold text-primary mb-2">{t.gan.ganArchitecture.hybridApproach.conditionalFilling.title}</h4>
               <p className="text-sm text-muted-foreground">
-                Partir d'un échiquier partiellement rempli (rois + pièces essentielles) et laisser le générateur
-                compléter les cases vides selon le thème souhaité.
+                {t.gan.ganArchitecture.hybridApproach.conditionalFilling.description}
               </p>
             </div>
             <div className="bg-secondary/5 p-4 rounded-lg border border-secondary/20">
-              <h4 className="font-semibold text-secondary mb-2">Mélange Latent</h4>
+              <h4 className="font-semibold text-secondary mb-2">{t.gan.ganArchitecture.hybridApproach.latentMixing.title}</h4>
               <p className="text-sm text-muted-foreground">
-                Combiner deux puzzles existants en interpolant leurs représentations latentes pour créer des puzzles
-                hybrides multi-thèmes.
+                {t.gan.ganArchitecture.hybridApproach.latentMixing.description}
               </p>
             </div>
             <div className="bg-accent/5 p-4 rounded-lg border border-accent/20">
-              <h4 className="font-semibold text-accent mb-2">Perturbation Guidée</h4>
+              <h4 className="font-semibold text-accent mb-2">{t.gan.ganArchitecture.hybridApproach.guidedPerturbation.title}</h4>
               <p className="text-sm text-muted-foreground">
-                Appliquer des modifications mineures suggérées par le générateur à des puzzles valides existants
-                (déplacement de pièces, ajouts stratégiques).
+                {t.gan.ganArchitecture.hybridApproach.guidedPerturbation.description}
               </p>
             </div>
           </div>
 
           {expandedCards.hybridApproach && (
             <div className="mt-6 pt-6 border-t">
-              <h4 className="font-semibold mb-3">Avantages de l'Approche Hybride</h4>
+              <h4 className="font-semibold mb-3">{t.gan.ganArchitecture.hybridApproach.advantages.stability.title}</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h5 className="font-medium mb-2">Stabilité d'Entraînement</h5>
+                  <h5 className="font-medium mb-2">{t.gan.ganArchitecture.hybridApproach.advantages.stability.title}</h5>
                   <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Réduction du mode collapse</li>
-                    <li>• Convergence plus rapide</li>
-                    <li>• Gradients plus stables</li>
+                    {t.gan.ganArchitecture.hybridApproach.advantages.stability.items.map((item, index) => (
+                      <li key={index}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
                 <div>
-                  <h5 className="font-medium mb-2">Qualité des Résultats</h5>
+                  <h5 className="font-medium mb-2">{t.gan.ganArchitecture.hybridApproach.advantages.quality.title}</h5>
                   <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Taux de validité élevé (92%)</li>
-                    <li>• Cohérence thématique garantie</li>
-                    <li>• Traçabilité des transformations</li>
+                    {t.gan.ganArchitecture.hybridApproach.advantages.quality.items.map((item, index) => (
+                      <li key={index}>• {item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -223,14 +203,14 @@ export function GANArchitectureSection({ expandedCards, toggleCard }: GANArchite
             onClick={() => toggleCard("hybridApproach")}
             className="mt-4 text-sm flex items-center gap-1 text-primary"
           >
-            {expandedCards.hybridApproach ? "Moins de détails" : "Plus de détails sur l'hybridation"}
+            {expandedCards.hybridApproach ? t.gan.ganArchitecture.hideDetails : t.gan.ganArchitecture.showDetails}
             <ChevronDown size={16} className={expandedCards.hybridApproach ? "rotate-180" : ""} />
           </button>
         </CardContent>
       </Card>
 
       <CodeSample
-        title="Implémentation du Discriminateur Multi-Têtes"
+        title={t.gan.ganArchitecture.multiHeadDiscriminator.title}
         code={`class MultiHeadChessDiscriminator(nn.Module):
     def __init__(self, num_themes=10, num_quality_classes=3):
         super().__init__()

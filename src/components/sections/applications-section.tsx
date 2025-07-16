@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Zap, Layers, ChevronDown } from "lucide-react"
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface ApplicationsSectionProps {
   expandedCards: Record<string, boolean>
@@ -9,33 +10,33 @@ interface ApplicationsSectionProps {
 }
 
 export function ApplicationsSection({ expandedCards, toggleCard }: ApplicationsSectionProps) {
+  const t = useTranslation();
+  
   return (
     <div className="space-y-8">
       <Card className="border-border">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Zap size={24} />
-            <span>Cas d'Usage Industriels</span>
+            <span>{t.gan.applications.title}</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold mb-3">Plateformes d'Entraînement</h4>
+              <h4 className="font-semibold mb-3">{t.gan.applications.trainingPlatforms.title}</h4>
               <ul className="text-sm space-y-2 text-muted-foreground">
-                <li>• Génération de puzzles adaptatifs (ELO-based)</li>
-                <li>• Couverture complète des thèmes tactiques</li>
-                <li>• Réduction des coûts de curation de 70%</li>
-                <li>• Personnalisation automatique du contenu</li>
+                {t.gan.applications.trainingPlatforms.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Outils Pédagogiques</h4>
+              <h4 className="font-semibold mb-3">{t.gan.applications.pedagogicalTools.title}</h4>
               <ul className="text-sm space-y-2 text-muted-foreground">
-                <li>• Création de plans d'entraînement personnalisés</li>
-                <li>• Détection automatique des faiblesses</li>
-                <li>• Feedback instantané via Stockfish</li>
-                <li>• Progression adaptative intelligente</li>
+                {t.gan.applications.pedagogicalTools.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -72,7 +73,7 @@ async function generateAdaptivePuzzle(userId, targetRating) {
             onClick={() => toggleCard("applications")}
             className="mt-4 text-sm flex items-center gap-1 text-primary"
           >
-            {expandedCards.applications ? "Moins de détails" : "Plus de détails"}
+            {expandedCards.applications ? t.gan.applications.showDetails : t.gan.applications.showDetails}
             <ChevronDown size={16} className={expandedCards.applications ? "rotate-180" : ""} />
           </button>
         </CardContent>
@@ -82,36 +83,33 @@ async function generateAdaptivePuzzle(userId, targetRating) {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Layers size={24} />
-            <span>Stack Technologique de Production</span>
+            <span>{t.gan.applications.technicalStack.title}</span>
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-background/80 p-4 rounded-lg border">
-              <h4 className="font-semibold mb-2">Core ML</h4>
+              <h4 className="font-semibold mb-2">{t.gan.applications.technicalStack.coreML.title}</h4>
               <ul className="text-xs space-y-1 text-muted-foreground">
-                <li>• Python 3.10+</li>
-                <li>• PyTorch 2.0 + CUDA 11.7</li>
-                <li>• python-chess 3.0</li>
-                <li>• NumPy, Pandas optimisés</li>
+                {t.gan.applications.technicalStack.coreML.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-background/80 p-4 rounded-lg border">
-              <h4 className="font-semibold mb-2">Validation & Test</h4>
+              <h4 className="font-semibold mb-2">{t.gan.applications.technicalStack.validation.title}</h4>
               <ul className="text-xs space-y-1 text-muted-foreground">
-                <li>• Stockfish 15 (évaluation)</li>
-                <li>• pytest + coverage</li>
-                <li>• Great Expectations (data)</li>
-                <li>• MLflow (tracking)</li>
+                {t.gan.applications.technicalStack.validation.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
             <div className="bg-background/80 p-4 rounded-lg border">
-              <h4 className="font-semibold mb-2">Déploiement</h4>
+              <h4 className="font-semibold mb-2">{t.gan.applications.technicalStack.deployment.title}</h4>
               <ul className="text-xs space-y-1 text-muted-foreground">
-                <li>• Docker + Kubernetes</li>
-                <li>• FastAPI (serving)</li>
-                <li>• Prometheus (monitoring)</li>
-                <li>• Redis (cache)</li>
+                {t.gan.applications.technicalStack.deployment.items.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </div>
           </div>

@@ -1,17 +1,17 @@
 "use client"
-
 import { Brain, BookOpen, Code } from "lucide-react"
+import { useTranslation } from '@/hooks/useTranslation';
 
 export function Footer() {
+  const t = useTranslation();
+
   const handleDocumentationDownload = () => {
     const link1 = document.createElement("a")
     link1.href = "/TP_Echecs.pdf"
     link1.download = "TP_Echecs.pdf"
-
     const link2 = document.createElement("a")
     link2.href = "/Rapport_Technique_Global.pdf"
     link2.download = "Rapport_Technique_Global.pdf"
-
     link1.click()
     setTimeout(() => {
       link2.click()
@@ -32,12 +32,12 @@ export function Footer() {
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <Brain size={20} className="text-primary" />
-              <span>ChessGAN Research Project</span>
+              <span>{t.gan.footer.title}</span>
             </h3>
             <p className="text-sm text-muted-foreground">
-              Architecture hybride pour la génération de contenu contraint • École Nationale Supérieure d'Informatique
+              {t.gan.footer.subtitle}
             </p>
-            <p className="text-xs text-muted-foreground mt-1">BENBOUTA Walid • 2CS SIT • Recherche en IA Générative</p>
+            <p className="text-xs text-muted-foreground mt-1">{t.gan.footer.author}</p>
           </div>
           <div className="flex gap-4">
             <button
@@ -45,14 +45,14 @@ export function Footer() {
               onClick={handleDocumentationDownload}
             >
               <BookOpen size={16} />
-              <span>Documentation Complète</span>
+              <span>{t.gan.footer.documentation}</span>
             </button>
             <button
               className="text-sm flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors"
               onClick={handleCodeDownload}
             >
               <Code size={16} />
-              <span>Code Source & Notebook</span>
+              <span>{t.gan.footer.sourceCode}</span>
             </button>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/hero-section"
 import { NavigationBar } from "@/components/navigation-bar"
 import { MainContent } from "@/components/main-content"
 import { Footer } from "@/components/footer-copy"
+import { ScrollToTop } from "@/components/ui/scroll-to-top"
 import { sections } from "@/lib/constants"
 
 export default function ChessGANProject() {
@@ -21,6 +22,7 @@ export default function ChessGANProject() {
       <NavigationBar sections={sections} activeSection={activeSection} setActiveSection={setActiveSection} />
       <MainContent activeSection={activeSection} expandedCards={expandedCards} toggleCard={toggleCard} />
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

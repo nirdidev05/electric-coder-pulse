@@ -22,43 +22,51 @@ export function MathematicsSection({ expandedCards, toggleCard }: MathematicsSec
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="bg-background/80 p-6 rounded-lg mb-6">
+          <div className="bg-background/80 p-4 sm:p-6 rounded-lg mb-6">
             <div className="text-center space-y-4">
-              <p className="font-technical text-lg">
+              <p className="font-technical text-base sm:text-lg">
               </p>
-              <div className="font-mono text-base bg-muted p-4 rounded">
-                ℒ<sub>total</sub> = ℒ<sub>adversarial</sub> + λ<sub>1</sub>ℒ<sub>thématique</sub> + λ<sub>2</sub>ℒ
-                <sub>qualité</sub> + λ<sub>3</sub>ℒ<sub>diversité</sub>
+              <div className="font-mono text-sm sm:text-base bg-muted p-3 sm:p-4 rounded overflow-x-auto">
+                <div className="min-w-max">
+                  ℒ<sub>total</sub> = ℒ<sub>adversarial</sub> + λ<sub>1</sub>ℒ<sub>thématique</sub> + λ<sub>2</sub>ℒ
+                  <sub>qualité</sub> + λ<sub>3</sub>ℒ<sub>diversité</sub>
+                </div>
               </div>
-              <div className="text-sm space-y-2">
-                <div className="font-mono bg-muted p-3 rounded">
-                  ℒ<sub>adversarial</sub> = 𝔼
-                  <sub>
-                    x~p<sub>data</sub>
-                  </sub>
-                  [log D(x)] + 𝔼
-                  <sub>
-                    z~p<sub>z</sub>
-                  </sub>
-                  [log(1-D(G(z|c)))]
+              <div className="text-xs sm:text-sm space-y-2">
+                <div className="font-mono bg-muted p-2 sm:p-3 rounded overflow-x-auto">
+                  <div className="min-w-max">
+                    ℒ<sub>adversarial</sub> = 𝔼
+                    <sub>
+                      x~p<sub>data</sub>
+                    </sub>
+                    [log D(x)] + 𝔼
+                    <sub>
+                      z~p<sub>z</sub>
+                    </sub>
+                    [log(1-D(G(z|c)))]
+                  </div>
                 </div>
-                <div className="font-mono bg-muted p-3 rounded">
-                  ℒ<sub>thématique</sub> = 𝔼
-                  <sub>
-                    x~p<sub>data</sub>
-                  </sub>
-                  [ℓ<sub>CE</sub>(C(x), c)] + 𝔼
-                  <sub>
-                    z~p<sub>z</sub>
-                  </sub>
-                  [ℓ<sub>CE</sub>(C(G(z|c)), c)]
+                <div className="font-mono bg-muted p-2 sm:p-3 rounded overflow-x-auto">
+                  <div className="min-w-max">
+                    ℒ<sub>thématique</sub> = 𝔼
+                    <sub>
+                      x~p<sub>data</sub>
+                    </sub>
+                    [ℓ<sub>CE</sub>(C(x), c)] + 𝔼
+                    <sub>
+                      z~p<sub>z</sub>
+                    </sub>
+                    [ℓ<sub>CE</sub>(C(G(z|c)), c)]
+                  </div>
                 </div>
-                <div className="font-mono bg-muted p-3 rounded">
-                  ℒ<sub>qualité</sub> = 𝔼
-                  <sub>
-                    z~p<sub>z</sub>
-                  </sub>
-                  [||Q(G(z|c)) - q<sub>target</sub>||²]
+                <div className="font-mono bg-muted p-2 sm:p-3 rounded overflow-x-auto">
+                  <div className="min-w-max">
+                    ℒ<sub>qualité</sub> = 𝔼
+                    <sub>
+                      z~p<sub>z</sub>
+                    </sub>
+                    [||Q(G(z|c)) - q<sub>target</sub>||²]
+                  </div>
                 </div>
               </div>
             </div>

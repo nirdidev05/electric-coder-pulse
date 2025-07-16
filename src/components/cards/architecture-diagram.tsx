@@ -24,11 +24,14 @@ export function ArchitectureDiagram({ expanded, toggle }: ArchitectureDiagramPro
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <img
-          src="/architecture_diagram.png"
-          alt={t.gan.ganArchitecture.title}
-          className="w-full rounded-md"
-        />
+        <div className="relative">
+          <img
+            src="/architecture_diagram.png"
+            alt={t.gan.ganArchitecture.title}
+            className="w-full rounded-md max-w-full h-auto"
+            loading="lazy"
+          />
+        </div>
 
         {expanded && (
           <div className="mt-6 pt-6 border-t space-y-4">
@@ -36,7 +39,7 @@ export function ArchitectureDiagram({ expanded, toggle }: ArchitectureDiagramPro
             <p className="text-sm text-muted-foreground">
               {t.gan.ganArchitecture.hybridApproach.description}
             </p>
-            <ul className="list-disc list-inside text-sm text-muted-foreground">
+            <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
               <li>{t.gan.ganArchitecture.conditionalGenerator.title}</li>
               <li>{t.gan.ganArchitecture.multiHeadDiscriminator.title}</li>
               <li>{t.gan.ganArchitecture.hybridApproach.advantages.stability.title}</li>

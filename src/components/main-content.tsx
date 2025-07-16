@@ -14,7 +14,7 @@ interface MainContentProps {
 
 export function MainContent({ activeSection, expandedCards, toggleCard }: MainContentProps) {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-12 space-y-12">
+    <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-8 sm:space-y-12">
       {activeSection === "overview" && <OverviewSection expandedCards={expandedCards} toggleCard={toggleCard} />}
       {activeSection === "data-augmentation" && (
         <DataAugmentationSection expandedCards={expandedCards} toggleCard={toggleCard} />

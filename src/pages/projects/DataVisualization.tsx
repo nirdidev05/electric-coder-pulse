@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BarChart3, Database, Globe, TrendingUp, Zap, LineChart, PieChart, Activity, Code, Users, Clock } from "lucide-react";
+import {
+  ArrowLeft, BarChart3, Database,BookOpen, Globe, TrendingUp, Zap, Activity, Code, Users, Clock
+} from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const DataVisualization = () => {
+  const t = useTranslation();
+
   const codeExamples = [
     {
-      title: "Data Scraping & Collection",
-      description: "Multi-source data collection with parallel processing for faster data aggregation from IRENA and World Bank APIs.",
+      title: t.renewable.codeExamples.examples.dataScraping.title,
+      description: t.renewable.codeExamples.examples.dataScraping.description,
       code: `class DataScraper:
     """Handle web scraping operations for renewable energy data."""
     
@@ -35,9 +40,10 @@ const DataVisualization = () => {
             logging.error(f"Error fetching IRENA data: {str(e)}")
             return {}`
     },
+    
     {
-      title: "Advanced Analytics & Clustering",
-      description: "Statistical analysis with machine learning clustering and correlation analysis for renewable energy patterns.",
+      title: t.renewable.codeExamples.examples.advancedAnalytics.title,
+      description: t.renewable.codeExamples.examples.advancedAnalytics.description,
       code: `def analyze_trends(self) -> Tuple[pd.DataFrame, Dict]:
     """Perform advanced trend analysis including statistical tests and clustering."""
     df = pd.DataFrame([vars(item) for item in self.data])
@@ -68,9 +74,9 @@ const DataVisualization = () => {
     return df_grouped, analysis_results`
     },
     {
-      title: "Interactive 3D Visualizations",
-      description: "Advanced Plotly-based 3D visualizations with animation frames for temporal data analysis.",
-      code: `def generate_visualizations(self, df: pd.DataFrame, analysis_results: Dict) -> None:
+      title: t.renewable.codeExamples.examples.interactive3DVisualizations.title,
+      description: t.renewable.codeExamples.examples.interactive3DVisualizations.description,
+       code: `def generate_visualizations(self, df: pd.DataFrame, analysis_results: Dict) -> None:
     """Generate advanced visualizations."""
     os.makedirs('visualizations', exist_ok=True)
     
@@ -99,35 +105,35 @@ const DataVisualization = () => {
   const features = [
     {
       icon: Database,
-      title: "Multi-Source Data Integration",
-      description: "Seamlessly integrates data from IRENA, World Bank, and other renewable energy databases with parallel processing for optimal performance.",
-      metrics: ["5+ Data Sources", "Real-time Updates", "99.9% Uptime"]
+      title: t.renewable.features.items.multiSourceDataIntegration.title,
+      description: t.renewable.features.items.multiSourceDataIntegration.description,
+      metrics: t.renewable.features.items.multiSourceDataIntegration.metrics
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics Engine",
-      description: "Powerful statistical analysis with machine learning clustering, correlation analysis, and trend forecasting for renewable energy patterns.",
-      metrics: ["K-Means Clustering", "Statistical Tests", "Trend Analysis"]
+      title: t.renewable.features.items.advancedAnalyticsEngine.title,
+      description: t.renewable.features.items.advancedAnalyticsEngine.description,
+      metrics: t.renewable.features.items.advancedAnalyticsEngine.metrics
     },
     {
       icon: Globe,
-      title: "Interactive 3D Visualizations",
-      description: "Immersive 3D scatter plots, heatmaps, and animated dashboards using Plotly for comprehensive data exploration.",
-      metrics: ["3D Scatter Plots", "Animated Timelines", "Interactive Heatmaps"]
+      title: t.renewable.features.items.interactive3DVisualizations.title,
+      description: t.renewable.features.items.interactive3DVisualizations.description,
+      metrics: t.renewable.features.items.interactive3DVisualizations.metrics
     },
     {
       icon: TrendingUp,
-      title: "Business Intelligence Suite",
-      description: "Comprehensive reporting system with automated insights generation and executive-level dashboards for strategic decision making.",
-      metrics: ["Automated Reports", "Executive Dashboards", "ROI Analysis"]
+      title: t.renewable.features.items.businessIntelligenceSuite.title,
+      description: t.renewable.features.items.businessIntelligenceSuite.description,
+      metrics: t.renewable.features.items.businessIntelligenceSuite.metrics
     }
   ];
 
   const metrics = [
-    { label: "Countries Analyzed", value: "50+", icon: Globe },
-    { label: "Data Points Processed", value: "10M+", icon: Database },
-    { label: "Years of Historical Data", value: "15+", icon: Clock },
-    { label: "Interactive Visualizations", value: "100+", icon: BarChart3 }
+    { label: t.renewable.hero.metrics.countriesAnalyzed, value: t.renewable.heroMetricValues.countriesAnalyzed, icon: Globe },
+    { label: t.renewable.hero.metrics.dataPointsProcessed, value: t.renewable.heroMetricValues.dataPointsProcessed, icon: Database },
+    { label: t.renewable.hero.metrics.yearsOfHistoricalData, value: t.renewable.heroMetricValues.yearsOfHistoricalData, icon: Clock },
+    { label: t.renewable.hero.metrics.interactiveVisualizations, value: t.renewable.heroMetricValues.interactiveVisualizations, icon: BarChart3 }
   ];
 
   return (
@@ -140,20 +146,20 @@ const DataVisualization = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Projects
+            {t.renewable.navigation.backToProjects}
           </Link>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="relative py-20 lg:py-32 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-green-500/10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(16,185,129,0.1),transparent_70%)]" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -164,26 +170,26 @@ const DataVisualization = () => {
             >
               <Zap className="w-8 h-8 text-emerald-500" />
               <span className="bg-emerald-500/10 text-emerald-500 px-4 py-2 rounded-full text-sm font-medium border border-emerald-500/20">
-                Renewable Energy Analytics Platform
+                {t.renewable.hero.badge}
               </span>
             </motion.div>
-            
+
             <motion.h1
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 bg-clip-text text-transparent mb-8 leading-tight"
             >
-              Interactive Data Visualization & Business Intelligence Suite
+              {t.renewable.hero.title}
             </motion.h1>
-            
+
             <motion.p
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12"
             >
-              A comprehensive renewable energy analytics platform that transforms complex datasets into actionable insights through advanced visualization, machine learning, and business intelligence tools.
+              {t.renewable.hero.description}
             </motion.p>
 
             <motion.div
@@ -217,25 +223,22 @@ const DataVisualization = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Transforming Renewable Energy Data into Actionable Insights
+              {t.renewable.projectOverview.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our platform combines cutting-edge data science with intuitive visualization to help organizations make data-driven decisions in the renewable energy sector.
+              {t.renewable.projectOverview.subtitle}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Project Mission</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{t.renewable.projectOverview.missionTitle}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  The Interactive Data Visualization & Business Intelligence Suite was developed to address the critical need for 
-                  comprehensive renewable energy analysis. By integrating multiple data sources and providing advanced analytics 
-                  capabilities, we enable organizations to track progress, identify trends, and make informed investment decisions 
-                  in the renewable energy sector.
+                  {t.renewable.projectOverview.missionDescription}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Data Integration", "Machine Learning", "3D Visualization", "Business Intelligence"].map((tag) => (
+                  {[t.renewable.projectOverview.tags.dataIntegration, t.renewable.projectOverview.tags.machineLearning, t.renewable.projectOverview.tags.visualization3D, t.renewable.projectOverview.tags.businessIntelligence].map((tag) => (
                     <span key={tag} className="bg-emerald-500/10 text-emerald-500 px-3 py-1 rounded-full text-sm">
                       {tag}
                     </span>
@@ -246,27 +249,27 @@ const DataVisualization = () => {
 
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Key Capabilities</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">{t.renewable.projectOverview.keyCapabilitiesTitle}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Multi-Source Data Integration</h4>
-                      <p className="text-sm text-muted-foreground">Seamlessly combines data from IRENA, World Bank, and other renewable energy databases</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.projectOverview.capabilities.multiSourceIntegration.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.projectOverview.capabilities.multiSourceIntegration.description}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Advanced Analytics Engine</h4>
-                      <p className="text-sm text-muted-foreground">Machine learning clustering, statistical analysis, and trend forecasting</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.projectOverview.capabilities.advancedAnalytics.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.projectOverview.capabilities.advancedAnalytics.description}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Interactive Visualizations</h4>
-                      <p className="text-sm text-muted-foreground">3D scatter plots, animated dashboards, and comprehensive reporting</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.projectOverview.capabilities.interactiveVisualizations.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.projectOverview.capabilities.interactiveVisualizations.description}</p>
                     </div>
                   </div>
                 </div>
@@ -284,10 +287,10 @@ const DataVisualization = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Advanced Features & Capabilities
+              {t.renewable.features.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our platform offers a comprehensive suite of tools designed to meet the complex demands of renewable energy analysis.
+              {t.renewable.features.subtitle}
             </p>
           </div>
 
@@ -331,10 +334,10 @@ const DataVisualization = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Technical Implementation
+              {t.renewable.codeExamples.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Explore the core components that power our renewable energy analytics platform.
+              {t.renewable.codeExamples.subtitle}
             </p>
           </div>
 
@@ -365,7 +368,7 @@ const DataVisualization = () => {
           </div>
         </motion.section>
 
-        {/* Architecture Overview */}
+       {/* Architecture Overview */}
         <motion.section
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -374,25 +377,25 @@ const DataVisualization = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              System Architecture
+              {t.renewable.architecture.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              A robust, scalable architecture designed for high-performance data processing and visualization.
+              {t.renewable.architecture.subtitle}
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-                <h3 className="text-xl font-bold text-foreground mb-6">Data Processing Pipeline</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">{t.renewable.architecture.dataProcessingPipeline.title}</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center">
                       <span className="text-blue-500 font-bold text-sm">1</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Data Collection</h4>
-                      <p className="text-sm text-muted-foreground">Parallel scraping from multiple renewable energy databases</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.dataCollection.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.dataCollection.description}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -400,8 +403,8 @@ const DataVisualization = () => {
                       <span className="text-purple-500 font-bold text-sm">2</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Data Processing</h4>
-                      <p className="text-sm text-muted-foreground">Cleaning, validation, and feature engineering</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.dataProcessing.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.dataProcessing.description}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -409,8 +412,8 @@ const DataVisualization = () => {
                       <span className="text-emerald-500 font-bold text-sm">3</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Analytics Engine</h4>
-                      <p className="text-sm text-muted-foreground">Statistical analysis and machine learning clustering</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.analyticsEngine.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.analyticsEngine.description}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -418,8 +421,8 @@ const DataVisualization = () => {
                       <span className="text-orange-500 font-bold text-sm">4</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Visualization</h4>
-                      <p className="text-sm text-muted-foreground">Interactive 3D plots and comprehensive dashboards</p>
+                      <h4 className="font-semibold text-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.visualization.title}</h4>
+                      <p className="text-sm text-muted-foreground">{t.renewable.architecture.dataProcessingPipeline.steps.visualization.description}</p>
                     </div>
                   </div>
                 </div>
@@ -428,18 +431,9 @@ const DataVisualization = () => {
 
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20">
-                <h3 className="text-xl font-bold text-foreground mb-6">Technology Stack</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">{t.renewable.architecture.technologyStack.title}</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { name: "Python", type: "Core Language" },
-                    { name: "Pandas", type: "Data Processing" },
-                    { name: "Plotly", type: "Visualization" },
-                    { name: "Scikit-learn", type: "Machine Learning" },
-                    { name: "BeautifulSoup", type: "Web Scraping" },
-                    { name: "NumPy", type: "Numerical Computing" },
-                    { name: "Seaborn", type: "Statistical Plots" },
-                    { name: "Matplotlib", type: "Plotting Library" }
-                  ].map((tech, index) => (
+                  {Object.values(t.renewable.architecture.technologyStack.technologies).map((tech, index) => (
                     <div key={index} className="bg-card/50 rounded-lg p-3">
                       <div className="font-semibold text-foreground text-sm">{tech.name}</div>
                       <div className="text-xs text-muted-foreground">{tech.type}</div>
@@ -449,23 +443,23 @@ const DataVisualization = () => {
               </div>
 
               <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-                <h3 className="text-xl font-bold text-foreground mb-6">Performance Metrics</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">{t.renewable.architecture.performanceMetrics.title}</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Data Processing Speed</span>
-                    <span className="text-foreground font-semibold">10M+ records/hour</span>
+                    <span className="text-muted-foreground">{t.renewable.performanceValues.dataProcessingSpeed}</span>
+                    <span className="text-foreground font-semibold">{t.renewable.performanceValues.dataProcessingSpeed}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Visualization Rendering</span>
-                    <span className="text-foreground font-semibold">&lt;2s load time</span>
+                    <span className="text-muted-foreground">{t.renewable.performanceValues.visualizationRendering}</span>
+                    <span className="text-foreground font-semibold">{t.renewable.performanceValues.visualizationRendering}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Concurrent Users</span>
-                    <span className="text-foreground font-semibold">1000+</span>
+                    <span className="text-muted-foreground">{t.renewable.performanceValues.concurrentUsers}</span>
+                    <span className="text-foreground font-semibold">{t.renewable.performanceValues.concurrentUsers}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">System Uptime</span>
-                    <span className="text-foreground font-semibold">99.9%</span>
+                    <span className="text-muted-foreground">{t.renewable.performanceValues.systemUptime}</span>
+                    <span className="text-foreground font-semibold">{t.renewable.performanceValues.systemUptime}</span>
                   </div>
                 </div>
               </div>
@@ -473,6 +467,7 @@ const DataVisualization = () => {
           </div>
         </motion.section>
 
+        {/* Results & Impact */}
         {/* Results & Impact */}
         <motion.section
           initial={{ y: 20, opacity: 0 }}
@@ -482,10 +477,10 @@ const DataVisualization = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Results & Business Impact
+              {t.renewable.results.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Measurable outcomes and insights generated through comprehensive renewable energy analysis.
+              {t.renewable.results.subtitle}
             </p>
           </div>
 
@@ -494,19 +489,19 @@ const DataVisualization = () => {
               <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center mb-6">
                 <TrendingUp className="w-6 h-6 text-emerald-500" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Growth Analysis</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t.renewable.results.sections.growthAnalysis.title}</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Global renewable capacity growth</span>
-                  <span className="text-emerald-500 font-semibold">+12% annually</span>
+                  <span className="text-muted-foreground">{t.renewable.growthValues.globalRenewableCapacity}</span>
+                  <span className="text-emerald-500 font-semibold">{t.renewable.growthValues.globalRenewableCapacity}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Solar energy expansion</span>
-                  <span className="text-emerald-500 font-semibold">+25% year-over-year</span>
+                  <span className="text-muted-foreground">{t.renewable.growthValues.solarEnergyExpansion}</span>
+                  <span className="text-emerald-500 font-semibold">{t.renewable.growthValues.solarEnergyExpansion}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Wind power growth</span>
-                  <span className="text-emerald-500 font-semibold">+18% annually</span>
+                  <span className="text-muted-foreground">{t.renewable.growthValues.windPowerGrowth}</span>
+                  <span className="text-emerald-500 font-semibold">{t.renewable.growthValues.windPowerGrowth}</span>
                 </div>
               </div>
             </div>
@@ -515,19 +510,19 @@ const DataVisualization = () => {
               <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6">
                 <Users className="w-6 h-6 text-blue-500" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">User Engagement</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t.renewable.results.sections.userEngagement.title}</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Platform users</span>
-                  <span className="text-blue-500 font-semibold">5,000+</span>
+                  <span className="text-muted-foreground">{t.renewable.userEngagementValues.platformUsers}</span>
+                  <span className="text-blue-500 font-semibold">{t.renewable.userEngagementValues.platformUsers}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Monthly active users</span>
-                  <span className="text-blue-500 font-semibold">2,500+</span>
+                  <span className="text-muted-foreground">{t.renewable.userEngagementValues.monthlyActiveUsers}</span>
+                  <span className="text-blue-500 font-semibold">{t.renewable.userEngagementValues.monthlyActiveUsers}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">User satisfaction</span>
-                  <span className="text-blue-500 font-semibold">4.8/5</span>
+                  <span className="text-muted-foreground">{t.renewable.userEngagementValues.userSatisfaction}</span>
+                  <span className="text-blue-500 font-semibold">{t.renewable.userEngagementValues.userSatisfaction}</span>
                 </div>
               </div>
             </div>
@@ -536,19 +531,19 @@ const DataVisualization = () => {
               <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
                 <Activity className="w-6 h-6 text-purple-500" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Carbon Impact</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t.renewable.results.sections.carbonImpact.title}</h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">CO2 offset tracked</span>
-                  <span className="text-purple-500 font-semibold">50M+ tons</span>
+                  <span className="text-muted-foreground">{t.renewable.carbonImpactValues.co2OffsetTracked}</span>
+                  <span className="text-purple-500 font-semibold">{t.renewable.carbonImpactValues.co2OffsetTracked}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Countries analyzed</span>
-                  <span className="text-purple-500 font-semibold">195</span>
+                  <span className="text-muted-foreground">{t.renewable.carbonImpactValues.countriesAnalyzed}</span>
+                  <span className="text-purple-500 font-semibold">{t.renewable.carbonImpactValues.countriesAnalyzed}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Investment tracked</span>
-                  <span className="text-purple-500 font-semibold">$500B+</span>
+                  <span className="text-muted-foreground">{t.renewable.carbonImpactValues.investmentTracked}</span>
+                  <span className="text-purple-500 font-semibold">{t.renewable.carbonImpactValues.investmentTracked}</span>
                 </div>
               </div>
             </div>
@@ -557,33 +552,58 @@ const DataVisualization = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-muted/30 border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Interactive Data Visualization & Business Intelligence Suite
-            </h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Empowering organizations with comprehensive renewable energy analytics and data-driven insights 
-              for sustainable future planning and strategic decision making.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <Database className="w-4 h-4" />
-                <span>Multi-Source Data Integration</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BarChart3 className="w-4 h-4" />
-                <span>Advanced Analytics Engine</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                <span>Global Renewable Energy Focus</span>
-              </div>
-            </div>
+     <footer className="bg-muted/30 border-t border-border">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-8">
+      {/* Left: Text */}
+      <div className="w-full md:w-auto">
+        <h3 className="text-2xl font-bold text-foreground mb-4">
+          {t.renewable.footer.title}
+        </h3>
+        <p className="text-muted-foreground mb-8 max-w-2xl">
+          {t.renewable.footer.description}
+        </p>
+        <div className="flex flex-col sm:flex-row items-start gap-6 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Database className="w-4 h-4" />
+            <span>{t.renewable.footer.features.multiSourceDataIntegration}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <BarChart3 className="w-4 h-4" />
+            <span>{t.renewable.footer.features.advancedAnalyticsEngine}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Globe className="w-4 h-4" />
+            <span>{t.renewable.footer.features.globalRenewableEnergyFocus}</span>
           </div>
         </div>
-      </footer>
+      </div>
+      {/* Right: Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto justify-end">
+        {/* Documentation button */}
+        <a
+          href="/public/Renewable Energy Data Portfolio_ Technical, Business, and Environmental Insights.pdf"
+          download
+          className="text-sm flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors"
+        >
+          <BookOpen size={16} />
+          <span>{t.gan.footer.documentation}</span>
+        </a>
+        {/* Code Source button */}
+        <a
+          href="https://github.com/nirdidev05/data_walid/tree/master"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors"
+        >
+          <Code size={16} />
+          <span>{t.gan.footer.sourceCode}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 };

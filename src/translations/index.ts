@@ -580,6 +580,230 @@ nav: {
     }
   }
 }
+renewable:{
+  navigation: {
+    backToProjects: string;
+  };
+
+  // Hero Section
+  hero: {
+    badge: string;
+    title: string;
+    description: string;
+    metrics: {
+      countriesAnalyzed: string;
+      dataPointsProcessed: string;
+      yearsOfHistoricalData: string;
+      interactiveVisualizations: string;
+    };
+  };
+
+  // Main Content - Project Overview
+  projectOverview: {
+    title: string;
+    subtitle: string;
+    missionTitle: string;
+    missionDescription: string;
+    tags: {
+      dataIntegration: string;
+      machineLearning: string;
+      visualization3D: string;
+      businessIntelligence: string;
+    };
+    keyCapabilitiesTitle: string;
+    capabilities: {
+      multiSourceIntegration: {
+        title: string;
+        description: string;
+      };
+      advancedAnalytics: {
+        title: string;
+        description: string;
+      };
+      interactiveVisualizations: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+
+  // Features Section
+  features: {
+    title: string;
+    subtitle: string;
+    items: {
+      multiSourceDataIntegration: {
+        title: string;
+        description: string;
+        metrics: [string, string, string];
+      };
+      advancedAnalyticsEngine: {
+        title: string;
+        description: string;
+        metrics: [string, string, string];
+      };
+      interactive3DVisualizations: {
+        title: string;
+        description: string;
+        metrics: [string, string, string];
+      };
+      businessIntelligenceSuite: {
+        title: string;
+        description: string;
+        metrics: [string, string, string];
+      };
+    };
+  };
+
+  // Code Examples Section
+  codeExamples: {
+    title: string;
+    subtitle: string;
+    examples: {
+      dataScraping: {
+        title: string;
+        description: string;
+      };
+      advancedAnalytics: {
+        title: string;
+        description: string;
+      };
+      interactive3DVisualizations: {
+        title: string;
+        description: string;
+      };
+    };
+  };
+
+  // Architecture Section
+  architecture: {
+    title: string;
+    subtitle: string;
+    dataProcessingPipeline: {
+      title: string;
+      steps: {
+        dataCollection: {
+          title: string;
+          description: string;
+        };
+        dataProcessing: {
+          title: string;
+          description: string;
+        };
+        analyticsEngine: {
+          title: string;
+          description: string;
+        };
+        visualization: {
+          title: string;
+          description: string;
+        };
+      };
+    };
+    technologyStack: {
+      title: string;
+      technologies: {
+        python: { name: string; type: string };
+        pandas: { name: string; type: string };
+        plotly: { name: string; type: string };
+        scikitlearn: { name: string; type: string };
+        beautifulsoup: { name: string; type: string };
+        numpy: { name: string; type: string };
+        seaborn: { name: string; type: string };
+        matplotlib: { name: string; type: string };
+      };
+    };
+    performanceMetrics: {
+      title: string;
+      metrics: {
+        dataProcessingSpeed: string;
+        visualizationRendering: string;
+        concurrentUsers: string;
+        systemUptime: string;
+      };
+    };
+  };
+
+  // Results & Impact Section
+  results: {
+    title: string;
+    subtitle: string;
+    sections: {
+      growthAnalysis: {
+        title: string;
+        metrics: {
+          globalRenewableCapacity: string;
+          solarEnergyExpansion: string;
+          windPowerGrowth: string;
+        };
+      };
+      userEngagement: {
+        title: string;
+        metrics: {
+          platformUsers: string;
+          monthlyActiveUsers: string;
+          userSatisfaction: string;
+        };
+      };
+      carbonImpact: {
+        title: string;
+        metrics: {
+          co2OffsetTracked: string;
+          countriesAnalyzed: string;
+          investmentTracked: string;
+        };
+      };
+    };
+  };
+
+  // Footer
+  footer: {
+    title: string;
+    description: string;
+    features: {
+      multiSourceDataIntegration: string;
+      advancedAnalyticsEngine: string;
+      globalRenewableEnergyFocus: string;
+    };
+  };
+
+  // Performance Values (for metrics display)
+  performanceValues: {
+    dataProcessingSpeed: string;
+    visualizationRendering: string;
+    concurrentUsers: string;
+    systemUptime: string;
+  };
+
+  // Growth Values (for results display)
+  growthValues: {
+    globalRenewableCapacity: string;
+    solarEnergyExpansion: string;
+    windPowerGrowth: string;
+  };
+
+  // User Engagement Values
+  userEngagementValues: {
+    platformUsers: string;
+    monthlyActiveUsers: string;
+    userSatisfaction: string;
+  };
+
+  // Carbon Impact Values
+  carbonImpactValues: {
+    co2OffsetTracked: string;
+    countriesAnalyzed: string;
+    investmentTracked: string;
+  };
+
+  // Metric Values for Hero Section
+  heroMetricValues: {
+    countriesAnalyzed: string;
+    dataPointsProcessed: string;
+    yearsOfHistoricalData: string;
+    interactiveVisualizations: string;
+  };
+}
 };
 
 const translations: Record<string, Translation> = {
@@ -779,6 +1003,207 @@ const translations: Record<string, Translation> = {
     roleEngineer: "AI Engineer",
     roleGraduate: "futur State Engineer in Computer Science",
   },
+  renewable:{
+
+   navigation: {
+    backToProjects: "Back to Projects"
+  },
+  hero: {
+    badge: "Renewable Energy Analytics Platform",
+    title: "Interactive Data Visualization & Business Intelligence Suite",
+    description: "A comprehensive renewable energy analytics platform that transforms complex datasets into actionable insights through advanced visualization, machine learning, and business intelligence tools.",
+    metrics: {
+      countriesAnalyzed: "Countries Analyzed",
+      dataPointsProcessed: "Data Points Processed",
+      yearsOfHistoricalData: "Years of Historical Data",
+      interactiveVisualizations: "Interactive Visualizations"
+    }
+  },
+  projectOverview: {
+    title: "Transforming Renewable Energy Data into Actionable Insights",
+    subtitle: "Our platform combines cutting-edge data science with intuitive visualization to help organizations make data-driven decisions in the renewable energy sector.",
+    missionTitle: "Project Mission",
+    missionDescription: "The Interactive Data Visualization & Business Intelligence Suite was developed to address the critical need for comprehensive renewable energy analysis. By integrating multiple data sources and providing advanced analytics capabilities, we enable organizations to track progress, identify trends, and make informed investment decisions in the renewable energy sector.",
+    tags: {
+      dataIntegration: "Data Integration",
+      machineLearning: "Machine Learning",
+      visualization3D: "3D Visualization",
+      businessIntelligence: "Business Intelligence"
+    },
+    keyCapabilitiesTitle: "Key Capabilities",
+    capabilities: {
+      multiSourceIntegration: {
+        title: "Multi-Source Data Integration",
+        description: "Seamlessly combines data from IRENA, World Bank, and other renewable energy databases"
+      },
+      advancedAnalytics: {
+        title: "Advanced Analytics Engine",
+        description: "Machine learning clustering, statistical analysis, and trend forecasting"
+      },
+      interactiveVisualizations: {
+        title: "Interactive Visualizations",
+        description: "3D scatter plots, animated dashboards, and comprehensive reporting"
+      }
+    }
+  },
+  features: {
+    title: "Advanced Features & Capabilities",
+    subtitle: "Our platform offers a comprehensive suite of tools designed to meet the complex demands of renewable energy analysis.",
+    items: {
+      multiSourceDataIntegration: {
+        title: "Multi-Source Data Integration",
+        description: "Seamlessly integrates data from IRENA, World Bank, and other renewable energy databases with parallel processing for optimal performance.",
+        metrics: ["5+ Data Sources", "Real-time Updates", "99.9% Uptime"]
+      },
+      advancedAnalyticsEngine: {
+        title: "Advanced Analytics Engine",
+        description: "Powerful statistical analysis with machine learning clustering, correlation analysis, and trend forecasting for renewable energy patterns.",
+        metrics: ["K-Means Clustering", "Statistical Tests", "Trend Analysis"]
+      },
+      interactive3DVisualizations: {
+        title: "Interactive 3D Visualizations",
+        description: "Immersive 3D scatter plots, heatmaps, and animated dashboards using Plotly for comprehensive data exploration.",
+        metrics: ["3D Scatter Plots", "Animated Timelines", "Interactive Heatmaps"]
+      },
+      businessIntelligenceSuite: {
+        title: "Business Intelligence Suite",
+        description: "Comprehensive reporting system with automated insights generation and executive-level dashboards for strategic decision making.",
+        metrics: ["Automated Reports", "Executive Dashboards", "ROI Analysis"]
+      }
+    }
+  },
+  codeExamples: {
+    title: "Technical Implementation",
+    subtitle: "Explore the core components that power our renewable energy analytics platform.",
+    examples: {
+      dataScraping: {
+        title: "Data Scraping & Collection",
+        description: "Multi-source data collection with parallel processing for faster data aggregation from IRENA and World Bank APIs."
+      },
+      advancedAnalytics: {
+        title: "Advanced Analytics & Clustering",
+        description: "Statistical analysis with machine learning clustering and correlation analysis for renewable energy patterns."
+      },
+      interactive3DVisualizations: {
+        title: "Interactive 3D Visualizations",
+        description: "Advanced Plotly-based 3D visualizations with animation frames for temporal data analysis."
+      }
+    }
+  },
+  architecture: {
+    title: "System Architecture",
+    subtitle: "A robust, scalable architecture designed for high-performance data processing and visualization.",
+    dataProcessingPipeline: {
+      title: "Data Processing Pipeline",
+      steps: {
+        dataCollection: {
+          title: "Data Collection",
+          description: "Parallel scraping from multiple renewable energy databases"
+        },
+        dataProcessing: {
+          title: "Data Processing",
+          description: "Cleaning, validation, and feature engineering"
+        },
+        analyticsEngine: {
+          title: "Analytics Engine",
+          description: "Statistical analysis and machine learning clustering"
+        },
+        visualization: {
+          title: "Visualization",
+          description: "Interactive 3D plots and comprehensive dashboards"
+        }
+      }
+    },
+    technologyStack: {
+      title: "Technology Stack",
+      technologies: {
+        python: { name: "Python", type: "Core Language" },
+        pandas: { name: "Pandas", type: "Data Processing" },
+        plotly: { name: "Plotly", type: "Visualization" },
+        scikitlearn: { name: "Scikit-learn", type: "Machine Learning" },
+        beautifulsoup: { name: "BeautifulSoup", type: "Web Scraping" },
+        numpy: { name: "NumPy", type: "Numerical Computing" },
+        seaborn: { name: "Seaborn", type: "Statistical Plots" },
+        matplotlib: { name: "Matplotlib", type: "Plotting Library" }
+      }
+    },
+    performanceMetrics: {
+      title: "Performance Metrics",
+      metrics: {
+        dataProcessingSpeed: "Data Processing Speed",
+        visualizationRendering: "Visualization Rendering",
+        concurrentUsers: "Concurrent Users",
+        systemUptime: "System Uptime"
+      }
+    }
+  },
+  results: {
+    title: "Results & Business Impact",
+    subtitle: "Measurable outcomes and insights generated through comprehensive renewable energy analysis.",
+    sections: {
+      growthAnalysis: {
+        title: "Growth Analysis",
+        metrics: {
+          globalRenewableCapacity: "Global renewable capacity growth",
+          solarEnergyExpansion: "Solar energy expansion",
+          windPowerGrowth: "Wind power growth"
+        }
+      },
+      userEngagement: {
+        title: "User Engagement",
+        metrics: {
+          platformUsers: "Platform users",
+          monthlyActiveUsers: "Monthly active users",
+          userSatisfaction: "User satisfaction"
+        }
+      },
+      carbonImpact: {
+        title: "Carbon Impact",
+        metrics: {
+          co2OffsetTracked: "CO2 offset tracked",
+          countriesAnalyzed: "Countries analyzed",
+          investmentTracked: "Investment tracked"
+        }
+      }
+    }
+  },
+  footer: {
+    title: "Interactive Data Visualization & Business Intelligence Suite",
+    description: "Empowering organizations with comprehensive renewable energy analytics and data-driven insights for sustainable future planning and strategic decision making.",
+    features: {
+      multiSourceDataIntegration: "Multi-Source Data Integration",
+      advancedAnalyticsEngine: "Advanced Analytics Engine",
+      globalRenewableEnergyFocus: "Global Renewable Energy Focus"
+    }
+  },
+  performanceValues: {
+    dataProcessingSpeed: "10M+ records/hour",
+    visualizationRendering: "<2s load time",
+    concurrentUsers: "1000+",
+    systemUptime: "99.9%"
+  },
+  growthValues: {
+    globalRenewableCapacity: "+12% annually",
+    solarEnergyExpansion: "+25% year-over-year",
+    windPowerGrowth: "+18% annually"
+  },
+  userEngagementValues: {
+    platformUsers: "5,000+",
+    monthlyActiveUsers: "2,500+",
+    userSatisfaction: "4.8/5"
+  },
+  carbonImpactValues: {
+    co2OffsetTracked: "50M+ tons",
+    countriesAnalyzed: "195",
+    investmentTracked: "$500B+"
+  },
+  heroMetricValues: {
+    countriesAnalyzed: "50+",
+    dataPointsProcessed: "10M+",
+    yearsOfHistoricalData: "15+",
+    interactiveVisualizations: "100+"
+  }
+},
   gan: {
     nav: {
       overview: "Overview",
@@ -1435,6 +1860,206 @@ const translations: Record<string, Translation> = {
     roleEngineer: "Ingénieur IA",
     roleGraduate: "Futur ingénieur d'État en informatique",
   },
+  renewable: {
+    navigation: {
+    backToProjects: "Retour aux Projets"
+  },
+  hero: {
+    badge: "Plateforme d'Analyse des Énergies Renouvelables",
+    title: "Suite de Visualisation de Données Interactive & Intelligence d'Affaires",
+    description: "Une plateforme complète d'analyse des énergies renouvelables qui transforme des ensembles de données complexes en insights exploitables grâce à la visualisation avancée, l'apprentissage automatique et les outils d'intelligence d'affaires.",
+    metrics: {
+      countriesAnalyzed: "Pays Analysés",
+      dataPointsProcessed: "Points de Données Traités",
+      yearsOfHistoricalData: "Années de Données Historiques",
+      interactiveVisualizations: "Visualisations Interactives"
+    }
+  },
+  projectOverview: {
+    title: "Transformer les Données d'Énergies Renouvelables en Insights Exploitables",
+    subtitle: "Notre plateforme combine la science des données de pointe avec une visualisation intuitive pour aider les organisations à prendre des décisions basées sur les données dans le secteur des énergies renouvelables.",
+    missionTitle: "Mission du Projet",
+    missionDescription: "La Suite de Visualisation de Données Interactive & Intelligence d'Affaires a été développée pour répondre au besoin critique d'analyse complète des énergies renouvelables. En intégrant plusieurs sources de données et en fournissant des capacités d'analyse avancées, nous permettons aux organisations de suivre les progrès, identifier les tendances et prendre des décisions d'investissement éclairées dans le secteur des énergies renouvelables.",
+    tags: {
+      dataIntegration: "Intégration de Données",
+      machineLearning: "Apprentissage Automatique",
+      visualization3D: "Visualisation 3D",
+      businessIntelligence: "Intelligence d'Affaires"
+    },
+    keyCapabilitiesTitle: "Capacités Clés",
+    capabilities: {
+      multiSourceIntegration: {
+        title: "Intégration Multi-Sources",
+        description: "Combine de manière transparente les données d'IRENA, de la Banque Mondiale et d'autres bases de données d'énergies renouvelables"
+      },
+      advancedAnalytics: {
+        title: "Moteur d'Analyse Avancée",
+        description: "Clustering d'apprentissage automatique, analyse statistique et prévision des tendances"
+      },
+      interactiveVisualizations: {
+        title: "Visualisations Interactives",
+        description: "Graphiques de dispersion 3D, tableaux de bord animés et rapports complets"
+      }
+    }
+  },
+  features: {
+    title: "Fonctionnalités & Capacités Avancées",
+    subtitle: "Notre plateforme offre une suite complète d'outils conçus pour répondre aux exigences complexes de l'analyse des énergies renouvelables.",
+    items: {
+      multiSourceDataIntegration: {
+        title: "Intégration de Données Multi-Sources",
+        description: "Intègre de manière transparente les données d'IRENA, de la Banque Mondiale et d'autres bases de données d'énergies renouvelables avec un traitement parallèle pour des performances optimales.",
+        metrics: ["5+ Sources de Données", "Mises à Jour en Temps Réel", "99,9% de Disponibilité"]
+      },
+      advancedAnalyticsEngine: {
+        title: "Moteur d'Analyse Avancée",
+        description: "Analyse statistique puissante avec clustering d'apprentissage automatique, analyse de corrélation et prévision des tendances pour les modèles d'énergies renouvelables.",
+        metrics: ["Clustering K-Means", "Tests Statistiques", "Analyse des Tendances"]
+      },
+      interactive3DVisualizations: {
+        title: "Visualisations 3D Interactives",
+        description: "Graphiques de dispersion 3D immersifs, cartes thermiques et tableaux de bord animés utilisant Plotly pour une exploration complète des données.",
+        metrics: ["Graphiques de Dispersion 3D", "Chronologies Animées", "Cartes Thermiques Interactives"]
+      },
+      businessIntelligenceSuite: {
+        title: "Suite d'Intelligence d'Affaires",
+        description: "Système de rapport complet avec génération automatisée d'insights et tableaux de bord de niveau exécutif pour la prise de décision stratégique.",
+        metrics: ["Rapports Automatisés", "Tableaux de Bord Exécutifs", "Analyse ROI"]
+      }
+    }
+  },
+  codeExamples: {
+    title: "Implémentation Technique",
+    subtitle: "Explorez les composants principaux qui alimentent notre plateforme d'analyse des énergies renouvelables.",
+    examples: {
+      dataScraping: {
+        title: "Collecte et Extraction de Données",
+        description: "Collecte de données multi-sources avec traitement parallèle pour une agrégation plus rapide des données des APIs d'IRENA et de la Banque Mondiale."
+      },
+      advancedAnalytics: {
+        title: "Analyse Avancée et Clustering",
+        description: "Analyse statistique avec clustering d'apprentissage automatique et analyse de corrélation pour les modèles d'énergies renouvelables."
+      },
+      interactive3DVisualizations: {
+        title: "Visualisations 3D Interactives",
+        description: "Visualisations 3D avancées basées sur Plotly avec des images d'animation pour l'analyse de données temporelles."
+      }
+    }
+  },
+  architecture: {
+    title: "Architecture Système",
+    subtitle: "Une architecture robuste et évolutive conçue pour le traitement de données haute performance et la visualisation.",
+    dataProcessingPipeline: {
+      title: "Pipeline de Traitement des Données",
+      steps: {
+        dataCollection: {
+          title: "Collecte de Données",
+          description: "Extraction parallèle de multiples bases de données d'énergies renouvelables"
+        },
+        dataProcessing: {
+          title: "Traitement des Données",
+          description: "Nettoyage, validation et ingénierie des fonctionnalités"
+        },
+        analyticsEngine: {
+          title: "Moteur d'Analyse",
+          description: "Analyse statistique et clustering d'apprentissage automatique"
+        },
+        visualization: {
+          title: "Visualisation",
+          description: "Graphiques 3D interactifs et tableaux de bord complets"
+        }
+      }
+    },
+    technologyStack: {
+      title: "Stack Technologique",
+      technologies: {
+        python: { name: "Python", type: "Langage Principal" },
+        pandas: { name: "Pandas", type: "Traitement de Données" },
+        plotly: { name: "Plotly", type: "Visualisation" },
+        scikitlearn: { name: "Scikit-learn", type: "Apprentissage Automatique" },
+        beautifulsoup: { name: "BeautifulSoup", type: "Extraction Web" },
+        numpy: { name: "NumPy", type: "Calcul Numérique" },
+        seaborn: { name: "Seaborn", type: "Graphiques Statistiques" },
+        matplotlib: { name: "Matplotlib", type: "Bibliothèque de Graphiques" }
+      }
+    },
+    performanceMetrics: {
+      title: "Métriques de Performance",
+      metrics: {
+        dataProcessingSpeed: "Vitesse de Traitement des Données",
+        visualizationRendering: "Rendu de Visualisation",
+        concurrentUsers: "Utilisateurs Simultanés",
+        systemUptime: "Disponibilité du Système"
+      }
+    }
+  },
+  results: {
+    title: "Résultats & Impact Commercial",
+    subtitle: "Résultats mesurables et insights générés grâce à l'analyse complète des énergies renouvelables.",
+    sections: {
+      growthAnalysis: {
+        title: "Analyse de Croissance",
+        metrics: {
+          globalRenewableCapacity: "Croissance de la capacité renouvelable mondiale",
+          solarEnergyExpansion: "Expansion de l'énergie solaire",
+          windPowerGrowth: "Croissance de l'énergie éolienne"
+        }
+      },
+      userEngagement: {
+        title: "Engagement des Utilisateurs",
+        metrics: {
+          platformUsers: "Utilisateurs de la plateforme",
+          monthlyActiveUsers: "Utilisateurs actifs mensuels",
+          userSatisfaction: "Satisfaction des utilisateurs"
+        }
+      },
+      carbonImpact: {
+        title: "Impact Carbone",
+        metrics: {
+          co2OffsetTracked: "Compensation CO2 suivie",
+          countriesAnalyzed: "Pays analysés",
+          investmentTracked: "Investissement suivi"
+        }
+      }
+    }
+  },
+  footer: {
+    title: "Suite de Visualisation de Données Interactive & Intelligence d'Affaires",
+    description: "Autonomiser les organisations avec une analyse complète des énergies renouvelables et des insights basés sur les données pour la planification d'avenir durable et la prise de décision stratégique.",
+    features: {
+      multiSourceDataIntegration: "Intégration de Données Multi-Sources",
+      advancedAnalyticsEngine: "Moteur d'Analyse Avancée",
+      globalRenewableEnergyFocus: "Focus Énergies Renouvelables Mondiales"
+    }
+  },
+  performanceValues: {
+    dataProcessingSpeed: "10M+ enregistrements/heure",
+    visualizationRendering: "<2s temps de chargement",
+    concurrentUsers: "1000+",
+    systemUptime: "99,9%"
+  },
+  growthValues: {
+    globalRenewableCapacity: "+12% annuellement",
+    solarEnergyExpansion: "+25% d'une année à l'autre",
+    windPowerGrowth: "+18% annuellement"
+  },
+  userEngagementValues: {
+    platformUsers: "5 000+",
+    monthlyActiveUsers: "2 500+",
+    userSatisfaction: "4,8/5"
+  },
+  carbonImpactValues: {
+    co2OffsetTracked: "50M+ tonnes",
+    countriesAnalyzed: "195",
+    investmentTracked: "500B$+"
+  },
+  heroMetricValues: {
+    countriesAnalyzed: "50+",
+    dataPointsProcessed: "10M+",
+    yearsOfHistoricalData: "15+",
+    interactiveVisualizations: "100+"
+  }
+},
   gan:  {
      nav: {
       overview: "Vue d'Ensemble",
@@ -2098,6 +2723,230 @@ const translations: Record<string, Translation> = {
     roleEngineer: "KI-Ingenieur",
     roleGraduate: "ESI-Absolvent",
   },
+  renewable: {
+      navigation: {
+    backToProjects: "Zurück zu Projekten",
+  },
+
+  // Hero Section
+  hero: {
+    badge: "Erneuerbare Energien Analytics Platform",
+    title: "Interaktive Datenvisualisierung & Business Intelligence Suite",
+    description: "Eine umfassende Analytics-Plattform für erneuerbare Energien, die komplexe Datensätze durch fortschrittliche Visualisierung, maschinelles Lernen und Business Intelligence-Tools in verwertbare Erkenntnisse verwandelt.",
+    metrics: {
+      countriesAnalyzed: "Analysierte Länder",
+      dataPointsProcessed: "Verarbeitete Datenpunkte",
+      yearsOfHistoricalData: "Jahre historischer Daten",
+      interactiveVisualizations: "Interaktive Visualisierungen",
+    },
+  },
+
+  // Main Content - Project Overview
+  projectOverview: {
+    title: "Transformation von Daten erneuerbarer Energien in verwertbare Erkenntnisse",
+    subtitle: "Unsere Plattform kombiniert modernste Datenwissenschaft mit intuitiver Visualisierung, um Organisationen bei datengestützten Entscheidungen im Sektor erneuerbarer Energien zu unterstützen.",
+    missionTitle: "Projektmission",
+    missionDescription: "Die Interaktive Datenvisualisierung & Business Intelligence Suite wurde entwickelt, um den kritischen Bedarf an umfassender Analyse erneuerbarer Energien zu decken. Durch die Integration mehrerer Datenquellen und die Bereitstellung fortschrittlicher Analysefunktionen ermöglichen wir es Organisationen, Fortschritte zu verfolgen, Trends zu identifizieren und fundierte Investitionsentscheidungen im Sektor erneuerbarer Energien zu treffen.",
+    tags: {
+      dataIntegration: "Datenintegration",
+      machineLearning: "Maschinelles Lernen",
+      visualization3D: "3D-Visualisierung",
+      businessIntelligence: "Business Intelligence",
+    },
+    keyCapabilitiesTitle: "Kernfähigkeiten",
+    capabilities: {
+      multiSourceIntegration: {
+        title: "Multi-Quellen Datenintegration",
+        description: "Nahtlose Kombination von Daten aus IRENA, Weltbank und anderen Datenbanken für erneuerbare Energien",
+      },
+      advancedAnalytics: {
+        title: "Fortschrittliche Analytics-Engine",
+        description: "Maschinelles Lernen Clustering, statistische Analyse und Trendprognosen",
+      },
+      interactiveVisualizations: {
+        title: "Interaktive Visualisierungen",
+        description: "3D-Streudiagramme, animierte Dashboards und umfassende Berichterstattung",
+      },
+    },
+  },
+
+  // Features Section
+  features: {
+    title: "Erweiterte Funktionen & Fähigkeiten",
+    subtitle: "Unsere Plattform bietet eine umfassende Suite von Tools, die darauf ausgelegt sind, den komplexen Anforderungen der Analyse erneuerbarer Energien gerecht zu werden.",
+    items: {
+      multiSourceDataIntegration: {
+        title: "Multi-Quellen Datenintegration",
+        description: "Nahtlose Integration von Daten aus IRENA, Weltbank und anderen Datenbanken für erneuerbare Energien mit paralleler Verarbeitung für optimale Leistung.",
+        metrics: ["5+ Datenquellen", "Echtzeit-Updates", "99,9% Verfügbarkeit"],
+      },
+      advancedAnalyticsEngine: {
+        title: "Fortschrittliche Analytics-Engine",
+        description: "Leistungsstarke statistische Analyse mit maschinellem Lernen Clustering, Korrelationsanalyse und Trendprognosen für Muster erneuerbarer Energien.",
+        metrics: ["K-Means Clustering", "Statistische Tests", "Trendanalyse"],
+      },
+      interactive3DVisualizations: {
+        title: "Interaktive 3D-Visualisierungen",
+        description: "Immersive 3D-Streudiagramme, Heatmaps und animierte Dashboards mit Plotly für umfassende Datenerkundung.",
+        metrics: ["3D-Streudiagramme", "Animierte Zeitlinien", "Interaktive Heatmaps"],
+      },
+      businessIntelligenceSuite: {
+        title: "Business Intelligence Suite",
+        description: "Umfassendes Berichtssystem mit automatisierter Erkenntnisgewinnung und Executive-Level-Dashboards für strategische Entscheidungsfindung.",
+        metrics: ["Automatisierte Berichte", "Executive Dashboards", "ROI-Analyse"],
+      },
+    },
+  },
+
+  // Code Examples Section
+  codeExamples: {
+    title: "Technische Implementierung",
+    subtitle: "Erkunden Sie die Kernkomponenten, die unsere Analytics-Plattform für erneuerbare Energien antreiben.",
+    examples: {
+      dataScraping: {
+        title: "Datensammlung & Erfassung",
+        description: "Multi-Quellen-Datensammlung mit paralleler Verarbeitung für schnellere Datenaggregation aus IRENA- und Weltbank-APIs.",
+      },
+      advancedAnalytics: {
+        title: "Erweiterte Analytics & Clustering",
+        description: "Statistische Analyse mit maschinellem Lernen Clustering und Korrelationsanalyse für Muster erneuerbarer Energien.",
+      },
+      interactive3DVisualizations: {
+        title: "Interaktive 3D-Visualisierungen",
+        description: "Erweiterte Plotly-basierte 3D-Visualisierungen mit Animationsframes für zeitliche Datenanalyse.",
+      },
+    },
+  },
+
+  // Architecture Section
+  architecture: {
+    title: "Systemarchitektur",
+    subtitle: "Eine robuste, skalierbare Architektur, die für hochleistungsfähige Datenverarbeitung und Visualisierung entwickelt wurde.",
+    dataProcessingPipeline: {
+      title: "Datenverarbeitungs-Pipeline",
+      steps: {
+        dataCollection: {
+          title: "Datensammlung",
+          description: "Paralleles Scraping aus mehreren Datenbanken für erneuerbare Energien",
+        },
+        dataProcessing: {
+          title: "Datenverarbeitung",
+          description: "Reinigung, Validierung und Feature-Engineering",
+        },
+        analyticsEngine: {
+          title: "Analytics-Engine",
+          description: "Statistische Analyse und maschinelles Lernen Clustering",
+        },
+        visualization: {
+          title: "Visualisierung",
+          description: "Interaktive 3D-Plots und umfassende Dashboards",
+        },
+      },
+    },
+    technologyStack: {
+      title: "Technologie-Stack",
+      technologies: {
+        python: { name: "Python", type: "Kernsprache" },
+        pandas: { name: "Pandas", type: "Datenverarbeitung" },
+        plotly: { name: "Plotly", type: "Visualisierung" },
+        scikitlearn: { name: "Scikit-learn", type: "Maschinelles Lernen" },
+        beautifulsoup: { name: "BeautifulSoup", type: "Web Scraping" },
+        numpy: { name: "NumPy", type: "Numerisches Computing" },
+        seaborn: { name: "Seaborn", type: "Statistische Plots" },
+        matplotlib: { name: "Matplotlib", type: "Plotting-Bibliothek" },
+      },
+    },
+    performanceMetrics: {
+      title: "Leistungsmetriken",
+      metrics: {
+        dataProcessingSpeed: "Datenverarbeitungsgeschwindigkeit",
+        visualizationRendering: "Visualisierungs-Rendering",
+        concurrentUsers: "Gleichzeitige Benutzer",
+        systemUptime: "System-Verfügbarkeit",
+      },
+    },
+  },
+
+  // Results & Impact Section
+  results: {
+    title: "Ergebnisse & Geschäftsauswirkungen",
+    subtitle: "Messbare Ergebnisse und Erkenntnisse, die durch umfassende Analyse erneuerbarer Energien generiert wurden.",
+    sections: {
+      growthAnalysis: {
+        title: "Wachstumsanalyse",
+        metrics: {
+          globalRenewableCapacity: "Globales Wachstum der erneuerbaren Kapazität",
+          solarEnergyExpansion: "Solarenergie-Expansion",
+          windPowerGrowth: "Windkraft-Wachstum",
+        },
+      },
+      userEngagement: {
+        title: "Benutzerengagement",
+        metrics: {
+          platformUsers: "Plattform-Nutzer",
+          monthlyActiveUsers: "Monatlich aktive Nutzer",
+          userSatisfaction: "Benutzerzufriedenheit",
+        },
+      },
+      carbonImpact: {
+        title: "CO2-Auswirkungen",
+        metrics: {
+          co2OffsetTracked: "Verfolgte CO2-Kompensation",
+          countriesAnalyzed: "Analysierte Länder",
+          investmentTracked: "Verfolgte Investitionen",
+        },
+      },
+    },
+  },
+
+  // Footer
+  footer: {
+    title: "Interaktive Datenvisualisierung & Business Intelligence Suite",
+    description: "Befähigung von Organisationen mit umfassender Analytics für erneuerbare Energien und datengestützten Erkenntnissen für nachhaltige Zukunftsplanung und strategische Entscheidungsfindung.",
+    features: {
+      multiSourceDataIntegration: "Multi-Quellen Datenintegration",
+      advancedAnalyticsEngine: "Fortschrittliche Analytics-Engine",
+      globalRenewableEnergyFocus: "Globaler Fokus auf erneuerbare Energien",
+    },
+  },
+
+  // Performance Values (for metrics display)
+  performanceValues: {
+    dataProcessingSpeed: "10M+ Datensätze/Stunde",
+    visualizationRendering: "<2s Ladezeit",
+    concurrentUsers: "1000+",
+    systemUptime: "99,9%",
+  },
+
+  // Growth Values (for results display)
+  growthValues: {
+    globalRenewableCapacity: "+12% jährlich",
+    solarEnergyExpansion: "+25% Jahr für Jahr",
+    windPowerGrowth: "+18% jährlich",
+  },
+
+  // User Engagement Values
+  userEngagementValues: {
+    platformUsers: "5.000+",
+    monthlyActiveUsers: "2.500+",
+    userSatisfaction: "4,8/5",
+  },
+
+  // Carbon Impact Values
+  carbonImpactValues: {
+    co2OffsetTracked: "50M+ Tonnen",
+    countriesAnalyzed: "195",
+    investmentTracked: "$500B+",
+  },
+
+  // Metric Values for Hero Section
+  heroMetricValues: {
+    countriesAnalyzed: "50+",
+    dataPointsProcessed: "10M+",
+    yearsOfHistoricalData: "15+",
+    interactiveVisualizations: "100+",
+  },
+},
   gan : {
         nav: {
       overview: "Überblick",
@@ -2766,6 +3615,230 @@ const translations: Record<string, Translation> = {
     roleEngineer: "Ingeniero de IA",
     roleGraduate: "Futurus Ingeniarius Publicus in Scientia Computatrali",
   },
+  renewable: {
+    navigation: {
+    backToProjects: "Volver a Proyectos",
+  },
+
+  // Hero Section
+  hero: {
+    badge: "Plataforma de Análisis de Energías Renovables",
+    title: "Visualización Interactiva de Datos y Suite de Inteligencia Empresarial",
+    description: "Una plataforma integral de análisis de energías renovables que transforma conjuntos de datos complejos en conocimientos accionables a través de visualización avanzada, aprendizaje automático y herramientas de inteligencia empresarial.",
+    metrics: {
+      countriesAnalyzed: "Países Analizados",
+      dataPointsProcessed: "Puntos de Datos Procesados",
+      yearsOfHistoricalData: "Años de Datos Históricos",
+      interactiveVisualizations: "Visualizaciones Interactivas",
+    },
+  },
+
+  // Main Content - Project Overview
+  projectOverview: {
+    title: "Transformando Datos de Energías Renovables en Conocimientos Accionables",
+    subtitle: "Nuestra plataforma combina ciencia de datos de vanguardia con visualización intuitiva para ayudar a las organizaciones a tomar decisiones basadas en datos en el sector de energías renovables.",
+    missionTitle: "Misión del Proyecto",
+    missionDescription: "La Suite de Visualización Interactiva de Datos e Inteligencia Empresarial fue desarrollada para abordar la necesidad crítica de análisis integral de energías renovables. Al integrar múltiples fuentes de datos y proporcionar capacidades de análisis avanzadas, permitimos a las organizaciones rastrear el progreso, identificar tendencias y tomar decisiones de inversión informadas en el sector de energías renovables.",
+    tags: {
+      dataIntegration: "Integración de Datos",
+      machineLearning: "Aprendizaje Automático",
+      visualization3D: "Visualización 3D",
+      businessIntelligence: "Inteligencia Empresarial",
+    },
+    keyCapabilitiesTitle: "Capacidades Clave",
+    capabilities: {
+      multiSourceIntegration: {
+        title: "Integración de Datos Multi-Fuente",
+        description: "Combina perfectamente datos de IRENA, Banco Mundial y otras bases de datos de energías renovables",
+      },
+      advancedAnalytics: {
+        title: "Motor de Análisis Avanzado",
+        description: "Clustering de aprendizaje automático, análisis estadístico y pronósticos de tendencias",
+      },
+      interactiveVisualizations: {
+        title: "Visualizaciones Interactivas",
+        description: "Gráficos de dispersión 3D, dashboards animados y reportes integrales",
+      },
+    },
+  },
+
+  // Features Section
+  features: {
+    title: "Características Avanzadas y Capacidades",
+    subtitle: "Nuestra plataforma ofrece una suite integral de herramientas diseñadas para satisfacer las demandas complejas del análisis de energías renovables.",
+    items: {
+      multiSourceDataIntegration: {
+        title: "Integración de Datos Multi-Fuente",
+        description: "Integra perfectamente datos de IRENA, Banco Mundial y otras bases de datos de energías renovables con procesamiento paralelo para un rendimiento óptimo.",
+        metrics: ["5+ Fuentes de Datos", "Actualizaciones en Tiempo Real", "99.9% Disponibilidad"],
+      },
+      advancedAnalyticsEngine: {
+        title: "Motor de Análisis Avanzado",
+        description: "Análisis estadístico potente con clustering de aprendizaje automático, análisis de correlación y pronósticos de tendencias para patrones de energías renovables.",
+        metrics: ["Clustering K-Means", "Pruebas Estadísticas", "Análisis de Tendencias"],
+      },
+      interactive3DVisualizations: {
+        title: "Visualizaciones 3D Interactivas",
+        description: "Gráficos de dispersión 3D inmersivos, mapas de calor y dashboards animados usando Plotly para exploración integral de datos.",
+        metrics: ["Gráficos de Dispersión 3D", "Líneas de Tiempo Animadas", "Mapas de Calor Interactivos"],
+      },
+      businessIntelligenceSuite: {
+        title: "Suite de Inteligencia Empresarial",
+        description: "Sistema de reportes integral con generación automatizada de insights y dashboards de nivel ejecutivo para toma de decisiones estratégicas.",
+        metrics: ["Reportes Automatizados", "Dashboards Ejecutivos", "Análisis de ROI"],
+      },
+    },
+  },
+
+  // Code Examples Section
+  codeExamples: {
+    title: "Implementación Técnica",
+    subtitle: "Explora los componentes centrales que impulsan nuestra plataforma de análisis de energías renovables.",
+    examples: {
+      dataScraping: {
+        title: "Extracción y Recolección de Datos",
+        description: "Recolección de datos multi-fuente con procesamiento paralelo para agregación de datos más rápida desde APIs de IRENA y Banco Mundial.",
+      },
+      advancedAnalytics: {
+        title: "Análisis Avanzado y Clustering",
+        description: "Análisis estadístico con clustering de aprendizaje automático y análisis de correlación para patrones de energías renovables.",
+      },
+      interactive3DVisualizations: {
+        title: "Visualizaciones 3D Interactivas",
+        description: "Visualizaciones 3D avanzadas basadas en Plotly con marcos de animación para análisis de datos temporales.",
+      },
+    },
+  },
+
+  // Architecture Section
+  architecture: {
+    title: "Arquitectura del Sistema",
+    subtitle: "Una arquitectura robusta y escalable diseñada para procesamiento de datos y visualización de alto rendimiento.",
+    dataProcessingPipeline: {
+      title: "Pipeline de Procesamiento de Datos",
+      steps: {
+        dataCollection: {
+          title: "Recolección de Datos",
+          description: "Extracción paralela de múltiples bases de datos de energías renovables",
+        },
+        dataProcessing: {
+          title: "Procesamiento de Datos",
+          description: "Limpieza, validación e ingeniería de características",
+        },
+        analyticsEngine: {
+          title: "Motor de Análisis",
+          description: "Análisis estadístico y clustering de aprendizaje automático",
+        },
+        visualization: {
+          title: "Visualización",
+          description: "Gráficos 3D interactivos y dashboards integrales",
+        },
+      },
+    },
+    technologyStack: {
+      title: "Stack Tecnológico",
+      technologies: {
+        python: { name: "Python", type: "Lenguaje Principal" },
+        pandas: { name: "Pandas", type: "Procesamiento de Datos" },
+        plotly: { name: "Plotly", type: "Visualización" },
+        scikitlearn: { name: "Scikit-learn", type: "Aprendizaje Automático" },
+        beautifulsoup: { name: "BeautifulSoup", type: "Web Scraping" },
+        numpy: { name: "NumPy", type: "Computación Numérica" },
+        seaborn: { name: "Seaborn", type: "Gráficos Estadísticos" },
+        matplotlib: { name: "Matplotlib", type: "Biblioteca de Gráficos" },
+      },
+    },
+    performanceMetrics: {
+      title: "Métricas de Rendimiento",
+      metrics: {
+        dataProcessingSpeed: "Velocidad de Procesamiento de Datos",
+        visualizationRendering: "Renderizado de Visualización",
+        concurrentUsers: "Usuarios Concurrentes",
+        systemUptime: "Tiempo de Actividad del Sistema",
+      },
+    },
+  },
+
+  // Results & Impact Section
+  results: {
+    title: "Resultados e Impacto Empresarial",
+    subtitle: "Resultados medibles e insights generados a través del análisis integral de energías renovables.",
+    sections: {
+      growthAnalysis: {
+        title: "Análisis de Crecimiento",
+        metrics: {
+          globalRenewableCapacity: "Crecimiento de capacidad renovable global",
+          solarEnergyExpansion: "Expansión de energía solar",
+          windPowerGrowth: "Crecimiento de energía eólica",
+        },
+      },
+      userEngagement: {
+        title: "Compromiso del Usuario",
+        metrics: {
+          platformUsers: "Usuarios de la plataforma",
+          monthlyActiveUsers: "Usuarios activos mensuales",
+          userSatisfaction: "Satisfacción del usuario",
+        },
+      },
+      carbonImpact: {
+        title: "Impacto de Carbono",
+        metrics: {
+          co2OffsetTracked: "Compensación de CO2 rastreada",
+          countriesAnalyzed: "Países analizados",
+          investmentTracked: "Inversión rastreada",
+        },
+      },
+    },
+  },
+
+  // Footer
+  footer: {
+    title: "Suite de Visualización Interactiva de Datos e Inteligencia Empresarial",
+    description: "Empoderando organizaciones con análisis integral de energías renovables e insights basados en datos para planificación futura sostenible y toma de decisiones estratégicas.",
+    features: {
+      multiSourceDataIntegration: "Integración de Datos Multi-Fuente",
+      advancedAnalyticsEngine: "Motor de Análisis Avanzado",
+      globalRenewableEnergyFocus: "Enfoque Global en Energías Renovables",
+    },
+  },
+
+  // Performance Values (for metrics display)
+  performanceValues: {
+    dataProcessingSpeed: "10M+ registros/hora",
+    visualizationRendering: "<2s tiempo de carga",
+    concurrentUsers: "1000+",
+    systemUptime: "99.9%",
+  },
+
+  // Growth Values (for results display)
+  growthValues: {
+    globalRenewableCapacity: "+12% anualmente",
+    solarEnergyExpansion: "+25% año tras año",
+    windPowerGrowth: "+18% anualmente",
+  },
+
+  // User Engagement Values
+  userEngagementValues: {
+    platformUsers: "5,000+",
+    monthlyActiveUsers: "2,500+",
+    userSatisfaction: "4.8/5",
+  },
+
+  // Carbon Impact Values
+  carbonImpactValues: {
+    co2OffsetTracked: "50M+ toneladas",
+    countriesAnalyzed: "195",
+    investmentTracked: "$500B+",
+  },
+
+  // Metric Values for Hero Section
+  heroMetricValues: {
+    countriesAnalyzed: "50+",
+    dataPointsProcessed: "10M+",
+    yearsOfHistoricalData: "15+",
+    interactiveVisualizations: "100+",
+  },
+},
   gan: {
     nav: {
       overview: "Visión General",
@@ -3438,6 +4511,230 @@ const translations: Record<string, Translation> = {
     roleEngineer: "مهندس ذكاء اصطناعي",
     roleGraduate: "مهندس دولة مستقبلي في علوم الحاسوب",
   },
+  renewable: {
+     navigation: {
+    backToProjects: "العودة إلى المشاريع",
+  },
+
+  // Hero Section
+  hero: {
+    badge: "منصة تحليل الطاقة المتجددة",
+    title: "التصور التفاعلي للبيانات ومجموعة ذكاء الأعمال",
+    description: "منصة شاملة لتحليل الطاقة المتجددة تحول مجموعات البيانات المعقدة إلى رؤى قابلة للتنفيذ من خلال التصور المتقدم والتعلم الآلي وأدوات ذكاء الأعمال.",
+    metrics: {
+      countriesAnalyzed: "البلدان المُحللة",
+      dataPointsProcessed: "نقاط البيانات المُعالجة",
+      yearsOfHistoricalData: "سنوات من البيانات التاريخية",
+      interactiveVisualizations: "التصورات التفاعلية",
+    },
+  },
+
+  // Main Content - Project Overview
+  projectOverview: {
+    title: "تحويل بيانات الطاقة المتجددة إلى رؤى قابلة للتنفيذ",
+    subtitle: "تجمع منصتنا بين علوم البيانات المتطورة والتصور البديهي لمساعدة المؤسسات على اتخاذ قرارات مدفوعة بالبيانات في قطاع الطاقة المتجددة.",
+    missionTitle: "مهمة المشروع",
+    missionDescription: "تم تطوير مجموعة التصور التفاعلي للبيانات وذكاء الأعمال لتلبية الحاجة الحرجة لتحليل الطاقة المتجددة الشامل. من خلال دمج مصادر البيانات المتعددة وتوفير قدرات تحليل متقدمة، نمكن المؤسسات من تتبع التقدم وتحديد الاتجاهات واتخاذ قرارات استثمارية مدروسة في قطاع الطاقة المتجددة.",
+    tags: {
+      dataIntegration: "تكامل البيانات",
+      machineLearning: "التعلم الآلي",
+      visualization3D: "التصور ثلاثي الأبعاد",
+      businessIntelligence: "ذكاء الأعمال",
+    },
+    keyCapabilitiesTitle: "القدرات الرئيسية",
+    capabilities: {
+      multiSourceIntegration: {
+        title: "تكامل البيانات متعددة المصادر",
+        description: "يجمع بسلاسة البيانات من IRENA والبنك الدولي وقواعد بيانات الطاقة المتجددة الأخرى",
+      },
+      advancedAnalytics: {
+        title: "محرك التحليل المتقدم",
+        description: "التجميع بالتعلم الآلي والتحليل الإحصائي والتنبؤ بالاتجاهات",
+      },
+      interactiveVisualizations: {
+        title: "التصورات التفاعلية",
+        description: "مخططات مبعثرة ثلاثية الأبعاد ولوحات معلومات متحركة وتقارير شاملة",
+      },
+    },
+  },
+
+  // Features Section
+  features: {
+    title: "الميزات والقدرات المتقدمة",
+    subtitle: "تقدم منصتنا مجموعة شاملة من الأدوات المصممة لتلبية المتطلبات المعقدة لتحليل الطاقة المتجددة.",
+    items: {
+      multiSourceDataIntegration: {
+        title: "تكامل البيانات متعددة المصادر",
+        description: "يتكامل بسلاسة مع البيانات من IRENA والبنك الدولي وقواعد بيانات الطاقة المتجددة الأخرى مع المعالجة المتوازية للأداء الأمثل.",
+        metrics: ["5+ مصادر بيانات", "تحديثات في الوقت الفعلي", "99.9% وقت التشغيل"],
+      },
+      advancedAnalyticsEngine: {
+        title: "محرك التحليل المتقدم",
+        description: "تحليل إحصائي قوي مع التجميع بالتعلم الآلي وتحليل الارتباط والتنبؤ بالاتجاهات لأنماط الطاقة المتجددة.",
+        metrics: ["تجميع K-Means", "اختبارات إحصائية", "تحليل الاتجاهات"],
+      },
+      interactive3DVisualizations: {
+        title: "التصورات ثلاثية الأبعاد التفاعلية",
+        description: "مخططات مبعثرة ثلاثية الأبعاد غامرة وخرائط حرارية ولوحات معلومات متحركة باستخدام Plotly لاستكشاف البيانات الشامل.",
+        metrics: ["مخططات مبعثرة ثلاثية الأبعاد", "جداول زمنية متحركة", "خرائط حرارية تفاعلية"],
+      },
+      businessIntelligenceSuite: {
+        title: "مجموعة ذكاء الأعمال",
+        description: "نظام تقارير شامل مع توليد الرؤى الآلي ولوحات معلومات على مستوى تنفيذي لاتخاذ القرارات الاستراتيجية.",
+        metrics: ["تقارير آلية", "لوحات معلومات تنفيذية", "تحليل العائد على الاستثمار"],
+      },
+    },
+  },
+
+  // Code Examples Section
+  codeExamples: {
+    title: "التنفيذ التقني",
+    subtitle: "استكشف المكونات الأساسية التي تشغل منصة تحليل الطاقة المتجددة الخاصة بنا.",
+    examples: {
+      dataScraping: {
+        title: "جمع البيانات والاستخراج",
+        description: "جمع البيانات متعددة المصادر مع المعالجة المتوازية لتجميع البيانات بشكل أسرع من واجهات برمجة التطبيقات IRENA والبنك الدولي.",
+      },
+      advancedAnalytics: {
+        title: "التحليل المتقدم والتجميع",
+        description: "التحليل الإحصائي مع التجميع بالتعلم الآلي وتحليل الارتباط لأنماط الطاقة المتجددة.",
+      },
+      interactive3DVisualizations: {
+        title: "التصورات ثلاثية الأبعاد التفاعلية",
+        description: "تصورات ثلاثية الأبعاد متقدمة باستخدام Plotly مع إطارات الرسوم المتحركة لتحليل البيانات الزمنية.",
+      },
+    },
+  },
+
+  // Architecture Section
+  architecture: {
+    title: "هندسة النظام",
+    subtitle: "هندسة قوية وقابلة للتوسع مصممة لمعالجة البيانات عالية الأداء والتصور.",
+    dataProcessingPipeline: {
+      title: "خط أنابيب معالجة البيانات",
+      steps: {
+        dataCollection: {
+          title: "جمع البيانات",
+          description: "الاستخراج المتوازي من قواعد بيانات الطاقة المتجددة المتعددة",
+        },
+        dataProcessing: {
+          title: "معالجة البيانات",
+          description: "التنظيف والتحقق وهندسة الميزات",
+        },
+        analyticsEngine: {
+          title: "محرك التحليل",
+          description: "التحليل الإحصائي والتجميع بالتعلم الآلي",
+        },
+        visualization: {
+          title: "التصور",
+          description: "مخططات ثلاثية الأبعاد تفاعلية ولوحات معلومات شاملة",
+        },
+      },
+    },
+    technologyStack: {
+      title: "مكدس التكنولوجيا",
+      technologies: {
+        python: { name: "Python", type: "اللغة الأساسية" },
+        pandas: { name: "Pandas", type: "معالجة البيانات" },
+        plotly: { name: "Plotly", type: "التصور" },
+        scikitlearn: { name: "Scikit-learn", type: "التعلم الآلي" },
+        beautifulsoup: { name: "BeautifulSoup", type: "استخراج الويب" },
+        numpy: { name: "NumPy", type: "الحوسبة الرقمية" },
+        seaborn: { name: "Seaborn", type: "مخططات إحصائية" },
+        matplotlib: { name: "Matplotlib", type: "مكتبة الرسم" },
+      },
+    },
+    performanceMetrics: {
+      title: "مقاييس الأداء",
+      metrics: {
+        dataProcessingSpeed: "سرعة معالجة البيانات",
+        visualizationRendering: "عرض التصور",
+        concurrentUsers: "المستخدمون المتزامنون",
+        systemUptime: "وقت تشغيل النظام",
+      },
+    },
+  },
+
+  // Results & Impact Section
+  results: {
+    title: "النتائج والتأثير التجاري",
+    subtitle: "النتائج القابلة للقياس والرؤى المُولدة من خلال تحليل الطاقة المتجددة الشامل.",
+    sections: {
+      growthAnalysis: {
+        title: "تحليل النمو",
+        metrics: {
+          globalRenewableCapacity: "نمو قدرة الطاقة المتجددة العالمية",
+          solarEnergyExpansion: "توسع الطاقة الشمسية",
+          windPowerGrowth: "نمو طاقة الرياح",
+        },
+      },
+      userEngagement: {
+        title: "تفاعل المستخدمين",
+        metrics: {
+          platformUsers: "مستخدمو المنصة",
+          monthlyActiveUsers: "المستخدمون النشطون شهرياً",
+          userSatisfaction: "رضا المستخدمين",
+        },
+      },
+      carbonImpact: {
+        title: "تأثير الكربون",
+        metrics: {
+          co2OffsetTracked: "تعويض CO2 المتتبع",
+          countriesAnalyzed: "البلدان المُحللة",
+          investmentTracked: "الاستثمار المتتبع",
+        },
+      },
+    },
+  },
+
+  // Footer
+  footer: {
+    title: "مجموعة التصور التفاعلي للبيانات وذكاء الأعمال",
+    description: "تمكين المؤسسات بتحليل الطاقة المتجددة الشامل والرؤى المدفوعة بالبيانات للتخطيط المستقبلي المستدام واتخاذ القرارات الاستراتيجية.",
+    features: {
+      multiSourceDataIntegration: "تكامل البيانات متعددة المصادر",
+      advancedAnalyticsEngine: "محرك التحليل المتقدم",
+      globalRenewableEnergyFocus: "التركيز على الطاقة المتجددة العالمية",
+    },
+  },
+
+  // Performance Values (for metrics display)
+  performanceValues: {
+    dataProcessingSpeed: "10 مليون+ سجل/ساعة",
+    visualizationRendering: "أقل من ثانيتين لوقت التحميل",
+    concurrentUsers: "1000+",
+    systemUptime: "99.9%",
+  },
+
+  // Growth Values (for results display)
+  growthValues: {
+    globalRenewableCapacity: "+12% سنوياً",
+    solarEnergyExpansion: "+25% سنة بعد سنة",
+    windPowerGrowth: "+18% سنوياً",
+  },
+
+  // User Engagement Values
+  userEngagementValues: {
+    platformUsers: "5000+",
+    monthlyActiveUsers: "2500+",
+    userSatisfaction: "4.8/5",
+  },
+
+  // Carbon Impact Values
+  carbonImpactValues: {
+    co2OffsetTracked: "50 مليون+ طن",
+    countriesAnalyzed: "195",
+    investmentTracked: "$500 مليار+",
+  },
+
+  // Metric Values for Hero Section
+  heroMetricValues: {
+    countriesAnalyzed: "50+",
+    dataPointsProcessed: "10 مليون+",
+    yearsOfHistoricalData: "15+",
+    interactiveVisualizations: "100+",
+  },
+},
 gan: {
   nav: {
       overview: "نظرة عامة",

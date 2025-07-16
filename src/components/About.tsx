@@ -262,8 +262,8 @@ const About = () => {
                   {/* AI/ML Frameworks - Blue to White */}
                   <div>
   <h4 className="text-sm font-semibold text-blue-400 mb-4 uppercase tracking-wider">AI/ML Frameworks</h4>
-  <div className="flex flex-wrap gap-x-8 gap-y-3">
-    {["PyTorch", "TensorFlow", "Optuna", "transformers"].map((tech, idx) => (
+ <div className="flex flex-wrap gap-3 gap-y-6 m-2">
+   {["PyTorch", "TensorFlow", "Optuna", "transformers"].map((tech, idx) => (
       <motion.div
         key={tech}
         initial={{ opacity: 0, scale: 0.8 }}

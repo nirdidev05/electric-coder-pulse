@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+/* Add this after your existing imports and before @layer base */
+
+/* Custom radial gradient utility */
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to));
+}
+
+/* Enhanced backdrop blur for better performance */
+.backdrop-blur-fine {
+  backdrop-filter: blur(0.5px);
+}
+
+/* Subtle animation for grid pattern */
+@keyframes subtle-shift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(2px, 2px); }
+}
+
+.animate-grid {
+  animation: subtle-shift 20s ease-in-out infinite;
+}

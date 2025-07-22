@@ -1,47 +1,79 @@
-import { Button } from "@/components/ui/button"
-import { Mail, GitBranch } from "lucide-react"
+import { Code, BookOpen, Database, BarChart3, Globe, Mail, Linkedin, Github } from "lucide-react"
 
 export default function ConclusionSection() {
   return (
-    <section className="py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-white mb-6">Conclusion</h2>
-        <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-          The MarketPulse v3.0 solution demonstrates how combining domain expertise, advanced feature engineering, and
-          sophisticated ensemble methods can achieve superior performance in financial time series forecasting. Our 1st
-          place finish with a score of -0.66151 validates the effectiveness of multimodal approaches to market
-          prediction.
-        </p>
-        <p className="text-slate-400 mb-8">
-          This comprehensive technical analysis showcases the intersection of AI, finance, and multimodal learning,
-          pushing the boundaries of what's possible in market forecasting through innovative methodology and rigorous
-          implementation.
-        </p>
+    <footer className="bg-muted/30 border-t border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="flex flex-col md:flex-row md:justify-between items-start md:items-end gap-8">
+          {/* Left: About Project & Developer */}
+          <div className="w-full md:w-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              MarketPulse v3.0: AI-Driven Financial Forecasting
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl">
+              Championship-winning multimodal AI system combining advanced machine learning with financial domain expertise. 
+              Developed as part of my AI/ML portfolio, demonstrating production-ready architecture and research innovation.
+            </p>
+            
+            {/* Project Features */}
+            <div className="flex flex-col sm:flex-row items-start gap-6 text-sm text-muted-foreground mb-6">
+              <div className="flex items-center gap-2">
+                <Database className="w-4 h-4" />
+                <span>Multimodal Feature Engineering</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BarChart3 className="w-4 h-4" />
+                <span>Advanced Ensemble Methods</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                <span>Production-Ready System</span>
+              </div>
+            </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100">
-            <Mail className="mr-2 h-5 w-5" />
-            Contact for Collaboration
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-purple-400 text-purple-300 hover:bg-purple-500/10 bg-transparent"
-          >
-            <GitBranch className="mr-2 h-5 w-5" />
-            View Implementation
-          </Button>
+            {/* Developer Info */}
+            
+          </div>
+
+          {/* Right: Actions & Contact */}
+          <div className="flex flex-col gap-6 w-full md:w-auto justify-end">
+            {/* Project Links */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/MarketPulse Report.pdf"
+                download
+                className="text-sm flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors"
+              >
+                <BookOpen size={16} />
+                <span>Technical Documentation</span>
+              </a>
+              <a
+                href="https://github.com/nirdidev05/HAICK_TSA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors"
+              >
+                <Code size={16} />
+                <span>View Source Code</span>
+              </a>
+            </div>
+
+            {/* Professional Contact */}
+           
+          </div>
         </div>
 
-        <div className="border-t border-slate-700 pt-8">
-          <p className="text-slate-400 text-sm">
-            MarketPulse: Multimodal Market Forecasting with News | 1st Place HAICK 2025 TSA Challenge
+        {/* Bottom Attribution */}
+        <div className="border-t border-border/50 mt-8 pt-6 text-center">
+          <p className="text-sm text-muted-foreground">
+            © 2025 AI/ML Portfolio Project • MarketPulse v3.0 • 
+            <span className="font-medium text-foreground ml-1">HAICK 2025 TSA Challenge Winner</span>
           </p>
-          <p className="text-slate-500 text-xs mt-2">
-            Technical Analysis & Implementation | Team U23 | Advanced AI/ML Portfolio Showcase
+          <p className="text-xs text-muted-foreground mt-1">
+            Showcasing advanced financial AI research and production ML engineering capabilities
           </p>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }

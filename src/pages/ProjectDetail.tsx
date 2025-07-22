@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Lazy load project components
 const DataAnalytics = lazy(() => import('./projects/DataAnalytics'));
-const NLPSentiment = lazy(() => import('./projects/NLPSentiment'));
+const NLPSentiment = lazy(() => import('./projects/NLPSentiment/page'));
 const GAN = lazy(() => import('./projects/GAN'));
 const DataVisualization = lazy(() => import('./projects/DataVisualization'));
 const WebScraping = lazy(() => import('./projects/WebScraping'));

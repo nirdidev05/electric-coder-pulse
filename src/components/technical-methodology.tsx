@@ -1,13 +1,22 @@
-import { useState } from "react"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { motion } from "framer-motion"
-import DataPipelineTab from "@/components/tabs/data-pipeline-tab"
-import FeatureEngineeringTab from "@/components/tabs/feature-engineering-tab"
-import ModelingTab from "@/components/tabs/modeling-tab"
-import PostProcessingTab from "@/components/tabs/post-processing-tab"
+import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion } from "framer-motion";
+import DataPipelineTab from "@/components/tabs/data-pipeline-tab";
+import FeatureEngineeringTab from "@/components/tabs/feature-engineering-tab";
+import ModelingTab from "@/components/tabs/modeling-tab";
+import PostProcessingTab from "@/components/tabs/post-processing-tab";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function TechnicalMethodology() {
-  const [activeTab, setActiveTab] = useState("pipeline")
+  const t = useTranslation();
+  const [activeTab, setActiveTab] = useState("pipeline");
+
+  const tabs = [
+    { value: "pipeline", label: t.MarketPulseContentType.methodology.tabs.pipeline },
+    { value: "features", label: t.MarketPulseContentType.methodology.tabs.features },
+    { value: "modeling", label: t.MarketPulseContentType.methodology.tabs.modeling },
+    { value: "postprocess", label: t.MarketPulseContentType.methodology.tabs.postProcessing }
+  ];
 
   return (
     <section className="py-20 relative" id="methodology">
@@ -21,9 +30,9 @@ export default function TechnicalMethodology() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Technical Analysis & Methodology</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">{t.MarketPulseContentType.methodology.title}</h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Comprehensive approach combining advanced feature engineering with sophisticated ensemble modeling
+            {t.MarketPulseContentType.methodology.subtitle}
           </p>
         </motion.div>
 
@@ -40,42 +49,22 @@ export default function TechnicalMethodology() {
                 border: '1px solid rgba(100, 108, 255, 0.2)'
               }}
             >
-              <TabsTrigger 
-                value="pipeline"
-                className="text-slate-300 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
-                style={{
-                  'data-[state=active]:background': 'linear-gradient(135deg, rgba(100, 108, 255, 0.3) 0%, rgba(97, 218, 251, 0.2) 100%)'
-                }}
-              >
-                Data Pipeline
-              </TabsTrigger>
-              <TabsTrigger 
-                value="features"
-                className="text-slate-300 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
-                style={{
-                  'data-[state=active]:background': 'linear-gradient(135deg, rgba(97, 218, 251, 0.3) 0%, rgba(100, 108, 255, 0.2) 100%)'
-                }}
-              >
-                Feature Engineering
-              </TabsTrigger>
-              <TabsTrigger 
-                value="modeling"
-                className="text-slate-300 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
-                style={{
-                  'data-[state=active]:background': 'linear-gradient(135deg, rgba(100, 108, 255, 0.3) 0%, rgba(97, 218, 251, 0.2) 100%)'
-                }}
-              >
-                Modeling & Ensemble
-              </TabsTrigger>
-              <TabsTrigger 
-                value="postprocess"
-                className="text-slate-300 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
-                style={{
-                  'data-[state=active]:background': 'linear-gradient(135deg, rgba(97, 218, 251, 0.3) 0%, rgba(100, 108, 255, 0.2) 100%)'
-                }}
-              >
-                Post-Processing
-              </TabsTrigger>
+              {tabs.map(tab => (
+                <TabsTrigger 
+                  key={tab.value}
+                  value={tab.value}
+                  className="text-slate-300 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
+                  style={{
+                    '--active-gradient': tab.value === 'pipeline' || tab.value === 'modeling' 
+                      ? 'linear-gradient(135deg, rgba(100, 108, 255, 0.3) 0%, rgba(97, 218, 251, 0.2) 100%)'
+                      : 'linear-gradient(135deg, rgba(97, 218, 251, 0.3) 0%, rgba(100, 108, 255, 0.2) 100%)',
+                    background: activeTab === tab.value ? 'var(--active-gradient)' : 'transparent'
+                  }}
+                  onClick={() => setActiveTab(tab.value)}
+                >
+                  {tab.label}
+                </TabsTrigger>
+              ))}
             </TabsList>
 
             <TabsContent value="pipeline" className="space-y-6 mt-8">

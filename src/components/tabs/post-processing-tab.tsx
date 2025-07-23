@@ -1,51 +1,30 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Settings, Filter, TrendingDown, BarChart3 } from "lucide-react"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Settings, Filter, TrendingDown, BarChart3 } from "lucide-react";
+import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function PostProcessingTab() {
-  const processingSteps = [
-    {
-      icon: Filter,
-      title: "Smoothening with Savitzky–Golay Filter",
-      color: "#646cff",
-      content: `Raw predictions might be noisy with day-to-day zig-zags. To reduce high-frequency noise, a Savitzky-Golay filter is applied to each predicted series. This filter fits a low-degree polynomial to a sliding window and produces smoothed values.`,
-      parameters: {
-        title: "Filter Parameters",
-        items: ["Window: up to 11 days", "Polynomial degree: 3", "Blending: 70% smoothed + 30% original"],
-        color: "#646cff"
-      },
-      benefits: {
-        title: "Benefits",
-        items: ["Preserves trend features better than simple MA", "Reduces jagged day-to-day variation", "Maintains overall shape (peaks and troughs)"],
-        color: "#61dafb"
-      }
-    },
-    {
-      icon: TrendingDown,
-      title: "Volatility Capping",
-      color: "#61dafb",
-      content: `Daily returns of predictions are analyzed for volatility. If predicted series is excessively volatile (> 5% standard deviation of daily returns), it is scaled down.`,
-      code: `if predicted_volatility > 0.05:  # 5% daily max
-    scaling_factor = 0.05 / predicted_volatility
-    # Apply factor to return deviations
-    # First day price remains same, subsequent days recomputed from scaled returns`,
-      tradeoff: "Slightly sacrifices some short-term variability (likely unpredictable anyway) for cleaner, more credible forecast trajectory. Prevents unrealistic scenarios like stocks doubling in one week from pure noise."
-    }
-  ]
+  const t = useTranslation();
 
-  const impactResults = [
-    {
-      title: "Smoothing Results",
-      description: "Eliminates high-frequency noise while preserving meaningful trend components for evaluation focus.",
-      color: "#646cff"
-    },
-    {
-      title: "Volatility Results", 
-      description: "~30% volatility reduction for most volatile series, bringing daily vol from ~6% to ~4.2% for realistic behavior.",
-      color: "#61dafb"
-    }
-  ]
+  const postProcessingData = t.MarketPulseContentType.methodology.postProcessing;
+
+  // Mapping icons to titles for dynamic rendering
+  const iconMap = {
+    [postProcessingData.steps[0]?.title]: Filter,
+    [postProcessingData.steps[1]?.title]: TrendingDown,
+  };
+
+  const processingSteps = (postProcessingData.steps || []).map((step, index) => ({
+    ...step,
+    icon: iconMap[step.title] || Settings, // Fallback icon
+    color: index % 2 === 0 ? "#646cff" : "#61dafb",
+  }));
+
+  const impactResults = (postProcessingData.impactSummary.results || []).map((result, index) => ({
+    ...result,
+    color: index % 2 === 0 ? "#646cff" : "#61dafb",
+  }));
 
   return (
     <motion.div
@@ -65,12 +44,12 @@ export default function PostProcessingTab() {
             <div className="p-3 rounded-xl" style={{ backgroundColor: '#61dafb20' }}>
               <Settings className="h-8 w-8" style={{ color: '#61dafb' }} />
             </div>
-            <span className="text-white">2.4 Post-Processing of Predictions</span>
+            <span className="text-white">{t.MarketPulseContentType.additionalContent.tabContent.postProcessingTitle}</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-10">
           {processingSteps.map((step, stepIndex) => {
-            const Icon = step.icon
+            const Icon = step.icon;
             return (
               <motion.div
                 key={stepIndex}
@@ -96,12 +75,12 @@ export default function PostProcessingTab() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.1, duration: 0.4 }}
                       className="p-4 rounded-lg border border-slate-700/30"
-                      style={{ background: `rgba(${step.parameters.color === '#646cff' ? '100, 108, 255' : '97, 218, 251'}, 0.1)` }}
+                      style={{ background: 'rgba(100, 108, 255, 0.1)' }}
                     >
-                      <h5 className="font-medium text-sm mb-3" style={{ color: step.parameters.color }}>
+                      <h5 className="font-medium text-sm mb-3" style={{ color: "#646cff" }}>
                         {step.parameters.title}
                       </h5>
-                      <ul className="text-xs space-y-1" style={{ color: step.parameters.color }}>
+                      <ul className="text-xs space-y-1" style={{ color: "#646cff" }}>
                         {step.parameters.items.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start gap-2">
                             <span>•</span>
@@ -116,12 +95,12 @@ export default function PostProcessingTab() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2, duration: 0.4 }}
                       className="p-4 rounded-lg border border-slate-700/30"
-                      style={{ background: `rgba(${step.benefits.color === '#61dafb' ? '97, 218, 251' : '100, 108, 255'}, 0.1)` }}
+                      style={{ background: 'rgba(97, 218, 251, 0.1)' }}
                     >
-                      <h5 className="font-medium text-sm mb-3" style={{ color: step.benefits.color }}>
+                      <h5 className="font-medium text-sm mb-3" style={{ color: "#61dafb" }}>
                         {step.benefits.title}
                       </h5>
-                      <ul className="text-xs space-y-1" style={{ color: step.benefits.color }}>
+                      <ul className="text-xs space-y-1" style={{ color: "#61dafb" }}>
                         {step.benefits.items.map((item, itemIndex) => (
                           <li key={itemIndex} className="flex items-start gap-2">
                             <span>•</span>
@@ -143,9 +122,9 @@ export default function PostProcessingTab() {
                       className="p-4 rounded-lg bg-[#1E1E2F] border border-slate-700/50"
                     >
                       <h5 className="font-medium text-sm mb-3" style={{ color: step.color }}>
-                        Volatility Control Process
+                        {t.MarketPulseContentType.common.labels.volatilityControlProcess}
                       </h5>
-                      <pre className="text-xs text-slate-300">
+                      <pre className="text-xs text-slate-300 whitespace-pre-wrap">
                         {step.code}
                       </pre>
                     </motion.div>
@@ -159,7 +138,7 @@ export default function PostProcessingTab() {
                         style={{ background: 'rgba(255, 193, 7, 0.1)' }}
                       >
                         <p className="text-sm text-yellow-300">
-                          <strong>Trade-off:</strong> {step.tradeoff}
+                          <strong>{t.MarketPulseContentType.common.labels.tradeOff}:</strong> {step.tradeoff}
                         </p>
                       </motion.div>
                     )}
@@ -185,7 +164,7 @@ export default function PostProcessingTab() {
               <div className="p-2 rounded-lg" style={{ backgroundColor: '#646cff20' }}>
                 <BarChart3 className="h-6 w-6" style={{ color: '#646cff' }} />
               </div>
-              <h4 className="font-semibold text-xl text-white">Impact Summary</h4>
+              <h4 className="font-semibold text-xl text-white">{postProcessingData.impactSummary.title}</h4>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">

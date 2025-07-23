@@ -1,38 +1,40 @@
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
-import { ArrowLeft, Award, TrendingUp, Brain, BarChart3 } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowLeft, Award, TrendingUp, Brain } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "@/hooks/useTranslation"; // Assuming this is your translation hook
 
 export default function HeroSection() {
-  const [scrollY, setScrollY] = useState(0)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const t = useTranslation(); // Initialize the translation hook
+  const [scrollY, setScrollY] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ 
-        x: e.clientX / window.innerWidth, 
-        y: e.clientY / window.innerHeight 
-      })
-    }
-    
-    window.addEventListener("scroll", handleScroll)
-    window.addEventListener("mousemove", handleMouseMove)
-    
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleMouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX / window.innerWidth,
+        y: e.clientY / window.innerHeight,
+      });
+    };
 
-  const FloatingDataPoint = ({ delay, x, y, duration = 4 }: { delay: number; x: string; y: string; duration?: number }) => (
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const FloatingDataPoint = ({ delay, x, y, duration = 4 }) => (
     <motion.div
       className="absolute w-1 h-1 rounded-full"
-      style={{ 
-        left: x, 
+      style={{
+        left: x,
         top: y,
-        backgroundColor: '#646cff40' // Using your App.css color with opacity
+        backgroundColor: '#646cff40',
       }}
       animate={{
         opacity: [0.3, 0.8, 0.3],
@@ -43,22 +45,33 @@ export default function HeroSection() {
         duration,
         delay,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut",
       }}
     />
-  )
+  );
+  
+  // Using the technologies array from the translation object
+  const technologies = t.MarketPulseContentType.hero.technologies || [];
+
+  // Metrics data from the translation object
+  const metrics = [
+      { icon: Award, value: t.MarketPulseContentType.hero.metrics.score.value, label: t.MarketPulseContentType.hero.metrics.score.label, color: "#61dafb" },
+      { icon: TrendingUp, value: t.MarketPulseContentType.hero.metrics.achievement.value, label: t.MarketPulseContentType.hero.metrics.achievement.label, color: "#646cff" },
+      { icon: Brain, value: t.MarketPulseContentType.hero.metrics.features.value, label: t.MarketPulseContentType.hero.metrics.features.label, color: "#61dafb" }
+  ];
+
 
   return (
     <section className="relative overflow-hidden min-h-screen flex flex-col">
-      {/* Dynamic Background - keeping the same as original */}
-      <div 
+      {/* Dynamic Background */}
+      <div
         className="absolute inset-0 bg-gradient-to-br from-[#1E1E2F] via-[#2D3748] to-[#1A202C]"
         style={{
-          transform: `translateY(${scrollY * 0.5}px)`
+          transform: `translateY(${scrollY * 0.5}px)`,
         }}
       >
-        {/* Animated Grid - using App.css colors */}
-        <div 
+        {/* Animated Grid */}
+        <div
           className="absolute inset-0 opacity-20"
           style={{
             backgroundImage: `
@@ -66,10 +79,10 @@ export default function HeroSection() {
               linear-gradient(90deg, #646cff20 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px',
-            transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`
+            transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`,
           }}
         />
-        
+
         {/* Floating Market Data Points */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(25)].map((_, i) => (
@@ -93,12 +106,12 @@ export default function HeroSection() {
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-slate-400 transition-all duration-300 font-medium group"
-            style={{ color: '#888' }} // Using read-the-docs color from App.css
-            onMouseEnter={(e) => e.target.style.color = '#646cff'}
-            onMouseLeave={(e) => e.target.style.color = '#888'}
+            style={{ color: '#888' }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#646cff')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#888')}
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-            Back to Projects
+            {t.MarketPulseContentType.navigation.backToProjects}
           </Link>
         </div>
       </nav>
@@ -113,16 +126,16 @@ export default function HeroSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
           >
-            <Badge 
+            <Badge
               className="mb-4 px-6 py-3 text-lg font-semibold backdrop-blur-sm"
               style={{
                 background: 'linear-gradient(to right, #646cff20, #61dafb20)',
                 color: '#61dafb',
-                border: '1px solid #61dafb50'
+                border: '1px solid #61dafb50',
               }}
             >
               <Award className="w-5 h-5 mr-2" />
-              🏆 HAICK 2025 TSA Challenge Winner
+              {t.MarketPulseContentType.hero.achievement.badge}
             </Badge>
           </motion.div>
 
@@ -133,16 +146,16 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            <span 
+            <span
               className="bg-clip-text text-transparent drop-shadow-2xl"
               style={{
-                backgroundImage: `linear-gradient(to right, #646cff, #61dafb, #646cff)`
+                backgroundImage: `linear-gradient(to right, #646cff, #61dafb, #646cff)`,
               }}
             >
-              MarketPulse
+              {t.MarketPulseContentType.hero.title.main}
             </span>
             <span className="block text-slate-200 text-2xl sm:text-3xl lg:text-4xl mt-4 font-light">
-              Multimodal Financial Forecasting
+              {t.MarketPulseContentType.hero.title.subtitle}
             </span>
           </motion.h1>
 
@@ -154,12 +167,11 @@ export default function HeroSection() {
             className="mb-8"
           >
             <p className="text-xl sm:text-2xl text-slate-300 mb-4">
-              Advanced AI combining market data & news sentiment
+              {t.MarketPulseContentType.hero.description.primary}
             </p>
+            {/* Note: The secondary description is a single string in the object. For complex styling, you might need a component that handles HTML or interpolation. */}
             <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-              Technical showcase of our <span style={{ color: '#646cff' }} className="font-semibold">1st place solution</span> achieving 
-              <span style={{ color: '#61dafb' }} className="font-semibold"> 68% performance improvement</span> through 
-              <span style={{ color: '#646cff' }} className="font-semibold"> multimodal ensemble learning</span>
+              {t.MarketPulseContentType.hero.description.secondary}
             </p>
           </motion.div>
 
@@ -170,11 +182,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
           >
-            {[
-              { icon: Award, value: "-0.66151", label: "Winning Score", color: "#61dafb" },
-              { icon: TrendingUp, value: "0.44+", label: "R² Achievement", color: "#646cff" },
-              { icon: Brain, value: "120+", label: "Features Engineered", color: "#61dafb" }
-            ].map(({ icon: Icon, value, label, color }, index) => (
+            {metrics.map(({ icon: Icon, value, label, color }, index) => (
               <motion.div
                 key={label}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -183,15 +191,15 @@ export default function HeroSection() {
                 className="p-6 backdrop-blur-sm rounded-xl border transition-all duration-300 hover:scale-105"
                 style={{
                   backgroundColor: 'rgba(100, 108, 255, 0.1)',
-                  borderColor: 'rgba(100, 108, 255, 0.3)'
+                  borderColor: 'rgba(100, 108, 255, 0.3)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = color + '80'
-                  e.currentTarget.style.boxShadow = `0 0 20px ${color}40`
+                  e.currentTarget.style.borderColor = color + '80';
+                  e.currentTarget.style.boxShadow = `0 0 20px ${color}40`;
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(100, 108, 255, 0.3)'
-                  e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.borderColor = 'rgba(100, 108, 255, 0.3)';
+                  e.currentTarget.style.boxShadow = 'none';
                 }}
               >
                 <Icon className="w-8 h-8 mx-auto mb-3" style={{ color }} />
@@ -208,7 +216,7 @@ export default function HeroSection() {
             transition={{ delay: 1, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-3 text-sm"
           >
-            {["LightGBM Ensemble", "Sentiment Analysis", "Correlation Engineering", "Optuna Optimization"].map((tech, index) => (
+            {technologies.map((tech, index) => (
               <span
                 key={tech}
                 className="px-4 py-2 text-slate-300 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105"
@@ -217,12 +225,12 @@ export default function HeroSection() {
                   borderColor: index % 2 === 0 ? '#646cff40' : '#61dafb40',
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.color = index % 2 === 0 ? '#646cff' : '#61dafb'
-                  e.target.style.borderColor = index % 2 === 0 ? '#646cff' : '#61dafb'
+                  e.currentTarget.style.color = index % 2 === 0 ? '#646cff' : '#61dafb';
+                  e.currentTarget.style.borderColor = index % 2 === 0 ? '#646cff' : '#61dafb';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = '#cbd5e1'
-                  e.target.style.borderColor = index % 2 === 0 ? '#646cff40' : '#61dafb40'
+                  e.currentTarget.style.color = '#cbd5e1';
+                  e.currentTarget.style.borderColor = index % 2 === 0 ? '#646cff40' : '#61dafb40';
                 }}
               >
                 {tech}
@@ -241,7 +249,7 @@ export default function HeroSection() {
       >
         <div className="animate-bounce">
           <div className="w-6 h-10 border-2 rounded-full flex justify-center backdrop-blur-sm" style={{ borderColor: '#646cff80' }}>
-            <motion.div 
+            <motion.div
               className="w-1 h-3 rounded-full mt-2"
               style={{ backgroundColor: '#646cff' }}
               animate={{ y: [0, 12, 0] }}
@@ -251,5 +259,5 @@ export default function HeroSection() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

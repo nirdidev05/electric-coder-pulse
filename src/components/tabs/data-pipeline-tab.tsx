@@ -1,34 +1,26 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Database, FileText, Calendar, TrendingDown } from "lucide-react"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Database, FileText, Calendar, TrendingDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function DataPipelineTab() {
-  const dataSteps = [
-    {
-      icon: FileText,
-      title: "Data Sources",
-      color: "#646cff",
-      content: `The model ingests two data files: train_prices.csv (historical prices of the 3 assets over time) and train_news.csv (news headlines with timestamps). Similarly, test_prices.csv and test_news.csv are used for generating final predictions.`
-    },
-    {
-      icon: Calendar,
-      title: "Temporal Alignment", 
-      color: "#61dafb",
-      content: `A crucial preprocessing step is aligning intraday news with daily price data. The approach simplifies this by aggregating news by date. All news events are truncated to their date (ignoring intra-day time) and grouped so that each trading day is associated with the news headlines of that day.`
-    },
-    {
-      icon: TrendingDown,
-      title: "Missing Data Handling",
-      color: "#646cff", 
-      content: `The price data may contain missing values (non-trading days, etc.), which are handled via forward-fill (fillna(method='ffill')) to propagate the last known price. This is done for each asset series to maintain continuity.`
-    },
-    {
-      icon: Database,
-      title: "Feature Matrix Assembly",
-      color: "#61dafb",
-      content: `After filling missing prices, the code constructs a comprehensive feature DataFrame indexed by date. News data is merged on the date, meaning each day's row contains both technical features (from prices) and aggregated news features for that day. Any days with no news default to neutral values (e.g. sentiment = 0).`
-    }
-  ]
+  const t = useTranslation();
+
+  // Mapping icons to step titles for dynamic rendering
+  const iconMap = {
+    [t.MarketPulseContentType.methodology.dataPipeline.steps[0]?.title]: FileText,
+    [t.MarketPulseContentType.methodology.dataPipeline.steps[1]?.title]: Calendar,
+    [t.MarketPulseContentType.methodology.dataPipeline.steps[2]?.title]: TrendingDown,
+    [t.MarketPulseContentType.methodology.dataPipeline.steps[3]?.title]: Database,
+  };
+  
+  const dataSteps = (t.MarketPulseContentType.methodology.dataPipeline.steps || []).map((step, index) => ({
+    ...step,
+    icon: iconMap[step.title] || Database, // Fallback icon
+    color: index % 2 === 0 ? "#646cff" : "#61dafb",
+  }));
+
+  const fileTypes = t.MarketPulseContentType.methodology.dataPipeline.fileTypes || [];
 
   return (
     <motion.div
@@ -48,12 +40,12 @@ export default function DataPipelineTab() {
             <div className="p-3 rounded-xl" style={{ backgroundColor: '#646cff20' }}>
               <Database className="h-8 w-8" style={{ color: '#646cff' }} />
             </div>
-            <span className="text-white">2.1 Data Pipeline and Preprocessing</span>
+            <span className="text-white">{t.MarketPulseContentType.additionalContent.tabContent.dataPipelineTitle}</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-8">
           {dataSteps.map((step, index) => {
-            const Icon = step.icon
+            const Icon = step.icon;
             return (
               <motion.div
                 key={index}
@@ -74,28 +66,25 @@ export default function DataPipelineTab() {
                 </p>
                 
                 {/* Special content for each step */}
-                {step.title === "Temporal Alignment" && (
+                {step.technicalNote && (
                   <div className="p-4 rounded-lg" style={{ background: 'rgba(97, 218, 251, 0.1)', border: '1px solid rgba(97, 218, 251, 0.2)' }}>
                     <p className="text-sm" style={{ color: '#61dafb' }}>
-                      <strong>Technical Note:</strong> This means the model operates at a daily frequency for both prices and
-                      news-derived features. While this loses intraday nuance, it ensures clear alignment where each day's price
-                      change relates to that day's news sentiment.
+                      <strong>{t.MarketPulseContentType.common.labels.technicalNote}:</strong> {step.technicalNote}
                     </p>
                   </div>
                 )}
                 
-                {step.title === "Missing Data Handling" && (
+                {step.tradeOff && (
                   <div className="p-4 rounded-lg" style={{ background: 'rgba(255, 193, 7, 0.1)', border: '1px solid rgba(255, 193, 7, 0.2)' }}>
                     <p className="text-sm text-yellow-300">
-                      <strong>Trade-off:</strong> Forward-filling assumes no drastic change during short gaps, introducing
-                      slight bias but preferable to leaving holes or dropping data.
+                      <strong>{t.MarketPulseContentType.common.labels.tradeOff}:</strong> {step.tradeOff}
                     </p>
                   </div>
                 )}
                 
                 {index === 0 && (
                   <div className="flex flex-wrap gap-3 mt-4">
-                    {['train_prices.csv', 'train_news.csv', 'test_prices.csv', 'test_news.csv'].map((file, i) => (
+                    {fileTypes.map((file, i) => (
                       <code 
                         key={i}
                         className="px-3 py-1 rounded text-sm font-mono border"

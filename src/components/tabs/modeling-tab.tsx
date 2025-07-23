@@ -1,64 +1,30 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Brain, Settings, TrendingUp, GitMerge, Target, Zap } from "lucide-react"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Brain, TrendingUp, GitMerge, Target } from "lucide-react";
+import { motion } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ModelingTab() {
-  const modelingSections = [
-    {
-      icon: Brain,
-      title: "Base Learner – LightGBM Models",
-      color: "#646cff",
-      content: `Rather than a single unified model, the solution trains three separate LightGBM gradient boosting models, one for each price target. LightGBM was chosen for its speed and ability to handle large feature sets with regularization.`,
-      details: [
-        {
-          subtitle: "Feature Selection",
-          description: `For each target, univariate selection (ANOVA F-score via SelectKBest) picks the top 80 features most correlated with that target's movements. This trims away less relevant features, reducing noise and computational cost.`,
-          note: "Limitation: This method looks at features individually and may not capture interactions or be fooled by highly correlated features.",
-          noteType: "warning"
-        },
-        {
-          subtitle: "Hyperparameter Tuning", 
-          description: `Optuna runs 50 trials using 3-fold rolling TimeSeriesSplit cross-validation. Tuned parameters include n_estimators, learning rate, max depth, num_leaves, subsample ratio, colsample_bytree, and L1/L2 regularization.`,
-          note: "Advantage: Time-series CV ensures parameters generalize to later periods, mimicking real-world performance.",
-          noteType: "success"
-        }
-      ]
-    },
-    {
-      icon: TrendingUp,
-      title: "Statistical Baseline Model",
-      color: "#61dafb",
-      content: `A statistical baseline forecast is generated with domain-inspired heuristics:`,
-      points: [
-        "Starts from last known price of each asset",
-        "Adds small linear trend (e.g., price1 +2.8% per day, price2 +0.1% per day)",
-        "Superimposes cyclical oscillation (sinusoidal with 60-day period)",
-        "Adds random noise with specified volatility (e.g., 1.2% daily std for price1)"
-      ],
-      insight: "This baseline acts like a combination of mild upward trend, seasonal cycle, and random noise, roughly calibrated to each asset's historical behavior. It provides a reference level and ensures forecasts don't drift into unrealistic territory."
-    },
-    {
-      icon: GitMerge,
-      title: "Ensemble Combination",
-      color: "#646cff", 
-      content: `The final prediction is a meta-ensemble combining LightGBM predictions and statistical baseline, weighted based on confidence:`,
-      code: `ml_score = (R²_model + 1) / 2  # Normalize R² to [0,1] range
+  const t = useTranslation();
 
-if ml_score > 0.3:
-    weights = 60% ML prediction, 40% baseline
-elif 0 < ml_score <= 0.3:
-    weights = 40% ML, 60% baseline  
-else:  # ml_score == 0
-    weights = 20% ML, 80% baseline`,
-      explanation: "This adaptive weighting acknowledges that sometimes a simple trend model might outperform a complex model on certain assets, so it hedges by keeping weight on the baseline while allowing ML to dominate when reliable."
-    },
-    {
-      icon: Target,
-      title: "Correlation Preservation",
-      color: "#61dafb",
-      content: `A notable innovation is post-hoc correlation adjustment. Financial assets often move with correlation, and predicting each independently risks unrealistic joint predictions.`,
-      code: `# Ensure predicted series have desired cross-correlations
+  const modelingData = t.MarketPulseContentType.methodology.modeling;
+
+  // Mapping icons to titles for dynamic rendering
+  const iconMap = {
+    [modelingData.sections[0]?.title]: Brain,
+    [modelingData.sections[1]?.title]: TrendingUp,
+    [modelingData.sections[2]?.title]: GitMerge,
+    [modelingData.sections[3]?.title]: Target,
+  };
+
+  const modelingSections = (modelingData.sections || []).map((section, index) => ({
+    ...section,
+    icon: iconMap[section.title] || Brain, // Fallback icon
+    color: index % 2 === 0 ? "#646cff" : "#61dafb",
+  }));
+
+  // This is the missing code block that will be re-inserted.
+  const correlationPreservationCode = `# Ensure predicted series have desired cross-correlations
 current_corr = np.corrcoef(predictions.T)          # current 3x3 corr matrix
 target_corr = np.array([[1.0, -0.02, 0.89],        # desired corr: e.g. corr(p1,p3)=0.89
                         [-0.02, 1.0, -0.25], 
@@ -81,10 +47,7 @@ except np.linalg.LinAlgError:
     # Fallback: directly adjust p3 to have target corr with p1 if matrix not PD
     p1_norm = (predictions[:,0] - predictions[:,0].mean())/predictions[:,0].std()
     predictions[:,2] = predictions[:,2].mean() + target_corr[0,2] * p1_norm * predictions[:,2].std()
-    predictions_corrected = predictions`,
-      insight: "Why enforce correlations? In multi-output forecasting for financial indices, maintaining realistic correlations is important for downstream uses like portfolio risk management. This post-processing trick ensures consistency with known relationships."
-    }
-  ]
+    predictions_corrected = predictions`;
 
   return (
     <motion.div
@@ -104,12 +67,14 @@ except np.linalg.LinAlgError:
             <div className="p-3 rounded-xl" style={{ backgroundColor: '#646cff20' }}>
               <Brain className="h-8 w-8" style={{ color: '#646cff' }} />
             </div>
-            <span className="text-white">2.3 Modeling Approach and Ensemble Strategy</span>
+            <span className="text-white">{t.MarketPulseContentType.additionalContent.tabContent.modelingTitle}</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-12">
           {modelingSections.map((section, sectionIndex) => {
-            const Icon = section.icon
+            const Icon = section.icon;
+            const isCorrelationSection = section.title === t.MarketPulseContentType.methodology.modeling.sections[3]?.title;
+
             return (
               <motion.div
                 key={sectionIndex}
@@ -153,7 +118,7 @@ except np.linalg.LinAlgError:
                             <p className={`text-xs ${
                               detail.noteType === 'warning' ? 'text-yellow-300' : 'text-green-300'
                             }`}>
-                              <strong>{detail.noteType === 'warning' ? 'Limitation:' : 'Advantage:'}</strong> {detail.note}
+                              <strong>{detail.noteType === 'warning' ? t.MarketPulseContentType.common.labels.limitation + ':' : t.MarketPulseContentType.common.labels.advantage + ':'}</strong> {detail.note}
                             </p>
                           </div>
                         </div>
@@ -186,20 +151,20 @@ except np.linalg.LinAlgError:
                   </div>
                 )}
 
-                {section.code && (
+                {(section.code || isCorrelationSection) && (
                   <div className="ml-16 space-y-4">
                     <div className="p-4 rounded-lg bg-[#1E1E2F] border border-slate-700/50">
-                      <pre className="text-xs text-slate-300 overflow-x-auto">
-                        {section.code}
+                      <pre className="text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap">
+                        {isCorrelationSection ? correlationPreservationCode : section.code}
                       </pre>
                     </div>
                     {section.explanation && (
                       <p className="text-sm text-slate-400">{section.explanation}</p>
                     )}
                     {section.insight && (
-                      <div className="p-4 rounded-lg" style={{ background: `rgba(${section.color === '#61dafb' ? '97, 218, 251' : '100, 108, 255'}, 0.1)`, border: `1px solid rgba(${section.color === '#61dafb' ? '97, 218, 251' : '100, 108, 255'}, 0.2)` }}>
+                       <div className="p-4 rounded-lg" style={{ background: `rgba(${section.color === '#61dafb' ? '97, 218, 251' : '100, 108, 255'}, 0.1)`, border: `1px solid rgba(${section.color === '#61dafb' ? '97, 218, 251' : '100, 108, 255'}, 0.2)` }}>
                         <p className="text-sm" style={{ color: section.color }}>
-                          <strong>Why enforce correlations?</strong> {section.insight}
+                          <strong>{t.MarketPulseContentType.common.labels.whyEnforceCorrelations}</strong> {section.insight.replace(/^¿?Por qué forzar las correlaciones\??\s*/i, '')}
                         </p>
                       </div>
                     )}
@@ -215,5 +180,5 @@ except np.linalg.LinAlgError:
         </CardContent>
       </Card>
     </motion.div>
-  )
+  );
 }

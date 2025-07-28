@@ -100,12 +100,18 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1E1E2F]/90 via-transparent to-[#1E1E2F]/50" />
       </div>
 
-      {/* Navigation */}
-      <nav className="relative z-50 bg-[#1E1E2F]/80 backdrop-blur-md border-b border-slate-700/50">
+      {/* Sticky Navigation */}
+      <nav 
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-slate-700/50 transition-all duration-300"
+        style={{
+          backgroundColor: `rgba(30, 30, 47, ${Math.min(0.95, 0.7 + scrollY * 0.001)})`,
+          boxShadow: scrollY > 50 ? '0 4px 20px rgba(0, 0, 0, 0.3)' : 'none'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-slate-400 transition-all duration-300 font-medium group"
+            className="inline-flex items-center gap-2 text-slate-400 transition-all duration-300 font-medium group hover:text-[#646cff]"
             style={{ color: '#888' }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#646cff')}
             onMouseLeave={(e) => (e.currentTarget.style.color = '#888')}
@@ -117,7 +123,7 @@ export default function HeroSection() {
       </nav>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex-1 px-4 py-16 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto flex-1 px-4 pt-24 pb-16 sm:px-6 lg:px-8 flex flex-col justify-center">
         <div className="text-center">
           {/* Achievement Badge */}
           <motion.div

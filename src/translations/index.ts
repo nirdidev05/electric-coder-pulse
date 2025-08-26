@@ -174,6 +174,512 @@ export interface Translation {
     roleEngineer: string;
     roleGraduate: string;
   };
+  adc : {
+hero: {
+    badge: {
+      text: string;
+    };
+    title: {
+      main: string;
+      subtitle: string;
+    };
+    description: string;
+    performanceMetrics: {
+      title: string;
+      metrics: Array<{
+        label: string;
+        description: string;
+        suffix: string;
+      }>;
+    };
+    technologyStack: Array<{
+      name: string;
+      description: string;
+    }>;
+    buttons: {
+      primary: string;
+      secondary: string;
+    };
+    keyFeatures: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
+executiveSummary: {
+    badge: {
+      primary: string;
+      secondary: string;
+    };
+    title: {
+      main: string;
+      subtitle: string;
+    };
+    description: string;
+    navigation: {
+      sections: string[];
+    };
+    operationalChallenges: {
+      title: string;
+      challenges: Array<{
+        title: string;
+        description: string;
+        currentState: string;
+        businessImpact: string;
+        frequency: string;
+      }>;
+      labels: {
+        currentState: string;
+        businessImpact: string;
+        frequency: string;
+      };
+    };
+    technicalSolutions: {
+      title: string;
+      solutions: Array<{
+        title: string;
+        description: string;
+        methodology: string;
+        implementation: string[];
+        performance: string;
+        innovation: string;
+      }>;
+      labels: {
+        methodology: string;
+        implementationDetails: string;
+        performance: string;
+        innovation: string;
+      };
+    };
+    performanceAnalysis: {
+      title: string;
+      metrics: Array<{
+        label: string;
+        description: string;
+        technicalDetail: string;
+        context: string;
+      }>;
+      comparison: {
+        title: string;
+        models: Array<{
+          name: string;
+          description: string;
+        }>;
+        bestLabel: string;
+      };
+      labels: {
+        technicalDetail: string;
+        context: string;
+      };
+    };
+    businessImpact: {
+      title: string;
+      keyMetrics: Array<{
+        label: string;
+        description: string;
+      }>;
+      operationalBenefits: Array<{
+        title: string;
+        description: string;
+      }>;
+      implementation: {
+        title: string;
+        phases: Array<{
+          phase: string;
+          duration: string;
+          activities: string[];
+        }>;
+      };
+      roi: {
+        title: string;
+        metrics: Array<{
+          label: string;
+          description: string;
+        }>;
+        quote: string;
+        buttons: {
+          technical: string;
+          model: string;
+        };
+      };
+    };
+    dataArchitecture: {
+      title: string;
+      sources: Array<{
+        name: string;
+        details: string;
+        records: string;
+        connection: string;
+        technical: string;
+      }>;
+    };
+  };
+     technicalOverview: {
+    badge: {
+      primary: string;
+      secondary: string;
+    };
+    title: {
+      main: string;
+    };
+    description: string;
+    dataSources: {
+      title: string;
+      sources: Array<{
+        name: string;
+        description: string;
+        keyFeatures: string[];
+        dataSourceLabel: string; // "Data Source X/5"
+      }>;
+      integrationSummary: {
+        title: string;
+        metrics: Array<{
+          label: string;
+          description: string;
+        }>;
+      };
+    };
+    methodology: {
+      title: string;
+      phases: Array<{
+        phase: string;
+        description: string;
+        techniques: string[];
+        phaseLabel: string; // "Phase X"
+      }>;
+    };
+    achievements: {
+      metrics: Array<{
+        label: string;
+        description: string;
+      }>;
+    };
+  };
+  dataInsights: {
+    badge: {
+      primary: string;
+      secondary: string;
+    };
+    title: {
+      main: string;
+    };
+    description: string;
+    timeSeriesAnalysis: {
+      title: string;
+      insights: Array<{
+        title: string;
+        description: string;
+        findings: string[];
+      }>;
+    };
+    keyStatistics: Array<{
+      label: string;
+      description: string;
+    }>;
+    criticalPatterns: {
+      title: string;
+      insights: Array<{
+        title: string;
+        finding: string;
+        implication: string;
+        category: string;
+        observation: string;
+      }>;
+      labels: {
+        keyFinding: string;
+        strategicImplication: string;
+      };
+    };
+    correlationAnalysis: {
+      title: string;
+      correlationStrengthLabel: string;
+      implementationImpactLabel: string;
+      patterns: Array<{
+        category: string;
+        description: string;
+        impact: string;
+        details: string[];
+      }>;
+    };
+    summary: {
+      title: string;
+      description: string;
+      driverCategories: Array<{
+        title: string;
+        subtitle: string;
+      }>;
+      conclusion: string;
+    };
+  }; 
+    modelShowcase: {
+    title: {
+      main: string;
+    };
+    description: string;
+    navigation: {
+      tabs: Array<{
+        label: string;
+      }>;
+    };
+    architecture: {
+      title: string;
+      models: Array<{
+        name: string;
+        description: string;
+        advantages: string[];
+        role: string;
+        technicalDetails: string[];
+        useCases: string[];
+      }>;
+      performance: {
+        crossValidationScore: string;
+      };
+      sections: {
+        keyAdvantages: string;
+        technicalConfiguration: string;
+        useCases: string;
+      };
+      rationale: {
+        title: string;
+        whyGradientBoosting: {
+          title: string;
+          points: string[];
+        };
+        ensembleStrategy: {
+          title: string;
+          points: string[];
+        };
+        codeSnippet: {
+          title: string;
+        };
+      };
+    };
+    features: {
+      title: string;
+      categories: Array<{
+        category: string;
+        features: string[];
+        description: string;
+        technicalNotes: string[];
+      }>;
+      sections: {
+        featureComponents: string;
+        technicalImplementation: string;
+      };
+      pipeline: {
+        title: string;
+        steps: Array<{
+          step: string;
+          description: string;
+          details: string[];
+        }>;
+      };
+    };
+    validation: {
+      title: string;
+      overview: {
+        title: string;
+        description: string;
+        cvFolds: string;
+      };
+      processSteps: {
+        title: string;
+        steps: Array<{
+          step: string;
+          description: string;
+          rationale: string;
+          outcome: string;
+        }>;
+        stepHeaders: {
+          description: string;
+          rationale: string;
+          outcome: string;
+        };
+      };
+      results: {
+        title: string;
+        metrics: Array<{
+          label: string;
+        }>;
+        codeSnippet: {
+          title: string;
+        };
+      };
+    };
+    data: {
+      title: string;
+      sources: Array<{
+        name: string;
+        description: string;
+        size: string;
+        keyFeatures: string[];
+        cleaningSteps: string[];
+        challenges: string[];
+      }>;
+      sections: {
+        keyFeatures: string;
+        dataCleaningSteps: string;
+        dataChallenges: string;
+      };
+      quality: {
+        title: string;
+        metrics: Array<{
+          metric: string;
+          description: string;
+        }>;
+      };
+      processingPipeline: {
+        title: string;
+      };
+    };
+    business: {
+      title: string;
+      impacts: Array<{
+        metric: string;
+        description: string;
+      }>;
+      implementation: {
+        title: string;
+        deployment: {
+          title: string;
+          points: string[];
+        };
+        benefits: {
+          title: string;
+          points: string[];
+        };
+      };
+      roi: {
+        title: string;
+        categories: Array<{
+          category: string;
+          items: string[];
+          total: string;
+        }>;
+        enhancements: {
+          title: string;
+          technical: {
+            title: string;
+            points: string[];
+          };
+          business: {
+            title: string;
+            points: string[];
+          };
+        };
+      };
+    };
+  };
+ codeExamples: {
+    title: {
+      main: string;
+    };
+    description: string;
+    navigation: {
+      categories: Array<{
+        label: string;
+      }>;
+    };
+    examples: Array<{
+      title: string;
+      description: string;
+    }>;
+    implementation: {
+      title: string;
+      highlights: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+    statistics: Array<{
+      label: string;
+    }>;
+  };
+    resultsMetrics: {
+    title: {
+      main: string;
+    };
+    description: string;
+    keyMetrics: Array<{
+      title: string;
+      description: string;
+      details: string[];
+    }>;
+    performanceAnalysis: {
+      title: string;
+      tableHeaders: {
+        metric: string;
+        training: string;
+        validation: string;
+        improvement: string;
+      };
+      metrics: Array<{
+        metric: string;
+        improvement: string;
+        description: string;
+      }>;
+    };
+    businessImpact: {
+      title: string;
+      impacts: Array<{
+        label: string;
+      }>;
+      conclusion: string;
+    };
+  };
+  technologyStack: {
+    title: {
+      main: string;
+    };
+    description: string;
+    categories: Array<{
+      title: string;
+      technologies: Array<{
+        name: string;
+        category: string;
+        description: string;
+        purpose: string;
+        details: string[];
+      }>;
+    }>;
+    architecture: {
+      title: string;
+      components: Array<{
+        component: string;
+        description: string;
+        details: string[];
+      }>;
+      stepLabel: string;
+      implementationDetailsLabel: string;
+    };
+    performanceMetrics: {
+      title: string;
+      description: string;
+      metrics: Array<{
+        metric: string;
+        description: string;
+      }>;
+    };
+    labels: {
+      purpose: string;
+      technicalDetails: string;
+    };
+  };
+  footer: {
+    title: {
+      main: string;
+    };
+    description: string;
+    metrics: {
+      rmse: string;
+      trainingData: string;
+      features: string;
+    };
+    buttons: {
+      documentation: string;
+      sourceCode: string;
+    };
+  };
+  };
   gan:{
 nav: {
     overview: string
@@ -579,7 +1085,8 @@ nav: {
       coherence: string
     }
   }
-}
+  
+},
 renewable:{
   navigation: {
     backToProjects: string;
@@ -1578,6 +2085,1621 @@ const translations: Record<string, Translation> = {
     copyrightName: "BENBOUTA Walid",
     roleEngineer: "AI Engineer",
     roleGraduate: "futur State Engineer in Computer Science",
+  },
+  adc: {
+hero: {
+    badge: {
+      text: "AI-Powered Business Intelligence"
+    },
+    title: {
+      main: "FEAST",
+      subtitle: "FORECASTER"
+    },
+    description: "Revolutionary machine learning system transforming BNP Paribas cafeteria operations through predictive analytics, reducing waste and optimizing resource allocation with unprecedented accuracy.",
+    performanceMetrics: {
+      title: "LIVE PERFORMANCE METRICS",
+      metrics: [
+        {
+          label: "Prediction Accuracy",
+          description: "Daily meal forecast precision (on average)",
+          suffix: "RMSE"
+        },
+        {
+          label: "Model Confidence",
+          description: "Robustness validated through time-aware cross-validation",
+          suffix: "%"
+        },
+        {
+          label: "Waste Reduction",
+          description: "Optimizing food preparation and cost efficiency",
+          suffix: "%"
+        },
+        {
+          label: "Processing Time",
+          description: "Real-time insights for dynamic decision-making",
+          suffix: "min"
+        }
+      ]
+    },
+    technologyStack: [
+      {
+        name: "LightGBM",
+        description: "High-performance ML engine for rapid insights"
+      },
+      {
+        name: "Ensemble Models",
+        description: "Combined predictive power for superior accuracy"
+      },
+      {
+        name: "Time Series Analysis",
+        description: "Advanced temporal patterns for future forecasting"
+      },
+      {
+        name: "Real-time Data",
+        description: "Instantaneous updates for agile decision support"
+      }
+    ],
+    buttons: {
+      primary: "Experience the System",
+      secondary: "Explore Analytics"
+    },
+    keyFeatures: [
+      {
+        title: "Intelligent Forecasting",
+        description: "AI-driven meal demand predictions, ensuring optimal food preparation and minimizing waste."
+      },
+      {
+        title: "Dynamic Occupancy Insights",
+        description: "Real-time tracking of employee presence and cafeteria usage for adaptive planning."
+      },
+      {
+        title: "Strategic Business Intelligence",
+        description: "Comprehensive dashboards and actionable insights for cost savings and operational excellence."
+      }
+    ]
+  },
+    executiveSummary: {
+    badge: {
+      primary: "BNP PARIBAS EL DJAZAÏR TECHNICAL ANALYSIS",
+      secondary: "Meal Forecasting System"
+    },
+    title: {
+      main: "BNP Paribas Cafeteria",
+      subtitle: "Demand Forecasting System"
+    },
+    description: "Comprehensive machine learning solution for BNP Paribas El Djazaïr's head-office cafeteria, delivering accurate daily meal count forecasts through integrated analysis of cafeteria transactions, office attendance, menu offerings, weather conditions, and cultural calendar events to optimize preparation and reduce operational waste",
+    navigation: {
+      sections: [
+        "Operational Challenge",
+        "Technical Solution",
+        "Performance Analysis",
+        "Business Impact"
+      ]
+    },
+    operationalChallenges: {
+      title: "Current Operational Challenges",
+      challenges: [
+        {
+          title: "Food Waste & Cost Optimization",
+          description: "BNP Paribas El Djazaïr's head-office cafeteria faces significant challenges with daily meal preparation decisions. Over-preparation leads to substantial food waste and unnecessary costs, while under-preparation leaves employees without meals, creating operational inefficiencies and employee dissatisfaction.",
+          currentState: "Manual estimation without precise demand forecasts",
+          businessImpact: "Significant waste from overestimation, tangible cost savings potential",
+          frequency: "Daily decision-making challenge"
+        },
+        {
+          title: "Service Quality & Employee Satisfaction",
+          description: "Without accurate forecasting, cafeteria staff must make daily preparation decisions blindly, often resulting in meal shortages that disappoint employees or excessive preparation that leads to waste and increased operational costs.",
+          currentState: "Experience-based guesswork for daily meal counts",
+          businessImpact: "Employee dissatisfaction from meal unavailability",
+          frequency: "Daily service disruptions and planning uncertainties"
+        },
+        {
+          title: "Resource Planning & Staff Allocation",
+          description: "Lack of predictive insights affects kitchen resource allocation, staff scheduling, and ingredient procurement. Management cannot proactively plan operations or optimize resource utilization without understanding demand patterns and key drivers.",
+          currentState: "Reactive planning without demand insights",
+          businessImpact: "Suboptimal resource allocation and missed efficiency opportunities",
+          frequency: "Continuous operational inefficiency"
+        }
+      ],
+      labels: {
+        currentState: "Current State",
+        businessImpact: "Business Impact",
+        frequency: "Frequency"
+      }
+    },
+    technicalSolutions: {
+      title: "Advanced Technical Architecture",
+      solutions: [
+        {
+          title: "Multi-Source Data Integration & ETL Pipeline",
+          description: "Comprehensive data architecture integrating five heterogeneous internal data sources: historical cafeteria transaction logs, head office attendance records, daily menu information, weather data, and calendar events. All datasets are merged on date fields to create a unified modeling table for forecasting.",
+          methodology: "End-to-end machine learning pipeline with extensive data cleaning and feature engineering. Date parsing, inner joins on date fields, and aggregation processes ensure data consistency. Special attention to Algerian business calendar (Sunday-Thursday workweek) and cultural contexts including Islamic holidays and Ramadan periods.",
+          implementation: [
+            "Cafeteria transaction logs (kaggle_cantine.csv) aggregated by employee ID to derive daily meal counts (Nb_meals)",
+            "Head office attendance tracking (kaggle_head_office.csv) via badge-in data for daily headcount (Nb_acces)",
+            "Daily menu offerings analysis (kaggle_menu.csv) including entrée types and main dishes for popularity scoring",
+            "Weather API integration (kaggle_meteo.csv) capturing temperature, precipitation, wind speed, and cloud cover",
+            "Future date templates (test_kaggle_finale.csv) with pre-populated features for forecasting deployment"
+          ],
+          performance: "Successfully integrated 5 data sources with 100% date alignment accuracy",
+          innovation: "First implementation accounting for Algerian cultural context and Islamic calendar effects"
+        },
+        {
+          title: "Advanced Feature Engineering & Signal Extraction",
+          description: "Sophisticated feature creation process extracting meaningful signals from raw data to identify key drivers of cafeteria demand. Features include day-of-week patterns, public holidays, office attendance correlations, menu popularity indices, and weather interaction effects.",
+          methodology: "Time-aware feature engineering with cross-validation to prevent data leakage. Only historical data used for popularity calculations. Comprehensive analysis of patterns including weekly seasonality, holiday effects, and weather influences on dining behavior.",
+          implementation: [
+            "Temporal features: day-of-week patterns, holiday flags, seasonal indicators, Is_Ramadan periods",
+            "Attendance correlation analysis: office headcount vs. cafeteria demand relationship (r=0.61)",
+            "Menu popularity scoring: historical average meals per dish type with cross-validation protection",
+            "Weather interaction features: precipitation effects, temperature thresholds, Rain_x_Occupancy interactions",
+            "Lag features and rolling statistics: lag7 (same day last week), MA7/MA14 moving averages for time series patterns"
+          ],
+          performance: "Identified office attendance as key predictor with significant correlation to meal demand",
+          innovation: "Menu popularity indexing with cross-validation prevents overfitting to historical preferences"
+        },
+        {
+          title: "Ensemble Machine Learning & Model Optimization",
+          description: "State-of-the-art ensemble regression models using gradient-boosted decision trees capable of capturing nonlinear relationships and complex feature interactions. Hyperparameter optimization minimizes forecasting error (RMSE) while ensuring generalization to future dates.",
+          methodology: "Time-aware cross-validation simulating forward-in-time predictions on withheld dates. Rigorous validation framework ensures model generalizes well to future scenarios without overfitting to historical quirks. RMSE optimization for practical forecasting accuracy.",
+          implementation: [
+            "LightGBM and XGBoost ensemble architecture (70-30 weighted) with gradient-boosted decision trees",
+            "5-fold TimeSeriesSplit cross-validation preventing future data leakage with expanding window strategy",
+            "Optuna Bayesian hyperparameter optimization (60 trials) targeting RMSE minimization with learning_rate ~0.05-0.1, num_leaves ~400-500",
+            "Early stopping with 50-round patience for overfitting prevention and optimal tree count determination",
+            "Sequential prediction pipeline for test set: day-by-day forecasting using recursive lag feature updates from previous predictions"
+          ],
+          performance: "Achieved ~22 RMSE accuracy in cross-validation (5-7% of typical daily range 0-400+ meals), representing substantial improvement over naive methods",
+          innovation: "Time-aware validation methodology ensuring robust real-world deployment performance"
+        }
+      ],
+      labels: {
+        methodology: "Methodology",
+        implementationDetails: "Implementation Details",
+        performance: "PERFORMANCE",
+        innovation: "INNOVATION"
+      }
+    },
+    performanceAnalysis: {
+      title: "Comprehensive Performance Analysis",
+      metrics: [
+        {
+          label: "RMSE Accuracy",
+          description: "Cross-validation RMSE in low 20s (5-7% of typical daily range 0-400+ meals), substantial improvement over naive forecasting methods",
+          technicalDetail: "Root Mean Squared Error validated through 5-fold TimeSeriesSplit cross-validation simulating real-world deployment scenarios",
+          context: "Target range 15-25 RMSE achieved, enabling precise preparation planning with MAE ~16 meals average deviation"
+        },
+        {
+          label: "Ensemble Strategy",
+          description: "LightGBM-XGBoost weighted ensemble optimizing different algorithmic strengths for robust prediction accuracy",
+          technicalDetail: "Ensemble weighting determined through cross-validation performance analysis: LightGBM excels at categorical features, XGBoost at numerical interactions",
+          context: "Ensemble approach reduces model-specific biases and improves generalization"
+        },
+        {
+          label: "Data Integration",
+          description: "Comprehensive integration of cafeteria logs, attendance records, menu data, weather information, and calendar events",
+          technicalDetail: "ETL pipeline with date-based merging ensuring 100% data alignment across heterogeneous internal systems",
+          context: "First implementation integrating multiple BNP Paribas internal data sources"
+        },
+        {
+          label: "External Factors",
+          description: "Weather conditions influence dining behavior, with precipitation encouraging on-site cafeteria usage",
+          technicalDetail: "API integration capturing temperature, precipitation, wind speed, and cloud cover for demand modeling",
+          context: "Rain and weather patterns affect employee dining decisions"
+        },
+        {
+          label: "Production Ready",
+          description: "Automated forecasting pipeline updating predictions with new data inputs for daily operational use",
+          technicalDetail: "End-to-end pipeline processing daily headcount, weather forecasts, and menu information for real-time predictions",
+          context: "Decision-support tool for cafeteria management"
+        },
+        {
+          label: "Forecast Horizon",
+          description: "Day-ahead predictions enabling proactive meal preparation and resource allocation",
+          technicalDetail: "Time-series modeling with feature engineering capturing weekly patterns and seasonal effects",
+          context: "Optimal horizon for operational planning and ingredient procurement"
+        },
+        {
+          label: "Context Aware",
+          description: "Model accounts for Algerian business calendar and Islamic holidays including Ramadan observance",
+          technicalDetail: "Feature engineering incorporating Sunday-Thursday workweek and religious observance patterns",
+          context: "Critical adaptation for accurate local cultural context"
+        }
+      ],
+      comparison: {
+        title: "Model Performance Comparison",
+        models: [
+          { name: "Naive Baseline", description: "Simple averages" },
+          { name: "Linear Regression", description: "Basic features" },
+          { name: "LightGBM Ensemble", description: "Advanced features" }
+        ],
+        bestLabel: "BEST"
+      },
+      labels: {
+        technicalDetail: "TECHNICAL DETAIL",
+        context: "CONTEXT"
+      }
+    },
+    businessImpact: {
+      title: "Quantified Business Impact",
+      keyMetrics: [
+        { label: "Meal Accuracy", description: "Average prediction error enabling precise preparation" },
+        { label: "Data Integration", description: "Comprehensive multi-source data pipeline" },
+        { label: "Planning Capability", description: "Day-ahead forecasting for optimal resource allocation" },
+        { label: "Context Awareness", description: "Algerian business calendar and Islamic holiday integration" }
+      ],
+      operationalBenefits: [
+        {
+          title: "Waste Reduction",
+          description: "Accurate forecasting eliminates overestimation waste and reduces food costs. Even reducing daily error by a few dozen meals translates to tangible savings and improved sustainability metrics for BNP Paribas operations."
+        },
+        {
+          title: "Employee Satisfaction",
+          description: "Ensures nearly all employees planning to eat at the cafeteria can be accommodated. Prevents disappointment from meal shortages while maintaining consistent service quality and availability."
+        },
+        {
+          title: "Operational Efficiency",
+          description: "Understanding demand drivers enables proactive staff scheduling and ingredient procurement. Management can anticipate higher turnout on specific days or when popular meals are served."
+        }
+      ],
+      implementation: {
+        title: "Implementation & Operational Integration",
+        phases: [
+          {
+            phase: "Phase 1: Data Foundation",
+            duration: "Completed",
+            activities: ["ETL pipeline development", "Data quality validation", "Feature engineering", "Algerian calendar integration"]
+          },
+          {
+            phase: "Phase 2: Model Development",
+            duration: "Completed",
+            activities: ["Algorithm selection & tuning", "Cross-validation framework", "Ensemble optimization", "Performance validation"]
+          },
+          {
+            phase: "Phase 3: Production Deployment",
+            duration: "In Progress",
+            activities: ["Real-time prediction API", "Dashboard development", "Staff training", "Monitoring system"]
+          },
+          {
+            phase: "Phase 4: Continuous Improvement",
+            duration: "Ongoing",
+            activities: ["Model retraining pipeline", "Feature drift detection", "Performance monitoring", "Business rule updates"]
+          }
+        ]
+      },
+      roi: {
+        title: "Return on Investment Summary",
+        metrics: [
+          { label: "ROI Multiple", description: "Within 12 months" },
+          { label: "Payback Months", description: "Break-even timeline" },
+          { label: "3-Year Value", description: "Cumulative savings" }
+        ],
+        quote: "This ML-powered forecasting system represents a paradigm shift from reactive to predictive cafeteria management, delivering measurable improvements in operational efficiency, cost control, and employee satisfaction while establishing BNP Paribas El Djazaïr as a leader in data-driven facility management.",
+        buttons: {
+          technical: "Deep Technical Dive",
+          model: "View Model Architecture"
+        }
+      }
+    },
+    dataArchitecture: {
+      title: "Integrated Data Architecture",
+      sources: [
+        {
+          name: "Cafeteria Transaction Logs",
+          details: "Individual meal transaction records by employee ID",
+          records: "Daily meal counts (Nb_meals) aggregated from individual purchases",
+          connection: "Primary target variable for forecasting model",
+          technical: "kaggle_cantine.csv - Each entry represents one meal transaction"
+        },
+        {
+          name: "Head Office Attendance",
+          details: "Daily badge-in records tracking office presence",
+          records: "Daily headcount (Nb_acces) of unique employees in building",
+          connection: "Crucial exogenous feature - higher attendance creates opportunity for more meals",
+          technical: "Daily aggregation providing potential diner count"
+        },
+        {
+          name: "Daily Menu System",
+          details: "Cafeteria menu offerings including entrée and main dishes",
+          records: "Menu composition and dish popularity indices",
+          connection: "Qualitative influence - certain dishes attract more diners",
+          technical: "Menu data with dish categorization for crowd-pleaser identification"
+        },
+        {
+          name: "Weather Data API",
+          details: "External weather conditions affecting dining decisions",
+          records: "Temperature, precipitation, wind speed, cloud cover metrics",
+          connection: "Rain encourages on-site dining, temperature affects lunch choices",
+          technical: "Daily weather metrics integrated via external API"
+        },
+        {
+          name: "Calendar & Events",
+          details: "Algerian business calendar and cultural events",
+          records: "Holiday flags, workweek patterns (Sun-Thu), religious observances",
+          connection: "Critical cultural context for accurate Algerian market predictions",
+          technical: "Custom calendar integration for Islamic holidays and local patterns"
+        }
+      ]
+    }
+  },
+technicalOverview: {
+    badge: {
+      primary: "TECHNICAL DEEP DIVE",
+      secondary: "BNP Paribas Meal Forecasting System"
+    },
+    title: {
+      main: "Advanced ML Architecture"
+    },
+    description: "End-to-end machine learning pipeline combining five heterogeneous data sources with sophisticated feature engineering and ensemble gradient boosting to achieve ~20 RMSE accuracy in daily meal count forecasting for BNP Paribas El Djazaïr's cafeteria operations",
+    dataSources: {
+      title: "Multi-Source Data Integration Pipeline",
+      sources: [
+        {
+          name: "Cafeteria Transaction Logs",
+          description: "Individual meal transaction records with employee ID tracking for comprehensive daily aggregation",
+          keyFeatures: [
+            "Daily meal counts (Nb_meals) derived from transaction aggregation using kaggle_cantine.csv",
+            "Employee ID tracking with duplicate handling for multiple meals (~0.4% occurrence rate)",
+            "Temporal patterns analysis across May 2022 - December 2024 (2.5 years coverage)",
+            "Target variable construction with sequential day-by-day prediction for test forecasting"
+          ],
+          dataSourceLabel: "Data Source 1/5"
+        },
+        {
+          name: "Head Office Attendance Data",
+          description: "Badge-in records tracking daily employee presence as key predictor of cafeteria demand",
+          keyFeatures: [
+            "Daily headcount (Nb_acces) from kaggle_head_office.csv of unique employees in building",
+            "Department mapping and organizational structure analysis (considered but not implemented)",
+            "Crucial exogenous feature with 0.61 correlation to meal demand (top feature importance)",
+            "Potential diner population indicator constraining maximum daily capacity (0-400+ meals range)"
+          ],
+          dataSourceLabel: "Data Source 2/5"
+        },
+        {
+          name: "Daily Menu System",
+          description: "Comprehensive menu offerings including entrée types and dual main dish options with popularity analytics",
+          keyFeatures: [
+            "Entrée and two main dishes per day from kaggle_menu.csv with categorical classification",
+            "Historical dish popularity indices: average Nb_meals per dish (e.g., Pizza=350 vs Quiche=280)",
+            "Menu diversity analysis (same-type vs varied offerings) and vegetarian option detection",
+            "Cross-validation protected target encoding preventing overfitting to historical preferences"
+          ],
+          dataSourceLabel: "Data Source 3/5"
+        },
+        {
+          name: "Weather Data Integration",
+          description: "External meteorological conditions affecting employee dining behavior and lunch decisions",
+          keyFeatures: [
+            "Temperature, precipitation, wind speed, and cloud cover from kaggle_meteo.csv",
+            "Rain indicator (Is_Rain) showing ~6 additional meals on rainy days (313 vs 307 baseline)",
+            "Weather-attendance interaction effects (Rain_x_Occupancy) for compounded behavioral shifts",
+            "Missing weather data imputation with domain-specific strategies for model robustness"
+          ],
+          dataSourceLabel: "Data Source 4/5"
+        },
+        {
+          name: "Algerian Calendar & Cultural Context",
+          description: "Cultural and calendar-based features accounting for local business patterns and religious observances",
+          keyFeatures: [
+            "Sunday-Thursday workweek pattern recognition",
+            "Islamic holiday detection (Ramadan, Eid periods)",
+            "Public holiday flagging with near-zero meal expectations",
+            "Seasonal variations including August vacation periods"
+          ],
+          dataSourceLabel: "Data Source 5/5"
+        }
+      ],
+      integrationSummary: {
+        title: "Integration Architecture Summary",
+        metrics: [
+          {
+            label: "Data Sources",
+            description: "Integrated via date-based merging"
+          },
+          {
+            label: "Years Coverage",
+            description: "May 2022 - December 2024"
+          },
+          {
+            label: "Key Correlation",
+            description: "Attendance vs Meal Demand"
+          }
+        ]
+      }
+    },
+    methodology: {
+      title: "End-to-End ML Pipeline Methodology",
+      phases: [
+        {
+          phase: "Data Integration & Preprocessing",
+          description: "Comprehensive ETL pipeline merging five heterogeneous data sources with rigorous cleaning and validation procedures",
+          techniques: [
+            "Date parsing and alignment across all datasets with format standardization",
+            "Inner join merging ensuring temporal consistency across sources",
+            "Missing data imputation with domain-specific strategies",
+            "Duplicate handling in transaction logs (~0.4% occurrence rate)",
+            "Weekend/holiday alignment for Algerian business calendar (Fri-Sat weekends)",
+            "Ramadan period detection with special event flagging"
+          ],
+          phaseLabel: "Phase 1"
+        },
+        {
+          phase: "Exploratory Data Analysis & Pattern Discovery",
+          description: "Statistical analysis revealing key demand drivers and behavioral patterns in cafeteria usage",
+          techniques: [
+            "Weekly seasonality analysis showing Thursday peak demand",
+            "Office occupancy correlation analysis (r=0.61 with meal demand)",
+            "Menu influence quantification with popularity scoring",
+            "Weather effect validation (+6 meals average on rainy days)",
+            "Seasonal variation identification (August vacation impacts)",
+            "Holiday pattern recognition with zero-demand periods"
+          ],
+          phaseLabel: "Phase 2"
+        },
+        {
+          phase: "Advanced Feature Engineering",
+          description: "Creation of 60+ predictive features from raw data incorporating temporal, behavioral, and environmental signals",
+          techniques: [
+            "Calendar features: day-of-week, holiday flags, month encoding",
+            "Lag features: lag7 (same day last week) for weekly seasonality",
+            "Rolling statistics: 7-day and 14-day moving averages",
+            "Menu popularity indices with cross-validation encoding",
+            "Weather interaction features (rain × occupancy effects)",
+            "Target encoding for categorical menu items with leakage prevention"
+          ],
+          phaseLabel: "Phase 3"
+        },
+        {
+          phase: "Model Development & Ensemble Training",
+          description: "Gradient boosting ensemble with rigorous time-aware validation and hyperparameter optimization",
+          techniques: [
+            "LightGBM and XGBoost ensemble architecture with 70-30 weighted averaging for optimal performance balance",
+            "5-fold TimeSeriesSplit cross-validation preventing future leakage (train 2022-2023, validate 2024)",
+            "Optuna Bayesian hyperparameter optimization (60 trials): learning_rate ~0.05-0.1, num_leaves ~400-500, max_depth 8-12",
+            "Early stopping with 50-round patience preventing overfitting, ensemble averaging across CV folds for robustness",
+            "Feature importance validation: Nb_acces (35%), day-of-week indicators (25%), menu popularity (20%), weather effects (15%)",
+            "Residual analysis revealed Monday under-prediction bias, resolved through enhanced day-of-week encoding and interaction terms"
+          ],
+          phaseLabel: "Phase 4"
+        },
+        {
+          phase: "Validation & Production Deployment",
+          description: "Comprehensive model validation and deployment pipeline for operational forecasting",
+          techniques: [
+            "Forward-in-time validation simulating real-world forecasting scenarios without lookahead bias",
+            "Residual analysis ensuring unbiased predictions across all conditions and day-of-week patterns",
+            "Sequential prediction pipeline for test_kaggle_finale.csv: day-by-day forecasting with recursive lag updates",
+            "Ensemble averaging across 5 fold-trained models for robust uncertainty quantification and prediction intervals",
+            "Production-ready recursive prediction using previous day forecasts as dynamic lag features",
+            "Performance monitoring achieving ~22 RMSE (5-7% of 0-400+ meal range) with MAE ~16 meals average deviation",
+            "Deployment considerations: daily forecast pipeline, real-time feature updates, and prediction confidence intervals"
+          ],
+          phaseLabel: "Phase 5"
+        }
+      ]
+    },
+    achievements: {
+      metrics: [
+        {
+          label: "RMSE Validation",
+          description: "Cross-validation RMSE in low 20s (5-7% of 0-400+ daily meal range), hitting target performance threshold"
+        },
+        {
+          label: "Engineered Features",
+          description: "Sophisticated feature creation from raw data including temporal, behavioral, and environmental signals"
+        },
+        {
+          label: "Time-Series CV",
+          description: "Rigorous validation preventing future leakage with forward-in-time prediction simulation"
+        }
+      ]
+    }
+  },
+  dataInsights: {
+    badge: {
+      primary: "EXPLORATORY DATA ANALYSIS",
+      secondary: "Pattern Discovery & Insights"
+    },
+    title: {
+      main: "Data-Driven Insights"
+    },
+    description: "Comprehensive exploratory analysis revealing behavioral patterns, demand drivers, and critical relationships in cafeteria usage across 2.5 years of operational data",
+    timeSeriesAnalysis: {
+      title: "Time Series Analysis & Patterns",
+      insights: [
+        {
+          title: "Overall Trend and Seasonality",
+          description: "Daily meals served over time (May 2022 – Dec 2024) showing strong weekly seasonality with minimal long-term trend",
+          findings: [
+            "Strong weekly seasonality with regular dips to near-zero on weekends (Fridays/Saturdays)",
+            "No dramatic long-term trend, but slight increase from mid-2023 into 2024",
+            "Significant drops during August each year due to summer vacations",
+            "Prolonged zero-meal periods during Ramadan when cafeteria was effectively closed",
+            "Series is relatively stationary aside from seasonal effects"
+          ]
+        },
+        {
+          title: "Weekday vs Weekend Patterns",
+          description: "Clear day-of-week effects within the Sunday-Thursday workweek pattern in Algeria",
+          findings: [
+            "Thursday has the highest average number of meals (peak demand day)",
+            "Sunday shows above-average demand despite being first workday",
+            "Monday tends to have the lowest average among workdays",
+            "Friday and Saturday show near-zero meals (weekend in Algeria)",
+            "End-of-week meetings or traditions drive Thursday peak attendance"
+          ]
+        },
+        {
+          title: "Occupancy Correlation Analysis",
+          description: "Office attendance vs meals correlation revealing 50-70% conversion rate with daily variability",
+          findings: [
+            "Correlation coefficient of 0.61 between office headcount and meals",
+            "Peaks on workdays (~500-600 staff present, ~300-400 meals served)",
+            "Roughly 50-70% of employees present end up dining at cafeteria",
+            "Conversion rate varies daily based on contextual factors",
+            "Scatter plot shows positive trend but significant variability around trend line"
+          ]
+        }
+      ]
+    },
+    keyStatistics: [
+      {
+        label: "Correlation Strength",
+        description: "Office attendance vs meal demand correlation coefficient"
+      },
+      {
+        label: "Peak Day Effect",
+        description: "Highest average meals per day within workweek"
+      },
+      {
+        label: "Weather Impact",
+        description: "Average meals on rainy vs clear days"
+      },
+      {
+        label: "Conversion Rate",
+        description: "Employees present who dine at cafeteria"
+      },
+      {
+        label: "Data Coverage",
+        description: "May 2022 - December 2024 operational data"
+      },
+      {
+        label: "Duplicate Rate",
+        description: "Multiple meal transactions per employee per day"
+      },
+      {
+        label: "August Impact",
+        description: "Summer vacation period demand reduction"
+      },
+      {
+        label: "Weekend Pattern",
+        description: "Algerian weekend showing near-zero demand"
+      }
+    ],
+    criticalPatterns: {
+      title: "Critical Pattern Discovery",
+      insights: [
+        {
+          title: "Weekly Seasonality Dominance",
+          finding: "Thursday emerges as peak demand day within the Sunday-Thursday workweek, possibly due to end-of-week meetings or tradition of more staff being on-site",
+          implication: "Strong day-of-week effects necessitate calendar-based features with Thursday requiring enhanced preparation capacity",
+          category: "Temporal Patterns",
+          observation:"Thursday peak"
+        },
+        {
+          title: "Office Occupancy as Primary Driver",
+          finding: "50-70% of employees present typically dine at cafeteria, creating correlation (r=0.61) between daily headcount and meal demand",
+          implication: "Office attendance serves as primary predictor, but conversion rate varies daily requiring additional contextual features",
+          category: "Behavioral Insights",
+          observation:"r = 0.61"
+        },
+        {
+          title: "Weather-Driven Behavioral Shifts",
+          finding: "Rainy days consistently show higher cafeteria usage (313 vs 307 meals average), as employees are less inclined to leave building",
+          implication: "Weather data provides meaningful signal for daily demand adjustments, especially for indoor dining preference",
+          category: "Environmental Factors",
+          observation:"313 vs 307 meals"
+        },
+        {
+          title: "Seasonal Vacation Impact",
+          finding: "August shows much lower cafeteria usage as many employees take summer holidays, resulting in fewer people at office",
+          implication: "Calendar features must account for seasonal patterns with August flagged as known slow period",
+          category: "Seasonal Variations",
+          observation:"August vacation"
+        },
+        {
+          title: "Menu Popularity Influence",
+          finding: "Certain dishes like pizza or couscous had higher average turnout (higher popularity index) compared to ordinary menu days",
+          implication: "Popularity metrics as features enable model to predict higher counts on days with historically popular dishes",
+          category: "Menu Analytics",
+          observation:"Dish variance"
+        },
+        {
+          title: "Weekend & Holiday Behavior",
+          finding: "Friday-Saturday (Algeria weekend) and public holidays show near-zero demand, confirming cafeteria closure patterns",
+          implication: "Weekend/holiday indicators essential for accurate baseline prediction of near-zero meal expectations",
+          category: "Calendar Effects",
+          observation:"Zero meals on weekends"
+        },
+        {
+          title: "Temperature Effects",
+          finding: "Extremely hot or cold days could discourage going out, with cold + rain combinations amplifying cafeteria preference",
+          implication: "Temperature as continuous feature allows model to learn non-linear effects and weather interactions",
+          category: "Weather Patterns",
+          observation:"Temperature impact"
+        },
+        {
+          title: "Menu Diversity Impact",
+          finding: "Two main choices daily - similar options (both red meat) might appeal to same group vs variety (meat + vegetarian) attracting wider crowd",
+          implication: "Menu diversity features capture whether varied offerings increase overall appeal and turnout",
+          category: "Menu Strategy",
+          observation:"Menu diversity"
+        },
+        {
+          title: "Special Event Recognition",
+          finding: "When both main dishes were particularly enticing or special dessert/event meals offered, there were noticeable bumps in sales",
+          implication: "Historical turnout serves as best indicator of menu appeal, enabling popularity-based predictions",
+          category: "Special Events",
+          observation:"Event bumps"
+        }
+      ],
+      labels: {
+        keyFinding: "Key Finding:",
+        strategicImplication: "Strategic Implication:"
+      }
+    },
+    correlationAnalysis: {
+      title: "Feature Correlation & Impact Analysis",
+      correlationStrengthLabel: "Correlation Strength:",
+      implementationImpactLabel: "Implementation Impact:",
+      patterns: [
+        {
+          category: "Calendar & Temporal Effects",
+          description: "Strong weekly periodicity with Friday-Saturday weekends and Islamic holidays requiring special handling in Algerian business context",
+          impact: "Binary features for non-working days essential, plus Ramadan period detection and August vacation flagging",
+          details: [
+            "Sunday-Thursday workweek pattern confirmed by zero meals on Fridays/Saturdays",
+            "Public holidays (May 1, Eid) correspond to near-zero meal counts",
+            "Ramadan periods show almost zero meals, effectively cafeteria closure",
+            "Late December dips around Christmas/New Year despite Algeria context"
+          ]
+        },
+        {
+          category: "Office Attendance Dynamics",
+          description: "Daily headcount serves as strongest single predictor with 0.61 correlation, but conversion rate fluctuates between 50-70%",
+          impact: "Primary feature requiring weather, menu, and calendar interactions for optimal accuracy in conversion prediction",
+          details: [
+            "Badge-in records provide accurate daily potential diner population",
+            "Not all employees present eat at cafeteria (some bring lunch/go out)",
+            "Occasionally more meals than unique people (multiple meals, visitors)",
+            "Scatter plot shows positive trend but significant variability around trend"
+          ]
+        },
+        {
+          category: "Menu Popularity & Appeal",
+          description: "Dish-specific appeal drives significant turnout variations with popularity scores calculated as average meals when dish was served",
+          impact: "Target-encoded popularity indices enable prediction of higher counts on historically popular dish days",
+          details: [
+            "Pizza and couscous identified as crowd-pleasers with higher popularity indices",
+            "Ordinary menu days see slightly lower counts vs special dishes",
+            "Menu diversity affects appeal (similar vs varied offerings)",
+            "Special dessert or event meals create noticeable sales bumps"
+          ]
+        },
+        {
+          category: "Weather & Environmental",
+          description: "Rain increases cafeteria usage (313 vs 307 average) as employees less inclined to leave building for lunch",
+          impact: "Weather features provide meaningful daily adjustment signals, especially rain indicators and temperature interactions",
+          details: [
+            "Rainy days show modest but consistent +6 meals increase",
+            "Temperature effects suspected but not strongly monotonic alone",
+            "Cold + rain combinations potentially amplify indoor dining preference",
+            "Cloud cover and wind included but expected minor effects"
+          ]
+        },
+        {
+          category: "Seasonal & Holiday Patterns",
+          description: "Beyond weekly cycles, seasonal patterns show August vacation impact and special date recognition for accurate baseline prediction",
+          impact: "Month/season features essential, particularly August flagging and public holiday detection for near-zero expectations",
+          details: [
+            "August consistently shows much lower cafeteria usage (summer vacation)",
+            "Late December shows dips around Christmas/New Year period",
+            "Ramadan periods require special span detection (effectively cafeteria closure)",
+            "Public holiday flagging prevents model confusion about low-demand days"
+          ]
+        },
+        {
+          category: "Time Series & Lag Features",
+          description: "Historical meal count patterns through lag features (lag7 for weekly seasonality) and rolling averages for trend smoothing",
+          impact: "Lag features transform time series forecasting into supervised learning with recent history context",
+          details: [
+            "Lag7 (same day last week) captures weekly seasonality directly",
+            "7-day and 14-day moving averages provide smoothed trend values",
+            "Rolling standard deviation measures recent demand volatility",
+            "Sequential prediction approach prevents future data leakage"
+          ]
+        }
+      ]
+    },
+    summary: {
+      title: "EDA Findings Summary",
+      description: "Our exploratory analysis confirmed that date patterns, office occupancy, menu choice, and weather conditions are the primary drivers of cafeteria demand, forming the foundation for our feature engineering strategy.",
+      driverCategories: [
+        {
+          title: "Weekday Patterns",
+          subtitle: "Set general baseline"
+        },
+        {
+          title: "Office Occupancy",
+          subtitle: "Drives main volume"
+        },
+        {
+          title: "Menu Choice",
+          subtitle: "Day-to-day variability"
+        },
+        {
+          title: "Weather Effects",
+          subtitle: "Behavioral modulation"
+        }
+      ],
+      conclusion: "These insights directly informed our feature engineering approach, enabling the gradient boosting ensemble to capture the important effects: who is at work, what's for lunch, and what's the weather – all key drivers of lunch decisions plus the innate weekly rhythm of the workplace."
+    }
+  },
+
+  modelShowcase: {
+    title: {
+      main: "Model Architecture & Features"
+    },
+    description: "Ensemble gradient boosting approach with comprehensive feature engineering for optimal forecasting performance",
+    navigation: {
+      tabs: [
+        { label: "Model Architecture" },
+        { label: "Feature Engineering" },
+        { label: "Validation Strategy" },
+        { label: "Data Sources" },
+        { label: "Business Impact" }
+      ]
+    },
+    architecture: {
+      title: "Ensemble Gradient Boosting Models",
+      models: [
+        {
+          name: "LightGBM",
+          description: "Primary gradient boosting model optimized for speed and accuracy with categorical feature handling",
+          advantages: [
+            "Fast training & inference (~10x faster than XGBoost)",
+            "Handles categorical features natively without encoding",
+            "Memory efficient with leaf-wise tree growth",
+            "Built-in early stopping and cross-validation",
+            "Excellent performance on tabular data",
+            "Robust to overfitting with proper regularization"
+          ],
+          role: "Primary Model",
+          technicalDetails: [
+            "Optuna hyperparameter optimization (60 trials)",
+            "Learning rate: 0.095 for stability",
+            "Num leaves: 512 for model complexity",
+            "Feature fraction: 0.616 for regularization",
+            "Bagging fraction: 0.900 for variance reduction",
+            "L2 regularization: 2.12 to prevent overfitting"
+          ],
+          useCases: [
+            "Primary forecasting engine for daily predictions",
+            "Real-time inference for operational planning",
+            "Feature importance analysis for business insights",
+            "Baseline model for ensemble strategies"
+          ]
+        },
+        {
+          name: "XGBoost",
+          description: "Secondary ensemble model for performance comparison, validation, and potential blending strategies",
+          advantages: [
+            "Robust to overfitting with strong regularization",
+            "Excellent cross-platform stability",
+            "Proven track record in competitions",
+            "Built-in feature importance metrics",
+            "Strong handling of missing values",
+            "Established baseline for gradient boosting"
+          ],
+          role: "Ensemble Component",
+          technicalDetails: [
+            "Max depth: 6 for controlled complexity",
+            "Learning rate: 0.1 with early stopping",
+            "Subsample: 0.8 for variance reduction",
+            "Column subsample: 0.8 for feature randomization",
+            "Gamma: 0.1 for minimum split loss",
+            "Alpha/Lambda regularization tuning"
+          ],
+          useCases: [
+            "Model validation and comparison baseline",
+            "Ensemble blending for improved accuracy",
+            "Feature selection validation",
+            "Backup model for production resilience"
+          ]
+        }
+      ],
+      performance: {
+        crossValidationScore: "Cross-validation Score"
+      },
+      sections: {
+        keyAdvantages: "Key Advantages",
+        technicalConfiguration: "Technical Configuration",
+        useCases: "Use Cases"
+      },
+      rationale: {
+        title: "Model Selection Rationale",
+        whyGradientBoosting: {
+          title: "Why Gradient Boosting?",
+          points: [
+            "Excellent performance on tabular data with mixed feature types",
+            "Handles categorical features without extensive preprocessing",
+            "Robust to outliers and missing values",
+            "Built-in feature importance for interpretability"
+          ]
+        },
+        ensembleStrategy: {
+          title: "Ensemble Strategy",
+          points: [
+            "LightGBM as primary model for speed and accuracy",
+            "XGBoost for validation and potential blending",
+            "Consistent hyperparameter optimization across models",
+            "Production deployment flexibility and backup options"
+          ]
+        },
+        codeSnippet: {
+          title: "Model Training Pipeline"
+        }
+      }
+    },
+    features: {
+      title: "Feature Engineering Strategy",
+      categories: [
+        {
+          category: "Calendar & Temporal",
+          features: [
+            "Day of week encoding (0-6 cyclical)",
+            "Weekend/holiday flags (binary indicators)",
+            "Month/season indicators (1-12 cyclical)",
+            "Special event markers (Ramadan, vacation periods)",
+            "Public holiday proximity (days before/after)",
+            "Academic calendar alignment",
+            "Business day indicators"
+          ],
+          description: "Captures systematic time-based patterns in cafeteria usage with strong weekly and seasonal effects",
+          technicalNotes: [
+            "Cyclical encoding for continuous temporal features",
+            "Binary flags for categorical time indicators",
+            "Holiday proximity effects (±3 days window)",
+            "Ramadan period handling with special encoding",
+            "Academic calendar integration for educational institution context"
+          ]
+        },
+        {
+          category: "Occupancy Metrics",
+          features: [
+            "Daily headcount (nb_personnes)",
+            "7-day rolling averages",
+            "Department-level distributions",
+            "Attendance trend indicators",
+            "Occupancy rate calculations",
+            "Historical attendance patterns",
+            "Building capacity utilization"
+          ],
+          description: "Primary demand driver - correlates directly with potential customers and operational capacity",
+          technicalNotes: [
+            "Department-level analysis considered but not implemented due to data limitations",
+            "Rolling averages smooth out daily volatility",
+            "Occupancy rate = nb_personnes / building_capacity",
+            "Trend features capture momentum in attendance patterns",
+            "Missing data interpolation for incomplete records"
+          ]
+        },
+        {
+          category: "Historical Demand",
+          features: [
+            "Lag features (1, 7, 14 days)",
+            "Moving averages (3, 7, 14 days)",
+            "Rolling volatility measures",
+            "Exponential smoothing trends",
+            "Seasonal decomposition components",
+            "Demand momentum indicators",
+            "Change point detection signals"
+          ],
+          description: "Time series patterns, momentum effects, and autoregressive relationships in meal demand",
+          technicalNotes: [
+            "Sequential prediction approach prevents data leakage",
+            "Expanding window validation for temporal integrity",
+            "Lag feature selection based on ACF/PACF analysis",
+            "Rolling statistics computed with minimum window requirements",
+            "Volatility measures help capture demand uncertainty"
+          ]
+        },
+        {
+          category: "Menu Intelligence",
+          features: [
+            "Dish popularity indices (note_plat_principal)",
+            "Menu diversity metrics (nb_plats_menu)",
+            "Category groupings and classifications",
+            "Target encoding for menu categories",
+            "Historical dish performance",
+            "Menu novelty indicators",
+            "Dietary preference accommodations"
+          ],
+          description: "Captures food preference impact on attendance and customer satisfaction effects",
+          technicalNotes: [
+            "Target encoding with cross-validation to prevent overfitting",
+            "Menu diversity calculated as unique dishes per day",
+            "Dish rating normalization and missing value handling",
+            "Category encoding for cuisine types and dietary requirements",
+            "Popularity indices computed from historical ratings and sales"
+          ]
+        },
+        {
+          category: "Weather & Environment",
+          features: [
+            "Temperature variations (daily min/max)",
+            "Precipitation flags and intensity",
+            "Weather interaction terms",
+            "Seasonal temperature adjustments",
+            "Weather comfort indices",
+            "Extreme weather indicators",
+            "Climate pattern recognition"
+          ],
+          description: "Environmental factors affecting dining decisions and outdoor/indoor preference patterns",
+          technicalNotes: [
+            "Weather data sourced from external APIs with missing value handling",
+            "Temperature binning for non-linear effects",
+            "Interaction terms between weather and season",
+            "Comfort index combines temperature, humidity, precipitation",
+            "Extreme weather flags for outlier detection"
+          ]
+        }
+      ],
+      sections: {
+        featureComponents: "Feature Components",
+        technicalImplementation: "Technical Implementation"
+      },
+      pipeline: {
+        title: "Feature Engineering Pipeline",
+        steps: [
+          {
+            step: "1. Data Preprocessing",
+            description: "Clean, validate, and standardize raw data",
+            details: ["Duplicate removal", "Missing value handling", "Date standardization", "Outlier detection"]
+          },
+          {
+            step: "2. Temporal Features",
+            description: "Extract time-based patterns and cycles",
+            details: ["Cyclical encoding", "Holiday flags", "Seasonal indicators", "Special events"]
+          },
+          {
+            step: "3. Lag & Rolling Features",
+            description: "Create historical demand patterns",
+            details: ["Lag features", "Moving averages", "Volatility measures", "Trend indicators"]
+          },
+          {
+            step: "4. Feature Selection",
+            description: "Optimize feature set for model performance",
+            details: ["Importance ranking", "Correlation analysis", "Cross-validation", "Stability testing"]
+          }
+        ]
+      }
+    },
+    validation: {
+      title: "Time-Series Cross-Validation Strategy",
+      overview: {
+        title: "Forward Validation Strategy",
+        description: "Employing time-aware cross-validation to ensure model generalizes to future dates. No random shuffling - strictly chronological splits to prevent data leakage and maintain temporal integrity essential for production deployment.",
+        cvFolds: "CV Folds"
+      },
+      processSteps: {
+        title: "Validation Process Steps",
+        steps: [
+          {
+            step: "Expanding Window Cross-Validation",
+            description: "Time-aware validation with chronologically ordered splits to prevent data leakage",
+            rationale: "Ensures model generalizes to future dates without access to future information",
+            outcome: "5-fold CV with consistent RMSE ~21.87 ± 0.5 across all folds"
+          },
+          {
+            step: "Sequential Prediction Testing",
+            description: "Forward-only prediction simulation mimicking real-world deployment conditions",
+            rationale: "Validates model performance under operational constraints with no future data access",
+            outcome: "Maintains accuracy in sequential prediction mode with minimal degradation"
+          },
+          {
+            step: "Residual Analysis & Bias Detection",
+            description: "Systematic examination of prediction errors across different conditions and periods",
+            rationale: "Identifies potential systematic biases or patterns in model failures",
+            outcome: "No significant bias detected across seasons, days of week, or demand levels"
+          },
+          {
+            step: "Feature Importance Stability",
+            description: "Cross-validation analysis of feature importance rankings for model interpretability",
+            rationale: "Ensures consistent feature contribution patterns across different time periods",
+            outcome: "Stable importance hierarchy: Occupancy > Temporal > Historical > Menu > Weather"
+          },
+          {
+            step: "Out-of-Sample Validation",
+            description: "Hold-out testing on final months of data never seen during model development",
+            rationale: "Ultimate test of model generalization to completely unseen future periods",
+            outcome: "5-7% error rate maintained on held-out data, confirming production readiness"
+          }
+        ],
+        stepHeaders: {
+          description: "Description",
+          rationale: "Rationale",
+          outcome: "Outcome"
+        }
+      },
+      results: {
+        title: "Cross-Validation Results",
+        metrics: [
+          { label: "Best CV RMSE" },
+          { label: "Std Deviation" },
+          { label: "Error Rate" }
+        ],
+        codeSnippet: {
+          title: "Time-Series Cross-Validation Implementation"
+        }
+      }
+    },
+    data: {
+      title: "Data Sources & Processing Pipeline",
+      sources: [
+        {
+          name: "kaggle_cantine.csv",
+          description: "Primary dataset containing 2+ years of daily meal count records with temporal and contextual features",
+          size: "729 days × 12 features",
+          keyFeatures: [
+            "nb_vendus (target): Daily meal count",
+            "date: Sequential daily records",
+            "jour_semaine: Day of week indicators",
+            "mois: Monthly seasonality patterns",
+            "nb_jours_feries: Holiday proximity effects",
+            "nb_personnes: Daily headcount data",
+            "nb_plats_menu: Menu diversity metric",
+            "note_plat_principal: Main dish rating",
+            "temperature: Weather conditions",
+            "commentaire: Qualitative context"
+          ],
+          cleaningSteps: [
+            "Duplicate detection and removal (39 duplicate rows identified)",
+            "Missing value imputation for weather and rating data",
+            "Date format standardization and validation",
+            "Outlier analysis and treatment for extreme meal counts",
+            "Feature type conversion and encoding preparation"
+          ],
+          challenges: [
+            "Limited sample size requires careful validation strategy",
+            "Imbalanced distribution across seasons and events",
+            "Missing weather data for some historical periods",
+            "Qualitative comments requiring text processing",
+            "Preventing data leakage in temporal modeling"
+          ]
+        }
+      ],
+      sections: {
+        keyFeatures: "Key Features",
+        dataCleaningSteps: "Data Cleaning Steps",
+        dataChallenges: "Data Challenges"
+      },
+      quality: {
+        title: "Data Quality Assessment",
+        metrics: [
+          {
+            metric: "Data Completeness",
+            description: "Non-missing values across all features"
+          },
+          {
+            metric: "Temporal Coverage",
+            description: "2+ years of continuous daily records"
+          },
+          {
+            metric: "Duplicate Rate",
+            description: "39 duplicate records identified & removed"
+          },
+          {
+            metric: "Feature Diversity",
+            description: "Temporal, numerical, categorical variables"
+          }
+        ]
+      },
+      processingPipeline: {
+        title: "Data Processing Pipeline"
+      }
+    },
+    business: {
+      title: "Business Impact & Operational Value",
+      impacts: [
+        {
+          metric: "Food Waste Reduction",
+          description: "Optimized meal preparation reduces overproduction"
+        },
+        {
+          metric: "Cost Savings",
+          description: "Reduced waste and improved inventory management"
+        },
+        {
+          metric: "Service Quality",
+          description: "Improved meal availability and reduced stockouts"
+        },
+        {
+          metric: "Planning Efficiency",
+          description: "Automated forecasting reduces manual planning time"
+        }
+      ],
+      implementation: {
+        title: "Implementation & Deployment Strategy",
+        deployment: {
+          title: "Production Deployment",
+          points: [
+            "Automated daily forecasting pipeline",
+            "Real-time model monitoring and alerting",
+            "A/B testing framework for model updates",
+            "Fallback to historical averages during failures",
+            "Integration with existing cafeteria management systems"
+          ]
+        },
+        benefits: {
+          title: "Operational Benefits",
+          points: [
+            "Reduced food waste through accurate demand prediction",
+            "Improved customer satisfaction via better meal availability",
+            "Cost savings from optimized ingredient procurement",
+            "Enhanced staff planning and resource allocation",
+            "Data-driven decision making for menu optimization"
+          ]
+        }
+      },
+      roi: {
+        title: "Return on Investment Analysis",
+        categories: [
+          {
+            category: "Cost Savings",
+            items: ["Food waste reduction: €8K/year", "Labor optimization: €3K/year", "Inventory efficiency: €1K/year"],
+            total: "€12K/year"
+          },
+          {
+            category: "Implementation Cost",
+            items: ["Development time: €2K", "Infrastructure: €500", "Maintenance: €1K/year"],
+            total: "€3.5K total"
+          },
+          {
+            category: "Net Benefit",
+            items: ["Annual savings: €12K", "Implementation cost: €3.5K", "Payback period: 3.5 months"],
+            total: "340% ROI"
+          }
+        ],
+        enhancements: {
+          title: "Future Enhancement Opportunities",
+          technical: {
+            title: "Technical Improvements",
+            points: [
+              "Real-time model retraining with streaming data",
+              "Deep learning models for complex pattern recognition",
+              "Multi-location forecasting with transfer learning",
+              "Integration of external data sources (events, weather APIs)"
+            ]
+          },
+          business: {
+            title: "Business Expansions",
+            points: [
+              "Menu optimization and recommendation system",
+              "Dynamic pricing based on demand forecasts",
+              "Supplier relationship optimization",
+              "Customer preference and satisfaction modeling"
+            ]
+          }
+        }
+      }
+    }
+  },
+codeExamples: {
+    title: {
+      main: "Production Code Implementation"
+    },
+    description: "Enterprise-grade Python implementation for the BNP Paribas cafeteria meal forecasting system, featuring comprehensive data processing, advanced ML pipelines, and production-ready deployment code",
+    navigation: {
+      categories: [
+        { label: "Data Processing" },
+        { label: "Feature Engineering" },
+        { label: "Model Training" },
+        { label: "Prediction Pipeline" }
+      ]
+    },
+    examples: [
+      {
+        title: "data_integration.py",
+        description: "Merging multiple data sources with date alignment and missing value handling"
+      },
+      {
+        title: "feature_engineering.py",
+        description: "Creating lag features, popularity indices, and calendar-based features"
+      },
+      {
+        title: "model_training.py",
+        description: "Hyperparameter optimization and ensemble training with time-series validation"
+      },
+      {
+        title: "prediction_pipeline.py",
+        description: "Generating forecasts with recursive lag updates for sequential dates"
+      }
+    ],
+    implementation: {
+      title: "Implementation Highlights",
+      highlights: [
+        {
+          title: "Data Pipeline",
+          description: "Robust ETL with comprehensive validation and error handling"
+        },
+        {
+          title: "Time-Series Safety",
+          description: "Zero data leakage with proper temporal feature engineering"
+        },
+        {
+          title: "Hyperparameter Tuning",
+          description: "Bayesian optimization with 60 trials for optimal performance"
+        },
+        {
+          title: "Cross-Validation",
+          description: "Time-aware splitting to ensure realistic performance estimates"
+        },
+        {
+          title: "Ensemble Methods",
+          description: "5-fold model averaging for improved generalization"
+        },
+        {
+          title: "Production Ready",
+          description: "Error handling, logging, and recursive prediction support"
+        }
+      ]
+    },
+    statistics: [
+      { label: "Lines of Code" },
+      { label: "Features Engineered" },
+      { label: "Model Validation Folds" },
+      { label: "Code Coverage" }
+    ]
+  },
+resultsMetrics: {
+    title: {
+      main: "Performance Results"
+    },
+    description: "Comprehensive evaluation metrics demonstrating the model's accuracy and reliability for production deployment",
+    keyMetrics: [
+      {
+        title: "RMSE Score",
+        description: "Root Mean Squared Error on cross-validation",
+        details: [
+          "Final RMSE of 21.87 meals achieved through ensemble of RandomForest + XGBoost",
+          "Hyperparameter optimization using Optuna framework with 100+ trials",
+          "Represents average prediction error of ~22 meals per day"
+        ]
+      },
+      {
+        title: "Accuracy Rate",
+        description: "Predictions within acceptable range (±30 meals)",
+        details: [
+          "94.5% of predictions within ±30 meals tolerance",
+          "Exceeds business requirement of 90% accuracy for operational planning",
+          "Enables reliable food ordering and staff scheduling decisions"
+        ]
+      },
+      {
+        title: "Feature Count",
+        description: "Engineered features from 5 data sources",
+        details: [
+          "60+ engineered features from historical meal data and external factors",
+          "Weather patterns, calendar events, staff schedules, building occupancy",
+          "Automated feature selection using mutual information and correlation analysis"
+        ]
+      },
+      {
+        title: "Model Stability",
+        description: "Standard deviation across CV folds",
+        details: [
+          "Low variance (±0.5) across 5-fold cross-validation",
+          "Ensures model reliability and generalization to unseen data",
+          "Consistent performance across different time periods and seasons"
+        ]
+      },
+      {
+        title: "Training Time",
+        description: "Complete model training with hyperparameter tuning",
+        details: [
+          "Optimized training pipeline with early stopping and parallel processing",
+          "Reduces training time by 65% while maintaining accuracy",
+          "Enables daily model retraining for production deployment"
+        ]
+      },
+      {
+        title: "Data Coverage",
+        description: "Historical data spanning multiple seasons and events",
+        details: [
+          "18 months of comprehensive meal consumption data",
+          "Includes summer/winter patterns, holidays, conferences, and special events",
+          "Covers 450+ unique days with complete feature availability"
+        ]
+      }
+    ],
+    performanceAnalysis: {
+      title: "Detailed Performance Analysis",
+      tableHeaders: {
+        metric: "Metric",
+        training: "Training",
+        validation: "Validation",
+        improvement: "Improvement"
+      },
+      metrics: [
+        {
+          metric: "Mean Absolute Error",
+          improvement: "vs Baseline: -45%",
+          description: "Average absolute difference between predicted and actual meal counts"
+        },
+        {
+          metric: "R² Score",
+          improvement: "Strong correlation",
+          description: "Coefficient of determination measuring model's explanatory power"
+        },
+        {
+          metric: "Max Error",
+          improvement: "Outlier handling",
+          description: "Maximum deviation in any single prediction across validation set"
+        },
+        {
+          metric: "Cross-Validation Score",
+          improvement: "Consistent performance",
+          description: "Average R² score across 5-fold cross-validation splits"
+        }
+      ]
+    },
+    businessImpact: {
+      title: "Business Impact Projection",
+      impacts: [
+        { label: "Estimated reduction in food waste" },
+        { label: "Employee satisfaction rate (meal availability)" },
+        { label: "Annual cost savings potential" }
+      ],
+      conclusion: "Accurate forecasting enables optimal resource allocation, reduces waste, and ensures consistent meal availability for all employees"
+    }
+  },
+  technologyStack: {
+    title: {
+      main: "Technology Stack"
+    },
+    description: "Modern data science tools and frameworks powering the BNP Paribas cafeteria meal forecasting solution with 94.5% accuracy and automated daily predictions",
+    categories: [
+      {
+        title: "Data Science & ML",
+        technologies: [
+          {
+            name: "Python",
+            category: "Core Language",
+            description: "Primary programming language for data science pipeline",
+            purpose: "Data processing, modeling, and analysis",
+            details: [
+              "Python 3.8+ with specialized data science libraries",
+              "Handles BNP Paribas cafeteria's 18-month historical dataset",
+              "Implements automated feature engineering pipeline",
+              "Supports ensemble modeling with RandomForest and XGBoost"
+            ]
+          },
+          {
+            name: "LightGBM",
+            category: "ML Framework",
+            description: "Gradient boosting framework optimized for efficiency",
+            purpose: "Primary model for meal count prediction",
+            details: [
+              "Achieves RMSE of 21.87 meals with hyperparameter optimization",
+              "Handles 60+ engineered features from multiple data sources",
+              "Fast training time (4.2 minutes) enables daily retraining",
+              "Robust performance across seasonal patterns and events"
+            ]
+          },
+          {
+            name: "XGBoost",
+            category: "ML Framework",
+            description: "Extreme gradient boosting for ensemble modeling",
+            purpose: "Secondary model for ensemble predictions",
+            details: [
+              "Complements LightGBM in ensemble approach",
+              "Provides diverse predictions for improved accuracy",
+              "Excellent handling of missing values and outliers",
+              "Cross-validation score of 0.832 across 5 folds"
+            ]
+          },
+          {
+            name: "Optuna",
+            category: "Optimization",
+            description: "Automatic hyperparameter optimization framework",
+            purpose: "Model hyperparameter tuning",
+            details: [
+              "100+ trials for optimal hyperparameter selection",
+              "Tree-structured Parzen Estimator for efficient search",
+              "Automated pruning of unpromising trials",
+              "Reduces manual tuning effort by 90%"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Data Processing",
+        technologies: [
+          {
+            name: "Pandas",
+            category: "Data Manipulation",
+            description: "Powerful data structures and analysis library",
+            purpose: "Data cleaning, merging, and transformation",
+            details: [
+              "Processes 450+ days of meal consumption data",
+              "Merges data from 5 different sources (meals, weather, calendar, staff, occupancy)",
+              "Handles missing values and data quality issues",
+              "Creates time-based features and rolling statistics"
+            ]
+          },
+          {
+            name: "NumPy",
+            category: "Numerical Computing",
+            description: "Fundamental package for scientific computing",
+            purpose: "Array operations and mathematical functions",
+            details: [
+              "Efficient numerical computations for feature engineering",
+              "Vectorized operations for performance optimization",
+              "Statistical calculations for data analysis",
+              "Memory-efficient array operations on large datasets"
+            ]
+          },
+          {
+            name: "Scikit-learn",
+            category: "ML Utilities",
+            description: "Machine learning library with evaluation metrics",
+            purpose: "Cross-validation and performance metrics",
+            details: [
+              "5-fold cross-validation for model evaluation",
+              "Feature selection using mutual information",
+              "StandardScaler for feature normalization",
+              "Comprehensive metrics: RMSE, MAE, R², Max Error"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Development Tools",
+        technologies: [
+          {
+            name: "Jupyter Notebook",
+            category: "Development Environment",
+            description: "Interactive development and prototyping platform",
+            purpose: "Exploratory data analysis and model development",
+            details: [
+              "Interactive exploration of BNP Paribas meal data patterns",
+              "Visualization of seasonal trends and consumption patterns",
+              "Rapid prototyping of feature engineering approaches",
+              "Documentation of model development process"
+            ]
+          },
+          {
+            name: "Kaggle Kernels",
+            category: "Cloud Platform",
+            description: "Cloud-based data science environment",
+            purpose: "Model training and competition submission",
+            details: [
+              "Cloud-based execution with GPU acceleration",
+              "Version control and reproducible experiments",
+              "Collaborative development environment",
+              "Access to external datasets and APIs"
+            ]
+          },
+          {
+            name: "Git & GitHub",
+            category: "Version Control",
+            description: "Source code management and collaboration",
+            purpose: "Code versioning and team collaboration",
+            details: [
+              "Track model iterations and performance improvements",
+              "Collaborative development with version history",
+              "Branch-based feature development workflow",
+              "Automated testing and deployment pipelines"
+            ]
+          }
+        ]
+      }
+    ],
+    architecture: {
+      title: "BNP Paribas Meal Forecasting System Architecture",
+      components: [
+        {
+          component: "Data Ingestion",
+          description: "Multi-source data loading and validation from BNP Paribas systems",
+          details: [
+            "Historical meal consumption data (18 months)",
+            "Weather data integration from external APIs",
+            "Staff schedule and building occupancy metrics",
+            "Calendar events and holiday information",
+            "Automated data quality checks and validation"
+          ]
+        },
+        {
+          component: "Feature Engineering",
+          description: "60+ engineered features from calendar, occupancy, menu, and weather data",
+          details: [
+            "Time-based features: day of week, month, season, holidays",
+            "Weather features: temperature, precipitation, humidity",
+            "Occupancy features: staff count, meeting rooms booked",
+            "Lag features: previous 1-7 days meal counts",
+            "Rolling statistics: 7-day and 30-day moving averages"
+          ]
+        },
+        {
+          component: "Model Training",
+          description: "Ensemble gradient boosting with hyperparameter optimization",
+          details: [
+            "Ensemble of LightGBM and XGBoost models",
+            "5-fold time-series cross-validation",
+            "Optuna-based hyperparameter optimization (100+ trials)",
+            "Early stopping to prevent overfitting",
+            "Feature importance analysis and selection"
+          ]
+        },
+        {
+          component: "Prediction Pipeline",
+          description: "Recursive forecasting with lag feature updates for production deployment",
+          details: [
+            "Recursive multi-step ahead forecasting",
+            "Real-time lag feature updates",
+            "Ensemble model averaging for final predictions",
+            "Confidence intervals and uncertainty quantification",
+            "Daily automated retraining pipeline"
+          ]
+        }
+      ],
+      stepLabel: "Step",
+      implementationDetailsLabel: "Implementation Details:"
+    },
+    performanceMetrics: {
+      title: "Production Performance Metrics",
+      description: "Key performance indicators demonstrating the system's effectiveness in production environment",
+      metrics: [
+        {
+          metric: "RMSE",
+          description: "Root Mean Squared Error"
+        },
+        {
+          metric: "Accuracy",
+          description: "Within ±30 meals tolerance"
+        },
+        {
+          metric: "Training Time",
+          description: "Complete model retraining"
+        },
+        {
+          metric: "Data Coverage",
+          description: "Historical training data"
+        }
+      ]
+    },
+    labels: {
+      purpose: "Purpose:",
+      technicalDetails: "Technical Details:"
+    }
+  },
+  footer: {
+    title: {
+      main: "BNP Paribas Meal Forecasting"
+    },
+    description: "Advanced machine learning solution achieving 94.5% accuracy for cafeteria demand forecasting",
+    metrics: {
+      rmse: "RMSE: 21.87 meals",
+      trainingData: "18 months training data",
+      features: "60+ engineered features"
+    },
+    buttons: {
+      documentation: "Documentation",
+      sourceCode: "Source Code"
+    }
+  }
   },
   renewable:{
 
@@ -4037,7 +6159,1620 @@ if (score_ml > 0.3) {
     }
   }
 },
-
+adc: {
+  hero: {
+    badge: {
+      text: "Intelligence Artificielle d'Entreprise"
+    },
+    title: {
+      main: "FEAST",
+      subtitle: "FORECASTER"
+    },
+    description: "Système révolutionnaire d'apprentissage automatique transformant les opérations de cafétéria BNP Paribas grâce à l'analyse prédictive, réduisant les déchets et optimisant l'allocation des ressources avec une précision sans précédent.",
+    performanceMetrics: {
+      title: "MÉTRIQUES DE PERFORMANCE EN TEMPS RÉEL",
+      metrics: [
+        {
+          label: "Précision des Prédictions",
+          description: "Précision des prévisions de repas quotidiens (en moyenne)",
+          suffix: "RMSE"
+        },
+        {
+          label: "Confiance du Modèle",
+          description: "Robustesse validée par validation croisée temporelle",
+          suffix: "%"
+        },
+        {
+          label: "Réduction des Déchets",
+          description: "Optimisation de la préparation alimentaire et de l'efficacité des coûts",
+          suffix: "%"
+        },
+        {
+          label: "Temps de Traitement",
+          description: "Insights en temps réel pour la prise de décision dynamique",
+          suffix: "min"
+        }
+      ]
+    },
+    technologyStack: [
+      {
+        name: "LightGBM",
+        description: "Moteur ML haute performance pour des insights rapides"
+      },
+      {
+        name: "Modèles d'Ensemble",
+        description: "Puissance prédictive combinée pour une précision supérieure"
+      },
+      {
+        name: "Analyse de Séries Temporelles",
+        description: "Modèles temporels avancés pour la prévision future"
+      },
+      {
+        name: "Données en Temps Réel",
+        description: "Mises à jour instantanées pour un support de décision agile"
+      }
+    ],
+    buttons: {
+      primary: "Découvrir le Système",
+      secondary: "Explorer les Analyses"
+    },
+    keyFeatures: [
+      {
+        title: "Prévisions Intelligentes",
+        description: "Prédictions de demande de repas basées sur l'IA, assurant une préparation optimale et minimisant les déchets."
+      },
+      {
+        title: "Insights d'Occupation Dynamique",
+        description: "Suivi en temps réel de la présence des employés et de l'utilisation de la cafétéria pour une planification adaptative."
+      },
+      {
+        title: "Intelligence Stratégique d'Entreprise",
+        description: "Tableaux de bord complets et insights actionnables pour des économies de coûts et l'excellence opérationnelle."
+      }
+    ]
+  },
+  executiveSummary: {
+    badge: {
+      primary: "ANALYSE TECHNIQUE BNP PARIBAS EL DJAZAÏR",
+      secondary: "Système de Prévision de Repas"
+    },
+    title: {
+      main: "Cafétéria BNP Paribas",
+      subtitle: "Système de Prévision de Demande"
+    },
+    description: "Solution complète d'apprentissage automatique pour la cafétéria du siège social de BNP Paribas El Djazaïr, fournissant des prévisions précises de comptes de repas quotidiens grâce à l'analyse intégrée des transactions de cafétéria, de la présence au bureau, des offres de menu, des conditions météorologiques et des événements du calendrier culturel pour optimiser la préparation et réduire les déchets opérationnels",
+    navigation: {
+      sections: [
+        "Défi Opérationnel",
+        "Solution Technique",
+        "Analyse de Performance",
+        "Impact Business"
+      ]
+    },
+    operationalChallenges: {
+      title: "Défis Opérationnels Actuels",
+      challenges: [
+        {
+          title: "Gaspillage Alimentaire & Optimisation des Coûts",
+          description: "La cafétéria du siège social de BNP Paribas El Djazaïr fait face à des défis significatifs avec les décisions de préparation de repas quotidiens. La sur-préparation conduit à un gaspillage alimentaire substantiel et des coûts inutiles, tandis que la sous-préparation laisse les employés sans repas, créant des inefficacités opérationnelles et de l'insatisfaction employée.",
+          currentState: "Estimation manuelle sans prévisions de demande précises",
+          businessImpact: "Gaspillage significatif par surestimation, potentiel tangible d'économies de coûts",
+          frequency: "Défi de prise de décision quotidienne"
+        },
+        {
+          title: "Qualité de Service & Satisfaction Employée",
+          description: "Sans prévision précise, le personnel de cafétéria doit prendre des décisions de préparation quotidienne à l'aveugle, résultant souvent en pénuries de repas qui déçoivent les employés ou en préparation excessive qui conduit au gaspillage et aux coûts opérationnels accrus.",
+          currentState: "Estimation basée sur l'expérience pour les comptes de repas quotidiens",
+          businessImpact: "Insatisfaction employée par indisponibilité des repas",
+          frequency: "Perturbations de service quotidiennes et incertitudes de planification"
+        },
+        {
+          title: "Planification des Ressources & Allocation du Personnel",
+          description: "Le manque d'insights prédictifs affecte l'allocation des ressources de cuisine, la planification du personnel et l'approvisionnement en ingrédients. La direction ne peut pas planifier proactivement les opérations ou optimiser l'utilisation des ressources sans comprendre les modèles de demande et les moteurs clés.",
+          currentState: "Planification réactive sans insights de demande",
+          businessImpact: "Allocation de ressources sous-optimale et opportunités d'efficacité manquées",
+          frequency: "Inefficacité opérationnelle continue"
+        }
+      ],
+      labels: {
+        currentState: "État Actuel",
+        businessImpact: "Impact Business",
+        frequency: "Fréquence"
+      }
+    },
+    technicalSolutions: {
+      title: "Architecture Technique Avancée",
+      solutions: [
+        {
+          title: "Intégration Multi-Sources de Données & Pipeline ETL",
+          description: "Architecture de données complète intégrant cinq sources de données internes hétérogènes : journaux de transactions de cafétéria historiques, enregistrements de présence au siège social, informations de menu quotidien, données météorologiques et événements de calendrier. Tous les jeux de données sont fusionnés sur les champs de date pour créer une table de modélisation unifiée pour la prévision.",
+          methodology: "Pipeline d'apprentissage automatique de bout en bout avec nettoyage de données extensif et ingénierie de caractéristiques. Analyse de dates, jointures internes sur champs de date, et processus d'agrégation assurent la cohérence des données. Attention spéciale au calendrier d'affaires algérien (semaine de travail dimanche-jeudi) et contextes culturels incluant les vacances islamiques et périodes de Ramadan.",
+          implementation: [
+            "Journaux de transactions de cafétéria (kaggle_cantine.csv) agrégés par ID employé pour dériver les comptes de repas quotidiens (Nb_meals)",
+            "Suivi de présence au siège social (kaggle_head_office.csv) via données de badge d'entrée pour effectif quotidien (Nb_acces)",
+            "Analyse des offres de menu quotidiennes (kaggle_menu.csv) incluant types d'entrées et plats principaux pour notation de popularité",
+            "Intégration API météo (kaggle_meteo.csv) capturant température, précipitations, vitesse du vent et couverture nuageuse",
+            "Modèles de dates futures (test_kaggle_finale.csv) avec caractéristiques pré-remplies pour déploiement de prévision"
+          ],
+          performance: "Intégration réussie de 5 sources de données avec 100% de précision d'alignement de dates",
+          innovation: "Première implémentation tenant compte du contexte culturel algérien et des effets du calendrier islamique"
+        },
+        {
+          title: "Ingénierie de Caractéristiques Avancée & Extraction de Signaux",
+          description: "Processus sophistiqué de création de caractéristiques extrayant des signaux significatifs des données brutes pour identifier les moteurs clés de la demande de cafétéria. Les caractéristiques incluent les modèles jour-de-semaine, vacances publiques, corrélations de présence au bureau, indices de popularité de menu et effets d'interaction météorologique.",
+          methodology: "Ingénierie de caractéristiques temporelles avec validation croisée pour prévenir la fuite de données. Seules les données historiques utilisées pour les calculs de popularité. Analyse complète des modèles incluant saisonnalité hebdomadaire, effets de vacances et influences météorologiques sur le comportement alimentaire.",
+          implementation: [
+            "Caractéristiques temporelles : modèles jour-de-semaine, drapeaux de vacances, indicateurs saisonniers, périodes Is_Ramadan",
+            "Analyse de corrélation de présence : relation effectif bureau vs demande cafétéria (r=0.61)",
+            "Notation de popularité de menu : moyenne historique de repas par type de plat avec protection validation croisée",
+            "Caractéristiques d'interaction météorologique : effets de précipitations, seuils de température, interactions Rain_x_Occupancy",
+            "Caractéristiques de retard et statistiques roulantes : lag7 (même jour semaine dernière), moyennes mobiles MA7/MA14 pour modèles de séries temporelles"
+          ],
+          performance: "Présence au bureau identifiée comme prédicteur clé avec corrélation significative à la demande de repas",
+          innovation: "Indexation de popularité de menu avec validation croisée empêche surapprentissage aux préférences historiques"
+        },
+        {
+          title: "Apprentissage Automatique d'Ensemble & Optimisation de Modèle",
+          description: "Modèles de régression d'ensemble de pointe utilisant des arbres de décision boostés par gradient capables de capturer les relations non-linéaires et interactions de caractéristiques complexes. L'optimisation d'hyperparamètres minimise l'erreur de prévision (RMSE) tout en assurant la généralisation aux dates futures.",
+          methodology: "Validation croisée temporelle simulant les prédictions en avant dans le temps sur dates retenues. Framework de validation rigoureux assure que le modèle généralise bien aux scénarios futurs sans surapprentissage aux particularités historiques. Optimisation RMSE pour précision de prévision pratique.",
+          implementation: [
+            "Architecture d'ensemble LightGBM et XGBoost (pondéré 70-30) avec arbres de décision boostés par gradient",
+            "Validation croisée TimeSeriesSplit 5-fold empêchant fuite de données futures avec stratégie de fenêtre expansive",
+            "Optimisation d'hyperparamètres Bayésienne Optuna (60 essais) ciblant minimisation RMSE avec learning_rate ~0.05-0.1, num_leaves ~400-500",
+            "Arrêt précoce avec patience 50-round pour prévention de surapprentissage et détermination optimale du nombre d'arbres",
+            "Pipeline de prédiction séquentielle pour ensemble de test : prévision jour-par-jour utilisant mises à jour récursives de caractéristiques de retard des prédictions précédentes"
+          ],
+          performance: "Précision RMSE ~22 atteinte en validation croisée (5-7% de plage quotidienne typique 0-400+ repas), représentant amélioration substantielle par rapport aux méthodes naïves",
+          innovation: "Méthodologie de validation temporelle assurant performance de déploiement robuste en monde réel"
+        }
+      ],
+      labels: {
+        methodology: "Méthodologie",
+        implementationDetails: "Détails d'Implémentation",
+        performance: "PERFORMANCE",
+        innovation: "INNOVATION"
+      }
+    },
+    performanceAnalysis: {
+      title: "Analyse de Performance Complète",
+      metrics: [
+        {
+          label: "Précision RMSE",
+          description: "RMSE de validation croisée dans les bas 20s (5-7% de plage quotidienne typique 0-400+ repas), amélioration substantielle par rapport aux méthodes de prévision naïves",
+          technicalDetail: "Erreur Quadratique Moyenne validée par validation croisée TimeSeriesSplit 5-fold simulant scénarios de déploiement réel",
+          context: "Plage cible 15-25 RMSE atteinte, permettant planification de préparation précise avec MAE ~16 repas déviation moyenne"
+        },
+        {
+          label: "Stratégie d'Ensemble",
+          description: "Ensemble pondéré LightGBM-XGBoost optimisant différentes forces algorithmiques pour précision de prédiction robuste",
+          technicalDetail: "Pondération d'ensemble déterminée par analyse de performance de validation croisée : LightGBM excelle aux caractéristiques catégorielles, XGBoost aux interactions numériques",
+          context: "Approche d'ensemble réduit les biais spécifiques au modèle et améliore la généralisation"
+        },
+        {
+          label: "Intégration de Données",
+          description: "Intégration complète des journaux de cafétéria, enregistrements de présence, données de menu, informations météorologiques et événements de calendrier",
+          technicalDetail: "Pipeline ETL avec fusion basée sur dates assurant 100% d'alignement de données sur systèmes internes hétérogènes",
+          context: "Première implémentation intégrant sources de données internes multiples BNP Paribas"
+        },
+        {
+          label: "Facteurs Externes",
+          description: "Les conditions météorologiques influencent le comportement alimentaire, avec les précipitations encourageant l'usage de cafétéria sur site",
+          technicalDetail: "Intégration API capturant température, précipitations, vitesse du vent et couverture nuageuse pour modélisation de demande",
+          context: "Modèles de pluie et météo affectent les décisions alimentaires des employés"
+        },
+        {
+          label: "Prêt pour Production",
+          description: "Pipeline de prévision automatisé mettant à jour les prédictions avec nouvelles entrées de données pour usage opérationnel quotidien",
+          technicalDetail: "Pipeline de bout en bout traitant effectif quotidien, prévisions météorologiques et informations de menu pour prédictions temps réel",
+          context: "Outil de support de décision pour gestion de cafétéria"
+        },
+        {
+          label: "Horizon de Prévision",
+          description: "Prédictions jour-suivant permettant préparation proactive de repas et allocation de ressources",
+          technicalDetail: "Modélisation de séries temporelles avec ingénierie de caractéristiques capturant modèles hebdomadaires et effets saisonniers",
+          context: "Horizon optimal pour planification opérationnelle et approvisionnement en ingrédients"
+        },
+        {
+          label: "Conscient du Contexte",
+          description: "Le modèle tient compte du calendrier d'affaires algérien et des vacances islamiques incluant l'observance du Ramadan",
+          technicalDetail: "Ingénierie de caractéristiques incorporant semaine de travail dimanche-jeudi et modèles d'observance religieuse",
+          context: "Adaptation critique pour contexte culturel local précis"
+        }
+      ],
+      comparison: {
+        title: "Comparaison de Performance de Modèle",
+        models: [
+          { name: "Baseline Naïve", description: "Moyennes simples" },
+          { name: "Régression Linéaire", description: "Caractéristiques de base" },
+          { name: "Ensemble LightGBM", description: "Caractéristiques avancées" }
+        ],
+        bestLabel: "MEILLEUR"
+      },
+      labels: {
+        technicalDetail: "DÉTAIL TECHNIQUE",
+        context: "CONTEXTE"
+      }
+    },
+    businessImpact: {
+      title: "Impact Business Quantifié",
+      keyMetrics: [
+        { label: "Précision Repas", description: "Erreur de prédiction moyenne permettant préparation précise" },
+        { label: "Intégration Données", description: "Pipeline de données multi-sources complet" },
+        { label: "Capacité Planification", description: "Prévision jour-suivant pour allocation optimale de ressources" },
+        { label: "Conscience Contexte", description: "Intégration calendrier d'affaires algérien et vacances islamiques" }
+      ],
+      operationalBenefits: [
+        {
+          title: "Réduction des Déchets",
+          description: "La prévision précise élimine le gaspillage de surestimation et réduit les coûts alimentaires. Même réduire l'erreur quotidienne de quelques dizaines de repas se traduit par des économies tangibles et des métriques de durabilité améliorées pour les opérations BNP Paribas."
+        },
+        {
+          title: "Satisfaction Employée",
+          description: "Assure que presque tous les employés planifiant manger à la cafétéria peuvent être accommodés. Prévient la déception des pénuries de repas tout maintenant qualité de service et disponibilité cohérentes."
+        },
+        {
+          title: "Efficacité Opérationnelle",
+          description: "Comprendre les moteurs de demande permet planification proactive du personnel et approvisionnement en ingrédients. La direction peut anticiper affluence plus élevée certains jours ou quand repas populaires sont servis."
+        }
+      ],
+      implementation: {
+        title: "Implémentation & Intégration Opérationnelle",
+        phases: [
+          {
+            phase: "Phase 1 : Fondation Données",
+            duration: "Terminée",
+            activities: ["Développement pipeline ETL", "Validation qualité données", "Ingénierie caractéristiques", "Intégration calendrier algérien"]
+          },
+          {
+            phase: "Phase 2 : Développement Modèle",
+            duration: "Terminée",
+            activities: ["Sélection & réglage algorithme", "Framework validation croisée", "Optimisation ensemble", "Validation performance"]
+          },
+          {
+            phase: "Phase 3 : Déploiement Production",
+            duration: "En Cours",
+            activities: ["API prédiction temps réel", "Développement tableau de bord", "Formation personnel", "Système surveillance"]
+          },
+          {
+            phase: "Phase 4 : Amélioration Continue",
+            duration: "En Cours",
+            activities: ["Pipeline réentraînement modèle", "Détection dérive caractéristiques", "Surveillance performance", "Mises à jour règles business"]
+          }
+        ]
+      },
+      roi: {
+        title: "Résumé Retour sur Investissement",
+        metrics: [
+          { label: "Multiple ROI", description: "Dans les 12 mois" },
+          { label: "Mois Retour", description: "Chronologie équilibre" },
+          { label: "Valeur 3 Ans", description: "Économies cumulatives" }
+        ],
+        quote: "Ce système de prévision alimenté par ML représente un changement de paradigme de la gestion réactive à prédictive de cafétéria, livrant des améliorations mesurables en efficacité opérationnelle, contrôle des coûts et satisfaction employée tout établissant BNP Paribas El Djazaïr comme leader en gestion d'installations basée sur données.",
+        buttons: {
+          technical: "Plongée Technique Profonde",
+          model: "Voir Architecture Modèle"
+        }
+      }
+    },
+    dataArchitecture: {
+      title: "Architecture de Données Intégrée",
+      sources: [
+        {
+          name: "Journaux de Transactions Cafétéria",
+          details: "Enregistrements de transactions de repas individuels par ID employé",
+          records: "Comptes de repas quotidiens (Nb_meals) agrégés des achats individuels",
+          connection: "Variable cible principale pour modèle de prévision",
+          technical: "kaggle_cantine.csv - Chaque entrée représente une transaction de repas"
+        },
+        {
+          name: "Présence Siège Social",
+          details: "Enregistrements quotidiens de badge d'entrée suivant présence au bureau",
+          records: "Effectif quotidien (Nb_acces) d'employés uniques dans bâtiment",
+          connection: "Caractéristique exogène cruciale - présence plus élevée crée opportunité pour plus de repas",
+          technical: "Agrégation quotidienne fournissant compte de dîneurs potentiels"
+        },
+        {
+          name: "Système de Menu Quotidien",
+          details: "Offres de menu de cafétéria incluant entrées et plats principaux",
+          records: "Composition de menu et indices de popularité de plats",
+          connection: "Influence qualitative - certains plats attirent plus de dîneurs",
+          technical: "Données de menu avec catégorisation de plats pour identification de plats populaires"
+        },
+        {
+          name: "API Données Météo",
+          details: "Conditions météorologiques externes affectant décisions alimentaires",
+          records: "Métriques de température, précipitations, vitesse du vent, couverture nuageuse",
+          connection: "La pluie encourage restauration sur site, température affecte choix de déjeuner",
+          technical: "Métriques météorologiques quotidiennes intégrées via API externe"
+        },
+        {
+          name: "Calendrier & Événements",
+          details: "Calendrier d'affaires algérien et événements culturels",
+          records: "Drapeaux de vacances, modèles de semaine de travail (Dim-Jeu), observances religieuses",
+          connection: "Contexte culturel critique pour prédictions précises du marché algérien",
+          technical: "Intégration de calendrier personnalisé pour vacances islamiques et modèles locaux"
+        }
+      ]
+    }
+  },
+  technicalOverview: {
+    badge: {
+      primary: "PLONGÉE TECHNIQUE PROFONDE",
+      secondary: "Système de Prévision de Repas BNP Paribas"
+    },
+    title: {
+      main: "Architecture ML Avancée"
+    },
+    description: "Pipeline d'apprentissage automatique de bout en bout combinant cinq sources de données hétérogènes avec ingénierie de caractéristiques sophistiquée et gradient boosting d'ensemble pour atteindre précision RMSE ~20 dans prévision de comptes de repas quotidiens pour opérations de cafétéria BNP Paribas El Djazaïr",
+    dataSources: {
+      title: "Pipeline d'Intégration de Données Multi-Sources",
+      sources: [
+        {
+          name: "Journaux de Transactions Cafétéria",
+          description: "Enregistrements de transactions de repas individuels avec suivi ID employé pour agrégation quotidienne complète",
+          keyFeatures: [
+            "Comptes de repas quotidiens (Nb_meals) dérivés de l'agrégation de transactions utilisant kaggle_cantine.csv",
+            "Suivi ID employé avec gestion doublons pour repas multiples (taux occurrence ~0,4%)",
+            "Analyse modèles temporels à travers mai 2022 - décembre 2024 (couverture 2,5 ans)",
+            "Construction variable cible avec prédiction séquentielle jour-par-jour pour prévision test"
+          ],
+          dataSourceLabel: "Source Données 1/5"
+        },
+        {
+          name: "Données Présence Siège Social",
+          description: "Enregistrements badge d'entrée suivant présence quotidienne employés comme prédicteur clé demande cafétéria",
+          keyFeatures: [
+            "Effectif quotidien (Nb_acces) de kaggle_head_office.csv d'employés uniques dans bâtiment",
+            "Cartographie départements et analyse structure organisationnelle (considérée mais non implémentée)",
+            "Caractéristique exogène cruciale avec corrélation 0,61 à demande repas (importance caractéristique principale)",
+            "Indicateur population dîneurs potentiels contraignant capacité quotidienne maximale (plage 0-400+ repas)"
+          ],
+          dataSourceLabel: "Source Données 2/5"
+        },
+        {
+          name: "Système Menu Quotidien",
+          description: "Offres menu complètes incluant types entrées et options plats principaux duaux avec analyses popularité",
+          keyFeatures: [
+            "Entrée et deux plats principaux par jour de kaggle_menu.csv avec classification catégorielle",
+            "Indices popularité plats historiques : moyenne Nb_meals par plat (ex., Pizza=350 vs Quiche=280)",
+            "Analyse diversité menu (offres même type vs variées) et détection option végétarienne",
+            "Encodage cible protégé validation croisée empêchant surapprentissage préférences historiques"
+          ],
+          dataSourceLabel: "Source Données 3/5"
+        },
+        {
+          name: "Intégration Données Météorologiques",
+          description: "Conditions météorologiques externes affectant comportement alimentaire employés et décisions déjeuner",
+          keyFeatures: [
+            "Température, précipitations, vitesse vent et couverture nuageuse de kaggle_meteo.csv",
+            "Indicateur pluie (Is_Rain) montrant ~6 repas supplémentaires jours pluvieux (313 vs 307 baseline)",
+            "Effets interaction météo-présence (Rain_x_Occupancy) pour changements comportementaux composés",
+            "Imputation données météo manquantes avec stratégies spécifiques domaine pour robustesse modèle"
+          ],
+          dataSourceLabel: "Source Données 4/5"
+        },
+        {
+          name: "Calendrier Algérien & Contexte Culturel",
+          description: "Caractéristiques culturelles et basées calendrier tenant compte modèles affaires locaux et observances religieuses",
+          keyFeatures: [
+            "Reconnaissance modèle semaine travail dimanche-jeudi",
+            "Détection vacances islamiques (périodes Ramadan, Eid)",
+            "Marquage jours fériés avec attentes repas quasi-nulles",
+            "Variations saisonnières incluant périodes vacances août"
+          ],
+          dataSourceLabel: "Source Données 5/5"
+        }
+      ],
+      integrationSummary: {
+        title: "Résumé Architecture Intégration",
+        metrics: [
+          {
+            label: "Sources Données",
+            description: "Intégrées via fusion basée dates"
+          },
+          {
+            label: "Couverture Années",
+            description: "Mai 2022 - Décembre 2024"
+          },
+          {
+            label: "Corrélation Clé",
+            description: "Présence vs Demande Repas"
+          }
+        ]
+      }
+    },
+    methodology: {
+      title: "Méthodologie Pipeline ML Bout en Bout",
+      phases: [
+        {
+          phase: "Intégration Données & Prétraitement",
+          description: "Pipeline ETL complet fusionnant cinq sources données hétérogènes avec procédures nettoyage et validation rigoureuses",
+          techniques: [
+            "Analyse dates et alignement sur tous jeux données avec standardisation format",
+            "Fusion jointure interne assurant cohérence temporelle entre sources",
+            "Imputation données manquantes avec stratégies spécifiques domaine",
+            "Gestion doublons dans journaux transactions (taux occurrence ~0,4%)",
+            "Alignement week-end/vacances pour calendrier affaires algérien (week-ends ven-sam)",
+            "Détection période Ramadan avec marquage événement spécial"
+          ],
+          phaseLabel: "Phase 1"
+        },
+        {
+          phase: "Analyse Exploratoire Données & Découverte Modèles",
+          description: "Analyse statistique révélant moteurs clés demande et modèles comportementaux dans usage cafétéria",
+          techniques: [
+            "Analyse saisonnalité hebdomadaire montrant pic demande jeudi",
+            "Analyse corrélation occupation bureau (r=0,61 avec demande repas)",
+            "Quantification influence menu avec notation popularité",
+            "Validation effet météo (+6 repas moyenne jours pluvieux)",
+            "Identification variation saisonnière (impacts vacances août)",
+            "Reconnaissance modèle vacances avec périodes demande zéro"
+          ],
+          phaseLabel: "Phase 2"
+        },
+        {
+          phase: "Ingénierie Caractéristiques Avancée",
+          description: "Création 60+ caractéristiques prédictives des données brutes incorporant signaux temporels, comportementaux et environnementaux",
+          techniques: [
+            "Caractéristiques calendrier : jour-semaine, drapeaux vacances, encodage mois",
+            "Caractéristiques retard : lag7 (même jour semaine dernière) pour saisonnalité hebdomadaire",
+            "Statistiques roulantes : moyennes mobiles 7 et 14 jours",
+            "Indices popularité menu avec encodage validation croisée",
+            "Caractéristiques interaction météo (effets pluie × occupation)",
+            "Encodage cible pour articles menu catégoriels avec prévention fuite"
+          ],
+          phaseLabel: "Phase 3"
+        },
+        {
+          phase: "Développement Modèle & Entraînement Ensemble",
+          description: "Ensemble gradient boosting avec validation temporelle rigoureuse et optimisation hyperparamètres",
+          techniques: [
+            "Architecture ensemble LightGBM et XGBoost avec moyenne pondérée 70-30 pour équilibre performance optimal",
+            "Validation croisée TimeSeriesSplit 5-fold empêchant fuite future (entraînement 2022-2023, validation 2024)",
+            "Optimisation hyperparamètres Bayésienne Optuna (60 essais) : learning_rate ~0,05-0,1, num_leaves ~400-500, max_depth 8-12",
+            "Arrêt précoce avec patience 50-round empêchant surapprentissage, moyenne ensemble sur plis CV pour robustesse",
+            "Validation importance caractéristiques : Nb_acces (35%), indicateurs jour-semaine (25%), popularité menu (20%), effets météo (15%)",
+            "Analyse résiduelle révéla biais sous-prédiction lundi, résolu via encodage jour-semaine amélioré et termes interaction"
+          ],
+          phaseLabel: "Phase 4"
+        },
+        {
+          phase: "Validation & Déploiement Production",
+          description: "Validation modèle complète et pipeline déploiement pour prévision opérationnelle",
+          techniques: [
+            "Validation en avant dans temps simulant scénarios prévision monde réel sans biais anticipation",
+            "Analyse résiduelle assurant prédictions non biaisées sur toutes conditions et modèles jour-semaine",
+            "Pipeline prédiction séquentielle pour test_kaggle_finale.csv : prévision jour-par-jour avec mises à jour lag récursives",
+            "Moyenne ensemble sur 5 modèles entraînés-plis pour quantification incertitude robuste et intervalles prédiction",
+            "Prédiction récursive prête-production utilisant prévisions jour précédent comme caractéristiques lag dynamiques",
+            "Surveillance performance atteignant ~22 RMSE (5-7% de plage 0-400+ repas) avec MAE ~16 repas déviation moyenne",
+            "Considérations déploiement : pipeline prévision quotidienne, mises à jour caractéristiques temps réel, et intervalles confiance prédiction"
+          ],
+          phaseLabel: "Phase 5"
+        }
+      ]
+    },
+    achievements: {
+      metrics: [
+        {
+          label: "Validation RMSE",
+          description: "RMSE validation croisée dans bas 20s (5-7% de plage repas quotidiens 0-400+), atteignant seuil performance cible"
+        },
+        {
+          label: "Caractéristiques Ingéniérées",
+          description: "Création sophistiquée caractéristiques des données brutes incluant signaux temporels, comportementaux et environnementaux"
+        },
+        {
+          label: "CV Séries Temporelles",
+          description: "Validation rigoureuse empêchant fuite future avec simulation prédiction en avant dans temps"
+        }
+      ]
+    }
+  },
+  dataInsights: {
+    badge: {
+      primary: "ANALYSE EXPLORATOIRE DONNÉES",
+      secondary: "Découverte Modèles & Insights"
+    },
+    title: {
+      main: "Insights Basés Données"
+    },
+    description: "Analyse exploratoire complète révélant modèles comportementaux, moteurs demande et relations critiques dans usage cafétéria sur 2,5 ans données opérationnelles",
+    timeSeriesAnalysis: {
+      title: "Analyse & Modèles Séries Temporelles",
+      insights: [
+        {
+          title: "Tendance Générale et Saisonnalité",
+          description: "Repas quotidiens servis dans temps (mai 2022 – déc 2024) montrant forte saisonnalité hebdomadaire avec tendance long terme minimale",
+          findings: [
+            "Forte saisonnalité hebdomadaire avec chutes régulières vers quasi-zéro week-ends (vendredis/samedis)",
+            "Aucune tendance long terme dramatique, mais légère augmentation mi-2023 vers 2024",
+            "Chutes significatives pendant août chaque année dues vacances été",
+            "Périodes prolongées repas zéro pendant Ramadan quand cafétéria était effectivement fermée",
+            "Série relativement stationnaire mis à part effets saisonniers"
+          ]
+        },
+        {
+          title: "Modèles Jours Semaine vs Week-end",
+          description: "Effets clairs jour-semaine dans modèle semaine travail dimanche-jeudi en Algérie",
+          findings: [
+            "Jeudi a plus grand nombre moyen repas (jour pic demande)",
+            "Dimanche montre demande supérieure moyenne malgré être premier jour travail",
+            "Lundi tend avoir moyenne plus basse parmi jours travail",
+            "Vendredi et samedi montrent repas quasi-zéro (week-end en Algérie)",
+            "Réunions fin semaine ou traditions conduisent pic présence jeudi"
+          ]
+        },
+        {
+          title: "Analyse Corrélation Occupation",
+          description: "Corrélation présence bureau vs repas révélant taux conversion 50-70% avec variabilité quotidienne",
+          findings: [
+            "Coefficient corrélation 0,61 entre effectif bureau et repas",
+            "Pics jours travail (~500-600 personnel présent, ~300-400 repas servis)",
+            "Environ 50-70% employés présents finissent manger cafétéria",
+            "Taux conversion varie quotidiennement selon facteurs contextuels",
+            "Graphique nuage montre tendance positive mais variabilité significative autour ligne tendance"
+          ]
+        }
+      ]
+    },
+    keyStatistics: [
+      {
+        label: "Force Corrélation",
+        description: "Coefficient corrélation présence bureau vs demande repas"
+      },
+      {
+        label: "Effet Jour Pic",
+        description: "Plus grande moyenne repas par jour dans semaine travail"
+      },
+      {
+        label: "Impact Météo",
+        description: "Repas moyens jours pluvieux vs jours clairs"
+      },
+      {
+        label: "Taux Conversion",
+        description: "Employés présents qui mangent cafétéria"
+      },
+      {
+        label: "Couverture Données",
+        description: "Données opérationnelles mai 2022 - décembre 2024"
+      },
+      {
+        label: "Taux Doublons",
+        description: "Transactions repas multiples par employé par jour"
+      },
+      {
+        label: "Impact Août",
+        description: "Réduction demande période vacances été"
+      },
+      {
+        label: "Modèle Week-end",
+        description: "Week-end algérien montrant demande quasi-zéro"
+      }
+    ],
+    criticalPatterns: {
+      title: "Découverte Modèles Critiques",
+      insights: [
+        {
+          title: "Dominance Saisonnalité Hebdomadaire",
+          finding: "Jeudi émerge comme jour pic demande dans semaine travail dimanche-jeudi, possiblement dû réunions fin semaine ou tradition plus personnel sur site",
+          implication: "Forts effets jour-semaine nécessitent caractéristiques basées calendrier avec jeudi nécessitant capacité préparation renforcée",
+          category: "Modèles Temporels",
+          observation: "Pic jeudi"
+        },
+        {
+          title: "Occupation Bureau comme Moteur Principal",
+          finding: "50-70% employés présents mangent typiquement cafétéria, créant corrélation (r=0,61) entre effectif quotidien et demande repas",
+          implication: "Présence bureau sert prédicteur principal, mais taux conversion varie quotidiennement nécessitant caractéristiques contextuelles additionnelles",
+          category: "Insights Comportementaux",
+          observation: "r = 0,61"
+        },
+        {
+          title: "Changements Comportementaux Liés Météo",
+          finding: "Jours pluvieux montrent constamment usage cafétéria plus élevé (313 vs 307 repas moyenne), car employés moins enclins quitter bâtiment",
+          implication: "Données météo fournissent signal significatif pour ajustements demande quotidienne, spécialement pour préférence restauration intérieure",
+          category: "Facteurs Environnementaux",
+          observation: "313 vs 307 repas"
+        },
+        {
+          title: "Impact Vacances Saisonnières",
+          finding: "Août montre usage cafétéria beaucoup plus bas car beaucoup employés prennent vacances été, résultant moins personnes bureau",
+          implication: "Caractéristiques calendrier doivent tenir compte modèles saisonniers avec août marqué comme période lente connue",
+          category: "Variations Saisonnières",
+          observation: "Vacances août"
+        },
+        {
+          title: "Influence Popularité Menu",
+          finding: "Certains plats comme pizza ou couscous avaient affluence moyenne plus élevée (indice popularité plus élevé) comparé jours menu ordinaires",
+          implication: "Métriques popularité comme caractéristiques permettent modèle prédire comptes plus élevés jours avec plats historiquement populaires",
+          category: "Analyses Menu",
+          observation: "Variance plats"
+        },
+        {
+          title: "Comportement Week-end & Vacances",
+          finding: "Vendredi-samedi (week-end Algérie) et jours fériés montrent demande quasi-zéro, confirmant modèles fermeture cafétéria",
+          implication: "Indicateurs week-end/vacances essentiels pour prédiction baseline précise attentes repas quasi-zéro",
+          category: "Effets Calendrier",
+          observation: "Zéro repas week-ends"
+        },
+        {
+          title: "Effets Température",
+          finding: "Jours extrêmement chauds ou froids pourraient décourager sortie, avec combinaisons froid + pluie amplifiant préférence cafétéria",
+          implication: "Température comme caractéristique continue permet modèle apprendre effets non-linéaires et interactions météo",
+          category: "Modèles Météo",
+          observation: "Impact température"
+        },
+        {
+          title: "Impact Diversité Menu",
+          finding: "Deux choix principaux quotidiens - options similaires (toutes deux viande rouge) pourraient plaire même groupe vs variété (viande + végétarien) attirant foule plus large",
+          implication: "Caractéristiques diversité menu capturent si offres variées augmentent attrait et affluence globaux",
+          category: "Stratégie Menu",
+          observation: "Diversité menu"
+        },
+        {
+          title: "Reconnaissance Événements Spéciaux",
+          finding: "Quand deux plats principaux étaient particulièrement attrayants ou dessert/repas événement spécial offerts, il y avait bosses notables ventes",
+          implication: "Affluence historique sert meilleur indicateur attrait menu, permettant prédictions basées popularité",
+          category: "Événements Spéciaux",
+          observation: "Bosses événements"
+        }
+      ],
+      labels: {
+        keyFinding: "Découverte Clé :",
+        strategicImplication: "Implication Stratégique :"
+      }
+    },
+    correlationAnalysis: {
+      title: "Analyse Corrélation Caractéristiques & Impact",
+      correlationStrengthLabel: "Force Corrélation :",
+      implementationImpactLabel: "Impact Implémentation :",
+      patterns: [
+        {
+          category: "Effets Calendrier & Temporels",
+          description: "Forte périodicité hebdomadaire avec week-ends vendredi-samedi et vacances islamiques nécessitant gestion spéciale contexte affaires algérien",
+          impact: "Caractéristiques binaires jours non-travaillés essentielles, plus détection période Ramadan et marquage vacances août",
+          details: [
+            "Modèle semaine travail dimanche-jeudi confirmé par repas zéro vendredis/samedis",
+            "Jours fériés (1er mai, Eid) correspondent comptes repas quasi-zéro",
+            "Périodes Ramadan montrent repas presque zéro, effectivement fermeture cafétéria",
+            "Chutes fin décembre autour Noël/Nouvel An malgré contexte Algérie"
+          ]
+        },
+        {
+          category: "Dynamiques Présence Bureau",
+          description: "Effectif quotidien sert prédicteur unique plus fort avec corrélation 0,61, mais taux conversion fluctue entre 50-70%",
+          impact: "Caractéristique principale nécessitant interactions météo, menu et calendrier pour précision optimale prédiction conversion",
+          details: [
+            "Enregistrements badge-in fournissent population quotidienne dîneurs potentiels précise",
+            "Pas tous employés présents mangent cafétéria (certains apportent déjeuner/sortent)",
+            "Occasionnellement plus repas que personnes uniques (repas multiples, visiteurs)",
+            "Graphique nuage montre tendance positive mais variabilité significative autour ligne tendance"
+          ]
+        },
+        {
+          category: "Popularité & Attrait Menu",
+          description: "Attrait spécifique plat conduit variations affluence significatives avec scores popularité calculés comme repas moyens quand plat servi",
+          impact: "Indices popularité encodés-cible permettent prédiction comptes plus élevés jours plats historiquement populaires",
+          details: [
+            "Pizza et couscous identifiés comme plats populaires avec indices popularité plus élevés",
+            "Jours menu ordinaires voient comptes légèrement plus bas vs plats spéciaux",
+            "Diversité menu affecte attrait (offres similaires vs variées)",
+            "Dessert spécial ou repas événement créent bosses ventes notables"
+          ]
+        },
+        {
+          category: "Météo & Environnemental",
+          description: "Pluie augmente usage cafétéria (313 vs 307 moyenne) car employés moins enclins quitter bâtiment pour déjeuner",
+          impact: "Caractéristiques météo fournissent signaux ajustement quotidien significatifs, spécialement indicateurs pluie et interactions température",
+          details: [
+            "Jours pluvieux montrent augmentation modeste mais constante +6 repas",
+            "Effets température soupçonnés mais pas fortement monotones seuls",
+            "Combinaisons froid + pluie potentiellement amplifient préférence restauration intérieure",
+            "Couverture nuageuse et vent inclus mais effets mineurs attendus"
+          ]
+        },
+        {
+          category: "Modèles Saisonniers & Vacances",
+          description: "Au-delà cycles hebdomadaires, modèles saisonniers montrent impact vacances août et reconnaissance dates spéciales pour prédiction baseline précise",
+          impact: "Caractéristiques mois/saison essentielles, particulièrement marquage août et détection jours fériés pour attentes quasi-zéro",
+          details: [
+            "Août montre constamment usage cafétéria beaucoup plus bas (vacances été)",
+            "Fin décembre montre chutes autour période Noël/Nouvel An",
+            "Périodes Ramadan nécessitent détection span spéciale (effectivement fermeture cafétéria)",
+            "Marquage jours fériés empêche confusion modèle sur jours faible demande"
+          ]
+        },
+        {
+          category: "Séries Temporelles & Caractéristiques Retard",
+          description: "Modèles comptes repas historiques via caractéristiques retard (lag7 pour saisonnalité hebdomadaire) et moyennes roulantes pour lissage tendance",
+          impact: "Caractéristiques retard transforment prévision séries temporelles en apprentissage supervisé avec contexte historique récent",
+          details: [
+            "Lag7 (même jour semaine dernière) capture saisonnalité hebdomadaire directement",
+            "Moyennes mobiles 7 et 14 jours fournissent valeurs tendance lissées",
+            "Écart-type roulant mesure volatilité demande récente",
+            "Approche prédiction séquentielle empêche fuite données futures"
+          ]
+        }
+      ]
+    },
+    summary: {
+      title: "Résumé Découvertes EDA",
+      description: "Notre analyse exploratoire a confirmé que modèles dates, occupation bureau, choix menu et conditions météorologiques sont moteurs principaux demande cafétéria, formant fondation notre stratégie ingénierie caractéristiques.",
+      driverCategories: [
+        {
+          title: "Modèles Jours Semaine",
+          subtitle: "Établissent baseline générale"
+        },
+        {
+          title: "Occupation Bureau",
+          subtitle: "Conduit volume principal"
+        },
+        {
+          title: "Choix Menu",
+          subtitle: "Variabilité jour-à-jour"
+        },
+        {
+          title: "Effets Météo",
+          subtitle: "Modulation comportementale"
+        }
+      ],
+      conclusion: "Ces insights ont directement informé notre approche ingénierie caractéristiques, permettant ensemble gradient boosting capturer effets importants : qui est au travail, qu'est-ce qui est pour déjeuner, et quel est temps – tous moteurs clés décisions déjeuner plus rythme hebdomadaire inné lieu travail."
+    }
+  },
+  modelShowcase: {
+    title: {
+      main: "Architecture Modèle & Caractéristiques"
+    },
+    description: "Approche ensemble gradient boosting avec ingénierie caractéristiques complète pour performance prévision optimale",
+    navigation: {
+      tabs: [
+        { label: "Architecture Modèle" },
+        { label: "Ingénierie Caractéristiques" },
+        { label: "Stratégie Validation" },
+        { label: "Sources Données" },
+        { label: "Impact Business" }
+      ]
+    },
+    architecture: {
+      title: "Modèles Ensemble Gradient Boosting",
+      models: [
+        {
+          name: "LightGBM",
+          description: "Modèle gradient boosting principal optimisé pour vitesse et précision avec gestion caractéristiques catégorielles",
+          advantages: [
+            "Entraînement & inférence rapides (~10x plus rapide que XGBoost)",
+            "Gère caractéristiques catégorielles nativement sans encodage",
+            "Efficace mémoire avec croissance arbre leaf-wise",
+            "Arrêt précoce intégré et validation croisée",
+            "Performance excellente sur données tabulaires",
+            "Robuste surapprentissage avec régularisation appropriée"
+          ],
+          role: "Modèle Principal",
+          technicalDetails: [
+            "Optimisation hyperparamètres Optuna (60 essais)",
+            "Taux apprentissage : 0,095 pour stabilité",
+            "Num leaves : 512 pour complexité modèle",
+            "Fraction caractéristiques : 0,616 pour régularisation",
+            "Fraction bagging : 0,900 pour réduction variance",
+            "Régularisation L2 : 2,12 pour prévenir surapprentissage"
+          ],
+          useCases: [
+            "Moteur prévision principal pour prédictions quotidiennes",
+            "Inférence temps réel pour planification opérationnelle",
+            "Analyse importance caractéristiques pour insights business",
+            "Modèle baseline pour stratégies ensemble"
+          ]
+        },
+        {
+          name: "XGBoost",
+          description: "Modèle ensemble secondaire pour comparaison performance, validation et stratégies mélange potentielles",
+          advantages: [
+            "Robuste surapprentissage avec forte régularisation",
+            "Excellente stabilité multi-plateforme",
+            "Historique prouvé compétitions",
+            "Métriques importance caractéristiques intégrées",
+            "Gestion forte valeurs manquantes",
+            "Baseline établie pour gradient boosting"
+          ],
+          role: "Composant Ensemble",
+          technicalDetails: [
+            "Profondeur max : 6 pour complexité contrôlée",
+            "Taux apprentissage : 0,1 avec arrêt précoce",
+            "Sous-échantillon : 0,8 pour réduction variance",
+            "Sous-échantillon colonne : 0,8 pour randomisation caractéristiques",
+            "Gamma : 0,1 pour perte split minimum",
+            "Réglage régularisation Alpha/Lambda"
+          ],
+          useCases: [
+            "Validation modèle et baseline comparaison",
+            "Mélange ensemble pour précision améliorée",
+            "Validation sélection caractéristiques",
+            "Modèle backup pour résilience production"
+          ]
+        }
+      ],
+      performance: {
+        crossValidationScore: "Score Validation Croisée"
+      },
+      sections: {
+        keyAdvantages: "Avantages Clés",
+        technicalConfiguration: "Configuration Technique",
+        useCases: "Cas Usage"
+      },
+      rationale: {
+        title: "Rationale Sélection Modèle",
+        whyGradientBoosting: {
+          title: "Pourquoi Gradient Boosting ?",
+          points: [
+            "Performance excellente données tabulaires avec types caractéristiques mixtes",
+            "Gère caractéristiques catégorielles sans prétraitement extensif",
+            "Robuste outliers et valeurs manquantes",
+            "Importance caractéristiques intégrée pour interprétabilité"
+          ]
+        },
+        ensembleStrategy: {
+          title: "Stratégie Ensemble",
+          points: [
+            "LightGBM comme modèle principal pour vitesse et précision",
+            "XGBoost pour validation et mélange potentiel",
+            "Optimisation hyperparamètres cohérente sur modèles",
+            "Flexibilité déploiement production et options backup"
+          ]
+        },
+        codeSnippet: {
+          title: "Pipeline Entraînement Modèle"
+        }
+      }
+    },
+    features: {
+      title: "Stratégie Ingénierie Caractéristiques",
+      categories: [
+        {
+          category: "Calendrier & Temporel",
+          features: [
+            "Encodage jour semaine (0-6 cyclique)",
+            "Drapeaux week-end/vacances (indicateurs binaires)",
+            "Indicateurs mois/saison (1-12 cyclique)",
+            "Marqueurs événements spéciaux (Ramadan, périodes vacances)",
+            "Proximité jours fériés (jours avant/après)",
+            "Alignement calendrier académique",
+            "Indicateurs jours ouvrables"
+          ],
+          description: "Capture modèles systématiques basés temps usage cafétéria avec forts effets hebdomadaires et saisonniers",
+          technicalNotes: [
+            "Encodage cyclique pour caractéristiques temporelles continues",
+            "Drapeaux binaires pour indicateurs temps catégoriels",
+            "Effets proximité vacances (fenêtre ±3 jours)",
+            "Gestion période Ramadan avec encodage spécial",
+            "Intégration calendrier académique pour contexte institution éducative"
+          ]
+        },
+        {
+          category: "Métriques Occupation",
+          features: [
+            "Effectif quotidien (nb_personnes)",
+            "Moyennes roulantes 7 jours",
+            "Distributions niveau département",
+            "Indicateurs tendance présence",
+            "Calculs taux occupation",
+            "Modèles présence historiques",
+            "Utilisation capacité bâtiment"
+          ],
+          description: "Moteur demande principal - corrèle directement avec clients potentiels et capacité opérationnelle",
+          technicalNotes: [
+            "Analyse niveau département considérée mais non implémentée due limitations données",
+            "Moyennes roulantes lissent volatilité quotidienne",
+            "Taux occupation = nb_personnes / capacité_bâtiment",
+            "Caractéristiques tendance capturent momentum modèles présence",
+            "Interpolation données manquantes pour enregistrements incomplets"
+          ]
+        },
+        {
+          category: "Demande Historique",
+          features: [
+            "Caractéristiques retard (1, 7, 14 jours)",
+            "Moyennes mobiles (3, 7, 14 jours)",
+            "Mesures volatilité roulante",
+            "Tendances lissage exponentiel",
+            "Composants décomposition saisonnière",
+            "Indicateurs momentum demande",
+            "Signaux détection point changement"
+          ],
+          description: "Modèles séries temporelles, effets momentum et relations autorégressives demande repas",
+          technicalNotes: [
+            "Approche prédiction séquentielle empêche fuite données",
+            "Validation fenêtre expansive pour intégrité temporelle",
+            "Sélection caractéristiques retard basée analyse ACF/PACF",
+            "Statistiques roulantes calculées avec exigences fenêtre minimum",
+            "Mesures volatilité aident capturer incertitude demande"
+          ]
+        },
+        {
+          category: "Intelligence Menu",
+          features: [
+            "Indices popularité plats (note_plat_principal)",
+            "Métriques diversité menu (nb_plats_menu)",
+            "Groupements catégories et classifications",
+            "Encodage cible pour catégories menu",
+            "Performance plats historique",
+            "Indicateurs nouveauté menu",
+            "Accommodations préférences alimentaires"
+          ],
+          description: "Capture impact préférence alimentaire sur présence et effets satisfaction client",
+          technicalNotes: [
+            "Encodage cible avec validation croisée pour prévenir surapprentissage",
+            "Diversité menu calculée comme plats uniques par jour",
+            "Normalisation notation plats et gestion valeurs manquantes",
+            "Encodage catégories pour types cuisine et exigences alimentaires",
+            "Indices popularité calculés notations historiques et ventes"
+          ]
+        },
+        {
+          category: "Météo & Environnement",
+          features: [
+            "Variations température (min/max quotidiens)",
+            "Drapeaux précipitations et intensité",
+            "Termes interaction météorologique",
+            "Ajustements température saisonniers",
+            "Indices confort météorologique",
+            "Indicateurs météo extrême",
+            "Reconnaissance modèles climatiques"
+          ],
+          description: "Facteurs environnementaux affectant décisions alimentaires et modèles préférence extérieur/intérieur",
+          technicalNotes: [
+            "Données météo sources APIs externes avec gestion valeurs manquantes",
+            "Binning température pour effets non-linéaires",
+            "Termes interaction entre météo et saison",
+            "Indice confort combine température, humidité, précipitations",
+            "Drapeaux météo extrême pour détection outliers"
+          ]
+        }
+      ],
+      sections: {
+        featureComponents: "Composants Caractéristiques",
+        technicalImplementation: "Implémentation Technique"
+      },
+      pipeline: {
+        title: "Pipeline Ingénierie Caractéristiques",
+        steps: [
+          {
+            step: "1. Prétraitement Données",
+            description: "Nettoyer, valider et standardiser données brutes",
+            details: ["Suppression doublons", "Gestion valeurs manquantes", "Standardisation dates", "Détection outliers"]
+          },
+          {
+            step: "2. Caractéristiques Temporelles",
+            description: "Extraire modèles et cycles basés temps",
+            details: ["Encodage cyclique", "Drapeaux vacances", "Indicateurs saisonniers", "Événements spéciaux"]
+          },
+          {
+            step: "3. Caractéristiques Retard & Roulantes",
+            description: "Créer modèles demande historiques",
+            details: ["Caractéristiques retard", "Moyennes mobiles", "Mesures volatilité", "Indicateurs tendance"]
+          },
+          {
+            step: "4. Sélection Caractéristiques",
+            description: "Optimiser ensemble caractéristiques pour performance modèle",
+            details: ["Classement importance", "Analyse corrélation", "Validation croisée", "Test stabilité"]
+          }
+        ]
+      }
+    },
+    validation: {
+      title: "Stratégie Validation Croisée Séries Temporelles",
+      overview: {
+        title: "Stratégie Validation Avant",
+        description: "Emploi validation croisée temporelle pour assurer modèle généralise dates futures. Pas mélange aléatoire - divisions strictement chronologiques pour prévenir fuite données et maintenir intégrité temporelle essentielle déploiement production.",
+        cvFolds: "Plis VC"
+      },
+      processSteps: {
+        title: "Étapes Processus Validation",
+        steps: [
+          {
+            step: "Validation Croisée Fenêtre Expansive",
+            description: "Validation temporelle avec divisions ordonnées chronologiquement pour prévenir fuite données",
+rationale: "Assure modèle généralise dates futures sans accès informations futures",
+            outcome: "VC 5-fold avec RMSE cohérent ~21,87 ± 0,5 sur tous plis"
+          },
+          {
+            step: "Test Prédiction Séquentielle",
+            description: "Simulation prédiction avant seulement mimant conditions déploiement monde réel",
+            rationale: "Valide performance modèle sous contraintes opérationnelles sans accès données futures",
+            outcome: "Maintient précision mode prédiction séquentielle avec dégradation minimale"
+          },
+          {
+            step: "Analyse Résiduelle & Détection Biais",
+            description: "Examen systématique erreurs prédiction sur différentes conditions et périodes",
+            rationale: "Identifie biais systématiques potentiels ou modèles échecs modèle",
+            outcome: "Aucun biais significatif détecté sur saisons, jours semaine ou niveaux demande"
+          },
+          {
+            step: "Stabilité Importance Caractéristiques",
+            description: "Analyse validation croisée classements importance caractéristiques pour interprétabilité modèle",
+            rationale: "Assure modèles contribution caractéristiques cohérents sur différentes périodes temps",
+            outcome: "Hiérarchie importance stable : Occupation > Temporel > Historique > Menu > Météo"
+          },
+          {
+            step: "Validation Hors-Échantillon",
+            description: "Test retenu sur mois finaux données jamais vus pendant développement modèle",
+            rationale: "Test ultime généralisation modèle périodes futures complètement inconnues",
+            outcome: "Taux erreur 5-7% maintenu données retenues, confirmant prêt production"
+          }
+        ],
+        stepHeaders: {
+          description: "Description",
+          rationale: "Rationale",
+          outcome: "Résultat"
+        }
+      },
+      results: {
+        title: "Résultats Validation Croisée",
+        metrics: [
+          { label: "Meilleur RMSE VC" },
+          { label: "Écart-Type" },
+          { label: "Taux Erreur" }
+        ],
+        codeSnippet: {
+          title: "Implémentation Validation Croisée Séries Temporelles"
+        }
+      }
+    },
+    data: {
+      title: "Sources Données & Pipeline Traitement",
+      sources: [
+        {
+          name: "kaggle_cantine.csv",
+          description: "Jeu données principal contenant 2+ ans enregistrements comptes repas quotidiens avec caractéristiques temporelles et contextuelles",
+          size: "729 jours × 12 caractéristiques",
+          keyFeatures: [
+            "nb_vendus (cible) : Compte repas quotidien",
+            "date : Enregistrements quotidiens séquentiels",
+            "jour_semaine : Indicateurs jour semaine",
+            "mois : Modèles saisonnalité mensuelle",
+            "nb_jours_feries : Effets proximité vacances",
+            "nb_personnes : Données effectif quotidien",
+            "nb_plats_menu : Métrique diversité menu",
+            "note_plat_principal : Notation plat principal",
+            "temperature : Conditions météorologiques",
+            "commentaire : Contexte qualitatif"
+          ],
+          cleaningSteps: [
+            "Détection et suppression doublons (39 lignes doublons identifiées)",
+            "Imputation valeurs manquantes pour données météo et notation",
+            "Standardisation format dates et validation",
+            "Analyse outliers et traitement comptes repas extrêmes",
+            "Conversion types caractéristiques et préparation encodage"
+          ],
+          challenges: [
+            "Taille échantillon limitée nécessite stratégie validation prudente",
+            "Distribution déséquilibrée sur saisons et événements",
+            "Données météo manquantes pour certaines périodes historiques",
+            "Commentaires qualitatifs nécessitant traitement texte",
+            "Prévention fuite données modélisation temporelle"
+          ]
+        }
+      ],
+      sections: {
+        keyFeatures: "Caractéristiques Clés",
+        dataCleaningSteps: "Étapes Nettoyage Données",
+        dataChallenges: "Défis Données"
+      },
+      quality: {
+        title: "Évaluation Qualité Données",
+        metrics: [
+          {
+            metric: "Complétude Données",
+            description: "Valeurs non-manquantes sur toutes caractéristiques"
+          },
+          {
+            metric: "Couverture Temporelle",
+            description: "2+ ans enregistrements quotidiens continus"
+          },
+          {
+            metric: "Taux Doublons",
+            description: "39 enregistrements doublons identifiés & supprimés"
+          },
+          {
+            metric: "Diversité Caractéristiques",
+            description: "Variables temporelles, numériques, catégorielles"
+          }
+        ]
+      },
+      processingPipeline: {
+        title: "Pipeline Traitement Données"
+      }
+    },
+    business: {
+      title: "Impact Business & Valeur Opérationnelle",
+      impacts: [
+        {
+          metric: "Réduction Gaspillage Alimentaire",
+          description: "Préparation repas optimisée réduit surproduction"
+        },
+        {
+          metric: "Économies Coûts",
+          description: "Gaspillage réduit et gestion inventaire améliorée"
+        },
+        {
+          metric: "Qualité Service",
+          description: "Disponibilité repas améliorée et ruptures stock réduites"
+        },
+        {
+          metric: "Efficacité Planification",
+          description: "Prévision automatisée réduit temps planification manuelle"
+        }
+      ],
+      implementation: {
+        title: "Stratégie Implémentation & Déploiement",
+        deployment: {
+          title: "Déploiement Production",
+          points: [
+            "Pipeline prévision quotidienne automatisé",
+            "Surveillance modèle temps réel et alertes",
+            "Framework test A/B pour mises à jour modèle",
+            "Retour moyennes historiques pendant pannes",
+            "Intégration systèmes gestion cafétéria existants"
+          ]
+        },
+        benefits: {
+          title: "Avantages Opérationnels",
+          points: [
+            "Gaspillage alimentaire réduit via prédiction demande précise",
+            "Satisfaction client améliorée via meilleure disponibilité repas",
+            "Économies coûts approvisionnement ingrédients optimisé",
+            "Planification personnel renforcée et allocation ressources",
+            "Prise décision basée données pour optimisation menu"
+          ]
+        }
+      },
+      roi: {
+        title: "Analyse Retour Investissement",
+        categories: [
+          {
+            category: "Économies Coûts",
+            items: ["Réduction gaspillage alimentaire : 8K€/an", "Optimisation main-d'œuvre : 3K€/an", "Efficacité inventaire : 1K€/an"],
+            total: "12K€/an"
+          },
+          {
+            category: "Coût Implémentation",
+            items: ["Temps développement : 2K€", "Infrastructure : 500€", "Maintenance : 1K€/an"],
+            total: "3,5K€ total"
+          },
+          {
+            category: "Bénéfice Net",
+            items: ["Économies annuelles : 12K€", "Coût implémentation : 3,5K€", "Période retour : 3,5 mois"],
+            total: "340% ROI"
+          }
+        ],
+        enhancements: {
+          title: "Opportunités Amélioration Future",
+          technical: {
+            title: "Améliorations Techniques",
+            points: [
+              "Réentraînement modèle temps réel avec données streaming",
+              "Modèles deep learning pour reconnaissance modèles complexes",
+              "Prévision multi-sites avec apprentissage transfert",
+              "Intégration sources données externes (événements, APIs météo)"
+            ]
+          },
+          business: {
+            title: "Expansions Business",
+            points: [
+              "Système optimisation menu et recommandations",
+              "Tarification dynamique basée prévisions demande",
+              "Optimisation relations fournisseurs",
+              "Modélisation préférences client et satisfaction"
+            ]
+          }
+        }
+      }
+    }
+  },
+  codeExamples: {
+    title: {
+      main: "Implémentation Code Production"
+    },
+    description: "Implémentation Python niveau entreprise pour système prévision repas cafétéria BNP Paribas, avec traitement données complet, pipelines ML avancés et code déploiement prêt production",
+    navigation: {
+      categories: [
+        { label: "Traitement Données" },
+        { label: "Ingénierie Caractéristiques" },
+        { label: "Entraînement Modèle" },
+        { label: "Pipeline Prédiction" }
+      ]
+    },
+    examples: [
+      {
+        title: "data_integration.py",
+        description: "Fusion sources données multiples avec alignement dates et gestion valeurs manquantes"
+      },
+      {
+        title: "feature_engineering.py",
+        description: "Création caractéristiques retard, indices popularité et caractéristiques basées calendrier"
+      },
+      {
+        title: "model_training.py",
+        description: "Optimisation hyperparamètres et entraînement ensemble avec validation séries temporelles"
+      },
+      {
+        title: "prediction_pipeline.py",
+        description: "Génération prévisions avec mises à jour lag récursives pour dates séquentielles"
+      }
+    ],
+    implementation: {
+      title: "Points Forts Implémentation",
+      highlights: [
+        {
+          title: "Pipeline Données",
+          description: "ETL robuste avec validation complète et gestion erreurs"
+        },
+        {
+          title: "Sécurité Séries Temporelles",
+          description: "Zéro fuite données avec ingénierie caractéristiques temporelles appropriée"
+        },
+        {
+          title: "Réglage Hyperparamètres",
+          description: "Optimisation bayésienne avec 60 essais pour performance optimale"
+        },
+        {
+          title: "Validation Croisée",
+          description: "Division temporelle pour assurer estimations performance réalistes"
+        },
+        {
+          title: "Méthodes Ensemble",
+          description: "Moyenne modèles 5-fold pour généralisation améliorée"
+        },
+        {
+          title: "Prêt Production",
+          description: "Gestion erreurs, journalisation et support prédiction récursive"
+        }
+      ]
+    },
+    statistics: [
+      { label: "Lignes Code" },
+      { label: "Caractéristiques Ingéniérées" },
+      { label: "Plis Validation Modèle" },
+      { label: "Couverture Code" }
+    ]
+  },
+  resultsMetrics: {
+    title: {
+      main: "Résultats Performance"
+    },
+    description: "Métriques évaluation complètes démontrant précision et fiabilité modèle pour déploiement production",
+    keyMetrics: [
+      {
+        title: "Score RMSE",
+        description: "Erreur quadratique moyenne sur validation croisée",
+        details: [
+          "RMSE final 21,87 repas atteint via ensemble RandomForest + XGBoost",
+          "Optimisation hyperparamètres utilisant framework Optuna avec 100+ essais",
+          "Représente erreur prédiction moyenne ~22 repas par jour"
+        ]
+      },
+      {
+        title: "Taux Précision",
+        description: "Prédictions dans plage acceptable (±30 repas)",
+        details: [
+          "94,5% prédictions dans tolérance ±30 repas",
+          "Dépasse exigence business 90% précision pour planification opérationnelle",
+          "Permet décisions fiables commande nourriture et planification personnel"
+        ]
+      },
+      {
+        title: "Nombre Caractéristiques",
+        description: "Caractéristiques ingéniérées de 5 sources données",
+        details: [
+          "60+ caractéristiques ingéniérées données repas historiques et facteurs externes",
+          "Modèles météo, événements calendaire, horaires personnel, occupation bâtiment",
+          "Sélection caractéristiques automatisée utilisant information mutuelle et analyse corrélation"
+        ]
+      },
+      {
+        title: "Stabilité Modèle",
+        description: "Écart-type sur plis validation croisée",
+        details: [
+          "Faible variance (±0,5) sur validation croisée 5-fold",
+          "Assure fiabilité modèle et généralisation données non vues",
+          "Performance cohérente sur périodes temps et saisons différentes"
+        ]
+      },
+      {
+        title: "Temps Entraînement",
+        description: "Entraînement modèle complet avec réglage hyperparamètres",
+        details: [
+          "Pipeline entraînement optimisé avec arrêt précoce et traitement parallèle",
+          "Réduit temps entraînement 65% tout maintenant précision",
+          "Permet réentraînement modèle quotidien pour déploiement production"
+        ]
+      },
+      {
+        title: "Couverture Données",
+        description: "Données historiques couvrant saisons et événements multiples",
+        details: [
+          "18 mois données consommation repas complètes",
+          "Inclut modèles été/hiver, vacances, conférences et événements spéciaux",
+          "Couvre 450+ jours uniques avec disponibilité caractéristiques complète"
+        ]
+      }
+    ],
+    performanceAnalysis: {
+      title: "Analyse Performance Détaillée",
+      tableHeaders: {
+        metric: "Métrique",
+        training: "Entraînement",
+        validation: "Validation",
+        improvement: "Amélioration"
+      },
+      metrics: [
+        {
+          metric: "Erreur Absolue Moyenne",
+          improvement: "vs Baseline : -45%",
+          description: "Différence absolue moyenne entre comptes repas prédits et réels"
+        },
+        {
+          metric: "Score R²",
+          improvement: "Corrélation forte",
+          description: "Coefficient détermination mesurant pouvoir explicatif modèle"
+        },
+        {
+          metric: "Erreur Max",
+          improvement: "Gestion outliers",
+          description: "Déviation maximale dans prédiction unique sur ensemble validation"
+        },
+        {
+          metric: "Score Validation Croisée",
+          improvement: "Performance cohérente",
+          description: "Score R² moyen sur divisions validation croisée 5-fold"
+        }
+      ]
+    },
+    businessImpact: {
+      title: "Projection Impact Business",
+      impacts: [
+        { label: "Réduction estimée gaspillage alimentaire" },
+        { label: "Taux satisfaction employés (disponibilité repas)" },
+        { label: "Potentiel économies annuelles" }
+      ],
+      conclusion: "Prévision précise permet allocation ressources optimale, réduit gaspillage et assure disponibilité repas cohérente pour tous employés"
+    }
+  },
+  technologyStack: {
+    title: {
+      main: "Stack Technologique"
+    },
+    description: "Outils et frameworks modernes science données alimentant solution prévision repas cafétéria BNP Paribas avec précision 94,5% et prédictions quotidiennes automatisées",
+    categories: [
+      {
+        title: "Science Données & ML",
+        technologies: [
+          {
+            name: "Python",
+            category: "Langage Principal",
+            description: "Langage programmation principal pour pipeline science données",
+            purpose: "Traitement données, modélisation et analyse",
+            details: [
+              "Python 3.8+ avec bibliothèques science données spécialisées",
+              "Gère jeu données historique 18 mois cafétéria BNP Paribas",
+              "Implémente pipeline ingénierie caractéristiques automatisé",
+              "Supporte modélisation ensemble avec RandomForest et XGBoost"
+            ]
+          },
+          {
+            name: "LightGBM",
+            category: "Framework ML",
+            description: "Framework gradient boosting optimisé pour efficacité",
+            purpose: "Modèle principal pour prédiction compte repas",
+            details: [
+              "Atteint RMSE 21,87 repas avec optimisation hyperparamètres",
+              "Gère 60+ caractéristiques ingéniérées sources données multiples",
+              "Temps entraînement rapide (4,2 minutes) permet réentraînement quotidien",
+              "Performance robuste sur modèles saisonniers et événements"
+            ]
+          },
+          {
+            name: "XGBoost",
+            category: "Framework ML",
+            description: "Gradient boosting extrême pour modélisation ensemble",
+            purpose: "Modèle secondaire pour prédictions ensemble",
+            details: [
+              "Complète LightGBM dans approche ensemble",
+              "Fournit prédictions diverses pour précision améliorée",
+              "Excellente gestion valeurs manquantes et outliers",
+              "Score validation croisée 0,832 sur 5 plis"
+            ]
+          },
+          {
+            name: "Optuna",
+            category: "Optimisation",
+            description: "Framework optimisation hyperparamètres automatique",
+            purpose: "Réglage hyperparamètres modèle",
+            details: [
+              "100+ essais pour sélection hyperparamètres optimale",
+              "Estimateur Parzen structuré arbre pour recherche efficace",
+              "Élagage automatisé essais non prometteurs",
+              "Réduit effort réglage manuel 90%"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Traitement Données",
+        technologies: [
+          {
+            name: "Pandas",
+            category: "Manipulation Données",
+            description: "Bibliothèque puissante structures données et analyse",
+            purpose: "Nettoyage, fusion et transformation données",
+            details: [
+              "Traite 450+ jours données consommation repas",
+              "Fusionne données 5 sources différentes (repas, météo, calendrier, personnel, occupation)",
+              "Gère valeurs manquantes et problèmes qualité données",
+              "Crée caractéristiques temporelles et statistiques roulantes"
+            ]
+          },
+          {
+            name: "NumPy",
+            category: "Calcul Numérique",
+            description: "Package fondamental pour calcul scientifique",
+            purpose: "Opérations tableaux et fonctions mathématiques",
+            details: [
+              "Calculs numériques efficaces pour ingénierie caractéristiques",
+              "Opérations vectorisées pour optimisation performance",
+              "Calculs statistiques pour analyse données",
+              "Opérations tableaux efficaces mémoire sur grands jeux données"
+            ]
+          },
+          {
+            name: "Scikit-learn",
+            category: "Utilitaires ML",
+            description: "Bibliothèque apprentissage automatique avec métriques évaluation",
+            purpose: "Validation croisée et métriques performance",
+            details: [
+              "Validation croisée 5-fold pour évaluation modèle",
+              "Sélection caractéristiques utilisant information mutuelle",
+              "StandardScaler pour normalisation caractéristiques",
+              "Métriques complètes : RMSE, MAE, R², Max Error"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Outils Développement",
+        technologies: [
+          {
+            name: "Jupyter Notebook",
+            category: "Environnement Développement",
+            description: "Plateforme développement interactif et prototypage",
+            purpose: "Analyse exploratoire données et développement modèle",
+            details: [
+              "Exploration interactive modèles données repas BNP Paribas",
+              "Visualisation tendances saisonnières et modèles consommation",
+              "Prototypage rapide approches ingénierie caractéristiques",
+              "Documentation processus développement modèle"
+            ]
+          },
+          {
+            name: "Kaggle Kernels",
+            category: "Plateforme Cloud",
+            description: "Environnement science données basé cloud",
+            purpose: "Entraînement modèle et soumission compétition",
+            details: [
+              "Exécution basée cloud avec accélération GPU",
+              "Contrôle version et expériences reproductibles",
+              "Environnement développement collaboratif",
+              "Accès jeux données externes et APIs"
+            ]
+          },
+          {
+            name: "Git & GitHub",
+            category: "Contrôle Version",
+            description: "Gestion code source et collaboration",
+            purpose: "Versioning code et collaboration équipe",
+            details: [
+              "Suivi itérations modèle et améliorations performance",
+              "Développement collaboratif avec historique version",
+              "Workflow développement caractéristiques basé branches",
+              "Pipelines test et déploiement automatisés"
+            ]
+          }
+        ]
+      }
+    ],
+    architecture: {
+      title: "Architecture Système Prévision Repas BNP Paribas",
+      components: [
+        {
+          component: "Ingestion Données",
+          description: "Chargement et validation données multi-sources systèmes BNP Paribas",
+          details: [
+            "Données consommation repas historiques (18 mois)",
+            "Intégration données météo APIs externes",
+            "Métriques horaires personnel et occupation bâtiment",
+            "Informations événements calendaire et vacances",
+            "Vérifications qualité données automatisées et validation"
+          ]
+        },
+        {
+          component: "Ingénierie Caractéristiques",
+          description: "60+ caractéristiques ingéniérées données calendaire, occupation, menu et météo",
+          details: [
+            "Caractéristiques temporelles : jour semaine, mois, saison, vacances",
+            "Caractéristiques météo : température, précipitations, humidité",
+            "Caractéristiques occupation : compte personnel, salles réunion réservées",
+            "Caractéristiques retard : comptes repas 1-7 jours précédents",
+            "Statistiques roulantes : moyennes mobiles 7 et 30 jours"
+          ]
+        },
+        {
+          component: "Entraînement Modèle",
+          description: "Gradient boosting ensemble avec optimisation hyperparamètres",
+          details: [
+            "Ensemble modèles LightGBM et XGBoost",
+            "Validation croisée séries temporelles 5-fold",
+            "Optimisation hyperparamètres basée Optuna (100+ essais)",
+            "Arrêt précoce pour prévenir surapprentissage",
+            "Analyse et sélection importance caractéristiques"
+          ]
+        },
+        {
+          component: "Pipeline Prédiction",
+          description: "Prévision récursive avec mises à jour caractéristiques retard pour déploiement production",
+          details: [
+            "Prévision récursive multi-pas avant",
+            "Mises à jour caractéristiques retard temps réel",
+            "Moyenne modèles ensemble pour prédictions finales",
+            "Intervalles confiance et quantification incertitude",
+            "Pipeline réentraînement automatisé quotidien"
+          ]
+        }
+      ],
+      stepLabel: "Étape",
+      implementationDetailsLabel: "Détails Implémentation :"
+    },
+    performanceMetrics: {
+      title: "Métriques Performance Production",
+      description: "Indicateurs performance clés démontrant efficacité système environnement production",
+      metrics: [
+        {
+          metric: "RMSE",
+          description: "Erreur Quadratique Moyenne"
+        },
+        {
+          metric: "Précision",
+          description: "Dans tolérance ±30 repas"
+        },
+        {
+          metric: "Temps Entraînement",
+          description: "Réentraînement modèle complet"
+        },
+        {
+          metric: "Couverture Données",
+          description: "Données entraînement historiques"
+        }
+      ]
+    },
+    labels: {
+      purpose: "Objectif :",
+      technicalDetails: "Détails Techniques :"
+    }
+  },
+  footer: {
+    title: {
+      main: "Prévision Repas BNP Paribas"
+    },
+    description: "Solution apprentissage automatique avancée atteignant précision 94,5% pour prévision demande cafétéria",
+    metrics: {
+      rmse: "RMSE : 21,87 repas",
+      trainingData: "18 mois données entraînement",
+      features: "60+ caractéristiques ingéniérées"
+    },
+    buttons: {
+      documentation: "Documentation",
+      sourceCode: "Code Source"
+    }
+  }
+},
   gan:  {
      nav: {
       overview: "Vue d'Ensemble",
@@ -4553,6 +8288,1622 @@ if (score_ml > 0.3) {
         ]
       }
     },
+   
+      adc: {
+  hero: {
+    badge: {
+      text: "KI-gestützte Geschäftsintelligenz"
+    },
+    title: {
+      main: "FEAST",
+      subtitle: "FORECASTER"
+    },
+    description: "Revolutionäres Machine-Learning-System, das die Cafeteria-Operationen von BNP Paribas durch prädiktive Analysen transformiert, Abfall reduziert und Ressourcenallokation mit beispielloser Genauigkeit optimiert.",
+    performanceMetrics: {
+      title: "LIVE-LEISTUNGSMETRIKEN",
+      metrics: [
+        {
+          label: "Vorhersage-Genauigkeit",
+          description: "Tägliche Mahlzeiten-Prognose-Präzision (durchschnittlich)",
+          suffix: "RMSE"
+        },
+        {
+          label: "Modell-Vertrauen",
+          description: "Robustheit validiert durch zeitbewusste Kreuzvalidierung",
+          suffix: "%"
+        },
+        {
+          label: "Abfall-Reduzierung",
+          description: "Optimierung der Lebensmittelzubereitung und Kosteneffizienz",
+          suffix: "%"
+        },
+        {
+          label: "Verarbeitungszeit",
+          description: "Echtzeit-Erkenntnisse für dynamische Entscheidungsfindung",
+          suffix: "min"
+        }
+      ]
+    },
+    technologyStack: [
+      {
+        name: "LightGBM",
+        description: "Hochleistungs-ML-Engine für schnelle Erkenntnisse"
+      },
+      {
+        name: "Ensemble-Modelle",
+        description: "Kombinierte Vorhersagekraft für überlegene Genauigkeit"
+      },
+      {
+        name: "Zeitreihen-Analyse",
+        description: "Erweiterte zeitliche Muster für Zukunftsprognosen"
+      },
+      {
+        name: "Echtzeit-Daten",
+        description: "Sofortige Updates für agile Entscheidungsunterstützung"
+      }
+    ],
+    buttons: {
+      primary: "System Erleben",
+      secondary: "Analysen Erkunden"
+    },
+    keyFeatures: [
+      {
+        title: "Intelligente Prognosen",
+        description: "KI-gesteuerte Mahlzeiten-Nachfragevorhersagen, die optimale Lebensmittelzubereitung gewährleisten und Abfall minimieren."
+      },
+      {
+        title: "Dynamische Belegungserkenntnisse",
+        description: "Echtzeit-Verfolgung der Mitarbeiterpräsenz und Cafeteria-Nutzung für adaptive Planung."
+      },
+      {
+        title: "Strategische Geschäftsintelligenz",
+        description: "Umfassende Dashboards und handlungsrelevante Erkenntnisse für Kosteneinsparungen und operative Exzellenz."
+      }
+    ]
+  },
+  executiveSummary: {
+    badge: {
+      primary: "BNP PARIBAS EL DJAZAÏR TECHNISCHE ANALYSE",
+      secondary: "Mahlzeiten-Prognosesystem"
+    },
+    title: {
+      main: "BNP Paribas Cafeteria",
+      subtitle: "Nachfrage-Prognosesystem"
+    },
+    description: "Umfassende Machine-Learning-Lösung für die Hauptsitz-Cafeteria von BNP Paribas El Djazaïr, die genaue tägliche Mahlzeiten-Anzahl-Prognosen durch integrierte Analyse von Cafeteria-Transaktionen, Büropräsenz, Menüangeboten, Wetterbedingungen und kulturellen Kalenderereignissen liefert, um Vorbereitung zu optimieren und operativen Abfall zu reduzieren",
+    navigation: {
+      sections: [
+        "Operative Herausforderung",
+        "Technische Lösung",
+        "Leistungsanalyse",
+        "Geschäftsauswirkung"
+      ]
+    },
+    operationalChallenges: {
+      title: "Aktuelle Operative Herausforderungen",
+      challenges: [
+        {
+          title: "Lebensmittelverschwendung & Kostenoptimierung",
+          description: "Die Hauptsitz-Cafeteria von BNP Paribas El Djazaïr steht vor erheblichen Herausforderungen bei täglichen Mahlzeiten-Vorbereitungsentscheidungen. Überproduktion führt zu erheblicher Lebensmittelverschwendung und unnötigen Kosten, während Unterproduktion Mitarbeiter ohne Mahlzeiten lässt, was operative Ineffizienzen und Mitarbeiterunzufriedenheit schafft.",
+          currentState: "Manuelle Schätzung ohne präzise Nachfrageprognosen",
+          businessImpact: "Erhebliche Verschwendung durch Überschätzung, greifbares Kosteneinsparpotential",
+          frequency: "Tägliche Entscheidungsherausforderung"
+        },
+        {
+          title: "Servicequalität & Mitarbeiterzufriedenheit",
+          description: "Ohne genaue Prognosen müssen Cafeteria-Mitarbeiter täglich blind Vorbereitungsentscheidungen treffen, was oft zu Mahlzeiten-Engpässen führt, die Mitarbeiter enttäuschen, oder übermäßiger Vorbereitung, die zu Verschwendung und erhöhten operativen Kosten führt.",
+          currentState: "Erfahrungsbasierte Vermutungen für tägliche Mahlzeiten-Anzahlen",
+          businessImpact: "Mitarbeiterunzufriedenheit durch Mahlzeiten-Nichtverfügbarkeit",
+          frequency: "Tägliche Servicestörungen und Planungsunsicherheiten"
+        },
+        {
+          title: "Ressourcenplanung & Personalzuteilung",
+          description: "Mangel an prädiktiven Erkenntnissen beeinflusst Küchen-Ressourcenallokation, Personalplanung und Zutaten-Beschaffung. Management kann Operationen nicht proaktiv planen oder Ressourcennutzung ohne Verständnis von Nachfragemustern und Schlüsseltreibern optimieren.",
+          currentState: "Reaktive Planung ohne Nachfrage-Erkenntnisse",
+          businessImpact: "Suboptimale Ressourcenallokation und verpasste Effizienzchancen",
+          frequency: "Kontinuierliche operative Ineffizienz"
+        }
+      ],
+      labels: {
+        currentState: "Aktueller Zustand",
+        businessImpact: "Geschäftsauswirkung",
+        frequency: "Häufigkeit"
+      }
+    },
+    technicalSolutions: {
+      title: "Erweiterte Technische Architektur",
+      solutions: [
+        {
+          title: "Multi-Quellen-Datenintegration & ETL-Pipeline",
+          description: "Umfassende Datenarchitektur, die fünf heterogene interne Datenquellen integriert: historische Cafeteria-Transaktionsprotokolle, Hauptsitz-Anwesenheitsaufzeichnungen, tägliche Menüinformationen, Wetterdaten und Kalenderereignisse. Alle Datensätze werden über Datumsfelder zusammengeführt, um eine einheitliche Modellierungstabelle für Prognosen zu erstellen.",
+          methodology: "End-to-End-Machine-Learning-Pipeline mit umfangreicher Datenbereinigung und Feature-Engineering. Datums-Parsing, innere Verknüpfungen über Datumsfelder und Aggregationsprozesse gewährleisten Datenkonsistenz. Besondere Aufmerksamkeit für algerischen Geschäftskalender (Sonntag-Donnerstag-Arbeitswoche) und kulturelle Kontexte einschließlich islamischer Feiertage und Ramadan-Perioden.",
+          implementation: [
+            "Cafeteria-Transaktionsprotokolle (kaggle_cantine.csv) aggregiert nach Mitarbeiter-ID zur Ableitung täglicher Mahlzeiten-Anzahlen (Nb_meals)",
+            "Hauptsitz-Anwesenheitsverfolgung (kaggle_head_office.csv) über Badge-in-Daten für tägliche Kopfzahl (Nb_acces)",
+            "Tägliche Menüangebots-Analyse (kaggle_menu.csv) einschließlich Vorspeisen-Typen und Hauptgerichte für Beliebtheitsbewertung",
+            "Wetter-API-Integration (kaggle_meteo.csv) erfasst Temperatur, Niederschlag, Windgeschwindigkeit und Wolkenbedeckung",
+            "Zukunftsdatum-Vorlagen (test_kaggle_finale.csv) mit vorab ausgefüllten Features für Prognose-Deployment"
+          ],
+          performance: "Erfolgreich 5 Datenquellen mit 100% Datumsausrichtungsgenauigkeit integriert",
+          innovation: "Erste Implementierung berücksichtigt algerischen kulturellen Kontext und islamische Kalendereffekte"
+        },
+        {
+          title: "Erweiterte Feature-Engineering & Signalextraktion",
+          description: "Ausgeklügelter Feature-Erstellungsprozess extrahiert bedeutungsvolle Signale aus Rohdaten zur Identifizierung von Schlüsseltreibern der Cafeteria-Nachfrage. Features umfassen Wochentag-Muster, öffentliche Feiertage, Büropräsenz-Korrelationen, Menü-Beliebtheitsindizes und Wetter-Interaktionseffekte.",
+          methodology: "Zeitbewusstes Feature-Engineering mit Kreuzvalidierung zur Verhinderung von Datenleakage. Nur historische Daten für Beliebtheitsberechnungen verwendet. Umfassende Analyse von Mustern einschließlich wöchentlicher Saisonalität, Feiertagseffekten und Wettereinflüssen auf Essverhalten.",
+          implementation: [
+            "Zeitliche Features: Wochentag-Muster, Feiertagsmarkierungen, saisonale Indikatoren, Is_Ramadan-Perioden",
+            "Anwesenheits-Korrelationsanalyse: Büro-Kopfzahl vs. Cafeteria-Nachfrage-Beziehung (r=0,61)",
+            "Menü-Beliebtheitsbewertung: historische durchschnittliche Mahlzeiten pro Gerichtstyp mit Kreuzvalidierungsschutz",
+            "Wetter-Interaktions-Features: Niederschlagseffekte, Temperaturschwellen, Rain_x_Occupancy-Interaktionen",
+            "Lag-Features und rollende Statistiken: lag7 (gleicher Tag letzte Woche), MA7/MA14 gleitende Durchschnitte für Zeitreihenmuster"
+          ],
+          performance: "Büropräsenz als Schlüsselprediktor mit signifikanter Korrelation zur Mahlzeiten-Nachfrage identifiziert",
+          innovation: "Menü-Beliebtheitsindexierung mit Kreuzvalidierung verhindert Overfitting zu historischen Präferenzen"
+        },
+        {
+          title: "Ensemble Machine Learning & Modelloptimierung",
+          description: "Hochmoderne Ensemble-Regressionsmodelle mit gradient-boosted Entscheidungsbäumen, die nichtlineare Beziehungen und komplexe Feature-Interaktionen erfassen können. Hyperparameter-Optimierung minimiert Prognosefehler (RMSE) und gewährleistet gleichzeitig Generalisierung auf zukünftige Daten.",
+          methodology: "Zeitbewusste Kreuzvalidierung simuliert Vorwärts-in-Zeit-Vorhersagen auf zurückgehaltenen Daten. Rigoroses Validierungs-Framework gewährleistet, dass Modell gut auf zukünftige Szenarien ohne Overfitting zu historischen Eigenarten generalisiert. RMSE-Optimierung für praktische Prognosegenauigkeit.",
+          implementation: [
+            "LightGBM- und XGBoost-Ensemble-Architektur (70-30 gewichtet) mit gradient-boosted Entscheidungsbäumen",
+            "5-fold TimeSeriesSplit-Kreuzvalidierung verhindert zukünftige Datenleakage mit expandierender Fensterstrategie",
+            "Optuna Bayessche Hyperparameter-Optimierung (60 Versuche) zielt auf RMSE-Minimierung mit learning_rate ~0,05-0,1, num_leaves ~400-500",
+            "Frühes Stoppen mit 50-Runden-Geduld für Overfitting-Prävention und optimale Baumanzahlbestimmung",
+            "Sequentielle Vorhersage-Pipeline für Testset: Tag-für-Tag-Prognose mit rekursiven Lag-Feature-Updates aus vorherigen Vorhersagen"
+          ],
+          performance: "~22 RMSE-Genauigkeit in Kreuzvalidierung erreicht (5-7% des typischen Tagesbereichs 0-400+ Mahlzeiten), repräsentiert erhebliche Verbesserung gegenüber naiven Methoden",
+          innovation: "Zeitbewusste Validierungsmethodologie gewährleistet robuste reale Deployment-Leistung"
+        }
+      ],
+      labels: {
+        methodology: "Methodologie",
+        implementationDetails: "Implementierungsdetails",
+        performance: "LEISTUNG",
+        innovation: "INNOVATION"
+      }
+    },
+    performanceAnalysis: {
+      title: "Umfassende Leistungsanalyse",
+      metrics: [
+        {
+          label: "RMSE-Genauigkeit",
+          description: "Kreuzvalidierungs-RMSE in niedrigen 20ern (5-7% des typischen Tagesbereichs 0-400+ Mahlzeiten), erhebliche Verbesserung gegenüber naiven Prognosemethoden",
+          technicalDetail: "Root Mean Squared Error validiert durch 5-fold TimeSeriesSplit-Kreuzvalidierung simuliert reale Deployment-Szenarien",
+          context: "Zielbereich 15-25 RMSE erreicht, ermöglicht präzise Vorbereitungsplanung mit MAE ~16 Mahlzeiten durchschnittliche Abweichung"
+        },
+        {
+          label: "Ensemble-Strategie",
+          description: "LightGBM-XGBoost gewichtetes Ensemble optimiert verschiedene algorithmische Stärken für robuste Vorhersagegenauigkeit",
+          technicalDetail: "Ensemble-Gewichtung bestimmt durch Kreuzvalidierungs-Leistungsanalyse: LightGBM excelliert bei kategorialen Features, XGBoost bei numerischen Interaktionen",
+          context: "Ensemble-Ansatz reduziert modellspezifische Vorurteile und verbessert Generalisierung"
+        },
+        {
+          label: "Datenintegration",
+          description: "Umfassende Integration von Cafeteria-Protokollen, Anwesenheitsaufzeichnungen, Menüdaten, Wetterinformationen und Kalenderereignissen",
+          technicalDetail: "ETL-Pipeline mit datumsbasierter Zusammenführung gewährleistet 100% Datenausrichtung über heterogene interne Systeme",
+          context: "Erste Implementierung integriert mehrere interne BNP Paribas-Datenquellen"
+        },
+        {
+          label: "Externe Faktoren",
+          description: "Wetterbedingungen beeinflussen Essverhalten, mit Niederschlag ermutigt vor-Ort-Cafeteria-Nutzung",
+          technicalDetail: "API-Integration erfasst Temperatur, Niederschlag, Windgeschwindigkeit und Wolkenbedeckung für Nachfragemodellierung",
+          context: "Regen- und Wettermuster beeinflussen Mitarbeiter-Essentscheidungen"
+        },
+        {
+          label: "Produktionsbereit",
+          description: "Automatisierte Prognose-Pipeline aktualisiert Vorhersagen mit neuen Dateneingaben für täglichen operativen Gebrauch",
+          technicalDetail: "End-to-End-Pipeline verarbeitet tägliche Kopfzahl, Wetterprognosen und Menüinformationen für Echtzeit-Vorhersagen",
+          context: "Entscheidungsunterstützungstool für Cafeteria-Management"
+        },
+        {
+          label: "Prognosehorizont",
+          description: "Tag-voraus-Vorhersagen ermöglichen proaktive Mahlzeitenvorbereitung und Ressourcenallokation",
+          technicalDetail: "Zeitreihenmodellierung mit Feature-Engineering erfasst wöchentliche Muster und saisonale Effekte",
+          context: "Optimaler Horizont für operative Planung und Zutaten-Beschaffung"
+        },
+        {
+          label: "Kontextbewusst",
+          description: "Modell berücksichtigt algerischen Geschäftskalender und islamische Feiertage einschließlich Ramadan-Observanz",
+          technicalDetail: "Feature-Engineering integriert Sonntag-Donnerstag-Arbeitswoche und religiöse Observanz-Muster",
+          context: "Kritische Anpassung für genauen lokalen kulturellen Kontext"
+        }
+      ],
+      comparison: {
+        title: "Modell-Leistungsvergleich",
+        models: [
+          { name: "Naive Baseline", description: "Einfache Durchschnitte" },
+          { name: "Lineare Regression", description: "Basis-Features" },
+          { name: "LightGBM Ensemble", description: "Erweiterte Features" }
+        ],
+        bestLabel: "BESTE"
+      },
+      labels: {
+        technicalDetail: "TECHNISCHES DETAIL",
+        context: "KONTEXT"
+      }
+    },
+    businessImpact: {
+      title: "Quantifizierte Geschäftsauswirkung",
+      keyMetrics: [
+        { label: "Mahlzeiten-Genauigkeit", description: "Durchschnittlicher Vorhersagefehler ermöglicht präzise Vorbereitung" },
+        { label: "Datenintegration", description: "Umfassende Multi-Quellen-Daten-Pipeline" },
+        { label: "Planungsfähigkeit", description: "Tag-voraus-Prognose für optimale Ressourcenallokation" },
+        { label: "Kontextbewusstsein", description: "Algerischer Geschäftskalender und islamische Feiertags-Integration" }
+      ],
+      operationalBenefits: [
+        {
+          title: "Abfallreduzierung",
+          description: "Genaue Prognosen eliminieren Überschätzungs-Verschwendung und reduzieren Lebensmittelkosten. Selbst die Reduzierung des täglichen Fehlers um einige Dutzend Mahlzeiten übersetzt sich in greifbare Einsparungen und verbesserte Nachhaltigkeitsmetriken für BNP Paribas-Operationen."
+        },
+        {
+          title: "Mitarbeiterzufriedenheit",
+          description: "Gewährleistet, dass fast alle Mitarbeiter, die in der Cafeteria essen möchten, untergebracht werden können. Verhindert Enttäuschung durch Mahlzeiten-Engpässe bei gleichzeitiger Aufrechterhaltung konsistenter Servicequalität und Verfügbarkeit."
+        },
+        {
+          title: "Operative Effizienz",
+          description: "Verständnis von Nachfragetreibern ermöglicht proaktive Personalplanung und Zutaten-Beschaffung. Management kann höhere Beteiligung an bestimmten Tagen oder bei beliebten Mahlzeiten antizipieren."
+        }
+      ],
+      implementation: {
+        title: "Implementierung & Operative Integration",
+        phases: [
+          {
+            phase: "Phase 1: Daten-Fundament",
+            duration: "Abgeschlossen",
+            activities: ["ETL-Pipeline-Entwicklung", "Datenqualitäts-Validierung", "Feature-Engineering", "Algerische Kalender-Integration"]
+          },
+          {
+            phase: "Phase 2: Modell-Entwicklung",
+            duration: "Abgeschlossen",
+            activities: ["Algorithmus-Auswahl & -Tuning", "Kreuzvalidierungs-Framework", "Ensemble-Optimierung", "Leistungsvalidierung"]
+          },
+          {
+            phase: "Phase 3: Produktions-Deployment",
+            duration: "In Bearbeitung",
+            activities: ["Echtzeit-Vorhersage-API", "Dashboard-Entwicklung", "Mitarbeiter-Training", "Überwachungssystem"]
+          },
+          {
+            phase: "Phase 4: Kontinuierliche Verbesserung",
+            duration: "Laufend",
+            activities: ["Modell-Retraining-Pipeline", "Feature-Drift-Erkennung", "Leistungsüberwachung", "Geschäftsregel-Updates"]
+          }
+        ]
+      },
+      roi: {
+        title: "Return on Investment-Zusammenfassung",
+        metrics: [
+          { label: "ROI-Multiplikator", description: "Innerhalb 12 Monate" },
+          { label: "Payback-Monate", description: "Break-even-Zeitlinie" },
+          { label: "3-Jahres-Wert", description: "Kumulative Einsparungen" }
+        ],
+        quote: "Dieses ML-gestützte Prognosesystem repräsentiert einen Paradigmenwechsel von reaktivem zu prädiktivem Cafeteria-Management, liefert messbare Verbesserungen in operativer Effizienz, Kostenkontrolle und Mitarbeiterzufriedenheit und etabliert BNP Paribas El Djazaïr als Führer in datengetriebenem Facility-Management.",
+        buttons: {
+          technical: "Tiefer Technischer Einblick",
+          model: "Modell-Architektur Anzeigen"
+        }
+      }
+    },
+    dataArchitecture: {
+      title: "Integrierte Daten-Architektur",
+      sources: [
+        {
+          name: "Cafeteria-Transaktionsprotokolle",
+          details: "Individuelle Mahlzeiten-Transaktionsaufzeichnungen nach Mitarbeiter-ID",
+          records: "Tägliche Mahlzeiten-Anzahlen (Nb_meals) aggregiert aus individuellen Käufen",
+          connection: "Primäre Zielvariable für Prognosemodell",
+          technical: "kaggle_cantine.csv - Jeder Eintrag repräsentiert eine Mahlzeiten-Transaktion"
+        },
+        {
+          name: "Hauptsitz-Anwesenheit",
+          details: "Tägliche Badge-in-Aufzeichnungen verfolgen Büropräsenz",
+          records: "Tägliche Kopfzahl (Nb_acces) einzigartiger Mitarbeiter im Gebäude",
+          connection: "Entscheidendes exogenes Feature - höhere Anwesenheit schafft Gelegenheit für mehr Mahlzeiten",
+          technical: "Tägliche Aggregation bietet potentielle Gäste-Anzahl"
+        },
+        {
+          name: "Tägliches Menü-System",
+          details: "Cafeteria-Menüangebote einschließlich Vorspeisen und Hauptgerichte",
+          records: "Menü-Zusammensetzung und Gericht-Beliebtheitsindizes",
+          connection: "Qualitative Einfluss - bestimmte Gerichte ziehen mehr Gäste an",
+          technical: "Menü-Daten mit Gericht-Kategorisierung für Publikumsliebling-Identifikation"
+        },
+        {
+          name: "Wetter-Daten-API",
+          details: "Externe Wetterbedingungen beeinflussen Essentscheidungen",
+          records: "Temperatur-, Niederschlags-, Windgeschwindigkeits-, Wolkenbedeckungsmetriken",
+          connection: "Regen ermutigt vor-Ort-Essen, Temperatur beeinflusst Mittagswahlen",
+          technical: "Tägliche Wettermetriken integriert über externe API"
+        },
+        {
+          name: "Kalender & Ereignisse",
+          details: "Algerischer Geschäftskalender und kulturelle Ereignisse",
+          records: "Feiertagsmarkierungen, Arbeitswochenmuster (So-Do), religiöse Observanzen",
+          connection: "Kritischer kultureller Kontext für genaue algerische Marktvorhersagen",
+          technical: "Benutzerdefinierte Kalender-Integration für islamische Feiertage und lokale Muster"
+        }
+      ]
+    }
+  },
+  technicalOverview: {
+    badge: {
+      primary: "TECHNISCHER TIEFER EINBLICK",
+      secondary: "BNP Paribas Mahlzeiten-Prognosesystem"
+    },
+    title: {
+      main: "Erweiterte ML-Architektur"
+    },
+    description: "End-to-End-Machine-Learning-Pipeline kombiniert fünf heterogene Datenquellen mit ausgeklügeltem Feature-Engineering und Ensemble-Gradient-Boosting zur Erreichung von ~20 RMSE-Genauigkeit in täglicher Mahlzeiten-Anzahl-Prognose für BNP Paribas El Djazaïrs Cafeteria-Operationen",
+    dataSources: {
+      title: "Multi-Quellen-Datenintegrations-Pipeline",
+      sources: [
+        {
+          name: "Cafeteria-Transaktionsprotokolle",
+          description: "Individuelle Mahlzeiten-Transaktionsaufzeichnungen mit Mitarbeiter-ID-Verfolgung für umfassende tägliche Aggregation",
+          keyFeatures: [
+            "Tägliche Mahlzeiten-Anzahlen (Nb_meals) abgeleitet von Transaktions-Aggregation mit kaggle_cantine.csv",
+            "Mitarbeiter-ID-Verfolgung mit Duplikat-Behandlung für mehrere Mahlzeiten (~0,4% Aufkommensrate)",
+            "Zeitliche Muster-Analyse über Mai 2022 - Dezember 2024 (2,5 Jahre Abdeckung)",
+            "Zielvariablen-Konstruktion mit sequenzieller Tag-für-Tag-Vorhersage für Test-Prognose"
+          ],
+          dataSourceLabel: "Datenquelle 1/5"
+        },
+        {
+          name: "Hauptsitz-Anwesenheitsdaten",
+          description: "Badge-in-Aufzeichnungen verfolgen tägliche Mitarbeiterpräsenz als Schlüsselprediktor der Cafeteria-Nachfrage",
+          keyFeatures: [
+            "Tägliche Kopfzahl (Nb_acces) aus kaggle_head_office.csv einzigartiger Mitarbeiter im Gebäude",
+            "Abteilungs-Mapping und Organisationsstruktur-Analyse (betrachtet aber nicht implementiert)",
+            "Entscheidendes exogenes Feature mit 0,61 Korrelation zu Mahlzeiten-Nachfrage (Top-Feature-Wichtigkeit)",
+            "Potentielle Gäste-Populations-Indikator begrenzt maximale tägliche Kapazität (0-400+ Mahlzeiten-Bereich)"
+          ],
+          dataSourceLabel: "Datenquelle 2/5"
+        },
+        {
+          name: "Tägliches Menü-System",
+          description: "Umfassende Menüangebote einschließlich Vorspeisen-Typen und duale Hauptgericht-Optionen mit Beliebtheits-Analytik",
+          keyFeatures: [
+            "Vorspeise und zwei Hauptgerichte pro Tag aus kaggle_menu.csv mit kategorialer Klassifikation",
+            "Historische Gericht-Beliebtheitsindizes: durchschnittliche Nb_meals pro Gericht (z.B., Pizza=350 vs Quiche=280)",
+            "Menü-Diversitäts-Analyse (gleicher Typ vs. vielfältige Angebote) und vegetarische Option-Erkennung",
+            "Kreuzvalidierungsgeschützte Ziel-Kodierung verhindert Overfitting zu historischen Präferenzen"
+          ],
+          dataSourceLabel: "Datenquelle 3/5"
+        },
+        {
+          name: "Wetterdaten-Integration",
+          description: "Externe meteorologische Bedingungen beeinflussen Mitarbeiter-Essverhalten und Mittagsentscheidungen",
+          keyFeatures: [
+            "Temperatur, Niederschlag, Windgeschwindigkeit und Wolkenbedeckung aus kaggle_meteo.csv",
+            "Regen-Indikator (Is_Rain) zeigt ~6 zusätzliche Mahlzeiten an regnerischen Tagen (313 vs 307 Baseline)",
+            "Wetter-Anwesenheits-Interaktionseffekte (Rain_x_Occupancy) für zusammengesetzte Verhaltensverschiebungen",
+            "Fehlende Wetterdaten-Imputation mit domänenspezifischen Strategien für Modell-Robustheit"
+          ],
+          dataSourceLabel: "Datenquelle 4/5"
+        },
+        {
+          name: "Algerischer Kalender & Kultureller Kontext",
+          description: "Kulturelle und kalenderbasierte Features berücksichtigen lokale Geschäftsmuster und religiöse Observanzen",
+          keyFeatures: [
+            "Sonntag-Donnerstag-Arbeitswochenmuster-Erkennung",
+            "Islamische Feiertags-Erkennung (Ramadan-, Eid-Perioden)",
+            "Öffentliche Feiertags-Markierung mit nahezu null Mahlzeiten-Erwartungen",
+            "Saisonale Variationen einschließlich August-Urlaubsperioden"
+          ],
+          dataSourceLabel: "Datenquelle 5/5"
+        }
+      ],
+      integrationSummary: {
+        title: "Integrations-Architektur-Zusammenfassung",
+        metrics: [
+          {
+            label: "Datenquellen",
+            description: "Integriert über datumsbasierte Zusammenführung"
+          },
+          {
+            label: "Jahre-Abdeckung",
+            description: "Mai 2022 - Dezember 2024"
+          },
+          {
+            label: "Schlüssel-Korrelation",
+            description: "Anwesenheit vs Mahlzeiten-Nachfrage"
+          }
+        ]
+      }
+    },
+    methodology: {
+      title: "End-to-End-ML-Pipeline-Methodologie",
+      phases: [
+        {
+          phase: "Datenintegration & Vorverarbeitung",
+          description: "Umfassende ETL-Pipeline fusioniert fünf heterogene Datenquellen mit rigorosen Bereinigungs- und Validierungsverfahren",
+          techniques: [
+            "Datums-Parsing und -Ausrichtung über alle Datensätze mit Format-Standardisierung",
+            "Innere Verbindungs-Fusion gewährleistet zeitliche Konsistenz über Quellen",
+            "Fehlende Daten-Imputation mit domänenspezifischen Strategien",
+            "Duplikat-Behandlung in Transaktionsprotokollen (~0,4% Aufkommensrate)",
+            "Wochenend-/Feiertags-Ausrichtung für algerischen Geschäftskalender (Fr-Sa-Wochenenden)",
+            "Ramadan-Perioden-Erkennung mit spezieller Ereignis-Markierung"
+          ],
+          phaseLabel: "Phase 1"
+        },
+        {
+          phase: "Explorative Datenanalyse & Muster-Entdeckung",
+          description: "Statistische Analyse enthüllt Schlüssel-Nachfragetreiber und Verhaltensmuster in Cafeteria-Nutzung",
+          techniques: [
+            "Wöchentliche Saisonalitäts-Analyse zeigt Donnerstag-Spitzennachfrage",
+            "Büro-Belegungs-Korrelationsanalyse (r=0,61 mit Mahlzeiten-Nachfrage)",
+            "Menü-Einfluss-Quantifizierung mit Beliebtheitsbewertung",
+            "Wetter-Effekt-Validierung (+6 Mahlzeiten Durchschnitt an regnerischen Tagen)",
+            "Saisonale Variations-Identifikation (August-Urlaubs-Auswirkungen)",
+            "Feiertags-Muster-Erkennung mit Null-Nachfrage-Perioden"
+          ],
+          phaseLabel: "Phase 2"
+        },
+        {
+          phase: "Erweiterte Feature-Engineering",
+          description: "Erstellung von 60+ prädiktiven Features aus Rohdaten integriert zeitliche, verhaltens- und umweltbezogene Signale",
+          techniques: [
+            "Kalender-Features: Wochentag, Feiertagsmarkierungen, Monats-Kodierung",
+            "Lag-Features: lag7 (gleicher Tag letzte Woche) für wöchentliche Saisonalität",
+            "Rollende Statistiken: 7-Tage- und 14-Tage-gleitende Durchschnitte",
+            "Menü-Beliebtheitsindizes mit Kreuzvalidierungs-Kodierung",
+            "Wetter-Interaktions-Features (Regen × Belegungs-Effekte)",
+            "Ziel-Kodierung für kategoriale Menü-Artikel mit Leakage-Prävention"
+          ],
+          phaseLabel: "Phase 3"
+        },
+        {
+          phase: "Modell-Entwicklung & Ensemble-Training",
+          description: "Gradient-Boosting-Ensemble mit rigoroser zeitbewusster Validierung und Hyperparameter-Optimierung",
+          techniques: [
+            "LightGBM- und XGBoost-Ensemble-Architektur mit 70-30-gewichteter Durchschnittsbildung für optimale Leistungsbalance",
+            "5-fold TimeSeriesSplit-Kreuzvalidierung verhindert zukünftige Leakage (Training 2022-2023, Validierung 2024)",
+            "Optuna Bayessche Hyperparameter-Optimierung (60 Versuche): learning_rate ~0,05-0,1, num_leaves ~400-500, max_depth 8-12",
+            "Frühes Stoppen mit 50-Runden-Geduld verhindert Overfitting, Ensemble-Durchschnittsbildung über CV-Folds für Robustheit",
+            "Feature-Wichtigkeits-Validierung: Nb_acces (35%), Wochentag-Indikatoren (25%), Menü-Beliebtheit (20%), Wetter-Effekte (15%)",
+            "Residual-Analyse enthüllte Montag-Untervorhersage-Bias, gelöst durch erweiterte Wochentag-Kodierung und Interaktionsterme"
+          ],
+          phaseLabel: "Phase 4"
+        },
+        {
+          phase: "Validierung & Produktions-Deployment",
+          description: "Umfassende Modell-Validierung und Deployment-Pipeline für operative Prognosen",
+          techniques: [
+            "Vorwärts-in-Zeit-Validierung simuliert reale Prognose-Szenarien ohne Lookahead-Bias",
+            "Residual-Analyse gewährleistet unvoreingenommene Vorhersagen über alle Bedingungen und Wochentag-Muster",
+            "Sequenzielle Vorhersage-Pipeline für test_kaggle_finale.csv: Tag-für-Tag-Prognose mit rekursiven Lag-Updates",
+            "Ensemble-Durchschnittsbildung über 5 fold-trainierte Modelle für robuste Unsicherheits-Quantifizierung und Vorhersage-Intervalle",
+            "Produktionsbereite rekursive Vorhersage nutzt Vortags-Prognosen als dynamische Lag-Features",
+            "Leistungsüberwachung erreicht ~22 RMSE (5-7% des 0-400+ Mahlzeiten-Bereichs) mit MAE ~16 Mahlzeiten durchschnittliche Abweichung",
+            "Deployment-Überlegungen: tägliche Prognose-Pipeline, Echtzeit-Feature-Updates und Vorhersage-Vertrauensintervalle"
+          ],
+          phaseLabel: "Phase 5"
+        }
+      ]
+    },
+    achievements: {
+      metrics: [
+        {
+          label: "RMSE-Validierung",
+          description: "Kreuzvalidierungs-RMSE in niedrigen 20ern (5-7% des 0-400+ täglichen Mahlzeiten-Bereichs), trifft Ziel-Leistungsschwelle"
+        },
+        {
+          label: "Entwickelte Features",
+          description: "Ausgeklügelte Feature-Erstellung aus Rohdaten einschließlich zeitlicher, verhaltens- und umweltbezogener Signale"
+        },
+        {
+          label: "Zeitreihen-CV",
+          description: "Rigorose Validierung verhindert zukünftige Leakage mit Vorwärts-in-Zeit-Vorhersage-Simulation"
+        }
+      ]
+    }
+  },
+  dataInsights: {
+    badge: {
+      primary: "EXPLORATIVE DATENANALYSE",
+      secondary: "Muster-Entdeckung & Erkenntnisse"
+    },
+    title: {
+      main: "Datengetriebene Erkenntnisse"
+    },
+    description: "Umfassende explorative Analyse enthüllt Verhaltensmuster, Nachfragetreiber und kritische Beziehungen in Cafeteria-Nutzung über 2,5 Jahre operative Daten",
+    timeSeriesAnalysis: {
+      title: "Zeitreihen-Analyse & Muster",
+      insights: [
+        {
+          title: "Gesamttrend und Saisonalität",
+          description: "Täglich servierte Mahlzeiten über Zeit (Mai 2022 – Dez 2024) zeigen starke wöchentliche Saisonalität mit minimalem Langzeittrend",
+          findings: [
+            "Starke wöchentliche Saisonalität mit regelmäßigen Einbrüchen auf nahezu null an Wochenenden (Freitage/Samstage)",
+            "Kein dramatischer Langzeittrend, aber leichter Anstieg von Mitte 2023 bis 2024",
+            "Signifikante Rückgänge während August jedes Jahr aufgrund Sommerurlaub",
+            "Verlängerte Null-Mahlzeiten-Perioden während Ramadan als Cafeteria effektiv geschlossen war",
+            "Serie ist relativ stationär abgesehen von saisonalen Effekten"
+          ]
+        },
+        {
+          title: "Wochentag vs Wochenend-Muster",
+          description: "Klare Wochentag-Effekte innerhalb des Sonntag-Donnerstag-Arbeitswochenmusters in Algerien",
+          findings: [
+            "Donnerstag hat höchste durchschnittliche Mahlzeiten-Anzahl (Spitzennachfrage-Tag)",
+            "Sonntag zeigt überdurchschnittliche Nachfrage trotz erstem Arbeitstag",
+            "Montag neigt zu niedrigstem Durchschnitt unter Arbeitstagen",
+            "Freitag und Samstag zeigen nahezu null Mahlzeiten (Wochenende in Algerien)",
+            "Ende-der-Woche-Meetings oder Traditionen treiben Donnerstag-Spitzenanwesenheit"
+          ]
+        },
+        {
+          title: "Belegungs-Korrelationsanalyse",
+          description: "Büro-Anwesenheit vs Mahlzeiten-Korrelation enthüllt 50-70% Konversionsrate mit täglicher Variabilität",
+          findings: [
+            "Korrelationskoeffizient von 0,61 zwischen Büro-Kopfzahl und Mahlzeiten",
+            "Spitzen an Arbeitstagen (~500-600 Personal anwesend, ~300-400 Mahlzeiten serviert)",
+            "Etwa 50-70% der anwesenden Mitarbeiter essen letztendlich in der Cafeteria",
+            "Konversionsrate variiert täglich basierend auf kontextuellen Faktoren",
+            "Streudiagramm zeigt positiven Trend aber signifikante Variabilität um Trendlinie"
+          ]
+        }
+      ]
+    },
+    keyStatistics: [
+      {
+        label: "Korrelationsstärke",
+        description: "Büro-Anwesenheit vs Mahlzeiten-Nachfrage-Korrelationskoeffizient"
+      },
+      {
+        label: "Spitzentag-Effekt",
+        description: "Höchste durchschnittliche Mahlzeiten pro Tag innerhalb Arbeitswoche"
+      },
+      {
+        label: "Wetter-Auswirkung",
+        description: "Durchschnittliche Mahlzeiten an regnerischen vs klaren Tagen"
+      },
+      {
+        label: "Konversionsrate",
+        description: "Anwesende Mitarbeiter, die in Cafeteria speisen"
+      },
+      {
+        label: "Daten-Abdeckung",
+        description: "Mai 2022 - Dezember 2024 operative Daten"
+      },
+      {
+        label: "Duplikat-Rate",
+        description: "Mehrere Mahlzeiten-Transaktionen pro Mitarbeiter pro Tag"
+      },
+      {
+        label: "August-Auswirkung",
+        description: "Sommerurlaubs-Perioden-Nachfrage-Reduzierung"
+      },
+      {
+        label: "Wochenend-Muster",
+        description: "Algerisches Wochenende zeigt nahezu null Nachfrage"
+      }
+    ],
+    criticalPatterns: {
+      title: "Kritische Muster-Entdeckung",
+      insights: [
+        {
+          title: "Wöchentliche Saisonalitäts-Dominanz",
+          finding: "Donnerstag taucht als Spitzennachfrage-Tag innerhalb der Sonntag-Donnerstag-Arbeitswoche auf, möglicherweise aufgrund Ende-der-Woche-Meetings oder Tradition von mehr Personal vor Ort",
+          implication: "Starke Wochentag-Effekte erfordern kalenderbasierte Features mit Donnerstag benötigt erweiterte Vorbereitungskapazität",
+          category: "Zeitliche Muster",
+          observation: "Donnerstag-Spitze"
+        },
+        {
+          title: "Büro-Belegung als Primärer Treiber",
+          finding: "50-70% der anwesenden Mitarbeiter speisen typischerweise in der Cafeteria, schaffen Korrelation (r=0,61) zwischen täglicher Kopfzahl und Mahlzeiten-Nachfrage",
+          implication: "Büro-Anwesenheit dient als primärer Prediktor, aber Konversionsrate variiert täglich erfordert zusätzliche kontextuelle Features",
+          category: "Verhaltens-Erkenntnisse",
+          observation: "r = 0,61"
+        },
+        {
+          title: "Wettergetriebene Verhaltensverschiebungen",
+          finding: "Regnerische Tage zeigen konstant höhere Cafeteria-Nutzung (313 vs 307 Mahlzeiten Durchschnitt), da Mitarbeiter weniger geneigt sind, Gebäude zu verlassen",
+          implication: "Wetterdaten bieten bedeutungsvolles Signal für tägliche Nachfrage-Anpassungen, besonders für Indoor-Dining-Präferenz",
+          category: "Umwelt-Faktoren",
+          observation: "313 vs 307 Mahlzeiten"
+        },
+        {
+          title: "Saisonale Urlaubs-Auswirkung",
+          finding: "August zeigt viel niedrigere Cafeteria-Nutzung da viele Mitarbeiter Sommerurlaub nehmen, resultiert in weniger Personen im Büro",
+          implication: "Kalender-Features müssen saisonale Muster berücksichtigen mit August markiert als bekannte langsame Periode",
+          category: "Saisonale Variationen",
+          observation: "August-Urlaub"
+        },
+        {
+          title: "Menü-Beliebtheits-Einfluss",
+          finding: "Bestimmte Gerichte wie Pizza oder Couscous hatten höhere durchschnittliche Beteiligung (höherer Beliebtheitsindex) verglichen mit gewöhnlichen Menü-Tagen",
+          implication: "Beliebtheits-Metriken als Features ermöglichen Modell höhere Anzahlen an Tagen mit historisch beliebten Gerichten vorherzusagen",
+          category: "Menü-Analytik",
+          observation: "Gericht-Varianz"
+        },
+        {
+          title: "Wochenend- & Feiertags-Verhalten",
+          finding: "Freitag-Samstag (Algerien-Wochenende) und öffentliche Feiertage zeigen nahezu null Nachfrage, bestätigen Cafeteria-Schließungsmuster",
+          implication: "Wochenend-/Feiertags-Indikatoren wesentlich für genaue Baseline-Vorhersage nahezu null Mahlzeiten-Erwartungen",
+          category: "Kalender-Effekte",
+          observation: "Null Mahlzeiten an Wochenenden"
+        },
+        {
+          title: "Temperatur-Effekte",
+          finding: "Extrem heiße oder kalte Tage könnten Ausgehen entmutigen, mit kalt + Regen-Kombinationen verstärken Cafeteria-Präferenz",
+          implication: "Temperatur als kontinuierliches Feature erlaubt Modell nichtlineare Effekte und Wetter-Interaktionen zu lernen",
+          category: "Wetter-Muster",
+          observation: "Temperatur-Auswirkung"
+        },
+        {
+          title: "Menü-Diversitäts-Auswirkung",
+          finding: "Zwei Hauptwahlen täglich - ähnliche Optionen (beide rotes Fleisch) könnten gleiche Gruppe ansprechen vs Vielfalt (Fleisch + vegetarisch) zieht breiteres Publikum an",
+          implication: "Menü-Diversitäts-Features erfassen ob vielfältige Angebote Gesamtattraktivität und Beteiligung erhöhen",
+          category: "Menü-Strategie",
+          observation: "Menü-Vielfalt"
+        },
+        {
+          title: "Spezielle Ereignis-Erkennung",
+          finding: "Wenn beide Hauptgerichte besonders verlockend waren oder spezielle Dessert-/Ereignis-Mahlzeiten angeboten wurden, gab es bemerkenswerte Verkaufs-Spitzen",
+          implication: "Historische Beteiligung dient als bester Indikator für Menü-Attraktivität, ermöglicht beliebtheitsbasierte Vorhersagen",
+          category: "Spezielle Ereignisse",
+          observation: "Ereignis-Spitzen"
+        }
+      ],
+      labels: {
+        keyFinding: "Schlüssel-Erkenntnis:",
+        strategicImplication: "Strategische Implikation:"
+      }
+    },
+    correlationAnalysis: {
+      title: "Feature-Korrelations- & Auswirkungsanalyse",
+      correlationStrengthLabel: "Korrelationsstärke:",
+      implementationImpactLabel: "Implementierungs-Auswirkung:",
+      patterns: [
+        {
+          category: "Kalender- & Zeitliche Effekte",
+          description: "Starke wöchentliche Periodizität mit Freitag-Samstag-Wochenenden und islamischen Feiertagen erfordern spezielle Behandlung im algerischen Geschäftskontext",
+          impact: "Binäre Features für nicht-arbeitende Tage wesentlich, plus Ramadan-Perioden-Erkennung und August-Urlaubs-Markierung",
+          details: [
+            "Sonntag-Donnerstag-Arbeitswochenmuster bestätigt durch null Mahlzeiten an Freitagen/Samstagen",
+            "Öffentliche Feiertage (1. Mai, Eid) entsprechen nahezu null Mahlzeiten-Anzahlen",
+            "Ramadan-Perioden zeigen fast null Mahlzeiten, effektiv Cafeteria-Schließung",
+            "Späte Dezember-Einbrüche um Weihnachten/Neujahr trotz Algerien-Kontext"
+          ]
+        },
+        {
+          category: "Büro-Anwesenheits-Dynamik",
+          description: "Tägliche Kopfzahl dient als stärkster einzelner Prediktor mit 0,61 Korrelation, aber Konversionsrate schwankt zwischen 50-70%",
+          impact: "Primäres Feature erfordert Wetter-, Menü- und Kalender-Interaktionen für optimale Genauigkeit in Konversions-Vorhersage",
+          details: [
+            "Badge-in-Aufzeichnungen bieten genaue tägliche potentielle Gäste-Population",
+            "Nicht alle anwesenden Mitarbeiter essen in Cafeteria (einige bringen Mittagessen/gehen raus)",
+            "Gelegentlich mehr Mahlzeiten als einzigartige Personen (mehrere Mahlzeiten, Besucher)",
+            "Streudiagramm zeigt positiven Trend aber signifikante Variabilität um Trendlinie"
+          ]
+        },
+        {
+          category: "Menü-Beliebtheit & Attraktivität",
+          description: "Gerichtsspezifische Attraktivität treibt signifikante Beteiligungs-Variationen mit Beliebtheitswerten berechnet als durchschnittliche Mahlzeiten wenn Gericht serviert wurde",
+          impact: "Ziel-kodierte Beliebtheitsindizes ermöglichen Vorhersage höherer Anzahlen an historisch beliebten Gericht-Tagen",
+          details: [
+            "Pizza und Couscous identifiziert als Publikumslieblinge mit höheren Beliebtheitsindizes",
+            "Gewöhnliche Menü-Tage sehen leicht niedrigere Anzahlen vs spezielle Gerichte",
+            "Menü-Vielfalt beeinflusst Attraktivität (ähnliche vs vielfältige Angebote)",
+            "Spezielle Dessert- oder Ereignis-Mahlzeiten schaffen bemerkenswerte Verkaufs-Spitzen"
+          ]
+        },
+        {
+          category: "Wetter & Umwelt",
+          description: "Regen erhöht Cafeteria-Nutzung (313 vs 307 Durchschnitt) da Mitarbeiter weniger geneigt Gebäude für Mittagessen zu verlassen",
+          impact: "Wetter-Features bieten bedeutungsvolle tägliche Anpassungs-Signale, besonders Regen-Indikatoren und Temperatur-Interaktionen",
+          details: [
+            "Regnerische Tage zeigen bescheidene aber konsistente +6 Mahlzeiten-Erhöhung",
+            "Temperatur-Effekte vermutet aber nicht stark monoton allein",
+            "Kalt + Regen-Kombinationen verstärken potentiell Indoor-Dining-Präferenz",
+            "Wolkenbedeckung und Wind eingeschlossen aber erwartete geringe Effekte"
+          ]
+        },
+        {
+          category: "Saisonale & Feiertags-Muster",
+          description: "Jenseits wöchentlicher Zyklen zeigen saisonale Muster August-Urlaubs-Auswirkung und spezielle Datum-Erkennung für genaue Baseline-Vorhersage",
+          impact: "Monats-/Saison-Features wesentlich, besonders August-Markierung und öffentliche Feiertags-Erkennung für nahezu null Erwartungen",
+          details: [
+            "August zeigt konstant viel niedrigere Cafeteria-Nutzung (Sommerurlaub)",
+            "Späte Dezember zeigt Einbrüche um Weihnachten/Neujahr-Periode",
+            "Ramadan-Perioden erfordern spezielle Span-Erkennung (effektiv Cafeteria-Schließung)",
+            "Öffentliche Feiertags-Markierung verhindert Modell-Verwirrung über niedrige Nachfrage-Tage"
+          ]
+        },
+        {
+          category: "Zeitreihen & Lag-Features",
+          description: "Historische Mahlzeiten-Anzahl-Muster durch Lag-Features (lag7 für wöchentliche Saisonalität) und rollende Durchschnitte für Trend-Glättung",
+          impact: "Lag-Features transformieren Zeitreihen-Prognose in überwachtes Lernen mit kürzlichen Verlaufs-Kontext",
+          details: [
+            "Lag7 (gleicher Tag letzte Woche) erfasst wöchentliche Saisonalität direkt",
+            "7-Tage- und 14-Tage-gleitende Durchschnitte bieten geglättete Trend-Werte",
+            "Rollende Standardabweichung misst kürzliche Nachfrage-Volatilität",
+            "Sequenzielle Vorhersage-Ansatz verhindert zukünftige Daten-Leakage"
+          ]
+        }
+      ]
+    },
+    summary: {
+      title: "EDA-Erkenntnisse-Zusammenfassung",
+      description: "Unsere explorative Analyse bestätigte, dass Datumsmuster, Büro-Belegung, Menü-Wahl und Wetterbedingungen die primären Treiber der Cafeteria-Nachfrage sind und die Grundlage für unsere Feature-Engineering-Strategie bilden.",
+      driverCategories: [
+        {
+          title: "Wochentag-Muster",
+          subtitle: "Setzen allgemeine Baseline"
+        },
+        {
+          title: "Büro-Belegung",
+          subtitle: "Treibt Hauptvolumen"
+        },
+        {
+          title: "Menü-Wahl",
+          subtitle: "Tag-zu-Tag-Variabilität"
+        },
+        {
+          title: "Wetter-Effekte",
+          subtitle: "Verhaltens-Modulation"
+        }
+      ],
+      conclusion: "Diese Erkenntnisse informierten direkt unseren Feature-Engineering-Ansatz und ermöglichten dem Gradient-Boosting-Ensemble, die wichtigen Effekte zu erfassen: wer bei der Arbeit ist, was zum Mittagessen gibt und wie das Wetter ist – alle Schlüsseltreiber von Mittagsentscheidungen plus dem angeborenen wöchentlichen Rhythmus des Arbeitsplatzes."
+    }
+  },
+  modelShowcase: {
+    title: {
+      main: "Modell-Architektur & Features"
+    },
+    description: "Ensemble-Gradient-Boosting-Ansatz mit umfassendem Feature-Engineering für optimale Prognose-Leistung",
+    navigation: {
+      tabs: [
+        { label: "Modell-Architektur" },
+        { label: "Feature-Engineering" },
+        { label: "Validierungs-Strategie" },
+        { label: "Datenquellen" },
+        { label: "Geschäfts-Auswirkung" }
+      ]
+    },
+    architecture: {
+      title: "Ensemble-Gradient-Boosting-Modelle",
+      models: [
+        {
+          name: "LightGBM",
+          description: "Primäres Gradient-Boosting-Modell optimiert für Geschwindigkeit und Genauigkeit mit kategorialer Feature-Behandlung",
+          advantages: [
+            "Schnelles Training & Inferenz (~10x schneller als XGBoost)",
+            "Behandelt kategoriale Features nativ ohne Kodierung",
+            "Speicher-effizient mit leaf-wise Baum-Wachstum",
+            "Eingebautes frühes Stoppen und Kreuzvalidierung",
+            "Exzellente Leistung auf tabellarischen Daten",
+            "Robust gegen Overfitting mit ordnungsgemäßer Regularisierung"
+          ],
+          role: "Primäres Modell",
+          technicalDetails: [
+            "Optuna Hyperparameter-Optimierung (60 Versuche)",
+            "Lernrate: 0,095 für Stabilität",
+            "Num leaves: 512 für Modell-Komplexität",
+            "Feature-Fraktion: 0,616 für Regularisierung",
+            "Bagging-Fraktion: 0,900 für Varianz-Reduzierung",
+            "L2-Regularisierung: 2,12 zur Overfitting-Prävention"
+          ],
+          useCases: [
+            "Primäre Prognose-Engine für tägliche Vorhersagen",
+            "Echtzeit-Inferenz für operative Planung",
+            "Feature-Wichtigkeits-Analyse für Geschäfts-Erkenntnisse",
+            "Baseline-Modell für Ensemble-Strategien"
+          ]
+        },
+        {
+          name: "XGBoost",
+          description: "Sekundäres Ensemble-Modell für Leistungsvergleich, Validierung und potentielle Blending-Strategien",
+                    advantages: [
+            "Robust gegen Overfitting mit starker Regularisierung",
+            "Exzellente plattformübergreifende Stabilität",
+            "Bewährte Erfolgsbilanz in Wettbewerben",
+            "Eingebaute Feature-Wichtigkeits-Metriken",
+            "Starke Behandlung fehlender Werte",
+            "Etablierte Baseline für Gradient-Boosting"
+          ],
+          role: "Ensemble-Komponente",
+          technicalDetails: [
+            "Max Tiefe: 6 für kontrollierte Komplexität",
+            "Lernrate: 0,1 mit frühem Stoppen",
+            "Subsample: 0,8 für Varianz-Reduzierung",
+            "Column Subsample: 0,8 für Feature-Randomisierung",
+            "Gamma: 0,1 für minimalen Split-Verlust",
+            "Alpha/Lambda Regularisierungs-Tuning"
+          ],
+          useCases: [
+            "Modell-Validierung und Vergleichs-Baseline",
+            "Ensemble-Blending für verbesserte Genauigkeit",
+            "Feature-Auswahl-Validierung",
+            "Backup-Modell für Produktions-Resilienz"
+          ]
+        }
+      ],
+      performance: {
+        crossValidationScore: "Kreuzvalidierungs-Score"
+      },
+      sections: {
+        keyAdvantages: "Hauptvorteile",
+        technicalConfiguration: "Technische Konfiguration",
+        useCases: "Anwendungsfälle"
+      },
+      rationale: {
+        title: "Modell-Auswahl-Rationale",
+        whyGradientBoosting: {
+          title: "Warum Gradient Boosting?",
+          points: [
+            "Exzellente Leistung auf tabellarischen Daten mit gemischten Feature-Typen",
+            "Behandelt kategoriale Features ohne umfangreiche Vorverarbeitung",
+            "Robust gegen Outliers und fehlende Werte",
+            "Eingebaute Feature-Wichtigkeit für Interpretierbarkeit"
+          ]
+        },
+        ensembleStrategy: {
+          title: "Ensemble-Strategie",
+          points: [
+            "LightGBM als primäres Modell für Geschwindigkeit und Genauigkeit",
+            "XGBoost für Validierung und potentielles Blending",
+            "Konsistente Hyperparameter-Optimierung über Modelle",
+            "Produktions-Deployment-Flexibilität und Backup-Optionen"
+          ]
+        },
+        codeSnippet: {
+          title: "Modell-Training-Pipeline"
+        }
+      }
+    },
+    features: {
+      title: "Feature-Engineering-Strategie",
+      categories: [
+        {
+          category: "Kalender & Zeitlich",
+          features: [
+            "Wochentag-Kodierung (0-6 zyklisch)",
+            "Wochenend-/Feiertags-Markierungen (binäre Indikatoren)",
+            "Monats-/Saison-Indikatoren (1-12 zyklisch)",
+            "Spezielle Ereignis-Markierungen (Ramadan, Urlaubsperioden)",
+            "Öffentliche Feiertags-Nähe (Tage vorher/nachher)",
+            "Akademischer Kalender-Abgleich",
+            "Geschäftstag-Indikatoren"
+          ],
+          description: "Erfasst systematische zeitbasierte Muster in Cafeteria-Nutzung mit starken wöchentlichen und saisonalen Effekten",
+          technicalNotes: [
+            "Zyklische Kodierung für kontinuierliche zeitliche Features",
+            "Binäre Markierungen für kategoriale Zeit-Indikatoren",
+            "Feiertags-Nähe-Effekte (±3 Tage Fenster)",
+            "Ramadan-Perioden-Behandlung mit spezieller Kodierung",
+            "Akademischer Kalender-Integration für Bildungseinrichtungs-Kontext"
+          ]
+        },
+        {
+          category: "Belegungs-Metriken",
+          features: [
+            "Tägliche Kopfzahl (nb_personnes)",
+            "7-Tage rollende Durchschnitte",
+            "Abteilungsebene-Verteilungen",
+            "Anwesenheits-Trend-Indikatoren",
+            "Belegungs-Rate-Berechnungen",
+            "Historische Anwesenheits-Muster",
+            "Gebäude-Kapazitäts-Nutzung"
+          ],
+          description: "Primärer Nachfrage-Treiber - korreliert direkt mit potentiellen Kunden und operativer Kapazität",
+          technicalNotes: [
+            "Abteilungsebene-Analyse betrachtet aber nicht implementiert aufgrund Datenlimitationen",
+            "Rollende Durchschnitte glätten tägliche Volatilität",
+            "Belegungs-Rate = nb_personnes / Gebäude_Kapazität",
+            "Trend-Features erfassen Momentum in Anwesenheits-Mustern",
+            "Fehlende Daten-Interpolation für unvollständige Aufzeichnungen"
+          ]
+        },
+        {
+          category: "Historische Nachfrage",
+          features: [
+            "Lag-Features (1, 7, 14 Tage)",
+            "Gleitende Durchschnitte (3, 7, 14 Tage)",
+            "Rollende Volatilitäts-Maße",
+            "Exponential-Glättungs-Trends",
+            "Saisonale Dekompositions-Komponenten",
+            "Nachfrage-Momentum-Indikatoren",
+            "Änderungspunkt-Erkennungs-Signale"
+          ],
+          description: "Zeitreihen-Muster, Momentum-Effekte und autoregressive Beziehungen in Mahlzeiten-Nachfrage",
+          technicalNotes: [
+            "Sequenzieller Vorhersage-Ansatz verhindert Daten-Leakage",
+            "Expandierende Fenster-Validierung für zeitliche Integrität",
+            "Lag-Feature-Auswahl basierend auf ACF/PACF-Analyse",
+            "Rollende Statistiken berechnet mit minimalen Fenster-Anforderungen",
+            "Volatilitäts-Maße helfen Nachfrage-Unsicherheit zu erfassen"
+          ]
+        },
+        {
+          category: "Menü-Intelligenz",
+          features: [
+            "Gericht-Beliebtheits-Indizes (note_plat_principal)",
+            "Menü-Diversitäts-Metriken (nb_plats_menu)",
+            "Kategorie-Gruppierungen und Klassifikationen",
+            "Ziel-Kodierung für Menü-Kategorien",
+            "Historische Gericht-Leistung",
+            "Menü-Neuheits-Indikatoren",
+            "Diät-Präferenz-Berücksichtigungen"
+          ],
+          description: "Erfasst Lebensmittel-Präferenz-Auswirkung auf Anwesenheit und Kundenzufriedenheits-Effekte",
+          technicalNotes: [
+            "Ziel-Kodierung mit Kreuzvalidierung zur Overfitting-Prävention",
+            "Menü-Diversität berechnet als einzigartige Gerichte pro Tag",
+            "Gericht-Rating-Normalisierung und fehlende Wert-Behandlung",
+            "Kategorie-Kodierung für Küchen-Typen und Diät-Anforderungen",
+            "Beliebtheits-Indizes berechnet aus historischen Ratings und Verkäufen"
+          ]
+        },
+        {
+          category: "Wetter & Umwelt",
+          features: [
+            "Temperatur-Variationen (tägliche Min/Max)",
+            "Niederschlags-Markierungen und Intensität",
+            "Wetter-Interaktions-Terme",
+            "Saisonale Temperatur-Anpassungen",
+            "Wetter-Komfort-Indizes",
+            "Extrem-Wetter-Indikatoren",
+            "Klima-Muster-Erkennung"
+          ],
+          description: "Umwelt-Faktoren beeinflussen Ess-Entscheidungen und Outdoor/Indoor-Präferenz-Muster",
+          technicalNotes: [
+            "Wetter-Daten bezogen aus externen APIs mit fehlende Wert-Behandlung",
+            "Temperatur-Binning für nichtlineare Effekte",
+            "Interaktions-Terme zwischen Wetter und Saison",
+            "Komfort-Index kombiniert Temperatur, Feuchtigkeit, Niederschlag",
+            "Extrem-Wetter-Markierungen für Outlier-Erkennung"
+          ]
+        }
+      ],
+      sections: {
+        featureComponents: "Feature-Komponenten",
+        technicalImplementation: "Technische Implementierung"
+      },
+      pipeline: {
+        title: "Feature-Engineering-Pipeline",
+        steps: [
+          {
+            step: "1. Daten-Vorverarbeitung",
+            description: "Bereinigen, validieren und standardisieren von Rohdaten",
+            details: ["Duplikat-Entfernung", "Fehlende Wert-Behandlung", "Datums-Standardisierung", "Outlier-Erkennung"]
+          },
+          {
+            step: "2. Zeitliche Features",
+            description: "Zeitbasierte Muster und Zyklen extrahieren",
+            details: ["Zyklische Kodierung", "Feiertags-Markierungen", "Saisonale Indikatoren", "Spezielle Ereignisse"]
+          },
+          {
+            step: "3. Lag & Rollende Features",
+            description: "Historische Nachfrage-Muster erstellen",
+            details: ["Lag-Features", "Gleitende Durchschnitte", "Volatilitäts-Maße", "Trend-Indikatoren"]
+          },
+          {
+            step: "4. Feature-Auswahl",
+            description: "Feature-Set für Modell-Leistung optimieren",
+            details: ["Wichtigkeits-Ranking", "Korrelations-Analyse", "Kreuzvalidierung", "Stabilitäts-Test"]
+          }
+        ]
+      }
+    },
+    validation: {
+      title: "Zeitreihen-Kreuzvalidierungs-Strategie",
+      overview: {
+        title: "Vorwärts-Validierungs-Strategie",
+        description: "Einsatz zeitbewusster Kreuzvalidierung um sicherzustellen, dass Modell auf zukünftige Daten generalisiert. Kein zufälliges Mischen - strikt chronologische Splits zur Daten-Leakage-Prävention und Aufrechterhaltung zeitlicher Integrität wesentlich für Produktions-Deployment.",
+        cvFolds: "CV-Folds"
+      },
+      processSteps: {
+        title: "Validierungs-Prozess-Schritte",
+        steps: [
+          {
+            step: "Expandierende Fenster-Kreuzvalidierung",
+            description: "Zeitbewusste Validierung mit chronologisch geordneten Splits zur Daten-Leakage-Prävention",
+            rationale: "Gewährleistet Modell-Generalisierung auf zukünftige Daten ohne Zugang zu zukünftigen Informationen",
+            outcome: "5-fold CV mit konsistentem RMSE ~21,87 ± 0,5 über alle Folds"
+          },
+          {
+            step: "Sequenzieller Vorhersage-Test",
+            description: "Nur-Vorwärts-Vorhersage-Simulation nachahmend reale Deployment-Bedingungen",
+            rationale: "Validiert Modell-Leistung unter operativen Beschränkungen ohne zukünftigen Datenzugang",
+            outcome: "Aufrechterhaltung Genauigkeit im sequenziellen Vorhersage-Modus mit minimaler Verschlechterung"
+          },
+          {
+            step: "Residual-Analyse & Bias-Erkennung",
+            description: "Systematische Untersuchung von Vorhersage-Fehlern über verschiedene Bedingungen und Perioden",
+            rationale: "Identifiziert potentielle systematische Vorurteile oder Muster in Modell-Fehlern",
+            outcome: "Kein signifikanter Bias erkannt über Saisons, Wochentage oder Nachfrage-Ebenen"
+          },
+          {
+            step: "Feature-Wichtigkeits-Stabilität",
+            description: "Kreuzvalidierungs-Analyse von Feature-Wichtigkeits-Rankings für Modell-Interpretierbarkeit",
+            rationale: "Gewährleistet konsistente Feature-Beitrags-Muster über verschiedene Zeitperioden",
+            outcome: "Stabile Wichtigkeits-Hierarchie: Belegung > Zeitlich > Historisch > Menü > Wetter"
+          },
+          {
+            step: "Out-of-Sample-Validierung",
+            description: "Hold-out-Test auf finalen Monaten von Daten nie gesehen während Modell-Entwicklung",
+            rationale: "Ultimativer Test der Modell-Generalisierung auf komplett ungesehene zukünftige Perioden",
+            outcome: "5-7% Fehlerrate aufrechterhalten auf held-out-Daten, bestätigt Produktionsbereitschaft"
+          }
+        ],
+        stepHeaders: {
+          description: "Beschreibung",
+          rationale: "Rationale",
+          outcome: "Ergebnis"
+        }
+      },
+      results: {
+        title: "Kreuzvalidierungs-Ergebnisse",
+        metrics: [
+          { label: "Bestes CV RMSE" },
+          { label: "Std Abweichung" },
+          { label: "Fehlerrate" }
+        ],
+        codeSnippet: {
+          title: "Zeitreihen-Kreuzvalidierungs-Implementierung"
+        }
+      }
+    },
+    data: {
+      title: "Datenquellen & Verarbeitungs-Pipeline",
+      sources: [
+        {
+          name: "kaggle_cantine.csv",
+          description: "Primärer Datensatz enthält 2+ Jahre täglicher Mahlzeiten-Anzahl-Aufzeichnungen mit zeitlichen und kontextuellen Features",
+          size: "729 Tage × 12 Features",
+          keyFeatures: [
+            "nb_vendus (Ziel): Tägliche Mahlzeiten-Anzahl",
+            "date: Sequenzielle tägliche Aufzeichnungen",
+            "jour_semaine: Wochentag-Indikatoren",
+            "mois: Monatliche Saisonalitäts-Muster",
+            "nb_jours_feries: Feiertags-Nähe-Effekte",
+            "nb_personnes: Tägliche Kopfzahl-Daten",
+            "nb_plats_menu: Menü-Diversitäts-Metrik",
+            "note_plat_principal: Hauptgericht-Rating",
+            "temperature: Wetter-Bedingungen",
+            "commentaire: Qualitativer Kontext"
+          ],
+          cleaningSteps: [
+            "Duplikat-Erkennung und -Entfernung (39 Duplikat-Zeilen identifiziert)",
+            "Fehlende Wert-Imputation für Wetter- und Rating-Daten",
+            "Datums-Format-Standardisierung und Validierung",
+            "Outlier-Analyse und Behandlung für extreme Mahlzeiten-Anzahlen",
+            "Feature-Typ-Konversion und Kodierungs-Vorbereitung"
+          ],
+          challenges: [
+            "Limitierte Stichprobengröße erfordert sorgfältige Validierungs-Strategie",
+            "Unausgewogene Verteilung über Saisons und Ereignisse",
+            "Fehlende Wetter-Daten für einige historische Perioden",
+            "Qualitative Kommentare erfordern Text-Verarbeitung",
+            "Daten-Leakage-Prävention in zeitlicher Modellierung"
+          ]
+        }
+      ],
+      sections: {
+        keyFeatures: "Schlüssel-Features",
+        dataCleaningSteps: "Daten-Bereinigungs-Schritte",
+        dataChallenges: "Daten-Herausforderungen"
+      },
+      quality: {
+        title: "Datenqualitäts-Bewertung",
+        metrics: [
+          {
+            metric: "Daten-Vollständigkeit",
+            description: "Nicht-fehlende Werte über alle Features"
+          },
+          {
+            metric: "Zeitliche Abdeckung",
+            description: "2+ Jahre kontinuierlicher täglicher Aufzeichnungen"
+          },
+          {
+            metric: "Duplikat-Rate",
+            description: "39 Duplikat-Aufzeichnungen identifiziert & entfernt"
+          },
+          {
+            metric: "Feature-Diversität",
+            description: "Zeitliche, numerische, kategoriale Variablen"
+          }
+        ]
+      },
+      processingPipeline: {
+        title: "Daten-Verarbeitungs-Pipeline"
+      }
+    },
+    business: {
+      title: "Geschäfts-Auswirkung & Operativer Wert",
+      impacts: [
+        {
+          metric: "Lebensmittel-Abfall-Reduzierung",
+          description: "Optimierte Mahlzeiten-Vorbereitung reduziert Überproduktion"
+        },
+        {
+          metric: "Kosteneinsparungen",
+          description: "Reduzierter Abfall und verbesserte Inventar-Verwaltung"
+        },
+        {
+          metric: "Service-Qualität",
+          description: "Verbesserte Mahlzeiten-Verfügbarkeit und reduzierte Engpässe"
+        },
+        {
+          metric: "Planungs-Effizienz",
+          description: "Automatisierte Prognosen reduzieren manuelle Planungszeit"
+        }
+      ],
+      implementation: {
+        title: "Implementierungs- & Deployment-Strategie",
+        deployment: {
+          title: "Produktions-Deployment",
+          points: [
+            "Automatisierte tägliche Prognose-Pipeline",
+            "Echtzeit-Modell-Überwachung und Alarmierung",
+            "A/B-Test-Framework für Modell-Updates",
+            "Rückfall auf historische Durchschnitte bei Ausfällen",
+            "Integration mit bestehenden Cafeteria-Management-Systemen"
+          ]
+        },
+        benefits: {
+          title: "Operative Vorteile",
+          points: [
+            "Reduzierter Lebensmittel-Abfall durch genaue Nachfrage-Vorhersage",
+            "Verbesserte Kundenzufriedenheit via besserer Mahlzeiten-Verfügbarkeit",
+            "Kosteneinsparungen durch optimierte Zutaten-Beschaffung",
+            "Erweiterte Personal-Planung und Ressourcen-Allokation",
+            "Datengetriebene Entscheidungsfindung für Menü-Optimierung"
+          ]
+        }
+      },
+      roi: {
+        title: "Return on Investment-Analyse",
+        categories: [
+          {
+            category: "Kosteneinsparungen",
+            items: ["Lebensmittel-Abfall-Reduzierung: €8K/Jahr", "Arbeits-Optimierung: €3K/Jahr", "Inventar-Effizienz: €1K/Jahr"],
+            total: "€12K/Jahr"
+          },
+          {
+            category: "Implementierungs-Kosten",
+            items: ["Entwicklungszeit: €2K", "Infrastruktur: €500", "Wartung: €1K/Jahr"],
+            total: "€3,5K gesamt"
+          },
+          {
+            category: "Netto-Nutzen",
+            items: ["Jährliche Einsparungen: €12K", "Implementierungs-Kosten: €3,5K", "Payback-Periode: 3,5 Monate"],
+            total: "340% ROI"
+          }
+        ],
+        enhancements: {
+          title: "Zukünftige Verbesserungs-Möglichkeiten",
+          technical: {
+            title: "Technische Verbesserungen",
+            points: [
+              "Echtzeit-Modell-Retraining mit Streaming-Daten",
+              "Deep-Learning-Modelle für komplexe Muster-Erkennung",
+              "Multi-Standort-Prognose mit Transfer-Lernen",
+              "Integration externer Datenquellen (Ereignisse, Wetter-APIs)"
+            ]
+          },
+          business: {
+            title: "Geschäfts-Erweiterungen",
+            points: [
+              "Menü-Optimierung und Empfehlungs-System",
+              "Dynamische Preisgestaltung basierend auf Nachfrage-Prognosen",
+              "Lieferanten-Beziehungs-Optimierung",
+              "Kunden-Präferenz- und Zufriedenheits-Modellierung"
+            ]
+          }
+        }
+      }
+    }
+  },
+  codeExamples: {
+    title: {
+      main: "Produktions-Code-Implementierung"
+    },
+    description: "Enterprise-Grade-Python-Implementierung für das BNP Paribas Cafeteria-Mahlzeiten-Prognosesystem mit umfassender Datenverarbeitung, erweiterten ML-Pipelines und produktionsbereitem Deployment-Code",
+    navigation: {
+      categories: [
+        { label: "Datenverarbeitung" },
+        { label: "Feature-Engineering" },
+        { label: "Modell-Training" },
+        { label: "Vorhersage-Pipeline" }
+      ]
+    },
+    examples: [
+      {
+        title: "data_integration.py",
+        description: "Zusammenführung mehrerer Datenquellen mit Datums-Ausrichtung und fehlende Wert-Behandlung"
+      },
+      {
+        title: "feature_engineering.py",
+        description: "Erstellung von Lag-Features, Beliebtheits-Indizes und kalenderbasierte Features"
+      },
+      {
+        title: "model_training.py",
+        description: "Hyperparameter-Optimierung und Ensemble-Training mit Zeitreihen-Validierung"
+      },
+      {
+        title: "prediction_pipeline.py",
+        description: "Prognose-Generierung mit rekursiven Lag-Updates für sequenzielle Daten"
+      }
+    ],
+    implementation: {
+      title: "Implementierungs-Highlights",
+      highlights: [
+        {
+          title: "Daten-Pipeline",
+          description: "Robuste ETL mit umfassender Validierung und Fehlerbehandlung"
+        },
+        {
+          title: "Zeitreihen-Sicherheit",
+          description: "Null Daten-Leakage mit ordnungsgemäßem zeitlichem Feature-Engineering"
+        },
+        {
+          title: "Hyperparameter-Tuning",
+          description: "Bayessche Optimierung mit 60 Versuchen für optimale Leistung"
+        },
+        {
+          title: "Kreuzvalidierung",
+          description: "Zeitbewusste Aufteilung für realistische Leistungsschätzungen"
+        },
+        {
+          title: "Ensemble-Methoden",
+          description: "5-fold Modell-Durchschnittsbildung für verbesserte Generalisierung"
+        },
+        {
+          title: "Produktionsbereit",
+          description: "Fehlerbehandlung, Protokollierung und rekursive Vorhersage-Unterstützung"
+        }
+      ]
+    },
+    statistics: [
+      { label: "Code-Zeilen" },
+      { label: "Entwickelte Features" },
+      { label: "Modell-Validierungs-Folds" },
+      { label: "Code-Abdeckung" }
+    ]
+  },
+  resultsMetrics: {
+    title: {
+      main: "Leistungs-Ergebnisse"
+    },
+    description: "Umfassende Bewertungs-Metriken demonstrieren die Genauigkeit und Zuverlässigkeit des Modells für Produktions-Deployment",
+    keyMetrics: [
+      {
+        title: "RMSE-Score",
+        description: "Root Mean Squared Error auf Kreuzvalidierung",
+        details: [
+          "Finaler RMSE von 21,87 Mahlzeiten erreicht durch Ensemble von RandomForest + XGBoost",
+          "Hyperparameter-Optimierung mit Optuna-Framework mit 100+ Versuchen",
+          "Repräsentiert durchschnittlichen Vorhersage-Fehler von ~22 Mahlzeiten pro Tag"
+        ]
+      },
+      {
+        title: "Genauigkeits-Rate",
+        description: "Vorhersagen innerhalb akzeptablem Bereich (±30 Mahlzeiten)",
+        details: [
+          "94,5% der Vorhersagen innerhalb ±30 Mahlzeiten Toleranz",
+          "Übertrifft Geschäfts-Anforderung von 90% Genauigkeit für operative Planung",
+          "Ermöglicht zuverlässige Lebensmittel-Bestellung und Personal-Planung-Entscheidungen"
+        ]
+      },
+      {
+        title: "Feature-Anzahl",
+        description: "Entwickelte Features aus 5 Datenquellen",
+        details: [
+          "60+ entwickelte Features aus historischen Mahlzeiten-Daten und externen Faktoren",
+          "Wetter-Muster, Kalender-Ereignisse, Personal-Pläne, Gebäude-Belegung",
+          "Automatisierte Feature-Auswahl mit wechselseitiger Information und Korrelations-Analyse"
+        ]
+      },
+      {
+        title: "Modell-Stabilität",
+        description: "Standardabweichung über CV-Folds",
+        details: [
+          "Niedrige Varianz (±0,5) über 5-fold Kreuzvalidierung",
+          "Gewährleistet Modell-Zuverlässigkeit und Generalisierung auf ungesehene Daten",
+          "Konsistente Leistung über verschiedene Zeitperioden und Saisons"
+        ]
+      },
+      {
+        title: "Trainings-Zeit",
+        description: "Vollständiges Modell-Training mit Hyperparameter-Tuning",
+        details: [
+          "Optimierte Training-Pipeline mit frühem Stoppen und paralleler Verarbeitung",
+          "Reduziert Trainings-Zeit um 65% bei Aufrechterhaltung der Genauigkeit",
+          "Ermöglicht tägliches Modell-Retraining für Produktions-Deployment"
+        ]
+      },
+      {
+        title: "Daten-Abdeckung",
+        description: "Historische Daten über mehrere Saisons und Ereignisse",
+        details: [
+          "18 Monate umfassender Mahlzeiten-Verbrauchs-Daten",
+          "Inkludiert Sommer-/Winter-Muster, Feiertage, Konferenzen und spezielle Ereignisse",
+          "Abdeckung 450+ einzigartiger Tage mit vollständiger Feature-Verfügbarkeit"
+        ]
+      }
+    ],
+    performanceAnalysis: {
+      title: "Detaillierte Leistungs-Analyse",
+      tableHeaders: {
+        metric: "Metrik",
+        training: "Training",
+        validation: "Validierung",
+        improvement: "Verbesserung"
+      },
+      metrics: [
+        {
+          metric: "Mittlerer Absoluter Fehler",
+          improvement: "vs Baseline: -45%",
+          description: "Durchschnittliche absolute Differenz zwischen vorhergesagten und tatsächlichen Mahlzeiten-Anzahlen"
+        },
+        {
+          metric: "R²-Score",
+          improvement: "Starke Korrelation",
+          description: "Bestimmtheits-Koeffizient misst Modells Erklärungs-Kraft"
+        },
+        {
+          metric: "Max Fehler",
+          improvement: "Outlier-Behandlung",
+          description: "Maximale Abweichung in einer einzelnen Vorhersage über Validierungs-Set"
+        },
+        {
+          metric: "Kreuzvalidierungs-Score",
+          improvement: "Konsistente Leistung",
+          description: "Durchschnittlicher R²-Score über 5-fold Kreuzvalidierungs-Splits"
+        }
+      ]
+    },
+    businessImpact: {
+      title: "Geschäfts-Auswirkung-Projektion",
+      impacts: [
+        { label: "Geschätzte Reduzierung Lebensmittel-Abfall" },
+        { label: "Mitarbeiter-Zufriedenheits-Rate (Mahlzeiten-Verfügbarkeit)" },
+        { label: "Jährliches Kosteneinsparungs-Potential" }
+      ],
+      conclusion: "Genaue Prognosen ermöglichen optimale Ressourcen-Allokation, reduzieren Abfall und gewährleisten konsistente Mahlzeiten-Verfügbarkeit für alle Mitarbeiter"
+    }
+  },
+  technologyStack: {
+    title: {
+      main: "Technologie-Stack"
+    },
+    description: "Moderne Data-Science-Tools und Frameworks powern die BNP Paribas Cafeteria-Mahlzeiten-Prognose-Lösung mit 94,5% Genauigkeit und automatisierten täglichen Vorhersagen",
+    categories: [
+      {
+        title: "Data Science & ML",
+        technologies: [
+          {
+            name: "Python",
+            category: "Kern-Sprache",
+            description: "Primäre Programmiersprache für Data-Science-Pipeline",
+            purpose: "Datenverarbeitung, Modellierung und Analyse",
+            details: [
+              "Python 3.8+ mit spezialisierten Data-Science-Bibliotheken",
+              "Behandelt BNP Paribas Cafeterias 18-Monate historischen Datensatz",
+              "Implementiert automatisierte Feature-Engineering-Pipeline",
+              "Unterstützt Ensemble-Modellierung mit RandomForest und XGBoost"
+            ]
+          },
+          {
+            name: "LightGBM",
+            category: "ML-Framework",
+            description: "Gradient-Boosting-Framework optimiert für Effizienz",
+            purpose: "Primäres Modell für Mahlzeiten-Anzahl-Vorhersage",
+            details: [
+              "Erreicht RMSE von 21,87 Mahlzeiten mit Hyperparameter-Optimierung",
+              "Behandelt 60+ entwickelte Features aus mehreren Datenquellen",
+              "Schnelle Trainings-Zeit (4,2 Minuten) ermöglicht tägliches Retraining",
+              "Robuste Leistung über saisonale Muster und Ereignisse"
+            ]
+          },
+          {
+            name: "XGBoost",
+            category: "ML-Framework",
+            description: "Extremes Gradient-Boosting für Ensemble-Modellierung",
+            purpose: "Sekundäres Modell für Ensemble-Vorhersagen",
+            details: [
+              "Ergänzt LightGBM im Ensemble-Ansatz",
+              "Bietet diverse Vorhersagen für verbesserte Genauigkeit",
+              "Exzellente Behandlung fehlender Werte und Outliers",
+              "Kreuzvalidierungs-Score von 0,832 über 5 Folds"
+            ]
+          },
+          {
+            name: "Optuna",
+            category: "Optimierung",
+            description: "Automatisches Hyperparameter-Optimierungs-Framework",
+            purpose: "Modell-Hyperparameter-Tuning",
+            details: [
+              "100+ Versuche für optimale Hyperparameter-Auswahl",
+              "Tree-strukturierter Parzen-Estimator für effiziente Suche",
+              "Automatisiertes Pruning nicht vielversprechender Versuche",
+              "Reduziert manuellen Tuning-Aufwand um 90%"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Datenverarbeitung",
+        technologies: [
+          {
+            name: "Pandas",
+            category: "Daten-Manipulation",
+            description: "Mächtige Datenstrukturen und Analyse-Bibliothek",
+            purpose: "Daten-Bereinigung, -Zusammenführung und -Transformation",
+            details: [
+              "Verarbeitet 450+ Tage Mahlzeiten-Verbrauchs-Daten",
+              "Führt Daten aus 5 verschiedenen Quellen zusammen (Mahlzeiten, Wetter, Kalender, Personal, Belegung)",
+              "Behandelt fehlende Werte und Datenqualitäts-Probleme",
+              "Erstellt zeitbasierte Features und rollende Statistiken"
+            ]
+          },
+          {
+            name: "NumPy",
+            category: "Numerisches Rechnen",
+            description: "Fundamentales Paket für wissenschaftliches Rechnen",
+            purpose: "Array-Operationen und mathematische Funktionen",
+            details: [
+              "Effiziente numerische Berechnungen für Feature-Engineering",
+              "Vektorisierte Operationen für Leistungs-Optimierung",
+              "Statistische Berechnungen für Daten-Analyse",
+              "Speicher-effiziente Array-Operationen auf großen Datensätzen"
+            ]
+          },
+          {
+            name: "Scikit-learn",
+            category: "ML-Utilities",
+            description: "Machine-Learning-Bibliothek mit Bewertungs-Metriken",
+            purpose: "Kreuzvalidierung und Leistungs-Metriken",
+            details: [
+              "5-fold Kreuzvalidierung für Modell-Bewertung",
+              "Feature-Auswahl mit wechselseitiger Information",
+              "StandardScaler für Feature-Normalisierung",
+              "Umfassende Metriken: RMSE, MAE, R², Max Error"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Entwicklungs-Tools",
+        technologies: [
+          {
+            name: "Jupyter Notebook",
+            category: "Entwicklungs-Umgebung",
+            description: "Interaktive Entwicklungs- und Prototyping-Plattform",
+            purpose: "Explorative Daten-Analyse und Modell-Entwicklung",
+            details: [
+              "Interaktive Erkundung von BNP Paribas Mahlzeiten-Daten-Mustern",
+              "Visualisierung saisonaler Trends und Verbrauchs-Muster",
+              "Schnelles Prototyping von Feature-Engineering-Ansätzen",
+              "Dokumentation des Modell-Entwicklungs-Prozesses"
+            ]
+          },
+          {
+            name: "Kaggle Kernels",
+            category: "Cloud-Plattform",
+            description: "Cloud-basierte Data-Science-Umgebung",
+            purpose: "Modell-Training und Wettbewerbs-Submission",
+            details: [
+              "Cloud-basierte Ausführung mit GPU-Beschleunigung",
+              "Versionskontrolle und reproduzierbare Experimente",
+              "Kollaborative Entwicklungs-Umgebung",
+              "Zugang zu externen Datensätzen und APIs"
+            ]
+          },
+          {
+            name: "Git & GitHub",
+            category: "Versionskontrolle",
+            description: "Quellcode-Management und Kollaboration",
+            purpose: "Code-Versionierung und Team-Kollaboration",
+            details: [
+              "Verfolgung Modell-Iterationen und Leistungs-Verbesserungen",
+              "Kollaborative Entwicklung mit Versions-Historie",
+              "Branch-basierter Feature-Entwicklungs-Workflow",
+              "Automatisierte Test- und Deployment-Pipelines"
+            ]
+          }
+        ]
+      }
+    ],
+    architecture: {
+      title: "BNP Paribas Mahlzeiten-Prognose-System-Architektur",
+      components: [
+        {
+          component: "Daten-Eingang",
+          description: "Multi-Quellen-Daten-Laden und Validierung aus BNP Paribas-Systemen",
+          details: [
+            "Historische Mahlzeiten-Verbrauchs-Daten (18 Monate)",
+            "Wetter-Daten-Integration aus externen APIs",
+            "Personal-Pläne und Gebäude-Belegungs-Metriken",
+            "Kalender-Ereignisse und Feiertags-Informationen",
+            "Automatisierte Datenqualitäts-Checks und Validierung"
+          ]
+        },
+        {
+          component: "Feature-Engineering",
+          description: "60+ entwickelte Features aus Kalender-, Belegungs-, Menü- und Wetter-Daten",
+          details: [
+            "Zeitbasierte Features: Wochentag, Monat, Saison, Feiertage",
+            "Wetter-Features: Temperatur, Niederschlag, Feuchtigkeit",
+            "Belegungs-Features: Personal-Anzahl, gebuchte Meeting-Räume",
+            "Lag-Features: vorherige 1-7 Tage Mahlzeiten-Anzahlen",
+            "Rollende Statistiken: 7-Tage und 30-Tage gleitende Durchschnitte"
+          ]
+        },
+        {
+          component: "Modell-Training",
+          description: "Ensemble-Gradient-Boosting mit Hyperparameter-Optimierung",
+          details: [
+            "Ensemble aus LightGBM- und XGBoost-Modellen",
+            "5-fold Zeitreihen-Kreuzvalidierung",
+            "Optuna-basierte Hyperparameter-Optimierung (100+ Versuche)",
+            "Frühes Stoppen zur Overfitting-Prävention",
+            "Feature-Wichtigkeits-Analyse und -Auswahl"
+          ]
+        },
+        {
+          component: "Vorhersage-Pipeline",
+          description: "Rekursive Prognose mit Lag-Feature-Updates für Produktions-Deployment",
+          details: [
+            "Rekursive Multi-Step-Ahead-Prognose",
+            "Echtzeit-Lag-Feature-Updates",
+            "Ensemble-Modell-Durchschnittsbildung für finale Vorhersagen",
+            "Vertrauens-Intervalle und Unsicherheits-Quantifizierung",
+            "Tägliche automatisierte Retraining-Pipeline"
+          ]
+        }
+      ],
+      stepLabel: "Schritt",
+      implementationDetailsLabel: "Implementierungs-Details:"
+    },
+    performanceMetrics: {
+      title: "Produktions-Leistungs-Metriken",
+      description: "Schlüssel-Leistungs-Indikatoren demonstrieren Systemeffektivität in Produktions-Umgebung",
+      metrics: [
+        {
+          metric: "RMSE",
+          description: "Root Mean Squared Error"
+        },
+        {
+          metric: "Genauigkeit",
+          description: "Innerhalb ±30 Mahlzeiten Toleranz"
+        },
+        {
+          metric: "Trainings-Zeit",
+          description: "Vollständiges Modell-Retraining"
+        },
+        {
+          metric: "Daten-Abdeckung",
+          description: "Historische Trainings-Daten"
+        }
+      ]
+    },
+    labels: {
+      purpose: "Zweck:",
+      technicalDetails: "Technische Details:"
+    }
+  },
+  footer: {
+    title: {
+      main: "BNP Paribas Mahlzeiten-Prognose"
+    },
+    description: "Erweiterte Machine-Learning-Lösung erreicht 94,5% Genauigkeit für Cafeteria-Nachfrage-Prognose",
+    metrics: {
+      rmse: "RMSE: 21,87 Mahlzeiten",
+      trainingData: "18 Monate Trainings-Daten",
+      features: "60+ entwickelte Features"
+    },
+    buttons: {
+      documentation: "Dokumentation",
+      sourceCode: "Quellcode"
+    }
+  }
+},
+   
     projects: {
       title: "Ausgewählte Projekte", 
       subtitle: "Innovative Lösungen und technische Expertise präsentieren",
@@ -4876,8 +10227,6 @@ if (score_ml > 0.3) {
       },
     },
   },
-
-  // Footer
   footer: {
     title: "Interaktive Datenvisualisierung & Business Intelligence Suite",
     description: "Befähigung von Organisationen mit umfassender Analytics für erneuerbare Energien und datengestützten Erkenntnissen für nachhaltige Zukunftsplanung und strategische Entscheidungsfindung.",
@@ -4926,7 +10275,6 @@ if (score_ml > 0.3) {
   },
 },
 MarketPulseContentType: {
-
   hero: {
     achievement: {
       badge: "🏆 Gewinner der HAICK 2025 TSA Challenge",
@@ -6106,6 +11454,1620 @@ if (ml_score > 0.3) {
       achievements: "Logros",
       contact: "Contacto"
     },
+    adc: {
+  hero: {
+    badge: {
+      text: "Inteligencia Empresarial Impulsada por IA"
+    },
+    title: {
+      main: "FEAST",
+      subtitle: "FORECASTER"
+    },
+    description: "Sistema revolucionario de aprendizaje automático que transforma las operaciones de cafetería de BNP Paribas mediante análisis predictivo, reduciendo desperdicios y optimizando la asignación de recursos con una precisión sin precedentes.",
+    performanceMetrics: {
+      title: "MÉTRICAS DE RENDIMIENTO EN TIEMPO REAL",
+      metrics: [
+        {
+          label: "Precisión de Predicción",
+          description: "Precisión de pronóstico de comidas diarias (en promedio)",
+          suffix: "RMSE"
+        },
+        {
+          label: "Confianza del Modelo",
+          description: "Robustez validada mediante validación cruzada temporal",
+          suffix: "%"
+        },
+        {
+          label: "Reducción de Desperdicios",
+          description: "Optimización de la preparación de alimentos y eficiencia de costos",
+          suffix: "%"
+        },
+        {
+          label: "Tiempo de Procesamiento",
+          description: "Insights en tiempo real para toma de decisiones dinámicas",
+          suffix: "min"
+        }
+      ]
+    },
+    technologyStack: [
+      {
+        name: "LightGBM",
+        description: "Motor ML de alto rendimiento para insights rápidos"
+      },
+      {
+        name: "Modelos Ensemble",
+        description: "Poder predictivo combinado para precisión superior"
+      },
+      {
+        name: "Análisis de Series Temporales",
+        description: "Patrones temporales avanzados para pronósticos futuros"
+      },
+      {
+        name: "Datos en Tiempo Real",
+        description: "Actualizaciones instantáneas para soporte de decisiones ágil"
+      }
+    ],
+    buttons: {
+      primary: "Experimentar el Sistema",
+      secondary: "Explorar Analíticas"
+    },
+    keyFeatures: [
+      {
+        title: "Pronósticos Inteligentes",
+        description: "Predicciones de demanda de comidas impulsadas por IA, asegurando preparación óptima de alimentos y minimizando desperdicios."
+      },
+      {
+        title: "Insights Dinámicos de Ocupación",
+        description: "Seguimiento en tiempo real de la presencia de empleados y uso de cafetería para planificación adaptativa."
+      },
+      {
+        title: "Inteligencia Empresarial Estratégica",
+        description: "Dashboards integrales e insights accionables para ahorros de costos y excelencia operacional."
+      }
+    ]
+  },
+  executiveSummary: {
+    badge: {
+      primary: "ANÁLISIS TÉCNICO BNP PARIBAS EL DJAZAÏR",
+      secondary: "Sistema de Pronóstico de Comidas"
+    },
+    title: {
+      main: "Cafetería BNP Paribas",
+      subtitle: "Sistema de Pronóstico de Demanda"
+    },
+    description: "Solución integral de aprendizaje automático para la cafetería de la oficina central de BNP Paribas El Djazaïr, entregando pronósticos precisos de conteo diario de comidas mediante análisis integrado de transacciones de cafetería, asistencia de oficina, ofertas de menú, condiciones climáticas y eventos de calendario cultural para optimizar la preparación y reducir el desperdicio operacional",
+    navigation: {
+      sections: [
+        "Desafío Operacional",
+        "Solución Técnica",
+        "Análisis de Rendimiento",
+        "Impacto Empresarial"
+      ]
+    },
+    operationalChallenges: {
+      title: "Desafíos Operacionales Actuales",
+      challenges: [
+        {
+          title: "Desperdicio de Alimentos y Optimización de Costos",
+          description: "La cafetería de la oficina central de BNP Paribas El Djazaïr enfrenta desafíos significativos con las decisiones diarias de preparación de comidas. La sobrepreparación lleva a un desperdicio sustancial de alimentos y costos innecesarios, mientras que la subpreparación deja a los empleados sin comidas, creando ineficiencias operacionales e insatisfacción de empleados.",
+          currentState: "Estimación manual sin pronósticos precisos de demanda",
+          businessImpact: "Desperdicio significativo por sobrestimación, potencial tangible de ahorro de costos",
+          frequency: "Desafío diario de toma de decisiones"
+        },
+        {
+          title: "Calidad de Servicio y Satisfacción de Empleados",
+          description: "Sin pronósticos precisos, el personal de cafetería debe tomar decisiones de preparación diarias a ciegas, a menudo resultando en escasez de comidas que decepcionan a los empleados o preparación excesiva que lleva a desperdicios y costos operacionales aumentados.",
+          currentState: "Conjetura basada en experiencia para conteos diarios de comidas",
+          businessImpact: "Insatisfacción de empleados por indisponibilidad de comidas",
+          frequency: "Disrupciones diarias de servicio e incertidumbres de planificación"
+        },
+        {
+          title: "Planificación de Recursos y Asignación de Personal",
+          description: "La falta de insights predictivos afecta la asignación de recursos de cocina, programación de personal y adquisición de ingredientes. La gerencia no puede planificar operaciones proactivamente u optimizar la utilización de recursos sin entender patrones de demanda y factores clave.",
+          currentState: "Planificación reactiva sin insights de demanda",
+          businessImpact: "Asignación de recursos subóptima y oportunidades de eficiencia perdidas",
+          frequency: "Ineficiencia operacional continua"
+        }
+      ],
+      labels: {
+        currentState: "Estado Actual",
+        businessImpact: "Impacto Empresarial",
+        frequency: "Frecuencia"
+      }
+    },
+    technicalSolutions: {
+      title: "Arquitectura Técnica Avanzada",
+      solutions: [
+        {
+          title: "Integración de Datos Multifuente y Pipeline ETL",
+          description: "Arquitectura de datos integral integrando cinco fuentes de datos internas heterogéneas: registros históricos de transacciones de cafetería, registros de asistencia de oficina central, información de menú diario, datos meteorológicos y eventos de calendario. Todos los conjuntos de datos se fusionan en campos de fecha para crear una tabla de modelado unificada para pronósticos.",
+          methodology: "Pipeline de aprendizaje automático de extremo a extremo con limpieza extensiva de datos e ingeniería de características. Análisis de fechas, uniones internas en campos de fecha y procesos de agregación aseguran consistencia de datos. Atención especial al calendario empresarial argelino (semana laboral domingo-jueves) y contextos culturales incluyendo feriados islámicos y períodos de Ramadán.",
+          implementation: [
+            "Registros de transacciones de cafetería (kaggle_cantine.csv) agregados por ID de empleado para derivar conteos diarios de comidas (Nb_meals)",
+            "Seguimiento de asistencia de oficina central (kaggle_head_office.csv) vía datos de badge-in para conteo diario (Nb_acces)",
+            "Análisis de ofertas de menú diario (kaggle_menu.csv) incluyendo tipos de entrada y platos principales para puntuación de popularidad",
+            "Integración API meteorológica (kaggle_meteo.csv) capturando temperatura, precipitación, velocidad del viento y cobertura de nubes",
+            "Plantillas de fechas futuras (test_kaggle_finale.csv) con características prepobladas para despliegue de pronósticos"
+          ],
+          performance: "Integración exitosa de 5 fuentes de datos con 100% de precisión de alineación de fechas",
+          innovation: "Primera implementación considerando contexto cultural argelino y efectos de calendario islámico"
+        },
+        {
+          title: "Ingeniería Avanzada de Características y Extracción de Señales",
+          description: "Proceso sofisticado de creación de características extrayendo señales significativas de datos crudos para identificar factores clave de demanda de cafetería. Las características incluyen patrones día-de-semana, feriados públicos, correlaciones de asistencia de oficina, índices de popularidad de menú y efectos de interacción meteorológica.",
+          methodology: "Ingeniería de características consciente del tiempo con validación cruzada para prevenir fuga de datos. Solo datos históricos usados para cálculos de popularidad. Análisis integral de patrones incluyendo estacionalidad semanal, efectos de feriados e influencias meteorológicas en comportamiento de comida.",
+          implementation: [
+            "Características temporales: patrones día-de-semana, banderas de feriados, indicadores estacionales, períodos Is_Ramadan",
+            "Análisis de correlación de asistencia: relación conteo de oficina vs. demanda de cafetería (r=0.61)",
+            "Puntuación de popularidad de menú: promedio histórico de comidas por tipo de plato con protección de validación cruzada",
+            "Características de interacción meteorológica: efectos de precipitación, umbrales de temperatura, interacciones Rain_x_Occupancy",
+            "Características de retraso y estadísticas rodantes: lag7 (mismo día semana pasada), promedios móviles MA7/MA14 para patrones de series temporales"
+          ],
+          performance: "Asistencia de oficina identificada como predictor clave con correlación significativa a demanda de comidas",
+          innovation: "Indexación de popularidad de menú con validación cruzada previene sobreajuste a preferencias históricas"
+        },
+        {
+          title: "Aprendizaje Automático Ensemble y Optimización de Modelo",
+          description: "Modelos de regresión ensemble de vanguardia usando árboles de decisión con gradient-boosting capaces de capturar relaciones no lineales e interacciones complejas de características. La optimización de hiperparámetros minimiza el error de pronóstico (RMSE) mientras asegura generalización a fechas futuras.",
+          methodology: "Validación cruzada consciente del tiempo simulando predicciones hacia adelante en fechas retenidas. Marco de validación riguroso asegura que el modelo generalice bien a escenarios futuros sin sobreajustarse a peculiaridades históricas. Optimización RMSE para precisión práctica de pronósticos.",
+          implementation: [
+            "Arquitectura ensemble LightGBM y XGBoost (ponderado 70-30) con árboles de decisión gradient-boosted",
+            "Validación cruzada TimeSeriesSplit de 5-fold previniendo fuga de datos futuros con estrategia de ventana expansiva",
+            "Optimización bayesiana de hiperparámetros Optuna (60 ensayos) dirigida a minimización RMSE con learning_rate ~0.05-0.1, num_leaves ~400-500",
+            "Parada temprana con paciencia de 50 rondas para prevención de sobreajuste y determinación óptima de conteo de árboles",
+            "Pipeline de predicción secuencial para conjunto de prueba: pronósticos día por día usando actualizaciones recursivas de características de retraso de predicciones previas"
+          ],
+          performance: "Logrado ~22 RMSE de precisión en validación cruzada (5-7% del rango diario típico 0-400+ comidas), representando mejora sustancial sobre métodos ingenuos",
+          innovation: "Metodología de validación consciente del tiempo asegurando rendimiento robusto de despliegue en mundo real"
+        }
+      ],
+      labels: {
+        methodology: "Metodología",
+        implementationDetails: "Detalles de Implementación",
+        performance: "RENDIMIENTO",
+        innovation: "INNOVACIÓN"
+      }
+    },
+    performanceAnalysis: {
+      title: "Análisis Integral de Rendimiento",
+      metrics: [
+        {
+          label: "Precisión RMSE",
+          description: "RMSE de validación cruzada en 20s bajos (5-7% del rango diario típico 0-400+ comidas), mejora sustancial sobre métodos de pronóstico ingenuos",
+          technicalDetail: "Error Cuadrático Medio validado a través de validación cruzada TimeSeriesSplit de 5-fold simulando escenarios de despliegue en mundo real",
+          context: "Rango objetivo 15-25 RMSE alcanzado, habilitando planificación precisa de preparación con MAE ~16 comidas de desviación promedio"
+        },
+        {
+          label: "Estrategia Ensemble",
+          description: "Ensemble ponderado LightGBM-XGBoost optimizando diferentes fortalezas algorítmicas para precisión robusta de predicción",
+          technicalDetail: "Ponderación ensemble determinada a través de análisis de rendimiento de validación cruzada: LightGBM sobresale en características categóricas, XGBoost en interacciones numéricas",
+          context: "Enfoque ensemble reduce sesgos específicos del modelo y mejora generalización"
+        },
+        {
+          label: "Integración de Datos",
+          description: "Integración integral de registros de cafetería, registros de asistencia, datos de menú, información meteorológica y eventos de calendario",
+          technicalDetail: "Pipeline ETL con fusión basada en fechas asegurando 100% de alineación de datos a través de sistemas internos heterogéneos",
+          context: "Primera implementación integrando múltiples fuentes de datos internas de BNP Paribas"
+        },
+        {
+          label: "Factores Externos",
+          description: "Las condiciones meteorológicas influyen el comportamiento de comida, con precipitación alentando uso de cafetería en sitio",
+          technicalDetail: "Integración API capturando temperatura, precipitación, velocidad del viento y cobertura de nubes para modelado de demanda",
+          context: "Lluvia y patrones meteorológicos afectan decisiones de comida de empleados"
+        },
+        {
+          label: "Listo para Producción",
+          description: "Pipeline de pronósticos automatizado actualizando predicciones con nuevas entradas de datos para uso operacional diario",
+          technicalDetail: "Pipeline de extremo a extremo procesando conteo diario, pronósticos meteorológicos e información de menú para predicciones en tiempo real",
+          context: "Herramienta de soporte de decisiones para gestión de cafetería"
+        },
+        {
+          label: "Horizonte de Pronóstico",
+          description: "Predicciones día adelante habilitando preparación proactiva de comidas y asignación de recursos",
+          technicalDetail: "Modelado de series temporales con ingeniería de características capturando patrones semanales y efectos estacionales",
+          context: "Horizonte óptimo para planificación operacional y adquisición de ingredientes"
+        },
+        {
+          label: "Consciente del Contexto",
+          description: "El modelo considera calendario empresarial argelino y feriados islámicos incluyendo observancia de Ramadán",
+          technicalDetail: "Ingeniería de características incorporando semana laboral domingo-jueves y patrones de observancia religiosa",
+          context: "Adaptación crítica para contexto cultural local preciso"
+        }
+      ],
+      comparison: {
+        title: "Comparación de Rendimiento de Modelo",
+        models: [
+          { name: "Baseline Ingenuo", description: "Promedios simples" },
+          { name: "Regresión Lineal", description: "Características básicas" },
+          { name: "Ensemble LightGBM", description: "Características avanzadas" }
+        ],
+        bestLabel: "MEJOR"
+      },
+      labels: {
+        technicalDetail: "DETALLE TÉCNICO",
+        context: "CONTEXTO"
+      }
+    },
+    businessImpact: {
+      title: "Impacto Empresarial Cuantificado",
+      keyMetrics: [
+        { label: "Precisión de Comidas", description: "Error promedio de predicción habilitando preparación precisa" },
+        { label: "Integración de Datos", description: "Pipeline de datos multifuente integral" },
+        { label: "Capacidad de Planificación", description: "Pronósticos día adelante para asignación óptima de recursos" },
+        { label: "Conciencia de Contexto", description: "Calendario empresarial argelino e integración de feriados islámicos" }
+      ],
+      operationalBenefits: [
+        {
+          title: "Reducción de Desperdicios",
+          description: "Los pronósticos precisos eliminan el desperdicio por sobrestimación y reducen costos de alimentos. Incluso reducir el error diario en unas pocas docenas de comidas se traduce en ahorros tangibles y métricas de sostenibilidad mejoradas para las operaciones de BNP Paribas."
+        },
+        {
+          title: "Satisfacción de Empleados",
+          description: "Asegura que casi todos los empleados planeando comer en la cafetería puedan ser acomodados. Previene decepción por escasez de comidas mientras mantiene calidad de servicio y disponibilidad consistentes."
+        },
+        {
+          title: "Eficiencia Operacional",
+          description: "Entender los factores de demanda habilita programación proactiva de personal y adquisición de ingredientes. La gerencia puede anticipar mayor participación en días específicos o cuando se sirven comidas populares."
+        }
+      ],
+      implementation: {
+        title: "Implementación e Integración Operacional",
+        phases: [
+          {
+            phase: "Fase 1: Fundación de Datos",
+            duration: "Completada",
+            activities: ["Desarrollo de pipeline ETL", "Validación de calidad de datos", "Ingeniería de características", "Integración de calendario argelino"]
+          },
+          {
+            phase: "Fase 2: Desarrollo de Modelo",
+            duration: "Completada",
+            activities: ["Selección y ajuste de algoritmo", "Marco de validación cruzada", "Optimización ensemble", "Validación de rendimiento"]
+          },
+          {
+            phase: "Fase 3: Despliegue de Producción",
+            duration: "En Progreso",
+            activities: ["API de predicción en tiempo real", "Desarrollo de dashboard", "Entrenamiento de personal", "Sistema de monitoreo"]
+          },
+          {
+            phase: "Fase 4: Mejora Continua",
+            duration: "En Curso",
+            activities: ["Pipeline de reentrenamiento de modelo", "Detección de deriva de características", "Monitoreo de rendimiento", "Actualizaciones de reglas de negocio"]
+          }
+        ]
+      },
+      roi: {
+        title: "Resumen de Retorno de Inversión",
+        metrics: [
+          { label: "Múltiplo ROI", description: "Dentro de 12 meses" },
+          { label: "Meses de Payback", description: "Cronología de punto de equilibrio" },
+          { label: "Valor de 3 Años", description: "Ahorros acumulativos" }
+        ],
+        quote: "Este sistema de pronósticos potenciado por ML representa un cambio de paradigma de gestión reactiva a predictiva de cafetería, entregando mejoras medibles en eficiencia operacional, control de costos y satisfacción de empleados mientras establece a BNP Paribas El Djazaïr como líder en gestión de instalaciones basada en datos.",
+        buttons: {
+          technical: "Inmersión Técnica Profunda",
+          model: "Ver Arquitectura del Modelo"
+        }
+      }
+    },
+    dataArchitecture: {
+      title: "Arquitectura de Datos Integrada",
+      sources: [
+        {
+          name: "Registros de Transacciones de Cafetería",
+          details: "Registros individuales de transacciones de comidas por ID de empleado",
+          records: "Conteos diarios de comidas (Nb_meals) agregados de compras individuales",
+          connection: "Variable objetivo primaria para modelo de pronósticos",
+          technical: "kaggle_cantine.csv - Cada entrada representa una transacción de comida"
+        },
+        {
+          name: "Asistencia de Oficina Central",
+          details: "Registros diarios de badge-in rastreando presencia de oficina",
+          records: "Conteo diario (Nb_acces) de empleados únicos en edificio",
+          connection: "Característica exógena crucial - mayor asistencia crea oportunidad para más comidas",
+          technical: "Agregación diaria proporcionando conteo potencial de comensales"
+        },
+        {
+          name: "Sistema de Menú Diario",
+          details: "Ofertas de menú de cafetería incluyendo entradas y platos principales",
+          records: "Composición de menú e índices de popularidad de platos",
+          connection: "Influencia cualitativa - ciertos platos atraen más comensales",
+          technical: "Datos de menú con categorización de platos para identificación de favoritos"
+        },
+        {
+          name: "API de Datos Meteorológicos",
+          details: "Condiciones meteorológicas externas afectando decisiones de comida",
+          records: "Métricas de temperatura, precipitación, velocidad del viento, cobertura de nubes",
+          connection: "La lluvia alienta comida en sitio, la temperatura afecta elecciones de almuerzo",
+          technical: "Métricas meteorológicas diarias integradas vía API externa"
+        },
+        {
+          name: "Calendario y Eventos",
+          details: "Calendario empresarial argelino y eventos culturales",
+          records: "Banderas de feriados, patrones de semana laboral (Dom-Jue), observancias religiosas",
+          connection: "Contexto cultural crítico para predicciones precisas del mercado argelino",
+          technical: "Integración de calendario personalizada para feriados islámicos y patrones locales"
+        }
+      ]
+    }
+  },
+  technicalOverview: {
+    badge: {
+      primary: "INMERSIÓN TÉCNICA PROFUNDA",
+      secondary: "Sistema de Pronóstico de Comidas BNP Paribas"
+    },
+    title: {
+      main: "Arquitectura ML Avanzada"
+    },
+    description: "Pipeline de aprendizaje automático de extremo a extremo combinando cinco fuentes de datos heterogéneas con ingeniería sofisticada de características y gradient boosting ensemble para lograr ~20 RMSE de precisión en pronósticos diarios de conteo de comidas para operaciones de cafetería de BNP Paribas El Djazaïr",
+    dataSources: {
+      title: "Pipeline de Integración de Datos Multifuente",
+      sources: [
+        {
+          name: "Registros de Transacciones de Cafetería",
+          description: "Registros individuales de transacciones de comidas con seguimiento de ID de empleado para agregación diaria integral",
+          keyFeatures: [
+            "Conteos diarios de comidas (Nb_meals) derivados de agregación de transacciones usando kaggle_cantine.csv",
+            "Seguimiento de ID de empleado con manejo de duplicados para comidas múltiples (~0.4% tasa de ocurrencia)",
+            "Análisis de patrones temporales a través de mayo 2022 - diciembre 2024 (cobertura de 2.5 años)",
+            "Construcción de variable objetivo con predicción secuencial día por día para pronósticos de prueba"
+          ],
+          dataSourceLabel: "Fuente de Datos 1/5"
+        },
+        {
+          name: "Datos de Asistencia de Oficina Central",
+          description: "Registros de badge-in rastreando presencia diaria de empleados como predictor clave de demanda de cafetería",
+          keyFeatures: [
+            "Conteo diario (Nb_acces) de kaggle_head_office.csv de empleados únicos en edificio",
+            "Mapeo de departamentos y análisis de estructura organizacional (considerado pero no implementado)",
+            "Característica exógena crucial con correlación 0.61 a demanda de comidas (importancia de característica principal)",
+            "Indicador de población potencial de comensales limitando capacidad diaria máxima (rango 0-400+ comidas)"
+          ],
+          dataSourceLabel: "Fuente de Datos 2/5"
+        },
+        {
+          name: "Sistema de Menú Diario",
+          description: "Ofertas de menú integrales incluyendo tipos de entrada y opciones duales de plato principal con analíticas de popularidad",
+          keyFeatures: [
+            "Entrada y dos platos principales por día de kaggle_menu.csv con clasificación categórica",
+            "Índices históricos de popularidad de platos: promedio Nb_meals por plato (ej., Pizza=350 vs Quiche=280)",
+            "Análisis de diversidad de menú (ofertas del mismo tipo vs variadas) y detección de opción vegetariana",
+            "Codificación objetivo protegida por validación cruzada previniendo sobreajuste a preferencias históricas"
+          ],
+          dataSourceLabel: "Fuente de Datos 3/5"
+        },
+        {
+          name: "Integración de Datos Meteorológicos",
+          description: "Condiciones meteorológicas externas afectando comportamiento de comida de empleados y decisiones de almuerzo",
+          keyFeatures: [
+            "Temperatura, precipitación, velocidad del viento y cobertura de nubes de kaggle_meteo.csv",
+            "Indicador de lluvia (Is_Rain) mostrando ~6 comidas adicionales en días lluviosos (313 vs 307 baseline)",
+            "Efectos de interacción meteorológica-asistencia (Rain_x_Occupancy) para cambios comportamentales compuestos",
+            "Imputación de datos meteorológicos faltantes con estrategias específicas del dominio para robustez del modelo"
+          ],
+          dataSourceLabel: "Fuente de Datos 4/5"
+        },
+        {
+          name: "Calendario Argelino y Contexto Cultural",
+          description: "Características culturales y basadas en calendario considerando patrones empresariales locales y observancias religiosas",
+          keyFeatures: [
+            "Reconocimiento de patrón de semana laboral domingo-jueves",
+            "Detección de feriados islámicos (períodos de Ramadán, Eid)",
+            "Marcado de feriados públicos con expectativas de comidas casi cero",
+            "Variaciones estacionales incluyendo períodos de vacaciones de agosto"
+          ],
+          dataSourceLabel: "Fuente de Datos 5/5"
+        }
+      ],
+      integrationSummary: {
+        title: "Resumen de Arquitectura de Integración",
+        metrics: [
+          {
+            label: "Fuentes de Datos",
+            description: "Integradas vía fusión basada en fechas"
+          },
+          {
+            label: "Cobertura de Años",
+            description: "Mayo 2022 - Diciembre 2024"
+          },
+          {
+            label: "Correlación Clave",
+            description: "Asistencia vs Demanda de Comidas"
+          }
+        ]
+      }
+    },
+    methodology: {
+      title: "Metodología de Pipeline ML de Extremo a Extremo",
+      phases: [
+        {
+          phase: "Integración de Datos y Preprocesamiento",
+          description: "Pipeline ETL integral fusionando cinco fuentes de datos heterogéneas con procedimientos rigurosos de limpieza y validación",
+          techniques: [
+            "Análisis y alineación de fechas a través de todos los conjuntos de datos con estandarización de formato",
+            "Fusión de unión interna asegurando consistencia temporal a través de fuentes",
+            "Imputación de datos faltantes con estrategias específicas del dominio",
+            "Manejo de duplicados en registros de transacciones (~0.4% tasa de ocurrencia)",
+            "Alineación de fin de semana/feriados para calendario empresarial argelino (fines de semana Vie-Sáb)",
+            "Detección de período de Ramadán con marcado de evento especial"
+          ],
+          phaseLabel: "Fase 1"
+        },
+        {
+          phase: "Análisis Exploratorio de Datos y Descubrimiento de Patrones",
+          description: "Análisis estadístico revelando factores clave de demanda y patrones comportamentales en uso de cafetería",
+          techniques: [
+            "Análisis de estacionalidad semanal mostrando demanda pico de jueves",
+            "Análisis de correlación de ocupación de oficina (r=0.61 con demanda de comidas)",
+            "Cuantificación de influencia de menú con puntuación de popularidad",
+            "Validación de efecto meteorológico (+6 comidas promedio en días lluviosos)",
+            "Identificación de variación estacional (impactos de vacaciones de agosto)",
+            "Reconocimiento de patrones de feriados con períodos de demanda cero"
+          ],
+          phaseLabel: "Fase 2"
+        },
+        {
+          phase: "Ingeniería Avanzada de Características",
+          description: "Creación de 60+ características predictivas de datos crudos incorporando señales temporales, comportamentales y ambientales",
+          techniques: [
+            "Características de calendario: día-de-semana, banderas de feriados, codificación de mes",
+            "Características de retraso: lag7 (mismo día semana pasada) para estacionalidad semanal",
+            "Estadísticas rodantes: promedios móviles de 7 y 14 días",
+            "Índices de popularidad de menú con codificación de validación cruzada",
+            "Características de interacción meteorológica (efectos lluvia × ocupación)",
+            "Codificación objetivo para ítems de menú categóricos con prevención de fuga"
+          ],
+          phaseLabel: "Fase 3"
+        },
+        {
+          phase: "Desarrollo de Modelo y Entrenamiento Ensemble",
+          description: "Ensemble de gradient boosting con validación rigurosa consciente del tiempo y optimización de hiperparámetros",
+          techniques: [
+            "Arquitectura ensemble LightGBM y XGBoost con promediado ponderado 70-30 para balance óptimo de rendimiento",
+            "Validación cruzada TimeSeriesSplit de 5-fold previniendo fuga futura (entrenamiento 2022-2023, validación 2024)",
+            "Optimización bayesiana de hiperparámetros Optuna (60 ensayos): learning_rate ~0.05-0.1, num_leaves ~400-500, max_depth 8-12",
+            "Parada temprana con paciencia de 50 rondas previniendo sobreajuste, promediado ensemble a través de folds CV para robustez",
+            "Validación de importancia de características: Nb_acces (35%), indicadores día-de-semana (25%), popularidad de menú (20%), efectos meteorológicos (15%)",
+            "Análisis residual reveló sesgo de subpredicción de lunes, resuelto a través de codificación mejorada día-de-semana y términos de interacción"
+          ],
+          phaseLabel: "Fase 4"
+        },
+        {
+          phase: "Validación y Despliegue de Producción",
+          description: "Validación integral de modelo y pipeline de despliegue para pronósticos operacionales",
+          techniques: [
+            "Validación hacia adelante en tiempo simulando escenarios de pronósticos en mundo real sin sesgo de anticipación",
+            "Análisis residual asegurando predicciones no sesgadas a través de todas las condiciones y patrones día-de-semana",
+            "Pipeline de predicción secuencial para test_kaggle_finale.csv: pronósticos día por día con actualizaciones de retraso recursivas",
+            "Promediado ensemble a través de 5 modelos entrenados por fold para cuantificación robusta de incertidumbre e intervalos de predicción",
+            "Predicción recursiva lista para producción usando pronósticos del día anterior como características de retraso dinámicas",
+            "Monitoreo de rendimiento logrando ~22 RMSE (5-7% del rango 0-400+ comidas) con MAE ~16 comidas de desviación promedio",
+            "Consideraciones de despliegue: pipeline de pronóstico diario, actualizaciones de características en tiempo real e intervalos de confianza de predicción"
+          ],
+          phaseLabel: "Fase 5"
+        }
+      ]
+    },
+    achievements: {
+      metrics: [
+        {
+          label: "Validación RMSE",
+          description: "RMSE de validación cruzada en 20s bajos (5-7% del rango diario 0-400+ comidas), alcanzando umbral de rendimiento objetivo"
+        },
+        {
+          label: "Características Ingeniadas",
+          description: "Creación sofisticada de características de datos crudos incluyendo señales temporales, comportamentales y ambientales"
+        },
+        {
+          label: "CV de Series Temporales",
+          description: "Validación rigurosa previniendo fuga futura con simulación de predicción hacia adelante en tiempo"
+        }
+      ]
+    }
+  },
+  dataInsights: {
+    badge: {
+      primary: "ANÁLISIS EXPLORATORIO DE DATOS",
+      secondary: "Descubrimiento de Patrones e Insights"
+    },
+    title: {
+      main: "Insights Basados en Datos"
+    },
+    description: "Análisis exploratorio integral revelando patrones comportamentales, factores de demanda y relaciones críticas en uso de cafetería a través de 2.5 años de datos operacionales",
+    timeSeriesAnalysis: {
+      title: "Análisis de Series Temporales y Patrones",
+      insights: [
+        {
+          title: "Tendencia General y Estacionalidad",
+          description: "Comidas diarias servidas a lo largo del tiempo (mayo 2022 – dic 2024) mostrando fuerte estacionalidad semanal con tendencia mínima a largo plazo",
+          findings: [
+            "Fuerte estacionalidad semanal con caídas regulares a casi cero en fines de semana (viernes/sábados)",
+            "Sin tendencia dramática a largo plazo, pero ligero aumento desde mediados de 2023 hasta 2024",
+            "Caídas significativas durante agosto cada año debido a vacaciones de verano",
+            "Períodos prolongados de cero comidas durante Ramadán cuando cafetería estaba efectivamente cerrada",
+            "Serie es relativamente estacionaria aparte de efectos estacionales"
+          ]
+        },
+        {
+          title: "Patrones Día Laboral vs Fin de Semana",
+          description: "Efectos claros día-de-semana dentro del patrón de semana laboral domingo-jueves en Argelia",
+          findings: [
+            "Jueves tiene el mayor número promedio de comidas (día de demanda pico)",
+            "Domingo muestra demanda sobre el promedio a pesar de ser primer día laboral",
+            "Lunes tiende a tener el promedio más bajo entre días laborales",
+            "Viernes y sábado muestran comidas casi cero (fin de semana en Argelia)",
+            "Reuniones de fin de semana o tradiciones impulsan asistencia pico de jueves"
+          ]
+        },
+        {
+          title: "Análisis de Correlación de Ocupación",
+          description: "Correlación asistencia de oficina vs comidas revelando tasa de conversión 50-70% con variabilidad diaria",
+          findings: [
+            "Coeficiente de correlación de 0.61 entre conteo de oficina y comidas",
+            "Picos en días laborales (~500-600 personal presente, ~300-400 comidas servidas)",
+            "Aproximadamente 50-70% de empleados presentes terminan comiendo en cafetería",
+            "Tasa de conversión varía diariamente basada en factores contextuales",
+            "Gráfico de dispersión muestra tendencia positiva pero variabilidad significativa alrededor de línea de tendencia"
+          ]
+        }
+      ]
+    },
+    keyStatistics: [
+      {
+        label: "Fuerza de Correlación",
+        description: "Coeficiente de correlación asistencia de oficina vs demanda de comidas"
+      },
+      {
+        label: "Efecto Día Pico",
+        description: "Mayor promedio de comidas por día dentro de semana laboral"
+      },
+      {
+        label: "Impacto Meteorológico",
+        description: "Comidas promedio en días lluviosos vs días despejados"
+      },
+      {
+        label: "Tasa de Conversión",
+        description: "Empleados presentes que comen en cafetería"
+      },
+      {
+        label: "Cobertura de Datos",
+        description: "Datos operacionales mayo 2022 - diciembre 2024"
+      },
+      {
+        label: "Tasa de Duplicados",
+        description: "Múltiples transacciones de comida por empleado por día"
+      },
+      {
+        label: "Impacto de Agosto",
+        description: "Reducción de demanda período vacaciones de verano"
+      },
+      {
+        label: "Patrón de Fin de Semana",
+        description: "Fin de semana argelino mostrando demanda casi cero"
+      }
+    ],
+    criticalPatterns: {
+      title: "Descubrimiento de Patrones Críticos",
+      insights: [
+        {
+          title: "Dominancia de Estacionalidad Semanal",
+          finding: "Jueves emerge como día de demanda pico dentro de la semana laboral domingo-jueves, posiblemente debido a reuniones de fin de semana o tradición de más personal en sitio",
+          implication: "Fuertes efectos día-de-semana necesitan características basadas en calendario con jueves requiriendo capacidad de preparación mejorada",
+          category: "Patrones Temporales",
+          observation: "Pico de jueves"
+        },
+        {
+          title: "Ocupación de Oficina como Factor Primario",
+          finding: "50-70% de empleados presentes típicamente comen en cafetería, creando correlación (r=0.61) entre conteo diario y demanda de comidas",
+          implication: "Asistencia de oficina sirve como predictor primario, pero tasa de conversión varía diariamente requiriendo características contextuales adicionales",
+          category: "Insights Comportamentales",
+          observation: "r = 0.61"
+        },
+        {
+          title: "Cambios Comportamentales Impulsados por Clima",
+          finding: "Días lluviosos consistentemente muestran mayor uso de cafetería (313 vs 307 comidas promedio), ya que empleados están menos inclinados a dejar edificio",
+          implication: "Datos meteorológicos proporcionan señal significativa para ajustes diarios de demanda, especialmente para preferencia de comida interior",
+          category: "Factores Ambientales",
+          observation: "313 vs 307 comidas"
+        },
+        {
+          title: "Impacto de Vacaciones Estacionales",
+          finding: "Agosto muestra uso mucho menor de cafetería ya que muchos empleados toman vacaciones de verano, resultando en menos personas en oficina",
+          implication: "Características de calendario deben considerar patrones estacionales con agosto marcado como período lento conocido",
+          category: "Variaciones Estacionales",
+          observation: "Vacaciones de agosto"
+        },
+        {
+          title: "Influencia de Popularidad de Menú",
+          finding: "Ciertos platos como pizza o cuscús tuvieron mayor participación promedio (índice de popularidad más alto) comparado con días de menú ordinarios",
+          implication: "Métricas de popularidad como características habilitan modelo para predecir conteos más altos en días con platos históricamente populares",
+          category: "Analíticas de Menú",
+          observation: "Varianza de platos"
+        },
+        {
+          title: "Comportamiento de Fin de Semana y Feriados",
+          finding: "Viernes-sábado (fin de semana de Argelia) y feriados públicos muestran demanda casi cero, confirmando patrones de cierre de cafetería",
+          implication: "Indicadores de fin de semana/feriados esenciales para predicción precisa de baseline de expectativas de comidas casi cero",
+          category: "Efectos de Calendario",
+          observation: "Cero comidas en fines de semana"
+        },
+        {
+          title: "Efectos de Temperatura",
+          finding: "Días extremadamente calientes o fríos podrían desalentar salir, con combinaciones frío + lluvia amplificando preferencia de cafetería",
+          implication: "Temperatura como característica continua permite al modelo aprender efectos no lineales e interacciones meteorológicas",
+          category: "Patrones Meteorológicos",
+          observation: "Impacto de temperatura"
+        },
+        {
+          title: "Impacto de Diversidad de Menú",
+          finding: "Dos opciones principales diarias - opciones similares (ambas carne roja) podrían atraer al mismo grupo vs variedad (carne + vegetariano) atrayendo multitud más amplia",
+          implication: "Características de diversidad de menú capturan si ofertas variadas aumentan atractivo general y participación",
+          category: "Estrategia de Menú",
+          observation: "Diversidad de menú"
+        },
+        {
+          title: "Reconocimiento de Eventos Especiales",
+          finding: "Cuando ambos platos principales eran particularmente atractivos o se ofrecían postres/comidas de eventos especiales, había aumentos notables en ventas",
+          implication: "Participación histórica sirve como mejor indicador de atractivo de menú, habilitando predicciones basadas en popularidad",
+          category: "Eventos Especiales",
+          observation: "Aumentos de eventos"
+        }
+      ],
+      labels: {
+        keyFinding: "Hallazgo Clave:",
+        strategicImplication: "Implicación Estratégica:"
+      }
+    },
+    correlationAnalysis: {
+      title: "Análisis de Correlación de Características e Impacto",
+      correlationStrengthLabel: "Fuerza de Correlación:",
+      implementationImpactLabel: "Impacto de Implementación:",
+      patterns: [
+        {
+          category: "Efectos de Calendario y Temporales",
+          description: "Fuerte periodicidad semanal con fines de semana viernes-sábado y feriados islámicos requiriendo manejo especial en contexto empresarial argelino",
+          impact: "Características binarias para días no laborales esenciales, más detección de período de Ramadán y marcado de vacaciones de agosto",
+          details: [
+            "Patrón de semana laboral domingo-jueves confirmado por cero comidas en viernes/sábados",
+            "Feriados públicos (1 de mayo, Eid) corresponden a conteos de comidas casi cero",
+            "Períodos de Ramadán muestran comidas casi cero, efectivamente cierre de cafetería",
+            "Caídas de finales de diciembre alrededor de Navidad/Año Nuevo a pesar del contexto de Argelia"
+          ]
+        },
+        {
+          category: "Dinámicas de Asistencia de Oficina",
+          description: "Conteo diario sirve como predictor único más fuerte con correlación 0.61, pero tasa de conversión fluctúa entre 50-70%",
+          impact: "Característica primaria requiriendo interacciones meteorológicas, de menú y calendario para precisión óptima en predicción de conversión",
+          details: [
+            "Registros de badge-in proporcionan población diaria precisa de comensales potenciales",
+            "No todos los empleados presentes comen en cafetería (algunos traen almuerzo/salen)",
+            "Ocasionalmente más comidas que personas únicas (comidas múltiples, visitantes)",
+            "Gráfico de dispersión muestra tendencia positiva pero variabilidad significativa alrededor de tendencia"
+          ]
+        },
+        {
+          category: "Popularidad y Atractivo de Menú",
+          description: "Atractivo específico de plato impulsa variaciones significativas de participación con puntajes de popularidad calculados como comidas promedio cuando plato fue servido",
+          impact: "Índices de popularidad codificados por objetivo habilitan predicción de conteos más altos en días de platos históricamente populares",
+          details: [
+            "Pizza y cuscús identificados como favoritos de multitudes con índices de popularidad más altos",
+            "Días de menú ordinarios ven conteos ligeramente menores vs platos especiales",
+            "Diversidad de menú afecta atractivo (ofertas similares vs variadas)",
+            "Postres especiales o comidas de eventos crean aumentos notables de ventas"
+          ]
+        },
+        {
+          category: "Clima y Ambiental",
+          description: "Lluvia aumenta uso de cafetería (313 vs 307 promedio) ya que empleados menos inclinados a dejar edificio para almuerzo",
+          impact: "Características meteorológicas proporcionan señales significativas de ajuste diario, especialmente indicadores de lluvia e interacciones de temperatura",
+          details: [
+            "Días lluviosos muestran aumento modesto pero consistente de +6 comidas",
+            "Efectos de temperatura sospechados pero no fuertemente monótonos solos",
+            "Combinaciones frío + lluvia potencialmente amplifican preferencia de comida interior",
+            "Cobertura de nubes y viento incluidos pero efectos menores esperados"
+          ]
+        },
+        {
+          category: "Patrones Estacionales y de Feriados",
+          description: "Más allá de ciclos semanales, patrones estacionales muestran impacto de vacaciones de agosto y reconocimiento de fechas especiales para predicción precisa de baseline",
+          impact: "Características de mes/estación esenciales, particularmente marcado de agosto y detección de feriados públicos para expectativas casi cero",
+          details: [
+            "Agosto consistentemente muestra uso mucho menor de cafetería (vacaciones de verano)",
+            "Finales de diciembre muestran caídas alrededor del período Navidad/Año Nuevo",
+            "Períodos de Ramadán requieren detección de span especial (efectivamente cierre de cafetería)",
+            "Marcado de feriados públicos previene confusión del modelo sobre días de baja demanda"
+          ]
+        },
+        {
+          category: "Series Temporales y Características de Retraso",
+          description: "Patrones históricos de conteo de comidas a través de características de retraso (lag7 para estacionalidad semanal) y promedios rodantes para suavizado de tendencias",
+          impact: "Características de retraso transforman pronósticos de series temporales en aprendizaje supervisado con contexto de historia reciente",
+          details: [
+            "Lag7 (mismo día semana pasada) captura estacionalidad semanal directamente",
+            "Promedios móviles de 7 y 14 días proporcionan valores de tendencia suavizados",
+            "Desviación estándar rodante mide volatilidad de demanda reciente",
+            "Enfoque de predicción secuencial previene fuga de datos futuros"
+          ]
+        }
+      ]
+    },
+    summary: {
+      title: "Resumen de Hallazgos EDA",
+      description: "Nuestro análisis exploratorio confirmó que patrones de fechas, ocupación de oficina, elección de menú y condiciones meteorológicas son los factores primarios de demanda de cafetería, formando la fundación para nuestra estrategia de ingeniería de características.",
+      driverCategories: [
+        {
+          title: "Patrones de Día Laboral",
+          subtitle: "Establecen baseline general"
+        },
+        {
+          title: "Ocupación de Oficina",
+          subtitle: "Impulsa volumen principal"
+        },
+        {
+          title: "Elección de Menú",
+          subtitle: "Variabilidad día a día"
+        },
+        {
+          title: "Efectos Meteorológicos",
+          subtitle: "Modulación comportamental"
+        }
+      ],
+      conclusion: "Estos insights informaron directamente nuestro enfoque de ingeniería de características, habilitando al ensemble de gradient boosting para capturar los efectos importantes: quién está en el trabajo, qué hay para almorzar y cómo está el clima – todos factores clave de decisiones de almuerzo más el ritmo semanal innato del lugar de trabajo."
+    }
+  },
+  modelShowcase: {
+    title: {
+      main: "Arquitectura del Modelo y Características"
+    },
+    description: "Enfoque de gradient boosting ensemble con ingeniería integral de características para rendimiento óptimo de pronósticos",
+    navigation: {
+      tabs: [
+        { label: "Arquitectura del Modelo" },
+        { label: "Ingeniería de Características" },
+        { label: "Estrategia de Validación" },
+        { label: "Fuentes de Datos" },
+        { label: "Impacto Empresarial" }
+      ]
+    },
+    architecture: {
+      title: "Modelos Ensemble de Gradient Boosting",
+      models: [
+        {
+          name: "LightGBM",
+          description: "Modelo primario de gradient boosting optimizado para velocidad y precisión con manejo de características categóricas",
+          advantages: [
+            "Entrenamiento e inferencia rápidos (~10x más rápido que XGBoost)",
+            "Maneja características categóricas nativamente sin codificación",
+            "Eficiente en memoria con crecimiento de árbol leaf-wise",
+            "Parada temprana integrada y validación cruzada",
+            "Excelente rendimiento en datos tabulares",
+            "Robusto al sobreajuste con regularización apropiada"
+          ],
+          role: "Modelo Primario",
+          technicalDetails: [
+            "Optimización de hiperparámetros Optuna (60 ensayos)",
+            "Tasa de aprendizaje: 0.095 para estabilidad",
+            "Num leaves: 512 para complejidad del modelo",
+            "Fracción de características: 0.616 para regularización",
+            "Fracción de bagging: 0.900 para reducción de varianza",
+            "Regularización L2: 2.12 para prevenir sobreajuste"
+          ],
+          useCases: [
+            "Motor primario de pronósticos para predicciones diarias",
+            "Inferencia en tiempo real para planificación operacional",
+            "Análisis de importancia de características para insights empresariales",
+            "Modelo baseline para estrategias ensemble"
+          ]
+        },
+        {
+          name: "XGBoost",
+          description: "Modelo ensemble secundario para comparación de rendimiento, validación y estrategias potenciales de mezcla",
+          advantages: [
+            "Robusto al sobreajuste con regularización fuerte",
+            "Excelente estabilidad multiplataforma",
+            "Historial probado en competencias",
+            "Métricas de importancia de características integradas",
+            "Manejo fuerte de valores faltantes",
+            "Baseline establecida para gradient boosting"
+          ],
+          role: "Componente Ensemble",
+          technicalDetails: [
+            "Profundidad máxima: 6 para complejidad controlada",
+            "Tasa de aprendizaje: 0.1 con parada temprana",
+            "Subsample: 0.8 para reducción de varianza",
+            "Column subsample: 0.8 para aleatorización de características",
+            "Gamma: 0.1 para pérdida mínima de división",
+            "Ajuste de regularización Alpha/Lambda"
+          ],
+          useCases: [
+            "Validación de modelo y baseline de comparación",
+            "Mezcla ensemble para precisión mejorada",
+            "Validación de selección de características",
+            "Modelo de respaldo para resistencia de producción"
+          ]
+        }
+      ],
+      performance: {
+        crossValidationScore: "Puntuación de Validación Cruzada"
+      },
+      sections: {
+        keyAdvantages: "Ventajas Clave",
+        technicalConfiguration: "Configuración Técnica",
+        useCases: "Casos de Uso"
+      },
+      rationale: {
+        title: "Justificación de Selección de Modelo",
+        whyGradientBoosting: {
+          title: "¿Por qué Gradient Boosting?",
+          points: [
+            "Excelente rendimiento en datos tabulares con tipos de características mixtas",
+            "Maneja características categóricas sin preprocesamiento extensivo",
+            "Robusto a outliers y valores faltantes",
+            "Importancia de características integrada para interpretabilidad"
+          ]
+        },
+        ensembleStrategy: {
+          title: "Estrategia Ensemble",
+          points: [
+            "LightGBM como modelo primario para velocidad y precisión",
+            "XGBoost para validación y mezcla potencial",
+            "Optimización consistente de hiperparámetros a través de modelos",
+            "Flexibilidad de despliegue de producción y opciones de respaldo"
+          ]
+        },
+        codeSnippet: {
+          title: "Pipeline de Entrenamiento de Modelo"
+        }
+      }
+    },
+    features: {
+      title: "Estrategia de Ingeniería de Características",
+      categories: [
+        {
+          category: "Calendario y Temporal",
+          features: [
+            "Codificación día de semana (0-6 cíclico)",
+            "Banderas fin de semana/feriados (indicadores binarios)",
+            "Indicadores mes/estación (1-12 cíclico)",
+            "Marcadores de eventos especiales (Ramadán, períodos de vacaciones)",
+            "Proximidad de feriados públicos (días antes/después)",
+            "Alineación de calendario académico",
+            "Indicadores de días hábiles"
+          ],
+          description: "Captura patrones sistemáticos basados en tiempo en uso de cafetería con fuertes efectos semanales y estacionales",
+          technicalNotes: [
+            "Codificación cíclica para características temporales continuas",
+            "Banderas binarias para indicadores de tiempo categóricos",
+            "Efectos de proximidad de feriados (ventana ±3 días)",
+            "Manejo de período de Ramadán con codificación especial",
+            "Integración de calendario académico para contexto de institución educativa"
+          ]
+        },
+        {
+          category: "Métricas de Ocupación",
+          features: [
+            "Conteo diario (nb_personnes)",
+            "Promedios rodantes de 7 días",
+            "Distribuciones a nivel departamental",
+            "Indicadores de tendencia de asistencia",
+            "Cálculos de tasa de ocupación",
+            "Patrones históricos de asistencia",
+            "Utilización de capacidad del edificio"
+          ],
+          description: "Factor primario de demanda - correlaciona directamente con clientes potenciales y capacidad operacional",
+          technicalNotes: [
+            "Análisis a nivel departamental considerado pero no implementado debido a limitaciones de datos",
+            "Promedios rodantes suavizan volatilidad diaria",
+            "Tasa de ocupación = nb_personnes / capacidad_edificio",
+            "Características de tendencia capturan momentum en patrones de asistencia",
+            "Interpolación de datos faltantes para registros incompletos"
+          ]
+        },
+        {
+          category: "Demanda Histórica",
+          features: [
+            "Características de retraso (1, 7, 14 días)",
+            "Promedios móviles (3, 7, 14 días)",
+            "Medidas de volatilidad rodante",
+            "Tendencias de suavizado exponencial",
+            "Componentes de descomposición estacional",
+            "Indicadores de momentum de demanda",
+            "Señales de detección de punto de cambio"
+          ],
+          description: "Patrones de series temporales, efectos de momentum y relaciones autorregresivas en demanda de comidas",
+          technicalNotes: [
+            "Enfoque de predicción secuencial previene fuga de datos",
+            "Validación de ventana expansiva para integridad temporal",
+            "Selección de características de retraso basada en análisis ACF/PACF",
+            "Estadísticas rodantes computadas con requisitos mínimos de ventana",
+            "Medidas de volatilidad ayudan a capturar incertidumbre de demanda"
+          ]
+        },
+        {
+          category: "Inteligencia de Menú",
+          features: [
+            "Índices de popularidad de platos (note_plat_principal)",
+            "Métricas de diversidad de menú (nb_plats_menu)",
+            "Agrupaciones de categorías y clasificaciones",
+            "Codificación objetivo para categorías de menú",
+            "Rendimiento histórico de platos",
+            "Indicadores de novedad de menú",
+            "Acomodaciones de preferencia dietética"
+          ],
+          description: "Captura impacto de preferencia alimentaria en asistencia y efectos de satisfacción del cliente",
+          technicalNotes: [
+            "Codificación objetivo con validación cruzada para prevenir sobreajuste",
+            "Diversidad de menú calculada como platos únicos por día",
+            "Normalización de calificación de platos y manejo de valores faltantes",
+            "Codificación de categorías para tipos de cocina y requisitos dietéticos",
+            "Índices de popularidad computados de calificaciones históricas y ventas"
+          ]
+        },
+        {
+          category: "Clima y Ambiente",
+          features: [
+            "Variaciones de temperatura (min/máx diarios)",
+            "Banderas de precipitación e intensidad",
+            "Términos de interacción meteorológica",
+            "Ajustes de temperatura estacional",
+            "Índices de confort meteorológico",
+            "Indicadores de clima extremo",
+            "Reconocimiento de patrones climáticos"
+          ],
+          description: "Factores ambientales afectando decisiones de comida y patrones de preferencia exterior/interior",
+          technicalNotes: [
+            "Datos meteorológicos obtenidos de APIs externas con manejo de valores faltantes",
+            "Binning de temperatura para efectos no lineales",
+            "Términos de interacción entre clima y estación",
+            "Índice de confort combina temperatura, humedad, precipitación",
+            "Banderas de clima extremo para detección de outliers"
+          ]
+        }
+      ],
+      sections: {
+        featureComponents: "Componentes de Características",
+        technicalImplementation: "Implementación Técnica"
+      },
+      pipeline: {
+        title: "Pipeline de Ingeniería de Características",
+        steps: [
+          {
+            step: "1. Preprocesamiento de Datos",
+            description: "Limpiar, validar y estandarizar datos crudos",
+            details: ["Eliminación de duplicados", "Manejo de valores faltantes", "Estandarización de fechas", "Detección de outliers"]
+          },
+          {
+            step: "2. Características Temporales",
+            description: "Extraer patrones y ciclos basados en tiempo",
+            details: ["Codificación cíclica", "Banderas de feriados", "Indicadores estacionales", "Eventos especiales"]
+          },
+          {
+            step: "3. Características de Retraso y Rodantes",
+            description: "Crear patrones de demanda histórica",
+            details: ["Características de retraso", "Promedios móviles", "Medidas de volatilidad", "Indicadores de tendencia"]
+          },
+         {
+            step: "4. Selección de Características",
+            description: "Optimizar conjunto de características para rendimiento del modelo",
+            details: ["Ranking de importancia", "Análisis de correlación", "Validación cruzada", "Pruebas de estabilidad"]
+          }
+        ]
+      }
+    },
+    validation: {
+      title: "Estrategia de Validación Cruzada de Series Temporales",
+      overview: {
+        title: "Estrategia de Validación Hacia Adelante",
+        description: "Empleando validación cruzada consciente del tiempo para asegurar que el modelo generalice a fechas futuras. Sin mezcla aleatoria - divisiones estrictamente cronológicas para prevenir fuga de datos y mantener integridad temporal esencial para despliegue de producción.",
+        cvFolds: "Folds de VC"
+      },
+      processSteps: {
+        title: "Pasos del Proceso de Validación",
+        steps: [
+          {
+            step: "Validación Cruzada de Ventana Expansiva",
+            description: "Validación consciente del tiempo con divisiones ordenadas cronológicamente para prevenir fuga de datos",
+            rationale: "Asegura que el modelo generalice a fechas futuras sin acceso a información futura",
+            outcome: "VC de 5-fold con RMSE consistente ~21.87 ± 0.5 a través de todos los folds"
+          },
+          {
+            step: "Pruebas de Predicción Secuencial",
+            description: "Simulación de predicción solo hacia adelante imitando condiciones de despliegue en mundo real",
+            rationale: "Valida rendimiento del modelo bajo restricciones operacionales sin acceso a datos futuros",
+            outcome: "Mantiene precisión en modo de predicción secuencial con degradación mínima"
+          },
+          {
+            step: "Análisis Residual y Detección de Sesgo",
+            description: "Examinación sistemática de errores de predicción a través de diferentes condiciones y períodos",
+            rationale: "Identifica sesgos sistemáticos potenciales o patrones en fallas del modelo",
+            outcome: "Sin sesgo significativo detectado a través de estaciones, días de semana o niveles de demanda"
+          },
+          {
+            step: "Estabilidad de Importancia de Características",
+            description: "Análisis de validación cruzada de rankings de importancia de características para interpretabilidad del modelo",
+            rationale: "Asegura patrones consistentes de contribución de características a través de diferentes períodos de tiempo",
+            outcome: "Jerarquía de importancia estable: Ocupación > Temporal > Histórico > Menú > Clima"
+          },
+          {
+            step: "Validación Fuera de Muestra",
+            description: "Pruebas de retención en meses finales de datos nunca vistos durante desarrollo del modelo",
+            rationale: "Prueba definitiva de generalización del modelo a períodos futuros completamente no vistos",
+            outcome: "Tasa de error 5-7% mantenida en datos retenidos, confirmando preparación para producción"
+          }
+        ],
+        stepHeaders: {
+          description: "Descripción",
+          rationale: "Justificación",
+          outcome: "Resultado"
+        }
+      },
+      results: {
+        title: "Resultados de Validación Cruzada",
+        metrics: [
+          { label: "Mejor RMSE VC" },
+          { label: "Desviación Estándar" },
+          { label: "Tasa de Error" }
+        ],
+        codeSnippet: {
+          title: "Implementación de Validación Cruzada de Series Temporales"
+        }
+      }
+    },
+    data: {
+      title: "Fuentes de Datos y Pipeline de Procesamiento",
+      sources: [
+        {
+          name: "kaggle_cantine.csv",
+          description: "Conjunto de datos primario conteniendo 2+ años de registros diarios de conteo de comidas con características temporales y contextuales",
+          size: "729 días × 12 características",
+          keyFeatures: [
+            "nb_vendus (objetivo): Conteo diario de comidas",
+            "date: Registros diarios secuenciales",
+            "jour_semaine: Indicadores día de semana",
+            "mois: Patrones de estacionalidad mensual",
+            "nb_jours_feries: Efectos de proximidad de feriados",
+            "nb_personnes: Datos de conteo diario",
+            "nb_plats_menu: Métrica de diversidad de menú",
+            "note_plat_principal: Calificación de plato principal",
+            "temperature: Condiciones meteorológicas",
+            "commentaire: Contexto cualitativo"
+          ],
+          cleaningSteps: [
+            "Detección y eliminación de duplicados (39 filas duplicadas identificadas)",
+            "Imputación de valores faltantes para datos meteorológicos y de calificación",
+            "Estandarización y validación de formato de fecha",
+            "Análisis de outliers y tratamiento para conteos extremos de comidas",
+            "Conversión de tipos de características y preparación de codificación"
+          ],
+          challenges: [
+            "Tamaño de muestra limitado requiere estrategia cuidadosa de validación",
+            "Distribución desbalanceada a través de estaciones y eventos",
+            "Datos meteorológicos faltantes para algunos períodos históricos",
+            "Comentarios cualitativos requiriendo procesamiento de texto",
+            "Prevención de fuga de datos en modelado temporal"
+          ]
+        }
+      ],
+      sections: {
+        keyFeatures: "Características Clave",
+        dataCleaningSteps: "Pasos de Limpieza de Datos",
+        dataChallenges: "Desafíos de Datos"
+      },
+      quality: {
+        title: "Evaluación de Calidad de Datos",
+        metrics: [
+          {
+            metric: "Completitud de Datos",
+            description: "Valores no faltantes a través de todas las características"
+          },
+          {
+            metric: "Cobertura Temporal",
+            description: "2+ años de registros diarios continuos"
+          },
+          {
+            metric: "Tasa de Duplicados",
+            description: "39 registros duplicados identificados y eliminados"
+          },
+          {
+            metric: "Diversidad de Características",
+            description: "Variables temporales, numéricas, categóricas"
+          }
+        ]
+      },
+      processingPipeline: {
+        title: "Pipeline de Procesamiento de Datos"
+      }
+    },
+    business: {
+      title: "Impacto Empresarial y Valor Operacional",
+      impacts: [
+        {
+          metric: "Reducción de Desperdicio de Alimentos",
+          description: "Preparación optimizada de comidas reduce sobreproducción"
+        },
+        {
+          metric: "Ahorros de Costos",
+          description: "Desperdicio reducido y gestión mejorada de inventario"
+        },
+        {
+          metric: "Calidad de Servicio",
+          description: "Disponibilidad mejorada de comidas y desabastecimientos reducidos"
+        },
+        {
+          metric: "Eficiencia de Planificación",
+          description: "Pronósticos automatizados reducen tiempo de planificación manual"
+        }
+      ],
+      implementation: {
+        title: "Estrategia de Implementación y Despliegue",
+        deployment: {
+          title: "Despliegue de Producción",
+          points: [
+            "Pipeline automatizado de pronósticos diarios",
+            "Monitoreo en tiempo real del modelo y alertas",
+            "Marco de pruebas A/B para actualizaciones del modelo",
+            "Retorno a promedios históricos durante fallas",
+            "Integración con sistemas existentes de gestión de cafetería"
+          ]
+        },
+        benefits: {
+          title: "Beneficios Operacionales",
+          points: [
+            "Desperdicio de alimentos reducido mediante predicción precisa de demanda",
+            "Satisfacción del cliente mejorada vía mejor disponibilidad de comidas",
+            "Ahorros de costos por adquisición optimizada de ingredientes",
+            "Planificación mejorada de personal y asignación de recursos",
+            "Toma de decisiones basada en datos para optimización de menú"
+          ]
+        }
+      },
+      roi: {
+        title: "Análisis de Retorno de Inversión",
+        categories: [
+          {
+            category: "Ahorros de Costos",
+            items: ["Reducción de desperdicio de alimentos: €8K/año", "Optimización laboral: €3K/año", "Eficiencia de inventario: €1K/año"],
+            total: "€12K/año"
+          },
+          {
+            category: "Costo de Implementación",
+            items: ["Tiempo de desarrollo: €2K", "Infraestructura: €500", "Mantenimiento: €1K/año"],
+            total: "€3.5K total"
+          },
+          {
+            category: "Beneficio Neto",
+            items: ["Ahorros anuales: €12K", "Costo de implementación: €3.5K", "Período de recuperación: 3.5 meses"],
+            total: "340% ROI"
+          }
+        ],
+        enhancements: {
+          title: "Oportunidades de Mejora Futura",
+          technical: {
+            title: "Mejoras Técnicas",
+            points: [
+              "Reentrenamiento de modelo en tiempo real con datos de streaming",
+              "Modelos de deep learning para reconocimiento de patrones complejos",
+              "Pronósticos de múltiples ubicaciones con aprendizaje por transferencia",
+              "Integración de fuentes de datos externas (eventos, APIs meteorológicas)"
+            ]
+          },
+          business: {
+            title: "Expansiones Empresariales",
+            points: [
+              "Sistema de optimización y recomendación de menú",
+              "Precios dinámicos basados en pronósticos de demanda",
+              "Optimización de relaciones con proveedores",
+              "Modelado de preferencias y satisfacción del cliente"
+            ]
+          }
+        }
+      }
+    }
+  },
+  codeExamples: {
+    title: {
+      main: "Implementación de Código de Producción"
+    },
+    description: "Implementación Python de nivel empresarial para el sistema de pronóstico de comidas de cafetería BNP Paribas, presentando procesamiento integral de datos, pipelines ML avanzados y código de despliegue listo para producción",
+    navigation: {
+      categories: [
+        { label: "Procesamiento de Datos" },
+        { label: "Ingeniería de Características" },
+        { label: "Entrenamiento de Modelo" },
+        { label: "Pipeline de Predicción" }
+      ]
+    },
+    examples: [
+      {
+        title: "data_integration.py",
+        description: "Fusionando múltiples fuentes de datos con alineación de fechas y manejo de valores faltantes"
+      },
+      {
+        title: "feature_engineering.py",
+        description: "Creando características de retraso, índices de popularidad y características basadas en calendario"
+      },
+      {
+        title: "model_training.py",
+        description: "Optimización de hiperparámetros y entrenamiento ensemble con validación de series temporales"
+      },
+      {
+        title: "prediction_pipeline.py",
+        description: "Generando pronósticos con actualizaciones recursivas de retraso para fechas secuenciales"
+      }
+    ],
+    implementation: {
+      title: "Aspectos Destacados de Implementación",
+      highlights: [
+        {
+          title: "Pipeline de Datos",
+          description: "ETL robusto con validación integral y manejo de errores"
+        },
+        {
+          title: "Seguridad de Series Temporales",
+          description: "Cero fuga de datos con ingeniería temporal apropiada de características"
+        },
+        {
+          title: "Ajuste de Hiperparámetros",
+          description: "Optimización bayesiana con 60 ensayos para rendimiento óptimo"
+        },
+        {
+          title: "Validación Cruzada",
+          description: "División consciente del tiempo para asegurar estimaciones realistas de rendimiento"
+        },
+        {
+          title: "Métodos Ensemble",
+          description: "Promediado de modelo de 5-fold para generalización mejorada"
+        },
+        {
+          title: "Listo para Producción",
+          description: "Manejo de errores, registro y soporte de predicción recursiva"
+        }
+      ]
+    },
+    statistics: [
+      { label: "Líneas de Código" },
+      { label: "Características Ingeniadas" },
+      { label: "Folds de Validación de Modelo" },
+      { label: "Cobertura de Código" }
+    ]
+  },
+  resultsMetrics: {
+    title: {
+      main: "Resultados de Rendimiento"
+    },
+    description: "Métricas de evaluación integrales demostrando la precisión y confiabilidad del modelo para despliegue de producción",
+    keyMetrics: [
+      {
+        title: "Puntuación RMSE",
+        description: "Error Cuadrático Medio en validación cruzada",
+        details: [
+          "RMSE final de 21.87 comidas logrado a través de ensemble de RandomForest + XGBoost",
+          "Optimización de hiperparámetros usando marco Optuna con 100+ ensayos",
+          "Representa error promedio de predicción de ~22 comidas por día"
+        ]
+      },
+      {
+        title: "Tasa de Precisión",
+        description: "Predicciones dentro de rango aceptable (±30 comidas)",
+        details: [
+          "94.5% de predicciones dentro de tolerancia ±30 comidas",
+          "Excede requisito empresarial de 90% de precisión para planificación operacional",
+          "Habilita decisiones confiables de pedido de alimentos y programación de personal"
+        ]
+      },
+      {
+        title: "Conteo de Características",
+        description: "Características ingeniadas de 5 fuentes de datos",
+        details: [
+          "60+ características ingeniadas de datos históricos de comidas y factores externos",
+          "Patrones meteorológicos, eventos de calendario, horarios de personal, ocupación de edificio",
+          "Selección automatizada de características usando información mutua y análisis de correlación"
+        ]
+      },
+      {
+        title: "Estabilidad del Modelo",
+        description: "Desviación estándar a través de folds de VC",
+        details: [
+          "Baja varianza (±0.5) a través de validación cruzada de 5-fold",
+          "Asegura confiabilidad del modelo y generalización a datos no vistos",
+          "Rendimiento consistente a través de diferentes períodos de tiempo y estaciones"
+        ]
+      },
+      {
+        title: "Tiempo de Entrenamiento",
+        description: "Entrenamiento completo del modelo con ajuste de hiperparámetros",
+        details: [
+          "Pipeline de entrenamiento optimizado con parada temprana y procesamiento paralelo",
+          "Reduce tiempo de entrenamiento en 65% mientras mantiene precisión",
+          "Habilita reentrenamiento diario del modelo para despliegue de producción"
+        ]
+      },
+      {
+        title: "Cobertura de Datos",
+        description: "Datos históricos abarcando múltiples estaciones y eventos",
+        details: [
+          "18 meses de datos integrales de consumo de comidas",
+          "Incluye patrones verano/invierno, feriados, conferencias y eventos especiales",
+          "Cubre 450+ días únicos con disponibilidad completa de características"
+        ]
+      }
+    ],
+    performanceAnalysis: {
+      title: "Análisis Detallado de Rendimiento",
+      tableHeaders: {
+        metric: "Métrica",
+        training: "Entrenamiento",
+        validation: "Validación",
+        improvement: "Mejora"
+      },
+      metrics: [
+        {
+          metric: "Error Absoluto Medio",
+          improvement: "vs Baseline: -45%",
+          description: "Diferencia absoluta promedio entre conteos de comidas predichos y reales"
+        },
+        {
+          metric: "Puntuación R²",
+          improvement: "Correlación fuerte",
+          description: "Coeficiente de determinación midiendo poder explicativo del modelo"
+        },
+        {
+          metric: "Error Máximo",
+          improvement: "Manejo de outliers",
+          description: "Desviación máxima en cualquier predicción única a través del conjunto de validación"
+        },
+        {
+          metric: "Puntuación de Validación Cruzada",
+          improvement: "Rendimiento consistente",
+          description: "Puntuación R² promedio a través de divisiones de validación cruzada de 5-fold"
+        }
+      ]
+    },
+    businessImpact: {
+      title: "Proyección de Impacto Empresarial",
+      impacts: [
+        { label: "Reducción estimada en desperdicio de alimentos" },
+        { label: "Tasa de satisfacción de empleados (disponibilidad de comidas)" },
+        { label: "Potencial de ahorro anual de costos" }
+      ],
+      conclusion: "Los pronósticos precisos habilitan asignación óptima de recursos, reducen desperdicio y aseguran disponibilidad consistente de comidas para todos los empleados"
+    }
+  },
+  technologyStack: {
+    title: {
+      main: "Stack Tecnológico"
+    },
+    description: "Herramientas y marcos modernos de ciencia de datos impulsando la solución de pronóstico de comidas de cafetería BNP Paribas con 94.5% de precisión y predicciones diarias automatizadas",
+    categories: [
+      {
+        title: "Ciencia de Datos y ML",
+        technologies: [
+          {
+            name: "Python",
+            category: "Lenguaje Principal",
+            description: "Lenguaje de programación primario para pipeline de ciencia de datos",
+            purpose: "Procesamiento de datos, modelado y análisis",
+            details: [
+              "Python 3.8+ con bibliotecas especializadas de ciencia de datos",
+              "Maneja conjunto de datos histórico de 18 meses de cafetería BNP Paribas",
+              "Implementa pipeline automatizado de ingeniería de características",
+              "Soporta modelado ensemble con RandomForest y XGBoost"
+            ]
+          },
+          {
+            name: "LightGBM",
+            category: "Marco ML",
+            description: "Marco de gradient boosting optimizado para eficiencia",
+            purpose: "Modelo primario para predicción de conteo de comidas",
+            details: [
+              "Logra RMSE de 21.87 comidas con optimización de hiperparámetros",
+              "Maneja 60+ características ingeniadas de múltiples fuentes de datos",
+              "Tiempo de entrenamiento rápido (4.2 minutos) habilita reentrenamiento diario",
+              "Rendimiento robusto a través de patrones estacionales y eventos"
+            ]
+          },
+          {
+            name: "XGBoost",
+            category: "Marco ML",
+            description: "Gradient boosting extremo para modelado ensemble",
+            purpose: "Modelo secundario para predicciones ensemble",
+            details: [
+              "Complementa LightGBM en enfoque ensemble",
+              "Proporciona predicciones diversas para precisión mejorada",
+              "Excelente manejo de valores faltantes y outliers",
+              "Puntuación de validación cruzada de 0.832 a través de 5 folds"
+            ]
+          },
+          {
+            name: "Optuna",
+            category: "Optimización",
+            description: "Marco automático de optimización de hiperparámetros",
+            purpose: "Ajuste de hiperparámetros del modelo",
+            details: [
+              "100+ ensayos para selección óptima de hiperparámetros",
+              "Estimador Parzen Estructurado en Árbol para búsqueda eficiente",
+              "Poda automatizada de ensayos no prometedores",
+              "Reduce esfuerzo de ajuste manual en 90%"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Procesamiento de Datos",
+        technologies: [
+          {
+            name: "Pandas",
+            category: "Manipulación de Datos",
+            description: "Biblioteca poderosa de estructuras de datos y análisis",
+            purpose: "Limpieza, fusión y transformación de datos",
+            details: [
+              "Procesa 450+ días de datos de consumo de comidas",
+              "Fusiona datos de 5 fuentes diferentes (comidas, clima, calendario, personal, ocupación)",
+              "Maneja valores faltantes y problemas de calidad de datos",
+              "Crea características basadas en tiempo y estadísticas rodantes"
+            ]
+          },
+          {
+            name: "NumPy",
+            category: "Computación Numérica",
+            description: "Paquete fundamental para computación científica",
+            purpose: "Operaciones de arrays y funciones matemáticas",
+            details: [
+              "Computaciones numéricas eficientes para ingeniería de características",
+              "Operaciones vectorizadas para optimización de rendimiento",
+              "Cálculos estadísticos para análisis de datos",
+              "Operaciones de arrays eficientes en memoria en conjuntos de datos grandes"
+            ]
+          },
+          {
+            name: "Scikit-learn",
+            category: "Utilidades ML",
+            description: "Biblioteca de aprendizaje automático con métricas de evaluación",
+            purpose: "Validación cruzada y métricas de rendimiento",
+            details: [
+              "Validación cruzada de 5-fold para evaluación del modelo",
+              "Selección de características usando información mutua",
+              "StandardScaler para normalización de características",
+              "Métricas integrales: RMSE, MAE, R², Error Máximo"
+            ]
+          }
+        ]
+      },
+      {
+        title: "Herramientas de Desarrollo",
+        technologies: [
+          {
+            name: "Jupyter Notebook",
+            category: "Entorno de Desarrollo",
+            description: "Plataforma interactiva de desarrollo y prototipado",
+            purpose: "Análisis exploratorio de datos y desarrollo de modelos",
+            details: [
+              "Exploración interactiva de patrones de datos de comidas BNP Paribas",
+              "Visualización de tendencias estacionales y patrones de consumo",
+              "Prototipado rápido de enfoques de ingeniería de características",
+              "Documentación del proceso de desarrollo del modelo"
+            ]
+          },
+          {
+            name: "Kaggle Kernels",
+            category: "Plataforma en la Nube",
+            description: "Entorno de ciencia de datos basado en la nube",
+            purpose: "Entrenamiento de modelos y envío de competencias",
+            details: [
+              "Ejecución basada en la nube con aceleración GPU",
+              "Control de versiones y experimentos reproducibles",
+              "Entorno de desarrollo colaborativo",
+              "Acceso a conjuntos de datos externos y APIs"
+            ]
+          },
+          {
+            name: "Git & GitHub",
+            category: "Control de Versiones",
+            description: "Gestión de código fuente y colaboración",
+            purpose: "Versionado de código y colaboración en equipo",
+            details: [
+              "Seguimiento de iteraciones del modelo y mejoras de rendimiento",
+              "Desarrollo colaborativo con historial de versiones",
+              "Flujo de trabajo de desarrollo de características basado en ramas",
+              "Pipelines automatizados de pruebas y despliegue"
+            ]
+          }
+        ]
+      }
+    ],
+    architecture: {
+      title: "Arquitectura del Sistema de Pronóstico de Comidas BNP Paribas",
+      components: [
+        {
+          component: "Ingesta de Datos",
+          description: "Carga y validación de datos multifuente de sistemas BNP Paribas",
+          details: [
+            "Datos históricos de consumo de comidas (18 meses)",
+            "Integración de datos meteorológicos de APIs externas",
+            "Horario de personal y métricas de ocupación de edificio",
+            "Eventos de calendario e información de feriados",
+            "Verificaciones automatizadas de calidad de datos y validación"
+          ]
+        },
+        {
+          component: "Ingeniería de Características",
+          description: "60+ características ingeniadas de datos de calendario, ocupación, menú y clima",
+          details: [
+            "Características basadas en tiempo: día de semana, mes, estación, feriados",
+            "Características meteorológicas: temperatura, precipitación, humedad",
+            "Características de ocupación: conteo de personal, salas de reuniones reservadas",
+            "Características de retraso: conteos de comidas de 1-7 días previos",
+            "Estadísticas rodantes: promedios móviles de 7 y 30 días"
+          ]
+        },
+        {
+          component: "Entrenamiento de Modelo",
+          description: "Gradient boosting ensemble con optimización de hiperparámetros",
+          details: [
+            "Ensemble de modelos LightGBM y XGBoost",
+            "Validación cruzada de series temporales de 5-fold",
+            "Optimización de hiperparámetros basada en Optuna (100+ ensayos)",
+            "Parada temprana para prevenir sobreajuste",
+            "Análisis y selección de importancia de características"
+          ]
+        },
+        {
+          component: "Pipeline de Predicción",
+          description: "Pronósticos recursivos con actualizaciones de características de retraso para despliegue de producción",
+          details: [
+            "Pronósticos recursivos de múltiples pasos adelante",
+            "Actualizaciones de características de retraso en tiempo real",
+            "Promediado de modelo ensemble para predicciones finales",
+            "Intervalos de confianza y cuantificación de incertidumbre",
+            "Pipeline automatizado de reentrenamiento diario"
+          ]
+        }
+      ],
+      stepLabel: "Paso",
+      implementationDetailsLabel: "Detalles de Implementación:"
+    },
+    performanceMetrics: {
+      title: "Métricas de Rendimiento de Producción",
+      description: "Indicadores clave de rendimiento demostrando la efectividad del sistema en entorno de producción",
+      metrics: [
+        {
+          metric: "RMSE",
+          description: "Error Cuadrático Medio"
+        },
+        {
+          metric: "Precisión",
+          description: "Dentro de tolerancia ±30 comidas"
+        },
+        {
+          metric: "Tiempo de Entrenamiento",
+          description: "Reentrenamiento completo del modelo"
+        },
+        {
+          metric: "Cobertura de Datos",
+          description: "Datos históricos de entrenamiento"
+        }
+      ]
+    },
+    labels: {
+      purpose: "Propósito:",
+      technicalDetails: "Detalles Técnicos:"
+    }
+  },
+  footer: {
+    title: {
+      main: "Pronóstico de Comidas BNP Paribas"
+    },
+    description: "Solución avanzada de aprendizaje automático logrando 94.5% de precisión para pronóstico de demanda de cafetería",
+    metrics: {
+      rmse: "RMSE: 21.87 comidas",
+      trainingData: "18 meses de datos de entrenamiento",
+      features: "60+ características ingeniadas"
+    },
+    buttons: {
+      documentation: "Documentación",
+      sourceCode: "Código Fuente"
+    }
+  }
+},
     hero: {
       greeting: "Hola, soy",
       name: "Walid BENBOUTA",
@@ -8116,6 +15078,1620 @@ if (puntuacion_ml > 0.3) {
     interactiveVisualizations: "100+",
   },
 },
+adc: {
+  hero: {
+    badge: {
+      text: "الذكاء التجاري المدعوم بالذكاء الاصطناعي"
+    },
+    title: {
+      main: "فيست",
+      subtitle: "فوريكاستر"
+    },
+    description: "نظام تعلم آلي ثوري يحول عمليات كافتيريا بي إن بي باريبا من خلال التحليلات التنبؤية، مما يقلل الهدر ويحسن تخصيص الموارد بدقة لا مثيل لها.",
+    performanceMetrics: {
+      title: "مقاييس الأداء المباشر",
+      metrics: [
+        {
+          label: "دقة التنبؤ",
+          description: "دقة التنبؤ بالوجبات اليومية (في المتوسط)",
+          suffix: "RMSE"
+        },
+        {
+          label: "ثقة النموذج",
+          description: "قوة مُثبتة من خلال التحقق المتقاطع الواعي للوقت",
+          suffix: "%"
+        },
+        {
+          label: "تقليل الهدر",
+          description: "تحسين تحضير الطعام وكفاءة التكلفة",
+          suffix: "%"
+        },
+        {
+          label: "وقت المعالجة",
+          description: "رؤى فورية لاتخاذ القرارات الديناميكية",
+          suffix: "دقيقة"
+        }
+      ]
+    },
+    technologyStack: [
+      {
+        name: "LightGBM",
+        description: "محرك تعلم آلي عالي الأداء للرؤى السريعة"
+      },
+      {
+        name: "نماذج التجميع",
+        description: "قوة تنبؤية مدمجة للدقة المتفوقة"
+      },
+      {
+        name: "تحليل السلاسل الزمنية",
+        description: "أنماط زمنية متقدمة للتنبؤ المستقبلي"
+      },
+      {
+        name: "البيانات الفورية",
+        description: "تحديثات فورية لدعم القرارات المرنة"
+      }
+    ],
+    buttons: {
+      primary: "جرب النظام",
+      secondary: "استكشف التحليلات"
+    },
+    keyFeatures: [
+      {
+        title: "التنبؤ الذكي",
+        description: "تنبؤات بطلب الوجبات مدعومة بالذكاء الاصطناعي، مما يضمن التحضير الأمثل للطعام ويقلل الهدر."
+      },
+      {
+        title: "رؤى الإشغال الديناميكية",
+        description: "تتبع فوري لحضور الموظفين واستخدام الكافتيريا للتخطيط التكيفي."
+      },
+      {
+        title: "الذكاء التجاري الاستراتيجي",
+        description: "لوحات معلومات شاملة ورؤى قابلة للتنفيذ لتوفير التكاليف والتميز التشغيلي."
+      }
+    ]
+  },
+  executiveSummary: {
+    badge: {
+      primary: "تحليل تقني لبي إن بي باريبا الجزائر",
+      secondary: "نظام التنبؤ بالوجبات"
+    },
+    title: {
+      main: "كافتيريا بي إن بي باريبا",
+      subtitle: "نظام التنبؤ بالطلب"
+    },
+    description: "حل تعلم آلي شامل لكافتيريا المكتب الرئيسي لبي إن بي باريبا الجزائر، يقدم تنبؤات دقيقة بعدد الوجبات اليومية من خلال التحليل المتكامل لمعاملات الكافتيريا وحضور المكتب وعروض القائمة والظروف الجوية وأحداث التقويم الثقافي لتحسين التحضير وتقليل الهدر التشغيلي",
+    navigation: {
+      sections: [
+        "التحدي التشغيلي",
+        "الحل التقني",
+        "تحليل الأداء",
+        "التأثير التجاري"
+      ]
+    },
+    operationalChallenges: {
+      title: "التحديات التشغيلية الحالية",
+      challenges: [
+        {
+          title: "هدر الطعام وتحسين التكلفة",
+          description: "تواجه كافتيريا المكتب الرئيسي لبي إن بي باريبا الجزائر تحديات كبيرة في قرارات تحضير الوجبات اليومية. الإفراط في التحضير يؤدي إلى هدر كبير في الطعام وتكاليف غير ضرورية، بينما النقص في التحضير يترك الموظفين بدون وجبات، مما يخلق عدم كفاءة تشغيلية وعدم رضا الموظفين.",
+          currentState: "تقدير يدوي بدون تنبؤات دقيقة للطلب",
+          businessImpact: "هدر كبير من التقدير المفرط، إمكانية ملموسة لتوفير التكاليف",
+          frequency: "تحدي يومي في اتخاذ القرارات"
+        },
+        {
+          title: "جودة الخدمة ورضا الموظفين",
+          description: "بدون تنبؤ دقيق، يجب على موظفي الكافتيريا اتخاذ قرارات التحضير اليومية بشكل أعمى، مما يؤدي غالباً إلى نقص في الوجبات يخيب آمال الموظفين أو تحضير مفرط يؤدي إلى الهدر وزيادة التكاليف التشغيلية.",
+          currentState: "تخمين قائم على الخبرة لعدد الوجبات اليومية",
+          businessImpact: "عدم رضا الموظفين من عدم توفر الوجبات",
+          frequency: "اضطرابات خدمة يومية وعدم يقين في التخطيط"
+        },
+        {
+          title: "تخطيط الموارد وتخصيص الموظفين",
+          description: "نقص الرؤى التنبؤية يؤثر على تخصيص موارد المطبخ وجدولة الموظفين وشراء المكونات. الإدارة لا تستطيع التخطيط الاستباقي للعمليات أو تحسين استخدام الموارد بدون فهم أنماط الطلب والمحركات الرئيسية.",
+          currentState: "تخطيط تفاعلي بدون رؤى الطلب",
+          businessImpact: "تخصيص موارد دون المستوى الأمثل وفرص كفاءة مفقودة",
+          frequency: "عدم كفاءة تشغيلية مستمرة"
+        }
+      ],
+      labels: {
+        currentState: "الحالة الحالية",
+        businessImpact: "التأثير التجاري",
+        frequency: "التكرار"
+      }
+    },
+    technicalSolutions: {
+      title: "الهندسة المعمارية التقنية المتقدمة",
+      solutions: [
+        {
+          title: "تكامل البيانات متعددة المصادر وخط أنابيب ETL",
+          description: "هندسة معمارية شاملة للبيانات تدمج خمسة مصادر بيانات داخلية متجانسة: سجلات معاملات الكافتيريا التاريخية، سجلات حضور المكتب الرئيسي، معلومات القائمة اليومية، البيانات الجوية، وأحداث التقويم. جميع مجموعات البيانات تُدمج على حقول التاريخ لإنشاء جدول نمذجة موحد للتنبؤ.",
+          methodology: "خط أنابيب تعلم آلي شامل مع تنظيف واسع للبيانات وهندسة الخصائص. تحليل التواريخ والصلات الداخلية على حقول التاريخ وعمليات التجميع تضمن اتساق البيانات. اهتمام خاص بالتقويم التجاري الجزائري (أسبوع عمل الأحد-الخميس) والسياقات الثقافية بما في ذلك العطل الإسلامية وفترات رمضان.",
+          implementation: [
+            "سجلات معاملات الكافتيريا (kaggle_cantine.csv) مجمعة حسب معرف الموظف لاستخراج عدد الوجبات اليومية (Nb_meals)",
+            "تتبع حضور المكتب الرئيسي (kaggle_head_office.csv) عبر بيانات البطاقة للعدد اليومي (Nb_acces)",
+            "تحليل عروض القائمة اليومية (kaggle_menu.csv) بما في ذلك أنواع المقبلات والأطباق الرئيسية لتسجيل الشعبية",
+            "تكامل API الطقس (kaggle_meteo.csv) يلتقط درجة الحرارة والهطول وسرعة الرياح وغطاء السحب",
+            "قوالب التواريخ المستقبلية (test_kaggle_finale.csv) مع خصائص معبأة مسبقاً لنشر التنبؤ"
+          ],
+          performance: "دمج ناجح لـ 5 مصادر بيانات بدقة محاذاة تاريخ 100%",
+          innovation: "أول تنفيذ يراعي السياق الثقافي الجزائري وتأثيرات التقويم الإسلامي"
+        },
+        {
+          title: "هندسة الخصائص المتقدمة واستخراج الإشارات",
+          description: "عملية إنشاء خصائص متطورة تستخرج إشارات مهمة من البيانات الخام لتحديد المحركات الرئيسية لطلب الكافتيريا. تشمل الخصائص أنماط أيام الأسبوع والعطل العامة وارتباطات حضور المكتب ومؤشرات شعبية القائمة وتأثيرات التفاعل الجوي.",
+          methodology: "هندسة خصائص واعية للوقت مع التحقق المتقاطع لمنع تسرب البيانات. البيانات التاريخية فقط مستخدمة لحسابات الشعبية. تحليل شامل للأنماط بما في ذلك الموسمية الأسبوعية وتأثيرات العطل والتأثيرات الجوية على سلوك تناول الطعام.",
+          implementation: [
+            "الخصائص الزمنية: أنماط أيام الأسبوع، علامات العطل، مؤشرات موسمية، فترات Is_Ramadan",
+            "تحليل ارتباط الحضور: علاقة عدد المكتب مقابل طلب الكافتيريا (r=0.61)",
+            "تسجيل شعبية القائمة: متوسط تاريخي للوجبات لكل نوع طبق مع حماية التحقق المتقاطع",
+            "خصائص التفاعل الجوي: تأثيرات الهطول، عتبات درجة الحرارة، تفاعلات Rain_x_Occupancy",
+            "خصائص التأخير والإحصائيات المتداولة: lag7 (نفس اليوم الأسبوع الماضي)، متوسطات متحركة MA7/MA14 لأنماط السلاسل الزمنية"
+          ],
+          performance: "تحديد حضور المكتب كمتنبئ رئيسي مع ارتباط كبير بطلب الوجبات",
+          innovation: "فهرسة شعبية القائمة مع التحقق المتقاطع تمنع الإفراط في التكيف مع التفضيلات التاريخية"
+        },
+        {
+          title: "تعلم آلي تجميعي وتحسين النموذج",
+          description: "نماذج انحدار تجميعية متطورة باستخدام أشجار قرار معززة بالتدرج قادرة على التقاط العلاقات غير الخطية والتفاعلات المعقدة للخصائص. تحسين المعاملات الفائقة يقلل خطأ التنبؤ (RMSE) مع ضمان التعميم للتواريخ المستقبلية.",
+          methodology: "تحقق متقاطع واعي للوقت يحاكي تنبؤات إلى الأمام في الوقت على تواريخ محتجزة. إطار تحقق صارم يضمن أن النموذج يعمم جيداً للسيناريوهات المستقبلية دون إفراط في التكيف مع الخصائص التاريخية. تحسين RMSE لدقة تنبؤ عملية.",
+          implementation: [
+            "هندسة معمارية تجميعية LightGBM وXGBoost (70-30 مرجحة) مع أشجار قرار معززة بالتدرج",
+            "تحقق متقاطع TimeSeriesSplit من 5 طيات يمنع تسرب البيانات المستقبلية مع استراتيجية نافذة متوسعة",
+            "تحسين معاملات فائقة بايزي Optuna (60 تجربة) يستهدف تقليل RMSE مع learning_rate ~0.05-0.1، num_leaves ~400-500",
+            "إيقاف مبكر مع صبر 50 جولة لمنع الإفراط في التكيف وتحديد العدد الأمثل للأشجار",
+            "خط أنابيب تنبؤ تسلسلي لمجموعة الاختبار: تنبؤ يوم بيوم باستخدام تحديثات خاصية تأخير تكرارية من التنبؤات السابقة"
+          ],
+          performance: "تحقيق دقة RMSE ~22 في التحقق المتقاطع (5-7% من النطاق اليومي النموذجي 0-400+ وجبة)، يمثل تحسناً كبيراً على الطرق الساذجة",
+          innovation: "منهجية تحقق واعية للوقت تضمن أداء نشر قوي في العالم الحقيقي"
+        }
+      ],
+      labels: {
+        methodology: "المنهجية",
+        implementationDetails: "تفاصيل التنفيذ",
+        performance: "الأداء",
+        innovation: "الابتكار"
+      }
+    },
+    performanceAnalysis: {
+      title: "تحليل الأداء الشامل",
+      metrics: [
+        {
+          label: "دقة RMSE",
+          description: "RMSE للتحقق المتقاطع في العشرينات المنخفضة (5-7% من النطاق اليومي النموذجي 0-400+ وجبة)، تحسن كبير على طرق التنبؤ الساذجة",
+          technicalDetail: "الجذر التربيعي لمتوسط الخطأ التربيعي مُثبت من خلال تحقق متقاطع TimeSeriesSplit من 5 طيات يحاكي سيناريوهات النشر في العالم الحقيقي",
+          context: "النطاق المستهدف 15-25 RMSE محقق، يتيح تخطيط تحضير دقيق مع MAE ~16 وجبة انحراف متوسط"
+        },
+        {
+          label: "استراتيجية التجميع",
+          description: "تجميع مرجح LightGBM-XGBoost يحسن نقاط القوة الخوارزمية المختلفة لدقة تنبؤ قوية",
+          technicalDetail: "ترجيح التجميع محدد من خلال تحليل أداء التحقق المتقاطع: LightGBM يتفوق في الخصائص الفئوية، XGBoost في التفاعلات العددية",
+          context: "نهج التجميع يقلل التحيزات الخاصة بالنموذج ويحسن التعميم"
+        },
+        {
+          label: "تكامل البيانات",
+          description: "تكامل شامل لسجلات الكافتيريا وسجلات الحضور وبيانات القائمة والمعلومات الجوية وأحداث التقويم",
+          technicalDetail: "خط أنابيب ETL مع دمج قائم على التاريخ يضمن محاذاة بيانات 100% عبر الأنظمة الداخلية المتجانسة",
+          context: "أول تنفيذ يدمج مصادر بيانات داخلية متعددة لبي إن بي باريبا"
+        },
+        {
+          label: "العوامل الخارجية",
+          description: "الظروف الجوية تؤثر على سلوك تناول الطعام، مع الهطول يشجع استخدام الكافتيريا في الموقع",
+          technicalDetail: "تكامل API يلتقط درجة الحرارة والهطول وسرعة الرياح وغطاء السحب لنمذجة الطلب",
+          context: "المطر وأنماط الطقس تؤثر على قرارات تناول الطعام للموظفين"
+        },
+        {
+          label: "جاهز للإنتاج",
+          description: "خط أنابيب تنبؤ آلي يحدث التنبؤات بمدخلات بيانات جديدة للاستخدام التشغيلي اليومي",
+          technicalDetail: "خط أنابيب شامل يعالج العدد اليومي وتنبؤات الطقس ومعلومات القائمة للتنبؤات الفورية",
+          context: "أداة دعم قرارات لإدارة الكافتيريا"
+        },
+        {
+          label: "أفق التنبؤ",
+          description: "تنبؤات مسبقة بيوم تتيح تحضير وجبات استباقي وتخصيص موارد",
+          technicalDetail: "نمذجة سلاسل زمنية مع هندسة خصائص تلتقط الأنماط الأسبوعية والتأثيرات الموسمية",
+          context: "أفق أمثل للتخطيط التشغيلي وشراء المكونات"
+        },
+        {
+          label: "واعي للسياق",
+          description: "النموذج يراعي التقويم التجاري الجزائري والعطل الإسلامية بما في ذلك ملاحظة رمضان",
+          technicalDetail: "هندسة خصائص تدمج أسبوع عمل الأحد-الخميس وأنماط الملاحظة الدينية",
+          context: "تكيف حرج للسياق الثقافي المحلي الدقيق"
+        }
+      ],
+      comparison: {
+        title: "مقارنة أداء النموذج",
+        models: [
+          { name: "خط أساس ساذج", description: "متوسطات بسيطة" },
+          { name: "انحدار خطي", description: "خصائص أساسية" },
+          { name: "تجميع LightGBM", description: "خصائص متقدمة" }
+        ],
+        bestLabel: "الأفضل"
+      },
+      labels: {
+        technicalDetail: "التفصيل التقني",
+        context: "السياق"
+      }
+    },
+    businessImpact: {
+      title: "التأثير التجاري المحدد كمياً",
+      keyMetrics: [
+        { label: "دقة الوجبات", description: "خطأ تنبؤ متوسط يتيح تحضير دقيق" },
+        { label: "تكامل البيانات", description: "خط أنابيب بيانات متعدد المصادر شامل" },
+        { label: "قدرة التخطيط", description: "تنبؤ مسبق بيوم لتخصيص موارد أمثل" },
+        { label: "وعي السياق", description: "التقويم التجاري الجزائري وتكامل العطل الإسلامية" }
+      ],
+      operationalBenefits: [
+        {
+          title: "تقليل الهدر",
+          description: "التنبؤ الدقيق يلغي هدر التقدير المفرط ويقلل تكاليف الطعام. حتى تقليل الخطأ اليومي ببضع عشرات من الوجبات يترجم إلى وفورات ملموسة ومقاييس استدامة محسنة لعمليات بي إن بي باريبا."
+        },
+        {
+          title: "رضا الموظفين",
+          description: "يضمن أن تقريباً جميع الموظفين الذين يخططون لتناول الطعام في الكافتيريا يمكن استيعابهم. يمنع خيبة الأمل من نقص الوجبات مع الحفاظ على جودة خدمة وتوفر ثابت."
+        },
+        {
+          title: "الكفاءة التشغيلية",
+          description: "فهم محركات الطلب يتيح جدولة موظفين استباقية وشراء مكونات. الإدارة يمكنها توقع إقبال أعلى في أيام محددة أو عند تقديم وجبات شعبية."
+        }
+      ],
+      implementation: {
+        title: "التنفيذ والتكامل التشغيلي",
+        phases: [
+          {
+            phase: "المرحلة 1: أساس البيانات",
+            duration: "مكتملة",
+            activities: ["تطوير خط أنابيب ETL", "تحقق جودة البيانات", "هندسة الخصائص", "تكامل التقويم الجزائري"]
+          },
+          {
+            phase: "المرحلة 2: تطوير النموذج",
+            duration: "مكتملة",
+            activities: ["اختيار وضبط الخوارزمية", "إطار التحقق المتقاطع", "تحسين التجميع", "تحقق الأداء"]
+          },
+          {
+            phase: "المرحلة 3: نشر الإنتاج",
+            duration: "قيد التقدم",
+            activities: ["API تنبؤ فوري", "تطوير لوحة المعلومات", "تدريب الموظفين", "نظام المراقبة"]
+          },
+          {
+            phase: "المرحلة 4: التحسين المستمر",
+            duration: "مستمر",
+            activities: ["خط أنابيب إعادة تدريب النموذج", "كشف انحراف الخصائص", "مراقبة الأداء", "تحديثات قواعد الأعمال"]
+          }
+        ]
+      },
+      roi: {
+        title: "ملخص العائد على الاستثمار",
+        metrics: [
+          { label: "مضاعف العائد على الاستثمار", description: "خلال 12 شهر" },
+          { label: "أشهر الاسترداد", description: "الجدول الزمني لنقطة التعادل" },
+          { label: "قيمة 3 سنوات", description: "الوفورات التراكمية" }
+        ],
+        quote: "يمثل نظام التنبؤ المدعوم بالتعلم الآلي هذا تحولاً نموذجياً من إدارة الكافتيريا التفاعلية إلى التنبؤية، مما يقدم تحسينات قابلة للقياس في الكفاءة التشغيلية والتحكم في التكاليف ورضا الموظفين بينما يثبت بي إن بي باريبا الجزائر كرائد في إدارة المرافق القائمة على البيانات.",
+        buttons: {
+          technical: "غوص تقني عميق",
+          model: "عرض هندسة النموذج"
+        }
+      }
+    },
+    dataArchitecture: {
+      title: "هندسة البيانات المتكاملة",
+      sources: [
+        {
+          name: "سجلات معاملات الكافتيريا",
+          details: "سجلات معاملات وجبات فردية حسب معرف الموظف",
+          records: "عدد الوجبات اليومية (Nb_meals) مجمع من المشتريات الفردية",
+          connection: "المتغير المستهدف الأساسي لنموذج التنبؤ",
+          technical: "kaggle_cantine.csv - كل إدخال يمثل معاملة وجبة واحدة"
+        },
+        {
+          name: "حضور المكتب الرئيسي",
+          details: "سجلات البطاقة اليومية تتبع حضور المكتب",
+          records: "العدد اليومي (Nb_acces) للموظفين الفريدين في المبنى",
+          connection: "خاصية خارجية حاسمة - حضور أعلى يخلق فرصة لوجبات أكثر",
+          technical: "تجميع يومي يوفر عدد الآكلين المحتملين"
+        },
+        {
+          name: "نظام القائمة اليومية",
+          details: "عروض قائمة الكافتيريا بما في ذلك المقبلات والأطباق الرئيسية",
+          records: "تركيب القائمة ومؤشرات شعبية الأطباق",
+          connection: "تأثير نوعي - أطباق معينة تجذب آكلين أكثر",
+          technical: "بيانات القائمة مع تصنيف الأطباق لتحديد المفضلات الجماهيرية"
+        },
+        {
+          name: "API بيانات الطقس",
+          details: "ظروف جوية خارجية تؤثر على قرارات تناول الطعام",
+          records: "مقاييس درجة الحرارة والهطول وسرعة الرياح وغطاء السحب",
+          connection: "المطر يشجع تناول الطعام في الموقع، درجة الحرارة تؤثر على خيارات الغداء",
+          technical: "مقاييس طقس يومية متكاملة عبر API خارجي"
+        },
+        {
+          name: "التقويم والأحداث",
+          details: "التقويم التجاري الجزائري والأحداث الثقافية",
+          records: "علامات العطل، أنماط أسبوع العمل (الأحد-الخميس)، الملاحظات الدينية",
+          connection: "سياق ثقافي حرج لتنبؤات السوق الجزائرية الدقيقة",
+          technical: "تكامل تقويم مخصص للعطل الإسلامية والأنماط المحلية"
+        }
+      ]
+    }
+  },
+  technicalOverview: {
+    badge: {
+      primary: "غوص تقني عميق",
+      secondary: "نظام التنبؤ بالوجبات بي إن بي باريبا"
+    },
+    title: {
+      main: "هندسة التعلم الآلي المتقدمة"
+    },
+    description: "خط أنابيب تعلم آلي شامل يجمع خمسة مصادر بيانات متجانسة مع هندسة خصائص متطورة وتعزيز تدرج تجميعي لتحقيق دقة RMSE ~20 في التنبؤ بعدد الوجبات اليومية لعمليات كافتيريا بي إن بي باريبا الجزائر",
+    dataSources: {
+      title: "خط أنابيب تكامل البيانات متعددة المصادر",
+      sources: [
+        {
+          name: "سجلات معاملات الكافتيريا",
+          description: "سجلات معاملات وجبات فردية مع تتبع معرف الموظف للتجميع اليومي الشامل",
+          keyFeatures: [
+            "عدد الوجبات اليومية (Nb_meals) مشتق من تجميع المعاملات باستخدام kaggle_cantine.csv",
+            "تتبع معرف الموظف مع معالجة المكرر للوجبات المتعددة (~0.4% معدل الحدوث)",
+            "تحليل الأنماط الزمنية عبر مايو 2022 - ديسمبر 2024 (تغطية 2.5 سنة)",
+            "بناء المتغير المستهدف مع تنبؤ تسلسلي يوم بيوم لتنبؤ الاختبار"
+          ],
+          dataSourceLabel: "مصدر البيانات 1/5"
+        },
+        {
+          name: "بيانات حضور المكتب الرئيسي",
+          description: "سجلات البطاقة تتبع حضور الموظفين اليومي كمتنبئ رئيسي لطلب الكافتيريا",
+          keyFeatures: [
+            "العدد اليومي (Nb_acces) من kaggle_head_office.csv للموظفين الفريدين في المبنى",
+            "رسم خريطة الأقسام وتحليل الهيكل التنظيمي (معتبر لكن غير منفذ)",
+            "خاصية خارجية حاسمة مع ارتباط 0.61 بطلب الوجبات (أهمية خاصية عليا)",
+            "مؤشر عدد الآكلين المحتملين يقيد السعة اليومية القصوى (نطاق 0-400+ وجبة)"
+          ],
+          dataSourceLabel: "مصدر البيانات 2/5"
+        },
+        {
+          name: "نظام القائمة اليومية",
+          description: "عروض قائمة شاملة بما في ذلك أنواع المقبلات وخيارات الطبق الرئيسي المزدوجة مع تحليلات الشعبية",
+          keyFeatures: [
+            "مقبلة وطبقين رئيسيين يومياً من kaggle_menu.csv مع تصنيف فئوي",
+            "مؤشرات شعبية الأطباق التاريخية: متوسط Nb_meals لكل طبق (مثل، بيتزا=350 مقابل كيش=280)",
+            "تحليل تنوع القائمة (عروض نفس النوع مقابل متنوعة) وكشف الخيار النباتي",
+            "ترميز مستهدف محمي بالتحقق المتقاطع يمنع الإفراط في التكيف مع التفضيلات التاريخية"
+          ],
+          dataSourceLabel: "مصدر البيانات 3/5"
+        },
+        {
+          name: "تكامل بيانات الطقس",
+          description: "ظروف جوية خارجية تؤثر على سلوك تناول الطعام للموظفين وقرارات الغداء",
+          keyFeatures: [
+            "درجة الحرارة والهطول وسرعة الرياح وغطاء السحب من kaggle_meteo.csv",
+            "مؤشر المطر (Is_Rain) يظهر ~6 وجبات إضافية في الأيام الممطرة (313 مقابل 307 خط أساس)",
+            "تأثيرات تفاعل الطقس-الحضور (Rain_x_Occupancy) للتحولات السلوكية المركبة",
+            "إسناد بيانات طقس ناقصة مع استراتيجيات خاصة بالمجال لقوة النموذج"
+          ],
+          dataSourceLabel: "مصدر البيانات 4/5"
+        },
+        {
+          name: "التقويم الجزائري والسياق الثقافي",
+          description: "خصائص ثقافية وقائمة على التقويم تراعي أنماط الأعمال المحلية والملاحظات الدينية",
+          keyFeatures: [
+            "تمييز نمط أسبوع عمل الأحد-الخميس",
+            "كشف العطل الإسلامية (فترات رمضان، العيد)",
+            "وضع علامة على العطل العامة مع توقعات وجبات شبه صفر",
+            "تغيرات موسمية بما في ذلك فترات عطلة أغسطس"
+          ],
+          dataSourceLabel: "مصدر البيانات 5/5"
+        }
+      ],
+      integrationSummary: {
+        title: "ملخص هندسة التكامل",
+        metrics: [
+          {
+            label: "مصادر البيانات",
+            description: "متكاملة عبر دمج قائم على التاريخ"
+          },
+          {
+            label: "تغطية السنوات",
+            description: "مايو 2022 - ديسمبر 2024"
+          },
+          {
+            label: "الارتباط الرئيسي",
+            description: "الحضور مقابل طلب الوجبات"
+          }
+        ]
+      }
+    },
+    methodology: {
+      title: "منهجية خط أنابيب التعلم الآلي الشامل",
+      phases: [
+        {
+          phase: "تكامل البيانات والمعالجة المسبقة",
+          description: "خط أنابيب ETL شامل يدمج خمسة مصادر بيانات متجانسة مع إجراءات تنظيف وتحقق صارمة",
+          techniques: [
+            "تحليل ومحاذاة التواريخ عبر جميع مجموعات البيانات مع توحيد التنسيق",
+            "دمج صلة داخلية يضمن الاتساق الزمني عبر المصادر",
+            "إسناد بيانات ناقصة مع استراتيجيات خاصة بالمجال",
+            "معالجة المكرر في سجلات المعاملات (~0.4% معدل الحدوث)",
+            "محاذاة عطلة نهاية الأسبوع/العطل للتقويم التجاري الجزائري (عطل نهاية أسبوع الجمعة-السبت)",
+            "كشف فترة رمضان مع وضع علامة على الحدث الخاص"
+          ],
+          phaseLabel: "المرحلة 1"
+        },
+        {
+          phase: "التحليل الاستكشافي للبيانات واكتشاف الأنماط",
+          description: "تحليل إحصائي يكشف محركات الطلب الرئيسية والأنماط السلوكية في استخدام الكافتيريا",
+          techniques: [
+            "تحليل الموسمية الأسبوعية يظهر طلب الذروة يوم الخميس",
+            "تحليل ارتباط إشغال المكتب (r=0.61 مع طلب الوجبات)",
+            "تقدير تأثير القائمة مع تسجيل الشعبية",
+            "تحقق تأثير الطقس (+6 وجبات متوسط في الأيام الممطرة)",
+            "تحديد التغير الموسمي (تأثيرات عطلة أغسطس)",
+            "تمييز نمط العطل مع فترات طلب صفر"
+          ],
+          phaseLabel: "المرحلة 2"
+        },
+        {
+          phase: "هندسة الخصائص المتقدمة",
+          description: "إنشاء 60+ خاصية تنبؤية من البيانات الخام تدمج إشارات زمنية وسلوكية وبيئية",
+          techniques: [
+            "خصائص التقويم: يوم الأسبوع، علامات العطل، ترميز الشهر",
+            "خصائص التأخير: lag7 (نفس اليوم الأسبوع الماضي) للموسمية الأسبوعية",
+            "الإحصائيات المتداولة: متوسطات متحركة 7 و14 يوم",
+            "مؤشرات شعبية القائمة مع ترميز التحقق المتقاطع",
+            "خصائص تفاعل الطقس (تأثيرات المطر × الإشغال)",
+            "ترميز مستهدف لعناصر القائمة الفئوية مع منع التسرب"
+          ],
+          phaseLabel: "المرحلة 3"
+        },
+        {
+          phase: "تطوير النموذج وتدريب التجميع",
+          description: "تجميع تعزيز تدرج مع تحقق صارم واعي للوقت وتحسين المعاملات الفائقة",
+          techniques: [
+            "هندسة معمارية تجميعية LightGBM وXGBoost مع متوسط مرجح 70-30 لتوازن أداء أمثل",
+            "تحقق متقاطع TimeSeriesSplit من 5 طيات يمنع التسرب المستقبلي (تدريب 2022-2023، تحقق 2024)",
+            "تحسين معاملات فائقة بايزي Optuna (60 تجربة): learning_rate ~0.05-0.1، num_leaves ~400-500، max_depth 8-12",
+            "إيقاف مبكر مع صبر 50 جولة يمنع الإفراط في التكيف، متوسط تجميع عبر طيات CV للقوة",
+            "تحقق أهمية الخصائص: Nb_acces (35%)، مؤشرات يوم الأسبوع (25%)، شعبية القائمة (20%)، تأثيرات الطقس (15%)",
+            "تحليل البقايا كشف تحيز التنبؤ المنخفض للاثنين، حُل من خلال ترميز محسن ليوم الأسبوع وحدود التفاعل"
+          ],
+          phaseLabel: "المرحلة 4"
+        },
+        {
+          phase: "التحقق ونشر الإنتاج",
+          description: "تحقق نموذج شامل وخط أنابيب نشر للتنبؤ التشغيلي",
+          techniques: [
+            "تحقق إلى الأمام في الوقت يحاكي سيناريوهات تنبؤ العالم الحقيقي بدون تحيز نظرة مسبقة",
+            "تحليل البقايا يضمن تنبؤات غير متحيزة عبر جميع الظروف وأنماط يوم الأسبوع",
+            "خط أنابيب تنبؤ تسلسلي لـ test_kaggle_finale.csv: تنبؤ يوم بيوم مع تحديثات تأخير تكرارية",
+            "متوسط تجميع عبر 5 نماذج مدربة بالطية لتقدير عدم يقين قوي وفترات تنبؤ",
+            "تنبؤ تكراري جاهز للإنتاج يستخدم تنبؤات اليوم السابق كخصائص تأخير ديناميكية",
+            "مراقبة أداء تحقق ~22 RMSE (5-7% من نطاق 0-400+ وجبة) مع MAE ~16 وجبة انحراف متوسط",
+            "اعتبارات النشر: خط أنابيب تنبؤ يومي، تحديثات خصائص فورية، وفترات ثقة التنبؤ"
+          ],
+          phaseLabel: "المرحلة 5"
+        }
+      ]
+    },
+    achievements: {
+      metrics: [
+        {
+          label: "تحقق RMSE",
+          description: "RMSE تحقق متقاطع في العشرينات المنخفضة (5-7% من نطاق الوجبات اليومية 0-400+)، يصل عتبة الأداء المستهدفة"
+        },
+        {
+          label: "خصائص مهندسة",
+          description: "إنشاء خصائص متطور من البيانات الخام بما في ذلك إشارات زمنية وسلوكية وبيئية"
+        },
+        {
+          label: "CV السلاسل الزمنية",
+          description: "تحقق صارم يمنع التسرب المستقبلي مع محاكاة تنبؤ إلى الأمام في الوقت"
+        }
+      ]
+    }
+  },
+  dataInsights: {
+    badge: {
+      primary: "التحليل الاستكشافي للبيانات",
+      secondary: "اكتشاف الأنماط والرؤى"
+    },
+    title: {
+      main: "رؤى مدفوعة بالبيانات"
+    },
+    description: "تحليل استكشافي شامل يكشف الأنماط السلوكية ومحركات الطلب والعلاقات الحرجة في استخدام الكافتيريا عبر 2.5 سنة من البيانات التشغيلية",
+    timeSeriesAnalysis: {
+      title: "تحليل السلاسل الزمنية والأنماط",
+      insights: [
+        {
+          title: "الاتجاه العام والموسمية",
+          description: "الوجبات اليومية المقدمة عبر الوقت (مايو 2022 – ديسمبر 2024) تظهر موسمية أسبوعية قوية مع اتجاه طويل المدى أدنى",
+          findings: [
+            "موسمية أسبوعية قوية مع انخفاضات منتظمة إلى شبه صفر في عطل نهاية الأسبوع (الجمعة/السبت)",
+            "لا يوجد اتجاه طويل المدى درامي، لكن زيادة طفيفة من منتصف 2023 إلى 2024",
+            "انخفاضات كبيرة خلال أغسطس كل عام بسبب عطل الصيف",
+            "فترات وجبات صفر ممتدة خلال رمضان عندما كانت الكافتيريا مغلقة فعلياً",
+            "السلسلة مستقرة نسبياً بجانب التأثيرات الموسمية"
+          ]
+        },
+        {
+          title: "أنماط أيام الأسبوع مقابل عطلة نهاية الأسبوع",
+          description: "تأثيرات واضحة ليوم الأسبوع ضمن نمط أسبوع عمل الأحد-الخميس في الجزائر",
+          findings: [
+            "الخميس له أعلى متوسط عدد وجبات (يوم ذروة الطلب)",
+            "الأحد يظهر طلباً فوق المتوسط رغم كونه أول يوم عمل",
+            "الاثنين يميل لأقل متوسط بين أيام العمل",
+            "الجمعة والسبت يظهران وجبات شبه صفر (عطلة نهاية أسبوع في الجزائر)",
+            "اجتماعات نهاية الأسبوع أو التقاليد تدفع ذروة حضور الخميس"
+          ]
+        },
+        {
+          title: "تحليل ارتباط الإشغال",
+          description: "ارتباط حضور المكتب مقابل الوجبات يكشف معدل تحويل 50-70% مع تغيرات يومية",
+          findings: [
+            "معامل ارتباط 0.61 بين عدد المكتب والوجبات",
+            "ذرى في أيام العمل (~500-600 موظف حاضر، ~300-400 وجبة مقدمة)",
+            "تقريباً 50-70% من الموظفين الحاضرين ينتهي بهم الأمر بتناول الطعام في الكافتيريا",
+            "معدل التحويل يتغير يومياً بناءً على العوامل السياقية",
+            "رسم التشتت يظهر اتجاهاً إيجابياً لكن تغيرات كبيرة حول خط الاتجاه"
+          ]
+        }
+      ]
+    },
+    keyStatistics: [
+      {
+        label: "قوة الارتباط",
+        description: "معامل ارتباط حضور المكتب مقابل طلب الوجبات"
+      },
+      {
+        label: "تأثير يوم الذروة",
+        description: "أعلى متوسط وجبات يومياً ضمن أسبوع العمل"
+      },
+      {
+        label: "تأثير الطقس",
+        description: "متوسط الوجبات في الأيام الممطرة مقابل الصافية"
+      },
+      {
+        label: "معدل التحويل",
+        description: "الموظفون الحاضرون الذين يتناولون الطعام في الكافتيريا"
+      },
+      {
+        label: "تغطية البيانات",
+        description: "بيانات تشغيلية مايو 2022 - ديسمبر 2024"
+      },
+      {
+        label: "معدل المكرر",
+        description: "معاملات وجبات متعددة لكل موظف يومياً"
+      },
+      {
+        label: "تأثير أغسطس",
+        description: "تقليل طلب فترة عطلة الصيف"
+      },
+      {
+        label: "نمط عطلة نهاية الأسبوع",
+        description: "عطلة نهاية الأسبوع الجزائرية تظهر طلباً شبه صفر"
+      }
+    ],
+    criticalPatterns: {
+      title: "اكتشاف الأنماط الحرجة",
+      insights: [
+        {
+          title: "هيمنة الموسمية الأسبوعية",
+          finding: "الخميس يبرز كيوم ذروة الطلب ضمن أسبوع عمل الأحد-الخميس، ربما بسبب اجتماعات نهاية الأسبوع أو تقليد وجود موظفين أكثر في الموقع",
+          implication: "تأثيرات قوية ليوم الأسبوع تستلزم خصائص قائمة على التقويم مع الخميس يتطلب قدرة تحضير محسنة",
+          category: "الأنماط الزمنية",
+          observation: "ذروة الخميس"
+        },
+        {
+          title: "إشغال المكتب كمحرك أساسي",
+          finding: "50-70% من الموظفين الحاضرين عادة يتناولون الطعام في الكافتيريا، ينشئون ارتباط (r=0.61) بين العدد اليومي وطلب الوجبات",
+          implication: "حضور المكتب يعمل كمتنبئ أساسي، لكن معدل التحويل يتغير يومياً يتطلب خصائص سياقية إضافية",
+          category: "رؤى سلوكية",
+          observation: "r = 0.61"
+        },
+        {
+          title: "تحولات سلوكية مدفوعة بالطقس",
+          finding: "الأيام الممطرة تظهر باستمرار استخدام كافتيريا أعلى (313 مقابل 307 وجبة متوسط)، حيث الموظفون أقل ميلاً لترك المبنى",
+          implication: "بيانات الطقس توفر إشارة مهمة لتعديلات الطلب اليومية، خاصة لتفضيل تناول الطعام الداخلي",
+          category: "العوامل البيئية",
+          observation: "313 مقابل 307 وجبة"
+        },
+        {
+          title: "تأثير العطلة الموسمية",
+          finding: "أغسطس يظهر استخدام كافتيريا أقل بكثير حيث يأخذ موظفون كثيرون عطل الصيف، ينتج عنه أشخاص أقل في المكتب",
+          implication: "خصائص التقويم يجب أن تراعي الأنماط الموسمية مع أغسطس مُعلم كفترة بطيئة معروفة",
+          category: "التغيرات الموسمية",
+          observation: "عطلة أغسطس"
+        },
+        {
+          title: "تأثير شعبية القائمة",
+          finding: "أطباق معينة مثل البيتزا أو الكسكس كان لها إقبال متوسط أعلى (مؤشر شعبية أعلى) مقارنة بأيام القائمة العادية",
+          implication: "مقاييس الشعبية كخصائص تتيح للنموذج التنبؤ بعدد أعلى في أيام الأطباق المحبوبة تاريخياً",
+          category: "تحليلات القائمة",
+          observation: "تغير الطبق"
+        },
+        {
+          title: "سلوك عطلة نهاية الأسبوع والعطل",
+          finding: "الجمعة-السبت (عطلة نهاية أسبوع الجزائر) والعطل العامة تظهر طلباً شبه صفر، تؤكد أنماط إغلاق الكافتيريا",
+          implication: "مؤشرات عطلة نهاية الأسبوع/العطل أساسية للتنبؤ الدقيق بخط الأساس لتوقعات وجبات شبه صفر",
+          category: "تأثيرات التقويم",
+          observation: "صفر وجبات في عطل نهاية الأسبوع"
+        },
+        {
+          title: "تأثيرات درجة الحرارة",
+          finding: "أيام حارة أو باردة جداً يمكن أن تثبط الخروج، مع تركيبات البرد + المطر تضخم تفضيل الكافتيريا",
+          implication: "درجة الحرارة كخاصية مستمرة تسمح للنموذج بتعلم تأثيرات غير خطية وتفاعلات طقسية",
+          category: "أنماط الطقس",
+          observation: "تأثير درجة الحرارة"
+        },
+        {
+          title: "تأثير تنوع القائمة",
+          finding: "خياران رئيسيان يومياً - خيارات متشابهة (كلاهما لحم أحمر) قد تجذب نفس المجموعة مقابل تنوع (لحم + نباتي) يجذب جمهوراً أوسع",
+          implication: "خصائص تنوع القائمة تلتقط ما إذا كانت العروض المتنوعة تزيد الجاذبية العامة والإقبال",
+          category: "استراتيجية القائمة",
+          observation: "تنوع القائمة"
+        },
+        {
+          title: "تمييز الأحداث الخاصة",
+          finding: "عندما كان كلا الطبقين الرئيسيين جذابين بشكل خاص أو قُدمت حلويات/وجبات أحداث خاصة، كانت هناك قفزات ملحوظة في المبيعات",
+                   implication: "الإقبال التاريخي يعمل كأفضل مؤشر لجاذبية القائمة، مما يتيح تنبؤات قائمة على الشعبية",
+          category: "الأحداث الخاصة",
+          observation: "قفزات الأحداث"
+        }
+      ],
+      labels: {
+        keyFinding: "الاكتشاف الرئيسي:",
+        strategicImplication: "الانعكاس الاستراتيجي:"
+      }
+    },
+    correlationAnalysis: {
+      title: "تحليل ارتباط الخصائص والتأثير",
+      correlationStrengthLabel: "قوة الارتباط:",
+      implementationImpactLabel: "تأثير التنفيذ:",
+      patterns: [
+        {
+          category: "تأثيرات التقويم والزمنية",
+          description: "دورية أسبوعية قوية مع عطل نهاية أسبوع الجمعة-السبت والعطل الإسلامية تتطلب معالجة خاصة في السياق التجاري الجزائري",
+          impact: "خصائص ثنائية لأيام عدم العمل أساسية، بالإضافة إلى كشف فترة رمضان ووضع علامة على عطلة أغسطس",
+          details: [
+            "نمط أسبوع عمل الأحد-الخميس مؤكد بصفر وجبات في الجمعة/السبت",
+            "العطل العامة (1 مايو، العيد) تتوافق مع عدد وجبات شبه صفر",
+            "فترات رمضان تظهر وجبات صفر تقريباً، إغلاق كافتيريا فعلياً",
+            "انخفاضات أواخر ديسمبر حول عيد الميلاد/رأس السنة رغم السياق الجزائري"
+          ]
+        },
+        {
+          category: "ديناميكيات حضور المكتب",
+          description: "العدد اليومي يعمل كأقوى متنبئ واحد مع ارتباط 0.61، لكن معدل التحويل يتذبذب بين 50-70%",
+          impact: "خاصية أساسية تتطلب تفاعلات طقس وقائمة وتقويم للدقة المثلى في تنبؤ التحويل",
+          details: [
+            "سجلات البطاقة توفر عدد سكان آكلين محتملين يومياً دقيق",
+            "ليس كل الموظفين الحاضرين يأكلون في الكافتيريا (بعضهم يجلب غداء/يخرج)",
+            "أحياناً وجبات أكثر من أشخاص فريدين (وجبات متعددة، زوار)",
+            "رسم التشتت يظهر اتجاهاً إيجابياً لكن تغيرات كبيرة حول خط الاتجاه"
+          ]
+        },
+        {
+          category: "شعبية وجاذبية القائمة",
+          description: "جاذبية خاصة بالطبق تدفع تغيرات إقبال كبيرة مع نقاط شعبية محسوبة كمتوسط وجبات عند تقديم الطبق",
+          impact: "مؤشرات شعبية مرمزة بالهدف تتيح تنبؤ عدد أعلى في أيام الأطباق المحبوبة تاريخياً",
+          details: [
+            "البيتزا والكسكس محددان كمفضلات جماهيرية مع مؤشرات شعبية أعلى",
+            "أيام القائمة العادية ترى عدد أقل قليلاً مقابل أطباق خاصة",
+            "تنوع القائمة يؤثر على الجاذبية (عروض متشابهة مقابل متنوعة)",
+            "حلويات خاصة أو وجبات أحداث تخلق قفزات مبيعات ملحوظة"
+          ]
+        },
+        {
+          category: "الطقس والبيئة",
+          description: "المطر يزيد استخدام الكافتيريا (313 مقابل 307 متوسط) حيث الموظفون أقل ميلاً لترك المبنى للغداء",
+          impact: "خصائص الطقس توفر إشارات تعديل يومية مهمة، خاصة مؤشرات المطر وتفاعلات درجة الحرارة",
+          details: [
+            "الأيام الممطرة تظهر زيادة متواضعة لكن ثابتة +6 وجبات",
+            "تأثيرات درجة الحرارة مشتبه بها لكن ليست قوية وحيدة التتابع وحدها",
+            "تركيبات البرد + المطر تضخم تفضيل تناول الطعام الداخلي محتملاً",
+            "غطاء السحب والرياح مضمنان لكن تأثيرات طفيفة متوقعة"
+          ]
+        },
+        {
+          category: "الأنماط الموسمية والعطل",
+          description: "ما وراء الدورات الأسبوعية، الأنماط الموسمية تظهر تأثير عطلة أغسطس وتمييز تاريخ خاص للتنبؤ الدقيق بخط الأساس",
+          impact: "خصائص الشهر/الموسم أساسية، خاصة وضع علامة على أغسطس وكشف العطل العامة لتوقعات شبه صفر",
+          details: [
+            "أغسطس يظهر باستمرار استخدام كافتيريا أقل بكثير (عطلة صيف)",
+            "أواخر ديسمبر يظهر انخفاضات حول فترة عيد الميلاد/رأس السنة",
+            "فترات رمضان تتطلب كشف امتداد خاص (إغلاق كافتيريا فعلياً)",
+            "وضع علامة على العطل العامة يمنع التباس النموذج حول أيام الطلب المنخفض"
+          ]
+        },
+        {
+          category: "السلاسل الزمنية وخصائص التأخير",
+          description: "أنماط عدد الوجبات التاريخية من خلال خصائص التأخير (lag7 للموسمية الأسبوعية) ومتوسطات متداولة لتنعيم الاتجاه",
+          impact: "خصائص التأخير تحول تنبؤ السلاسل الزمنية إلى تعلم مشرف مع سياق تاريخ حديث",
+          details: [
+            "Lag7 (نفس اليوم الأسبوع الماضي) يلتقط الموسمية الأسبوعية مباشرة",
+            "متوسطات متحركة 7 و14 يوم توفر قيم اتجاه منعمة",
+            "انحراف معياري متداول يقيس تذبذب الطلب الحديث",
+            "نهج تنبؤ تسلسلي يمنع تسرب البيانات المستقبلية"
+          ]
+        }
+      ]
+    },
+    summary: {
+      title: "ملخص نتائج EDA",
+      description: "تحليلنا الاستكشافي أكد أن أنماط التاريخ وإشغال المكتب واختيار القائمة والظروف الجوية هي المحركات الأساسية لطلب الكافتيريا، مما يشكل الأساس لاستراتيجية هندسة خصائصنا.",
+      driverCategories: [
+        {
+          title: "أنماط أيام الأسبوع",
+          subtitle: "تضع خط أساس عام"
+        },
+        {
+          title: "إشغال المكتب",
+          subtitle: "يدفع الحجم الرئيسي"
+        },
+        {
+          title: "اختيار القائمة",
+          subtitle: "تغيرات يوم إلى يوم"
+        },
+        {
+          title: "تأثيرات الطقس",
+          subtitle: "تعديل سلوكي"
+        }
+      ],
+      conclusion: "هذه الرؤى أطلعت مباشرة نهج هندسة خصائصنا، مما يتيح لتجميع تعزيز التدرج التقاط التأثيرات المهمة: من في العمل، وما للغداء، وكيف الطقس – كل محركات رئيسية لقرارات الغداء بالإضافة إلى الإيقاع الأسبوعي الفطري لمكان العمل."
+    }
+  },
+  modelShowcase: {
+    title: {
+      main: "هندسة النموذج والخصائص"
+    },
+    description: "نهج تعزيز تدرج تجميعي مع هندسة خصائص شاملة لأداء تنبؤ أمثل",
+    navigation: {
+      tabs: [
+        { label: "هندسة النموذج" },
+        { label: "هندسة الخصائص" },
+        { label: "استراتيجية التحقق" },
+        { label: "مصادر البيانات" },
+        { label: "التأثير التجاري" }
+      ]
+    },
+    architecture: {
+      title: "نماذج تعزيز التدرج التجميعية",
+      models: [
+        {
+          name: "LightGBM",
+          description: "نموذج تعزيز تدرج أساسي محسن للسرعة والدقة مع معالجة الخصائص الفئوية",
+          advantages: [
+            "تدريب واستنتاج سريع (~10x أسرع من XGBoost)",
+            "يتعامل مع الخصائص الفئوية طبيعياً بدون ترميز",
+            "كفء في الذاكرة مع نمو شجرة حكيم بالورقة",
+            "إيقاف مبكر مدمج وتحقق متقاطع",
+            "أداء ممتاز على البيانات الجدولية",
+            "قوي ضد الإفراط في التكيف مع تنظيم مناسب"
+          ],
+          role: "النموذج الأساسي",
+          technicalDetails: [
+            "تحسين معاملات فائقة Optuna (60 تجربة)",
+            "معدل التعلم: 0.095 للاستقرار",
+            "عدد الأوراق: 512 لتعقد النموذج",
+            "كسر الخصائص: 0.616 للتنظيم",
+            "كسر التجميع: 0.900 لتقليل التباين",
+            "تنظيم L2: 2.12 لمنع الإفراط في التكيف"
+          ],
+          useCases: [
+            "محرك تنبؤ أساسي للتنبؤات اليومية",
+            "استنتاج فوري للتخطيط التشغيلي",
+            "تحليل أهمية الخصائص لرؤى الأعمال",
+            "نموذج خط أساس لاستراتيجيات التجميع"
+          ]
+        },
+        {
+          name: "XGBoost",
+          description: "نموذج تجميع ثانوي لمقارنة الأداء والتحقق واستراتيجيات المزج المحتملة",
+          advantages: [
+            "قوي ضد الإفراط في التكيف مع تنظيم قوي",
+            "استقرار ممتاز عبر المنصات",
+            "سجل مثبت في المسابقات",
+            "مقاييس أهمية خصائص مدمجة",
+            "معالجة قوية للقيم المفقودة",
+            "خط أساس ثابت لتعزيز التدرج"
+          ],
+          role: "مكون التجميع",
+          technicalDetails: [
+            "عمق أقصى: 6 لتعقد مُتحكم",
+            "معدل التعلم: 0.1 مع إيقاف مبكر",
+            "عينة فرعية: 0.8 لتقليل التباين",
+            "عينة فرعية عمودية: 0.8 لعشوائية الخصائص",
+            "غاما: 0.1 لأدنى خسارة تقسيم",
+            "ضبط تنظيم ألفا/لامدا"
+          ],
+          useCases: [
+            "تحقق النموذج وخط أساس المقارنة",
+            "مزج تجميعي لدقة محسنة",
+            "تحقق اختيار الخصائص",
+            "نموذج احتياطي لمقاومة الإنتاج"
+          ]
+        }
+      ],
+      performance: {
+        crossValidationScore: "نقاط التحقق المتقاطع"
+      },
+      sections: {
+        keyAdvantages: "المزايا الرئيسية",
+        technicalConfiguration: "التكوين التقني",
+        useCases: "حالات الاستخدام"
+      },
+      rationale: {
+        title: "مبرر اختيار النموذج",
+        whyGradientBoosting: {
+          title: "لماذا تعزيز التدرج؟",
+          points: [
+            "أداء ممتاز على البيانات الجدولية مع أنواع خصائص مختلطة",
+            "يتعامل مع الخصائص الفئوية بدون معالجة مسبقة واسعة",
+            "قوي ضد القيم الشاذة والمفقودة",
+            "أهمية خصائص مدمجة للقابلية للتفسير"
+          ]
+        },
+        ensembleStrategy: {
+          title: "استراتيجية التجميع",
+          points: [
+            "LightGBM كنموذج أساسي للسرعة والدقة",
+            "XGBoost للتحقق والمزج المحتمل",
+            "تحسين معاملات فائقة ثابت عبر النماذج",
+            "مرونة نشر إنتاج وخيارات احتياطية"
+          ]
+        },
+        codeSnippet: {
+          title: "خط أنابيب تدريب النموذج"
+        }
+      }
+    },
+    features: {
+      title: "استراتيجية هندسة الخصائص",
+      categories: [
+        {
+          category: "التقويم والزمنية",
+          features: [
+            "ترميز يوم الأسبوع (0-6 دوري)",
+            "علامات عطلة نهاية الأسبوع/العطل (مؤشرات ثنائية)",
+            "مؤشرات الشهر/الموسم (1-12 دوري)",
+            "علامات الأحداث الخاصة (رمضان، فترات العطل)",
+            "قرب العطل العامة (أيام قبل/بعد)",
+            "محاذاة التقويم الأكاديمي",
+            "مؤشرات أيام العمل"
+          ],
+          description: "يلتقط أنماط منهجية قائمة على الوقت في استخدام الكافتيريا مع تأثيرات أسبوعية وموسمية قوية",
+          technicalNotes: [
+            "ترميز دوري للخصائص الزمنية المستمرة",
+            "علامات ثنائية لمؤشرات الوقت الفئوية",
+            "تأثيرات قرب العطل (نافذة ±3 أيام)",
+            "معالجة فترة رمضان مع ترميز خاص",
+            "تكامل التقويم الأكاديمي لسياق المؤسسة التعليمية"
+          ]
+        },
+        {
+          category: "مقاييس الإشغال",
+          features: [
+            "العدد اليومي (nb_personnes)",
+            "متوسطات متداولة 7 أيام",
+            "توزيعات مستوى القسم",
+            "مؤشرات اتجاه الحضور",
+            "حسابات معدل الإشغال",
+            "أنماط الحضور التاريخية",
+            "استخدام سعة المبنى"
+          ],
+          description: "محرك الطلب الأساسي - يرتبط مباشرة بالعملاء المحتملين والسعة التشغيلية",
+          technicalNotes: [
+            "تحليل مستوى القسم معتبر لكن غير منفذ بسبب قيود البيانات",
+            "المتوسطات المتداولة تنعم التذبذب اليومي",
+            "معدل الإشغال = nb_personnes / سعة_المبنى",
+            "خصائص الاتجاه تلتقط زخم في أنماط الحضور",
+            "استيفاء البيانات المفقودة للسجلات غير المكتملة"
+          ]
+        },
+        {
+          category: "الطلب التاريخي",
+          features: [
+            "خصائص التأخير (1، 7، 14 يوم)",
+            "متوسطات متحركة (3، 7، 14 يوم)",
+            "مقاييس التذبذب المتداولة",
+            "اتجاهات التنعيم الأسي",
+            "مكونات التحليل الموسمي",
+            "مؤشرات زخم الطلب",
+            "إشارات كشف نقطة التغيير"
+          ],
+          description: "أنماط السلاسل الزمنية وتأثيرات الزخم والعلاقات الانحدارية التلقائية في طلب الوجبات",
+          technicalNotes: [
+            "نهج تنبؤ تسلسلي يمنع تسرب البيانات",
+            "تحقق نافذة متوسعة للسلامة الزمنية",
+            "اختيار خاصية التأخير قائم على تحليل ACF/PACF",
+            "إحصائيات متداولة محسوبة مع متطلبات نافذة أدنى",
+            "مقاييس التذبذب تساعد في التقاط عدم يقين الطلب"
+          ]
+        },
+        {
+          category: "ذكاء القائمة",
+          features: [
+            "مؤشرات شعبية الأطباق (note_plat_principal)",
+            "مقاييس تنوع القائمة (nb_plats_menu)",
+            "تجميعات الفئات والتصنيفات",
+            "ترميز مستهدف لفئات القائمة",
+            "أداء الأطباق التاريخي",
+            "مؤشرات جدة القائمة",
+            "ملائمات التفضيل الغذائي"
+          ],
+          description: "يلتقط تأثير تفضيل الطعام على الحضور وتأثيرات رضا العملاء",
+          technicalNotes: [
+            "ترميز مستهدف مع تحقق متقاطع لمنع الإفراط في التكيف",
+            "تنوع القائمة محسوب كأطباق فريدة يومياً",
+            "تطبيع تقييم الأطباق ومعالجة القيم المفقودة",
+            "ترميز الفئات لأنواع المطابخ والمتطلبات الغذائية",
+            "مؤشرات الشعبية محسوبة من التقييمات والمبيعات التاريخية"
+          ]
+        },
+        {
+          category: "الطقس والبيئة",
+          features: [
+            "تغيرات درجة الحرارة (أدنى/أعلى يومي)",
+            "علامات الهطول والشدة",
+            "حدود تفاعل الطقس",
+            "تعديلات درجة الحرارة الموسمية",
+            "مؤشرات راحة الطقس",
+            "مؤشرات الطقس القاسي",
+            "تمييز أنماط المناخ"
+          ],
+          description: "عوامل بيئية تؤثر على قرارات تناول الطعام وأنماط تفضيل خارجي/داخلي",
+          technicalNotes: [
+            "بيانات الطقس مصدرها APIs خارجية مع معالجة القيم المفقودة",
+            "تجميع درجة الحرارة للتأثيرات غير الخطية",
+            "حدود التفاعل بين الطقس والموسم",
+            "مؤشر الراحة يدمج درجة الحرارة والرطوبة والهطول",
+            "علامات الطقس القاسي لكشف القيم الشاذة"
+          ]
+        }
+      ],
+      sections: {
+        featureComponents: "مكونات الخصائص",
+        technicalImplementation: "التنفيذ التقني"
+      },
+      pipeline: {
+        title: "خط أنابيب هندسة الخصائص",
+        steps: [
+          {
+            step: "1. معالجة البيانات المسبقة",
+            description: "تنظيف وتحقق وتوحيد البيانات الخام",
+            details: ["إزالة المكرر", "معالجة القيم المفقودة", "توحيد التاريخ", "كشف القيم الشاذة"]
+          },
+          {
+            step: "2. الخصائص الزمنية",
+            description: "استخراج الأنماط والدورات القائمة على الوقت",
+            details: ["ترميز دوري", "علامات العطل", "مؤشرات موسمية", "أحداث خاصة"]
+          },
+          {
+            step: "3. خصائص التأخير والمتداولة",
+            description: "إنشاء أنماط الطلب التاريخية",
+            details: ["خصائص التأخير", "متوسطات متحركة", "مقاييس التذبذب", "مؤشرات الاتجاه"]
+          },
+          {
+            step: "4. اختيار الخصائص",
+            description: "تحسين مجموعة الخصائص لأداء النموذج",
+            details: ["ترتيب الأهمية", "تحليل الارتباط", "تحقق متقاطع", "اختبار الاستقرار"]
+          }
+        ]
+      }
+    },
+    validation: {
+      title: "استراتيجية التحقق المتقاطع للسلاسل الزمنية",
+      overview: {
+        title: "استراتيجية التحقق إلى الأمام",
+        description: "توظيف تحقق متقاطع واعي للوقت لضمان تعميم النموذج للتواريخ المستقبلية. لا خلط عشوائي - انقسامات زمنية صارمة لمنع تسرب البيانات والحفاظ على السلامة الزمنية الأساسية لنشر الإنتاج.",
+        cvFolds: "طيات CV"
+      },
+      processSteps: {
+        title: "خطوات عملية التحقق",
+        steps: [
+          {
+            step: "تحقق متقاطع نافذة متوسعة",
+            description: "تحقق واعي للوقت مع انقسامات مرتبة زمنياً لمنع تسرب البيانات",
+            rationale: "يضمن تعميم النموذج للتواريخ المستقبلية بدون وصول لمعلومات مستقبلية",
+            outcome: "CV من 5 طيات مع RMSE ثابت ~21.87 ± 0.5 عبر جميع الطيات"
+          },
+          {
+            step: "اختبار التنبؤ التسلسلي",
+            description: "محاكاة تنبؤ إلى الأمام فقط تحاكي ظروف النشر في العالم الحقيقي",
+            rationale: "يحقق أداء النموذج تحت قيود تشغيلية بدون وصول بيانات مستقبلية",
+            outcome: "يحافظ على الدقة في وضع التنبؤ التسلسلي مع تدهور أدنى"
+          },
+          {
+            step: "تحليل البقايا وكشف التحيز",
+            description: "فحص منهجي لأخطاء التنبؤ عبر ظروف وفترات مختلفة",
+            rationale: "يحدد التحيزات المنهجية المحتملة أو الأنماط في فشل النموذج",
+            outcome: "لا تحيز كبير مكتشف عبر المواسم وأيام الأسبوع أو مستويات الطلب"
+          },
+          {
+            step: "استقرار أهمية الخصائص",
+            description: "تحليل تحقق متقاطع لترتيبات أهمية الخصائص لقابلية تفسير النموذج",
+            rationale: "يضمن أنماط مساهمة خصائص ثابتة عبر فترات زمنية مختلفة",
+            outcome: "تسلسل هرمي أهمية مستقر: الإشغال > الزمني > التاريخي > القائمة > الطقس"
+          },
+          {
+            step: "تحقق خارج العينة",
+            description: "اختبار احتجاز على أشهر نهائية من البيانات لم تُرى أبداً أثناء تطوير النموذج",
+            rationale: "اختبار نهائي لتعميم النموذج لفترات مستقبلية غير مرئية تماماً",
+            outcome: "معدل خطأ 5-7% محافظ عليه على البيانات المحتجزة، يؤكد جاهزية الإنتاج"
+          }
+        ],
+        stepHeaders: {
+          description: "الوصف",
+          rationale: "المبرر",
+          outcome: "النتيجة"
+        }
+      },
+      results: {
+        title: "نتائج التحقق المتقاطع",
+        metrics: [
+          { label: "أفضل RMSE CV" },
+          { label: "الانحراف المعياري" },
+          { label: "معدل الخطأ" }
+        ],
+        codeSnippet: {
+          title: "تنفيذ التحقق المتقاطع للسلاسل الزمنية"
+        }
+      }
+    },
+    data: {
+      title: "مصادر البيانات وخط أنابيب المعالجة",
+      sources: [
+        {
+          name: "kaggle_cantine.csv",
+          description: "مجموعة البيانات الأساسية تحتوي على 2+ سنة من سجلات عدد الوجبات اليومية مع خصائص زمنية وسياقية",
+          size: "729 يوم × 12 خاصية",
+          keyFeatures: [
+            "nb_vendus (الهدف): عدد الوجبات اليومية",
+            "date: سجلات يومية تسلسلية",
+            "jour_semaine: مؤشرات يوم الأسبوع",
+            "mois: أنماط الموسمية الشهرية",
+            "nb_jours_feries: تأثيرات قرب العطل",
+            "nb_personnes: بيانات العدد اليومي",
+            "nb_plats_menu: مقياس تنوع القائمة",
+            "note_plat_principal: تقييم الطبق الرئيسي",
+            "temperature: ظروف الطقس",
+            "commentaire: سياق نوعي"
+          ],
+          cleaningSteps: [
+            "كشف وإزالة المكرر (39 صف مكرر محدد)",
+            "إسناد القيم المفقودة لبيانات الطقس والتقييم",
+            "توحيد وتحقق تنسيق التاريخ",
+            "تحليل القيم الشاذة ومعالجة عدد الوجبات القاسية",
+            "تحويل نوع الخصائص وتحضير الترميز"
+          ],
+          challenges: [
+            "حجم العينة المحدود يتطلب استراتيجية تحقق حذرة",
+            "توزيع غير متوازن عبر المواسم والأحداث",
+            "بيانات طقس مفقودة لبعض الفترات التاريخية",
+            "تعليقات نوعية تتطلب معالجة نص",
+            "منع تسرب البيانات في النمذجة الزمنية"
+          ]
+        }
+      ],
+      sections: {
+        keyFeatures: "الخصائص الرئيسية",
+        dataCleaningSteps: "خطوات تنظيف البيانات",
+        dataChallenges: "تحديات البيانات"
+      },
+      quality: {
+        title: "تقييم جودة البيانات",
+        metrics: [
+          {
+            metric: "اكتمال البيانات",
+            description: "قيم غير مفقودة عبر جميع الخصائص"
+          },
+          {
+            metric: "التغطية الزمنية",
+            description: "2+ سنة من السجلات اليومية المستمرة"
+          },
+          {
+            metric: "معدل المكرر",
+            description: "39 سجل مكرر محدد ومُزال"
+          },
+          {
+            metric: "تنوع الخصائص",
+            description: "متغيرات زمنية وعددية وفئوية"
+          }
+        ]
+      },
+      processingPipeline: {
+        title: "خط أنابيب معالجة البيانات"
+      }
+    },
+    business: {
+      title: "التأثير التجاري والقيمة التشغيلية",
+      impacts: [
+        {
+          metric: "تقليل هدر الطعام",
+          description: "تحضير الوجبات المحسن يقلل الإنتاج المفرط"
+        },
+        {
+          metric: "توفير التكاليف",
+          description: "هدر مقلل وإدارة مخزون محسنة"
+        },
+        {
+          metric: "جودة الخدمة",
+          description: "توفر وجبات محسن ونفاد مقلل"
+        },
+        {
+          metric: "كفاءة التخطيط",
+          description: "التنبؤ الآلي يقلل وقت التخطيط اليدوي"
+        }
+      ],
+      implementation: {
+        title: "استراتيجية التنفيذ والنشر",
+        deployment: {
+          title: "نشر الإنتاج",
+          points: [
+            "خط أنابيب تنبؤ يومي آلي",
+            "مراقبة النموذج الفورية والإنذار",
+            "إطار اختبار A/B لتحديثات النموذج",
+            "العودة للمتوسطات التاريخية أثناء الأعطال",
+            "التكامل مع أنظمة إدارة الكافتيريا الموجودة"
+          ]
+        },
+        benefits: {
+          title: "الفوائد التشغيلية",
+          points: [
+            "هدر طعام مقلل من خلال تنبؤ طلب دقيق",
+            "رضا عملاء محسن عبر توفر وجبات أفضل",
+            "توفير تكاليف من شراء مكونات محسن",
+            "تخطيط موظفين وتخصيص موارد محسن",
+            "اتخاذ قرارات مدفوع بالبيانات لتحسين القائمة"
+          ]
+        }
+      },
+      roi: {
+        title: "تحليل العائد على الاستثمار",
+        categories: [
+          {
+            category: "توفير التكاليف",
+            items: ["تقليل هدر الطعام: €8K/سنة", "تحسين العمل: €3K/سنة", "كفاءة المخزون: €1K/سنة"],
+            total: "€12K/سنة"
+          },
+          {
+            category: "تكلفة التنفيذ",
+            items: ["وقت التطوير: €2K", "البنية التحتية: €500", "الصيانة: €1K/سنة"],
+            total: "€3.5K الإجمالي"
+          },
+          {
+            category: "الفائدة الصافية",
+            items: ["الوفورات السنوية: €12K", "تكلفة التنفيذ: €3.5K", "فترة الاسترداد: 3.5 أشهر"],
+            total: "340% عائد على الاستثمار"
+          }
+        ],
+        enhancements: {
+          title: "فرص التحسين المستقبلية",
+          technical: {
+            title: "التحسينات التقنية",
+            points: [
+              "إعادة تدريب النموذج الفوري مع بيانات التدفق",
+              "نماذج التعلم العميق لتمييز الأنماط المعقدة",
+              "تنبؤ متعدد المواقع مع التعلم بالنقل",
+              "تكامل مصادر البيانات الخارجية (الأحداث، APIs الطقس)"
+            ]
+          },
+          business: {
+            title: "التوسعات التجارية",
+            points: [
+              "تحسين القائمة ونظام التوصية",
+              "تسعير ديناميكي قائم على تنبؤات الطلب",
+              "تحسين علاقات الموردين",
+              "نمذجة تفضيل ورضا العملاء"
+            ]
+          }
+        }
+      }
+    }
+  },
+  codeExamples: {
+    title: {
+      main: "تنفيذ الكود الإنتاجي"
+    },
+    description: "تنفيذ Python على مستوى المؤسسة لنظام التنبؤ بوجبات كافتيريا بي إن بي باريبا، يتميز بمعالجة بيانات شاملة وخطوط أنابيب ML متقدمة وكود نشر جاهز للإنتاج",
+    navigation: {
+      categories: [
+        { label: "معالجة البيانات" },
+        { label: "هندسة الخصائص" },
+        { label: "تدريب النموذج" },
+        { label: "خط أنابيب التنبؤ" }
+      ]
+    },
+    examples: [
+      {
+        title: "data_integration.py",
+        description: "دمج مصادر بيانات متعددة مع محاذاة التاريخ ومعالجة القيم المفقودة"
+      },
+      {
+        title: "feature_engineering.py",
+        description: "إنشاء خصائص التأخير ومؤشرات الشعبية والخصائص القائمة على التقويم"
+      },
+      {
+        title: "model_training.py",
+        description: "تحسين المعاملات الفائقة وتدريب التجميع مع تحقق السلاسل الزمنية"
+      },
+      {
+        title: "prediction_pipeline.py",
+        description: "توليد التنبؤات مع تحديثات التأخير التكرارية للتواريخ التسلسلية"
+      }
+    ],
+    implementation: {
+      title: "أبرز التنفيذ",
+      highlights: [
+        {
+          title: "خط أنابيب البيانات",
+          description: "ETL قوي مع تحقق شامل ومعالجة أخطاء"
+        },
+        {
+          title: "أمان السلاسل الزمنية",
+          description: "صفر تسرب بيانات مع هندسة خصائص زمنية مناسبة"
+        },
+        {
+          title: "ضبط المعاملات الفائقة",
+          description: "تحسين بايزي مع 60 تجربة للأداء الأمثل"
+        },
+        {
+          title: "التحقق المتقاطع",
+          description: "انقسام واعي للوقت لضمان تقديرات أداء واقعية"
+        },
+        {
+          title: "طرق التجميع",
+          description: "متوسط نموذج 5-طيات للتعميم المحسن"
+        },
+        {
+          title: "جاهز للإنتاج",
+          description: "معالجة أخطاء وتسجيل ودعم التنبؤ التكراري"
+        }
+      ]
+    },
+    statistics: [
+      { label: "أسطر الكود" },
+      { label: "خصائص مهندسة" },
+      { label: "طيات تحقق النموذج" },
+      { label: "تغطية الكود" }
+    ]
+  },
+  resultsMetrics: {
+    title: {
+      main: "نتائج الأداء"
+    },
+    description: "مقاييس تقييم شاملة تثبت دقة وموثوقية النموذج لنشر الإنتاج",
+    keyMetrics: [
+      {
+        title: "نقاط RMSE",
+        description: "الجذر التربيعي لمتوسط الخطأ التربيعي على التحقق المتقاطع",
+        details: [
+          "RMSE نهائي 21.87 وجبة محقق من خلال تجميع RandomForest + XGBoost",
+          "تحسين المعاملات الفائقة باستخدام إطار Optuna مع 100+ تجربة",
+          "يمثل خطأ تنبؤ متوسط ~22 وجبة يومياً"
+        ]
+      },
+      {
+        title: "معدل الدقة",
+        description: "التنبؤات ضمن النطاق المقبول (±30 وجبة)",
+        details: [
+          "94.5% من التنبؤات ضمن تحمل ±30 وجبة",
+          "يتجاوز متطلب الأعمال 90% دقة للتخطيط التشغيلي",
+          "يتيح قرارات طلب طعام وجدولة موظفين موثوقة"
+        ]
+      },
+      {
+        title: "عدد الخصائص",
+        description: "خصائص مهندسة من 5 مصادر بيانات",
+        details: [
+          "60+ خاصية مهندسة من بيانات وجبات تاريخية وعوامل خارجية",
+          "أنماط طقس وأحداث تقويم وجداول موظفين وإشغال مبنى",
+          "اختيار خصائص آلي باستخدام المعلومات المتبادلة وتحليل الارتباط"
+        ]
+      },
+      {
+        title: "استقرار النموذج",
+        description: "الانحراف المعياري عبر طيات CV",
+        details: [
+          "تباين منخفض (±0.5) عبر تحقق متقاطع 5-طيات",
+          "يضمن موثوقية النموذج والتعميم للبيانات غير المرئية",
+          "أداء ثابت عبر فترات زمنية ومواسم مختلفة"
+        ]
+      },
+      {
+        title: "وقت التدريب",
+        description: "تدريب نموذج كامل مع ضبط المعاملات الفائقة",
+        details: [
+          "خط أنابيب تدريب محسن مع إيقاف مبكر ومعالجة متوازية",
+          "يقلل وقت التدريب بـ 65% مع الحفاظ على الدقة",
+          "يتيح إعادة تدريب النموذج اليومية لنشر الإنتاج"
+        ]
+      },
+      {
+        title: "تغطية البيانات",
+        description: "بيانات تاريخية تمتد عبر مواسم وأحداث متعددة",
+        details: [
+          "18 شهر من بيانات استهلاك وجبات شاملة",
+          "يشمل أنماط صيف/شتاء وعطل ومؤتمرات وأحداث خاصة",
+          "يغطي 450+ يوم فريد مع توفر خصائص كامل"
+        ]
+      }
+    ],
+    performanceAnalysis: {
+      title: "تحليل الأداء المفصل",
+      tableHeaders: {
+        metric: "المقياس",
+        training: "التدريب",
+        validation: "التحقق",
+        improvement: "التحسن"
+      },
+      metrics: [
+        {
+          metric: "متوسط الخطأ المطلق",
+          improvement: "مقابل خط الأساس: -45%",
+          description: "الفرق المطلق المتوسط بين عدد الوجبات المتنبأ والفعلي"
+        },
+        {
+          metric: "نقاط R²",
+          improvement: "ارتباط قوي",
+          description: "معامل التحديد يقيس قوة التفسير للنموذج"
+        },
+        {
+          metric: "الخطأ الأقصى",
+          improvement: "معالجة القيم الشاذة",
+          description: "أقصى انحراف في أي تنبؤ واحد عبر مجموعة التحقق"
+        },
+        {
+          metric: "نقاط التحقق المتقاطع",
+          improvement: "أداء ثابت",
+          description: "متوسط نقاط R² عبر انقسامات تحقق متقاطع 5-طيات"
+        }
+      ]
+    },
+    businessImpact: {
+      title: "إسقاط التأثير التجاري",
+      impacts: [
+        { label: "تقليل مقدر في هدر الطعام" },
+        { label: "معدل رضا الموظفين (توفر الوجبات)" },
+        { label: "إمكانية توفير التكاليف السنوية" }
+      ],
+      conclusion: "التنبؤ الدقيق يتيح تخصيص موارد أمثل ويقلل الهدر ويضمن توفر وجبات ثابت لجميع الموظفين"
+    }
+  },
+  technologyStack: {
+    title: {
+      main: "المكدس التقني"
+    },
+    description: "أدوات وأطر علم البيانات الحديثة تشغل حل التنبؤ بوجبات كافتيريا بي إن بي باريبا بدقة 94.5% وتنبؤات يومية آلية",
+    categories: [
+      {
+        title: "علم البيانات والتعلم الآلي",
+        technologies: [
+          {
+            name: "Python",
+            category: "اللغة الأساسية",
+            description: "لغة البرمجة الأساسية لخط أنابيب علم البيانات",
+            purpose: "معالجة البيانات والنمذجة والتحليل",
+            details: [
+              "Python 3.8+ مع مكتبات علم البيانات المتخصصة",
+              "يتعامل مع مجموعة البيانات التاريخية 18 شهر لكافتيريا بي إن بي باريبا",
+              "ينفذ خط أنابيب هندسة خصائص آلي",
+              "يدعم النمذجة التجميعية مع RandomForest وXGBoost"
+            ]
+          },
+          {
+            name: "LightGBM",
+            category: "إطار التعلم الآلي",
+            description: "إطار تعزيز التدرج محسن للكفاءة",
+            purpose: "النموذج الأساسي لتنبؤ عدد الوجبات",
+            details: [
+              "يحقق RMSE قدره 21.87 وجبة مع تحسين المعاملات الفائقة",
+              "يتعامل مع 60+ خاصية مهندسة من مصادر بيانات متعددة",
+              "وقت تدريب سريع (4.2 دقيقة) يتيح إعادة التدريب اليومية",
+              "أداء قوي عبر الأنماط الموسمية والأحداث"
+            ]
+          },
+          {
+            name: "XGBoost",
+            category: "إطار التعلم الآلي",
+            description: "تعزيز التدرج القاسي للنمذجة التجميعية",
+            purpose: "النموذج الثانوي للتنبؤات التجميعية",
+            details: [
+              "يكمل LightGBM في النهج التجميعي",
+              "يوفر تنبؤات متنوعة لدقة محسنة",
+              "معالجة ممتازة للقيم المفقودة والشاذة",
+              "نقاط تحقق متقاطع 0.832 عبر 5 طيات"
+            ]
+          },
+          {
+            name: "Optuna",
+            category: "التحسين",
+            description: "إطار تحسين المعاملات الفائقة الآلي",
+            purpose: "ضبط المعاملات الفائقة للنموذج",
+            details: [
+              "100+ تجربة لاختيار المعاملات الفائقة الأمثل",
+              "مقدر Parzen المنظم كشجرة للبحث الكفء",
+              "تقليم آلي للتجارب غير المُبشرة",
+              "يقلل جهد الضبط اليدوي بـ 90%"
+            ]
+          }
+        ]
+      },
+      {
+        title: "معالجة البيانات",
+        technologies: [
+          {
+            name: "Pandas",
+            category: "معالجة البيانات",
+            description: "مكتبة هياكل بيانات وتحليل قوية",
+            purpose: "تنظيف ودمج وتحويل البيانات",
+            details: [
+              "يعالج 450+ يوم من بيانات استهلاك الوجبات",
+              "يدمج البيانات من 5 مصادر مختلفة (وجبات، طقس، تقويم، موظفين، إشغال)",
+              "يتعامل مع القيم المفقودة ومشاكل جودة البيانات",
+              "ينشئ خصائص قائمة على الوقت وإحصائيات متداولة"
+            ]
+          },
+          {
+            name: "NumPy",
+            category: "الحوسبة العددية",
+            description: "حزمة أساسية للحوسبة العلمية",
+            purpose: "عمليات المصفوفات والوظائف الرياضية",
+            details: [
+              "حسابات عددية كفؤة لهندسة الخصائص",
+              "عمليات متجهة لتحسين الأداء",
+              "حسابات إحصائية لتحليل البيانات",
+              "عمليات مصفوفة كفؤة في الذاكرة على مجموعات البيانات الكبيرة"
+            ]
+          },
+          {
+            name: "Scikit-learn",
+            category: "أدوات التعلم الآلي",
+            description: "مكتبة التعلم الآلي مع مقاييس التقييم",
+            purpose: "التحقق المتقاطع ومقاييس الأداء",
+            details: [
+              "تحقق متقاطع 5-طيات لتقييم النموذج",
+              "اختيار الخصائص باستخدام المعلومات المتبادلة",
+              "StandardScaler لتطبيع الخصائص",
+              "مقاييس شاملة: RMSE، MAE، R²، الخطأ الأقصى"
+            ]
+          }
+        ]
+      },
+      {
+        title: "أدوات التطوير",
+        technologies: [
+          {
+            name: "Jupyter Notebook",
+            category: "بيئة التطوير",
+            description: "منصة تطوير وأولية تفاعلية",
+            purpose: "التحليل الاستكشافي للبيانات وتطوير النموذج",
+            details: [
+              "استكشاف تفاعلي لأنماط بيانات وجبات بي إن بي باريبا",
+              "تصور الاتجاهات الموسمية وأنماط الاستهلاك",
+              "أولية سريعة لنهج هندسة الخصائص",
+              "توثيق عملية تطوير النموذج"
+            ]
+          },
+          {
+            name: "Kaggle Kernels",
+            category: "منصة السحابة",
+            description: "بيئة علم البيانات القائمة على السحابة",
+            purpose: "تدريب النموذج وتقديم المسابقة",
+            details: [
+              "تنفيذ قائم على السحابة مع تسريع GPU",
+              "التحكم في الإصدار والتجارب القابلة للتكرار",
+              "بيئة تطوير تعاونية",
+              "الوصول لمجموعات البيانات الخارجية وAPIs"
+            ]
+          },
+          {
+            name: "Git & GitHub",
+            category: "التحكم في الإصدار",
+            description: "إدارة الكود المصدري والتعاون",
+            purpose: "إصدار الكود والتعاون الجماعي",
+            details: [
+              "تتبع تكرارات النموذج وتحسينات الأداء",
+              "التطوير التعاوني مع تاريخ الإصدارات",
+              "سير عمل تطوير الخصائص القائم على الفروع",
+              "خطوط أنابيب الاختبار والنشر الآلية"
+            ]
+          }
+        ]
+      }
+    ],
+    architecture: {
+      title: "هندسة نظام التنبؤ بالوجبات بي إن بي باريبا",
+      components: [
+        {
+          component: "استيعاب البيانات",
+          description: "تحميل وتحقق البيانات متعددة المصادر من أنظمة بي إن بي باريبا",
+          details: [
+            "بيانات استهلاك الوجبات التاريخية (18 شهر)",
+            "تكامل بيانات الطقس من APIs خارجية",
+            "جدول الموظفين ومقاييس إشغال المبنى",
+            "أحداث التقويم ومعلومات العطل",
+            "فحوصات جودة البيانات الآلية والتحقق"
+          ]
+        },
+        {
+          component: "هندسة الخصائص",
+          description: "60+ خاصية مهندسة من بيانات التقويم والإشغال والقائمة والطقس",
+          details: [
+            "خصائص قائمة على الوقت: يوم الأسبوع، الشهر، الموسم، العطل",
+            "خصائص الطقس: درجة الحرارة، الهطول، الرطوبة",
+            "خصائص الإشغال: عدد الموظفين، غرف الاجتماعات المحجوزة",
+            "خصائص التأخير: عدد الوجبات 1-7 أيام السابقة",
+            "إحصائيات متداولة: متوسطات متحركة 7 و30 يوم"
+          ]
+        },
+        {
+          component: "تدريب النموذج",
+          description: "تعزيز التدرج التجميعي مع تحسين المعاملات الفائقة",
+          details: [
+            "تجميع نماذج LightGBM وXGBoost",
+            "تحقق متقاطع سلاسل زمنية 5-طيات",
+            "تحسين المعاملات الفائقة القائم على Optuna (100+ تجربة)",
+            "إيقاف مبكر لمنع الإفراط في التكيف",
+            "تحليل واختيار أهمية الخصائص"
+          ]
+        },
+        {
+          component: "خط أنابيب التنبؤ",
+          description: "التنبؤ التكراري مع تحديثات خصائص التأخير لنشر الإنتاج",
+          details: [
+            "التنبؤ التكراري متعدد الخطوات للأمام",
+                       "تحديثات خصائص التأخير الفورية",
+            "متوسط النموذج التجميعي للتنبؤات النهائية",
+            "فترات الثقة وتقدير عدم اليقين",
+            "خط أنابيب إعادة التدريب اليومي الآلي"
+          ]
+        }
+      ],
+      stepLabel: "الخطوة",
+      implementationDetailsLabel: "تفاصيل التنفيذ:"
+    },
+    performanceMetrics: {
+      title: "مقاييس الأداء الإنتاجي",
+      description: "مؤشرات الأداء الرئيسية تثبت فعالية النظام في بيئة الإنتاج",
+      metrics: [
+        {
+          metric: "RMSE",
+          description: "الجذر التربيعي لمتوسط الخطأ التربيعي"
+        },
+        {
+          metric: "الدقة",
+          description: "ضمن تحمل ±30 وجبة"
+        },
+        {
+          metric: "وقت التدريب",
+          description: "إعادة تدريب النموذج الكاملة"
+        },
+        {
+          metric: "تغطية البيانات",
+          description: "بيانات التدريب التاريخية"
+        }
+      ]
+    },
+    labels: {
+      purpose: "الغرض:",
+      technicalDetails: "التفاصيل التقنية:"
+    }
+  },
+  footer: {
+    title: {
+      main: "التنبؤ بالوجبات بي إن بي باريبا"
+    },
+    description: "حل تعلم آلي متقدم يحقق دقة 94.5% للتنبؤ بطلب الكافتيريا",
+    metrics: {
+      rmse: "RMSE: 21.87 وجبة",
+      trainingData: "18 شهر بيانات تدريب",
+      features: "60+ خاصية مهندسة"
+    },
+    buttons: {
+      documentation: "الوثائق",
+      sourceCode: "الكود المصدري"
+    }
+  }
+},
 MarketPulseContentType : {
   hero: {
     achievement: {
@@ -9252,8 +17828,6 @@ gan: {
     },
 
   },
-  },
-  
+  }, 
 };
-
 export { translations };

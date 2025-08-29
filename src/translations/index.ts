@@ -680,6 +680,480 @@ executiveSummary: {
     };
   };
   };
+  Protein : {
+  nav: {
+    logo: {
+      brand: string;
+      subtitle: string;
+    };
+    items: {
+      abstract: string;
+      methodology: string;
+      results: string;
+      discussion: string;
+    };
+    buttons: {
+      report: string;
+      code: string;
+    };
+  };
+
+  hero: {
+    badge: {
+      text: string;
+    };
+    title: {
+      main: string[];       
+      subtitle: string;
+    };
+    description: string;
+    performanceMetrics: {
+      metrics: {
+        value: string;
+        label: string;
+        suffix: string;
+      }[];
+    };
+    achievements: {
+      title: string;
+      subtitle: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    buttons: {
+      primary: string;
+      secondary: string;
+    };
+    author: {
+      name: string;
+      role: string;
+    };
+    modelPerformance: {
+      title: string;
+      models: {
+        name: string;
+        score: number;
+        color: string;
+      }[];
+    };
+  };
+
+  abstract: {
+    title: string;
+    subtitle: string;
+    content: {
+      introduction: string;
+      problem: string;
+      localizationClasses: string[];
+      approach: string;
+      performanceScore: string;
+      conclusion: string;
+    };
+    statistics: {
+      proteinSequences: { value: string; label: string };
+      localizationClasses: { value: string; label: string };
+      logLossScore: { value: string; label: string };
+    };
+  };
+
+  introduction: {
+    title: string;
+    subtitle: string;
+    content: {
+      paragraph1: string;
+      paragraph2: string;
+      paragraph3: string;
+    };
+    figure1: {
+      title: string;
+      conceptualRepresentation: string;
+      compartments: {
+        name: string;
+        description: string;
+      }[];
+      caption: {
+        prefix: string;
+        text: string;
+      };
+    };
+    researchObjectives: {
+      title: string;
+      objectives: string[];
+    };
+  };
+
+  dataset: {
+    title: string;
+    subtitle: string;
+    content: {
+      overview: string;
+      multiLabelNature: string;
+      exploratoryAnalysis: string;
+      classImbalance: string;
+    };
+    basicStatistics: {
+      title: string;
+      items: string[];
+    };
+    kingdomDistribution: {
+      title: string;
+      kingdoms: { name: string; percentage: string }[];
+    };
+    localizationDistribution: {
+      title: string;
+      tableHeaders: {
+        localization: string;
+        trainFraction: string;
+        visualDistribution: string;
+      };
+      classes: { name: string; fraction: string }[];
+    };
+  };
+
+  exploratoryAnalysis: {
+    title: string;
+    subtitle: string;
+    kingdomClassImbalances: {
+      title: string;
+      intro: string;
+      bullets: string[];
+    };
+    dimensionalityAnalysis: {
+      title: string;
+      intro: string;
+      points: string[];
+    };
+    classImbalanceChallenges: {
+      title: string;
+      intro: string;
+      largestClasses: {
+        title: string;
+        classes: { name: string; fraction: string }[];
+      };
+      smallestClasses: {
+        title: string;
+        classes: { name: string; fraction: string }[];
+        note: string;
+      };
+    };
+    keyInsights: {
+      title: string;
+      cards: { title: string; text: string }[];
+    };
+    strategicImplications: {
+      text: string;
+    };
+  };
+
+  featureEngineering: {
+    title: string;
+    subtitle: string;
+    introduction: string;
+    esmEmbeddings: {
+      title: string;
+      bullets: string[];
+    };
+    finalFeatureSet: {
+      title: string;
+      rows: { label: string; value: string }[];
+    };
+    sequenceFeatures: {
+      title: string;
+      mathematicalTransformations: {
+        title: string;
+        code: string[];
+      };
+      categoricalFlags: {
+        title: string;
+        flags: string[];
+      };
+    };
+    kingdomEncoding: {
+      title: string;
+      categoricalEncoding: {
+        title: string;
+        text: string;
+        mapping: { name: string; code: string }[];
+      };
+      interactionFeatures: {
+        title: string;
+        text: string;
+        code: string;
+        note: string;
+      };
+    };
+    embeddingStatistics: {
+      title: string;
+      description: string;
+      stats: { symbol: string; label: string }[];
+      note: string;
+    };
+    dataPreprocessingPipeline: {
+      title: string;
+      paragraphs: string[];
+      models: { title: string; text: string }[];
+    };
+  };
+
+  modeling: {
+    title: string;
+    subtitle: string;
+    frameworkOverview: {
+      title: string;
+      text: string;
+    };
+    dnn: {
+      title: string;
+      description: string;
+      architectureTitle: string;
+      architecture: { layer: string; detail: string }[];
+      trainingConfigTitle: string;
+      trainingConfig: { name: string; value: string }[];
+    };
+    lightgbm: {
+      title: string;
+      description: string;
+      params: { name: string; value: string }[];
+      note?: string;
+    };
+    xgboost: {
+      title: string;
+      description: string;
+      params: { name: string; value: string }[];
+    };
+    catboost: {
+      title: string;
+      description: string;
+      params: { name: string; value: string }[];
+      note?: string;
+    };
+    ensembleStrategy: {
+      title: string;
+      description: string;
+      weightsTitle: string;
+      weights: { model: string; weight: string }[];
+      rationaleTitle: string;
+      rationale: string[];
+    };
+  };
+
+  results: {
+    title: string;
+    subtitle: string;
+    performanceIntro: string;
+    cvSummary: {
+      title: string;
+      intro: string;
+      table: {
+        headers: {
+          model: string;
+          cvLogLoss: string;
+          performanceRank: string;
+          stability: string;
+        };
+        rows: {
+          model: string;
+          logLoss: string;
+          rank: string;
+          stability: string;
+        }[];
+      };
+    };
+    keyPerformanceInsights: {
+      title: string;
+      bullets: string[];
+    };
+    competitiveAnalysis: {
+      title: string;
+      cards: { title: string; text: string }[];
+    };
+    statisticalSignificance: {
+      title: string;
+      text: string;
+    };
+  };
+
+  discussion: {
+    title: string;
+    subtitle: string;
+    introduction: string;
+    esmEmbeddingAnalysis: {
+      title: string;
+      bullets: string[];
+    };
+    featureEngineeringImpact: {
+      title: string;
+      bullets: string[];
+    };
+    multiLabelStrategy: {
+      title: string;
+      paragraph: string;
+      whyMultiLabel: {
+        title: string;
+        bullets: string[];
+      };
+      technicalImplementation: {
+        title: string;
+        bullets: string[];
+      };
+    };
+    modelPerformanceAnalysis: {
+      title: string;
+      paragraph: string;
+      cards: { title: string; text: string }[];
+    };
+    limitationsAndChallenges: {
+      title: string;
+      classImbalance: {
+        title: string;
+        paragraph: string;
+        stats: string[];
+      };
+      kingdomSpecificModeling: {
+        title: string;
+        paragraph: string;
+      };
+    };
+    biologicalSignificance: {
+      title: string;
+      intro: string;
+      points: { title: string; text: string }[];
+      clinicalRelevance: {
+        title: string;
+        text: string;
+      };
+    };
+  };
+
+  conclusion: {
+    title: string;
+    subtitle: string;
+    summaryIntro: string;
+    keyLessons: {
+      title: string;
+      lessons: {
+        number: string;
+        title: string;
+        text: string;
+      }[];
+    };
+    futureResearchDirections: {
+      title: string;
+      items: { title: string; text: string }[];
+    };
+    broaderImpact: {
+      title: string;
+      conclusionParagraph: string;
+      immediateApplications: {
+        title: string;
+        items: string[];
+      };
+      longTermVision: {
+        title: string;
+        items: string[];
+      };
+    };
+  };
+
+  references: {
+    title: string;
+    subtitle: string;
+    introduction: string;
+    corePublications: {
+      title: string;
+      entries: {
+        citation: string;
+        keyContribution: string;
+      }[];
+    };
+    supportingLiterature: {
+      title: string;
+      machineLearningMethods: {
+        title: string;
+        entries: string[];
+      };
+      proteinBioinformatics: {
+        title: string;
+        entries: string[];
+      };
+    };
+    methodologicalFoundations: {
+      title: string;
+      items: { title: string; text: string }[];
+    };
+    dataSourcesAndTools: {
+      title: string;
+      leftColumn: string[];
+      rightColumn: string[];
+    };
+  };
+
+  appendix: {
+    title: string;
+    subtitle: string;
+    completePipelineImplementation: {
+      title: string;
+      intro: string;
+      pipelineOverview: {
+        title: string;
+        metrics: { value: string; label: string }[];
+      };
+      productionCodeSection: {
+        title: string;
+        meta: { author: string; date: string };
+        code: string;
+      };
+    };
+    architectureExplanation: {
+      title: string;
+      sections: {
+        title: string;
+        paragraph: string;
+        architectureLine?: string;
+        modelConfigs?: {
+          lightgbm?: string[];
+          xgboost?: string[];
+          catboost?: string[];
+        };
+        weights?: {
+          withCatBoost?: string[];
+          withoutCatBoost?: string[];
+        };
+        metricsTracked?: string[];
+      }[];
+    };
+    expectedOutput: {
+      title: string;
+      consoleOutputExampleTitle: string;
+      consoleOutput: string;
+      metrics: {
+        value: string;
+        labelTop: string;
+        labelBottom: string;
+      }[];
+    };
+  };
+
+  footer: {
+    componentName: string;
+    headings: {
+      brand: string;
+    };
+    description: string;
+    researchLine: string;
+    buttons: {
+      downloadReport: string;
+      viewNotebook: string;
+    };
+    copyright: string;
+    download: {
+      href: string;
+      filename: string;
+    };
+  };
+};
   gan:{
 nav: {
     overview: string
@@ -5722,7 +6196,1411 @@ footer: {
   }
 },
 },
+Protein : {
+  nav: {
+    logo: {
+      brand: "ProteinAI",
+      subtitle: "Subcellular Localization"
+    },
+    items: {
+      abstract: "Abstract",
+      methodology: "Methods", 
+      results: "Results",
+      discussion: "Discussion"
+    },
+    buttons: {
+      report: "Report",
+      code: "Code"
+    }
+  },
 
+  // Hero Section
+  hero: {
+    badge: {
+      text: "Advanced ML Research • 2025"
+    },
+    title: {
+      main: ["Protein", "Subcellular", "Localization"],
+      subtitle: "Powered by ESM-1b & Ensemble ML"
+    },
+    description: "Advanced machine learning pipeline predicting where proteins reside within cells using state-of-the-art protein language models and sophisticated ensemble methods.",
+    
+    // Dynamic Metrics
+    performanceMetrics: {
+      metrics: [
+        { 
+          value: "0.94", 
+          label: "Log-Loss Score", 
+          suffix: "±0.02" 
+        },
+        { 
+          value: "18K", 
+          label: "Proteins Analyzed", 
+          suffix: "+" 
+        },
+        { 
+          value: "1,296", 
+          label: "Features Engineered", 
+          suffix: "" 
+        },
+        { 
+          value: "5-Fold", 
+          label: "Cross Validation", 
+          suffix: "" 
+        }
+      ]
+    },
+
+    // Key Achievements Section
+    achievements: {
+      title: "Key Achievements",
+      subtitle: "Breakthrough results in computational biology",
+      items: [
+        {
+          title: "Top 30% Performance",
+          description: "Competitive benchmark ranking"
+        },
+        {
+          title: "ESM-1b Integration", 
+          description: "Advanced protein language model"
+        },
+        {
+          title: "Ensemble Method",
+          description: "4-model sophisticated pipeline"
+        },
+        {
+          title: "Multi-label Classification",
+          description: "5 subcellular compartments"
+        }
+      ]
+    },
+
+    // CTA Buttons
+    buttons: {
+      primary: "Explore Research",
+      secondary: "View Code"
+    },
+
+    // Author Information
+    author: {
+      name: "nirdidev05",
+      role: "ML Research Engineer"
+    },
+
+    // Model Performance Visualization
+    modelPerformance: {
+      title: "Model Performance",
+      models: [
+        { 
+          name: "Ensemble", 
+          score: 0.94, 
+          color: "bg-primary" 
+        },
+        { 
+          name: "CatBoost", 
+          score: 0.95, 
+          color: "bg-secondary" 
+        },
+        { 
+          name: "LightGBM", 
+          score: 0.98, 
+          color: "bg-accent" 
+        },
+        { 
+          name: "XGBoost", 
+          score: 1.00, 
+          color: "bg-warning" 
+        }
+      ]
+    }
+  },
+ 
+  abstract: {
+    title: "Abstract",
+    subtitle: "Executive Summary of Protein Subcellular Localization Prediction Research",
+    
+    content: {
+      introduction: "Proteins are polymeric biomolecules built from sequences of amino acids and are fundamental to virtually all cellular processes. Their three-dimensional structures and functions are largely determined by their amino-acid sequences, and importantly, by where they reside inside the cell (the \"subcellular localization\"). A protein's location (nucleus, cytoplasm, membrane, etc.) is closely linked to its function and interactions. Mislocalization of proteins is known to cause or contribute to many diseases.",
+      
+      problem: "In our work, we address the problem of predicting the likely subcellular compartment(s) of a protein from its sequence. We use a curated dataset of ~18,000 protein sequences from UniProtKB/Swiss-Prot (a high-quality protein knowledgebase) with annotations for five localization classes:",
+      
+      localizationClasses: ["Nucleus", "Cytoplasm", "Membrane", "Cell membrane", "Extracellular"],
+      
+      approach: "Our comprehensive approach combines pre-trained protein language model embeddings (ESM-1b) with classical machine learning techniques including deep neural networks and gradient boosting algorithms. The multi-label classification framework achieved competitive performance with a cross-validated log-loss of approximately",
+      
+      performanceScore: "0.94 ± 0.02",
+      
+      conclusion: "demonstrating the effectiveness of combining modern protein embeddings with ensemble methods for subcellular localization prediction."
+    },
+    
+    // Summary Statistics Cards
+    statistics: {
+      proteinSequences: {
+        value: "~18,000",
+        label: "Protein Sequences"
+      },
+      localizationClasses: {
+        value: "5",
+        label: "Localization Classes"
+      },
+      logLossScore: {
+        value: "0.94",
+        label: "Log-Loss Score"
+      }
+    }
+  },
+  introduction: {
+    title: "Introduction",
+    subtitle: "The Biological Context and Computational Challenge",
+    
+    content: {
+      paragraph1: "Proteins are polymeric biomolecules built from sequences of amino acids and are fundamental to virtually all cellular processes. Their three-dimensional structures and functions are largely determined by their amino-acid sequences, and importantly, by where they reside inside the cell (the \"subcellular localization\"). A protein's location (nucleus, cytoplasm, membrane, etc.) is closely linked to its function and interactions.",
+      
+      paragraph2: "Mislocalization of proteins is known to cause or contribute to many diseases. For example, secreted and membrane proteins follow distinct cellular pathways. In our work, we address the problem of predicting the likely subcellular compartment(s) of a protein from its sequence.",
+      
+      paragraph3: "We use a curated dataset of ~18,000 protein sequences from UniProtKB/Swiss-Prot (a high-quality protein knowledgebase) with annotations for five localization classes: Nucleus, Cytoplasm, Membrane, Cell membrane, Extracellular."
+    },
+    
+    // Figure 1 - Cellular Structure
+    figure1: {
+      title: "Figure 1. Cellular Structure and Protein Localization",
+      conceptualRepresentation: "[Conceptual representation of a typical animal cell]",
+      compartments: [
+        {
+          name: "Nucleus",
+          description: "DNA storage"
+        },
+        {
+          name: "Cytoplasm", 
+          description: "Metabolic hub"
+        },
+        {
+          name: "Membrane",
+          description: "Transport"
+        },
+        {
+          name: "Cell membrane",
+          description: "Boundary"
+        },
+        {
+          name: "Extracellular",
+          description: "Secreted"
+        }
+      ],
+      caption: {
+        prefix: "Caption:",
+        text: "Structure of a typical animal cell, showing major compartments (nucleus, endomembrane system, etc.). Proteins must localize to specific organelles or membranes to function correctly. The subcellular localization is therefore a critical attribute for understanding protein function."
+      }
+    },
+    
+    // Research Objectives
+    researchObjectives: {
+      title: "Research Objectives",
+      objectives: [
+        "Develop accurate computational methods for predicting protein subcellular localization",
+        "Leverage modern protein language models (ESM-1b) for feature extraction", 
+        "Apply ensemble machine learning techniques for robust multi-label classification",
+        "achieve competitive performance on a curated, high-quality dataset"
+      ]
+    }
+  },
+  dataset: {
+    title: "Dataset and Exploratory Analysis",
+    subtitle: "Comprehensive Analysis of 18,000 Protein Sequences",
+    
+    content: {
+      overview: "The training set contains 14,564 proteins (each may have multiple labels) and the test set 3,642 proteins (no labels). Each protein has a kingdom annotation (Metazoa, Fungi, Viridiplantae, or \"Other\") and a sequence length (40–1022 amino acids).",
+      
+      multiLabelNature: "Multi-label nature: Proteins can belong to multiple compartments, so this is a multi-label classification task (we treat each class with a separate sigmoid output). We used binary cross-entropy (log-loss) on each label, which aligns with the Kaggle evaluation metric.",
+      
+      exploratoryAnalysis: "Our exploratory analysis also revealed kingdom-class imbalances. For example, in the training set ~9.97% of \"Other\" kingdom proteins are nuclear vs ~32–41% in larger kingdoms; similarly the \"Extracellular\" label is present in ~48% of \"Other\" proteins but only ~3–14% in others. Such differences suggest domain shifts by organism group.",
+      
+      classImbalance: "Class imbalance is significant (two smallest labels are Cell membrane at ~15% and Extracellular ~11%), indicating we should consider class weighting or careful calibration. Principal Component Analysis on the high-dimensional embeddings indicated that ~536 components capture 95% of variance (out of 1280 dims), underscoring the high dimensionality of the feature space. These insights guided feature design and model strategy."
+    },
+    
+    // Basic Statistics Section
+    basicStatistics: {
+      title: "Basic Statistics",
+      items: [
+        "Sequence length: mean ≈ 479 aa (std ≈ 242) in both train/test; ranges from ~40 to 1022. We engineered length-based features (log, sqrt, normalized lengths, and short/medium/long flags) to capture this variability.",
+        "Kingdom distribution (test set): Metazoa ~57.2%, Fungi ~21.4%, Viridiplantae ~19.4%, Other ~2.0%. (Training distribution is similar.) We encoded Kingdom both as a label (for CatBoost) and one-hot for major groups.",
+        "Localization classes: overall fractions in train set were roughly Nucleus 34%, Cytoplasm 35%, Membrane 31%, Cell membrane 15%, Extracellular 11%."
+      ]
+    },
+    
+    // Kingdom Distribution Chart
+    kingdomDistribution: {
+      title: "Kingdom Distribution",
+      kingdoms: [
+        { name: "Metazoa", percentage: "57.2%" },
+        { name: "Fungi", percentage: "21.4%" },
+        { name: "Viridiplantae", percentage: "19.4%" },
+        { name: "Other", percentage: "2.0%" }
+      ]
+    },
+    
+    // Localization Class Distribution Table
+    localizationDistribution: {
+      title: "Localization Class Distribution",
+      tableHeaders: {
+        localization: "Localization",
+        trainFraction: "Train fraction", 
+        visualDistribution: "Visual Distribution"
+      },
+      classes: [
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Membrane", fraction: "31%" },
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ]
+    }
+  },
+  // Add this inside protein (do not duplicate existing sections). Word-for-word extraction.
+exploratoryAnalysis: {
+  title: "Exploratory Data Analysis",
+  subtitle: "Deep Dive into Protein Sequence Patterns and Kingdom-Class Relationships",
+
+  kingdomClassImbalances: {
+    title: "Kingdom-Class Imbalances",
+    intro: "Our exploratory analysis revealed significant kingdom-class imbalances that suggest domain shifts by organism group:",
+    bullets: [
+      "~9.97% of \"Other\" kingdom proteins are nuclear vs ~32–41% in larger kingdoms",
+      "\"Extracellular\" label present in ~48% of \"Other\" proteins but only ~3–14% in others",
+      "These differences indicate evolutionary and functional specialization across kingdoms"
+    ]
+  },
+
+  dimensionalityAnalysis: {
+    title: "Dimensionality Analysis",
+    intro: "Principal Component Analysis on the high-dimensional embeddings provided crucial insights:",
+    points: [
+      "~536 components capture 95% of variance",
+      "Out of 1280 total dimensions",
+      "Underscores high-dimensional feature space complexity"
+    ]
+  },
+
+  classImbalanceChallenges: {
+    title: "Class Imbalance Challenges",
+    intro: "Class imbalance is significant, with implications for model training and evaluation:",
+    largestClasses: {
+      title: "Largest Classes",
+      classes: [
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Membrane", fraction: "31%" }
+      ]
+    },
+    smallestClasses: {
+      title: "Smallest Classes (Imbalanced)",
+      classes: [
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ],
+      note: "These classes require careful consideration for class weighting or calibration"
+    }
+  },
+
+  keyInsights: {
+    title: "Key Insights for Model Strategy",
+    cards: [
+      {
+        title: "Multi-label Approach",
+        text: "Proteins can belong to multiple compartments, necessitating separate sigmoid outputs for each class rather than softmax classification."
+      },
+      {
+        title: "Kingdom-Aware Features",
+        text: "Domain shifts across kingdoms suggest the need for kingdom-specific features and interaction terms in the model."
+      },
+      {
+        title: "High-Dimensional Space",
+        text: "The 1280-dimensional embedding space requires careful dimensionality considerations and regularization strategies."
+      }
+    ]
+  },
+
+  strategicImplications: {
+    text: "💡 Strategic Implications: These insights directly guided our feature engineering approach, model selection criteria, and ensemble strategy. The combination of class imbalance, high dimensionality, and kingdom-specific patterns informed our decision to use multiple complementary algorithms with explicit categorical handling."
+  }
+},
+featureEngineering: {
+  title: "Feature Engineering and Data Preparation",
+  subtitle: "Transforming Raw Protein Sequences into Rich Feature Representations",
+
+  introduction: "We merged each protein sequence with precomputed ESM-1b embeddings (1,280-dimensional vectors from a large protein language model). These embeddings, learned via unsupervised training on 250 million sequences, encode rich structural and evolutionary information (even secondary/tertiary structure) directly from the sequence.",
+
+  esmEmbeddings: {
+    title: "ESM-1b Protein Embeddings",
+    bullets: [
+      "1,280-dimensional vectors per protein",
+      "Trained on 250 million protein sequences",
+      "Captures structural & evolutionary information",
+      "Encodes secondary/tertiary structure hints"
+    ]
+  },
+
+  finalFeatureSet: {
+    title: "Final Feature Set",
+    rows: [
+      { label: "ESM-1b embeddings", value: "1,280 dims" },
+      { label: "Engineered features", value: "~16 dims" },
+      { label: "Total per protein", value: "~1,296 features" }
+    ]
+  },
+
+  sequenceFeatures: {
+    title: "Sequence Features",
+    mathematicalTransformations: {
+      title: "Mathematical Transformations",
+      code: [
+        "seq_len_log = log(1+length)",
+        "seq_len_sqrt = sqrt(length)",
+        "seq_len_norm = length / max_length"
+      ]
+    },
+    categoricalFlags: {
+      title: "Categorical Flags",
+      flags: [
+        "is_short - captures short sequences",
+        "is_medium - medium length proteins",
+        "is_long - captures length nonlinearity"
+      ]
+    }
+  },
+
+  kingdomEncoding: {
+    title: "Kingdom Encoding",
+    categoricalEncoding: {
+      title: "Categorical Encoding",
+      text: "A label-encoded kingdom_enc (0–3) for use with CatBoost, plus one-hot flags (is_metazoa, etc.) for tree models.",
+      mapping: [
+        { name: "Metazoa", code: "0" },
+        { name: "Fungi", code: "1" },
+        { name: "Viridiplantae", code: "2" },
+        { name: "Other", code: "3" }
+      ]
+    },
+    interactionFeatures: {
+      title: "Interaction Features",
+      text: "We include an interaction feature to capture kingdom-specific length patterns:",
+      code: "len_kingdom = seq_len_norm * kingdom_enc",
+      note: "This allows models to learn different length distributions per domain"
+    }
+  },
+
+  embeddingStatistics: {
+    title: "Embedding Statistics",
+    description: "From the first 100 dims of the 1280-length embedding, we compute summary statistics: mean, std, max, min (for each protein). This reduces dimensionality while preserving distributional information.",
+    stats: [
+      { symbol: "μ", label: "Mean" },
+      { symbol: "σ", label: "Std Dev" },
+      { symbol: "max", label: "Maximum" },
+      { symbol: "min", label: "Minimum" }
+    ],
+    note: "Computed from first 100 dimensions of embeddings to create compact statistical summaries"
+  },
+
+  dataPreprocessingPipeline: {
+    title: "Data Preprocessing Pipeline",
+    paragraphs: [
+      "After merging, we had ~1296 features per protein (1280 raw embedding values + ~16 engineered features). Missing values (if any) were filled with zero.",
+      "We identified which features were categorical (kingdom and the boolean flags) for CatBoost. All features were finally scaled or passed as-is: the neural net used StandardScaler on continuous features, while the tree models handled raw features (CatBoost gets integer categories, others treat them as floats)."
+    ],
+    models: [
+      { title: "Neural Networks", text: "StandardScaler normalization for continuous features" },
+      { title: "Tree Models", text: "Raw features with explicit categorical handling" }
+    ]
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from Modeling component.
+modeling: {
+  title: "Modeling Approaches",
+  subtitle: "Ensemble of Deep Learning and Tree-Based Methods for Multi-Label Classification",
+
+  frameworkOverview: {
+    title: "Framework Overview",
+    text: "We framed this as a 5-fold cross-validated multi-label classification. For each of the five localization labels, we train a separate binary classifier. The following models were trained on each fold:"
+  },
+
+  dnn: {
+    title: "Deep Neural Network (DNN)",
+    description: "A feed-forward network with inputs = 1296 features. This multi-layer perceptron can learn complex nonlinear interactions among engineered and embedding features.",
+    architectureTitle: "Architecture",
+    architecture: [
+      { layer: "Input", detail: "1296 features" },
+      { layer: "BatchNorm", detail: "" },
+      { layer: "Dense (ReLU)", detail: "1024 → Dropout(0.3)" },
+      { layer: "Dense (ReLU)", detail: "512 → Dropout(0.25)" },
+      { layer: "Dense (ReLU)", detail: "256 → Dropout(0.2)" },
+      { layer: "Dense (ReLU)", detail: "128 → Dropout(0.15)" },
+      { layer: "Output (Sigmoid)", detail: "5 classes" }
+    ],
+    trainingConfigTitle: "Training Configuration",
+    trainingConfig: [
+      { name: "Loss Function", value: "Binary cross-entropy (sum of class losses)" },
+      { name: "Optimizer", value: "Adam (lr=0.001)" },
+      { name: "Regularization", value: "Early stopping, learning-rate reduction" },
+      { name: "Monitoring", value: "Validation loss" }
+    ]
+  },
+
+  lightgbm: {
+    title: "LightGBM",
+    description: "5 separate gradient-boosting tree models (one per class) with binary objective. LightGBM efficiently handles large numeric feature sets.",
+    params: [
+      { name: "Objective", value: "binary_logloss" },
+      { name: "Boosting rounds", value: "1000" },
+      { name: "Leaves", value: "64" },
+      { name: "Learning rate", value: "0.05" }
+    ],
+    note: "Often achieved strong baseline performance on tabular data"
+  },
+
+  xgboost: {
+    title: "XGBoost",
+    description: "5 XGB classifiers with binary logistic objective. The 'hist' tree method made training on 1000+ features feasible.",
+    params: [
+      { name: "Objective", value: "binary:logistic" },
+      { name: "Max depth", value: "6" },
+      { name: "Learning rate", value: "0.05" },
+      { name: "Subsample", value: "0.8" },
+      { name: "Trees", value: "1000" }
+    ]
+  },
+
+  catboost: {
+    title: "CatBoost",
+    description: "5 CatBoost models with explicit categorical feature handling. Often excels when categorical handling and class imbalance are important.",
+    params: [
+      { name: "Loss", value: "Logloss" },
+      { name: "Iterations", value: "1000" },
+      { name: "Depth", value: "6" },
+      { name: "Learning rate", value: "0.05" }
+    ],
+    note: "Explicitly passed categorical feature indices (kingdom and flags)"
+  },
+
+  ensembleStrategy: {
+    title: "Ensemble Strategy",
+    description: "Each model produces probability predictions for each class on the validation fold. We clipped probabilities to [1e-7, 1-1e-7] to avoid extreme log-loss.",
+    weightsTitle: "Ensemble Weights",
+    weights: [
+      { model: "Deep Neural Network", weight: "35%" },
+      { model: "LightGBM", weight: "25%" },
+      { model: "XGBoost", weight: "25%" },
+      { model: "CatBoost", weight: "15%" }
+    ],
+    rationaleTitle: "Rationale",
+    rationale: [
+      "Multi-model ensemble approach inspired by recent studies (DeepLoc 2.0)",
+      "Transformer embeddings + multi-label heads are effective",
+      "Ensemble both neural and tree-based learners",
+      "Weighted average reduces variance and improves generalization",
+      "Weights adapted if CatBoost failed"
+    ]
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from Results component.
+results: {
+  title: "Results",
+  subtitle: "Comprehensive Performance Analysis Across Models and Cross-Validation Folds",
+
+  performanceIntro: "Across 5-fold cross-validation, all models achieved reasonably good log-loss (lower is better) on the multi-label task. In our experiments, the DNN and individual gradient-boosters each gave log-loss around ~0.98–1.05, while CatBoost (with categorical handling) typically did better (~0.95). The combined ensemble gave the lowest loss, around ~0.94 (±0.02) on average across folds.",
+
+  cvSummary: {
+    title: "Cross-Validation Performance Summary",
+    intro: "A summary of typical CV results (mean ± std over folds) is:",
+    table: {
+      headers: {
+        model: "Model",
+        cvLogLoss: "CV Log-Loss (mean ± std)",
+        performanceRank: "Performance Rank",
+        stability: "Stability"
+      },
+      rows: [
+        { model: "DNN", logLoss: "~1.02 ± 0.03", rank: "4th", stability: "DNN" },          // stability bar is visual only; retaining model key as placeholder
+        { model: "LightGBM", logLoss: "~0.98 ± 0.03", rank: "3rd", stability: "LightGBM" },
+        { model: "XGBoost", logLoss: "~1.00 ± 0.04", rank: "5th", stability: "XGBoost" },
+        { model: "CatBoost", logLoss: "~0.95 ± 0.02", rank: "2nd", stability: "CatBoost" },
+        { model: "Ensemble", logLoss: "~0.94 ± 0.02", rank: "1st 🏆", stability: "Ensemble" }
+      ]
+    }
+  },
+
+  keyPerformanceInsights: {
+    title: "Key Performance Insights",
+    bullets: [
+      "The ensemble's improvement (~0.94) over the best single model indicates that different models captured complementary signals",
+      "Based on CV, CatBoost had the single-best average loss (~0.95) and the ensemble slightly better",
+      "The stability (low std across folds) indicates the methods were robust",
+      "These numbers are based on our pipeline runs; exact performance may vary with random seeds"
+    ]
+  },
+
+  competitiveAnalysis: {
+    title: "Competitive Analysis",
+    cards: [
+      {
+        title: "Competitive Score",
+        text: "Our pipeline achieved log-loss ≪ 1.1, suggesting it would rank well (e.g., \"Top 30%\") compared to other solutions"
+      },
+      {
+        title: "Model Robustness",
+        text: "The stability (low standard deviation across folds) indicates the methods were robust and would generalize well to unseen data"
+      },
+      {
+        title: "Submission Strategy",
+        text: "We would submit the ensemble predictions to the competition based on superior CV performance"
+      }
+    ]
+  },
+
+  statisticalSignificance: {
+    title: "Statistical Significance",
+    text: "Overall, our pipeline achieved a competitive score (log-loss ≪ 1.1) suggesting it would rank well (e.g. \"Top 30%\") compared to other solutions. The stability (low std across folds) indicates the methods were robust. The ensemble approach successfully leveraged the strengths of both neural networks and tree-based models, resulting in improved performance over any individual algorithm."
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from Discussion component.
+discussion: {
+  title: "Discussion and Insights",
+  subtitle: "Analysis of Model Performance and Biological Implications",
+
+  introduction: "Our results demonstrate that pretrained protein embeddings plus classical ML can effectively predict localization. The ESM-1b embeddings likely provided a strong prior: they encode biochemical properties across sequence, as shown by Rives et al. The engineered features (especially encoding sequence length and kingdom) further helped: for example, including kingdom both as categorical and via interaction (len_kingdom) allows models to learn different length distributions per domain.",
+
+  esmEmbeddingAnalysis: {
+    title: "ESM-1b Embedding Analysis",
+    bullets: [
+      "Strong Prior Knowledge: ESM-1b embeddings encode rich biochemical properties across protein sequences",
+      "Structural Information: Captures secondary/tertiary structure hints directly from sequence",
+      "Evolutionary Context: Learned from 250 million sequences, providing broad evolutionary understanding"
+    ]
+  },
+
+  featureEngineeringImpact: {
+    title: "Feature Engineering Impact",
+    bullets: [
+      "Kingdom Encoding: Both categorical and interaction features (len_kingdom) capture domain-specific patterns",
+      "Length Features: Mathematical transformations (log, sqrt) effectively capture sequence length variability",
+      "Statistical Summaries: Embedding statistics provide compact distributional information"
+    ]
+  },
+
+  multiLabelStrategy: {
+    title: "Multi-Label Classification Strategy",
+    paragraph: "The multi-label approach (5 sigmoid outputs) was essential, as many proteins reside in more than one compartment. This follows prior work (e.g. DeepLoc 2.0). We optimized each label's binary classifier with log-loss, aligning with the evaluation metric.",
+    whyMultiLabel: {
+      title: "Why Multi-Label?",
+      bullets: [
+        "• Proteins can exist in multiple cellular compartments",
+        "• Reflects biological reality of protein trafficking",
+        "• Separate sigmoid outputs for independent predictions"
+      ]
+    },
+    technicalImplementation: {
+      title: "Technical Implementation",
+      bullets: [
+        "• Binary cross-entropy for each label",
+        "• Aligns with Kaggle evaluation metric",
+        "• Follows established practices (DeepLoc 2.0)"
+      ]
+    }
+  },
+
+  modelPerformanceAnalysis: {
+    title: "Model Performance Analysis",
+    paragraph: "Among models, tree-based ensembles (CatBoost, LightGBM, XGBoost) were generally strong, likely because they can handle mixed feature types and are less prone to overfitting on tabular data. CatBoost's explicit categorical treatment gave it a slight edge.",
+    cards: [
+      {
+        title: "Tree-Based Models",
+        text: "Handle mixed feature types well, robust to overfitting on tabular data, excellent categorical feature support"
+      },
+      {
+        title: "Neural Networks",
+        text: "Captured highly nonlinear combinations of 1280 embedding dimensions and engineered features"
+      },
+      {
+        title: "Ensemble Benefits",
+        text: "Final ensemble outperformed individuals, as expected from ensembling theory (reduces generalization error)"
+      }
+    ]
+  },
+
+  limitationsAndChallenges: {
+    title: "Limitations and Challenges",
+    classImbalance: {
+      title: "Class Imbalance",
+      paragraph: "We did not explicitly weight classes, but using sigmoid outputs means rare classes like \"Extracellular\" (~11%) still contributed fully to loss. Future runs could add class weights or focal loss.",
+      stats: [
+        "Cell membrane: 15%",
+        "Extracellular: 11%"
+      ]
+    },
+    kingdomSpecificModeling: {
+      title: "Kingdom-Specific Modeling",
+      paragraph: "We assumed all kingdoms share the same model; one could consider kingdom-specific tuning given the cross-kingdom differences noted in EDA. Different organisms may have evolved distinct localization mechanisms."
+    }
+  },
+
+  biologicalSignificance: {
+    title: "Biological Significance",
+    intro: "The success of our approach validates several important biological and computational principles:",
+    points: [
+      {
+        title: "Sequence-Function Relationship",
+        text: "The high performance confirms that protein sequences contain sufficient information to predict subcellular localization, supporting the sequence→structure→function paradigm."
+      },
+      {
+        title: "Evolutionary Conservation",
+        text: "ESM-1b's effectiveness suggests that localization signals are evolutionarily conserved across diverse protein families and organisms."
+      }
+    ],
+    clinicalRelevance: {
+      title: "Clinical Relevance",
+      text: "Accurate localization prediction can help identify mislocalized proteins associated with diseases, supporting drug discovery and understanding protein dysfunction mechanisms."
+    }
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from Conclusion component.
+conclusion: {
+  title: "Conclusions and Future Work",
+  subtitle: "Key Findings and Research Directions for Protein Localization Prediction",
+
+  summaryIntro: "In summary, we built a comprehensive multi-label classification pipeline for protein localization using sequence embeddings and tabular models. Our research demonstrates the power of combining modern protein language models with classical machine learning techniques to achieve state-of-the-art performance in computational biology.",
+
+  keyLessons: {
+    title: "Key Lessons Learned",
+    lessons: [
+      {
+        number: "1",
+        title: "Pretrained Embeddings are Powerful",
+        text: "Pretrained embeddings (ESM-1b) serve as powerful features, capturing structure and function hints. They should be central for sequence-based prediction. The 1,280-dimensional vectors encode rich biochemical properties learned from 250 million sequences."
+      },
+      {
+        number: "2",
+        title: "Feature Engineering Remains Valuable",
+        text: "Feature engineering remains valuable: simple transformations of length and domain improved the models. Mathematical features (log, sqrt, normalized lengths) and kingdom-specific interactions provided complementary signals to the embeddings."
+      },
+      {
+        number: "3",
+        title: "Ensemble Methods Excel",
+        text: "Ensembles of diverse models yielded the best accuracy. Combining deep nets and boosted trees allowed us to leverage both representation learning and decision-rule strengths. The 35% DNN + 25% LGB + 25% XGB + 15% CatBoost combination achieved ~0.94 log-loss."
+      },
+      {
+        number: "4",
+        title: "Challenges Identified",
+        text: "Class imbalance and domain shifts are challenges. Future models could incorporate class weights, stratified sampling, or hierarchical classification (e.g. first predict kingdom then localization). The 11-15% representation of rare classes requires specialized handling."
+      }
+    ]
+  },
+
+  futureResearchDirections: {
+    title: "Future Research Directions",
+    items: [
+      {
+        title: "End-to-End Fine-Tuning",
+        text: "Explore feeding sequences directly into a transformer (like fine-tuning ESM or ProtBERT) for this task, instead of precomputing embeddings. This could allow task-specific adaptation of the protein language model."
+      },
+      {
+        title: "Multi-Modal Integration",
+        text: "Incorporating additional data modalities (e.g. predicted protein structure, microscopy images, or phylogenetic information) could help. Recent work shows promise in combining sequence and structural information."
+      },
+      {
+        title: "Advanced Ensembling",
+        text: "More sophisticated ensembling approaches like stacking, meta-learning, or dynamic ensemble selection might squeeze out further performance gains. Bayesian model averaging could provide uncertainty estimates."
+      },
+      {
+        title: "Hierarchical Classification",
+        text: "Implement hierarchical approaches that first predict broad cellular regions (membrane vs. interior) then specific compartments. This could better handle the biological hierarchy of localization."
+      },
+      {
+        title: "Class Imbalance Solutions",
+        text: "Develop specialized techniques for handling class imbalance: focal loss, cost-sensitive learning, SMOTE for protein sequences, or generative augmentation methods tailored to biological sequences."
+      },
+      {
+        title: "Domain Transfer",
+        text: "Investigate transfer learning across different organisms or protein families. Kingdom-specific fine-tuning could address the domain shifts observed in our exploratory analysis."
+      }
+    ]
+  },
+
+  broaderImpact: {
+    title: "Broader Impact",
+    conclusionParagraph: "In conclusion, our pipeline combines modern protein language models with robust machine learning to achieve accurate subcellular localization predictions. The insights and models here provide a strong basis for protein annotation tasks and could be extended to related problems.",
+    immediateApplications: {
+      title: "Immediate Applications",
+      items: [
+        "Signal peptide prediction",
+        "Organelle-specific function prediction",
+        "Drug target identification",
+        "Disease protein analysis"
+      ]
+    },
+    longTermVision: {
+      title: "Long-term Vision",
+      items: [
+        "Automated protein annotation pipelines",
+        "Personalized medicine applications",
+        "Synthetic biology design tools",
+        "Drug discovery platforms"
+      ]
+    }
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from References component.
+references: {
+  title: "References",
+  subtitle: "Foundational Literature and Supporting Research",
+
+  introduction: "Foundational work shows subcellular localization is crucial for protein function and disease. UniProt/Swiss-Prot is the authoritative source of protein annotations. The ESM-1b model (650M parameters) was pretrained on 250M sequences, producing embeddings that capture structural properties. Recent tools like DeepLoc 2.0 use transformer-based embeddings for multi-label localization. These advances guided our approach.",
+
+  corePublications: {
+    title: "Core Publications",
+    entries: [
+      {
+        citation: "Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., Liu, J., Guo, D., Ott, M., Zitnick, C. L., Ma, J., & Fergus, R. (2021). Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences. Proceedings of the National Academy of Sciences, 118(15), e2016239118.",
+        keyContribution: "🔑 Key Contribution: Introduced ESM-1b protein language model with 650M parameters, demonstrating that unsupervised learning on protein sequences captures structural and functional information."
+      },
+      {
+        citation: "Thumuluri, V., Almagro Armenteros, J. J., Johansen, A. R., Nielsen, H., & Winther, O. (2022). DeepLoc 2.0: multi-label subcellular localization prediction using protein language models. Nucleic Acids Research, 50(W1), W228-W234.",
+        keyContribution: "🔑 Key Contribution: Established transformer-based embeddings for multi-label subcellular localization prediction, setting benchmark performance and methodological standards."
+      },
+      {
+        citation: "The UniProt Consortium (2023). UniProt: the Universal Protein Knowledgebase in 2023. Nucleic Acids Research, 51(D1), D523-D531.",
+        keyContribution: "🔑 Key Contribution: Provides the authoritative, manually curated protein sequence database (UniProtKB/Swiss-Prot) used as our ground truth for localization annotations."
+      }
+    ]
+  },
+
+  supportingLiterature: {
+    title: "Supporting Literature",
+    machineLearningMethods: {
+      title: "Machine Learning Methods",
+      entries: [
+        "Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. KDD '16, 785-794.",
+        "Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., ... & Liu, T. Y. (2017). LightGBM: A highly efficient gradient boosting decision tree. NIPS, 3146-3154.",
+        "Prokhorenkova, L., Gusev, G., Vorobev, A., Dorogush, A. V., & Gulin, A. (2018). CatBoost: unbiased boosting with categorical features. NeurIPS, 6638-6648."
+      ]
+    },
+    proteinBioinformatics: {
+      title: "Protein Bioinformatics",
+      entries: [
+        "Almagro Armenteros, J. J., Sønderby, C. K., Sønderby, S. K., Nielsen, H., & Winther, O. (2017). DeepLoc: prediction of protein subcellular localization using deep learning. Bioinformatics, 33(21), 3387-3395.",
+        "Elnaggar, A., Heinzinger, M., Dallago, C., Rehawi, G., Wang, Y., Jones, L., ... & Rost, B. (2021). ProtTrans: towards cracking the language of life's code through self-supervised deep learning and high performance computing. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(10), 7112-7127.",
+        "Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... & Rives, A. (2023). Evolutionary-scale prediction of atomic level protein structure with a language model. Science, 379(6637), 1123-1130."
+      ]
+    }
+  },
+
+  methodologicalFoundations: {
+    title: "Methodological Foundations",
+    items: [
+      {
+        title: "Protein Language Models",
+        text: "Transformer architectures applied to protein sequences, learning representations that capture evolutionary, structural, and functional information without explicit supervision."
+      },
+      {
+        title: "Multi-Label Classification",
+        text: "Binary relevance approach with sigmoid outputs, allowing proteins to belong to multiple subcellular compartments simultaneously, reflecting biological reality."
+      },
+      {
+        title: "Ensemble Learning",
+        text: "Combination of neural networks and tree-based models to leverage different learning paradigms and improve generalization through model diversity."
+      }
+    ]
+  },
+
+  dataSourcesAndTools: {
+    title: "Data Sources and Tools",
+    leftColumn: [
+      "Dataset: UniProtKB/Swiss-Prot curated protein database",
+      "Embeddings: ESM-1b (650M parameter protein language model)",
+      "Framework: Python with scikit-learn, TensorFlow"
+    ],
+    rightColumn: [
+      "ML Libraries: LightGBM, XGBoost, CatBoost",
+      "Evaluation: 5-fold cross-validation, log-loss metric",
+      "Hardware: GPU-accelerated training infrastructure"
+    ]
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from Appendix component.
+appendix: {
+  title: "Appendix",
+  subtitle: "Complete Implementation and Technical Details",
+
+  completePipelineImplementation: {
+    title: "Complete Pipeline Implementation",
+    intro: "The following code represents the complete, production-ready implementation of our protein subcellular localization prediction pipeline. This implementation achieved our reported performance of ~0.94 ± 0.02 log-loss through careful optimization of each component.",
+    pipelineOverview: {
+      title: "Pipeline Overview",
+      metrics: [
+        { value: "4", label: "ML Models" },
+        { value: "5-Fold", label: "Cross Validation" },
+        { value: "1,296", label: "Features" },
+        { value: "~18K", label: "Proteins" }
+      ]
+    },
+    productionCodeSection: {
+      title: "Complete Production Pipeline Code",
+      meta: {
+        author: "Author: nirdidev05",
+        date: "Date: 2025-08-29"
+      },
+      code: `import pandas as pd
+import numpy as np
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import log_loss
+import tensorflow as tf
+from tensorflow.keras import layers, Model, callbacks
+import lightgbm as lgb
+import xgboost as xgb
+import catboost as cb
+import warnings
+warnings.filterwarnings('ignore')
+
+print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
+print("=" * 60)
+print(f"Current User: {str('nirdidev05')}")
+print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
+
+class ProteinLocalizationPipeline:
+    """Pipeline complet optimisé basé sur tes excellents résultats"""
+    
+    def __init__(self):
+        self.num_classes = 5
+        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
+        
+    def load_and_prepare_data(self):
+        """Chargement et préparation complète des données"""
+        print("\\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
+        print("-" * 50)
+        
+        # Chargement
+        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
+        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
+        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
+        
+        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
+        
+        # Fusion
+        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
+        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
+        
+        # Feature Engineering
+        def engineer_features(df, is_train=True):
+            df = df.copy()
+            
+            # Features de base
+            df['seq_len_log'] = np.log1p(df['seq_len'])
+            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
+            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
+            
+            # Features catégorielles (comme int pour éviter le problème CatBoost)
+            df['is_short'] = (df['seq_len'] < 200).astype('int32')
+            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
+            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
+            
+            # Kingdom encoding
+            if is_train:
+                self.kingdom_encoder = LabelEncoder()
+                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
+            else:
+                kingdoms = df['Kingdom'].fillna('Unknown')
+                known = set(self.kingdom_encoder.classes_)
+                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
+                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
+            
+            # Kingdom one-hot (comme int32)
+            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
+            for kingdom in top_kingdoms:
+                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
+            
+            # Features d'interaction
+            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
+            
+            # Stats des embeddings
+            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
+            if all(col in df.columns for col in embed_cols):
+                embed_data = df[embed_cols].values
+                df['embed_mean'] = np.mean(embed_data, axis=1)
+                df['embed_std'] = np.std(embed_data, axis=1)
+                df['embed_max'] = np.max(embed_data, axis=1)
+                df['embed_min'] = np.min(embed_data, axis=1)
+            
+            return df
+        
+        # Application du feature engineering
+        train_processed = engineer_features(train_merged, is_train=True)
+        test_processed = engineer_features(test_merged, is_train=False)
+        
+        # Sélection des features
+        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
+        engineered_cols = [
+            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
+            'is_short', 'is_medium', 'is_long', 'len_kingdom',
+            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
+            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
+        ]
+        
+        feature_cols = embedding_cols + engineered_cols
+        feature_cols = [col for col in feature_cols if col in train_processed.columns]
+        
+        # Données finales
+        X_train = train_processed[feature_cols].fillna(0)
+        X_test = test_processed[feature_cols].fillna(0)
+        y_train = train_processed[self.class_names].values
+        
+        # Identification des features catégorielles par index
+        categorical_indices = []
+        for i, col in enumerate(feature_cols):
+            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
+                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
+                categorical_indices.append(i)
+        
+        print(f"✅ Features finales: {len(feature_cols)}")
+        print(f"   - Embeddings: {len(embedding_cols)}")
+        print(f"   - Engineered: {len(engineered_cols)}")
+        print(f"   - Categorical indices: {len(categorical_indices)}")
+        print(f"✅ Labels multi-label: {y_train.shape}")
+        
+        return X_train, X_test, y_train, categorical_indices, feature_cols
+    
+    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
+        """Entraîne tous les modèles sur un fold"""
+        results = {}
+        
+        # Conversion en numpy pour compatibilité
+        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
+        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
+        
+        # 1. DEEP NEURAL NETWORK
+        print("  🧠 DNN Training...")
+        
+        # Normalisation
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train_np)
+        X_val_scaled = scaler.transform(X_val_np)
+        
+        # Architecture DNN optimisée
+        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
+        x = layers.BatchNormalization()(inputs)
+        x = layers.Dense(1024, activation='relu')(x)
+        x = layers.Dropout(0.3)(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(512, activation='relu')(x)
+        x = layers.Dropout(0.25)(x)
+        x = layers.Dense(256, activation='relu')(x)
+        x = layers.Dropout(0.2)(x)
+        x = layers.Dense(128, activation='relu')(x)
+        x = layers.Dropout(0.15)(x)
+        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
+        
+        dnn_model = Model(inputs, outputs)
+        dnn_model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+            loss='binary_crossentropy',
+            metrics=['binary_accuracy']
+        )
+        
+        # Callbacks
+        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
+        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
+        
+        # Entraînement
+        dnn_model.fit(
+            X_train_scaled, y_train_fold,
+            validation_data=(X_val_scaled, y_val_fold),
+            epochs=150, batch_size=64,
+            callbacks=[early_stop, lr_reduce],
+            verbose=0
+        )
+        
+        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
+        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
+        score_dnn = log_loss(y_val_fold, pred_dnn)
+        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
+        print(f"     ✅ DNN: {score_dnn:.4f}")
+        
+        # 2. LIGHTGBM
+        print("  🌟 LightGBM Training...")
+        
+        lgb_params = {
+            'objective': 'binary',
+            'metric': 'binary_logloss',
+            'boosting_type': 'gbdt',
+            'num_leaves': 64,
+            'learning_rate': 0.05,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 5,
+            'min_data_in_leaf': 20,
+            'lambda_l1': 0.1,
+            'lambda_l2': 0.1,
+            'verbose': -1,
+            'random_state': 42
+        }
+        
+        lgb_preds = []
+        for i in range(self.num_classes):
+            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
+            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
+            
+            model = lgb.train(
+                lgb_params,
+                train_data,
+                valid_sets=[val_data],
+                num_boost_round=1000,
+                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
+            )
+            
+            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
+            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_lgb = np.column_stack(lgb_preds)
+        score_lgb = log_loss(y_val_fold, pred_lgb)
+        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
+        print(f"     ✅ LightGBM: {score_lgb:.4f}")
+        
+        # 3. XGBOOST
+        print("  🚀 XGBoost Training...")
+        
+        xgb_preds = []
+        for i in range(self.num_classes):
+            model = xgb.XGBClassifier(
+                objective='binary:logistic',
+                eval_metric='logloss',
+                max_depth=6,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                reg_alpha=0.1,
+                reg_lambda=0.1,
+                n_estimators=1000,
+                random_state=42,
+                n_jobs=-1,
+                tree_method='hist'
+            )
+            
+            model.fit(
+                X_train_np, y_train_fold[:, i],
+                eval_set=[(X_val_np, y_val_fold[:, i])],
+                early_stopping_rounds=50,
+                verbose=False
+            )
+            
+            pred = model.predict_proba(X_val_np)[:, 1]
+            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_xgb = np.column_stack(xgb_preds)
+        score_xgb = log_loss(y_val_fold, pred_xgb)
+        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
+        print(f"     ✅ XGBoost: {score_xgb:.4f}")
+        
+        # 4. CATBOOST (avec gestion correcte des features catégorielles)
+        print("  🐱 CatBoost Training...")
+        
+        try:
+            # Conversion explicite des colonnes catégorielles en int
+            X_train_cat = X_train_np.copy().astype(np.float32)
+            X_val_cat = X_val_np.copy().astype(np.float32)
+            
+            # Conversion des features catégorielles en int
+            for idx in cat_indices:
+                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
+                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
+            
+            catboost_preds = []
+            for i in range(self.num_classes):
+                train_pool = cb.Pool(
+                    X_train_cat,
+                    y_train_fold[:, i],
+                    cat_features=cat_indices
+                )
+                val_pool = cb.Pool(
+                    X_val_cat,
+                    y_val_fold[:, i],
+                    cat_features=cat_indices
+                )
+                
+                model = cb.CatBoostClassifier(
+                    loss_function='Logloss',
+                    eval_metric='Logloss',
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    l2_leaf_reg=3,
+                    bootstrap_type='Bernoulli',
+                    subsample=0.8,
+                    random_seed=42,
+                    verbose=False,
+                    early_stopping_rounds=50
+                )
+                
+                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
+                pred = model.predict_proba(X_val_cat)[:, 1]
+                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+            
+            pred_catboost = np.column_stack(catboost_preds)
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+            print(f"     ✅ CatBoost: {score_catboost:.4f}")
+            
+        except Exception as e:
+            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
+            # Utiliser une prédiction dummy
+            pred_catboost = np.ones_like(y_val_fold) * 0.5
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+        
+        # 5. ENSEMBLE
+        print("  🎭 Ensemble...")
+        
+        # Ensemble adaptatif selon les modèles disponibles
+        if results['catboost']['score'] < 2.0:  # CatBoost marche
+            ensemble_pred = (0.35 * results['dnn']['predictions'] +
+                           0.25 * results['lgb']['predictions'] +
+                           0.25 * results['xgb']['predictions'] +
+                           0.15 * results['catboost']['predictions'])
+        else:  # Sans CatBoost
+            ensemble_pred = (0.4 * results['dnn']['predictions'] +
+                           0.3 * results['lgb']['predictions'] +
+                           0.3 * results['xgb']['predictions'])
+        
+        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
+        score_ensemble = log_loss(y_val_fold, ensemble_pred)
+        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
+        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
+        
+        return results
+    
+    def run_cross_validation(self):
+        """Validation croisée complète 5-fold"""
+        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
+        print("=" * 60)
+        
+        # Préparation des données
+        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
+        
+        # Validation croisée
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+        fold_results = []
+        
+        print(f"\\n🔄 VALIDATION CROISÉE 5-FOLD")
+        print("-" * 50)
+        
+        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
+            print(f"\\n📁 FOLD {fold + 1}/5")
+            print("-" * 30)
+            
+            X_train_fold = X_train.iloc[train_idx]
+            X_val_fold = X_train.iloc[val_idx]
+            y_train_fold = y_train[train_idx]
+            y_val_fold = y_train[val_idx]
+            
+            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
+            
+            # Entraînement des modèles
+            results = self.train_models_fold(
+                X_train_fold, y_train_fold,
+                X_val_fold, y_val_fold,
+                cat_indices
+            )
+            
+            fold_results.append({
+                'fold': fold + 1,
+                'results': results
+            })
+            
+            print(f"✅ Fold {fold + 1} terminé!")
+        
+        # Analyse des résultats
+        print(f"\\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
+        print("=" * 60)
+        
+        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
+        final_scores = {}
+        
+        for model_name in model_names:
+            scores = [fold['results'][model_name]['score'] for fold in fold_results]
+            final_scores[model_name] = {
+                'mean': np.mean(scores),
+                'std': np.std(scores),
+                'scores': scores
+            }
+        
+        print(f"📊 Scores par modèle:")
+        for model_name, stats in final_scores.items():
+            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
+        
+        # Meilleur modèle
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        best_score = final_scores[best_model]['mean']
+        
+        print(f"\\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
+        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
+        
+        print(f"\\n📈 ANALYSE DE PERFORMANCE:")
+        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
+        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
+        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
+        
+        return fold_results, final_scores, X_test, feature_cols
+
+# EXÉCUTION DU PIPELINE
+if __name__ == "__main__":
+    print(f"🚀 Starting Final Optimized Pipeline")
+    print(f"👤 User: nirdidev05")
+    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
+    
+    pipeline = ProteinLocalizationPipeline()
+    
+    try:
+        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
+        
+        print(f"\\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
+        print(f"👤 User: nirdidev05")
+        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
+        
+        # Recommandation finale
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        print(f"\\n💡 RECOMMANDATION FINALE:")
+        print(f"   Utiliser: {best_model.upper()} pour soumission")
+        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
+        
+        # Prêt pour génération des prédictions finales
+        print(f"\\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
+        print(f"   Test set: {X_test.shape}")
+        print(f"   Features: {len(feature_cols)}")
+        
+    except Exception as e:
+        print(f"❌ Erreur: {e}")
+        import traceback
+        traceback.print_exc()`
+    }
+  },
+
+  architectureExplanation: {
+    title: "Complete Code Architecture Explanation",
+    sections: [
+      {
+        title: "1. Deep Neural Network Implementation",
+        paragraph: "The DNN uses a sophisticated 5-layer architecture with batch normalization, dropout regularization, and adaptive learning rate scheduling. Each layer is carefully sized to progressively reduce dimensionality while preserving important patterns.",
+        architectureLine: "Input(1296) → BatchNorm → Dense(1024) → Dropout(0.3) → Dense(512) → Dropout(0.25) → Dense(256) → Dropout(0.2) → Dense(128) → Dropout(0.15) → Output(5, sigmoid)"
+      },
+      {
+        title: "2. Gradient Boosting Models",
+        paragraph: "Three gradient boosting algorithms (LightGBM, XGBoost, CatBoost) each train 5 separate binary classifiers for multi-label prediction. Each model uses optimized hyperparameters and early stopping.",
+        modelConfigs: {
+          lightgbm: ["num_leaves: 64", "learning_rate: 0.05", "early_stopping: 50"],
+          xgboost: ["max_depth: 6", "tree_method: 'hist'", "n_estimators: 1000"],
+          catboost: ["iterations: 1000", "depth: 6", "cat_features: explicit"]
+        }
+      },
+      {
+        title: "3. Ensemble Strategy with Adaptive Weighting",
+        paragraph: "The ensemble uses adaptive weighting based on model availability. If CatBoost fails, weights are redistributed among remaining models to maintain ensemble benefits.",
+        weights: {
+          withCatBoost: ["DNN: 35% • LGB: 25%", "XGB: 25% • CatBoost: 15%"],
+          withoutCatBoost: ["DNN: 40% • LGB: 30%", "XGB: 30%"]
+        }
+      },
+      {
+        title: "4. Cross-Validation and Performance Analysis",
+        paragraph: "The pipeline implements stratified 5-fold cross-validation with comprehensive performance tracking, stability analysis, and automatic model selection based on mean CV scores.",
+        metricsTracked: [
+          "• Mean CV log-loss per model",
+            "• Standard deviation (stability)",
+            "• Best model identification",
+            "• Competition ranking prediction"
+        ]
+      }
+    ]
+  },
+
+  expectedOutput: {
+    title: "Expected Pipeline Output",
+    consoleOutputExampleTitle: "Console Output Example:",
+    consoleOutput: `🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ
+============================================================
+Current User: nirdidev05
+Pipeline Start Time: 2025-08-29 18:14:00 UTC
+
+📊 CHARGEMENT ET PRÉPARATION DES DONNÉES
+--------------------------------------------------
+✅ Données chargées: Train (14564, 8), Test (3642, 4), Embeddings (18206, 1281)
+✅ Features finales: 1296
+   - Embeddings: 1280
+   - Engineered: 16
+   - Categorical indices: 8
+✅ Labels multi-label: (14564, 5)
+
+🔄 VALIDATION CROISÉE 5-FOLD
+--------------------------------------------------
+
+📁 FOLD 1/5
+------------------------------
+Train: (11651, 1296), Val: (2913, 1296)
+  🧠 DNN Training...
+     ✅ DNN: 1.0234
+  🌟 LightGBM Training...
+     ✅ LightGBM: 0.9876
+  🚀 XGBoost Training...
+     ✅ XGBoost: 1.0012
+  🐱 CatBoost Training...
+     ✅ CatBoost: 0.9543
+  🎭 Ensemble...
+     🎭 Ensemble: 0.9401
+✅ Fold 1 terminé!
+
+[... similar output for folds 2-5 ...]
+
+🏆 RÉSULTATS FINAUX - 5-FOLD CV
+============================================================
+📊 Scores par modèle:
+   DNN: 1.0234 ± 0.0312
+   LGB: 0.9876 ± 0.0287
+   XGB: 1.0012 ± 0.0398
+   CATBOOST: 0.9543 ± 0.0198
+   ENSEMBLE: 0.9401 ± 0.0187
+
+🏆 MEILLEUR MODÈLE: ENSEMBLE
+🎯 SCORE ATTENDU: 0.9401
+
+📈 ANALYSE DE PERFORMANCE:
+   • Score compétitif: OUI
+   • Stabilité: EXCELLENTE
+   • Position attendue: Top 30%`,
+    metrics: [
+      { value: "~0.94", labelTop: "Expected Final Score", labelBottom: "Cross-validated log-loss" },
+      { value: "±0.02", labelTop: "Standard Deviation", labelBottom: "Stability across folds" },
+      { value: "Top 30%", labelTop: "Expected Ranking", labelBottom: "Competition leaderboard" }
+    ]
+  }
+},
+// Add under protein (do NOT duplicate existing keys). Word‑for‑word extraction from FooterProtein component.
+footer: {
+  componentName: "FooterProtein",
+  headings: {
+    brand: "Protein Localization AI"
+  },
+  description: "Advanced machine learning for subcellular localization prediction using ESM-1b embeddings and ensemble methods",
+  researchLine: "Research by nirdidev05 • Log-loss: 0.94±0.02",
+  buttons: {
+    downloadReport: "Download Report",
+    viewNotebook: "View Notebook"
+  },
+  copyright:
+    "© 2024 Protein Localization Research • Built with React + TypeScript • ~18,000 proteins analyzed",
+  download: {
+    href: "/Protein Subcellular Localization Prediction.pdf",
+    filename: "Protein_Subcellular_Localization_Prediction.pdf"
+  }
+}
+
+},
   renewable:{
 
    navigation: {
@@ -9268,6 +11146,1373 @@ if (score_ml > 0.3) {
     }
   }
 },
+Protein : {
+
+  nav: {
+    logo: {
+      brand: "ProteinAI",
+      subtitle: "Localisation subcellulaire"
+    },
+    items: {
+      abstract: "Résumé",
+      methodology: "Méthodes",
+      results: "Résultats",
+      discussion: "Discussion"
+    },
+    buttons: {
+      report: "Rapport",
+      code: "Code"
+    }
+  },
+
+  // Section Héros
+  hero: {
+    badge: {
+      text: "Recherche IA avancée • 2025"
+    },
+    title: {
+      main: ["Protéine", "Sous‑cellulaire", "Localisation"],
+      subtitle: "Propulsé par ESM-1b & Ensemble ML"
+    },
+    description: "Pipeline avancé de machine learning prédisant où les protéines résident dans la cellule en s’appuyant sur des modèles de langage protéique de pointe et des méthodes d’ensemble sophistiquées.",
+    
+    performanceMetrics: {
+      metrics: [
+        { 
+          value: "0.94", 
+            label: "Score Log-Loss", 
+          suffix: "±0.02" 
+        },
+        { 
+          value: "18K", 
+          label: "Protéines analysées", 
+          suffix: "+" 
+        },
+        { 
+          value: "1,296", 
+          label: "Variables dérivées", 
+          suffix: "" 
+        },
+        { 
+          value: "5-Fold", 
+          label: "Validation croisée", 
+          suffix: "" 
+        }
+      ]
+    },
+
+    achievements: {
+      title: "Réalisations clés",
+      subtitle: "Résultats majeurs en biologie computationnelle",
+      items: [
+        {
+          title: "Performance Top 30%",
+          description: "Classement compétitif de référence"
+        },
+        {
+          title: "Intégration ESM-1b", 
+          description: "Modèle de langage protéique avancé"
+        },
+        {
+            title: "Méthode d’ensemble",
+          description: "Pipeline sophistiqué à 4 modèles"
+        },
+        {
+          title: "Classification multi‑étiquette",
+          description: "5 compartiments subcellulaires"
+        }
+      ]
+    },
+
+    buttons: {
+      primary: "Explorer la recherche",
+      secondary: "Voir le code"
+    },
+
+    author: {
+      name: "nirdidev05",
+      role: "Ingénieur Recherche ML"
+    },
+
+    modelPerformance: {
+      title: "Performance des modèles",
+      models: [
+        { 
+          name: "Ensemble", 
+          score: 0.94, 
+          color: "bg-primary" 
+        },
+        { 
+          name: "CatBoost", 
+          score: 0.95, 
+          color: "bg-secondary" 
+        },
+        { 
+          name: "LightGBM", 
+          score: 0.98, 
+          color: "bg-accent" 
+        },
+        { 
+          name: "XGBoost", 
+          score: 1.00, 
+          color: "bg-warning" 
+        }
+      ]
+    }
+  },
+ 
+  abstract: {
+    title: "Résumé",
+    subtitle: "Synthèse exécutive de la recherche sur la prédiction de la localisation subcellulaire des protéines",
+    
+    content: {
+      introduction: "Les protéines sont des biomolécules polymériques constituées de séquences d’acides aminés et sont fondamentales pour pratiquement tous les processus cellulaires. Leur structure tridimensionnelle et leurs fonctions sont largement déterminées par leur séquence et, point crucial, par leur localisation intracellulaire (« localisation subcellulaire »). Le lieu d’une protéine (noyau, cytoplasme, membrane, etc.) est étroitement lié à sa fonction et ses interactions. La mauvaise localisation est connue pour causer ou contribuer à de nombreuses maladies.",
+      
+      problem: "Dans ce travail, nous abordons le problème de prédire le(s) compartiment(s) subcellulaire(s) probable(s) d’une protéine à partir de sa séquence. Nous utilisons un jeu de données curé d’environ 18 000 séquences (UniProtKB/Swiss-Prot) avec des annotations pour cinq classes de localisation :",
+      
+      localizationClasses: ["Nucleus", "Cytoplasm", "Membrane", "Cell membrane", "Extracellular"],
+      
+      approach: "Notre approche combine des embeddings pré-entraînés de modèle de langage protéique (ESM-1b) avec des techniques de ML classiques incluant réseaux neuronaux profonds et algorithmes de gradient boosting. Le cadre de classification multi‑étiquette atteint une performance compétitive avec un log-loss en validation croisée d’environ",
+      
+      performanceScore: "0.94 ± 0.02",
+      
+      conclusion: "démontrant l’efficacité de combiner embeddings protéiques modernes et méthodes d’ensemble pour la prédiction de localisation subcellulaire."
+    },
+    
+    statistics: {
+      proteinSequences: {
+        value: "~18,000",
+        label: "Séquences protéiques"
+      },
+      localizationClasses: {
+        value: "5",
+        label: "Classes de localisation"
+      },
+      logLossScore: {
+        value: "0.94",
+        label: "Score Log-Loss"
+      }
+    }
+  },
+
+  introduction: {
+    title: "Introduction",
+    subtitle: "Contexte biologique et défi computationnel",
+    
+    content: {
+      paragraph1: "Les protéines sont des biomolécules polymériques constituées d’acides aminés et sont essentielles à presque tous les processus cellulaires. Leur structure et leur fonction dépendent fortement de leur séquence et de leur localisation intracellulaire.",
+      
+      paragraph2: "La mauvaise localisation de protéines peut causer ou favoriser des pathologies. Par exemple, les protéines sécrétées ou membranaires suivent des voies cellulaires distinctes. Nous cherchons à prédire le(s) compartiment(s) où une protéine réside à partir de sa seule séquence.",
+      
+      paragraph3: "Nous utilisons un jeu de ~18 000 séquences (UniProtKB/Swiss-Prot) annotées pour cinq classes : Nucleus, Cytoplasm, Membrane, Cell membrane, Extracellular."
+    },
+    
+    figure1: {
+      title: "Figure 1. Structure cellulaire et localisation des protéines",
+      conceptualRepresentation: "[Représentation conceptuelle d’une cellule animale typique]",
+      compartments: [
+        {
+          name: "Nucleus",
+          description: "Stockage ADN"
+        },
+        {
+          name: "Cytoplasm", 
+          description: "Centre métabolique"
+        },
+        {
+          name: "Membrane",
+          description: "Transport"
+        },
+        {
+          name: "Cell membrane",
+          description: "Frontière"
+        },
+        {
+          name: "Extracellular",
+          description: "Sécrété"
+        }
+      ],
+      caption: {
+        prefix: "Légende :",
+        text: "Structure d’une cellule animale montrant les principaux compartiments. Les protéines doivent atteindre l’organite ou la membrane cible pour fonctionner correctement ; la localisation subcellulaire est donc un attribut critique."
+      }
+    },
+    
+    researchObjectives: {
+      title: "Objectifs de recherche",
+      objectives: [
+        "Développer des méthodes précises de prédiction de localisation subcellulaire",
+        "Exploiter les modèles de langage protéique modernes (ESM-1b) pour l’extraction de caractéristiques",
+        "Appliquer des techniques d’ensemble pour une classification multi‑étiquette robuste",
+        "Atteindre des performances compétitives sur un jeu de données curé de haute qualité"
+      ]
+    }
+  },
+
+  dataset: {
+    title: "Jeu de données et analyse exploratoire",
+    subtitle: "Analyse complète de 18 000 séquences protéiques",
+    
+    content: {
+      overview: "Le train contient 14 564 protéines (plusieurs labels possibles) et le test 3 642 protéines (non annotées). Chaque protéine possède un royaume (Metazoa, Fungi, Viridiplantae ou Other) et une longueur (40–1022 aa).",
+      
+      multiLabelNature: "Nature multi‑étiquette : les protéines peuvent appartenir à plusieurs compartiments. Nous utilisons donc une sortie sigmoïde par classe et une log-loss binaire compatible avec la métrique d’évaluation.",
+      
+      exploratoryAnalysis: "L’analyse exploratoire révèle des déséquilibres royaume‑classe : p.ex. ~9,97 % des protéines ‘Other’ sont nucléaires vs ~32–41 % ailleurs ; ‘Extracellular’ ~48 % pour ‘Other’ mais ~3–14 % autrement. Cela suggère des décalages de domaine.",
+      
+      classImbalance: "Le déséquilibre de classes est significatif (Cell membrane ~15 %, Extracellular ~11 %). Une ACP montre qu’~536 composantes sur 1280 capturent 95 % de la variance, confirmant la haute dimensionnalité. Ces constats ont guidé notre stratégie."
+    },
+    
+    basicStatistics: {
+      title: "Statistiques de base",
+      items: [
+        "Longueur des séquences : moyenne ≈ 479 aa (écart‑type ≈ 242), plage ~40–1022. Nous avons créé des transformations (log, racine carrée, normalisation, flags courte/moyenne/longue).",
+        "Répartition des royaumes (test) : Metazoa ~57,2 %, Fungi ~21,4 %, Viridiplantae ~19,4 %, Other ~2,0 %. Codage label + one-hot.",
+        "Classes de localisation (train) ~ Nucleus 34 %, Cytoplasm 35 %, Membrane 31 %, Cell membrane 15 %, Extracellular 11 %."
+      ]
+    },
+    
+    kingdomDistribution: {
+      title: "Répartition par royaume",
+      kingdoms: [
+        { name: "Metazoa", percentage: "57.2%" },
+        { name: "Fungi", percentage: "21.4%" },
+        { name: "Viridiplantae", percentage: "19.4%" },
+        { name: "Other", percentage: "2.0%" }
+      ]
+    },
+    
+    localizationDistribution: {
+      title: "Distribution des classes de localisation",
+      tableHeaders: {
+        localization: "Localisation",
+        trainFraction: "Fraction train", 
+        visualDistribution: "Distribution visuelle"
+      },
+      classes: [
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Membrane", fraction: "31%" },
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ]
+    }
+  },
+
+  exploratoryAnalysis: {
+    title: "Analyse exploratoire",
+    subtitle: "Exploration des motifs de séquence et relations royaume‑classe",
+
+    kingdomClassImbalances: {
+      title: "Déséquilibres royaume‑classe",
+      intro: "Analyse montrant des déséquilibres significatifs indiquant des décalages de domaine :",
+      bullets: [
+        "~9,97 % des protéines ‘Other’ sont nucléaires vs ~32–41 % dans les royaumes majeurs",
+        "Label ‘Extracellular’ ~48 % dans ‘Other’ mais seulement ~3–14 % ailleurs",
+        "Spécialisation fonctionnelle et évolution divergente selon le royaume"
+      ]
+    },
+
+    dimensionalityAnalysis: {
+      title: "Analyse de dimensionnalité",
+      intro: "ACP sur les embeddings haute dimension :",
+      points: [
+        "~536 composantes expliquent 95 % de la variance",
+        "Sur un total de 1280 dimensions",
+        "Confirme la complexité de l’espace de caractéristiques"
+      ]
+    },
+
+    classImbalanceChallenges: {
+      title: "Défis de déséquilibre de classes",
+      intro: "Impact direct sur l’entraînement et l’évaluation :",
+      largestClasses: {
+        title: "Plus grandes classes",
+        classes: [
+          { name: "Cytoplasm", fraction: "35%" },
+          { name: "Nucleus", fraction: "34%" },
+          { name: "Membrane", fraction: "31%" }
+        ]
+      },
+      smallestClasses: {
+        title: "Classes minoritaires",
+        classes: [
+          { name: "Cell membrane", fraction: "15%" },
+          { name: "Extracellular", fraction: "11%" }
+        ],
+        note: "Peuvent nécessiter pondération ou calibration spécifique"
+      }
+    },
+
+    keyInsights: {
+      title: "Points clés pour la stratégie de modélisation",
+      cards: [
+        {
+          title: "Approche multi‑étiquette",
+          text: "Sorties sigmoïdes indépendantes plutôt qu’un softmax global."
+        },
+        {
+          title: "Caractéristiques sensibles au royaume",
+          text: "Les décalages motivent des features spécifiques et interactions."
+        },
+        {
+          title: "Haute dimensionnalité",
+          text: "1280 dimensions exigent régularisation et agrégation statistique."
+        }
+      ]
+    },
+
+    strategicImplications: {
+      text: "💡 Implication stratégique : Ces constats ont guidé l’ingénierie de variables, le choix des algorithmes et l’assemblage (ensemble) en tirant parti des forces complémentaires."
+    }
+  },
+
+  featureEngineering: {
+    title: "Ingénierie de caractéristiques & préparation",
+    subtitle: "Transformation des séquences brutes en représentations riches",
+
+    introduction: "Chaque séquence est fusionnée avec les embeddings ESM-1b (vecteurs 1 280 dim.) entraînés de façon auto-supervisée sur 250 M de séquences, capturant structure et signaux évolutifs.",
+    
+    esmEmbeddings: {
+      title: "Embeddings protéiques ESM-1b",
+      bullets: [
+        "Vecteur 1 280 dimensions par protéine",
+        "Entraîné sur 250 M de séquences",
+        "Capture structure & information évolutive",
+        "Encode des indices de structure secondaire/tertiaire"
+      ]
+    },
+
+    finalFeatureSet: {
+      title: "Jeu final de caractéristiques",
+      rows: [
+        { label: "Embeddings ESM-1b", value: "1 280 dims" },
+        { label: "Variables dérivées", value: "~16 dims" },
+        { label: "Total par protéine", value: "~1 296 caractéristiques" }
+      ]
+    },
+
+    sequenceFeatures: {
+      title: "Caractéristiques de séquence",
+      mathematicalTransformations: {
+        title: "Transformations mathématiques",
+        code: [
+          "seq_len_log = log(1+length)",
+          "seq_len_sqrt = sqrt(length)",
+          "seq_len_norm = length / max_length"
+        ]
+      },
+      categoricalFlags: {
+        title: "Indicateurs catégoriels",
+        flags: [
+          "is_short - séquences courtes",
+          "is_medium - longueurs moyennes",
+          "is_long - capte la non‑linéarité de longueur"
+        ]
+      }
+    },
+
+    kingdomEncoding: {
+      title: "Codage du royaume",
+      categoricalEncoding: {
+        title: "Encodage catégoriel",
+        text: "Label encodé kingdom_enc (0–3) + one-hot (is_metazoa, etc.) pour les arbres.",
+        mapping: [
+          { name: "Metazoa", code: "0" },
+          { name: "Fungi", code: "1" },
+          { name: "Viridiplantae", code: "2" },
+          { name: "Other", code: "3" }
+        ]
+      },
+      interactionFeatures: {
+        title: "Variables d’interaction",
+        text: "Interaction longueur × royaume :",
+        code: "len_kingdom = seq_len_norm * kingdom_enc",
+        note: "Apprentissage de distributions de longueurs spécifiques au domaine"
+      }
+    },
+
+    embeddingStatistics: {
+      title: "Statistiques d’embeddings",
+      description: "À partir des 100 premières dimensions : moyenne, écart-type, max, min (compression informative).",
+      stats: [
+        { symbol: "μ", label: "Moyenne" },
+        { symbol: "σ", label: "Écart-type" },
+        { symbol: "max", label: "Maximum" },
+        { symbol: "min", label: "Minimum" }
+      ],
+      note: "Synthèse statistique compacte (100 premières dimensions)"
+    },
+
+    dataPreprocessingPipeline: {
+      title: "Pipeline de prétraitement",
+      paragraphs: [
+        "≈ 1 296 features (1 280 embeddings + ~16 dérivées). Valeurs manquantes remplacées par 0.",
+        "Identification des variables catégorielles pour CatBoost. Normalisation (StandardScaler) uniquement pour le réseau de neurones ; arbres utilisent les valeurs brutes."
+      ],
+      models: [
+        { title: "Réseaux neuronaux", text: "Normalisation StandardScaler" },
+        { title: "Modèles arbres", text: "Features brutes + encodage catégoriel explicite" }
+      ]
+    }
+  },
+
+  modeling: {
+    title: "Approches de modélisation",
+    subtitle: "Ensemble de méthodes profondes et à base d’arbres pour classification multi‑étiquette",
+
+    frameworkOverview: {
+      title: "Cadre général",
+      text: "Cadre 5-fold CV multi‑étiquette. Un classifieur binaire par label de localisation. Modèles entraînés sur chaque fold :"
+    },
+
+    dnn: {
+      title: "Deep Neural Network (DNN)",
+      description: "Réseau fully-connected (1296 entrées). Apprentissage d’interactions non linéaires complexes entre variables dérivées et embeddings.",
+      architectureTitle: "Architecture",
+      architecture: [
+        { layer: "Input", detail: "1296 features" },
+        { layer: "BatchNorm", detail: "" },
+        { layer: "Dense (ReLU)", detail: "1024 → Dropout(0.3)" },
+        { layer: "Dense (ReLU)", detail: "512 → Dropout(0.25)" },
+        { layer: "Dense (ReLU)", detail: "256 → Dropout(0.2)" },
+        { layer: "Dense (ReLU)", detail: "128 → Dropout(0.15)" },
+        { layer: "Output (Sigmoïde)", detail: "5 classes" }
+      ],
+      trainingConfigTitle: "Configuration d’entraînement",
+      trainingConfig: [
+        { name: "Fonction de perte", value: "Log-loss binaire (somme des pertes de classe)" },
+        { name: "Optimiseur", value: "Adam (lr=0.001)" },
+        { name: "Régularisation", value: "Early stopping, réduction du LR" },
+        { name: "Suivi", value: "Loss de validation" }
+      ]
+    },
+
+    lightgbm: {
+      title: "LightGBM",
+      description: "5 modèles boosting (un par classe) objectif binaire. Gestion efficace de larges ensembles numériques.",
+      params: [
+        { name: "Objective", value: "binary_logloss" },
+        { name: "Boosting rounds", value: "1000" },
+        { name: "Leaves", value: "64" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Solide performance tabulaire de base"
+    },
+
+    xgboost: {
+      title: "XGBoost",
+      description: "5 classifieurs XGB (binary logistic). Méthode d’arbre ‘hist’ pour 1000+ features.",
+      params: [
+        { name: "Objective", value: "binary:logistic" },
+        { name: "Max depth", value: "6" },
+        { name: "Learning rate", value: "0.05" },
+        { name: "Subsample", value: "0.8" },
+        { name: "Trees", value: "1000" }
+      ]
+    },
+
+    catboost: {
+      title: "CatBoost",
+      description: "5 modèles CatBoost avec gestion explicite des catégories. Performance accrue en présence d’imbalance.",
+      params: [
+        { name: "Loss", value: "Logloss" },
+        { name: "Iterations", value: "1000" },
+        { name: "Depth", value: "6" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Indices catégoriels passés explicitement (kingdom + flags)"
+    },
+
+    ensembleStrategy: {
+      title: "Stratégie d’ensemble",
+      description: "Chaque modèle produit des probabilités par classe sur la validation. Probabilités bornées à [1e-7, 1-1e-7] pour stabiliser la log-loss.",
+      weightsTitle: "Pondérations de l’ensemble",
+      weights: [
+        { model: "Deep Neural Network", weight: "35%" },
+        { model: "LightGBM", weight: "25%" },
+        { model: "XGBoost", weight: "25%" },
+        { model: "CatBoost", weight: "15%" }
+      ],
+      rationaleTitle: "Justification",
+      rationale: [
+        "Approche multi‑modèles inspirée de DeepLoc 2.0",
+        "Embeddings transformeur + têtes multi‑étiquette efficaces",
+        "Combinaison réseaux + arbres",
+        "Moyenne pondérée réduit variance et améliore généralisation",
+        "Adaptation des poids si CatBoost échoue"
+      ]
+    }
+  },
+
+  results: {
+    title: "Résultats",
+    subtitle: "Analyse complète des performances sur modèles et folds",
+
+    performanceIntro: "Sur 5-fold CV, tous les modèles obtiennent une log-loss correcte. DNN & boosters isolés ~0.98–1.05, CatBoost ~0.95. L’ensemble obtient le minimum ~0.94 (±0.02).",
+
+    cvSummary: {
+      title: "Résumé des performances CV",
+      intro: "Synthèse (moyenne ± écart-type) :",
+      table: {
+        headers: {
+          model: "Modèle",
+          cvLogLoss: "Log-Loss CV (moy ± ét)",
+          performanceRank: "Rang",
+          stability: "Stabilité"
+        },
+        rows: [
+          { model: "DNN", logLoss: "~1.02 ± 0.03", rank: "4e", stability: "DNN" },
+          { model: "LightGBM", logLoss: "~0.98 ± 0.03", rank: "3e", stability: "LightGBM" },
+          { model: "XGBoost", logLoss: "~1.00 ± 0.04", rank: "5e", stability: "XGBoost" },
+          { model: "CatBoost", logLoss: "~0.95 ± 0.02", rank: "2e", stability: "CatBoost" },
+          { model: "Ensemble", logLoss: "~0.94 ± 0.02", rank: "1er 🏆", stability: "Ensemble" }
+        ]
+      }
+    },
+
+    keyPerformanceInsights: {
+      title: "Points clés de performance",
+      bullets: [
+        "Gain de l’ensemble (~0.94) confirmant des signaux complémentaires",
+        "CatBoost meilleur modèle individuel (~0.95), ensemble légèrement meilleur",
+        "Faible écart-type ⇒ robustesse méthodologique",
+        "Les valeurs peuvent varier avec les graines aléatoires"
+      ]
+    },
+
+    competitiveAnalysis: {
+      title: "Analyse compétitive",
+      cards: [
+        {
+          title: "Score compétitif",
+          text: "Log-loss ≪ 1.1 ⇒ position potentielle (Top 30%)"
+        },
+        {
+          title: "Robustesse",
+          text: "Faible variance inter-folds ⇒ bonne généralisation"
+        },
+        {
+          title: "Stratégie de soumission",
+          text: "Soumission des prédictions d’ensemble privilégiée"
+        }
+      ]
+    },
+
+    statisticalSignificance: {
+      title: "Signification statistique",
+      text: "Score compétitif (≪1.1) et stabilité indiquent robustesse. L’ensemble exploite forces des réseaux & modèles arbres, surpassant tout modèle individuel."
+    }
+  },
+
+  discussion: {
+    title: "Discussion et analyses",
+    subtitle: "Interprétation des performances et implications biologiques",
+
+    introduction: "Les embeddings pré-entraînés + ML classique permettent une prédiction efficace. ESM-1b fournit un fort a priori (propriétés biochimiques encodées). Les features dérivées (longueur + royaume & interaction len_kingdom) améliorent l’adaptation par domaine.",
+
+    esmEmbeddingAnalysis: {
+      title: "Analyse des embeddings ESM-1b",
+      bullets: [
+        "Fort a priori : encodage biochimique riche",
+        "Information structurale : indices secondaires/tertiaires",
+        "Contexte évolutif : entraîné sur 250 M de séquences"
+      ]
+    },
+
+    featureEngineeringImpact: {
+      title: "Impact de l’ingénierie de caractéristiques",
+      bullets: [
+        "Encodage royaume : label + interactions (len_kingdom)",
+        "Longueur : transformations (log, racine) pour variabilité",
+        "Synthèses statistiques : condensent la distribution"
+      ]
+    },
+
+    multiLabelStrategy: {
+      title: "Stratégie multi‑étiquette",
+      paragraph: "Sorties sigmoïdes (5) essentielles — protéines multi-localisées. Aligné avec DeepLoc 2.0 et la métrique (log-loss).",
+      whyMultiLabel: {
+        title: "Pourquoi multi‑étiquette ?",
+        bullets: [
+          "• Localisations multiples possibles",
+          "• Reflète la réalité de trafic protéique",
+          "• Prédictions indépendantes par sortie"
+        ]
+      },
+      technicalImplementation: {
+        title: "Implémentation technique",
+        bullets: [
+          "• Log-loss binaire par label",
+          "• Conforme à la métrique Kaggle",
+          "• Conforme aux pratiques établies (DeepLoc 2.0)"
+        ]
+      }
+    },
+
+    modelPerformanceAnalysis: {
+      title: "Analyse comparative des modèles",
+      paragraph: "Les ensembles à base d’arbres (CatBoost, LightGBM, XGBoost) sont solides (catégorielles + robustesse tabulaire). CatBoost profite du traitement catégoriel natif.",
+      cards: [
+        {
+          title: "Modèles arbres",
+          text: "Gestion mixte de types, résistants au sur-apprentissage"
+        },
+        {
+          title: "Réseaux neuronaux",
+          text: "Captent des combinaisons non linéaires complexes"
+        },
+        {
+          title: "Bénéfices de l’ensemble",
+          text: "Réduction de l’erreur de généralisation"
+        }
+      ]
+    },
+
+    limitationsAndChallenges: {
+      title: "Limites & défis",
+      classImbalance: {
+        title: "Déséquilibre de classes",
+        paragraph: "Pas de pondération explicite ; les classes rares (Extracellular ~11%) contribuent entièrement. Pistes : pondération, focal loss.",
+        stats: [
+          "Cell membrane: 15%",
+          "Extracellular: 11%"
+        ]
+      },
+      kingdomSpecificModeling: {
+        title: "Modélisation spécifique au royaume",
+        paragraph: "Hypothèse d’un modèle global. Un affinement par royaume pourrait capter des mécanismes évolutifs divergents."
+      }
+    },
+
+    biologicalSignificance: {
+      title: "Signification biologique",
+      intro: "Nos résultats confortent plusieurs principes :",
+      points: [
+        {
+          title: "Relation séquence-fonction",
+          text: "La séquence contient assez d’information pour la localisation (séquence → structure → fonction)."
+        },
+        {
+          title: "Conservation évolutive",
+          text: "Les signaux de localisation semblent conservés."
+        }
+      ],
+      clinicalRelevance: {
+        title: "Pertinence clinique",
+        text: "Prédire la localisation aide à détecter les protéines mal localisées liées aux maladies (ciblage thérapeutique)."
+      }
+    }
+  },
+
+  conclusion: {
+    title: "Conclusions et perspectives",
+    subtitle: "Principales découvertes et directions futures",
+
+    summaryIntro: "Nous avons construit un pipeline multi‑étiquette combinant embeddings de séquence et modèles tabulaires. L’approche montre la puissance de l’intégration modèles de langage protéique + ML classique pour des performances de pointe.",
+    
+    keyLessons: {
+      title: "Enseignements clés",
+      lessons: [
+        {
+          number: "1",
+          title: "Embeddings pré-entraînés puissants",
+          text: "ESM-1b capture structure & fonction ; pilier central de la prédiction."
+        },
+        {
+          number: "2",
+          title: "Ingénierie de features utile",
+          text: "Transformations de longueur & interactions royaume enrichissent les embeddings."
+        },
+        {
+          number: "3",
+          title: "Méthodes d’ensemble supérieures",
+          text: "Combiner réseaux + boosting exploite apprentissage de représentation et règles décisionnelles (≈0.94 log-loss)."
+        },
+        {
+          number: "4",
+          title: "Défis identifiés",
+          text: "Déséquilibre & décalages de domaine : pondération, stratification, hiérarchies futures."
+        }
+      ]
+    },
+
+    futureResearchDirections: {
+      title: "Axes de recherche futurs",
+      items: [
+        {
+          title: "Fine-tuning bout-en-bout",
+          text: "Adapter le transformeur (ESM / ProtBERT) directement à la tâche."
+        },
+        {
+          title: "Intégration multi‑modale",
+          text: "Ajouter structure prédite, imagerie, phylogénie."
+        },
+        {
+          title: "Ensembles avancés",
+          text: "Stacking, méta-apprentissage, sélection dynamique, incertitude bayésienne."
+        },
+        {
+          title: "Classification hiérarchique",
+          text: "Étapes larges → spécifiques (membrane vs intérieur → organelles)."
+        },
+        {
+          title: "Solutions déséquilibre",
+          text: "Focal loss, coût sensible, SMOTE séquentiel, augmentation générative."
+        },
+        {
+          title: "Transfert de domaine",
+          text: "Fine-tuning par royaume / famille protéique."
+        }
+      ]
+    },
+
+    broaderImpact: {
+      title: "Impact élargi",
+      conclusionParagraph: "Le pipeline associe modèles de langage protéique modernes et ML robuste pour une localisation précise. Base solide pour l’annotation et des tâches connexes.",
+      immediateApplications: {
+        title: "Applications immédiates",
+        items: [
+          "Prédiction de peptides signaux",
+          "Fonction spécifique d’organite",
+          "Identification de cibles thérapeutiques",
+          "Analyse de protéines pathologiques"
+        ]
+      },
+      longTermVision: {
+        title: "Vision long terme",
+        items: [
+          "Pipelines d’annotation automatisés",
+          "Médecine personnalisée",
+          "Outils de conception en biologie synthétique",
+          "Plateformes de découverte de médicaments"
+        ]
+      }
+    }
+  },
+
+  references: {
+    title: "Références",
+    subtitle: "Littérature fondamentale et travaux supports",
+
+    introduction: "Les travaux fondateurs montrent l’importance de la localisation subcellulaire pour la fonction et la pathologie. UniProt/Swiss-Prot est la source d’annotations de référence. ESM-1b (650M paramètres) pré‑entraîné sur 250M séquences capture des propriétés structurales. DeepLoc 2.0 illustre l’usage des embeddings transformeur en localisation multi‑étiquette.",
+    
+    corePublications: {
+      title: "Publications principales",
+      entries: [
+        {
+          citation: "Rives et al. (2021). Biological structure and function emerge... PNAS 118(15) e2016239118.",
+          keyContribution: "🔑 Contribution : Présente ESM-1b (650M) montrant l’émergence d’information structurelle/fonctionnelle."
+        },
+        {
+          citation: "Thumuluri et al. (2022). DeepLoc 2.0... Nucleic Acids Research 50(W1) W228-W234.",
+          keyContribution: "🔑 Contribution : Établit l’utilisation d’embeddings transformeur pour localisation multi‑étiquette."
+        },
+        {
+          citation: "UniProt Consortium (2023). UniProt 2023. Nucleic Acids Research 51(D1) D523-D531.",
+          keyContribution: "🔑 Contribution : Base de séquences annotées de référence (UniProtKB/Swiss-Prot)."
+        }
+      ]
+    },
+
+    supportingLiterature: {
+      title: "Littérature de support",
+      machineLearningMethods: {
+        title: "Méthodes ML",
+        entries: [
+          "Chen & Guestrin (2016) XGBoost. KDD.",
+          "Ke et al. (2017) LightGBM. NIPS.",
+          "Prokhorenkova et al. (2018) CatBoost. NeurIPS."
+        ]
+      },
+      proteinBioinformatics: {
+        title: "Bioinformatique protéique",
+        entries: [
+          "Almagro Armenteros et al. (2017) DeepLoc. Bioinformatics.",
+          "Elnaggar et al. (2021) ProtTrans. IEEE TPAMI.",
+          "Lin et al. (2023) Atomic structure prediction with LM. Science."
+        ]
+      }
+    },
+
+    methodologicalFoundations: {
+      title: "Fondements méthodologiques",
+      items: [
+        {
+          title: "Modèles de langage protéique",
+          text: "Transformers captant structure et fonction via apprentissage auto‑supervisé."
+        },
+        {
+          title: "Classification multi‑étiquette",
+          text: "Approche binary relevance avec sorties sigmoïdes indépendantes."
+        },
+        {
+          title: "Apprentissage par ensemble",
+          text: "Combinaison réseaux + arbres pour diversité et généralisation."
+        }
+      ]
+    },
+
+    dataSourcesAndTools: {
+      title: "Sources & outils",
+      leftColumn: [
+        "Jeu de données : UniProtKB/Swiss-Prot curé",
+        "Embeddings : ESM-1b (650M)",
+        "Framework : Python (scikit-learn, TensorFlow)"
+      ],
+      rightColumn: [
+        "Librairies ML : LightGBM, XGBoost, CatBoost",
+        "Évaluation : 5-fold CV, log-loss",
+        "Matériel : Entraînement accéléré GPU"
+      ]
+    }
+  },
+
+  appendix: {
+    title: "Annexe",
+    subtitle: "Détails techniques et implémentation complète",
+
+    completePipelineImplementation: {
+      title: "Implémentation complète du pipeline",
+      intro: "Code de production complet de notre pipeline de prédiction de localisation subcellulaire (~0.94 ± 0.02 log-loss).",
+      pipelineOverview: {
+        title: "Vue d’ensemble",
+        metrics: [
+          { value: "4", label: "Modèles ML" },
+          { value: "5-Fold", label: "Validation croisée" },
+          { value: "1,296", label: "Caractéristiques" },
+          { value: "~18K", label: "Protéines" }
+        ]
+      },
+      productionCodeSection: {
+        title: "Code de production complet",
+        meta: {
+          author: "Auteur : nirdidev05",
+          date: "Date : 2025-08-29"
+        },
+        code: `import pandas as pd
+import numpy as np
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import log_loss
+import tensorflow as tf
+from tensorflow.keras import layers, Model, callbacks
+import lightgbm as lgb
+import xgboost as xgb
+import catboost as cb
+import warnings
+warnings.filterwarnings('ignore')
+
+print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
+print("=" * 60)
+print(f"Current User: {str('nirdidev05')}")
+print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
+
+class ProteinLocalizationPipeline:
+    """Pipeline complet optimisé basé sur tes excellents résultats"""
+    
+    def __init__(self):
+        self.num_classes = 5
+        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
+        
+    def load_and_prepare_data(self):
+        """Chargement et préparation complète des données"""
+        print("\\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
+        print("-" * 50)
+        
+        # Chargement
+        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
+        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
+        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
+        
+        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
+        
+        # Fusion
+        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
+        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
+        
+        # Feature Engineering
+        def engineer_features(df, is_train=True):
+            df = df.copy()
+            
+            # Features de base
+            df['seq_len_log'] = np.log1p(df['seq_len'])
+            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
+            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
+            
+            # Features catégorielles (comme int pour éviter le problème CatBoost)
+            df['is_short'] = (df['seq_len'] < 200).astype('int32')
+            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
+            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
+            
+            # Kingdom encoding
+            if is_train:
+                self.kingdom_encoder = LabelEncoder()
+                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
+            else:
+                kingdoms = df['Kingdom'].fillna('Unknown')
+                known = set(self.kingdom_encoder.classes_)
+                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
+                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
+            
+            # Kingdom one-hot (comme int32)
+            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
+            for kingdom in top_kingdoms:
+                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
+            
+            # Features d'interaction
+            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
+            
+            # Stats des embeddings
+            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
+            if all(col in df.columns for col in embed_cols):
+                embed_data = df[embed_cols].values
+                df['embed_mean'] = np.mean(embed_data, axis=1)
+                df['embed_std'] = np.std(embed_data, axis=1)
+                df['embed_max'] = np.max(embed_data, axis=1)
+                df['embed_min'] = np.min(embed_data, axis=1)
+            
+            return df
+        
+        # Application du feature engineering
+        train_processed = engineer_features(train_merged, is_train=True)
+        test_processed = engineer_features(test_merged, is_train=False)
+        
+        # Sélection des features
+        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
+        engineered_cols = [
+            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
+            'is_short', 'is_medium', 'is_long', 'len_kingdom',
+            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
+            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
+        ]
+        
+        feature_cols = embedding_cols + engineered_cols
+        feature_cols = [col for col in feature_cols if col in train_processed.columns]
+        
+        # Données finales
+        X_train = train_processed[feature_cols].fillna(0)
+        X_test = test_processed[feature_cols].fillna(0)
+        y_train = train_processed[self.class_names].values
+        
+        # Identification des features catégorielles par index
+        categorical_indices = []
+        for i, col in enumerate(feature_cols):
+            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
+                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
+                categorical_indices.append(i)
+        
+        print(f"✅ Features finales: {len(feature_cols)}")
+        print(f"   - Embeddings: {len(embedding_cols)}")
+        print(f"   - Engineered: {len(engineered_cols)}")
+        print(f"   - Categorical indices: {len(categorical_indices)}")
+        print(f"✅ Labels multi-label: {y_train.shape}")
+        
+        return X_train, X_test, y_train, categorical_indices, feature_cols
+    
+    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
+        """Entraîne tous les modèles sur un fold"""
+        results = {}
+        
+        # Conversion en numpy pour compatibilité
+        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
+        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
+        
+        # 1. DEEP NEURAL NETWORK
+        print("  🧠 DNN Training...")
+        
+        # Normalisation
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train_np)
+        X_val_scaled = scaler.transform(X_val_np)
+        
+        # Architecture DNN optimisée
+        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
+        x = layers.BatchNormalization()(inputs)
+        x = layers.Dense(1024, activation='relu')(x)
+        x = layers.Dropout(0.3)(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(512, activation='relu')(x)
+        x = layers.Dropout(0.25)(x)
+        x = layers.Dense(256, activation='relu')(x)
+        x = layers.Dropout(0.2)(x)
+        x = layers.Dense(128, activation='relu')(x)
+        x = layers.Dropout(0.15)(x)
+        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
+        
+        dnn_model = Model(inputs, outputs)
+        dnn_model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+            loss='binary_crossentropy',
+            metrics=['binary_accuracy']
+        )
+        
+        # Callbacks
+        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
+        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
+        
+        # Entraînement
+        dnn_model.fit(
+            X_train_scaled, y_train_fold,
+            validation_data=(X_val_scaled, y_val_fold),
+            epochs=150, batch_size=64,
+            callbacks=[early_stop, lr_reduce],
+            verbose=0
+        )
+        
+        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
+        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
+        score_dnn = log_loss(y_val_fold, pred_dnn)
+        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
+        print(f"     ✅ DNN: {score_dnn:.4f}")
+        
+        # 2. LIGHTGBM
+        print("  🌟 LightGBM Training...")
+        
+        lgb_params = {
+            'objective': 'binary',
+            'metric': 'binary_logloss',
+            'boosting_type': 'gbdt',
+            'num_leaves': 64,
+            'learning_rate': 0.05,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 5,
+            'min_data_in_leaf': 20,
+            'lambda_l1': 0.1,
+            'lambda_l2': 0.1,
+            'verbose': -1,
+            'random_state': 42
+        }
+        
+        lgb_preds = []
+        for i in range(self.num_classes):
+            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
+            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
+            
+            model = lgb.train(
+                lgb_params,
+                train_data,
+                valid_sets=[val_data],
+                num_boost_round=1000,
+                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
+            )
+            
+            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
+            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_lgb = np.column_stack(lgb_preds)
+        score_lgb = log_loss(y_val_fold, pred_lgb)
+        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
+        print(f"     ✅ LightGBM: {score_lgb:.4f}")
+        
+        # 3. XGBOOST
+        print("  🚀 XGBoost Training...")
+        
+        xgb_preds = []
+        for i in range(self.num_classes):
+            model = xgb.XGBClassifier(
+                objective='binary:logistic',
+                eval_metric='logloss',
+                max_depth=6,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                reg_alpha=0.1,
+                reg_lambda=0.1,
+                n_estimators=1000,
+                random_state=42,
+                n_jobs=-1,
+                tree_method='hist'
+            )
+            
+            model.fit(
+                X_train_np, y_train_fold[:, i],
+                eval_set=[(X_val_np, y_val_fold[:, i])],
+                early_stopping_rounds=50,
+                verbose=False
+            )
+            
+            pred = model.predict_proba(X_val_np)[:, 1]
+            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_xgb = np.column_stack(xgb_preds)
+        score_xgb = log_loss(y_val_fold, pred_xgb)
+        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
+        print(f"     ✅ XGBoost: {score_xgb:.4f}")
+        
+        # 4. CATBOOST (avec gestion correcte des features catégorielles)
+        print("  🐱 CatBoost Training...")
+        
+        try:
+            # Conversion explicite des colonnes catégorielles en int
+            X_train_cat = X_train_np.copy().astype(np.float32)
+            X_val_cat = X_val_np.copy().astype(np.float32)
+            
+            # Conversion des features catégorielles en int
+            for idx in cat_indices:
+                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
+                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
+            
+            catboost_preds = []
+            for i in range(self.num_classes):
+                train_pool = cb.Pool(
+                    X_train_cat,
+                    y_train_fold[:, i],
+                    cat_features=cat_indices
+                )
+                val_pool = cb.Pool(
+                    X_val_cat,
+                    y_val_fold[:, i],
+                    cat_features=cat_indices
+                )
+                
+                model = cb.CatBoostClassifier(
+                    loss_function='Logloss',
+                    eval_metric='Logloss',
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    l2_leaf_reg=3,
+                    bootstrap_type='Bernoulli',
+                    subsample=0.8,
+                    random_seed=42,
+                    verbose=False,
+                    early_stopping_rounds=50
+                )
+                
+                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
+                pred = model.predict_proba(X_val_cat)[:, 1]
+                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+            
+            pred_catboost = np.column_stack(catboost_preds)
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+            print(f"     ✅ CatBoost: {score_catboost:.4f}")
+            
+        except Exception as e:
+            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
+            # Utiliser une prédiction dummy
+            pred_catboost = np.ones_like(y_val_fold) * 0.5
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+        
+        # 5. ENSEMBLE
+        print("  🎭 Ensemble...")
+        
+        # Ensemble adaptatif selon les modèles disponibles
+        if results['catboost']['score'] < 2.0:  # CatBoost marche
+            ensemble_pred = (0.35 * results['dnn']['predictions'] +
+                           0.25 * results['lgb']['predictions'] +
+                           0.25 * results['xgb']['predictions'] +
+                           0.15 * results['catboost']['predictions'])
+        else:  # Sans CatBoost
+            ensemble_pred = (0.4 * results['dnn']['predictions'] +
+                           0.3 * results['lgb']['predictions'] +
+                           0.3 * results['xgb']['predictions'])
+        
+        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
+        score_ensemble = log_loss(y_val_fold, ensemble_pred)
+        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
+        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
+        
+        return results
+    
+    def run_cross_validation(self):
+        """Validation croisée complète 5-fold"""
+        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
+        print("=" * 60)
+        
+        # Préparation des données
+        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
+        
+        # Validation croisée
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+        fold_results = []
+        
+        print(f"\\n🔄 VALIDATION CROISÉE 5-FOLD")
+        print("-" * 50)
+        
+        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
+            print(f"\\n📁 FOLD {fold + 1}/5")
+            print("-" * 30)
+            
+            X_train_fold = X_train.iloc[train_idx]
+            X_val_fold = X_train.iloc[val_idx]
+            y_train_fold = y_train[train_idx]
+            y_val_fold = y_train[val_idx]
+            
+            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
+            
+            # Entraînement des modèles
+            results = self.train_models_fold(
+                X_train_fold, y_train_fold,
+                X_val_fold, y_val_fold,
+                cat_indices
+            )
+            
+            fold_results.append({
+                'fold': fold + 1,
+                'results': results
+            })
+            
+            print(f"✅ Fold {fold + 1} terminé!")
+        
+        # Analyse des résultats
+        print(f"\\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
+        print("=" * 60)
+        
+        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
+        final_scores = {}
+        
+        for model_name in model_names:
+            scores = [fold['results'][model_name]['score'] for fold in fold_results]
+            final_scores[model_name] = {
+                'mean': np.mean(scores),
+                'std': np.std(scores),
+                'scores': scores
+            }
+        
+        print(f"📊 Scores par modèle:")
+        for model_name, stats in final_scores.items():
+            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
+        
+        # Meilleur modèle
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        best_score = final_scores[best_model]['mean']
+        
+        print(f"\\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
+        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
+        
+        print(f"\\n📈 ANALYSE DE PERFORMANCE:")
+        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
+        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
+        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
+        
+        return fold_results, final_scores, X_test, feature_cols
+
+# EXÉCUTION DU PIPELINE
+if __name__ == "__main__":
+    print(f"🚀 Starting Final Optimized Pipeline")
+    print(f"👤 User: nirdidev05")
+    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
+    
+    pipeline = ProteinLocalizationPipeline()
+    
+    try:
+        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
+        
+        print(f"\\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
+        print(f"👤 User: nirdidev05")
+        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
+        
+        # Recommandation finale
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        print(f"\\n💡 RECOMMANDATION FINALE:")
+        print(f"   Utiliser: {best_model.upper()} pour soumission")
+        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
+        
+        # Prêt pour génération des prédictions finales
+        print(f"\\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
+        print(f"   Test set: {X_test.shape}")
+        print(f"   Features: {len(feature_cols)}")
+        
+    except Exception as e:
+        print(f"❌ Erreur: {e}")
+        import traceback
+        traceback.print_exc()`
+      }
+    },
+
+    architectureExplanation: {
+      title: "Explication de l’architecture du code",
+      sections: [
+        {
+          title: "1. Réseau neuronal profond",
+          paragraph: "Architecture 5 couches avec BatchNorm, Dropout, scheduling adaptatif. Réduction progressive de dimension.",
+          architectureLine: "Input(1296) → BatchNorm → Dense(1024) → Dropout(0.3) → Dense(512) → Dropout(0.25) → Dense(256) → Dropout(0.2) → Dense(128) → Dropout(0.15) → Output(5, sigmoid)"
+        },
+        {
+          title: "2. Modèles de gradient boosting",
+          paragraph: "LightGBM, XGBoost, CatBoost : 5 classifieurs binaires chacun, hyperparamètres optimisés + early stopping.",
+          modelConfigs: {
+            lightgbm: ["num_leaves: 64", "learning_rate: 0.05", "early_stopping: 50"],
+            xgboost: ["max_depth: 6", "tree_method: 'hist'", "n_estimators: 1000"],
+            catboost: ["iterations: 1000", "depth: 6", "cat_features: explicites"]
+          }
+        },
+        {
+          title: "3. Ensemble adaptatif",
+          paragraph: "Redistribution des poids si CatBoost échoue pour préserver le gain d’ensemble.",
+          weights: {
+            withCatBoost: ["DNN: 35% • LGB: 25%", "XGB: 25% • CatBoost: 15%"],
+            withoutCatBoost: ["DNN: 40% • LGB: 30%", "XGB: 30%"]
+          }
+        },
+        {
+          title: "4. Validation croisée & analyse",
+          paragraph: "5-fold stratifié, suivi détaillé (moyenne, variance, classement, projection de rang).",
+          metricsTracked: [
+            "• Log-loss CV moyenne par modèle",
+            "• Écart-type (stabilité)",
+            "• Sélection du meilleur modèle",
+            "• Estimation de rang compétitif"
+          ]
+        }
+      ]
+    },
+
+    expectedOutput: {
+      title: "Sortie attendue du pipeline",
+      consoleOutputExampleTitle: "Exemple de console :",
+      consoleOutput: `🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ
+============================================================
+Utilisateur: nirdidev05
+Démarrage: 2025-08-29 18:14:00 UTC
+
+📊 PRÉPARATION DES DONNÉES
+--------------------------------------------------
+✅ Chargé: Train (14564, 8), Test (3642, 4), Embeddings (18206, 1281)
+✅ Features finales: 1296
+   - Embeddings: 1280
+   - Ingénierie: 16
+   - Catégorielles: 8
+✅ Labels multi-étiquette: (14564, 5)
+
+🔄 VALIDATION CROISÉE 5-FOLD
+--------------------------------------------------
+... (sortie par fold) ...
+🏆 RÉSULTATS FINAUX
+...`,
+      metrics: [
+        { value: "~0.94", labelTop: "Score final attendu", labelBottom: "Log-loss CV" },
+        { value: "±0.02", labelTop: "Écart-type", labelBottom: "Stabilité inter-folds" },
+        { value: "Top 30%", labelTop: "Rang estimé", labelBottom: "Classement compétition" }
+      ]
+    }
+  },
+
+  footer: {
+    componentName: "FooterProtein",
+    headings: {
+      brand: "Protein Localization AI"
+    },
+    description: "Machine learning avancé pour la localisation subcellulaire (ESM-1b + ensembles).",
+    researchLine: "Recherche par nirdidev05 • Log-loss: 0.94±0.02",
+    buttons: {
+      downloadReport: "Télécharger le rapport",
+      viewNotebook: "Voir le notebook"
+    },
+    copyright:
+      "© 2024 Recherche sur la localisation des protéines • Construit avec React + TypeScript • ~18 000 protéines analysées",
+    download: {
+      href: "/Protein Subcellular Localization Prediction.pdf",
+      filename: "Protein_Subcellular_Localization_Prediction.pdf"
+    }
+  }
+
+},
 adc: {
   hero: {
     badge: {
@@ -11357,6 +14602,1359 @@ rationale: "Assure modèle généralise dates futures sans accès informations f
       achievements: "Erfolge",
       contact: "Kontakt"
     },
+    Protein :{
+
+  nav: {
+    logo: {
+      brand: "ProteinAI",
+      subtitle: "Subzelluläre Lokalisierung"
+    },
+    items: {
+      abstract: "Zusammenfassung",
+      methodology: "Methoden",
+      results: "Ergebnisse",
+      discussion: "Diskussion"
+    },
+    buttons: {
+      report: "Bericht",
+      code: "Code"
+    }
+  },
+
+  // Hero Section
+  hero: {
+    badge: {
+      text: "Fortgeschrittene ML‑Forschung • 2025"
+    },
+    title: {
+      main: ["Protein", "Subzelluläre", "Lokalisierung"],
+      subtitle: "Angetrieben von ESM-1b & Ensemble ML"
+    },
+    description: "Fortgeschrittener Machine‑Learning‑Pipeline zur Vorhersage des zellulären Aufenthaltsortes von Proteinen – gestützt auf moderne Protein‑Sprachmodelle und ausgefeilte Ensemble‑Methoden.",
+    
+    performanceMetrics: {
+      metrics: [
+        { 
+          value: "0.94", 
+          label: "Log-Loss Score", 
+          suffix: "±0.02" 
+        },
+        { 
+          value: "18K", 
+          label: "Analysierte Proteine", 
+          suffix: "+" 
+        },
+        { 
+          value: "1,296", 
+          label: "Feature‑Variablen", 
+          suffix: "" 
+        },
+        { 
+          value: "5-Fold", 
+          label: "Kreuzvalidierung", 
+          suffix: "" 
+        }
+      ]
+    },
+
+    achievements: {
+      title: "Zentrale Erfolge",
+      subtitle: "Durchbruchsergebnisse in der Computergestützten Biologie",
+      items: [
+        {
+          title: "Top‑30% Leistung",
+          description: "Wettbewerbsfähige Benchmark‑Platzierung"
+        },
+        {
+          title: "ESM-1b Integration", 
+          description: "Modernes Protein‑Sprachmodell"
+        },
+        {
+          title: "Ensemble‑Methode",
+          description: "Ausgereifter 4‑Modell‑Pipeline"
+        },
+        {
+          title: "Multi‑Label-Klassifikation",
+          description: "5 subzelluläre Kompartimente"
+        }
+      ]
+    },
+
+    buttons: {
+      primary: "Forschung entdecken",
+      secondary: "Code ansehen"
+    },
+
+    author: {
+      name: "nirdidev05",
+      role: "ML Research Engineer"
+    },
+
+    modelPerformance: {
+      title: "Modellleistung",
+      models: [
+        { 
+          name: "Ensemble", 
+          score: 0.94, 
+          color: "bg-primary" 
+        },
+        { 
+          name: "CatBoost", 
+          score: 0.95, 
+          color: "bg-secondary" 
+        },
+        { 
+          name: "LightGBM", 
+          score: 0.98, 
+          color: "bg-accent" 
+        },
+        { 
+          name: "XGBoost", 
+          score: 1.00, 
+          color: "bg-warning" 
+        }
+      ]
+    }
+  },
+ 
+  abstract: {
+    title: "Zusammenfassung",
+    subtitle: "Executive Summary zur Vorhersage subzellulärer Proteinlokalisierung",
+    
+    content: {
+      introduction: "Proteine sind polymere Biomoleküle aus Aminosäure-Sequenzen und grundlegend für nahezu alle zellulären Prozesse. Ihre dreidimensionale Struktur und Funktion wird maßgeblich durch die Sequenz – und entscheidend – durch ihren Aufenthaltsort in der Zelle (die „subzelluläre Lokalisierung“) bestimmt. Der Ort (Nukleus, Cytoplasma, Membran etc.) korreliert eng mit Funktion und Interaktionen. Fehl-Lokalisierung trägt zu vielen Erkrankungen bei.",
+      
+      problem: "Wir adressieren das Problem, aus der Sequenz vorherzusagen, in welchen subzellulären Kompartiment(en) ein Protein wahrscheinlich vorkommt. Wir nutzen einen kuratierten Datensatz von ~18.000 Sequenzen (UniProtKB/Swiss-Prot) mit Annotationen für fünf Lokalisierungsklassen:",
+      
+      localizationClasses: ["Nucleus", "Cytoplasm", "Membrane", "Cell membrane", "Extracellular"],
+      
+      approach: "Unser Ansatz kombiniert vortrainierte Protein-Sprachmodell‑Embeddings (ESM-1b) mit klassischen ML‑Techniken einschließlich Tiefer Neuronaler Netze und Gradient‑Boosting‑Algorithmen. Das Multi‑Label‑Klassifikations‑Framework erreichte einen konkurrenzfähigen Log-Loss von etwa",
+      
+      performanceScore: "0.94 ± 0.02",
+      
+      conclusion: "und demonstriert die Effektivität der Kombination moderner Protein‑Embeddings mit Ensemble‑Methoden für subzelluläre Lokalisierung."
+    },
+    
+    statistics: {
+      proteinSequences: {
+        value: "~18,000",
+        label: "Proteinsequenzen"
+      },
+      localizationClasses: {
+        value: "5",
+        label: "Lokalisierungsklassen"
+      },
+      logLossScore: {
+        value: "0.94",
+        label: "Log-Loss Score"
+      }
+    }
+  },
+
+  introduction: {
+    title: "Einführung",
+    subtitle: "Biologischer Kontext und Rechenherausforderung",
+    
+    content: {
+      paragraph1: "Proteine bilden das funktionale Rückgrat zellulärer Prozesse. Sequenz, Struktur und subzelluläre Lokalisierung bedingen sich und bestimmen Interaktionen.",
+      
+      paragraph2: "Fehl-Lokalisierungen können Krankheiten verursachen. Sekretierte und Membranproteine folgen spezifischen Transportwegen. Wir sagen Kompartimente aus Sequenzen vorher.",
+      
+      paragraph3: "Datensatz: ~18.000 kuratierte Sequenzen (UniProtKB/Swiss-Prot) mit fünf Labels: Nucleus, Cytoplasm, Membrane, Cell membrane, Extracellular."
+    },
+    
+    figure1: {
+      title: "Abbildung 1. Zellstruktur und Proteinlokalisierung",
+      conceptualRepresentation: "[Konzeptdarstellung einer typischen tierischen Zelle]",
+      compartments: [
+        {
+          name: "Nucleus",
+          description: "DNA‑Speicher"
+        },
+        {
+          name: "Cytoplasm", 
+          description: "Metabolisches Zentrum"
+        },
+        {
+          name: "Membrane",
+          description: "Transport"
+        },
+        {
+          name: "Cell membrane",
+          description: "Grenze"
+        },
+        {
+          name: "Extracellular",
+          description: "Sekretiert"
+        }
+      ],
+      caption: {
+        prefix: "Legende:",
+        text: "Darstellung wichtiger Kompartimente (Nukleus, Endomembransystem usw.). Funktion erfordert korrekte Ziel-Lokalisierung."
+      }
+    },
+    
+    researchObjectives: {
+      title: "Forschungsziele",
+      objectives: [
+        "Entwicklung genauer Vorhersagemodelle für subzelluläre Lokalisierung",
+        "Nutzung moderner Protein‑Sprachmodelle (ESM-1b) zur Feature-Extraktion", 
+        "Einsatz von Ensemble‑ML für robuste Multi‑Label‑Klassifikation",
+        "Erreichen konkurrenzfähiger Leistung auf kuratierten Qualitätsdaten"
+      ]
+    }
+  },
+
+  dataset: {
+    title: "Datensatz & Explorative Analyse",
+    subtitle: "Umfassende Analyse von 18.000 Proteinsequenzen",
+    
+    content: {
+      overview: "Train: 14.564 Proteine (mehrfach gelabelt möglich), Test: 3.642 ohne Labels. Je Protein: Kingdom (Metazoa, Fungi, Viridiplantae, Other) + Sequenzlänge (40–1022 AS).",
+      
+      multiLabelNature: "Multi‑Label: Proteine können mehreren Kompartimenten angehören → getrennte Sigmoid‑Ausgänge; Log-Loss je Label (Binary Cross‑Entropy) entspricht Wettbewerbsmetrik.",
+      
+      exploratoryAnalysis: "Unterschiede je Kingdom: z.B. ~9,97 % ‘Other’ nuklear vs ~32–41 % in großen Gruppen; ‘Extracellular’ ~48 % in ‘Other’ aber ~3–14 % sonst. Hinweis auf Domänen‑Shift.",
+      
+      classImbalance: "Klassenungleichgewicht: Cell membrane ~15 %, Extracellular ~11 %. PCA: ~536 von 1280 Dimensionen → 95 % Varianz. Hohe Dimensionalität steuert Feature‑Strategie."
+    },
+    
+    basicStatistics: {
+      title: "Basisstatistiken",
+      items: [
+        "Sequenzlänge: Mittel ≈ 479 AS (Std ≈ 242), Bereich ~40–1022. Transformierte Längen + Flags (kurz/mittel/lang).",
+        "Kingdom (Test): Metazoa ~57,2 %, Fungi ~21,4 %, Viridiplantae ~19,4 %, Other ~2,0 %. Label‑Encoding + One‑Hot.",
+        "Lokalisierung (Train): Nucleus 34 %, Cytoplasm 35 %, Membrane 31 %, Cell membrane 15 %, Extracellular 11 %."
+      ]
+    },
+    
+    kingdomDistribution: {
+      title: "Verteilung nach Kingdom",
+      kingdoms: [
+        { name: "Metazoa", percentage: "57.2%" },
+        { name: "Fungi", percentage: "21.4%" },
+        { name: "Viridiplantae", percentage: "19.4%" },
+        { name: "Other", percentage: "2.0%" }
+      ]
+    },
+    
+    localizationDistribution: {
+      title: "Verteilung der Lokalisierungsklassen",
+      tableHeaders: {
+        localization: "Lokalisierung",
+        trainFraction: "Train‑Anteil", 
+        visualDistribution: "Visuelle Verteilung"
+      },
+      classes: [
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Membrane", fraction: "31%" },
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ]
+    }
+  },
+
+  exploratoryAnalysis: {
+    title: "Explorative Analyse",
+    subtitle: "Tiefe Einblicke in Sequenzmuster & Kingdom‑Klassen‑Beziehungen",
+
+    kingdomClassImbalances: {
+      title: "Kingdom‑Klassen‑Ungleichgewichte",
+      intro: "Signifikante Unterschiede deuten auf Domänen‑Shifts hin:",
+      bullets: [
+        "~9,97 % ‘Other’ nuklear vs ~32–41 % in Hauptkingdoms",
+        "‘Extracellular’ ~48 % in ‘Other’, nur ~3–14 % sonst",
+        "Evolutive & funktionelle Spezialisierung"
+      ]
+    },
+
+    dimensionalityAnalysis: {
+      title: "Dimensionalitätsanalyse",
+      intro: "PCA auf Embeddings hoher Dimension:",
+      points: [
+        "~536 Komponenten erklären 95 % Varianz",
+        "Von insgesamt 1280 Dimensionen",
+        "Unterstreicht Komplexität des Feature‑Raums"
+      ]
+    },
+
+    classImbalanceChallenges: {
+      title: "Herausforderungen durch Klassenungleichgewicht",
+      intro: "Direkter Einfluss auf Training & Bewertung:",
+      largestClasses: {
+        title: "Größte Klassen",
+        classes: [
+          { name: "Cytoplasm", fraction: "35%" },
+          { name: "Nucleus", fraction: "34%" },
+            { name: "Membrane", fraction: "31%" }
+        ]
+      },
+      smallestClasses: {
+        title: "Kleinere Klassen",
+        classes: [
+          { name: "Cell membrane", fraction: "15%" },
+          { name: "Extracellular", fraction: "11%" }
+        ],
+        note: "Benötigen ggf. Gewichtung oder Kalibrierung"
+      }
+    },
+
+    keyInsights: {
+      title: "Schlüsseleinsichten für die Modellstrategie",
+      cards: [
+        {
+          title: "Multi‑Label Ansatz",
+          text: "Unabhängige Sigmoids statt globalem Softmax."
+        },
+        {
+          title: "Kingdom‑sensitive Features",
+          text: "Domänen‑Shifts erfordern spezifische Interaktionen."
+        },
+        {
+          title: "Hohe Dimensionalität",
+          text: "Regulierung & statistische Verdichtung nötig."
+        }
+      ]
+    },
+
+    strategicImplications: {
+      text: "💡 Strategische Implikation: Erkenntnisse steuern Feature‑Engineering, Modellwahl und Ensemble‑Gewichtung."
+    }
+  },
+
+  featureEngineering: {
+    title: "Feature Engineering & Aufbereitung",
+    subtitle: "Transformation roher Proteinsequenzen in reichhaltige Repräsentationen",
+
+    introduction: "Fusion jeder Sequenz mit ESM-1b Embeddings (1.280 Dimensionen, auf 250 Mio. Sequenzen vortrainiert); enthalten strukturelle & evolutive Signale.",
+    
+    esmEmbeddings: {
+      title: "ESM-1b Protein‑Embeddings",
+      bullets: [
+        "1.280‑dimensionaler Vektor pro Protein",
+        "Vortrainiert auf 250 Mio. Sequenzen",
+        "Erfasst strukturelle & evolutive Information",
+        "Enthält Hinweise auf Sekundär-/Tertiärstruktur"
+      ]
+    },
+
+    finalFeatureSet: {
+      title: "Finaler Feature‑Satz",
+      rows: [
+        { label: "ESM-1b Embeddings", value: "1.280 Dims" },
+        { label: "Abgeleitete Features", value: "~16 Dims" },
+        { label: "Gesamt pro Protein", value: "~1.296 Features" }
+      ]
+    },
+
+    sequenceFeatures: {
+      title: "Sequenz‑Features",
+      mathematicalTransformations: {
+        title: "Mathematische Transformationen",
+        code: [
+          "seq_len_log = log(1+length)",
+          "seq_len_sqrt = sqrt(length)",
+          "seq_len_norm = length / max_length"
+        ]
+      },
+      categoricalFlags: {
+        title: "Kategorische Indikatoren",
+        flags: [
+          "is_short – kurze Sequenzen",
+          "is_medium – mittlere Länge",
+          "is_long – fängt Nichtlinearität ab"
+        ]
+      }
+    },
+
+    kingdomEncoding: {
+      title: "Kingdom‑Kodierung",
+      categoricalEncoding: {
+        title: "Kategorisches Encoding",
+        text: "Label‑Encoding kingdom_enc (0–3) + One‑Hot Flags (is_metazoa etc.) für Baum‑Modelle.",
+        mapping: [
+          { name: "Metazoa", code: "0" },
+          { name: "Fungi", code: "1" },
+          { name: "Viridiplantae", code: "2" },
+          { name: "Other", code: "3" }
+        ]
+      },
+      interactionFeatures: {
+        title: "Interaktions‑Features",
+        text: "Längen × Kingdom Interaktion:",
+        code: "len_kingdom = seq_len_norm * kingdom_enc",
+        note: "Erlaubt Modellierung kingdom‑spezifischer Längenverteilungen"
+      }
+    },
+
+    embeddingStatistics: {
+      title: "Embedding‑Statistiken",
+      description: "Aus ersten 100 Dimensionen: Mittelwert, Std, Max, Min – kompakte Verteilungssignatur.",
+      stats: [
+        { symbol: "μ", label: "Mittel" },
+        { symbol: "σ", label: "Std-Abweichung" },
+        { symbol: "max", label: "Maximum" },
+        { symbol: "min", label: "Minimum" }
+      ],
+      note: "Verdichtung auf erste 100 Dimensionen für Effizienz"
+    },
+
+    dataPreprocessingPipeline: {
+      title: "Vorverarbeitungs‑Pipeline",
+      paragraphs: [
+        "~1.296 Features (1.280 Embeddings + ~16 abgeleitete). Fehlwerte → 0.",
+        "Kategorische Features für CatBoost markiert. StandardScaler nur fürs DNN; Baum‑Modelle nutzen Rohwerte."
+      ],
+      models: [
+        { title: "Neuronale Netze", text: "StandardScaler Normalisierung" },
+        { title: "Baum‑Modelle", text: "Rohfeatures + explizite Kategorien" }
+      ]
+    }
+  },
+
+  modeling: {
+    title: "Modellierungsansätze",
+    subtitle: "Ensemble aus Deep Learning und baumbasierten Methoden für Multi‑Label",
+
+    frameworkOverview: {
+      title: "Rahmenüberblick",
+      text: "5‑fach Kreuzvalidierung, je Label ein binärer Klassifikator. Folgende Modelle pro Fold:"
+    },
+
+    dnn: {
+      title: "Deep Neural Network (DNN)",
+      description: "Fully‑Connected Netz (1296 Features) lernt komplexe nichtlineare Interaktionen.",
+      architectureTitle: "Architektur",
+      architecture: [
+        { layer: "Input", detail: "1296 Features" },
+        { layer: "BatchNorm", detail: "" },
+        { layer: "Dense (ReLU)", detail: "1024 → Dropout(0.3)" },
+        { layer: "Dense (ReLU)", detail: "512 → Dropout(0.25)" },
+        { layer: "Dense (ReLU)", detail: "256 → Dropout(0.2)" },
+        { layer: "Dense (ReLU)", detail: "128 → Dropout(0.15)" },
+        { layer: "Output (Sigmoid)", detail: "5 Klassen" }
+      ],
+      trainingConfigTitle: "Trainingskonfiguration",
+      trainingConfig: [
+        { name: "Loss", value: "Binäre Cross‑Entropy (Summe über Klassen)" },
+        { name: "Optimierer", value: "Adam (lr=0.001)" },
+        { name: "Regularisierung", value: "Early Stopping, LR‑Reduktion" },
+        { name: "Monitoring", value: "Validierungsverlust" }
+      ]
+    },
+
+    lightgbm: {
+      title: "LightGBM",
+      description: "5 Gradient‑Boosting Modelle (binär) – effizient für große numerische Feature‑Sätze.",
+      params: [
+        { name: "Objective", value: "binary_logloss" },
+        { name: "Boosting rounds", value: "1000" },
+        { name: "Leaves", value: "64" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Starke tabellarische Basisleistung"
+    },
+
+    xgboost: {
+      title: "XGBoost",
+      description: "5 binäre XGB‑Klassifikatoren (logistic). ‘hist’ Baumverfahren für >1000 Features.",
+      params: [
+        { name: "Objective", value: "binary:logistic" },
+        { name: "Max depth", value: "6" },
+        { name: "Learning rate", value: "0.05" },
+        { name: "Subsample", value: "0.8" },
+        { name: "Trees", value: "1000" }
+      ]
+    },
+
+    catboost: {
+      title: "CatBoost",
+      description: "5 CatBoost Modelle mit nativer Kategorienbehandlung – vorteilhaft bei Ungleichgewicht.",
+      params: [
+        { name: "Loss", value: "Logloss" },
+        { name: "Iterations", value: "1000" },
+        { name: "Depth", value: "6" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Kategorische Indizes explizit übergeben"
+    },
+
+    ensembleStrategy: {
+      title: "Ensemble‑Strategie",
+      description: "Wahrscheinlichkeiten pro Klasse; Clipping auf [1e‑7, 1‑1e‑7] für stabile Log-Loss.",
+      weightsTitle: "Ensemble‑Gewichte",
+      weights: [
+        { model: "Deep Neural Network", weight: "35%" },
+        { model: "LightGBM", weight: "25%" },
+        { model: "XGBoost", weight: "25%" },
+        { model: "CatBoost", weight: "15%" }
+      ],
+      rationaleTitle: "Begründung",
+      rationale: [
+        "Multi‑Modell Ansatz inspiriert von DeepLoc 2.0",
+        "Transformer‑Embeddings + Multi‑Label Köpfe effektiv",
+        "Kombination NN + Bäume",
+        "Gewichtete Mittelung reduziert Varianz",
+        "Gewichtsanpassung bei CatBoost‑Ausfall"
+      ]
+    }
+  },
+
+  results: {
+    title: "Ergebnisse",
+    subtitle: "Umfassende Leistungsanalyse über Modelle & Folds",
+
+    performanceIntro: "5‑Fold CV: DNN & einzelne Booster ~0.98–1.05 Log-Loss, CatBoost ~0.95, Ensemble ~0.94 (±0.02).",
+
+    cvSummary: {
+      title: "Kreuzvalidierungs‑Überblick",
+      intro: "Typische CV‑Resultate (Mittel ± Std):",
+      table: {
+        headers: {
+          model: "Modell",
+          cvLogLoss: "Log-Loss CV (Mittel ± Std)",
+          performanceRank: "Rang",
+          stability: "Stabilität"
+        },
+        rows: [
+          { model: "DNN", logLoss: "~1.02 ± 0.03", rank: "4.", stability: "DNN" },
+          { model: "LightGBM", logLoss: "~0.98 ± 0.03", rank: "3.", stability: "LightGBM" },
+          { model: "XGBoost", logLoss: "~1.00 ± 0.04", rank: "5.", stability: "XGBoost" },
+          { model: "CatBoost", logLoss: "~0.95 ± 0.02", rank: "2.", stability: "CatBoost" },
+          { model: "Ensemble", logLoss: "~0.94 ± 0.02", rank: "1. 🏆", stability: "Ensemble" }
+        ]
+      }
+    },
+
+    keyPerformanceInsights: {
+      title: "Zentrale Erkenntnisse",
+      bullets: [
+        "Ensemble verbessert bestes Einzelmodell (~0.94 vs ~0.95)",
+        "CatBoost bestes Einzelmodell; Ensemble leicht besser",
+        "Geringe Std ⇒ robuste Methoden",
+        "Seed‑Variabilität möglich"
+      ]
+    },
+
+    competitiveAnalysis: {
+      title: "Wettbewerbsanalyse",
+      cards: [
+        {
+          title: "Wettbewerbswert",
+          text: "Log-Loss ≪ 1.1 → erwartete Top‑30% Platzierung"
+        },
+        {
+          title: "Robustheit",
+          text: "Niedrige Standardabweichung → gute Generalisierung"
+        },
+        {
+          title: "Einreichungsstrategie",
+          text: "Ensemble‑Vorhersagen als Submission"
+        }
+      ]
+    },
+
+    statisticalSignificance: {
+      title: "Statistische Signifikanz",
+      text: "Konkurrenzfähiger Score (≪1.1) + Stabilität ⇒ robuste Pipeline; Ensemble nutzt Stärken von NN & Baumverfahren."
+    }
+  },
+
+  discussion: {
+    title: "Diskussion & Einsichten",
+    subtitle: "Analyse der Modellleistung & biologische Bedeutung",
+
+    introduction: "Vortrainierte Protein‑Embeddings + klassische ML liefern verlässliche Lokalisierungsvorhersagen. ESM-1b kodiert reichhaltige biochemische Signale; Feature‑Engineering (Länge, Kingdom, Interaktion len_kingdom) verstärkt domänenspezifisches Lernen.",
+
+    esmEmbeddingAnalysis: {
+      title: "ESM-1b Embedding Analyse",
+      bullets: [
+        "Starkes Vorwissen: reichhaltige biochemische Kodierung",
+        "Strukturinformation: Hinweise auf Sekundär/Tertiärstruktur",
+        "Evolutionskontext: Training auf 250 Mio. Sequenzen"
+      ]
+    },
+
+    featureEngineeringImpact: {
+      title: "Impact des Feature‑Engineering",
+      bullets: [
+        "Kingdom‑Encoding + Interaktionen fangen Muster ein",
+        "Längentransformationen (log, sqrt) für Variabilität",
+        "Statistische Embedding‑Zusammenfassungen verdichten Verteilungen"
+      ]
+    },
+
+    multiLabelStrategy: {
+      title: "Multi‑Label Strategie",
+      paragraph: "5 Sigmoid‑Ausgänge notwendig (Proteine multi‑lokal). Ausrichtung auf Wettbewerb (Log-Loss).",
+      whyMultiLabel: {
+        title: "Warum Multi‑Label?",
+        bullets: [
+          "• Mehrfachlokalisierungen möglich",
+          "• Biologische Realität des Traffics",
+          "• Unabhängige Wahrscheinlichkeiten"
+        ]
+      },
+      technicalImplementation: {
+        title: "Technische Implementierung",
+        bullets: [
+          "• Binäre Cross‑Entropy je Label",
+          "• Kompatibel mit Kaggle Metrik",
+          "• Entspricht etablierten Ansätzen (DeepLoc 2.0)"
+        ]
+      }
+    },
+
+    modelPerformanceAnalysis: {
+      title: "Modellleistungsanalyse",
+      paragraph: "Baum‑Ensembles (CatBoost, LightGBM, XGBoost) stark bei gemischten Featuretypen; CatBoost profitiert von nativer Kat‑Behandlung.",
+      cards: [
+        {
+          title: "Baumbasierte Modelle",
+          text: "Robust gegen Overfitting auf Tabellendaten"
+        },
+        {
+          title: "Neuronale Netze",
+          text: "Erfassen hochgradig nichtlineare Interaktionen"
+        },
+        {
+          title: "Ensemble‑Nutzen",
+          text: "Reduziert Generalisierungsfehler"
+        }
+      ]
+    },
+
+    limitationsAndChallenges: {
+      title: "Limitationen & Herausforderungen",
+      classImbalance: {
+        title: "Klassenungleichgewicht",
+        paragraph: "Keine Gewichte genutzt; seltene Klassen (Extracellular ~11%) dennoch voll berücksichtigt. Zukünftig: Class Weights / Focal Loss.",
+        stats: [
+          "Cell membrane: 15%",
+          "Extracellular: 11%"
+        ]
+      },
+      kingdomSpecificModeling: {
+        title: "Kingdom‑spezifisches Modellieren",
+        paragraph: "Globales Modell genutzt; spezifische Feinabstimmung könnte divergente Mechanismen besser abbilden."
+      }
+    },
+
+    biologicalSignificance: {
+      title: "Biologische Bedeutung",
+      intro: "Resultate stützen zentrale Prinzipien:",
+      points: [
+        {
+          title: "Sequenz‑Funktions‑Beziehung",
+          text: "Sequenz trägt genügend Information für Lokalisierung (Sequenz→Struktur→Funktion)."
+        },
+        {
+          title: "Evolutive Erhaltung",
+          text: "Lokalisierungssignale offenbar konserviert."
+        }
+      ],
+      clinicalRelevance: {
+        title: "Klinische Relevanz",
+        text: "Erkennung fehl‑lokalisierter Proteine unterstützt Krankheitsverständnis & Drug Discovery."
+      }
+    }
+  },
+
+  conclusion: {
+    title: "Schlussfolgerungen & Ausblick",
+    subtitle: "Zentrale Erkenntnisse und zukünftige Richtungen",
+
+    summaryIntro: "Wir entwickelten eine umfassende Multi‑Label‑Pipeline mit Sequenz‑Embeddings & tabellarischen Methoden; Kombination moderner Sprachmodelle und klassischer ML liefert Spitzenleistung.",
+    
+    keyLessons: {
+      title: "Wichtigste Lehren",
+      lessons: [
+        {
+          number: "1",
+          title: "Starke vortrainierte Embeddings",
+          text: "ESM-1b als Kernfeature – strukturelle & funktionale Hinweise."
+        },
+        {
+          number: "2",
+          title: "Feature‑Engineering bleibt wertvoll",
+          text: "Längen‑Transformationen & Kingdom‑Interaktionen ergänzen Embeddings."
+        },
+        {
+          number: "3",
+          title: "Ensemble‑Methoden überzeugen",
+          text: "Diversität (NN + Boosting) ≈0.94 Log-Loss."
+        },
+        {
+          number: "4",
+          title: "Identifizierte Herausforderungen",
+          text: "Ungleichgewicht & Domänenverschiebungen → künftige Gewichtung/hierarchische Modelle."
+        }
+      ]
+    },
+
+    futureResearchDirections: {
+      title: "Zukünftige Forschungsrichtungen",
+      items: [
+        {
+          title: "End‑to‑End Fine‑Tuning",
+          text: "Direktes Feinjustieren von ESM / ProtBERT auf die Aufgabe."
+        },
+        {
+          title: "Multi‑modale Integration",
+          text: "Strukturvorhersagen, Mikroskopie, Phylogenie kombinieren."
+        },
+        {
+          title: "Erweiterte Ensembles",
+          text: "Stacking, Meta‑Learning, dynamische Auswahl, Bayes’sche Unsicherheit."
+        },
+        {
+          title: "Hierarchische Klassifikation",
+          text: "Grobes Region → spezifisches Kompartiment."
+        },
+        {
+          title: "Ungleichgewichts‑Lösungen",
+          text: "Focal Loss, Kosten‑Sensitivität, SMOTE für Sequenzen."
+        },
+        {
+          title: "Domänentransfer",
+          text: "Kingdom‑spezifisches Fine‑Tuning / Familienadaption."
+        }
+      ]
+    },
+
+    broaderImpact: {
+      title: "Weiterer Einfluss",
+      conclusionParagraph: "Pipeline koppelt moderne Sprachmodelle mit robustem ML für präzise Lokalisierung – Grundlage für Annotation & verwandte Aufgaben.",
+      immediateApplications: {
+        title: "Kurzfristige Anwendungen",
+        items: [
+          "Signalpeptid‑Vorhersage",
+          "Organell‑spezifische Funktionsanalyse",
+          "Drug‑Target Identifikation",
+          "Analyse krankheitsassoziierter Proteine"
+        ]
+      },
+      longTermVision: {
+        title: "Langfristige Vision",
+        items: [
+          "Automatisierte Protein‑Annotation",
+          "Personalisierte Medizin",
+          "Synthetische Biologie Design‑Tools",
+          "Plattformen für Arzneimittelforschung"
+        ]
+      }
+    }
+  },
+
+  references: {
+    title: "Referenzen",
+    subtitle: "Grundlagenliteratur & unterstützende Forschung",
+
+    introduction: "Grundlegende Arbeiten zeigen die zentrale Rolle der subzellulären Lokalisierung für Funktion & Pathologie. UniProt/Swiss-Prot als maßgebliche Quelle. ESM-1b (650M Parameter) auf 250 Mio. Sequenzen vortrainiert. DeepLoc 2.0 demonstriert Transformer‑Embeddings für Multi‑Label Lokalisierung.",
+    
+    corePublications: {
+      title: "Kernpublikationen",
+      entries: [
+        {
+          citation: "Rives et al. (2021) Biological structure and function emerge... PNAS 118(15) e2016239118.",
+          keyContribution: "🔑 Beitrag: Einführung von ESM-1b – erfasst Struktur & Funktion aus unüberwachtem Training."
+        },
+        {
+          citation: "Thumuluri et al. (2022) DeepLoc 2.0... Nucleic Acids Research 50(W1) W228-W234.",
+          keyContribution: "🔑 Beitrag: Transformer‑Embeddings für Multi‑Label Lokalisierung etabliert."
+        },
+        {
+          citation: "UniProt Consortium (2023) UniProt 2023. Nucleic Acids Research 51(D1) D523-D531.",
+          keyContribution: "🔑 Beitrag: Kuratierte Referenzdatenbank (UniProtKB/Swiss-Prot)."
+        }
+      ]
+    },
+
+    supportingLiterature: {
+      title: "Unterstützende Literatur",
+      machineLearningMethods: {
+        title: "ML‑Methoden",
+        entries: [
+          "Chen & Guestrin (2016) XGBoost. KDD.",
+          "Ke et al. (2017) LightGBM. NIPS.",
+          "Prokhorenkova et al. (2018) CatBoost. NeurIPS."
+        ]
+      },
+      proteinBioinformatics: {
+        title: "Protein‑Bioinformatik",
+        entries: [
+          "Almagro Armenteros et al. (2017) DeepLoc. Bioinformatics.",
+          "Elnaggar et al. (2021) ProtTrans. IEEE TPAMI.",
+          "Lin et al. (2023) Atomic structure prediction with LM. Science."
+        ]
+      }
+    },
+
+    methodologicalFoundations: {
+      title: "Methodische Grundlagen",
+      items: [
+        {
+          title: "Protein‑Sprachmodelle",
+          text: "Transformer lernen evolutive & strukturelle Repräsentationen unüberwacht."
+        },
+        {
+          title: "Multi‑Label Klassifikation",
+          text: "Binary Relevance mit unabhängigen Sigmoid‑Ausgängen."
+        },
+        {
+          title: "Ensemble Learning",
+          text: "Kombination heterogener Modelle für bessere Generalisierung."
+        }
+      ]
+    },
+
+    dataSourcesAndTools: {
+      title: "Datenquellen & Werkzeuge",
+      leftColumn: [
+        "Datensatz: UniProtKB/Swiss-Prot",
+        "Embeddings: ESM-1b (650M)",
+        "Framework: Python (scikit-learn, TensorFlow)"
+      ],
+      rightColumn: [
+        "ML Libraries: LightGBM, XGBoost, CatBoost",
+        "Evaluierung: 5‑Fold CV, Log-Loss",
+        "Hardware: GPU‑beschleunigtes Training"
+      ]
+    }
+  },
+
+  appendix: {
+    title: "Anhang",
+    subtitle: "Vollständige Implementierung & technische Details",
+
+    completePipelineImplementation: {
+      title: "Komplette Pipeline‑Implementierung",
+      intro: "Produktionsreife Implementierung (~0.94 ± 0.02 Log-Loss) – optimierte Komponenten.",
+      pipelineOverview: {
+        title: "Übersicht",
+        metrics: [
+          { value: "4", label: "ML‑Modelle" },
+          { value: "5-Fold", label: "Kreuzvalidierung" },
+          { value: "1,296", label: "Features" },
+          { value: "~18K", label: "Proteine" }
+        ]
+      },
+      productionCodeSection: {
+        title: "Produktionscode (Auszug)",
+        meta: {
+          author: "Autor: nirdidev05",
+          date: "Datum: 2025-08-29"
+        },
+        code: `import pandas as pd
+import numpy as np
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import log_loss
+import tensorflow as tf
+from tensorflow.keras import layers, Model, callbacks
+import lightgbm as lgb
+import xgboost as xgb
+import catboost as cb
+import warnings
+warnings.filterwarnings('ignore')
+
+print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
+print("=" * 60)
+print(f"Current User: {str('nirdidev05')}")
+print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
+
+class ProteinLocalizationPipeline:
+    """Pipeline complet optimisé basé sur tes excellents résultats"""
+    
+    def __init__(self):
+        self.num_classes = 5
+        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
+        
+    def load_and_prepare_data(self):
+        """Chargement et préparation complète des données"""
+        print("\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
+        print("-" * 50)
+        
+        # Chargement
+        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
+        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
+        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
+        
+        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
+        
+        # Fusion
+        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
+        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
+        
+        # Feature Engineering
+        def engineer_features(df, is_train=True):
+            df = df.copy()
+            
+            # Features de base
+            df['seq_len_log'] = np.log1p(df['seq_len'])
+            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
+            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
+            
+            # Features catégorielles (comme int pour éviter le problème CatBoost)
+            df['is_short'] = (df['seq_len'] < 200).astype('int32')
+            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
+            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
+            
+            # Kingdom encoding
+            if is_train:
+                self.kingdom_encoder = LabelEncoder()
+                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
+            else:
+                kingdoms = df['Kingdom'].fillna('Unknown')
+                known = set(self.kingdom_encoder.classes_)
+                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
+                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
+            
+            # Kingdom one-hot (comme int32)
+            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
+            for kingdom in top_kingdoms:
+                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
+            
+            # Features d'interaction
+            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
+            
+            # Stats des embeddings
+            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
+            if all(col in df.columns for col in embed_cols):
+                embed_data = df[embed_cols].values
+                df['embed_mean'] = np.mean(embed_data, axis=1)
+                df['embed_std'] = np.std(embed_data, axis=1)
+                df['embed_max'] = np.max(embed_data, axis=1)
+                df['embed_min'] = np.min(embed_data, axis=1)
+            
+            return df
+        
+        # Application du feature engineering
+        train_processed = engineer_features(train_merged, is_train=True)
+        test_processed = engineer_features(test_merged, is_train=False)
+        
+        # Sélection des features
+        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
+        engineered_cols = [
+            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
+            'is_short', 'is_medium', 'is_long', 'len_kingdom',
+            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
+            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
+        ]
+        
+        feature_cols = embedding_cols + engineered_cols
+        feature_cols = [col for col in feature_cols if col in train_processed.columns]
+        
+        # Données finales
+        X_train = train_processed[feature_cols].fillna(0)
+        X_test = test_processed[feature_cols].fillna(0)
+        y_train = train_processed[self.class_names].values
+        
+        # Identification des features catégorielles par index
+        categorical_indices = []
+        for i, col in enumerate(feature_cols):
+            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
+                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
+                categorical_indices.append(i)
+        
+        print(f"✅ Features finales: {len(feature_cols)}")
+        print(f"   - Embeddings: {len(embedding_cols)}")
+        print(f"   - Engineered: {len(engineered_cols)}")
+        print(f"   - Categorical indices: {len(categorical_indices)}")
+        print(f"✅ Labels multi-label: {y_train.shape}")
+        
+        return X_train, X_test, y_train, categorical_indices, feature_cols
+    
+    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
+        """Entraîne tous les modèles sur un fold"""
+        results = {}
+        
+        # Conversion en numpy pour compatibilité
+        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
+        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
+        
+        # 1. DEEP NEURAL NETWORK
+        print("  🧠 DNN Training...")
+        
+        # Normalisation
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train_np)
+        X_val_scaled = scaler.transform(X_val_np)
+        
+        # Architecture DNN optimisée
+        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
+        x = layers.BatchNormalization()(inputs)
+        x = layers.Dense(1024, activation='relu')(x)
+        x = layers.Dropout(0.3)(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(512, activation='relu')(x)
+        x = layers.Dropout(0.25)(x)
+        x = layers.Dense(256, activation='relu')(x)
+        x = layers.Dropout(0.2)(x)
+        x = layers.Dense(128, activation='relu')(x)
+        x = layers.Dropout(0.15)(x)
+        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
+        
+        dnn_model = Model(inputs, outputs)
+        dnn_model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+            loss='binary_crossentropy',
+            metrics=['binary_accuracy']
+        )
+        
+        # Callbacks
+        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
+        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
+        
+        # Entraînement
+        dnn_model.fit(
+            X_train_scaled, y_train_fold,
+            validation_data=(X_val_scaled, y_val_fold),
+            epochs=150, batch_size=64,
+            callbacks=[early_stop, lr_reduce],
+            verbose=0
+        )
+        
+        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
+        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
+        score_dnn = log_loss(y_val_fold, pred_dnn)
+        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
+        print(f"     ✅ DNN: {score_dnn:.4f}")
+        
+        # 2. LIGHTGBM
+        print("  🌟 LightGBM Training...")
+        
+        lgb_params = {
+            'objective': 'binary',
+            'metric': 'binary_logloss',
+            'boosting_type': 'gbdt',
+            'num_leaves': 64,
+            'learning_rate': 0.05,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 5,
+            'min_data_in_leaf': 20,
+            'lambda_l1': 0.1,
+            'lambda_l2': 0.1,
+            'verbose': -1,
+            'random_state': 42
+        }
+        
+        lgb_preds = []
+        for i in range(self.num_classes):
+            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
+            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
+            
+            model = lgb.train(
+                lgb_params,
+                train_data,
+                valid_sets=[val_data],
+                num_boost_round=1000,
+                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
+            )
+            
+            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
+            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_lgb = np.column_stack(lgb_preds)
+        score_lgb = log_loss(y_val_fold, pred_lgb)
+        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
+        print(f"     ✅ LightGBM: {score_lgb:.4f}")
+        
+        # 3. XGBOOST
+        print("  🚀 XGBoost Training...")
+        
+        xgb_preds = []
+        for i in range(self.num_classes):
+            model = xgb.XGBClassifier(
+                objective='binary:logistic',
+                eval_metric='logloss',
+                max_depth=6,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                reg_alpha=0.1,
+                reg_lambda=0.1,
+                n_estimators=1000,
+                random_state=42,
+                n_jobs=-1,
+                tree_method='hist'
+            )
+            
+            model.fit(
+                X_train_np, y_train_fold[:, i],
+                eval_set=[(X_val_np, y_val_fold[:, i])],
+                early_stopping_rounds=50,
+                verbose=False
+            )
+            
+            pred = model.predict_proba(X_val_np)[:, 1]
+            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_xgb = np.column_stack(xgb_preds)
+        score_xgb = log_loss(y_val_fold, pred_xgb)
+        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
+        print(f"     ✅ XGBoost: {score_xgb:.4f}")
+        
+        # 4. CATBOOST (avec gestion correcte des features catégorielles)
+        print("  🐱 CatBoost Training...")
+        
+        try:
+            # Conversion explicite des colonnes catégorielles en int
+            X_train_cat = X_train_np.copy().astype(np.float32)
+            X_val_cat = X_val_np.copy().astype(np.float32)
+            
+            # Conversion des features catégorielles en int
+            for idx in cat_indices:
+                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
+                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
+            
+            catboost_preds = []
+            for i in range(self.num_classes):
+                train_pool = cb.Pool(
+                    X_train_cat,
+                    y_train_fold[:, i],
+                    cat_features=cat_indices
+                )
+                val_pool = cb.Pool(
+                    X_val_cat,
+                    y_val_fold[:, i],
+                    cat_features=cat_indices
+                )
+                
+                model = cb.CatBoostClassifier(
+                    loss_function='Logloss',
+                    eval_metric='Logloss',
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    l2_leaf_reg=3,
+                    bootstrap_type='Bernoulli',
+                    subsample=0.8,
+                    random_seed=42,
+                    verbose=False,
+                    early_stopping_rounds=50
+                )
+                
+                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
+                pred = model.predict_proba(X_val_cat)[:, 1]
+                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+            
+            pred_catboost = np.column_stack(catboost_preds)
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+            print(f"     ✅ CatBoost: {score_catboost:.4f}")
+            
+        except Exception as e:
+            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
+            # Utiliser une prédiction dummy
+            pred_catboost = np.ones_like(y_val_fold) * 0.5
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+        
+        # 5. ENSEMBLE
+        print("  🎭 Ensemble...")
+        
+        # Ensemble adaptatif selon les modèles disponibles
+        if results['catboost']['score'] < 2.0:  # CatBoost marche
+            ensemble_pred = (0.35 * results['dnn']['predictions'] +
+                           0.25 * results['lgb']['predictions'] +
+                           0.25 * results['xgb']['predictions'] +
+                           0.15 * results['catboost']['predictions'])
+        else:  # Sans CatBoost
+            ensemble_pred = (0.4 * results['dnn']['predictions'] +
+                           0.3 * results['lgb']['predictions'] +
+                           0.3 * results['xgb']['predictions'])
+        
+        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
+        score_ensemble = log_loss(y_val_fold, ensemble_pred)
+        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
+        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
+        
+        return results
+    
+    def run_cross_validation(self):
+        """Validation croisée complète 5-fold"""
+        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
+        print("=" * 60)
+        
+        # Préparation des données
+        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
+        
+        # Validation croisée
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+        fold_results = []
+        
+        print(f"\n🔄 VALIDATION CROISÉE 5-FOLD")
+        print("-" * 50)
+        
+        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
+            print(f"\n📁 FOLD {fold + 1}/5")
+            print("-" * 30)
+            
+            X_train_fold = X_train.iloc[train_idx]
+            X_val_fold = X_train.iloc[val_idx]
+            y_train_fold = y_train[train_idx]
+            y_val_fold = y_train[val_idx]
+            
+            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
+            
+            # Entraînement des modèles
+            results = self.train_models_fold(
+                X_train_fold, y_train_fold,
+                X_val_fold, y_val_fold,
+                cat_indices
+            )
+            
+            fold_results.append({
+                'fold': fold + 1,
+                'results': results
+            })
+            
+            print(f"✅ Fold {fold + 1} terminé!")
+        
+        # Analyse des résultats
+        print(f"\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
+        print("=" * 60)
+        
+        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
+        final_scores = {}
+        
+        for model_name in model_names:
+            scores = [fold['results'][model_name]['score'] for fold in fold_results]
+            final_scores[model_name] = {
+                'mean': np.mean(scores),
+                'std': np.std(scores),
+                'scores': scores
+            }
+        
+        print(f"📊 Scores par modèle:")
+        for model_name, stats in final_scores.items():
+            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
+        
+        # Meilleur modèle
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        best_score = final_scores[best_model]['mean']
+        
+        print(f"\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
+        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
+        
+        print(f"\n📈 ANALYSE DE PERFORMANCE:")
+        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
+        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
+        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
+        
+        return fold_results, final_scores, X_test, feature_cols
+
+# EXÉCUTION DU PIPELINE
+if __name__ == "__main__":
+    print(f"🚀 Starting Final Optimized Pipeline")
+    print(f"👤 User: nirdidev05")
+    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
+    
+    pipeline = ProteinLocalizationPipeline()
+    
+    try:
+        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
+        
+        print(f"\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
+        print(f"👤 User: nirdidev05")
+        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
+        
+        # Recommandation finale
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        print(f"\n💡 RECOMMANDATION FINALE:")
+        print(f"   Utiliser: {best_model.upper()} pour soumission")
+        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
+        
+        # Prêt pour génération des prédictions finales
+        print(f"\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
+        print(f"   Test set: {X_test.shape}")
+        print(f"   Features: {len(feature_cols)}")
+        
+    except Exception as e:
+        print(f"❌ Erreur: {e}")
+        import traceback
+        traceback.print_exc()`
+      }
+    },
+
+    architectureExplanation: {
+      title: "Architektur-Erklärung",
+      sections: [
+        {
+          title: "1. Deep Neural Network",
+          paragraph: "5‑lagige Architektur mit BatchNorm, Dropout & adaptivem LR – progressive Dimensionsreduktion.",
+          architectureLine: "Input(1296) → BatchNorm → Dense(1024) → Dropout(0.3) → Dense(512) → Dropout(0.25) → Dense(256) → Dropout(0.2) → Dense(128) → Dropout(0.15) → Output(5, sigmoid)"
+        },
+        {
+          title: "2. Gradient Boosting Modelle",
+          paragraph: "LightGBM, XGBoost, CatBoost – je 5 binäre Klassifikatoren, Early Stopping & optimierte Hyperparameter.",
+          modelConfigs: {
+            lightgbm: ["num_leaves: 64", "learning_rate: 0.05", "early_stopping: 50"],
+            xgboost: ["max_depth: 6", "tree_method: 'hist'", "n_estimators: 1000"],
+            catboost: ["iterations: 1000", "depth: 6", "cat_features: explizit"]
+          }
+        },
+        {
+          title: "3. Adaptives Ensemble",
+          paragraph: "Gewichtsverteilung wird angepasst, falls CatBoost fehlschlägt.",
+          weights: {
+            withCatBoost: ["DNN: 35% • LGB: 25%", "XGB: 25% • CatBoost: 15%"],
+            withoutCatBoost: ["DNN: 40% • LGB: 30%", "XGB: 30%"]
+          }
+        },
+        {
+          title: "4. Kreuzvalidierung & Analyse",
+          paragraph: "Stratifizierte 5‑Fold CV, Nachverfolgung von Mittelwert, Streuung, Rang, Wettbewerbsprojektion.",
+          metricsTracked: [
+            "• Mittlerer CV Log-Loss je Modell",
+            "• Standardabweichung (Stabilität)",
+            "• Bestes Modell",
+            "• Erwartete Rangposition"
+          ]
+        }
+      ]
+    },
+
+    expectedOutput: {
+      title: "Erwartete Pipeline‑Ausgabe",
+      consoleOutputExampleTitle: "Konsolenbeispiel:",
+      consoleOutput: `🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ
+============================================================
+Benutzer: nirdidev05
+Start: 2025-08-29 18:14:00 UTC
+... (gekürzt) ...`,
+      metrics: [
+        { value: "~0.94", labelTop: "Erwarteter Final‑Score", labelBottom: "CV Log-Loss" },
+        { value: "±0.02", labelTop: "Standardabw.", labelBottom: "Stabilität zwischen Folds" },
+        { value: "Top 30%", labelTop: "Erwartetes Ranking", labelBottom: "Wettbewerb" }
+      ]
+    }
+  },
+
+  footer: {
+    componentName: "FooterProtein",
+    headings: {
+      brand: "Protein Localization AI"
+    },
+    description: "Fortgeschrittenes ML für subzelluläre Lokalisierung (ESM-1b + Ensemble).",
+    researchLine: "Forschung von nirdidev05 • Log-Loss: 0.94±0.02",
+    buttons: {
+      downloadReport: "Bericht herunterladen",
+      viewNotebook: "Notebook ansehen"
+    },
+    copyright:
+      "© 2024 Proteinlokalisierungs-Forschung • Erstellt mit React + TypeScript • ~18.000 Proteine analysiert",
+    download: {
+      href: "/Protein Subcellular Localization Prediction.pdf",
+      filename: "Protein_Subcellular_Localization_Prediction.pdf"
+    }
+  }
+
+},
     hero: {
       greeting: "Hallo, ich bin",
       name: "Walid BENBOUTA", 
@@ -15650,6 +20248,1209 @@ if (ml_score > 0.3) {
       achievements: "Logros",
       contact: "Contacto"
     },
+    Protein : {
+
+  nav: {
+    logo: {
+      brand: "ProteinAI",
+      subtitle: "Localización subcelular"
+    },
+    items: {
+      abstract: "Resumen",
+      methodology: "Métodos",
+      results: "Resultados",
+      discussion: "Discusión"
+    },
+    buttons: {
+      report: "Informe",
+      code: "Código"
+    }
+  },
+
+  // Sección Hero
+  hero: {
+    badge: {
+      text: "Investigación ML Avanzada • 2025"
+    },
+    title: {
+      main: ["Proteína", "Subcelular", "Localización"],
+      subtitle: "Impulsado por ESM-1b & Ensemble ML"
+    },
+    description: "Pipeline avanzado de machine learning que predice dónde residen las proteínas en la célula utilizando modelos de lenguaje proteico de última generación y métodos de ensamblado sofisticados.",
+    
+    performanceMetrics: {
+      metrics: [
+        { value: "0.94", label: "Log-Loss", suffix: "±0.02" },
+        { value: "18K", label: "Proteínas analizadas", suffix: "+" },
+        { value: "1,296", label: "Características ingenierizadas", suffix: "" },
+        { value: "5-Fold", label: "Validación cruzada", suffix: "" }
+      ]
+    },
+
+    achievements: {
+      title: "Logros clave",
+      subtitle: "Resultados de vanguardia en biología computacional",
+      items: [
+        { title: "Rendimiento Top 30%", description: "Clasificación competitiva de referencia" },
+        { title: "Integración ESM-1b", description: "Modelo de lenguaje proteico avanzado" },
+        { title: "Método Ensemble", description: "Pipeline sofisticado con 4 modelos" },
+        { title: "Clasificación multietiqueta", description: "5 compartimentos subcelulares" }
+      ]
+    },
+
+    buttons: {
+      primary: "Explorar investigación",
+      secondary: "Ver código"
+    },
+
+    author: {
+      name: "nirdidev05",
+      role: "Ingeniero de Investigación ML"
+    },
+
+    modelPerformance: {
+      title: "Rendimiento de modelos",
+      models: [
+        { name: "Ensamble", score: 0.94, color: "bg-primary" },
+        { name: "CatBoost", score: 0.95, color: "bg-secondary" },
+        { name: "LightGBM", score: 0.98, color: "bg-accent" },
+        { name: "XGBoost", score: 1.00, color: "bg-warning" }
+      ]
+    }
+  },
+ 
+  abstract: {
+    title: "Resumen",
+    subtitle: "Síntesis ejecutiva de la investigación sobre localización subcelular de proteínas",
+    
+    content: {
+      introduction: "Las proteínas son biomoléculas poliméricas formadas por secuencias de aminoácidos y fundamentales para casi todos los procesos celulares. Su estructura tridimensional y sus funciones están determinadas en gran medida por la secuencia y, de forma crucial, por dónde residen en la célula (la “localización subcelular”). La localización (núcleo, citoplasma, membrana, etc.) se correlaciona estrechamente con su función e interacciones. La deslocalización errónea contribuye a muchas enfermedades.",
+      problem: "Abordamos el problema de predecir el/los compartimento(s) subcelular(es) probables de una proteína a partir de su secuencia. Usamos un conjunto curado de ~18 000 secuencias (UniProtKB/Swiss-Prot) con anotaciones para cinco clases de localización:",
+      localizationClasses: ["Nucleus", "Cytoplasm", "Membrane", "Cell membrane", "Extracellular"],
+      approach: "Nuestra aproximación combina embeddings de un modelo de lenguaje proteico preentrenado (ESM-1b) con técnicas clásicas de ML incluyendo redes neuronales profundas y algoritmos de gradient boosting. El marco multietiqueta logró un log-loss validado cruzadamente de aproximadamente",
+      performanceScore: "0.94 ± 0.02",
+      conclusion: "demostrando la efectividad de combinar embeddings proteicos modernos con métodos ensemble para la localización subcelular."
+    },
+    
+    statistics: {
+      proteinSequences: { value: "~18,000", label: "Secuencias proteicas" },
+      localizationClasses: { value: "5", label: "Clases de localización" },
+      logLossScore: { value: "0.94", label: "Log-Loss" }
+    }
+  },
+
+  introduction: {
+    title: "Introducción",
+    subtitle: "Contexto biológico y desafío computacional",
+    
+    content: {
+      paragraph1: "Las proteínas sustentan los procesos celulares. Su secuencia, estructura y localización subcelular determinan función e interacciones.",
+      paragraph2: "La deslocalización puede causar patologías. Proteínas secretadas y de membrana siguen rutas distintas. Predecimos compartimentos desde la secuencia.",
+      paragraph3: "Dataset: ~18 000 secuencias curadas (UniProtKB/Swiss-Prot) con cinco etiquetas: Nucleus, Cytoplasm, Membrane, Cell membrane, Extracellular."
+    },
+    
+    figure1: {
+      title: "Figura 1. Estructura celular y localización proteica",
+      conceptualRepresentation: "[Representación conceptual de una célula animal típica]",
+      compartments: [
+        { name: "Nucleus", description: "Almacén de ADN" },
+        { name: "Cytoplasm", description: "Centro metabólico" },
+        { name: "Membrane", description: "Transporte" },
+        { name: "Cell membrane", description: "Límite celular" },
+        { name: "Extracellular", description: "Secretado" }
+      ],
+      caption: {
+        prefix: "Leyenda:",
+        text: "Estructura de una célula típica mostrando compartimentos clave. La localización adecuada es esencial para la función proteica."
+      }
+    },
+    
+    researchObjectives: {
+      title: "Objetivos de investigación",
+      objectives: [
+        "Desarrollar métodos exactos para predecir localización subcelular",
+        "Aprovechar modelos de lenguaje proteico modernos (ESM-1b)",
+        "Aplicar técnicas ensemble para clasificación multietiqueta robusta",
+        "Lograr rendimiento competitivo en datos curados de alta calidad"
+      ]
+    }
+  },
+
+  dataset: {
+    title: "Dataset y análisis exploratorio",
+    subtitle: "Análisis integral de 18 000 secuencias",
+    
+    content: {
+      overview: "Train: 14 564 proteínas (posibles múltiples etiquetas); Test: 3 642 sin etiquetas. Cada proteína: reino (Metazoa, Fungi, Viridiplantae, Other) y longitud (40–1022 aa).",
+      multiLabelNature: "Naturaleza multietiqueta: múltiples compartimentos posibles → salida sigmoide por clase; log-loss binario por etiqueta (métrica de la competición).",
+      exploratoryAnalysis: "Desbalances reino‑clase: ~9,97% ‘Other’ nuclear vs ~32–41% en reinos mayores; ‘Extracellular’ ~48% en ‘Other’ vs ~3–14% en otros — indica shift de dominio.",
+      classImbalance: "Desbalance: Cell membrane ~15%, Extracellular ~11%. PCA: ~536 de 1280 dimensiones explican 95% de la varianza → alta dimensionalidad que guía estrategia."
+    },
+    
+    basicStatistics: {
+      title: "Estadísticas básicas",
+      items: [
+        "Longitud media ≈ 479 aa (sd ≈ 242), rango ~40–1022; se aplicaron transformaciones (log, raíz, normalización, banderas).",
+        "Distribución reinos (test): Metazoa ~57,2%, Fungi ~21,4%, Viridiplantae ~19,4%, Other ~2,0%.",
+        "Fracciones (train): Nucleus 34%, Cytoplasm 35%, Membrane 31%, Cell membrane 15%, Extracellular 11%."
+      ]
+    },
+    
+    kingdomDistribution: {
+      title: "Distribución por reino",
+      kingdoms: [
+        { name: "Metazoa", percentage: "57.2%" },
+        { name: "Fungi", percentage: "21.4%" },
+        { name: "Viridiplantae", percentage: "19.4%" },
+        { name: "Other", percentage: "2.0%" }
+      ]
+    },
+    
+    localizationDistribution: {
+      title: "Distribución de clases de localización",
+      tableHeaders: {
+        localization: "Localización",
+        trainFraction: "Fracción Train",
+        visualDistribution: "Distribución visual"
+      },
+      classes: [
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Membrane", fraction: "31%" },
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ]
+    }
+  },
+
+  exploratoryAnalysis: {
+    title: "Análisis exploratorio",
+    subtitle: "Patrones de secuencia y relaciones reino‑clase",
+
+    kingdomClassImbalances: {
+      title: "Desbalances reino‑clase",
+      intro: "Diferencias significativas que sugieren shift de dominio:",
+      bullets: [
+        "~9,97% ‘Other’ nuclear vs ~32–41% en reinos mayores",
+        "‘Extracellular’ ~48% en ‘Other’ vs ~3–14% restante",
+        "Especialización evolutiva y funcional"
+      ]
+    },
+
+    dimensionalityAnalysis: {
+      title: "Análisis de dimensionalidad",
+      intro: "PCA sobre embeddings de alta dimensión:",
+      points: [
+        "~536 componentes cubren 95% de la varianza",
+        "De 1280 dimensiones totales",
+        "Resalta complejidad del espacio de características"
+      ]
+    },
+
+    classImbalanceChallenges: {
+      title: "Retos del desbalance",
+      intro: "Impacto en entrenamiento y evaluación:",
+      largestClasses: {
+        title: "Clases mayores",
+        classes: [
+          { name: "Cytoplasm", fraction: "35%" },
+          { name: "Nucleus", fraction: "34%" },
+          { name: "Membrane", fraction: "31%" }
+        ]
+      },
+      smallestClasses: {
+        title: "Clases minoritarias",
+        classes: [
+          { name: "Cell membrane", fraction: "15%" },
+          { name: "Extracellular", fraction: "11%" }
+        ],
+        note: "Requieren potencialmente ponderación o calibración"
+      }
+    },
+
+    keyInsights: {
+      title: "Ideas clave para la estrategia",
+      cards: [
+        { title: "Enfoque multietiqueta", text: "Sigmoides independientes en lugar de softmax global." },
+        { title: "Features sensibles al reino", text: "Shifts motivan interacciones kingdom‑específicas." },
+        { title: "Alta dimensionalidad", text: "Necesaria regularización y resúmenes estadísticos." }
+      ]
+    },
+
+    strategicImplications: {
+      text: "💡 Implicación estratégica: Guía el feature engineering, selección de algoritmos y ensamblado."
+    }
+  },
+
+  featureEngineering: {
+    title: "Ingeniería de características y preparación",
+    subtitle: "Transformando secuencias crudas en representaciones ricas",
+
+    introduction: "Cada secuencia se fusiona con embeddings ESM-1b (1280 dimensiones) entrenados auto-supervisadamente en 250M secuencias (capturan señales estructurales y evolutivas).",
+    
+    esmEmbeddings: {
+      title: "Embeddings ESM-1b",
+      bullets: [
+        "1280 dimensiones por proteína",
+        "Entrenado en 250M secuencias",
+        "Captura información estructural y evolutiva",
+        "Incluye indicios de estructura secundaria/terciaria"
+      ]
+    },
+
+    finalFeatureSet: {
+      title: "Conjunto final de características",
+      rows: [
+        { label: "Embeddings ESM-1b", value: "1 280 dims" },
+        { label: "Features ingenierizadas", value: "~16 dims" },
+        { label: "Total / proteína", value: "~1 296 características" }
+      ]
+    },
+
+    sequenceFeatures: {
+      title: "Características de secuencia",
+      mathematicalTransformations: {
+        title: "Transformaciones matemáticas",
+        code: [
+          "seq_len_log = log(1+length)",
+          "seq_len_sqrt = sqrt(length)",
+          "seq_len_norm = length / max_length"
+        ]
+      },
+      categoricalFlags: {
+        title: "Indicadores categóricos",
+        flags: [
+          "is_short - secuencias cortas",
+          "is_medium - longitud media",
+          "is_long - capta no linealidad de longitud"
+        ]
+      }
+    },
+
+    kingdomEncoding: {
+      title: "Codificación de reino",
+      categoricalEncoding: {
+        title: "Codificación categórica",
+        text: "Label encoding kingdom_enc (0–3) + flags one-hot (is_metazoa, etc.) para modelos de árboles.",
+        mapping: [
+          { name: "Metazoa", code: "0" },
+          { name: "Fungi", code: "1" },
+          { name: "Viridiplantae", code: "2" },
+          { name: "Other", code: "3" }
+        ]
+      },
+      interactionFeatures: {
+        title: "Características de interacción",
+        text: "Interacción longitud × reino:",
+        code: "len_kingdom = seq_len_norm * kingdom_enc",
+        note: "Permite aprender distribuciones de longitud por dominio"
+      }
+    },
+
+    embeddingStatistics: {
+      title: "Estadísticas de embeddings",
+      description: "Primeras 100 dimensiones: media, desviación, máximo, mínimo — resumen compacto.",
+      stats: [
+        { symbol: "μ", label: "Media" },
+        { symbol: "σ", label: "Desv. estándar" },
+        { symbol: "max", label: "Máximo" },
+        { symbol: "min", label: "Mínimo" }
+      ],
+      note: "Resumen a 100 dimensiones para eficiencia"
+    },
+
+    dataPreprocessingPipeline: {
+      title: "Pipeline de preprocesamiento",
+      paragraphs: [
+        "~1 296 features (1 280 embeddings + ~16 derivadas). Faltantes → 0.",
+        "Categorías identificadas para CatBoost. StandardScaler solo para el DNN; árboles usan valores crudos."
+      ],
+      models: [
+        { title: "Redes neuronales", text: "Normalización StandardScaler" },
+        { title: "Modelos de árboles", text: "Valores crudos + categorías explícitas" }
+      ]
+    }
+  },
+
+  modeling: {
+    title: "Enfoques de modelado",
+    subtitle: "Ensamble de deep learning y métodos basados en árboles para multietiqueta",
+
+    frameworkOverview: {
+      title: "Marco general",
+      text: "5 folds CV multietiqueta: un clasificador binario por etiqueta de localización."
+    },
+
+    dnn: {
+      title: "Red Neuronal Profunda (DNN)",
+      description: "Red fully-connected (1296 entradas) que aprende interacciones no lineales complejas.",
+      architectureTitle: "Arquitectura",
+      architecture: [
+        { layer: "Input", detail: "1296 features" },
+        { layer: "BatchNorm", detail: "" },
+        { layer: "Dense (ReLU)", detail: "1024 → Dropout(0.3)" },
+        { layer: "Dense (ReLU)", detail: "512 → Dropout(0.25)" },
+        { layer: "Dense (ReLU)", detail: "256 → Dropout(0.2)" },
+        { layer: "Dense (ReLU)", detail: "128 → Dropout(0.15)" },
+        { layer: "Output (Sigmoid)", detail: "5 clases" }
+      ],
+      trainingConfigTitle: "Configuración de entrenamiento",
+      trainingConfig: [
+        { name: "Función de pérdida", value: "Cross-Entropy binaria (suma por clase)" },
+        { name: "Optimizador", value: "Adam (lr=0.001)" },
+        { name: "Regularización", value: "Early stopping, reducción LR" },
+        { name: "Monitoreo", value: "Pérdida de validación" }
+      ]
+    },
+
+    lightgbm: {
+      title: "LightGBM",
+      description: "5 modelos de gradient boosting (uno por clase). Eficiente en grandes vectores numéricos.",
+      params: [
+        { name: "Objective", value: "binary_logloss" },
+        { name: "Boosting rounds", value: "1000" },
+        { name: "Leaves", value: "64" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Sólido rendimiento tabular base"
+    },
+
+    xgboost: {
+      title: "XGBoost",
+      description: "5 clasificadores binarios (logistic). Método de árbol ‘hist’ para >1000 features.",
+      params: [
+        { name: "Objective", value: "binary:logistic" },
+        { name: "Max depth", value: "6" },
+        { name: "Learning rate", value: "0.05" },
+        { name: "Subsample", value: "0.8" },
+        { name: "Trees", value: "1000" }
+      ]
+    },
+
+    catboost: {
+      title: "CatBoost",
+      description: "5 modelos con manejo categórico nativo; ventajoso con desbalance.",
+      params: [
+        { name: "Loss", value: "Logloss" },
+        { name: "Iterations", value: "1000" },
+        { name: "Depth", value: "6" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "Índices categóricos explícitos (reino + flags)"
+    },
+
+    ensembleStrategy: {
+      title: "Estrategia de ensamble",
+      description: "Probabilidades por clase; clipping a [1e-7, 1-1e-7] para estabilidad.",
+      weightsTitle: "Pesos del ensamble",
+      weights: [
+        { model: "Red Neuronal Profunda", weight: "35%" },
+        { model: "LightGBM", weight: "25%" },
+        { model: "XGBoost", weight: "25%" },
+        { model: "CatBoost", weight: "15%" }
+      ],
+      rationaleTitle: "Justificación",
+      rationale: [
+        "Enfoque multimodelo (inspirado en DeepLoc 2.0)",
+        "Embeddings transformer + cabezas multietiqueta eficaces",
+        "Combina redes y árboles",
+        "Promedio ponderado reduce varianza y mejora generalización",
+        "Pesos adaptados si CatBoost falla"
+      ]
+    }
+  },
+
+  results: {
+    title: "Resultados",
+    subtitle: "Análisis integral de rendimiento en modelos y folds",
+
+    performanceIntro: "En 5-fold CV: DNN y boosters individuales ~0.98–1.05, CatBoost ~0.95, y el ensamble ~0.94 (±0.02).",
+
+    cvSummary: {
+      title: "Resumen de validación cruzada",
+      intro: "Resultados típicos (media ± desviación):",
+      table: {
+        headers: {
+          model: "Modelo",
+          cvLogLoss: "Log-Loss CV (media ± sd)",
+          performanceRank: "Rango",
+          stability: "Estabilidad"
+        },
+        rows: [
+          { model: "DNN", logLoss: "~1.02 ± 0.03", rank: "4º", stability: "DNN" },
+          { model: "LightGBM", logLoss: "~0.98 ± 0.03", rank: "3º", stability: "LightGBM" },
+          { model: "XGBoost", logLoss: "~1.00 ± 0.04", rank: "5º", stability: "XGBoost" },
+          { model: "CatBoost", logLoss: "~0.95 ± 0.02", rank: "2º", stability: "CatBoost" },
+          { model: "Ensamble", logLoss: "~0.94 ± 0.02", rank: "1º 🏆", stability: "Ensamble" }
+        ]
+      }
+    },
+
+    keyPerformanceInsights: {
+      title: "Ideas clave de rendimiento",
+      bullets: [
+        "El ensamble mejora al mejor modelo individual (~0.95 → ~0.94)",
+        "CatBoost mejor individual; ensamble ligeramente mejor",
+        "Baja desviación estándar ⇒ robustez",
+        "Resultados sensibles a semillas aleatorias"
+      ]
+    },
+
+    competitiveAnalysis: {
+      title: "Análisis competitivo",
+      cards: [
+        { title: "Puntaje competitivo", text: "Log-Loss ≪ 1.1 → Top 30% esperado" },
+        { title: "Robustez", text: "Baja varianza inter‑folds → buena generalización" },
+        { title: "Estrategia de envío", text: "Usar predicciones del ensamble" }
+      ]
+    },
+
+    statisticalSignificance: {
+      title: "Significancia estadística",
+      text: "Score competitivo (≪1.1) y estabilidad apoyan la robustez; el ensamble aprovecha fortalezas de redes y árboles."
+    }
+  },
+
+  discussion: {
+    title: "Discusión e interpretación",
+    subtitle: "Análisis de rendimiento e implicaciones biológicas",
+
+    introduction: "Embeddings preentrenados + ML clásico permiten predicción fiable. ESM-1b codifica señales bioquímicas; features derivadas (longitud, reino, len_kingdom) añaden contexto.",
+    
+    esmEmbeddingAnalysis: {
+      title: "Análisis de embeddings ESM-1b",
+      bullets: [
+        "A priori fuerte: codificación bioquímica rica",
+        "Información estructural: indicios secundaria/terciaria",
+        "Contexto evolutivo: entrenado en 250M secuencias"
+      ]
+    },
+
+    featureEngineeringImpact: {
+      title: "Impacto de ingeniería de características",
+      bullets: [
+        "Codificación de reino + interacción len_kingdom",
+        "Transformaciones de longitud capturan variabilidad",
+        "Resúmenes estadísticos condensan distribución"
+      ]
+    },
+
+    multiLabelStrategy: {
+      title: "Estrategia multietiqueta",
+      paragraph: "5 salidas sigmoides esenciales (proteínas multi‑localizadas). Alineado con DeepLoc 2.0 y métrica (log-loss).",
+      whyMultiLabel: {
+        title: "¿Por qué multietiqueta?",
+        bullets: [
+          "• Múltiples compartimentos posibles",
+          "• Refleja tráfico proteico real",
+          "• Predicciones independientes"
+        ]
+      },
+      technicalImplementation: {
+        title: "Implementación técnica",
+        bullets: [
+          "• Log-loss binario por etiqueta",
+          "• Alineado con métrica de competición",
+          "• Basado en prácticas establecidas"
+        ]
+      }
+    },
+
+    modelPerformanceAnalysis: {
+      title: "Análisis de modelos",
+      paragraph: "Ensamblados de árboles (CatBoost, LightGBM, XGBoost) fuertes en features mixtas; CatBoost gana por manejo categórico nativo.",
+      cards: [
+        { title: "Modelos basados en árboles", text: "Robustos y versátiles en datos tabulares" },
+        { title: "Redes neuronales", text: "Capturan interacciones altamente no lineales" },
+        { title: "Beneficios del ensamble", text: "Menor error de generalización" }
+      ]
+    },
+
+    limitationsAndChallenges: {
+      title: "Limitaciones y desafíos",
+      classImbalance: {
+        title: "Desbalance de clases",
+        paragraph: "Sin ponderación explícita; clases raras (Extracellular ~11%) aún contribuyen. Futuro: pesos o focal loss.",
+        stats: [
+          "Cell membrane: 15%",
+          "Extracellular: 11%"
+        ]
+      },
+      kingdomSpecificModeling: {
+        title: "Modelado específico por reino",
+        paragraph: "Modelo único global; ajuste por reino puede capturar mecanismos evolutivos divergentes."
+      }
+    },
+
+    biologicalSignificance: {
+      title: "Relevancia biológica",
+      intro: "Resultados soportan varios principios:",
+      points: [
+        {
+          title: "Relación secuencia‑función",
+          text: "La secuencia contiene suficiente información para la localización."
+        },
+        {
+          title: "Conservación evolutiva",
+          text: "Señales de localización ampliamente conservadas."
+        }
+      ],
+      clinicalRelevance: {
+        title: "Relevancia clínica",
+        text: "Ayuda a identificar proteínas mal localizadas asociadas a enfermedad."
+      }
+    }
+  },
+
+  conclusion: {
+    title: "Conclusiones y trabajo futuro",
+    subtitle: "Hallazgos clave y direcciones de investigación",
+
+    summaryIntro: "Construimos un pipeline multietiqueta combinando embeddings y modelos tabulares. La integración de lenguaje proteico + ML clásico ofrece alto rendimiento.",
+    
+    keyLessons: {
+      title: "Lecciones clave",
+      lessons: [
+        { number: "1", title: "Embeddings potentes", text: "ESM-1b central para capturar estructura y función." },
+        { number: "2", title: "Ingeniería de features útil", text: "Transformaciones e interacciones complementan embeddings." },
+        { number: "3", title: "Ensembles sobresalientes", text: "Diversidad (NN + boosting) ≈0.94 log-loss." },
+        { number: "4", title: "Desafíos", text: "Desbalance y shifts de dominio → pesos, jerarquías futuras." }
+      ]
+    },
+
+    futureResearchDirections: {
+      title: "Direcciones futuras",
+      items: [
+        { title: "Fine-tuning extremo a extremo", text: "Ajuste directo de ESM / ProtBERT." },
+        { title: "Integración multimodal", text: "Estructura, imágenes, filogenia." },
+        { title: "Ensembles avanzados", text: "Stacking, meta‑aprendizaje, selección dinámica." },
+        { title: "Clasificación jerárquica", text: "Regiones amplias → compartimentos específicos." },
+        { title: "Soluciones al desbalance", text: "Focal loss, coste sensible, SMOTE secuencial." },
+        { title: "Transferencia de dominio", text: "Fine-tuning específico por reino/familia." }
+      ]
+    },
+
+    broaderImpact: {
+      title: "Impacto ampliado",
+      conclusionParagraph: "El pipeline combina modelos modernos y ML robusto para localizaciones precisas; base fuerte para anotación y tareas afines.",
+      immediateApplications: {
+        title: "Aplicaciones inmediatas",
+        items: [
+          "Predicción de péptidos señal",
+          "Función específica de orgánulo",
+          "Identificación de dianas terapéuticas",
+          "Análisis de proteínas en enfermedad"
+        ]
+      },
+      longTermVision: {
+        title: "Visión a largo plazo",
+        items: [
+          "Pipelines automáticos de anotación",
+          "Medicina personalizada",
+          "Herramientas de biología sintética",
+          "Plataformas de descubrimiento de fármacos"
+        ]
+      }
+    }
+  },
+
+  references: {
+    title: "Referencias",
+    subtitle: "Literatura fundamental y soporte",
+
+    introduction: "Trabajos clave resaltan la importancia de la localización subcelular. UniProt/Swiss-Prot es fuente autorizada. ESM-1b (650M parámetros) entrenado en 250M secuencias. DeepLoc 2.0 muestra embeddings transformer para multietiqueta.",
+    
+    corePublications: {
+      title: "Publicaciones principales",
+      entries: [
+        {
+          citation: "Rives et al. (2021) Biological structure and function emerge... PNAS 118(15) e2016239118.",
+          keyContribution: "🔑 Aporte: Introduce ESM-1b capturando información estructural y funcional."
+        },
+        {
+          citation: "Thumuluri et al. (2022) DeepLoc 2.0... Nucleic Acids Research 50(W1) W228-W234.",
+          keyContribution: "🔑 Aporte: Embeddings transformer para localización multietiqueta."
+        },
+        {
+          citation: "UniProt Consortium (2023) UniProt 2023. Nucleic Acids Research 51(D1) D523-D531.",
+          keyContribution: "🔑 Aporte: Base de datos curada de referencia."
+        }
+      ]
+    },
+
+    supportingLiterature: {
+      title: "Literatura de soporte",
+      machineLearningMethods: {
+        title: "Métodos ML",
+        entries: [
+          "Chen & Guestrin (2016) XGBoost. KDD.",
+          "Ke et al. (2017) LightGBM. NIPS.",
+          "Prokhorenkova et al. (2018) CatBoost. NeurIPS."
+        ]
+      },
+      proteinBioinformatics: {
+        title: "Bioinformática proteica",
+        entries: [
+          "Almagro Armenteros et al. (2017) DeepLoc. Bioinformatics.",
+          "Elnaggar et al. (2021) ProtTrans. IEEE TPAMI.",
+          "Lin et al. (2023) Atomic structure prediction with LM. Science."
+        ]
+      }
+    },
+
+    methodologicalFoundations: {
+      title: "Fundamentos metodológicos",
+      items: [
+        { title: "Modelos de lenguaje proteico", text: "Transformers que capturan estructura y función vía auto‑supervisión." },
+        { title: "Clasificación multietiqueta", text: "Binary relevance con salidas sigmoides independientes." },
+        { title: "Aprendizaje ensemble", text: "Combina modelos heterogéneos para generalización." }
+      ]
+    },
+
+    dataSourcesAndTools: {
+      title: "Fuentes y herramientas",
+      leftColumn: [
+        "Dataset: UniProtKB/Swiss-Prot curado",
+        "Embeddings: ESM-1b (650M)",
+        "Framework: Python (scikit-learn, TensorFlow)"
+      ],
+      rightColumn: [
+        "Librerías ML: LightGBM, XGBoost, CatBoost",
+        "Evaluación: 5-fold CV, log-loss",
+        "Hardware: Entrenamiento acelerado por GPU"
+      ]
+    }
+  },
+
+  appendix: {
+    title: "Apéndice",
+    subtitle: "Detalles técnicos e implementación completa",
+
+    completePipelineImplementation: {
+      title: "Implementación completa del pipeline",
+      intro: "Implementación productiva (~0.94 ± 0.02 log-loss) con componentes optimizados.",
+      pipelineOverview: {
+        title: "Visión general",
+        metrics: [
+          { value: "4", label: "Modelos ML" },
+          { value: "5-Fold", label: "Validación cruzada" },
+          { value: "1,296", label: "Características" },
+          { value: "~18K", label: "Proteínas" }
+        ]
+      },
+      productionCodeSection: {
+        title: "Código de producción (extracto)",
+        meta: {
+          author: "Autor: nirdidev05",
+          date: "Fecha: 2025-08-29"
+        },
+        code: `import pandas as pd
+import numpy as np
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import log_loss
+import tensorflow as tf
+from tensorflow.keras import layers, Model, callbacks
+import lightgbm as lgb
+import xgboost as xgb
+import catboost as cb
+import warnings
+warnings.filterwarnings('ignore')
+
+print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
+print("=" * 60)
+print(f"Current User: {str('nirdidev05')}")
+print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
+
+class ProteinLocalizationPipeline:
+    """Pipeline complet optimisé basé sur tes excellents résultats"""
+    
+    def __init__(self):
+        self.num_classes = 5
+        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
+        
+    def load_and_prepare_data(self):
+        """Chargement et préparation complète des données"""
+        print("\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
+        print("-" * 50)
+        
+        # Chargement
+        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
+        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
+        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
+        
+        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
+        
+        # Fusion
+        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
+        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
+        
+        # Feature Engineering
+        def engineer_features(df, is_train=True):
+            df = df.copy()
+            
+            # Features de base
+            df['seq_len_log'] = np.log1p(df['seq_len'])
+            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
+            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
+            
+            # Features catégorielles (comme int pour éviter le problème CatBoost)
+            df['is_short'] = (df['seq_len'] < 200).astype('int32')
+            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
+            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
+            
+            # Kingdom encoding
+            if is_train:
+                self.kingdom_encoder = LabelEncoder()
+                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
+            else:
+                kingdoms = df['Kingdom'].fillna('Unknown')
+                known = set(self.kingdom_encoder.classes_)
+                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
+                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
+            
+            # Kingdom one-hot (comme int32)
+            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
+            for kingdom in top_kingdoms:
+                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
+            
+            # Features d'interaction
+            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
+            
+            # Stats des embeddings
+            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
+            if all(col in df.columns for col in embed_cols):
+                embed_data = df[embed_cols].values
+                df['embed_mean'] = np.mean(embed_data, axis=1)
+                df['embed_std'] = np.std(embed_data, axis=1)
+                df['embed_max'] = np.max(embed_data, axis=1)
+                df['embed_min'] = np.min(embed_data, axis=1)
+            
+            return df
+        
+        # Application du feature engineering
+        train_processed = engineer_features(train_merged, is_train=True)
+        test_processed = engineer_features(test_merged, is_train=False)
+        
+        # Sélection des features
+        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
+        engineered_cols = [
+            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
+            'is_short', 'is_medium', 'is_long', 'len_kingdom',
+            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
+            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
+        ]
+        
+        feature_cols = embedding_cols + engineered_cols
+        feature_cols = [col for col in feature_cols if col in train_processed.columns]
+        
+        # Données finales
+        X_train = train_processed[feature_cols].fillna(0)
+        X_test = test_processed[feature_cols].fillna(0)
+        y_train = train_processed[self.class_names].values
+        
+        # Identification des features catégorielles par index
+        categorical_indices = []
+        for i, col in enumerate(feature_cols):
+            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
+                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
+                categorical_indices.append(i)
+        
+        print(f"✅ Features finales: {len(feature_cols)}")
+        print(f"   - Embeddings: {len(embedding_cols)}")
+        print(f"   - Engineered: {len(engineered_cols)}")
+        print(f"   - Categorical indices: {len(categorical_indices)}")
+        print(f"✅ Labels multi-label: {y_train.shape}")
+        
+        return X_train, X_test, y_train, categorical_indices, feature_cols
+    
+    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
+        """Entraîne tous les modèles sur un fold"""
+        results = {}
+        
+        # Conversion en numpy pour compatibilité
+        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
+        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
+        
+        # 1. DEEP NEURAL NETWORK
+        print("  🧠 DNN Training...")
+        
+        # Normalisation
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train_np)
+        X_val_scaled = scaler.transform(X_val_np)
+        
+        # Architecture DNN optimisée
+        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
+        x = layers.BatchNormalization()(inputs)
+        x = layers.Dense(1024, activation='relu')(x)
+        x = layers.Dropout(0.3)(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(512, activation='relu')(x)
+        x = layers.Dropout(0.25)(x)
+        x = layers.Dense(256, activation='relu')(x)
+        x = layers.Dropout(0.2)(x)
+        x = layers.Dense(128, activation='relu')(x)
+        x = layers.Dropout(0.15)(x)
+        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
+        
+        dnn_model = Model(inputs, outputs)
+        dnn_model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+            loss='binary_crossentropy',
+            metrics=['binary_accuracy']
+        )
+        
+        # Callbacks
+        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
+        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
+        
+        # Entraînement
+        dnn_model.fit(
+            X_train_scaled, y_train_fold,
+            validation_data=(X_val_scaled, y_val_fold),
+            epochs=150, batch_size=64,
+            callbacks=[early_stop, lr_reduce],
+            verbose=0
+        )
+        
+        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
+        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
+        score_dnn = log_loss(y_val_fold, pred_dnn)
+        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
+        print(f"     ✅ DNN: {score_dnn:.4f}")
+        
+        # 2. LIGHTGBM
+        print("  🌟 LightGBM Training...")
+        
+        lgb_params = {
+            'objective': 'binary',
+            'metric': 'binary_logloss',
+            'boosting_type': 'gbdt',
+            'num_leaves': 64,
+            'learning_rate': 0.05,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 5,
+            'min_data_in_leaf': 20,
+            'lambda_l1': 0.1,
+            'lambda_l2': 0.1,
+            'verbose': -1,
+            'random_state': 42
+        }
+        
+        lgb_preds = []
+        for i in range(self.num_classes):
+            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
+            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
+            
+            model = lgb.train(
+                lgb_params,
+                train_data,
+                valid_sets=[val_data],
+                num_boost_round=1000,
+                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
+            )
+            
+            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
+            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_lgb = np.column_stack(lgb_preds)
+        score_lgb = log_loss(y_val_fold, pred_lgb)
+        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
+        print(f"     ✅ LightGBM: {score_lgb:.4f}")
+        
+        # 3. XGBOOST
+        print("  🚀 XGBoost Training...")
+        
+        xgb_preds = []
+        for i in range(self.num_classes):
+            model = xgb.XGBClassifier(
+                objective='binary:logistic',
+                eval_metric='logloss',
+                max_depth=6,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                reg_alpha=0.1,
+                reg_lambda=0.1,
+                n_estimators=1000,
+                random_state=42,
+                n_jobs=-1,
+                tree_method='hist'
+            )
+            
+            model.fit(
+                X_train_np, y_train_fold[:, i],
+                eval_set=[(X_val_np, y_val_fold[:, i])],
+                early_stopping_rounds=50,
+                verbose=False
+            )
+            
+            pred = model.predict_proba(X_val_np)[:, 1]
+            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_xgb = np.column_stack(xgb_preds)
+        score_xgb = log_loss(y_val_fold, pred_xgb)
+        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
+        print(f"     ✅ XGBoost: {score_xgb:.4f}")
+        
+        # 4. CATBOOST (avec gestion correcte des features catégorielles)
+        print("  🐱 CatBoost Training...")
+        
+        try:
+            # Conversion explicite des colonnes catégorielles en int
+            X_train_cat = X_train_np.copy().astype(np.float32)
+            X_val_cat = X_val_np.copy().astype(np.float32)
+            
+            # Conversion des features catégorielles en int
+            for idx in cat_indices:
+                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
+                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
+            
+            catboost_preds = []
+            for i in range(self.num_classes):
+                train_pool = cb.Pool(
+                    X_train_cat,
+                    y_train_fold[:, i],
+                    cat_features=cat_indices
+                )
+                val_pool = cb.Pool(
+                    X_val_cat,
+                    y_val_fold[:, i],
+                    cat_features=cat_indices
+                )
+                
+                model = cb.CatBoostClassifier(
+                    loss_function='Logloss',
+                    eval_metric='Logloss',
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    l2_leaf_reg=3,
+                    bootstrap_type='Bernoulli',
+                    subsample=0.8,
+                    random_seed=42,
+                    verbose=False,
+                    early_stopping_rounds=50
+                )
+                
+                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
+                pred = model.predict_proba(X_val_cat)[:, 1]
+                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+            
+            pred_catboost = np.column_stack(catboost_preds)
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+            print(f"     ✅ CatBoost: {score_catboost:.4f}")
+            
+        except Exception as e:
+            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
+            # Utiliser une prédiction dummy
+            pred_catboost = np.ones_like(y_val_fold) * 0.5
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+        
+        # 5. ENSEMBLE
+        print("  🎭 Ensemble...")
+        
+        # Ensemble adaptatif selon les modèles disponibles
+        if results['catboost']['score'] < 2.0:  # CatBoost marche
+            ensemble_pred = (0.35 * results['dnn']['predictions'] +
+                           0.25 * results['lgb']['predictions'] +
+                           0.25 * results['xgb']['predictions'] +
+                           0.15 * results['catboost']['predictions'])
+        else:  # Sans CatBoost
+            ensemble_pred = (0.4 * results['dnn']['predictions'] +
+                           0.3 * results['lgb']['predictions'] +
+                           0.3 * results['xgb']['predictions'])
+        
+        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
+        score_ensemble = log_loss(y_val_fold, ensemble_pred)
+        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
+        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
+        
+        return results
+    
+    def run_cross_validation(self):
+        """Validation croisée complète 5-fold"""
+        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
+        print("=" * 60)
+        
+        # Préparation des données
+        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
+        
+        # Validation croisée
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+        fold_results = []
+        
+        print(f"\n🔄 VALIDATION CROISÉE 5-FOLD")
+        print("-" * 50)
+        
+        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
+            print(f"\n📁 FOLD {fold + 1}/5")
+            print("-" * 30)
+            
+            X_train_fold = X_train.iloc[train_idx]
+            X_val_fold = X_train.iloc[val_idx]
+            y_train_fold = y_train[train_idx]
+            y_val_fold = y_train[val_idx]
+            
+            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
+            
+            # Entraînement des modèles
+            results = self.train_models_fold(
+                X_train_fold, y_train_fold,
+                X_val_fold, y_val_fold,
+                cat_indices
+            )
+            
+            fold_results.append({
+                'fold': fold + 1,
+                'results': results
+            })
+            
+            print(f"✅ Fold {fold + 1} terminé!")
+        
+        # Analyse des résultats
+        print(f"\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
+        print("=" * 60)
+        
+        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
+        final_scores = {}
+        
+        for model_name in model_names:
+            scores = [fold['results'][model_name]['score'] for fold in fold_results]
+            final_scores[model_name] = {
+                'mean': np.mean(scores),
+                'std': np.std(scores),
+                'scores': scores
+            }
+        
+        print(f"📊 Scores par modèle:")
+        for model_name, stats in final_scores.items():
+            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
+        
+        # Meilleur modèle
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        best_score = final_scores[best_model]['mean']
+        
+        print(f"\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
+        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
+        
+        print(f"\n📈 ANALYSE DE PERFORMANCE:")
+        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
+        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
+        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
+        
+        return fold_results, final_scores, X_test, feature_cols
+
+# EXÉCUTION DU PIPELINE
+if __name__ == "__main__":
+    print(f"🚀 Starting Final Optimized Pipeline")
+    print(f"👤 User: nirdidev05")
+    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
+    
+    pipeline = ProteinLocalizationPipeline()
+    
+    try:
+        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
+        
+        print(f"\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
+        print(f"👤 User: nirdidev05")
+        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
+        
+        # Recommandation finale
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        print(f"\n💡 RECOMMANDATION FINALE:")
+        print(f"   Utiliser: {best_model.upper()} pour soumission")
+        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
+        
+        # Prêt pour génération des prédictions finales
+        print(f"\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
+        print(f"   Test set: {X_test.shape}")
+        print(f"   Features: {len(feature_cols)}")
+        
+    except Exception as e:
+        print(f"❌ Erreur: {e}")
+        import traceback
+        traceback.print_exc()`
+      }
+    },
+
+    architectureExplanation: {
+      title: "Explicación de la arquitectura",
+      sections: [
+        {
+          title: "1. Red neuronal profunda",
+            paragraph: "Arquitectura de 5 capas con BatchNorm, Dropout y LR adaptativo. Reducción progresiva de dimensionalidad.",
+          architectureLine: "Input(1296) → BatchNorm → Dense(1024) → Dropout(0.3) → Dense(512) → Dropout(0.25) → Dense(256) → Dropout(0.2) → Dense(128) → Dropout(0.15) → Output(5, sigmoid)"
+        },
+        {
+          title: "2. Modelos gradient boosting",
+          paragraph: "LightGBM, XGBoost, CatBoost: 5 clasificadores binarios cada uno con early stopping.",
+          modelConfigs: {
+            lightgbm: ["num_leaves: 64", "learning_rate: 0.05", "early_stopping: 50"],
+            xgboost: ["max_depth: 6", "tree_method: 'hist'", "n_estimators: 1000"],
+            catboost: ["iterations: 1000", "depth: 6", "cat_features: explícitas"]
+          }
+        },
+        {
+          title: "3. Ensamble adaptativo",
+          paragraph: "Reasigna pesos si CatBoost falla para mantener el beneficio ensemble.",
+          weights: {
+            withCatBoost: ["DNN: 35% • LGB: 25%", "XGB: 25% • CatBoost: 15%"],
+            withoutCatBoost: ["DNN: 40% • LGB: 30%", "XGB: 30%"]
+          }
+        },
+        {
+          title: "4. Validación cruzada y análisis",
+          paragraph: "5-fold estratificado, seguimiento de media, varianza, ranking y proyección competitiva.",
+          metricsTracked: [
+            "• Log-loss CV medio por modelo",
+            "• Desviación estándar (estabilidad)",
+            "• Selección del mejor modelo",
+            "• Estimación de ranking"
+          ]
+        }
+      ]
+    },
+
+    expectedOutput: {
+      title: "Salida esperada del pipeline",
+      consoleOutputExampleTitle: "Ejemplo de consola:",
+      consoleOutput: `🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ
+============================================================
+Usuario: nirdidev05
+Inicio: 2025-08-29 18:14:00 UTC
+... (recortado) ...`,
+      metrics: [
+        { value: "~0.94", labelTop: "Score final esperado", labelBottom: "Log-loss CV" },
+        { value: "±0.02", labelTop: "Desviación estándar", labelBottom: "Estabilidad entre folds" },
+        { value: "Top 30%", labelTop: "Ranking esperado", labelBottom: "Competición" }
+      ]
+    }
+  },
+
+  footer: {
+    componentName: "FooterProtein",
+    headings: { brand: "Protein Localization AI" },
+    description: "ML avanzado para localización subcelular (ESM-1b + ensemble).",
+    researchLine: "Investigación por nirdidev05 • Log-loss: 0.94±0.02",
+    buttons: {
+      downloadReport: "Descargar informe",
+      viewNotebook: "Ver notebook"
+    },
+    copyright:
+      "© 2024 Investigación en localización proteica • Construido con React + TypeScript • ~18 000 proteínas analizadas",
+    download: {
+      href: "/Protein Subcellular Localization Prediction.pdf",
+      filename: "Protein_Subcellular_Localization_Prediction.pdf"
+    }
+  }
+
+},
     adc: {
   hero: {
     badge: {
@@ -19948,6 +25749,1209 @@ if (puntuacion_ml > 0.3) {
       achievements: "الإنجازات",
       contact: "التواصل"
     },
+   Protein : {
+
+  nav: {
+    logo: {
+      brand: "ProteinAI",
+      subtitle: "التوضع الخلوي"
+    },
+    items: {
+      abstract: "الملخص",
+      methodology: "المنهجيات",
+      results: "النتائج",
+      discussion: "المناقشة"
+    },
+    buttons: {
+      report: "التقرير",
+      code: "الشيفرة"
+    }
+  },
+
+  // قسم البطل (Hero)
+  hero: {
+    badge: {
+      text: "بحث تعلم آلي متقدم • 2025"
+    },
+    title: {
+      main: ["بروتين", "تحت‑خلوي", "التوضع"],
+      subtitle: "مدعوم بـ ESM-1b و تقنيات Ensemble"
+    },
+    description: "خط أنابيب متقدم للتعلم الآلي يتنبأ بمكان تواجد البروتينات داخل الخلية بالاعتماد على نماذج لغة بروتينية رائدة وأساليب تجميع (Ensemble) متطورة.",
+    
+    performanceMetrics: {
+      metrics: [
+        { value: "0.94", label: "درجة Log-Loss", suffix: "±0.02" },
+        { value: "18K", label: "بروتينات مُحلَّلة", suffix: "+" },
+        { value: "1,296", label: "خصائص مُهندَسة", suffix: "" },
+        { value: "5-Fold", label: "تحقق تبادلي (Cross Validation)", suffix: "" }
+      ]
+    },
+
+    achievements: {
+      title: "الإنجازات الرئيسية",
+      subtitle: "نتائج رائدة في علم الأحياء الحاسوبي",
+      items: [
+        { title: "أداء ضمن أفضل 30%", description: "تصنيف قياسي تنافسي" },
+        { title: "دمج ESM-1b", description: "نموذج لغة بروتينية متقدم" },
+        { title: "طريقة Ensemble", description: "خط أنابيب متكامل بأربعة نماذج" },
+        { title: "تصنيف متعدد الوسوم", description: "5 مقصورات خلوية" }
+      ]
+    },
+
+    buttons: {
+      primary: "استكشاف البحث",
+      secondary: "عرض الشيفرة"
+    },
+
+    author: {
+      name: "nirdidev05",
+      role: "مهندس أبحاث تعلم آلي"
+    },
+
+    modelPerformance: {
+      title: "أداء النماذج",
+      models: [
+        { name: "Ensemble", score: 0.94, color: "bg-primary" },
+        { name: "CatBoost", score: 0.95, color: "bg-secondary" },
+        { name: "LightGBM", score: 0.98, color: "bg-accent" },
+        { name: "XGBoost", score: 1.00, color: "bg-warning" }
+      ]
+    }
+  },
+ 
+  abstract: {
+    title: "الملخص",
+    subtitle: "ملخص تنفيذي لبحث التنبؤ بالتوضع الخلوي للبروتينات",
+    
+    content: {
+      introduction: "البروتينات جزيئات حيوية بوليمرية مكوّنة من سلاسل أحماض أمينية وأساسية في معظم العمليات الخلوية. تُحدَّد بنيتها ثلاثية الأبعاد ووظيفتها بدرجة كبيرة بواسطة تسلسلها — وكذلك بمكان تواجدها داخل الخلية (التوضع الخلوي). موضع البروتين (النواة، السيتوبلازم، الغشاء، إلخ) يرتبط ارتباطًا وثيقًا بوظيفته وتفاعلاته. سوء التوضع قد يساهم في العديد من الأمراض.",
+      problem: "نعالج مسألة التنبؤ بالمقصورة أو المقصورات الخلوية المحتملة لبروتين انطلاقًا من تسلسله. نستخدم مجموعة بيانات مُنقّحة (~18,000 تسلسل من UniProtKB/Swiss-Prot) مع خمس فئات توضع:",
+      localizationClasses: ["Nucleus", "Cytoplasm", "Membrane", "Cell membrane", "Extracellular"],
+      approach: "نهجنا يجمع بين متجهات embeddings لنموذج لغة بروتيني مُدرّب مسبقًا (ESM-1b) وتقنيات تعلم آلي كلاسيكية تشمل الشبكات العميقة وخوارزميات التعزيز التدرجي. إطار التصنيف متعدد الوسوم حقق Log-Loss متقاطع يقارب",
+      performanceScore: "0.94 ± 0.02",
+      conclusion: "مما يُبرِز فعالية دمج embeddings بروتينية حديثة مع طرق Ensemble للتنبؤ بالتوضع الخلوي."
+    },
+    
+    statistics: {
+      proteinSequences: { value: "~18,000", label: "سلاسل بروتينية" },
+      localizationClasses: { value: "5", label: "فئات توضع" },
+      logLossScore: { value: "0.94", label: "درجة Log-Loss" }
+    }
+  },
+
+  introduction: {
+    title: "المقدمة",
+    subtitle: "السياق البيولوجي والتحدي الحاسوبي",
+    
+    content: {
+      paragraph1: "البروتينات تدعم العمليات الخلوية. تسلسل البروتين وبنيته وتوضعه الخلوي تحدد وظيفته وتفاعلاته.",
+      paragraph2: "سوء التوضع قد يسبب أمراضًا. البروتينات الإفرازية والغشائية تتبع مسارات مميزة. نستنتج المقصورات من التسلسل.",
+      paragraph3: "مجموعة البيانات: ~18,000 تسلسل مُنقّح (UniProtKB/Swiss-Prot) مع خمس وسوم: Nucleus, Cytoplasm, Membrane, Cell membrane, Extracellular."
+    },
+    
+    figure1: {
+      title: "الشكل 1. بنية الخلية وتوضع البروتين",
+      conceptualRepresentation: "[تمثيل تصوري لخلية حيوانية نموذجية]",
+      compartments: [
+        { name: "Nucleus", description: "مستودع الـDNA" },
+        { name: "Cytoplasm", description: "مركز أيضي" },
+        { name: "Membrane", description: "نقل" },
+        { name: "Cell membrane", description: "حد فاصل" },
+        { name: "Extracellular", description: "مُفرَز" }
+      ],
+      caption: {
+        prefix: "تعليق:",
+        text: "بنية خلية نموذجية تُظهر المقصورات الرئيسية. التوضع الصحيح ضروري لأداء البروتين الوظيفي."
+      }
+    },
+    
+    researchObjectives: {
+      title: "أهداف البحث",
+      objectives: [
+        "تطوير طرق دقيقة للتنبؤ بالتوضع الخلوي",
+        "استثمار نماذج لغة بروتينية حديثة (ESM-1b)",
+        "تطبيق تقنيات Ensemble لتصنيف متعدد الوسوم متين",
+        "تحقيق أداء تنافسي على بيانات عالية الجودة"
+      ]
+    }
+  },
+
+  dataset: {
+    title: "مجموعة البيانات والتحليل الاستكشافي",
+    subtitle: "تحليل شامل لـ 18,000 تسلسل بروتيني",
+    
+    content: {
+      overview: "مجموعة التدريب: 14,564 بروتينًا (قد تحمل وسومًا متعددة). الاختبار: 3,642 بدون وسوم. لكل بروتين حقل المملكة (Metazoa, Fungi, Viridiplantae, Other) وطول (40–1022 حمضًا أمينيًا).",
+      multiLabelNature: "طبيعة متعددة الوسوم: قد ينتمي البروتين لأكثر من مقصورة → مخرج Sigmoid لكل فئة. استُخدم Log-Loss ثنائي لكل وسم (متوافق مع التقييم).",
+      exploratoryAnalysis: "اختلافات بين الممالك: ~9.97% من ‘Other’ نووي مقابل ~32–41% في الممالك الأكبر؛ ‘Extracellular’ ~48% في ‘Other’ مقابل ~3–14% في غيرها — إشارة لانحراف مجال (Domain Shift).",
+      classImbalance: "عدم توازن: Cell membrane ~15%، Extracellular ~11%. تحليل المكونات الرئيسية: ~536 من 1280 بُعدًا تغطي 95% من التباين → فضاء عالي الأبعاد وجّه الاستراتيجية."
+    },
+    
+    basicStatistics: {
+      title: "إحصاءات أساسية",
+      items: [
+        "متوسط الطول ≈ 479 حمضًا أمينيًا (الانحراف ≈ 242) المدى ~40–1022؛ طُبِّقت تحويرات (لوغاريتمي، جذر، تطبيع، أعلام طول).",
+        "توزيع الممالك (اختبار): Metazoa ~57.2%، Fungi ~21.4%، Viridiplantae ~19.4%، Other ~2.0%.",
+        "نِسَب (تدريب): Nucleus 34%، Cytoplasm 35%، Membrane 31%، Cell membrane 15%، Extracellular 11%."
+      ]
+    },
+    
+    kingdomDistribution: {
+      title: "توزيع الممالك",
+      kingdoms: [
+        { name: "Metazoa", percentage: "57.2%" },
+        { name: "Fungi", percentage: "21.4%" },
+        { name: "Viridiplantae", percentage: "19.4%" },
+        { name: "Other", percentage: "2.0%" }
+      ]
+    },
+    
+    localizationDistribution: {
+      title: "توزيع فئات التوضع",
+      tableHeaders: {
+        localization: "التوضع",
+        trainFraction: "نسبة التدريب",
+        visualDistribution: "تمثيل بصري"
+      },
+      classes: [
+        { name: "Nucleus", fraction: "34%" },
+        { name: "Cytoplasm", fraction: "35%" },
+        { name: "Membrane", fraction: "31%" },
+        { name: "Cell membrane", fraction: "15%" },
+        { name: "Extracellular", fraction: "11%" }
+      ]
+    }
+  },
+
+  exploratoryAnalysis: {
+    title: "تحليل استكشافي",
+    subtitle: "دراسة أنماط التسلسل والعلاقات بين المملكة والفئة",
+
+    kingdomClassImbalances: {
+      title: "اختلالات المملكة–الفئة",
+      intro: "فروق كبيرة تشير لانحرافات مجال:",
+      bullets: [
+        "~9.97% من ‘Other’ نووي مقابل ~32–41% في الممالك الرئيسية",
+        "‘Extracellular’ ~48% في ‘Other’ مقابل ~3–14% في غيرها",
+        "تخصص تطوري ووظيفي بين الممالك"
+      ]
+    },
+
+    dimensionalityAnalysis: {
+      title: "تحليل الأبعاد",
+      intro: "تحليل PCA على Embeddings عالية الأبعاد:",
+      points: [
+        "~536 مكوّنًا تغطي 95% من التباين",
+        "من أصل 1280 بُعدًا",
+        "يُبرز تعقيد فضاء الخصائص"
+      ]
+    },
+
+    classImbalanceChallenges: {
+      title: "تحديات عدم التوازن",
+      intro: "أثر مباشر على التدريب والتقييم:",
+      largestClasses: {
+        title: "أكبر الفئات",
+        classes: [
+          { name: "Cytoplasm", fraction: "35%" },
+          { name: "Nucleus", fraction: "34%" },
+          { name: "Membrane", fraction: "31%" }
+        ]
+      },
+      smallestClasses: {
+        title: "الفئات الأصغر",
+        classes: [
+          { name: "Cell membrane", fraction: "15%" },
+          { name: "Extracellular", fraction: "11%" }
+        ],
+        note: "قد تتطلب وزنًا أو معايرة خاصة"
+      }
+    },
+
+    keyInsights: {
+      title: "أهم الرؤى لاستراتيجية النمذجة",
+      cards: [
+        { title: "نهج متعدد الوسوم", text: "مخارج Sigmoid مستقلة بدل Softmax واحد." },
+        { title: "خصائص حساسة للمملكة", text: "الانحرافات تحفّز التفاعل الخاص بالمجال." },
+        { title: "ارتفاع الأبعاد", text: "حاجة للتنظيم والتلخيص الإحصائي." }
+      ]
+    },
+
+    strategicImplications: {
+      text: "💡 دلالة استراتيجية: وجّه ذلك هندسة الخصائص، اختيار النماذج، وأوزان التجميع."
+    }
+  },
+
+  featureEngineering: {
+    title: "هندسة الخصائص والإعداد",
+    subtitle: "تحويل السلاسل الخام إلى تمثيلات غنية",
+
+    introduction: "دمج كل تسلسل مع Embeddings ESM-1b (1280 بُعدًا) مُدرَّبة ذاتيًا على 250 مليون تسلسل (إشارات بنيوية وتطورية).",
+    
+    esmEmbeddings: {
+      title: "Embeddings ESM-1b",
+      bullets: [
+        "1280 بُعدًا لكل بروتين",
+        "مُدرَّب على 250M تسلسل",
+        "يلتقط معلومات بنيوية وتطورية",
+        "يتضمن دلائل بنية ثانوية/ثالثية"
+      ]
+    },
+
+    finalFeatureSet: {
+      title: "مجموعة الخصائص النهائية",
+      rows: [
+        { label: "Embeddings ESM-1b", value: "1,280 أبعاد" },
+        { label: "خصائص مشتقة", value: "~16 أبعاد" },
+        { label: "الإجمالي لكل بروتين", value: "~1,296 خصيصة" }
+      ]
+    },
+
+    sequenceFeatures: {
+      title: "خصائص التسلسل",
+      mathematicalTransformations: {
+        title: "تحويلات رياضية",
+        code: [
+          "seq_len_log = log(1+length)",
+          "seq_len_sqrt = sqrt(length)",
+          "seq_len_norm = length / max_length"
+        ]
+      },
+      categoricalFlags: {
+        title: "أعلام فئوية",
+        flags: [
+          "is_short - سلسلة قصيرة",
+          "is_medium - سلسلة متوسطة",
+          "is_long - طول طويل لالتقاط اللاخطية"
+        ]
+      }
+    },
+
+    kingdomEncoding: {
+      title: "ترميز المملكة",
+      categoricalEncoding: {
+        title: "ترميز فئوي",
+        text: "ترميز عددي kingdom_enc (0–3) + أعلام One-Hot (is_metazoa, ...) لنماذج الأشجار.",
+        mapping: [
+          { name: "Metazoa", code: "0" },
+          { name: "Fungi", code: "1" },
+          { name: "Viridiplantae", code: "2" },
+          { name: "Other", code: "3" }
+        ]
+      },
+      interactionFeatures: {
+        title: "خصائص تفاعل",
+        text: "تفاعل الطول × المملكة:",
+        code: "len_kingdom = seq_len_norm * kingdom_enc",
+        note: "يتيح تعلم توزيعات طول خاصة بالمجال"
+      }
+    },
+
+    embeddingStatistics: {
+      title: "إحصاءات Embeddings",
+      description: "من أول 100 بعد: المتوسط، الانحراف، الأقصى، الأدنى — تلخيص مضغوط.",
+      stats: [
+        { symbol: "μ", label: "متوسط" },
+        { symbol: "σ", label: "انحراف معياري" },
+        { symbol: "max", label: "أقصى" },
+        { symbol: "min", label: "أدنى" }
+      ],
+      note: "تلخيص للأبعاد الـ 100 الأولى لفاعلية أعلى"
+    },
+
+    dataPreprocessingPipeline: {
+      title: "مسار المعالجة المسبقة",
+      paragraphs: [
+        "~1,296 خصيصة (1280 Embeddings + ~16 مشتقة). القيم المفقودة → 0.",
+        "تمييز الخصائص الفئوية لـ CatBoost. التطبيع (StandardScaler) فقط للشبكة العصبية؛ نماذج الأشجار تستخدم القيم الخام."
+      ],
+      models: [
+        { title: "الشبكات العصبية", text: "تطبيع StandardScaler" },
+        { title: "نماذج الأشجار", text: "خصائص خام + فئات صريحة" }
+      ]
+    }
+  },
+
+  modeling: {
+    title: "مقاربات النمذجة",
+    subtitle: "تجميع بين التعلم العميق والأساليب الشجرية للتصنيف متعدد الوسوم",
+
+    frameworkOverview: {
+      title: "الإطار العام",
+      text: "تحقق تبادلي 5-Fold متعدد الوسوم؛ مصنّف ثنائي لكل فئة توضع."
+    },
+
+    dnn: {
+      title: "الشبكة العصبية العميقة (DNN)",
+      description: "شبكة Fully-Connected (1296 مدخلاً) تتعلم تفاعلات لاخطية معقدة.",
+      architectureTitle: "البنية",
+      architecture: [
+        { layer: "Input", detail: "1296 خصيصة" },
+        { layer: "BatchNorm", detail: "" },
+        { layer: "Dense (ReLU)", detail: "1024 → Dropout(0.3)" },
+        { layer: "Dense (ReLU)", detail: "512 → Dropout(0.25)" },
+        { layer: "Dense (ReLU)", detail: "256 → Dropout(0.2)" },
+        { layer: "Dense (ReLU)", detail: "128 → Dropout(0.15)" },
+        { layer: "Output (Sigmoid)", detail: "5 فئات" }
+      ],
+      trainingConfigTitle: "إعدادات التدريب",
+      trainingConfig: [
+        { name: "دالة الخسارة", value: "Cross-Entropy ثنائية (مجموع عبر الفئات)" },
+        { name: "المُحسّن", value: "Adam (lr=0.001)" },
+        { name: "التنظيم", value: "إيقاف مبكر + خفض معدل التعلم" },
+        { name: "المراقبة", value: "خسارة التحقق" }
+      ]
+    },
+
+    lightgbm: {
+      title: "LightGBM",
+      description: "5 نماذج تعزيز تدرجي (واحد لكل فئة) بأهداف ثنائية، فعّال للمتجهات الكبيرة.",
+      params: [
+        { name: "Objective", value: "binary_logloss" },
+        { name: "Boosting rounds", value: "1000" },
+        { name: "Leaves", value: "64" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "أداء أساسي قوي للبيانات الجدولية"
+    },
+
+    xgboost: {
+      title: "XGBoost",
+      description: "5 مصنفات ثنائية (هدف لوجستي). طريقة ‘hist’ للأشجار لأكثر من 1000 خصيصة.",
+      params: [
+        { name: "Objective", value: "binary:logistic" },
+        { name: "Max depth", value: "6" },
+        { name: "Learning rate", value: "0.05" },
+        { name: "Subsample", value: "0.8" },
+        { name: "Trees", value: "1000" }
+      ]
+    },
+
+    catboost: {
+      title: "CatBoost",
+      description: "5 نماذج CatBoost بمعالجة فئوية أصلية—مناسب لعدم التوازن.",
+      params: [
+        { name: "Loss", value: "Logloss" },
+        { name: "Iterations", value: "1000" },
+        { name: "Depth", value: "6" },
+        { name: "Learning rate", value: "0.05" }
+      ],
+      note: "تم تمرير مؤشرات الخصائص الفئوية صراحة"
+    },
+
+    ensembleStrategy: {
+      title: "استراتيجية التجميع (Ensemble)",
+      description: "احتمالات لكل فئة؛ قصّ (Clipping) إلى [1e-7, 1-1e-7] لثبات Log-Loss.",
+      weightsTitle: "أوزان التجميع",
+      weights: [
+        { model: "الشبكة العصبية", weight: "35%" },
+        { model: "LightGBM", weight: "25%" },
+        { model: "XGBoost", weight: "25%" },
+        { model: "CatBoost", weight: "15%" }
+      ],
+      rationaleTitle: "التبرير",
+      rationale: [
+        "نهج متعدد النماذج مستوحى من DeepLoc 2.0",
+        "فعالية Embeddings Transformer + رؤوس متعددة الوسوم",
+        "دمج شبكات وأشجار لاتساع التغطية",
+        "متوسط مُرجّح يقلل التباين ويحسن التعميم",
+        "تعديل الأوزان عند فشل CatBoost"
+      ]
+    }
+  },
+
+  results: {
+    title: "النتائج",
+    subtitle: "تحليل شامل للأداء عبر النماذج والـ Folds",
+
+    performanceIntro: "في 5-Fold CV: الشبكة والأدوات الفردية ~0.98–1.05، CatBoost ~0.95، والتجميع ~0.94 (±0.02).",
+
+    cvSummary: {
+      title: "ملخص التحقق التبادلي",
+      intro: "نتائج نموذجية (متوسط ± انحراف معياري):",
+      table: {
+        headers: {
+          model: "النموذج",
+          cvLogLoss: "Log-Loss (متوسط ± انحراف)",
+          performanceRank: "الترتيب",
+          stability: "الثبات"
+        },
+        rows: [
+          { model: "DNN", logLoss: "~1.02 ± 0.03", rank: "رابع", stability: "DNN" },
+          { model: "LightGBM", logLoss: "~0.98 ± 0.03", rank: "ثالث", stability: "LightGBM" },
+          { model: "XGBoost", logLoss: "~1.00 ± 0.04", rank: "خامس", stability: "XGBoost" },
+          { model: "CatBoost", logLoss: "~0.95 ± 0.02", rank: "ثانٍ", stability: "CatBoost" },
+          { model: "Ensemble", logLoss: "~0.94 ± 0.02", rank: "أول 🏆", stability: "Ensemble" }
+        ]
+      }
+    },
+
+    keyPerformanceInsights: {
+      title: "رؤى الأداء الرئيسية",
+      bullets: [
+        "تحسين Ensemble (~0.94) يؤكد تكامل الإشارات",
+        "CatBoost الأفضل منفردًا (~0.95)؛ التجميع أفضل قليلًا",
+        "انحراف منخفض ⇒ ثبات جيد",
+        "القيم تتغير مع البذور العشوائية"
+      ]
+    },
+
+    competitiveAnalysis: {
+      title: "تحليل تنافسي",
+      cards: [
+        { title: "درجة تنافسية", text: "Log-Loss ≪ 1.1 ⇒ متوقع ضمن أعلى 30%" },
+        { title: "المتانة", text: "تباين منخفض بين Folds ⇒ تعميم جيد" },
+        { title: "إستراتيجية الإرسال", text: "استخدام مخرجات التجميع للرفع" }
+      ]
+    },
+
+    statisticalSignificance: {
+      title: "الدلالة الإحصائية",
+      text: "درجة تنافسية (≪1.1) وثبات مرتفع يؤكد موثوقية المسار؛ التجميع يدمج نقاط قوة الشبكات والأشجار."
+    }
+  },
+
+  discussion: {
+    title: "المناقشة والرؤى",
+    subtitle: "تحليل الأداء والدلالات البيولوجية",
+
+    introduction: "Embeddings مُدرّبة مسبقًا + ML كلاسيكي تمنح تنبؤًا موثوقًا للتوضع. ESM-1b يلتقط خصائص كيميائية حيوية؛ خصائص الطول والمملكة والتفاعل len_kingdom تُحسّن التخصص.",
+    
+    esmEmbeddingAnalysis: {
+      title: "تحليل Embeddings ESM-1b",
+      bullets: [
+        "معرفة مسبقة قوية: تشفير كيميائي حيوي غني",
+        "إشارات بنيوية ثانوية/ثالثية",
+        "سياق تطوري واسع (250M تسلسل)"
+      ]
+    },
+
+    featureEngineeringImpact: {
+      title: "أثر هندسة الخصائص",
+      bullets: [
+        "ترميز المملكة + التفاعل len_kingdom",
+        "تحويلات الطول تضبط التباين",
+        "ملخصات إحصائية تكثف التوزيع"
+      ]
+    },
+
+    multiLabelStrategy: {
+      title: "إستراتيجية متعدد الوسوم",
+      paragraph: "5 مخارج Sigmoid ضرورية للبروتينات متعددة التوضع. تتماشى مع DeepLoc 2.0 ومع Log-Loss.",
+      whyMultiLabel: {
+        title: "لماذا متعدد الوسوم؟",
+        bullets: [
+          "• توضع متعدد محتمل",
+          "• يعكس الواقع البيولوجي",
+          "• احتمالات مستقلة"
+        ]
+      },
+      technicalImplementation: {
+        title: "التنفيذ التقني",
+        bullets: [
+          "• خسارة ثنائية لكل وسم",
+          "• متوافق مع معيار التقييم",
+          "• نهج مثبت (DeepLoc 2.0)"
+        ]
+      }
+    },
+
+    modelPerformanceAnalysis: {
+      title: "تحليل أداء النماذج",
+      paragraph: "النماذج الشجرية (CatBoost, LightGBM, XGBoost) قوية للبيانات المختلطة؛ CatBoost يتفوّق بالفئات.",
+      cards: [
+        { title: "نماذج شجرية", text: "مقاومة للإفراط في التعلّم" },
+        { title: "شبكات عصبية", text: "تلتقط تفاعلات لاخطية معقدة" },
+        { title: "فوائد التجميع", text: "يقلل خطأ التعميم" }
+      ]
+    },
+
+    limitationsAndChallenges: {
+      title: "القيود والتحديات",
+      classImbalance: {
+        title: "عدم توازن الفئات",
+        paragraph: "لم نستخدم وزنًا للفئات؛ الفئات النادرة تساهم بالكامل. خيارات مستقبلية: أوزان، Focal Loss.",
+        stats: [
+          "Cell membrane: 15%",
+          "Extracellular: 11%"
+        ]
+      },
+      kingdomSpecificModeling: {
+        title: "نمذجة مخصصة للمملكة",
+        paragraph: "استُخدم نموذج عالمي؛ النمذجة التفصيلية قد تلتقط اختلافات تطورية."
+      }
+    },
+
+    biologicalSignificance: {
+      title: "الأهمية البيولوجية",
+      intro: "النتائج تدعم مبادئ أساسية:",
+      points: [
+        {
+          title: "علاقة التسلسل–الوظيفة",
+          text: "التسلسل يحمل معلومات كافية للتوضع."
+        },
+        {
+          title: "حفظ تطوري",
+          text: "إشارات التوضع محفوظة على نطاق واسع."
+        }
+      ],
+      clinicalRelevance: {
+        title: "الأهمية السريرية",
+        text: "تحديد سوء التوضع يدعم اكتشاف الأدوية وفهم الأمراض."
+      }
+    }
+  },
+
+  conclusion: {
+    title: "الخلاصات والعمل المستقبلي",
+    subtitle: "أهم النتائج واتجاهات البحث القادمة",
+
+    summaryIntro: "أنشأنا خط أنابيب متعدد الوسوم يجمع بين Embeddings وتسعير نماذج جدولة؛ الدمج بين لغة بروتينية حديثة وML كلاسيكي حقق أداءً عاليًا.",
+    
+    keyLessons: {
+      title: "دروس رئيسية",
+      lessons: [
+        { number: "1", title: "Embeddings قوية", text: "ESM-1b جوهر التنبؤ (بنية + وظيفة)." },
+        { number: "2", title: "هندسة خصائص مفيدة", text: "تحويلات طول + تفاعلات مملكة تكمل Embeddings." },
+        { number: "3", title: "تفوق التجميع", text: "تنوع (شبكات + Boosting) ≈0.94 Log-Loss." },
+        { number: "4", title: "التحديات", text: "عدم توازن + انحرافات مجال → وزن / بنى هرمية مستقبلًا." }
+      ]
+    },
+
+    futureResearchDirections: {
+      title: "اتجاهات مستقبلية",
+      items: [
+        { title: "Fine-tuning طرف لطرف", text: "تخصيص ESM / ProtBERT مباشرة." },
+        { title: "دمج متعدد الوسائط", text: "بنية متوقعة، صور مجهر، بيانات تطورية." },
+        { title: "تجميعات متقدمة", text: "Stacking، تعلم فوقي، اختيار ديناميكي." },
+        { title: "تصنيف هرمي", text: "مناطق عامة → مقصورات دقيقة." },
+        { title: "حلول عدم التوازن", text: "Focal Loss، تكلفة حساسة، SMOTE تسلسلي." },
+        { title: "نقل مجالي", text: "Fine-tuning مخصص لكل مملكة / عائلة." }
+      ]
+    },
+
+    broaderImpact: {
+      title: "الأثر الواسع",
+      conclusionParagraph: "المنظومة تمزج نماذج لغة بروتينية مع ML متين لإعطاء توضع دقيق — أساس قوي للوسم الآلي ومهام أخرى.",
+      immediateApplications: {
+        title: "تطبيقات فورية",
+        items: [
+          "التنبؤ بببتيدات الإشارة",
+          "وظائف خاصة بعضو (Organelle)",
+          "تحديد أهداف دوائية",
+          "تحليل بروتينات مرضية"
+        ]
+      },
+      longTermVision: {
+        title: "رؤية طويلة الأمد",
+        items: [
+          "خطوط وسم بروتيني مؤتمتة",
+          "طب شخصي",
+          "أدوات بيولوجيا تركيبية",
+          "منصات اكتشاف أدوية"
+        ]
+      }
+    }
+  },
+
+  references: {
+    title: "المراجع",
+    subtitle: "أدبيات تأسيسية وأبحاث مساندة",
+
+    introduction: "الأعمال التأسيسية تؤكد أهمية التوضع الخلوي. UniProt/Swiss-Prot مصدر موثوق. ESM-1b (650M) على 250M تسلسل. DeepLoc 2.0 يوضح فعالية Embeddings Transformer للتوضع متعدد الوسوم.",
+    
+    corePublications: {
+      title: "منشورات رئيسية",
+      entries: [
+        {
+          citation: "Rives وآخرون (2021) Biological structure and function emerge... PNAS 118(15) e2016239118.",
+          keyContribution: "🔑 مساهمة: تقديم ESM-1b يلتقط بنية ووظيفة من تعلم غير مراقب."
+        },
+        {
+          citation: "Thumuluri وآخرون (2022) DeepLoc 2.0... Nucleic Acids Research 50(W1) W228-W234.",
+          keyContribution: "🔑 مساهمة: ترسيخ Embeddings Transformer للتوضع متعدد الوسوم."
+        },
+        {
+          citation: "UniProt Consortium (2023) UniProt 2023. Nucleic Acids Research 51(D1) D523-D531.",
+          keyContribution: "🔑 مساهمة: قاعدة بيانات مرجعية مُنقّحة (Swiss-Prot)."
+        }
+      ]
+    },
+
+    supportingLiterature: {
+      title: "أدبيات مساندة",
+      machineLearningMethods: {
+        title: "أساليب ML",
+        entries: [
+          "Chen & Guestrin (2016) XGBoost. KDD.",
+          "Ke وآخرون (2017) LightGBM. NIPS.",
+          "Prokhorenkova وآخرون (2018) CatBoost. NeurIPS."
+        ]
+      },
+      proteinBioinformatics: {
+        title: "معلوماتية حيوية للبروتين",
+        entries: [
+          "Almagro Armenteros وآخرون (2017) DeepLoc. Bioinformatics.",
+          "Elnaggar وآخرون (2021) ProtTrans. IEEE TPAMI.",
+          "Lin وآخرون (2023) Atomic structure prediction with LM. Science."
+        ]
+      }
+    },
+
+    methodologicalFoundations: {
+      title: "الأسس المنهجية",
+      items: [
+        { title: "نماذج لغة بروتينية", text: "Transformers تتعلم تمثيلات تطورية وبنيوية." },
+        { title: "تصنيف متعدد الوسوم", text: "Binary Relevance بمخارج Sigmoid مستقلة." },
+        { title: "تعلم تجميعي", text: "دمج نماذج متغايرة للتعميم." }
+      ]
+    },
+
+    dataSourcesAndTools: {
+      title: "المصادر والأدوات",
+      leftColumn: [
+        "البيانات: UniProtKB/Swiss-Prot",
+        "Embeddings: ESM-1b (650M)",
+        "البيئة: Python (scikit-learn, TensorFlow)"
+      ],
+      rightColumn: [
+        "مكتبات ML: LightGBM, XGBoost, CatBoost",
+        "التقييم: 5-Fold CV, Log-Loss",
+        "العتاد: تدريب معزز بـ GPU"
+      ]
+    }
+  },
+
+  appendix: {
+    title: "الملحق",
+    subtitle: "تفاصيل تقنية وتنفيذ كامل",
+
+    completePipelineImplementation: {
+      title: "التنفيذ الكامل لخط الأنابيب",
+      intro: "تنفيذ إنتاجي (~0.94 ± 0.02 Log-Loss) مُحسّن في كل مكوّن.",
+      pipelineOverview: {
+        title: "نظرة عامة",
+        metrics: [
+          { value: "4", label: "نماذج ML" },
+          { value: "5-Fold", label: "تحقق تبادلي" },
+          { value: "1,296", label: "خصائص" },
+          { value: "~18K", label: "بروتينات" }
+        ]
+      },
+      productionCodeSection: {
+        title: "شيفرة الإنتاج (مقتطف)",
+        meta: {
+          author: "المؤلف: nirdidev05",
+          date: "التاريخ: 2025-08-29"
+        },
+        code: `import pandas as pd
+import numpy as np
+from sklearn.model_selection import KFold
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import log_loss
+import tensorflow as tf
+from tensorflow.keras import layers, Model, callbacks
+import lightgbm as lgb
+import xgboost as xgb
+import catboost as cb
+import warnings
+warnings.filterwarnings('ignore')
+
+print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
+print("=" * 60)
+print(f"Current User: {str('nirdidev05')}")
+print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
+
+class ProteinLocalizationPipeline:
+    """Pipeline complet optimisé basé sur tes excellents résultats"""
+    
+    def __init__(self):
+        self.num_classes = 5
+        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
+        
+    def load_and_prepare_data(self):
+        """Chargement et préparation complète des données"""
+        print("\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
+        print("-" * 50)
+        
+        # Chargement
+        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
+        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
+        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
+        
+        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
+        
+        # Fusion
+        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
+        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
+        
+        # Feature Engineering
+        def engineer_features(df, is_train=True):
+            df = df.copy()
+            
+            # Features de base
+            df['seq_len_log'] = np.log1p(df['seq_len'])
+            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
+            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
+            
+            # Features catégorielles (comme int pour éviter le problème CatBoost)
+            df['is_short'] = (df['seq_len'] < 200).astype('int32')
+            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
+            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
+            
+            # Kingdom encoding
+            if is_train:
+                self.kingdom_encoder = LabelEncoder()
+                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
+            else:
+                kingdoms = df['Kingdom'].fillna('Unknown')
+                known = set(self.kingdom_encoder.classes_)
+                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
+                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
+            
+            # Kingdom one-hot (comme int32)
+            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
+            for kingdom in top_kingdoms:
+                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
+            
+            # Features d'interaction
+            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
+            
+            # Stats des embeddings
+            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
+            if all(col in df.columns for col in embed_cols):
+                embed_data = df[embed_cols].values
+                df['embed_mean'] = np.mean(embed_data, axis=1)
+                df['embed_std'] = np.std(embed_data, axis=1)
+                df['embed_max'] = np.max(embed_data, axis=1)
+                df['embed_min'] = np.min(embed_data, axis=1)
+            
+            return df
+        
+        # Application du feature engineering
+        train_processed = engineer_features(train_merged, is_train=True)
+        test_processed = engineer_features(test_merged, is_train=False)
+        
+        # Sélection des features
+        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
+        engineered_cols = [
+            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
+            'is_short', 'is_medium', 'is_long', 'len_kingdom',
+            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
+            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
+        ]
+        
+        feature_cols = embedding_cols + engineered_cols
+        feature_cols = [col for col in feature_cols if col in train_processed.columns]
+        
+        # Données finales
+        X_train = train_processed[feature_cols].fillna(0)
+        X_test = test_processed[feature_cols].fillna(0)
+        y_train = train_processed[self.class_names].values
+        
+        # Identification des features catégorielles par index
+        categorical_indices = []
+        for i, col in enumerate(feature_cols):
+            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
+                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
+                categorical_indices.append(i)
+        
+        print(f"✅ Features finales: {len(feature_cols)}")
+        print(f"   - Embeddings: {len(embedding_cols)}")
+        print(f"   - Engineered: {len(engineered_cols)}")
+        print(f"   - Categorical indices: {len(categorical_indices)}")
+        print(f"✅ Labels multi-label: {y_train.shape}")
+        
+        return X_train, X_test, y_train, categorical_indices, feature_cols
+    
+    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
+        """Entraîne tous les modèles sur un fold"""
+        results = {}
+        
+        # Conversion en numpy pour compatibilité
+        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
+        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
+        
+        # 1. DEEP NEURAL NETWORK
+        print("  🧠 DNN Training...")
+        
+        # Normalisation
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train_np)
+        X_val_scaled = scaler.transform(X_val_np)
+        
+        # Architecture DNN optimisée
+        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
+        x = layers.BatchNormalization()(inputs)
+        x = layers.Dense(1024, activation='relu')(x)
+        x = layers.Dropout(0.3)(x)
+        x = layers.BatchNormalization()(x)
+        x = layers.Dense(512, activation='relu')(x)
+        x = layers.Dropout(0.25)(x)
+        x = layers.Dense(256, activation='relu')(x)
+        x = layers.Dropout(0.2)(x)
+        x = layers.Dense(128, activation='relu')(x)
+        x = layers.Dropout(0.15)(x)
+        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
+        
+        dnn_model = Model(inputs, outputs)
+        dnn_model.compile(
+            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+            loss='binary_crossentropy',
+            metrics=['binary_accuracy']
+        )
+        
+        # Callbacks
+        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
+        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
+        
+        # Entraînement
+        dnn_model.fit(
+            X_train_scaled, y_train_fold,
+            validation_data=(X_val_scaled, y_val_fold),
+            epochs=150, batch_size=64,
+            callbacks=[early_stop, lr_reduce],
+            verbose=0
+        )
+        
+        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
+        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
+        score_dnn = log_loss(y_val_fold, pred_dnn)
+        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
+        print(f"     ✅ DNN: {score_dnn:.4f}")
+        
+        # 2. LIGHTGBM
+        print("  🌟 LightGBM Training...")
+        
+        lgb_params = {
+            'objective': 'binary',
+            'metric': 'binary_logloss',
+            'boosting_type': 'gbdt',
+            'num_leaves': 64,
+            'learning_rate': 0.05,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 5,
+            'min_data_in_leaf': 20,
+            'lambda_l1': 0.1,
+            'lambda_l2': 0.1,
+            'verbose': -1,
+            'random_state': 42
+        }
+        
+        lgb_preds = []
+        for i in range(self.num_classes):
+            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
+            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
+            
+            model = lgb.train(
+                lgb_params,
+                train_data,
+                valid_sets=[val_data],
+                num_boost_round=1000,
+                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
+            )
+            
+            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
+            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_lgb = np.column_stack(lgb_preds)
+        score_lgb = log_loss(y_val_fold, pred_lgb)
+        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
+        print(f"     ✅ LightGBM: {score_lgb:.4f}")
+        
+        # 3. XGBOOST
+        print("  🚀 XGBoost Training...")
+        
+        xgb_preds = []
+        for i in range(self.num_classes):
+            model = xgb.XGBClassifier(
+                objective='binary:logistic',
+                eval_metric='logloss',
+                max_depth=6,
+                learning_rate=0.05,
+                subsample=0.8,
+                colsample_bytree=0.8,
+                min_child_weight=3,
+                reg_alpha=0.1,
+                reg_lambda=0.1,
+                n_estimators=1000,
+                random_state=42,
+                n_jobs=-1,
+                tree_method='hist'
+            )
+            
+            model.fit(
+                X_train_np, y_train_fold[:, i],
+                eval_set=[(X_val_np, y_val_fold[:, i])],
+                early_stopping_rounds=50,
+                verbose=False
+            )
+            
+            pred = model.predict_proba(X_val_np)[:, 1]
+            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+        
+        pred_xgb = np.column_stack(xgb_preds)
+        score_xgb = log_loss(y_val_fold, pred_xgb)
+        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
+        print(f"     ✅ XGBoost: {score_xgb:.4f}")
+        
+        # 4. CATBOOST (avec gestion correcte des features catégorielles)
+        print("  🐱 CatBoost Training...")
+        
+        try:
+            # Conversion explicite des colonnes catégorielles en int
+            X_train_cat = X_train_np.copy().astype(np.float32)
+            X_val_cat = X_val_np.copy().astype(np.float32)
+            
+            # Conversion des features catégorielles en int
+            for idx in cat_indices:
+                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
+                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
+            
+            catboost_preds = []
+            for i in range(self.num_classes):
+                train_pool = cb.Pool(
+                    X_train_cat,
+                    y_train_fold[:, i],
+                    cat_features=cat_indices
+                )
+                val_pool = cb.Pool(
+                    X_val_cat,
+                    y_val_fold[:, i],
+                    cat_features=cat_indices
+                )
+                
+                model = cb.CatBoostClassifier(
+                    loss_function='Logloss',
+                    eval_metric='Logloss',
+                    iterations=1000,
+                    learning_rate=0.05,
+                    depth=6,
+                    l2_leaf_reg=3,
+                    bootstrap_type='Bernoulli',
+                    subsample=0.8,
+                    random_seed=42,
+                    verbose=False,
+                    early_stopping_rounds=50
+                )
+                
+                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
+                pred = model.predict_proba(X_val_cat)[:, 1]
+                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
+            
+            pred_catboost = np.column_stack(catboost_preds)
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+            print(f"     ✅ CatBoost: {score_catboost:.4f}")
+            
+        except Exception as e:
+            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
+            # Utiliser une prédiction dummy
+            pred_catboost = np.ones_like(y_val_fold) * 0.5
+            score_catboost = log_loss(y_val_fold, pred_catboost)
+            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
+        
+        # 5. ENSEMBLE
+        print("  🎭 Ensemble...")
+        
+        # Ensemble adaptatif selon les modèles disponibles
+        if results['catboost']['score'] < 2.0:  # CatBoost marche
+            ensemble_pred = (0.35 * results['dnn']['predictions'] +
+                           0.25 * results['lgb']['predictions'] +
+                           0.25 * results['xgb']['predictions'] +
+                           0.15 * results['catboost']['predictions'])
+        else:  # Sans CatBoost
+            ensemble_pred = (0.4 * results['dnn']['predictions'] +
+                           0.3 * results['lgb']['predictions'] +
+                           0.3 * results['xgb']['predictions'])
+        
+        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
+        score_ensemble = log_loss(y_val_fold, ensemble_pred)
+        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
+        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
+        
+        return results
+    
+    def run_cross_validation(self):
+        """Validation croisée complète 5-fold"""
+        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
+        print("=" * 60)
+        
+        # Préparation des données
+        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
+        
+        # Validation croisée
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+        fold_results = []
+        
+        print(f"\n🔄 VALIDATION CROISÉE 5-FOLD")
+        print("-" * 50)
+        
+        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
+            print(f"\n📁 FOLD {fold + 1}/5")
+            print("-" * 30)
+            
+            X_train_fold = X_train.iloc[train_idx]
+            X_val_fold = X_train.iloc[val_idx]
+            y_train_fold = y_train[train_idx]
+            y_val_fold = y_train[val_idx]
+            
+            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
+            
+            # Entraînement des modèles
+            results = self.train_models_fold(
+                X_train_fold, y_train_fold,
+                X_val_fold, y_val_fold,
+                cat_indices
+            )
+            
+            fold_results.append({
+                'fold': fold + 1,
+                'results': results
+            })
+            
+            print(f"✅ Fold {fold + 1} terminé!")
+        
+        # Analyse des résultats
+        print(f"\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
+        print("=" * 60)
+        
+        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
+        final_scores = {}
+        
+        for model_name in model_names:
+            scores = [fold['results'][model_name]['score'] for fold in fold_results]
+            final_scores[model_name] = {
+                'mean': np.mean(scores),
+                'std': np.std(scores),
+                'scores': scores
+            }
+        
+        print(f"📊 Scores par modèle:")
+        for model_name, stats in final_scores.items():
+            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
+        
+        # Meilleur modèle
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        best_score = final_scores[best_model]['mean']
+        
+        print(f"\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
+        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
+        
+        print(f"\n📈 ANALYSE DE PERFORMANCE:")
+        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
+        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
+        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
+        
+        return fold_results, final_scores, X_test, feature_cols
+
+# EXÉCUTION DU PIPELINE
+if __name__ == "__main__":
+    print(f"🚀 Starting Final Optimized Pipeline")
+    print(f"👤 User: nirdidev05")
+    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
+    
+    pipeline = ProteinLocalizationPipeline()
+    
+    try:
+        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
+        
+        print(f"\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
+        print(f"👤 User: nirdidev05")
+        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
+        
+        # Recommandation finale
+        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
+        print(f"\n💡 RECOMMANDATION FINALE:")
+        print(f"   Utiliser: {best_model.upper()} pour soumission")
+        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
+        
+        # Prêt pour génération des prédictions finales
+        print(f"\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
+        print(f"   Test set: {X_test.shape}")
+        print(f"   Features: {len(feature_cols)}")
+        
+    except Exception as e:
+        print(f"❌ Erreur: {e}")
+        import traceback
+        traceback.print_exc()`
+      }
+    },
+
+    architectureExplanation: {
+      title: "شرح البنية",
+      sections: [
+        {
+          title: "1. الشبكة العصبية العميقة",
+          paragraph: "بنية من 5 طبقات مع BatchNorm و Dropout و جدولة تعلم—خفض تدريجي للأبعاد.",
+          architectureLine: "Input(1296) → BatchNorm → Dense(1024) → Dropout(0.3) → Dense(512) → Dropout(0.25) → Dense(256) → Dropout(0.2) → Dense(128) → Dropout(0.15) → Output(5, sigmoid)"
+        },
+        {
+          title: "2. نماذج Gradient Boosting",
+          paragraph: "LightGBM و XGBoost و CatBoost: خمسة مصنفات ثنائية لكل منها مع Early Stopping.",
+          modelConfigs: {
+            lightgbm: ["num_leaves: 64", "learning_rate: 0.05", "early_stopping: 50"],
+            xgboost: ["max_depth: 6", "tree_method: 'hist'", "n_estimators: 1000"],
+            catboost: ["iterations: 1000", "depth: 6", "cat_features: explicit"]
+          }
+        },
+        {
+          title: "3. تجميع تكيفي",
+          paragraph: "إعادة توزيع الأوزان إذا فشل CatBoost للحفاظ على المكاسب.",
+          weights: {
+            withCatBoost: ["DNN: 35% • LGB: 25%", "XGB: 25% • CatBoost: 15%"],
+            withoutCatBoost: ["DNN: 40% • LGB: 30%", "XGB: 30%"]
+          }
+        },
+        {
+          title: "4. التحقق التبادلي والتحليل",
+          paragraph: "5-Fold مُقسّم، تتبع المتوسط، التباين، الترتيب، والإسقاط التنافسي.",
+          metricsTracked: [
+            "• متوسط Log-Loss لكل نموذج",
+            "• الانحراف المعياري (الثبات)",
+            "• اختيار أفضل نموذج",
+            "• تقدير الترتيب المتوقع"
+          ]
+        }
+      ]
+    },
+
+    expectedOutput: {
+      title: "المخرجات المتوقعة",
+      consoleOutputExampleTitle: "مثال مخرجات الطرفية:",
+      consoleOutput: `🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ
+============================================================
+المستخدم: nirdidev05
+البدء: 2025-08-29 18:14:00 UTC
+... (مقتطف مختصر) ...`,
+      metrics: [
+        { value: "~0.94", labelTop: "النتيجة المتوقعة", labelBottom: "Log-Loss (CV)" },
+        { value: "±0.02", labelTop: "الانحراف", labelBottom: "ثبات عبر Folds" },
+        { value: "Top 30%", labelTop: "الترتيب المتوقع", labelBottom: "المسابقة" }
+      ]
+    }
+  },
+
+  footer: {
+    componentName: "FooterProtein",
+    headings: { brand: "Protein Localization AI" },
+    description: "تعلم آلي متقدم للتوضع الخلوي (ESM-1b + Ensemble).",
+    researchLine: "بحث بواسطة nirdidev05 • Log-Loss: 0.94±0.02",
+    buttons: {
+      downloadReport: "تنزيل التقرير",
+      viewNotebook: "عرض الدفتر"
+    },
+    copyright:
+      "© 2024 أبحاث توضع البروتينات • مبني بـ React + TypeScript • ~18,000 بروتين مُحلَّل",
+    download: {
+      href: "/Protein Subcellular Localization Prediction.pdf",
+      filename: "Protein_Subcellular_Localization_Prediction.pdf"
+    }
+  }
+
+},
     hero: {
       greeting: "مرحباً، أنا",
       name: "وليد بن بوتة",

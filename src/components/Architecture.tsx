@@ -1,165 +1,99 @@
 import React, { useState } from 'react';
 import { ArchitectureIcon, BrainIcon, MemoryIcon, CPUIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Architecture: React.FC = () => {
+  const t = useTranslation();
   const [activeComponent, setActiveComponent] = useState('transformer');
 
   const architectureSpecs = {
     transformer: {
-      title: 'Decoder-Only Transformer Core',
-      description: 'Foundation architecture optimized for autoregressive code generation',
+      title: t.gptCodeTracer.architecture.components.transformer.title,
+      description: t.gptCodeTracer.architecture.components.transformer.description,
       specs: {
-        'Model Type': 'Autoregressive Language Model',
-        'Architecture': 'Decoder-Only Transformer',
-        'Layers': '8 Transformer Blocks',
-        'Parameters': '2.1M total parameters',
-        'Context Window': '256 tokens',
-        'Vocabulary': 'Custom TinyPy tokenizer'
+        [t.gptCodeTracer.architecture.components.transformer.specs.modelType]: t.gptCodeTracer.architecture.components.transformer.specs.modelType,
+        [t.gptCodeTracer.architecture.components.transformer.specs.architecture]: t.gptCodeTracer.architecture.components.transformer.specs.architecture,
+        [t.gptCodeTracer.architecture.components.transformer.specs.layers]: t.gptCodeTracer.architecture.components.transformer.specs.layers,
+        [t.gptCodeTracer.architecture.components.transformer.specs.parameters]: t.gptCodeTracer.architecture.components.transformer.specs.parameters,
+        [t.gptCodeTracer.architecture.components.transformer.specs.contextWindow]: t.gptCodeTracer.architecture.components.transformer.specs.contextWindow,
+        [t.gptCodeTracer.architecture.components.transformer.specs.vocabulary]: t.gptCodeTracer.architecture.components.transformer.specs.vocabulary
       },
-      code: `class GPTModel(nn.Module):
-    def __init__(self, vocab_size: int):
-        super().__init__()
-        self.token_embedding = nn.Embedding(vocab_size, n_embd)
-        self.position_embedding = nn.Embedding(block_size, n_embd)
-        self.blocks = nn.Sequential(*[
-            TransformerBlock(n_embd, n_head) 
-            for _ in range(n_layer)
-        ])
-        self.ln_f = nn.LayerNorm(n_embd)
-        self.lm_head = nn.Linear(n_embd, vocab_size)
-        
-    def forward(self, idx, targets=None):
-        B, T = idx.shape
-        
-        # Create embeddings
-        token_emb = self.token_embedding(idx)
-        pos_emb = self.position_embedding(torch.arange(T))
-        
-        # Forward through transformer
-        x = token_emb + pos_emb
-        x = self.blocks(x)
-        x = self.ln_f(x)
-        logits = self.lm_head(x)
-        
-        return logits`,
+      code: t.gptCodeTracer.architecture.components.transformer.code,
       icon: ArchitectureIcon
     },
     attention: {
-      title: 'Memory-Augmented Attention',
-      description: 'External dynamic memory enabling infinite context extension',
+      title: t.gptCodeTracer.architecture.components.attention.title,
+      description: t.gptCodeTracer.architecture.components.attention.description,
       specs: {
-        'Innovation': 'External Fixed-Size Dynamic Memory',
-        'Context Extension': 'Theoretically Infinite',
-        'Complexity': 'Linear time O(n) vs O(n²)',
-        'Memory Size': 'Fixed external cache (512 slots)',
-        'Inspiration': 'Memformer architecture research',
-        'Benefit': 'Long sequence processing capability'
+        [t.gptCodeTracer.architecture.components.attention.specs.innovation]: t.gptCodeTracer.architecture.components.attention.specs.innovation,
+        [t.gptCodeTracer.architecture.components.attention.specs.contextExtension]: t.gptCodeTracer.architecture.components.attention.specs.contextExtension,
+        [t.gptCodeTracer.architecture.components.attention.specs.complexity]: t.gptCodeTracer.architecture.components.attention.specs.complexity,
+        [t.gptCodeTracer.architecture.components.attention.specs.memorySize]: t.gptCodeTracer.architecture.components.attention.specs.memorySize,
+        [t.gptCodeTracer.architecture.components.attention.specs.inspiration]: t.gptCodeTracer.architecture.components.attention.specs.inspiration,
+        [t.gptCodeTracer.architecture.components.attention.specs.benefit]: t.gptCodeTracer.architecture.components.attention.specs.benefit
       },
-      code: `class MemoryAugmentedAttention(nn.Module):
-    def __init__(self, n_embd: int, n_head: int, memory_size: int = 512):
-        super().__init__()
-        self.n_embd = n_embd
-        self.n_head = n_head
-        self.memory_size = memory_size
-        
-        # Standard attention components
-        self.c_attn = nn.Linear(n_embd, 3 * n_embd, bias=False)
-        self.c_proj = nn.Linear(n_embd, n_embd)
-        
-        # INNOVATION: External memory
-        self.memory = nn.Parameter(torch.randn(memory_size, n_embd) * 0.02)
-        self.memory_attention = nn.MultiheadAttention(
-            embed_dim=n_embd, 
-            num_heads=n_head, 
-            batch_first=True
-        )
-        
-    def forward(self, x: torch.Tensor, memory_state=None):
-        B, T, C = x.shape
-        
-        # Standard self-attention
-        qkv = self.c_attn(x)
-        q, k, v = qkv.split(self.n_embd, dim=2)
-        
-        # Memory interaction - THE KEY INNOVATION
-        if memory_state is None:
-            memory_state = self.memory.unsqueeze(0).expand(B, -1, -1)
-        
-        # Cross-attention with external memory
-        memory_out, _ = self.memory_attention(
-            query=x, key=memory_state, value=memory_state
-        )
-        
-        return memory_out + x, memory_state`,
+      code: t.gptCodeTracer.architecture.components.attention.code,
       icon: MemoryIcon
     },
     embedding: {
-      title: 'Execution Step Embedding',
-      description: 'Explicit state tracking through temporal step identification',
+      title: t.gptCodeTracer.architecture.components.embedding.title,
+      description: t.gptCodeTracer.architecture.components.embedding.description,
       specs: {
-        'Purpose': 'Execution State Tracking',
-        'Method': 'Unique Step ID Embedding',
-        'Format': '#STEP {step_counter} markers',
-        'Integration': 'Added to token + position embeddings',
-        'Type': 'Neuro-Symbolic Bridge',
-        'Benefit': 'Loop iteration disambiguation'
+        [t.gptCodeTracer.architecture.components.embedding.specs.purpose]: t.gptCodeTracer.architecture.components.embedding.specs.purpose,
+        [t.gptCodeTracer.architecture.components.embedding.specs.method]: t.gptCodeTracer.architecture.components.embedding.specs.method,
+        [t.gptCodeTracer.architecture.components.embedding.specs.format]: t.gptCodeTracer.architecture.components.embedding.specs.format,
+        [t.gptCodeTracer.architecture.components.embedding.specs.integration]: t.gptCodeTracer.architecture.components.embedding.specs.integration,
+        [t.gptCodeTracer.architecture.components.embedding.specs.type]: t.gptCodeTracer.architecture.components.embedding.specs.type,
+        [t.gptCodeTracer.architecture.components.embedding.specs.benefit]: t.gptCodeTracer.architecture.components.embedding.specs.benefit
       },
-      code: `class ExecutionStepEmbedding(nn.Module):
-    def __init__(self, max_steps: int = 10000, n_embd: int = 384):
-        super().__init__()
-        self.max_steps = max_steps
-        self.n_embd = n_embd
-        
-        # Core innovation: Step embedding layer
-        self.step_embedding = nn.Embedding(max_steps, n_embd)
-        
-        # Learnable positional encoding for step relationships
-        self.step_position_encoding = nn.Parameter(
-            torch.randn(max_steps, n_embd) * 0.02
-        )
-    
-    def forward(self, step_ids: torch.Tensor):
-        # Clamp step IDs to valid range
-        step_ids = torch.clamp(step_ids, 0, self.max_steps - 1)
-        
-        # Core step embedding
-        step_emb = self.step_embedding(step_ids)
-        
-        # Add positional encoding
-        pos_emb = self.step_position_encoding[step_ids]
-        
-        return step_emb + pos_emb
-
-# Usage in main model forward pass:
-def forward(self, token_ids, step_ids=None):
-    token_emb = self.token_embedding(token_ids)
-    pos_emb = self.position_embedding(positions)
-    
-    # THE INNOVATION: Step embedding integration
-    if step_ids is not None:
-        step_emb = self.step_embedding(step_ids)
-        combined_emb = token_emb + pos_emb + step_emb
-    else:
-        combined_emb = token_emb + pos_emb
-    
-    return combined_emb`,
+      code: t.gptCodeTracer.architecture.components.embedding.code,
       icon: CPUIcon
     }
   };
 
   const hyperparameters = [
-    { name: 'block_size', value: '256', rationale: 'Context length balanced with memory efficiency', impact: 'Enables Memory-Augmented Attention necessity' },
-    { name: 'n_embd', value: '384', rationale: 'Embedding dimensions for rich feature representation', impact: 'Model expressiveness vs computational cost' },
-    { name: 'n_head', value: '8', rationale: 'Multi-head attention for parallel relationship capture', impact: 'Attention mechanism diversity' },
-    { name: 'n_layer', value: '8', rationale: 'Transformer depth for hierarchical feature learning', impact: 'Model capacity and training stability' },
-    { name: 'learning_rate', value: '1e-3', rationale: 'AdamW optimizer with cosine decay scheduling', impact: 'Training convergence optimization' },
-    { name: 'batch_size', value: '190', rationale: 'GPU memory optimization with gradient stability', impact: 'Training throughput efficiency' }
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.blockSize.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.blockSize.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.blockSize.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.blockSize.impact 
+    },
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.nEmbd.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.nEmbd.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.nEmbd.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.nEmbd.impact 
+    },
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.nHead.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.nHead.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.nHead.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.nHead.impact 
+    },
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.nLayer.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.nLayer.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.nLayer.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.nLayer.impact 
+    },
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.learningRate.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.learningRate.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.learningRate.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.learningRate.impact 
+    },
+    { 
+      name: t.gptCodeTracer.architecture.hyperparameters.parameters.batchSize.name, 
+      value: t.gptCodeTracer.architecture.hyperparameters.parameters.batchSize.value, 
+      rationale: t.gptCodeTracer.architecture.hyperparameters.parameters.batchSize.rationale, 
+      impact: t.gptCodeTracer.architecture.hyperparameters.parameters.batchSize.impact 
+    }
   ];
 
   const components = [
-    { id: 'transformer', label: 'Core Architecture', icon: ArchitectureIcon },
-    { id: 'attention', label: 'Memory Attention', icon: MemoryIcon },
-    { id: 'embedding', label: 'Step Embedding', icon: CPUIcon }
+    { id: 'transformer', label: t.gptCodeTracer.architecture.components.transformer.label, icon: ArchitectureIcon },
+    { id: 'attention', label: t.gptCodeTracer.architecture.components.attention.label, icon: MemoryIcon },
+    { id: 'embedding', label: t.gptCodeTracer.architecture.components.embedding.label, icon: CPUIcon }
   ];
 
   return (
@@ -173,13 +107,13 @@ def forward(self, token_ids, step_ids=None):
                 <ArchitectureIcon className="text-accent" size={24} />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold neural-gradient">
-                Neural Architecture Design
+                {t.gptCodeTracer.architecture.title}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-mono leading-relaxed">
               <span className="text-accent">{`class`}</span> <span className="text-secondary">CustomGPT</span>(<span className="text-primary">SymbolicReasoning</span>):
               <br />
-              <span className="ml-4 text-muted-foreground"># Bridging neural networks and symbolic logic</span>
+              <span className="ml-4 text-muted-foreground"># {t.gptCodeTracer.architecture.subtitle}</span>
             </p>
           </div>
 
@@ -190,11 +124,9 @@ def forward(self, token_ids, step_ids=None):
                 <BrainIcon size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-foreground mb-3">Architecture Innovation Framework</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">{t.gptCodeTracer.architecture.contextBanner.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Our custom GPT architecture introduces <span className="text-accent font-semibold">Memory-Augmented Attention</span> 
-                  and <span className="text-warning font-semibold">Execution Step Embedding</span> to bridge the gap between 
-                  statistical pattern recognition and deterministic symbolic reasoning required for code execution tracing.
+                  {t.gptCodeTracer.architecture.contextBanner.description}
                 </p>
                 <div className="flex items-center gap-4 text-sm font-mono">
                   <div className="flex items-center gap-2">
@@ -202,7 +134,7 @@ def forward(self, token_ids, step_ids=None):
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-warning rounded-full animate-pulse"></div>
-                    <span className="text-warning">Researcher: nirdidev05</span>
+                    <span className="text-warning">{t.gptCodeTracer.architecture.contextBanner.researcher}</span>
                   </div>
                 </div>
               </div>
@@ -213,17 +145,17 @@ def forward(self, token_ids, step_ids=None):
           <div className="cyber-card p-8 rounded-2xl mb-12 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent"></div>
             
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Architecture Data Flow</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">{t.gptCodeTracer.architecture.dataFlow.title}</h3>
             <div className="space-y-8">
               {/* Input Layer */}
               <div className="flex items-center justify-center">
                 <div className="cyber-card p-6 rounded-xl min-w-[280px] text-center bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20">
-                  <div className="text-primary font-mono font-bold mb-2 text-lg">INPUT_LAYER</div>
-                  <div className="text-sm text-muted-foreground">TinyPy Code + Execution Context</div>
+                  <div className="text-primary font-mono font-bold mb-2 text-lg">{t.gptCodeTracer.architecture.dataFlow.inputLayer.title}</div>
+                  <div className="text-sm text-muted-foreground">{t.gptCodeTracer.architecture.dataFlow.inputLayer.description}</div>
                   <div className="flex items-center justify-center gap-2 mt-2 text-xs">
-                    <span className="px-2 py-1 bg-primary/20 rounded font-mono">tokens</span>
-                    <span className="px-2 py-1 bg-secondary/20 rounded font-mono">positions</span>
-                    <span className="px-2 py-1 bg-accent/20 rounded font-mono">steps</span>
+                    <span className="px-2 py-1 bg-primary/20 rounded font-mono">{t.gptCodeTracer.architecture.dataFlow.inputLayer.tokens.tokens}</span>
+                    <span className="px-2 py-1 bg-secondary/20 rounded font-mono">{t.gptCodeTracer.architecture.dataFlow.inputLayer.tokens.positions}</span>
+                    <span className="px-2 py-1 bg-accent/20 rounded font-mono">{t.gptCodeTracer.architecture.dataFlow.inputLayer.tokens.steps}</span>
                   </div>
                 </div>
               </div>
@@ -238,19 +170,19 @@ def forward(self, token_ids, step_ids=None):
               {/* Embedding Fusion */}
               <div className="flex items-center justify-center gap-4 flex-wrap">
                 <div className="cyber-card p-4 rounded-lg text-center min-w-[120px]">
-                  <div className="text-secondary font-mono font-bold mb-2">TOKEN</div>
-                  <div className="text-xs text-muted-foreground">vocab → 384d</div>
+                  <div className="text-secondary font-mono font-bold mb-2">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.token.title}</div>
+                  <div className="text-xs text-muted-foreground">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.token.description}</div>
                 </div>
                 <div className="text-2xl text-accent">+</div>
                 <div className="cyber-card p-4 rounded-lg text-center min-w-[120px]">
-                  <div className="text-secondary font-mono font-bold mb-2">POSITION</div>
-                  <div className="text-xs text-muted-foreground">seq → 384d</div>
+                  <div className="text-secondary font-mono font-bold mb-2">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.position.title}</div>
+                  <div className="text-xs text-muted-foreground">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.position.description}</div>
                 </div>
                 <div className="text-2xl text-accent">+</div>
                 <div className="cyber-card p-4 rounded-lg text-center min-w-[120px] cyber-glow bg-gradient-to-r from-accent/10 to-warning/10 border border-accent/30">
-                  <div className="text-accent font-mono font-bold mb-2">STEP</div>
-                  <div className="text-xs text-muted-foreground">exec → 384d</div>
-                  <div className="text-xs text-accent font-bold mt-1">INNOVATION</div>
+                  <div className="text-accent font-mono font-bold mb-2">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.step.title}</div>
+                  <div className="text-xs text-muted-foreground">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.step.description}</div>
+                  <div className="text-xs text-accent font-bold mt-1">{t.gptCodeTracer.architecture.dataFlow.embeddingFusion.step.innovation}</div>
                 </div>
               </div>
 
@@ -264,13 +196,13 @@ def forward(self, token_ids, step_ids=None):
               {/* Transformer Stack */}
               <div className="flex items-center justify-center">
                 <div className="cyber-card p-6 rounded-xl text-center bg-gradient-to-r from-secondary/10 to-accent/10 border border-secondary/20">
-                  <div className="text-accent font-mono font-bold mb-2 text-lg">8x TRANSFORMER_BLOCKS</div>
+                  <div className="text-accent font-mono font-bold mb-2 text-lg">{t.gptCodeTracer.architecture.dataFlow.transformerStack.title}</div>
                   <div className="text-sm text-muted-foreground mb-4">
-                    LayerNorm → Memory-Augmented Attention → LayerNorm → FeedForward
+                    {t.gptCodeTracer.architecture.dataFlow.transformerStack.description}
                   </div>
                   <div className="flex items-center justify-center gap-3">
                     <MemoryIcon className="text-primary" size={16} />
-                    <div className="text-xs font-mono text-primary font-bold">MEMORY_ENHANCED</div>
+                    <div className="text-xs font-mono text-primary font-bold">{t.gptCodeTracer.architecture.dataFlow.transformerStack.memoryEnhanced}</div>
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
                   </div>
                 </div>
@@ -286,9 +218,9 @@ def forward(self, token_ids, step_ids=None):
               {/* Output Layer */}
               <div className="flex items-center justify-center">
                 <div className="cyber-card p-6 rounded-xl text-center bg-gradient-to-r from-accent/10 to-warning/10 border border-warning/20">
-                  <div className="text-warning font-mono font-bold mb-2 text-lg">OUTPUT_LAYER</div>
-                  <div className="text-sm text-muted-foreground">LayerNorm → Linear(vocab_size) → Next Token</div>
-                  <div className="text-xs text-warning font-bold mt-2">SYMBOLIC PREDICTION</div>
+                  <div className="text-warning font-mono font-bold mb-2 text-lg">{t.gptCodeTracer.architecture.dataFlow.outputLayer.title}</div>
+                  <div className="text-sm text-muted-foreground">{t.gptCodeTracer.architecture.dataFlow.outputLayer.description}</div>
+                  <div className="text-xs text-warning font-bold mt-2">{t.gptCodeTracer.architecture.dataFlow.outputLayer.symbolicPrediction}</div>
                 </div>
               </div>
             </div>
@@ -336,7 +268,7 @@ def forward(self, token_ids, step_ids=None):
               </p>
               
               <div className="space-y-4">
-                <h4 className="font-semibold text-primary font-mono text-lg">SPECIFICATIONS</h4>
+                <h4 className="font-semibold text-primary font-mono text-lg">{t.gptCodeTracer.architecture.labels.specifications}</h4>
                 {Object.entries(architectureSpecs[activeComponent].specs).map(([key, value]) => (
                   <div key={key} className="flex justify-between items-center py-3 border-b border-border/30">
                     <span className="text-muted-foreground font-mono text-sm">{key}</span>
@@ -356,7 +288,7 @@ def forward(self, token_ids, step_ids=None):
                   {activeComponent}_implementation.py
                 </span>
                 <div className="text-xs text-muted-foreground font-mono">
-                  Research Code
+                  {t.gptCodeTracer.architecture.labels.researchCode}
                 </div>
               </div>
               <div className="p-6 min-h-[500px] font-mono text-sm overflow-x-auto">
@@ -373,17 +305,17 @@ def forward(self, token_ids, step_ids=None):
             
             <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center gap-3">
               <CPUIcon className="text-accent" size={24} />
-              Hyperparameter Configuration
+              {t.gptCodeTracer.architecture.hyperparameters.title}
             </h3>
             
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-4 px-4 font-mono text-primary font-bold">Parameter</th>
-                    <th className="text-left py-4 px-4 font-mono text-secondary font-bold">Value</th>
-                    <th className="text-left py-4 px-4 font-mono text-accent font-bold">Rationale</th>
-                    <th className="text-left py-4 px-4 font-mono text-warning font-bold">Impact</th>
+                    <th className="text-left py-4 px-4 font-mono text-primary font-bold">{t.gptCodeTracer.architecture.hyperparameters.tableHeaders.parameter}</th>
+                    <th className="text-left py-4 px-4 font-mono text-secondary font-bold">{t.gptCodeTracer.architecture.hyperparameters.tableHeaders.value}</th>
+                    <th className="text-left py-4 px-4 font-mono text-accent font-bold">{t.gptCodeTracer.architecture.hyperparameters.tableHeaders.rationale}</th>
+                    <th className="text-left py-4 px-4 font-mono text-warning font-bold">{t.gptCodeTracer.architecture.hyperparameters.tableHeaders.impact}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border/30">
@@ -402,8 +334,7 @@ def forward(self, token_ids, step_ids=None):
             <div className="mt-6 p-4 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg border border-primary/20">
               <p className="text-sm text-muted-foreground leading-relaxed">
                 <span className="text-primary font-semibold font-mono">OPTIMIZATION_NOTE:</span> 
-                These hyperparameters were systematically tuned through extensive experimentation, 
-                balancing model expressiveness with computational efficiency for the TinyPy domain.
+                {t.gptCodeTracer.architecture.hyperparameters.optimizationNote}
               </p>
             </div>
             
@@ -411,7 +342,7 @@ def forward(self, token_ids, step_ids=None):
             <div className="mt-6 flex items-center justify-center gap-4 text-sm font-mono">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                <span className="text-primary">RESEARCH_COMPLETE</span>
+                <span className="text-primary">{t.gptCodeTracer.architecture.labels.researchComplete}</span>
               </div>
               <div className="w-1 h-4 bg-border"></div>
               <div className="flex items-center gap-2">
@@ -420,7 +351,8 @@ def forward(self, token_ids, step_ids=None):
               </div>
               <div className="w-1 h-4 bg-border"></div>
               <div className="flex items-center gap-2">
-                
+                <div className="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                <span className="text-accent">2025-08-29</span>
               </div>
             </div>
           </div>

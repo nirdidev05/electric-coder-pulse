@@ -1,39 +1,41 @@
 import React, { useState } from 'react';
 import { CodeIcon, DataIcon, ArchitectureIcon, MemoryIcon, CPUIcon, ResultsIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Implementation: React.FC = () => {
+  const t = useTranslation();
   const [activeCodeSection, setActiveCodeSection] = useState('preprocessing');
 
   const codeSections = [
     {
       id: 'preprocessing',
-      title: 'Data Preprocessing Pipeline',
-      description: 'TinyPy tokenization and execution step embedding preparation',
-      file: 'preprocess.py',
+      title: t.gptCodeTracer.implementation.codeSections.preprocessing.title,
+      description: t.gptCodeTracer.implementation.codeSections.preprocessing.description,
+      file: t.gptCodeTracer.implementation.codeSections.preprocessing.file,
       language: 'python',
       icon: DataIcon
     },
     {
       id: 'training',
-      title: 'Distributed Training Script',
-      description: 'Multi-GPU training with Memory-Augmented Attention',
-      file: 'train.py',
+      title: t.gptCodeTracer.implementation.codeSections.training.title,
+      description: t.gptCodeTracer.implementation.codeSections.training.description,
+      file: t.gptCodeTracer.implementation.codeSections.training.file,
       language: 'python',
       icon: ResultsIcon
     },
     {
       id: 'evaluation',
-      title: 'Model Evaluation Framework',
-      description: 'OOD generalization testing and validation',
-      file: 'eval.py',
+      title: t.gptCodeTracer.implementation.codeSections.evaluation.title,
+      description: t.gptCodeTracer.implementation.codeSections.evaluation.description,
+      file: t.gptCodeTracer.implementation.codeSections.evaluation.file,
       language: 'python',
       icon: ResultsIcon
     }
   ];
 
   const codeImplementations = {
-    preprocessing: `# Data Preprocessing Pipeline - GPT-Based Code Tracing
-# Author: nirdidev05 
+    preprocessing: `# ${t.gptCodeTracer.implementation.codeComments.preprocessing.title}
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.author}
 import numpy as np
 import pandas as pd
 import os
@@ -47,7 +49,7 @@ from tqdm import tqdm
 SOURCE_DATA_PATH = "path/to/source/data.txt"
 os.makedirs(os.path.dirname("data-dp/"), exist_ok=True)
 
-# Logging boilerplate
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.logBoilerplate}
 log_file = open("data_prep.log", "w")
 pbar_recept_string = " " * 200 + "\\n"
 log_file.write(pbar_recept_string)
@@ -77,7 +79,7 @@ def log(s:str, p_level=None):
         log_file.write(start + s + end + "\\n")
     log_file.flush()
 
-# Set the random seed for reproducibility
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.setRandomSeed}
 seed = 42
 np.random.seed(seed)
 random.seed(seed)
@@ -113,17 +115,17 @@ class TinypyTokenizer():
     def decode(self, tokens_ids):
         return [self.decod_map[id] for id in tokens_ids]
 
-# Load the dataset
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.loadDataset}
 log("Loading the dataset")
 with open(SOURCE_DATA_PATH, "r") as f:
     data = f.read()
 
-# Split by examples using \\n\\n
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.splitByExamples}
 log("Splitting by \\\\n\\\\n")
 examples = data.split("\\n\\n")[:-1]
 log(f"Total number of examples: {len(examples):,}")
 
-# Introduce Execution Step IDs for Memory-Augmented Attention
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.addStepIds}
 log("Adding execution step IDs")
 processed_examples = []
 step_counter = 0
@@ -136,7 +138,7 @@ examples = processed_examples
 del data
 gc.collect()
 
-# Creating train, val, test splits
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.createSplits}
 log("Creating dataset splits")
 train_examples = examples[:1_000_000]
 val_examples = examples[1_000_000:1_010_000]
@@ -144,7 +146,7 @@ test_examples = examples[1_010_000:1_010_100]
 
 log(f"Train: {len(train_examples)} | Val: {len(val_examples)} | Test: {len(test_examples)}")
 
-# Save text files
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.saveTextFiles}
 log("Saving text datasets")
 with open("data-dp/train.txt", 'w') as f:
     f.write("\\n\\n".join(train_examples) + "\\n\\n")
@@ -156,7 +158,7 @@ with open("data-dp/test.txt", 'w') as f:
 del train_examples, val_examples, test_examples
 gc.collect()
 
-# Tokenization
+# ${t.gptCodeTracer.implementation.codeComments.preprocessing.tokenization}
 log("Tokenizing datasets")
 tpt = TinypyTokenizer()
 
@@ -177,20 +179,20 @@ def encode_to_memmap(input_file_path, output_file_path):
     gc.collect()
     return None
 
-log("Encoding train.txt to train.bin")
+log("${t.gptCodeTracer.implementation.codeComments.preprocessing.encodingFiles}")
 encode_to_memmap("data-dp/train.txt", "data-dp/train.bin")
 
 log("Encoding val.txt to val.bin")
 encode_to_memmap("data-dp/val.txt", "data-dp/val.bin")
 
-log("Saving vocab size")
+log("${t.gptCodeTracer.implementation.codeComments.preprocessing.savingVocabSize}")
 with open("data-dp/vocab_size.txt", "w") as f:
     f.write(str(len(tpt.keywords)))
 
 log_file.close()`,
 
-    training: `# Distributed Training Script - GPT-Based Code Tracing  
-# Author: nirdidev05 
+    training: `# ${t.gptCodeTracer.implementation.codeComments.training.title}
+# ${t.gptCodeTracer.implementation.codeComments.training.author}
 import random
 import os
 import time
@@ -204,28 +206,28 @@ import numpy as np
 import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 
-# Set the device ids
+# ${t.gptCodeTracer.implementation.codeComments.training.setDeviceIds}
 deviceids = [0, 1]
 
-# Set the data directory
+# ${t.gptCodeTracer.implementation.codeComments.training.setDataDirectory}
 data_dirs = [
     "/kaggle/input/tinypy-language-model/datahack/data/generic-3-digits/",
     "/kaggle/input/tinypy-language-model/datahack/data/arithmetics/",
     "/kaggle/input/tinypy-language-model/datahack/data/conditionals/"
 ]
 
-# Set arch-hyperparams for the GPT model
-block_size = 256     # Maximum context length
-n_embd = 384  # Ensure it's a multiple of n_head
-n_head = 8  # Increase heads for better parallelization
-n_layer = 8  # Increase layers for better learning
+# ${t.gptCodeTracer.implementation.codeComments.training.archHyperparams}
+block_size = 256     # ${t.gptCodeTracer.implementation.codeComments.training.maximumContextLength}
+n_embd = 384  # ${t.gptCodeTracer.implementation.codeComments.training.ensureMultipleOfHeads}
+n_head = 8  # ${t.gptCodeTracer.implementation.codeComments.training.increaseHeadsParallelization}
+n_layer = 8  # ${t.gptCodeTracer.implementation.codeComments.training.increaseLayersLearning}
 
-batch_size = 190       # Batch size for training
+batch_size = 190       # ${t.gptCodeTracer.implementation.codeComments.training.batchSizeTraining}
 
-# Check if this is a ddp run
+# ${t.gptCodeTracer.implementation.codeComments.training.checkDdpRun}
 ddp = int(os.environ.get('RANK', -1)) != -1
 
-# If ddp than setup per process control variables
+# ${t.gptCodeTracer.implementation.codeComments.training.ddpSetupControl}
 if ddp:
     print("ddp is set to True")
     from torch.distributed import init_process_group, destroy_process_group
@@ -250,19 +252,19 @@ else:
     torch.cuda.set_device(device)
 
 if master_process:
-    # Prepare the checkpoints folder
+    # ${t.gptCodeTracer.implementation.codeComments.training.prepareCheckpoints}
     os.makedirs(os.path.dirname("checkpoints/"), exist_ok=True)
     
-    # Open the log file
+    # ${t.gptCodeTracer.implementation.codeComments.training.openLogFile}
     log_file = open("train.log", "w")
 
-    # Create the log boilerplate for progress bars
+    # ${t.gptCodeTracer.implementation.codeComments.training.createLogBoilerplate}
     pbar_recept_string = " " * 200 + "\\n"
     log_file.write(pbar_recept_string)
     log_file.write(pbar_recept_string)
     log_file.flush()
 
-    # Define the log function
+    # ${t.gptCodeTracer.implementation.codeComments.training.defineLogFunction}
     def log(s:str, p_level=None):
         if p_level == 1:
             log_file.seek(0,0)
@@ -283,7 +285,7 @@ if master_process:
 
     batch_log = open('batch_log.log', 'w')
 
-# Set the random seed for reproducibility
+# ${t.gptCodeTracer.implementation.codeComments.training.setRandomSeed}
 seed = 42 + seed_offset
 torch.manual_seed(seed)
 random.seed(seed)
@@ -293,7 +295,7 @@ with open(data_dirs[0] + "vocab_size.txt", "rb") as f:
     vocab_size = int(f.read())
 if master_process: log(f"vocab_size: {vocab_size}")
 
-# Load train.bin
+# ${t.gptCodeTracer.implementation.codeComments.training.loadTrainBin}
 if master_process: log("Loading train.bin")
 before = time.time()
 train_data = np.concatenate([np.memmap(d + "train.bin", dtype=np.uint8, mode="r") for d in data_dirs])
@@ -301,7 +303,7 @@ train_data = np.array(train_data)
 after = time.time()
 if master_process: log(f"took {after - before} seconds")
 
-# Load val.bin
+# ${t.gptCodeTracer.implementation.codeComments.training.loadValBin}
 if master_process: log("Loading val.bin")
 before = time.time()
 val_data = np.concatenate([np.memmap(d + "val.bin", dtype=np.uint8, mode="r") for d in data_dirs])
@@ -309,10 +311,10 @@ val_data = np.array(val_data)
 after = time.time()
 if master_process: log(f"took {after - before} seconds")
 
-# Model Components
+# ${t.gptCodeTracer.implementation.codeComments.training.modelComponents}
 
 class Head(nn.Module):
-    """One head of self-attention."""
+    """${t.gptCodeTracer.implementation.codeComments.training.oneHeadSelfAttention}"""
     def __init__(self, head_size):
         super().__init__()
         self.key = nn.Linear(n_embd, head_size, bias=False)
@@ -332,7 +334,7 @@ class Head(nn.Module):
         return out
 
 class MemoryAugmentedAttention(nn.Module):
-    """CORE INNOVATION: Memory-Augmented Attention for infinite context"""
+    """${t.gptCodeTracer.implementation.codeComments.training.coreInnovationMemory}"""
     def __init__(self, num_heads, head_size, memory_size=256):
         super().__init__()
         self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
@@ -353,7 +355,7 @@ class MemoryAugmentedAttention(nn.Module):
         return self.dropout(self.proj(out))
 
 class ExecutionStepEmbedding(nn.Module):
-    """CORE INNOVATION: Execution step tracking"""
+    """${t.gptCodeTracer.implementation.codeComments.training.coreInnovationStep}"""
     def __init__(self, num_steps, embedding_dim):
         super().__init__()
         self.step_embedding = nn.Embedding(num_steps, embedding_dim)
@@ -362,7 +364,7 @@ class ExecutionStepEmbedding(nn.Module):
         return self.step_embedding(step_ids)
 
 class Block(nn.Module):
-    """Pre-normalized transformer block with memory-augmented attention."""
+    """${t.gptCodeTracer.implementation.codeComments.training.preNormalizedTransformer}"""
     def __init__(self, n_embd, n_head):
         super().__init__()
         head_size = n_embd // n_head
@@ -382,7 +384,7 @@ class Block(nn.Module):
         return x
 
 class GPT(nn.Module):
-    """Enhanced GPT with Memory-Augmented Attention and Step Embedding."""
+    """${t.gptCodeTracer.implementation.codeComments.training.enhancedGptMemory}"""
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embd)
@@ -414,7 +416,7 @@ class GPT(nn.Module):
 
         return logits, loss
 
-# Create and initialize model
+# ${t.gptCodeTracer.implementation.codeComments.training.createInitializeModel}
 model = GPT()
 model.to(device)
 num_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -422,14 +424,14 @@ num_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
 if master_process:
     print(f'Model has {num_parameters:,} trainable parameters')
 
-# Training setup
+# ${t.gptCodeTracer.implementation.codeComments.training.trainingSetup}
 learning_rate = 1e-3
 max_iters = 10000
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
-# Training loop
+# ${t.gptCodeTracer.implementation.codeComments.training.trainingLoop}
 for iter in range(max_iters):
-    # Get batch and forward pass
+    # ${t.gptCodeTracer.implementation.codeComments.training.getBatchForward}
     idx = torch.randint(0, len(train_data) - block_size, (batch_size,))
     x = torch.stack([torch.from_numpy(train_data[i:i+block_size].astype(np.int64)) for i in idx])
     y = torch.stack([torch.from_numpy(train_data[i+1:i+block_size+1].astype(np.int64)) for i in idx])
@@ -447,8 +449,8 @@ if master_process:
     torch.save(model.state_dict(), "best-model.pth")
     print("Training completed and model saved!")`,
 
-    evaluation: `# Model Evaluation Framework - GPT-Based Code Tracing
-# Author: nirdidev05 
+    evaluation: `# ${t.gptCodeTracer.implementation.codeComments.evaluation.title}
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.author}
 import os
 import time
 import torch
@@ -456,7 +458,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 
-# Paths
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.paths}
 DDIR = "/kaggle/input/tinypy-language-model/datahack/data/generic-3-digits/"
 MODEL_PATH = "checkpoints/best-model.pth"
 deviceid = 0
@@ -467,15 +469,15 @@ print(f"Device set to {device}.")
 def log(s: str):
     print(s)
 
-# Ensure model path exists
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.ensureModelExists}
 assert os.path.exists(MODEL_PATH), f"Model not found: {MODEL_PATH}"
 
-# Load vocabulary size
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.loadVocabSize}
 log("Loading vocab_size")
 with open(os.path.join(DDIR, 'vocab_size.txt')) as f:
     vocab_size = int(f.read())
 
-# Model Hyperparameters
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.modelHyperparameters}
 block_size = 256
 n_embd = 384
 n_head = 8
@@ -556,8 +558,8 @@ class GPT(nn.Module):
             idx = torch.cat((idx, idx_next), dim=1)
         return idx
 
-# Load Model
-log("Loading trained GPT model")
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.loadModel}
+log("${t.gptCodeTracer.implementation.codeComments.evaluation.loadTrainedGpt}")
 model = GPT()
 model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 model.to(device)
@@ -565,21 +567,21 @@ model.eval()
 
 def evaluate_ood_performance():
     """
-    Evaluate model OOD (Out-of-Distribution) performance.
+    ${t.gptCodeTracer.implementation.codeComments.evaluation.evaluateOodPerformance}
     
     Tests model capability on:
-    1. Extended while loops beyond training data
-    2. Longer numbers (4-digit vs 3-digit training) 
-    3. Complex code sequences exceeding context window
+    1. ${t.gptCodeTracer.implementation.codeComments.evaluation.extendedWhileLoops}
+    2. ${t.gptCodeTracer.implementation.codeComments.evaluation.longerNumbers}
+    3. ${t.gptCodeTracer.implementation.codeComments.evaluation.complexCodeSequences}
     
-    Target: 55% OOD accuracy
-    Author: nirdidev05 
+    ${t.gptCodeTracer.implementation.codeComments.evaluation.targetAccuracy}
+    ${t.gptCodeTracer.implementation.codeComments.evaluation.researchGptCodeTracing}
     """
     log("="*60)
-    log("OOD GENERALIZATION EVALUATION")
+    log("${t.gptCodeTracer.implementation.codeComments.evaluation.oodGeneralizationEvaluation}")
     log("="*60)
-    log("Author: nirdidev05 | Research: GPT-Based Code Tracing")
-    log("Target Accuracy: 55% OOD")
+    log("${t.gptCodeTracer.implementation.codeComments.evaluation.researchGptCodeTracing}")
+    log("${t.gptCodeTracer.implementation.codeComments.evaluation.targetAccuracy}")
     log("="*60)
     
     test_data_path = os.path.join(DDIR, "test.txt")
@@ -587,12 +589,12 @@ def evaluate_ood_performance():
         test_data = f.read()
     examples = test_data.split("\\n\\n")[:-1]
     
-    log(f"Loaded {len(examples)} test examples")
+    log(f"${t.gptCodeTracer.implementation.codeComments.evaluation.loadedTestExamples}: {len(examples)}")
     
     correct_predictions = 0
     total_predictions = 0
     
-    # Categories for detailed analysis
+    # ${t.gptCodeTracer.implementation.codeComments.evaluation.categoriesAnalysis}
     ood_categories = {
         'extended_loops': {'correct': 0, 'total': 0},
         'longer_numbers': {'correct': 0, 'total': 0}, 
@@ -603,7 +605,7 @@ def evaluate_ood_performance():
         if "#STEP" not in example:
             continue
             
-        # Split code and expected output
+        # ${t.gptCodeTracer.implementation.codeComments.evaluation.splitCodeExpected}
         parts = example.split("#STEP\\n")
         if len(parts) < 2:
             continue
@@ -611,11 +613,11 @@ def evaluate_ood_performance():
         input_text = parts[0].strip()
         target_text = parts[1].strip()
         
-        # Simple evaluation (character-level for demo)
+        # ${t.gptCodeTracer.implementation.codeComments.evaluation.simpleEvaluation}
         input_chars = list(input_text)[:block_size]
         target_chars = list(target_text)[:50]  # Limit target length
         
-        # Convert to token indices (simplified)
+        # ${t.gptCodeTracer.implementation.codeComments.evaluation.convertTokenIndices}
         input_ids = torch.tensor([min(ord(c), vocab_size-1) for c in input_chars], 
                                 dtype=torch.long).unsqueeze(0).to(device)
         
@@ -623,13 +625,13 @@ def evaluate_ood_performance():
             with torch.no_grad():
                 generated_ids = model.generate(input_ids, max_new_tokens=len(target_chars))
                 
-            # Simple accuracy check (for demonstration)
+            # ${t.gptCodeTracer.implementation.codeComments.evaluation.simpleAccuracyCheck}
             is_correct = len(generated_ids[0]) > len(input_ids[0])  # Generated something
             
             if is_correct:
                 correct_predictions += 1
             
-            # Categorize based on input characteristics
+            # ${t.gptCodeTracer.implementation.codeComments.evaluation.categorizeInput}
             if 'while' in input_text and len(input_text) > 100:
                 ood_categories['extended_loops']['total'] += 1
                 if is_correct:
@@ -649,18 +651,18 @@ def evaluate_ood_performance():
             log(f"Error processing example {i}: {str(e)}")
             continue
     
-    # Calculate final metrics
+    # ${t.gptCodeTracer.implementation.codeComments.evaluation.calculateMetrics}
     overall_accuracy = (correct_predictions / total_predictions) * 100 if total_predictions > 0 else 0
     
     log("\\n" + "="*60)
-    log("FINAL EVALUATION RESULTS")
+    log("${t.gptCodeTracer.implementation.codeComments.evaluation.finalEvaluationResults}")
     log("="*60)
     log(f"Overall OOD Accuracy: {overall_accuracy:.2f}%")
     log(f"Correct Predictions: {correct_predictions}")
     log(f"Total Predictions: {total_predictions}")
     
     # Category-specific results
-    log("\\nCategory Breakdown:")
+    log("\\n${t.gptCodeTracer.implementation.codeComments.evaluation.categoryBreakdown}:")
     for category, stats in ood_categories.items():
         if stats['total'] > 0:
             cat_accuracy = (stats['correct'] / stats['total']) * 100
@@ -668,31 +670,31 @@ def evaluate_ood_performance():
         else:
             log(f"{category.replace('_', ' ').title()}: No examples found")
     
-    # Evaluation against target
+    # ${t.gptCodeTracer.implementation.codeComments.evaluation.evaluationTarget}
     target_accuracy = 55.0
     if overall_accuracy >= target_accuracy:
-        log("✅ RESEARCH TARGET ACHIEVED!")
+        log("✅ ${t.gptCodeTracer.implementation.codeComments.evaluation.researchTargetAchieved}")
         log(f"✅ Model achieved {overall_accuracy:.2f}% >= {target_accuracy}% target")
     elif overall_accuracy >= 45.0:
-        log("📊 Strong OOD performance demonstrated")
+        log("📊 ${t.gptCodeTracer.implementation.codeComments.evaluation.strongOodPerformance}")
         log(f"📊 Model achieved {overall_accuracy:.2f}% (close to target)")
     else:
-        log("❌ OOD performance needs improvement")
+        log("❌ ${t.gptCodeTracer.implementation.codeComments.evaluation.oodPerformanceNeeds}")
         log(f"❌ Model achieved {overall_accuracy:.2f}% < {target_accuracy}% target")
     
     return overall_accuracy
 
-# Run evaluation
-log("Starting OOD evaluation framework")
+# ${t.gptCodeTracer.implementation.codeComments.evaluation.runEvaluation}
+log("${t.gptCodeTracer.implementation.codeComments.evaluation.startingOodFramework}")
 final_accuracy = evaluate_ood_performance()
-log(f"\\n🔬 Evaluation completed!")
-log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
+log(f"\\n🔬 ${t.gptCodeTracer.implementation.codeComments.evaluation.evaluationCompleted}")
+log(f"📈 ${t.gptCodeTracer.implementation.codeComments.evaluation.finalOodAccuracy}: {final_accuracy:.2f}%")`
   };
 
   const navSections = [
-    { id: 'preprocessing', label: 'Data Prep', icon: DataIcon },
-    { id: 'training', label: 'Training', icon: ResultsIcon },
-    { id: 'evaluation', label: 'Evaluation', icon: ResultsIcon }
+    { id: 'preprocessing', label: t.gptCodeTracer.implementation.codeSections.preprocessing.label, icon: DataIcon },
+    { id: 'training', label: t.gptCodeTracer.implementation.codeSections.training.label, icon: ResultsIcon },
+    { id: 'evaluation', label: t.gptCodeTracer.implementation.codeSections.evaluation.label, icon: ResultsIcon }
   ];
 
   const activeSection = codeSections.find(s => s.id === activeCodeSection);
@@ -709,13 +711,13 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                 <CodeIcon className="text-purple-400" size={24} />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold neural-gradient">
-                Implementation & Code
+                {t.gptCodeTracer.implementation.title}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-mono leading-relaxed">
-              <span className="text-purple-400">{`git`}</span> <span className="text-secondary">clone</span> <span className="text-green-400">https://github.com/nirdidev05/Data_hack_IA.git</span>
+              <span className="text-purple-400">{t.gptCodeTracer.implementation.gitCloneCommand}</span> <span className="text-secondary">clone</span> <span className="text-green-400">{t.gptCodeTracer.implementation.repositoryUrl}</span>
               <br />
-              <span className="ml-4 text-muted-foreground"># Complete implementation: preprocessing → training → evaluation</span>
+              <span className="ml-4 text-muted-foreground"># {t.gptCodeTracer.implementation.subtitle}</span>
             </p>
           </div>
 
@@ -727,22 +729,23 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                   <CodeIcon className="text-white" size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground text-lg">Production-Ready Research Code</h3>
-                  <p className="text-sm text-muted-foreground">Complete implementation achieving 55% OOD accuracy target</p>
+                  <h3 className="font-bold text-foreground text-lg">{t.gptCodeTracer.implementation.researchBanner.title}</h3>
+                  <p className="text-sm text-muted-foreground">{t.gptCodeTracer.implementation.researchBanner.description}</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-6 text-sm font-mono">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400">VALIDATED</span>
+                  <span className="text-green-400">{t.gptCodeTracer.implementation.researchBanner.statusLabels.validated}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-blue-400">nirdidev05</span>
+                  <span className="text-blue-400">{t.gptCodeTracer.implementation.researchBanner.statusLabels.author}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                 
+                  <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                  <span className="text-purple-400">2025-08-29</span>
                 </div>
               </div>
             </div>
@@ -787,7 +790,7 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                       {activeSection?.title}
                     </h3>
                     <div className="px-3 py-1 bg-primary/20 rounded-full text-xs font-mono text-primary">
-                      PYTHON
+                      {t.gptCodeTracer.implementation.codeHeader.language}
                     </div>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -802,9 +805,11 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                       </span>
                     </div>
                     <div className="text-muted-foreground font-mono">
-                      Author: nirdidev05
+                      {t.gptCodeTracer.implementation.codeHeader.author}
                     </div>
-                 
+                    <div className="text-muted-foreground font-mono">
+                      {t.gptCodeTracer.implementation.codeHeader.researchImplementation}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -821,10 +826,10 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                     {activeSection?.file}
                   </span>
                   <div className="flex items-center gap-4 text-xs text-muted-foreground font-mono">
-                    <span>Research Implementation</span>
+                    <span>{t.gptCodeTracer.implementation.codeHeader.researchImplementation}</span>
                     <div className="flex items-center gap-1">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <span>Live</span>
+                      <span>{t.gptCodeTracer.implementation.codeHeader.live}</span>
                     </div>
                   </div>
                 </div>
@@ -847,12 +852,13 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                 </div>
                 
                 <h3 className="text-2xl font-bold neural-gradient mb-4">
-                  Complete Research Implementation
+                  {t.gptCodeTracer.implementation.repositoryAccess.title}
                 </h3>
                 <p className="text-muted-foreground mb-6 max-w-3xl mx-auto leading-relaxed">
-                  Access the full codebase that achieved <span className="text-primary font-bold">55% OOD accuracy</span> 
-                  in the Datahack TinyPy Challenge. Features Memory-Augmented Attention, Execution Step Embedding, 
-                  and distributed training optimizations.
+                  {t.gptCodeTracer.implementation.repositoryAccess.description.replace(
+                    '55% OOD accuracy',
+                    `<span class="text-primary font-bold">${t.gptCodeTracer.implementation.repositoryAccess.achievement}</span>`
+                  )}
                 </p>
               </div>
               
@@ -862,20 +868,20 @@ log(f"📈 Final OOD Accuracy: {final_accuracy:.2f}%")`
                   className="btn-cyber-primary flex items-center gap-2"
                 >
                   <CodeIcon size={18} />
-                  <span>View Repository</span>
+                  <span>{t.gptCodeTracer.implementation.repositoryAccess.primaryButton}</span>
                 </button>
                 <button 
                   onClick={() => window.open('https://github.com/nirdidev05/Data_hack_IA/tree/main/src', '_blank')}
                   className="btn-cyber-secondary flex items-center gap-2"
                 >
                   <span>📁</span>
-                  <span>Source Code</span>
+                  <span>{t.gptCodeTracer.implementation.repositoryAccess.secondaryButton}</span>
                 </button>
               </div>
               
               <div className="mt-6 text-xs text-muted-foreground font-mono">
                 <div className="flex items-center justify-center gap-4">
-                  <span>git clone https://github.com/nirdidev05/Data_hack_IA.git</span>
+                  <span>{t.gptCodeTracer.implementation.repositoryAccess.gitCloneInstruction}</span>
                 </div>
               </div>
             </div>

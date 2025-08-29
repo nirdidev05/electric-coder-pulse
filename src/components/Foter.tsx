@@ -1,19 +1,22 @@
 import React from 'react';
 import { BrainIcon, CodeIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Footer: React.FC = () => {
+  const t = useTranslation();
+
   const handleDocumentationClick = () => {
     // Create a temporary link element for downloading
     const link = document.createElement('a');
     link.href = '/A GPT-Based Approach to Code Tracing.pdf';
-    link.download = 'GPT_Code_Tracing_Research_Report.pdf';
+    link.download = t.gptCodeTracer.footer.actions.downloadPdf;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleSourceCodeClick = () => {
-    window.open('https://github.com/nirdidev05/Data_hack_IA/tree/main/src', '_blank', 'noopener,noreferrer');
+    window.open(t.gptCodeTracer.footer.actions.viewRepository, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -23,21 +26,21 @@ const Footer: React.FC = () => {
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <BrainIcon size={20} className="text-primary" />
-              <span>GPT-Based Code Tracing Research</span>
+              <span>{t.gptCodeTracer.footer.title}</span>
             </h3>
             <p className="text-sm text-muted-foreground">
-              Revolutionary neural architecture achieving 55% accuracy for symbolic reasoning in code execution tracing
+              {t.gptCodeTracer.footer.description}
             </p>
             <p className="text-xs text-muted-foreground mt-1 flex items-center gap-4">
-              <span>OOD Accuracy: 55%</span>
+              <span>{t.gptCodeTracer.footer.metadata.oodAccuracy}</span>
               <span>•</span>
-              <span>Memory-Augmented Attention</span>
+              <span>{t.gptCodeTracer.footer.metadata.memoryAugmentedAttention}</span>
               <span>•</span>
-              <span>Execution Step Embedding</span>
+              <span>{t.gptCodeTracer.footer.metadata.executionStepEmbedding}</span>
               <span>•</span>
-              <span>Author: nirdidev05</span>
+              <span>{t.gptCodeTracer.footer.metadata.author}</span>
               <span>•</span>
-              <span>2025-08-26 16:19:43</span>
+              <span>{t.gptCodeTracer.footer.metadata.timestamp}</span>
             </p>
           </div>
           <div className="flex gap-4">
@@ -56,14 +59,14 @@ const Footer: React.FC = () => {
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-              <span>Documentation</span>
+              <span>{t.gptCodeTracer.footer.buttons.documentation}</span>
             </button>
             <button
               onClick={handleSourceCodeClick}
               className="text-sm flex items-center gap-2 px-4 py-2 bg-secondary/10 text-secondary rounded-full hover:bg-secondary/20 transition-colors cursor-pointer border-none outline-none focus:ring-2 focus:ring-secondary/50"
             >
               <CodeIcon size={16} />
-              <span>Source Code</span>
+              <span>{t.gptCodeTracer.footer.buttons.sourceCode}</span>
             </button>
           </div>
         </div>

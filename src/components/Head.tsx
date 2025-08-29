@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrainIcon, SummaryIcon, ProblemIcon, ArchitectureIcon, InnovationIcon, ResultsIcon, CodeIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 // ArrowLeft icon component
 const ArrowLeft: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -21,6 +22,7 @@ const ArrowLeft: React.FC<{ className?: string }> = ({ className = '' }) => (
 );
 
 const Header: React.FC = () => {
+  const t = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,13 +50,13 @@ const Header: React.FC = () => {
   }, []);
 
   const navItems = [
-    { id: 'home', label: 'Research', Icon: BrainIcon },
-    { id: 'summary', label: 'Summary', Icon: SummaryIcon },
-    { id: 'problem', label: 'Problem', Icon: ProblemIcon },
-    { id: 'architecture', label: 'Architecture', Icon: ArchitectureIcon },
-    { id: 'innovation', label: 'Innovation', Icon: InnovationIcon },
-    { id: 'results', label: 'Results', Icon: ResultsIcon },
-    { id: 'implementation', label: 'Code', Icon: CodeIcon }
+    { id: 'home', label: t.gptCodeTracer.navigation.research, Icon: BrainIcon },
+    { id: 'summary', label: t.gptCodeTracer.navigation.summary, Icon: SummaryIcon },
+    { id: 'problem', label: t.gptCodeTracer.navigation.problem, Icon: ProblemIcon },
+    { id: 'architecture', label: t.gptCodeTracer.navigation.architecture, Icon: ArchitectureIcon },
+    { id: 'innovation', label: t.gptCodeTracer.navigation.innovation, Icon: InnovationIcon },
+    { id: 'results', label: t.gptCodeTracer.navigation.results, Icon: ResultsIcon },
+    { id: 'implementation', label: t.gptCodeTracer.navigation.code, Icon: CodeIcon }
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -84,8 +86,8 @@ const Header: React.FC = () => {
               className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 font-medium group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform duration-300" />
-              <span className="hidden sm:inline">Back to Projects</span>
-              <span className="sm:hidden">Projects</span>
+              <span className="hidden sm:inline">{t.gptCodeTracer.navigation.backToProjects}</span>
+              <span className="sm:hidden">{t.gptCodeTracer.navigation.projects}</span>
             </a>
 
             {/* Separator */}
@@ -98,7 +100,7 @@ const Header: React.FC = () => {
               </div>
               <div>
                 <div className="font-mono text-lg font-bold neural-gradient">
-                  GPT_CodeTracer.ai
+                  {t.gptCodeTracer.navigation.projectTitle}
                 </div>
               </div>
             </div>
@@ -177,15 +179,15 @@ const Header: React.FC = () => {
             {/* Mobile Status */}
             <div className="mt-3 px-4 py-2 border-t border-border/50">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-muted-foreground font-mono">Status:</span>
+                <span className="text-muted-foreground font-mono">{t.gptCodeTracer.status.label}</span>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 font-mono font-medium">VALIDATED</span>
+                  <span className="text-green-400 font-mono font-medium">{t.gptCodeTracer.status.value}</span>
                 </div>
               </div>
               <div className="flex items-center justify-between text-xs mt-1">
-                <span className="text-muted-foreground font-mono">Author:</span>
-                <span className="text-foreground font-mono">nirdidev05</span>
+                <span className="text-muted-foreground font-mono">{t.gptCodeTracer.status.author}</span>
+                <span className="text-foreground font-mono">{t.gptCodeTracer.status.authorName}</span>
               </div>
             </div>
           </div>

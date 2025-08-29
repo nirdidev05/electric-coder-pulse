@@ -1,49 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { ResultsIcon, BrainIcon, MemoryIcon, CPUIcon, ArchitectureIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Results: React.FC = () => {
+  const t = useTranslation();
   const [activeResult, setActiveResult] = useState('ood');
   const [animatedMetrics, setAnimatedMetrics] = useState<Record<string, number>>({});
 
   const keyMetrics = [
     { 
       id: 'ood_accuracy',
-      label: 'OOD Accuracy', 
+      label: t.gptCodeTracer.results.keyMetrics.oodAccuracy.label, 
       value: 55.7, 
       suffix: '%',
-      description: 'Out-of-distribution generalization performance',
+      description: t.gptCodeTracer.results.keyMetrics.oodAccuracy.description,
       color: 'text-green-400',
-      benchmark: 'Industry standard: ~35-45%',
+      benchmark: t.gptCodeTracer.results.keyMetrics.oodAccuracy.benchmark,
       icon: ResultsIcon
     },
     { 
       id: 'training_efficiency',
-      label: 'Training Time', 
+      label: t.gptCodeTracer.results.keyMetrics.trainingTime.label, 
       value: 12, 
       suffix: 'h',
-      description: 'Complete training from scratch',
+      description: t.gptCodeTracer.results.keyMetrics.trainingTime.description,
       color: 'text-blue-400',
-      benchmark: 'Comparable models: 24-48h',
+      benchmark: t.gptCodeTracer.results.keyMetrics.trainingTime.benchmark,
       icon: CPUIcon
     },
     { 
       id: 'parameter_efficiency',
-      label: 'Parameters', 
+      label: t.gptCodeTracer.results.keyMetrics.parameters.label, 
       value: 2.1, 
       suffix: 'M',
-      description: 'Efficient architecture design',
+      description: t.gptCodeTracer.results.keyMetrics.parameters.description,
       color: 'text-purple-400',
-      benchmark: 'GPT-2 Small: 117M parameters',
+      benchmark: t.gptCodeTracer.results.keyMetrics.parameters.benchmark,
       icon: ArchitectureIcon
     },
     { 
       id: 'memory_scaling',
-      label: 'Memory Scaling', 
+      label: t.gptCodeTracer.results.keyMetrics.memoryScaling.label, 
       value: 100, 
       suffix: '% Linear',
-      description: 'Linear complexity vs quadratic',
+      description: t.gptCodeTracer.results.keyMetrics.memoryScaling.description,
       color: 'text-secondary',
-      benchmark: 'Standard attention: O(n²)',
+      benchmark: t.gptCodeTracer.results.keyMetrics.memoryScaling.benchmark,
       icon: MemoryIcon
     }
   ];
@@ -51,53 +53,40 @@ const Results: React.FC = () => {
   const oodTestResults = [
     {
       id: 'extended_loops',
-      title: 'Extended While Loop Processing',
-      description: 'Testing abstract loop logic understanding beyond fixed-length pattern memorization',
-      challenge: 'While loops with 10,000+ iterations vs training maximum of 100 iterations',
-      result: 'VALIDATED',
-      accuracy: '58.3%',
-      significance: 'Proves model learned loop semantics rather than sequence patterns',
-      technicalDetail: 'Memory-Augmented Attention maintained state tracking across extended sequences',
-      example: `# OOD Test: Extended iteration count
-i = 0
-while i < 10000:  # Training max was 100
-    i = i + 1
-    state_preserved = True
-# Result: Consistent execution trace generated`,
+      title: t.gptCodeTracer.results.oodTests.extendedLoops.title,
+      description: t.gptCodeTracer.results.oodTests.extendedLoops.description,
+      challenge: t.gptCodeTracer.results.oodTests.extendedLoops.challenge,
+      result: t.gptCodeTracer.results.oodTests.extendedLoops.result,
+      accuracy: t.gptCodeTracer.results.oodTests.extendedLoops.accuracy,
+      significance: t.gptCodeTracer.results.oodTests.extendedLoops.significance,
+      technicalDetail: t.gptCodeTracer.results.oodTests.extendedLoops.technicalDetail,
+      example: t.gptCodeTracer.results.oodTests.extendedLoops.example,
       color: 'text-green-400',
       borderColor: 'border-green-500/20'
     },
     {
       id: 'longer_numbers',
-      title: '4-Digit Arithmetic Generalization', 
-      description: 'Mathematical reasoning beyond 3-digit training distribution limits',
-      challenge: '4-digit numbers vs exclusive 3-digit training data',
-      result: 'CONFIRMED',
-      accuracy: '54.2%',
-      significance: 'Demonstrates arithmetic rule learning vs lookup table memorization',
-      technicalDetail: 'Model internalized addition algorithm patterns rather than memorizing computations',
-      example: `# OOD Test: Extended number range
-a = 1234  # Training only used 3-digits
-b = 5678
-c = a + b  # Target: 6912
-# Model computed correctly beyond training distribution`,
+      title: t.gptCodeTracer.results.oodTests.fourDigitNumbers.title, 
+      description: t.gptCodeTracer.results.oodTests.fourDigitNumbers.description,
+      challenge: t.gptCodeTracer.results.oodTests.fourDigitNumbers.challenge,
+      result: t.gptCodeTracer.results.oodTests.fourDigitNumbers.result,
+      accuracy: t.gptCodeTracer.results.oodTests.fourDigitNumbers.accuracy,
+      significance: t.gptCodeTracer.results.oodTests.fourDigitNumbers.significance,
+      technicalDetail: t.gptCodeTracer.results.oodTests.fourDigitNumbers.technicalDetail,
+      example: t.gptCodeTracer.results.oodTests.fourDigitNumbers.example,
       color: 'text-blue-400',
       borderColor: 'border-blue-500/20'
     },
     {
       id: 'extended_sequences',
-      title: 'Context Window Extension',
-      description: 'State maintenance over sequences exceeding 256-token architectural limit',
-      challenge: 'Code traces with 500+ lines vs 256-token context window',
-      result: 'BREAKTHROUGH',
-      accuracy: '54.6%',
-      significance: 'Validates Memory-Augmented Attention architectural breakthrough',
-      technicalDetail: 'External dynamic memory enabled extended context processing with linear scaling',
-      example: `# OOD Test: Extended sequence length
-# 500+ line code execution trace
-# Memory-Augmented Attention: SUCCESS
-# Standard Attention: FAILURE after 256 tokens
-context_length = "extended_successfully"`,
+      title: t.gptCodeTracer.results.oodTests.extendedSequences.title,
+      description: t.gptCodeTracer.results.oodTests.extendedSequences.description,
+      challenge: t.gptCodeTracer.results.oodTests.extendedSequences.challenge,
+      result: t.gptCodeTracer.results.oodTests.extendedSequences.result,
+      accuracy: t.gptCodeTracer.results.oodTests.extendedSequences.accuracy,
+      significance: t.gptCodeTracer.results.oodTests.extendedSequences.significance,
+      technicalDetail: t.gptCodeTracer.results.oodTests.extendedSequences.technicalDetail,
+      example: t.gptCodeTracer.results.oodTests.extendedSequences.example,
       color: 'text-purple-400',
       borderColor: 'border-purple-500/20'
     }
@@ -105,35 +94,35 @@ context_length = "extended_successfully"`,
 
   const performanceMetrics = {
     training: {
-      total_time: '12 hours',
-      convergence_epoch: '8/12 epochs',
-      final_loss: '0.087',
-      gpu_utilization: '89%',
-      memory_efficiency: '76%',
-      throughput: '1,200 tokens/sec'
+      total_time: t.gptCodeTracer.results.performanceMetrics.training.totalTime,
+      convergence_epoch: t.gptCodeTracer.results.performanceMetrics.training.convergenceEpoch,
+      final_loss: t.gptCodeTracer.results.performanceMetrics.training.finalLoss,
+      gpu_utilization: t.gptCodeTracer.results.performanceMetrics.training.gpuUtilization,
+      memory_efficiency: t.gptCodeTracer.results.performanceMetrics.training.memoryEfficiency,
+      throughput: t.gptCodeTracer.results.performanceMetrics.training.throughput
     },
     architecture: {
-      total_parameters: '2.1M',
-      embedding_dims: '384',
-      attention_heads: '8', 
-      transformer_layers: '8',
-      context_window: '256 tokens',
-      memory_slots: '512 external'
+      total_parameters: t.gptCodeTracer.results.performanceMetrics.architecture.totalParameters,
+      embedding_dims: t.gptCodeTracer.results.performanceMetrics.architecture.embeddingDims,
+      attention_heads: t.gptCodeTracer.results.performanceMetrics.architecture.attentionHeads, 
+      transformer_layers: t.gptCodeTracer.results.performanceMetrics.architecture.transformerLayers,
+      context_window: t.gptCodeTracer.results.performanceMetrics.architecture.contextWindow,
+      memory_slots: t.gptCodeTracer.results.performanceMetrics.architecture.memorySlots
     },
     innovation: {
-      memory_complexity: 'O(n) linear',
-      standard_complexity: 'O(n²) quadratic',
-      efficiency_gain: '15.6x improvement',
-      context_extension: '∞ theoretical',
-      state_tracking: 'Explicit via embedding',
-      breakthrough_metric: '55.7% OOD accuracy'
+      memory_complexity: t.gptCodeTracer.results.performanceMetrics.innovation.memoryComplexity,
+      standard_complexity: t.gptCodeTracer.results.performanceMetrics.innovation.standardComplexity,
+      efficiency_gain: t.gptCodeTracer.results.performanceMetrics.innovation.efficiencyGain,
+      context_extension: t.gptCodeTracer.results.performanceMetrics.innovation.contextExtension,
+      state_tracking: t.gptCodeTracer.results.performanceMetrics.innovation.stateTracking,
+      breakthrough_metric: t.gptCodeTracer.results.performanceMetrics.innovation.breakthroughMetric
     }
   };
 
   const resultCategories = [
-    { id: 'ood', label: 'OOD Generalization', icon: ResultsIcon, color: 'text-green-400' },
-    { id: 'performance', label: 'Performance Analysis', icon: CPUIcon, color: 'text-blue-400' },
-    { id: 'efficiency', label: 'Architectural Efficiency', icon: MemoryIcon, color: 'text-secondary' }
+    { id: 'ood', label: t.gptCodeTracer.results.categories.oodGeneralization.label, icon: ResultsIcon, color: 'text-green-400' },
+    { id: 'performance', label: t.gptCodeTracer.results.categories.performanceAnalysis.label, icon: CPUIcon, color: 'text-blue-400' },
+    { id: 'efficiency', label: t.gptCodeTracer.results.categories.architecturalEfficiency.label, icon: MemoryIcon, color: 'text-secondary' }
   ];
 
   useEffect(() => {
@@ -155,12 +144,10 @@ context_length = "extended_successfully"`,
           <div className="space-y-8">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold neural-gradient mb-6">
-                Out-of-Distribution Generalization Results
+                {t.gptCodeTracer.results.categories.oodGeneralization.title}
               </h3>
               <p className="text-muted-foreground max-w-4xl mx-auto text-lg leading-relaxed">
-                The ultimate validation of AI intelligence: exceptional performance on data 
-                fundamentally different from training distribution. These results prove genuine 
-                understanding rather than sophisticated memorization.
+                {t.gptCodeTracer.results.categories.oodGeneralization.subtitle}
               </p>
             </div>
 
@@ -172,15 +159,15 @@ context_length = "extended_successfully"`,
                     <ResultsIcon className="text-white" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground text-lg">Research Validation Complete</h4>
-                    <p className="text-sm text-muted-foreground">Author: nirdidev05 | 55.7% OOD Accuracy Achieved</p>
+                    <h4 className="font-bold text-foreground text-lg">{t.gptCodeTracer.results.categories.oodGeneralization.validationBanner.title}</h4>
+                    <p className="text-sm text-muted-foreground">{t.gptCodeTracer.results.categories.oodGeneralization.validationBanner.author}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4 text-sm font-mono">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-green-400">HYPOTHESIS_CONFIRMED</span>
+                    <span className="text-green-400">{t.gptCodeTracer.results.categories.oodGeneralization.validationBanner.status}</span>
                   </div>
                 </div>
               </div>
@@ -220,17 +207,17 @@ context_length = "extended_successfully"`,
                   <div className="grid lg:grid-cols-2 gap-8">
                     <div className="space-y-4">
                       <div className="cyber-card p-4 rounded-lg bg-warning/5 border border-warning/20">
-                        <h5 className="font-semibold text-warning mb-3 font-mono">CHALLENGE_PARAMETERS</h5>
+                        <h5 className="font-semibold text-warning mb-3 font-mono">{t.gptCodeTracer.results.oodTests.labels.challengeParameters}</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">{test.challenge}</p>
                       </div>
                       
                       <div className="cyber-card p-4 rounded-lg bg-primary/5 border border-primary/20">
-                        <h5 className="font-semibold text-primary mb-3 font-mono">RESEARCH_SIGNIFICANCE</h5>
+                        <h5 className="font-semibold text-primary mb-3 font-mono">{t.gptCodeTracer.results.oodTests.labels.researchSignificance}</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">{test.significance}</p>
                       </div>
                       
                       <div className="cyber-card p-4 rounded-lg bg-secondary/5 border border-secondary/20">
-                        <h5 className="font-semibold text-secondary mb-3 font-mono">TECHNICAL_ANALYSIS</h5>
+                        <h5 className="font-semibold text-secondary mb-3 font-mono">{t.gptCodeTracer.results.oodTests.labels.technicalAnalysis}</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">{test.technicalDetail}</p>
                       </div>
                     </div>
@@ -262,10 +249,10 @@ context_length = "extended_successfully"`,
           <div className="space-y-8">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold neural-gradient mb-4">
-                Performance Analysis
+                {t.gptCodeTracer.results.categories.performanceAnalysis.title}
               </h3>
               <p className="text-muted-foreground">
-                Comprehensive evaluation demonstrating efficient architecture and breakthrough results
+                {t.gptCodeTracer.results.categories.performanceAnalysis.subtitle}
               </p>
             </div>
 
@@ -296,7 +283,7 @@ context_length = "extended_successfully"`,
               {Object.entries(performanceMetrics).map(([category, metrics]) => (
                 <div key={category} className="cyber-card p-6 rounded-xl">
                   <h4 className="text-lg font-bold text-foreground mb-6 font-mono capitalize">
-                    {category}_METRICS
+                    {t.gptCodeTracer.results.performanceMetrics.labels[`${category}Metrics`]}
                   </h4>
                   <div className="space-y-4">
                     {Object.entries(metrics).map(([key, value]) => (
@@ -317,7 +304,7 @@ context_length = "extended_successfully"`,
               <h4 className="text-xl font-bold text-foreground mb-6 text-center">Training Evolution</h4>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h5 className="font-semibold text-secondary mb-4">Loss Convergence</h5>
+                  <h5 className="font-semibold text-secondary mb-4">{t.gptCodeTracer.results.performanceMetrics.labels.lossConvergence}</h5>
                   <div className="h-48 bg-muted/10 rounded-lg flex items-end justify-between p-4 relative overflow-hidden">
                     {/* Animated bars representing training progress */}
                     {Array.from({ length: 12 }).map((_, i) => (
@@ -341,7 +328,7 @@ context_length = "extended_successfully"`,
                 </div>
                 
                 <div>
-                  <h5 className="font-semibold text-primary mb-4">Accuracy Evolution</h5>
+                  <h5 className="font-semibold text-primary mb-4">{t.gptCodeTracer.results.performanceMetrics.labels.accuracyEvolution}</h5>
                   <div className="h-48 bg-muted/10 rounded-lg flex items-end justify-between p-4 relative overflow-hidden">
                     {Array.from({ length: 12 }).map((_, i) => (
                       <div
@@ -372,50 +359,50 @@ context_length = "extended_successfully"`,
           <div className="space-y-8">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold neural-gradient mb-4">
-                Architectural Efficiency Analysis
+                {t.gptCodeTracer.results.categories.architecturalEfficiency.title}
               </h3>
               <p className="text-muted-foreground">
-                Demonstrating breakthrough efficiency through Memory-Augmented Attention innovation
+                {t.gptCodeTracer.results.categories.architecturalEfficiency.subtitle}
               </p>
             </div>
 
             {/* Complexity Comparison */}
             <div className="cyber-card p-8 rounded-2xl">
-              <h4 className="text-xl font-bold text-foreground mb-6">Computational Complexity Analysis</h4>
+              <h4 className="text-xl font-bold text-foreground mb-6">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.title}</h4>
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
                     <tr className="border-b border-border">
-                      <th className="text-left py-4 px-4 font-mono text-primary font-bold">Component</th>
-                      <th className="text-left py-4 px-4 font-mono text-secondary font-bold">Standard Attention</th>
-                      <th className="text-left py-4 px-4 font-mono text-accent font-bold">Memory-Augmented</th>
-                      <th className="text-left py-4 px-4 font-mono text-warning font-bold">Improvement</th>
+                      <th className="text-left py-4 px-4 font-mono text-primary font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.headers.component}</th>
+                      <th className="text-left py-4 px-4 font-mono text-secondary font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.headers.standardAttention}</th>
+                      <th className="text-left py-4 px-4 font-mono text-accent font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.headers.memoryAugmented}</th>
+                      <th className="text-left py-4 px-4 font-mono text-warning font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.headers.improvement}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border/30">
                     <tr className="hover:bg-muted/5 transition-colors">
-                      <td className="py-4 px-4 font-semibold">Time Complexity</td>
-                      <td className="py-4 px-4 font-mono text-red-400 font-bold">O(n²)</td>
-                      <td className="py-4 px-4 font-mono text-green-400 font-bold">O(n)</td>
-                      <td className="py-4 px-4 font-mono text-green-400">Linear scaling achieved</td>
+                      <td className="py-4 px-4 font-semibold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.timeComplexity.component}</td>
+                      <td className="py-4 px-4 font-mono text-red-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.timeComplexity.standard}</td>
+                      <td className="py-4 px-4 font-mono text-green-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.timeComplexity.memoryAugmented}</td>
+                      <td className="py-4 px-4 font-mono text-green-400">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.timeComplexity.improvement}</td>
                     </tr>
                     <tr className="hover:bg-muted/5 transition-colors">
-                      <td className="py-4 px-4 font-semibold">Memory Usage</td>
-                      <td className="py-4 px-4 font-mono text-red-400 font-bold">O(n²)</td>
-                      <td className="py-4 px-4 font-mono text-green-400 font-bold">O(n + k)</td>
-                      <td className="py-4 px-4 font-mono text-green-400">Constant overhead</td>
+                      <td className="py-4 px-4 font-semibold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.memoryUsage.component}</td>
+                      <td className="py-4 px-4 font-mono text-red-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.memoryUsage.standard}</td>
+                      <td className="py-4 px-4 font-mono text-green-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.memoryUsage.memoryAugmented}</td>
+                      <td className="py-4 px-4 font-mono text-green-400">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.memoryUsage.improvement}</td>
                     </tr>
                     <tr className="hover:bg-muted/5 transition-colors">
-                      <td className="py-4 px-4 font-semibold">Context Length</td>
-                      <td className="py-4 px-4 font-mono text-red-400 font-bold">256 tokens</td>
-                      <td className="py-4 px-4 font-mono text-green-400 font-bold">∞ theoretical</td>
-                      <td className="py-4 px-4 font-mono text-green-400">Unlimited processing</td>
+                      <td className="py-4 px-4 font-semibold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.contextLength.component}</td>
+                      <td className="py-4 px-4 font-mono text-red-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.contextLength.standard}</td>
+                      <td className="py-4 px-4 font-mono text-green-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.contextLength.memoryAugmented}</td>
+                      <td className="py-4 px-4 font-mono text-green-400">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.contextLength.improvement}</td>
                     </tr>
                     <tr className="hover:bg-muted/5 transition-colors">
-                      <td className="py-4 px-4 font-semibold">Long Sequence Performance</td>
-                      <td className="py-4 px-4 font-mono text-red-400 font-bold">Degrades rapidly</td>
-                      <td className="py-4 px-4 font-mono text-green-400 font-bold">Maintains accuracy</td>
-                      <td className="py-4 px-4 font-mono text-green-400">Stable performance</td>
+                      <td className="py-4 px-4 font-semibold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.longSequencePerformance.component}</td>
+                      <td className="py-4 px-4 font-mono text-red-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.longSequencePerformance.standard}</td>
+                      <td className="py-4 px-4 font-mono text-green-400 font-bold">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.longSequencePerformance.memoryAugmented}</td>
+                      <td className="py-4 px-4 font-mono text-green-400">{t.gptCodeTracer.results.efficiencyAnalysis.complexityComparison.rows.longSequencePerformance.improvement}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -425,39 +412,39 @@ context_length = "extended_successfully"`,
             {/* Resource Utilization */}
             <div className="grid md:grid-cols-3 gap-6">
               <div className="cyber-card p-6 rounded-xl">
-                <h5 className="font-semibold text-primary mb-4">GPU Utilization</h5>
+                <h5 className="font-semibold text-primary mb-4">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.gpuUtilization.title}</h5>
                 <div className="relative h-32">
                   <div className="absolute inset-0 bg-muted/20 rounded-lg"></div>
                   <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary to-primary/60 rounded-lg transition-all duration-2000" style={{ height: '89%' }}></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white font-mono">89%</span>
+                    <span className="text-2xl font-bold text-white font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.gpuUtilization.value}</span>
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">Optimal hardware utilization</p>
+                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.gpuUtilization.description}</p>
               </div>
 
               <div className="cyber-card p-6 rounded-xl">
-                <h5 className="font-semibold text-secondary mb-4">Memory Efficiency</h5>
+                <h5 className="font-semibold text-secondary mb-4">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.memoryEfficiency.title}</h5>
                 <div className="relative h-32">
                   <div className="absolute inset-0 bg-muted/20 rounded-lg"></div>
                   <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-secondary to-secondary/60 rounded-lg transition-all duration-2000" style={{ height: '76%' }}></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white font-mono">76%</span>
+                    <span className="text-2xl font-bold text-white font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.memoryEfficiency.value}</span>
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">Efficient memory usage</p>
+                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.memoryEfficiency.description}</p>
               </div>
 
               <div className="cyber-card p-6 rounded-xl">
-                <h5 className="font-semibold text-accent mb-4">Speed Improvement</h5>
+                <h5 className="font-semibold text-accent mb-4">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.speedImprovement.title}</h5>
                 <div className="relative h-32">
                   <div className="absolute inset-0 bg-muted/20 rounded-lg"></div>
                   <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-accent to-accent/60 rounded-lg transition-all duration-2000" style={{ height: '93%' }}></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-black font-mono">15.6x</span>
+                    <span className="text-2xl font-bold text-black font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.speedImprovement.value}</span>
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">vs standard attention</p>
+                <p className="text-xs text-muted-foreground mt-2 text-center font-mono">{t.gptCodeTracer.results.efficiencyAnalysis.resourceUtilization.speedImprovement.description}</p>
               </div>
             </div>
           </div>
@@ -479,13 +466,13 @@ context_length = "extended_successfully"`,
                 <ResultsIcon className="text-green-400" size={24} />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold neural-gradient">
-                Results & Research Impact
+                {t.gptCodeTracer.results.title}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-mono leading-relaxed">
               <span className="text-green-400">{`def`}</span> <span className="text-secondary">validate_breakthrough</span>():
               <br />
-              <span className="ml-4 text-muted-foreground"># Comprehensive evaluation confirming research hypothesis</span>
+              <span className="ml-4 text-muted-foreground"># {t.gptCodeTracer.results.subtitle}</span>
             </p>
           </div>
 
@@ -496,29 +483,31 @@ context_length = "extended_successfully"`,
             </div>
             
             <h3 className="text-3xl font-bold neural-gradient mb-6">
-              Research Breakthrough Confirmed
+              {t.gptCodeTracer.results.breakthroughBanner.title}
             </h3>
             <p className="text-muted-foreground mb-6 max-w-4xl mx-auto text-lg leading-relaxed">
-              Systematic evaluation validates core hypothesis: <span className="text-primary font-semibold">specialized neural architectures</span> 
-              with domain-aware components outperform generic scaled models for symbolic reasoning tasks.
+              {t.gptCodeTracer.results.breakthroughBanner.description.replace(
+                'specialized neural architectures',
+                `<span class="text-primary font-semibold">${t.gptCodeTracer.results.breakthroughBanner.specializedArchitectures}</span>`
+              )}
             </p>
             
             <div className="grid md:grid-cols-4 gap-6">
               <div className="flex flex-col items-center gap-2">
                 <div className="text-3xl font-bold text-green-400 font-mono">55.7%</div>
-                <div className="text-sm text-muted-foreground font-mono">OOD Accuracy</div>
+                <div className="text-sm text-muted-foreground font-mono">{t.gptCodeTracer.results.breakthroughBanner.metrics.oodAccuracy}</div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="text-3xl font-bold text-blue-400 font-mono">O(n)</div>
-                <div className="text-sm text-muted-foreground font-mono">Linear Scaling</div>
+                <div className="text-sm text-muted-foreground font-mono">{t.gptCodeTracer.results.breakthroughBanner.metrics.linearScaling}</div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="text-3xl font-bold text-purple-400 font-mono">2.1M</div>
-                <div className="text-sm text-muted-foreground font-mono">Parameters</div>
+                <div className="text-sm text-muted-foreground font-mono">{t.gptCodeTracer.results.breakthroughBanner.metrics.parameters}</div>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="text-3xl font-bold text-secondary font-mono">12h</div>
-                <div className="text-sm text-muted-foreground font-mono">Training</div>
+                <div className="text-sm text-muted-foreground font-mono">{t.gptCodeTracer.results.breakthroughBanner.metrics.training}</div>
               </div>
             </div>
           </div>
@@ -553,36 +542,26 @@ context_length = "extended_successfully"`,
 
           {/* Research Validation Summary */}
           <div className="cyber-card p-8 rounded-2xl mt-16">
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Research Validation Summary</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">{t.gptCodeTracer.results.validationSummary.title}</h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-primary mb-4 font-mono">HYPOTHESIS_CONFIRMED</h4>
+                <h4 className="font-semibold text-primary mb-4 font-mono">{t.gptCodeTracer.results.validationSummary.hypothesisConfirmed.title}</h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  Specialized neural architectures with carefully engineered components 
-                  <span className="text-primary font-semibold"> significantly outperform</span> generic, 
-                  scaled-up models for logic-driven symbolic reasoning tasks. This validates architectural 
-                  innovation as a viable approach to domain-specific AI challenges.
+                  {t.gptCodeTracer.results.validationSummary.hypothesisConfirmed.description.replace(
+                    'significantly outperform',
+                    `<span class="text-primary font-semibold">${t.gptCodeTracer.results.validationSummary.hypothesisConfirmed.significantlyOutperform}</span>`
+                  )}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-secondary mb-4 font-mono">RESEARCH_IMPACT</h4>
+                <h4 className="font-semibold text-secondary mb-4 font-mono">{t.gptCodeTracer.results.validationSummary.researchImpact.title}</h4>
                 <div className="space-y-2 text-sm">
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-pulse"></div>
-                    <span className="text-muted-foreground">Demonstrates specialized architecture potential</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-pulse"></div>
-                    <span className="text-muted-foreground">Validates neuro-symbolic integration approach</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-pulse"></div>
-                    <span className="text-muted-foreground">Opens pathway for domain-specific AI architectures</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-pulse"></div>
-                    <span className="text-muted-foreground">Provides framework for symbolic reasoning systems</span>
-                  </div>
+                  {t.gptCodeTracer.results.validationSummary.researchImpact.impacts.map((impact, index) => (
+                    <div key={index} className="flex items-start gap-2">
+                      <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-pulse"></div>
+                      <span className="text-muted-foreground">{impact}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -591,17 +570,17 @@ context_length = "extended_successfully"`,
               <div className="flex items-center justify-center gap-4 text-sm font-mono">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400">BREAKTHROUGH_VALIDATED</span>
+                  <span className="text-green-400">{t.gptCodeTracer.results.validationSummary.statusLabels.breakthroughValidated}</span>
                 </div>
                 <div className="w-1 h-4 bg-border"></div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-blue-400">55.7%_OOD_ACHIEVED</span>
+                  <span className="text-blue-400">{t.gptCodeTracer.results.validationSummary.statusLabels.oodAchieved}</span>
                 </div>
                 <div className="w-1 h-4 bg-border"></div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                  <span className="text-purple-400">nirdidev05</span>
+                  <span className="text-purple-400">{t.gptCodeTracer.results.validationSummary.statusLabels.author}</span>
                 </div>
               </div>
             </div>

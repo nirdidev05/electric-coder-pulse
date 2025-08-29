@@ -1,50 +1,52 @@
 import React, { useState } from 'react';
 import { ProblemIcon, BrainIcon, CPUIcon, MemoryIcon, ArchitectureIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const ProblemDomain: React.FC = () => {
+  const t = useTranslation();
   const [activeProblem, setActiveProblem] = useState(0);
 
   const technicalChallenges = [
     {
       id: 'deterministic',
-      title: 'Deterministic Correctness Requirement',
-      description: 'Unlike natural language where probabilistic plausibility suffices, code execution demands absolute precision with zero tolerance for errors.',
-      impact: 'CRITICAL',
-      example: 'a = a + 1  # Must be mathematically exact',
-      consequence: 'Single arithmetic error cascades through entire trace',
+      title: t.gptCodeTracer.problemDomain.technicalChallenges.deterministic.title,
+      description: t.gptCodeTracer.problemDomain.technicalChallenges.deterministic.description,
+      impact: t.gptCodeTracer.problemDomain.technicalChallenges.deterministic.impact,
+      example: t.gptCodeTracer.problemDomain.technicalChallenges.deterministic.example,
+      consequence: t.gptCodeTracer.problemDomain.technicalChallenges.deterministic.consequence,
       icon: BrainIcon,
       color: 'text-red-400',
       gradient: 'from-red-500 to-red-600'
     },
     {
       id: 'state_transitions',
-      title: 'Complex State Transition Learning',
-      description: 'Model must implicitly learn transition function δ mapping current state and action to new state, analogous to finite automaton simulation.',
-      impact: 'HIGH', 
-      example: 'while condition: # Dynamic state evolution',
-      consequence: 'Requires understanding of program semantics, not just syntax',
+      title: t.gptCodeTracer.problemDomain.technicalChallenges.stateTransitions.title,
+      description: t.gptCodeTracer.problemDomain.technicalChallenges.stateTransitions.description,
+      impact: t.gptCodeTracer.problemDomain.technicalChallenges.stateTransitions.impact, 
+      example: t.gptCodeTracer.problemDomain.technicalChallenges.stateTransitions.example,
+      consequence: t.gptCodeTracer.problemDomain.technicalChallenges.stateTransitions.consequence,
       icon: CPUIcon,
       color: 'text-orange-400',
       gradient: 'from-orange-500 to-orange-600'
     },
     {
       id: 'long_dependencies',
-      title: 'Extreme Long-Range Dependencies',
-      description: 'Code execution involves sequences far exceeding standard context windows, especially with complex iterative structures.',
-      impact: 'HIGH',
-      example: 'for i in range(10000): # Exceeds 256-token limit',
-      consequence: 'Standard attention mechanisms fail on extended sequences',
+      title: t.gptCodeTracer.problemDomain.technicalChallenges.longDependencies.title,
+      description: t.gptCodeTracer.problemDomain.technicalChallenges.longDependencies.description,
+      impact: t.gptCodeTracer.problemDomain.technicalChallenges.longDependencies.impact,
+      example: t.gptCodeTracer.problemDomain.technicalChallenges.longDependencies.example,
+      consequence: t.gptCodeTracer.problemDomain.technicalChallenges.longDependencies.consequence,
       icon: MemoryIcon,
       color: 'text-yellow-400',
       gradient: 'from-yellow-500 to-yellow-600'
     },
     {
       id: 'no_pretraining',
-      title: 'From-Scratch Learning Constraint',
-      description: 'Challenge prohibition of external datasets and pre-trained models forces architectural innovation over scaling.',
-      impact: 'CRITICAL',
-      example: '# No GPT-4, BERT, or external data allowed',
-      consequence: 'Architecture design becomes primary performance driver',
+      title: t.gptCodeTracer.problemDomain.technicalChallenges.noPretraining.title,
+      description: t.gptCodeTracer.problemDomain.technicalChallenges.noPretraining.description,
+      impact: t.gptCodeTracer.problemDomain.technicalChallenges.noPretraining.impact,
+      example: t.gptCodeTracer.problemDomain.technicalChallenges.noPretraining.example,
+      consequence: t.gptCodeTracer.problemDomain.technicalChallenges.noPretraining.consequence,
       icon: ArchitectureIcon,
       color: 'text-blue-400',
       gradient: 'from-blue-500 to-blue-600'
@@ -53,47 +55,32 @@ const ProblemDomain: React.FC = () => {
 
  const tinyPyProgression = [
     {
-      level: 'Level 1: Arithmetics',
-      description: 'Foundation layer introducing basic symbolic logic operations',
-      complexity: 'BASIC',
-      operations: ['Variable assignment', 'Addition operations', 'Basic I/O'],
-      example: `# LEVEL 1 - Arithmetics
-a = 5
-b = 3  
-c = a + b
-print(c)`,
-      learningGoal: 'Master deterministic mathematical operations',
+      level: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.level,
+      description: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.description,
+      complexity: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.complexity,
+      operations: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.operations,
+      example: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.example,
+      learningGoal: t.gptCodeTracer.problemDomain.tinyPyProgression.level1.learningGoal,
       color: 'text-green-400',
       progress: 25
     },
     {
-      level: 'Level 2: Conditionals', 
-      description: 'Control flow complexity with branching logic pathways',
-      complexity: 'MODERATE',
-      operations: ['If/elif/else branches', 'Comparison operators', 'Boolean logic'],
-      example: `# LEVEL 2 - Conditionals
-if a > b:
-    result = a
-elif a < b:
-    result = b
-else:
-    result = "equal"`,
-      learningGoal: 'Handle non-linear execution paths',
+      level: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.level, 
+      description: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.description,
+      complexity: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.complexity,
+      operations: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.operations,
+      example: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.example,
+      learningGoal: t.gptCodeTracer.problemDomain.tinyPyProgression.level2.learningGoal,
       color: 'text-yellow-400',
       progress: 60
     },
     {
-      level: 'Level 3: While Loops',
-      description: 'Maximum complexity with iterative state tracking over variable-length sequences',
-      complexity: 'EXTREME',
-      operations: ['While loop iteration', 'Dynamic state updates', 'Memory persistence'],
-      example: `# LEVEL 3 - While Loops  
-i = 0
-while i < 10:
-    i = i + 1
-    print(f"Step: {i}")
-    # State must persist across iterations`,
-      learningGoal: 'Achieve perfect state tracking across unbounded sequences',
+      level: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.level,
+      description: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.description,
+      complexity: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.complexity,
+      operations: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.operations,
+      example: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.example,
+      learningGoal: t.gptCodeTracer.problemDomain.tinyPyProgression.level3.learningGoal,
       color: 'text-red-400', 
       progress: 95
     }
@@ -101,22 +88,22 @@ while i < 10:
 
   const oodGeneralizationTests = [
     {
-      test: 'Extended While Iterations',
-      challenge: 'More loop iterations than maximum seen in training data',
-      example: 'while i < 10000:  # vs training max: 100',
-      evaluation: 'Tests abstract loop logic vs pattern memorization'
+      test: t.gptCodeTracer.problemDomain.oodGeneralization.extendedWhile.test,
+      challenge: t.gptCodeTracer.problemDomain.oodGeneralization.extendedWhile.challenge,
+      example: t.gptCodeTracer.problemDomain.oodGeneralization.extendedWhile.example,
+      evaluation: t.gptCodeTracer.problemDomain.oodGeneralization.extendedWhile.evaluation
     },
     {
-      test: '4-Digit Number Arithmetic',
-      challenge: 'Numerical values exceeding 3-digit training distribution',
-      example: 'a = 1234; b = 5678; c = a + b  # = 6912',
-      evaluation: 'Validates arithmetic rule learning vs lookup tables'
+      test: t.gptCodeTracer.problemDomain.oodGeneralization.fourDigitNumbers.test,
+      challenge: t.gptCodeTracer.problemDomain.oodGeneralization.fourDigitNumbers.challenge,
+      example: t.gptCodeTracer.problemDomain.oodGeneralization.fourDigitNumbers.example,
+      evaluation: t.gptCodeTracer.problemDomain.oodGeneralization.fourDigitNumbers.evaluation
     },
     {
-      test: 'Extended Code Sequences',
-      challenge: 'Program traces exceeding 256-token context window',
-      example: '# 500+ line execution requiring memory persistence',
-      evaluation: 'Proves Memory-Augmented Attention effectiveness'
+      test: t.gptCodeTracer.problemDomain.oodGeneralization.extendedSequences.test,
+      challenge: t.gptCodeTracer.problemDomain.oodGeneralization.extendedSequences.challenge,
+      example: t.gptCodeTracer.problemDomain.oodGeneralization.extendedSequences.example,
+      evaluation: t.gptCodeTracer.problemDomain.oodGeneralization.extendedSequences.evaluation
     }
   ];
 
@@ -131,13 +118,13 @@ while i < 10:
                 <ProblemIcon className="text-secondary" size={24} />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold neural-gradient">
-                Problem Domain Analysis
+                {t.gptCodeTracer.problemDomain.title}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-mono leading-relaxed">
               <span className="text-secondary">{`def`}</span> <span className="text-primary">symbolic_reasoning_challenge</span>():
               <br />
-              <span className="ml-4 text-muted-foreground"># From statistical patterns to deterministic logic</span>
+              <span className="ml-4 text-muted-foreground"># {t.gptCodeTracer.problemDomain.subtitle}</span>
             </p>
           </div>
 
@@ -148,19 +135,16 @@ while i < 10:
                 <BrainIcon size={20} />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-foreground mb-3">Code Tracing as Foundational AI Task</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">{t.gptCodeTracer.problemDomain.contextBanner.title}</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Code tracing represents a <span className="text-primary font-semibold">quintessential symbolic reasoning challenge</span>. 
-                  Unlike natural language processing where probabilistic plausibility often suffices, code execution 
-                  demands <span className="text-secondary font-semibold">absolute deterministic correctness</span>. 
-                  This task bridges the gap between statistical pattern recognition and formal logic systems.
+                  {t.gptCodeTracer.problemDomain.contextBanner.description}
                 </p>
                 <div className="flex items-center gap-4 text-sm font-mono">
                   <div className="flex items-center gap-2">
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-primary">Researcher: nirdidev05</span>
+                    <span className="text-primary">{t.gptCodeTracer.problemDomain.contextBanner.researcher}</span>
                   </div>
                 </div>
               </div>
@@ -170,7 +154,7 @@ while i < 10:
           {/* Technical Challenges Grid */}
           <div className="space-y-8 mb-12">
             <h3 className="text-3xl font-bold text-center neural-gradient mb-8">
-              Core Technical Challenges
+              {t.gptCodeTracer.problemDomain.technicalChallenges.title}
             </h3>
             
             <div className="grid gap-6">
@@ -209,14 +193,14 @@ while i < 10:
                         
                         <div className="grid md:grid-cols-2 gap-6">
                           <div className="cyber-card p-4 rounded-lg bg-primary/5 border border-primary/20">
-                            <h5 className="font-semibold text-primary mb-3 font-mono">CODE_EXAMPLE</h5>
+                            <h5 className="font-semibold text-primary mb-3 font-mono">{t.gptCodeTracer.problemDomain.technicalChallenges.labels.codeExample}</h5>
                             <div className="font-mono text-sm bg-muted/20 rounded p-3 border border-border">
                               <code className="text-foreground">{challenge.example}</code>
                             </div>
                           </div>
                           
                           <div className="cyber-card p-4 rounded-lg bg-warning/5 border border-warning/20">
-                            <h5 className="font-semibold text-warning mb-3 font-mono">CONSEQUENCE</h5>
+                            <h5 className="font-semibold text-warning mb-3 font-mono">{t.gptCodeTracer.problemDomain.technicalChallenges.labels.consequence}</h5>
                             <p className="text-sm text-muted-foreground">{challenge.consequence}</p>
                           </div>
                         </div>
@@ -231,10 +215,10 @@ while i < 10:
           {/* TinyPy Curriculum Progression */}
           <div className="cyber-card p-8 rounded-2xl mb-12">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
-              TinyPy Learning Curriculum
+              {t.gptCodeTracer.problemDomain.tinyPyProgression.title}
             </h3>
             <p className="text-center text-muted-foreground mb-8">
-              Progressive complexity design forcing comprehensive rule learning
+              {t.gptCodeTracer.problemDomain.tinyPyProgression.subtitle}
             </p>
             
             <div className="space-y-8">
@@ -270,7 +254,7 @@ while i < 10:
                       <div className="grid lg:grid-cols-2 gap-6">
                         <div>
                           {/* Operations List */}
-                          <h5 className="font-semibold text-secondary mb-3 font-mono">OPERATIONS</h5>
+                          <h5 className="font-semibold text-secondary mb-3 font-mono">{t.gptCodeTracer.problemDomain.tinyPyProgression.labels.operations}</h5>
                           <div className="space-y-2 mb-4">
                             {level.operations.map((op) => (
                               <div key={op} className="flex items-center gap-2 text-sm">
@@ -281,14 +265,14 @@ while i < 10:
                           </div>
                           
                           <div className="cyber-card p-3 rounded-lg bg-accent/5 border border-accent/20">
-                            <h6 className="font-semibold text-accent mb-2 font-mono text-sm">LEARNING_GOAL</h6>
+                            <h6 className="font-semibold text-accent mb-2 font-mono text-sm">{t.gptCodeTracer.problemDomain.tinyPyProgression.labels.learningGoal}</h6>
                             <p className="text-xs text-muted-foreground">{level.learningGoal}</p>
                           </div>
                         </div>
                         
                         <div>
                           {/* Code Example - FIXED: No syntax highlighting */}
-                          <h5 className="font-semibold text-primary mb-3 font-mono">CODE_SAMPLE</h5>
+                          <h5 className="font-semibold text-primary mb-3 font-mono">{t.gptCodeTracer.problemDomain.tinyPyProgression.labels.codeSample}</h5>
                           <div className="cyber-terminal">
                             <div className="terminal-dots">
                               <div className="dot dot-red"></div>
@@ -316,12 +300,11 @@ while i < 10:
           {/* OOD Generalization Challenge */}
           <div className="cyber-card p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
-              Out-of-Distribution Generalization Tests
+              {t.gptCodeTracer.problemDomain.oodGeneralization.title}
             </h3>
             <div className="text-center mb-8">
               <p className="text-muted-foreground max-w-3xl mx-auto">
-                The ultimate measure of AI intelligence: performance on fundamentally different data 
-                than seen during training. These tests probe for genuine understanding vs memorization.
+                {t.gptCodeTracer.problemDomain.oodGeneralization.subtitle}
               </p>
             </div>
             
@@ -341,7 +324,7 @@ while i < 10:
                   
                   <div className="space-y-4">
                     <div>
-                      <h5 className="font-semibold text-warning mb-2 font-mono text-sm">CHALLENGE</h5>
+                      <h5 className="font-semibold text-warning mb-2 font-mono text-sm">{t.gptCodeTracer.problemDomain.oodGeneralization.labels.challenge}</h5>
                       <p className="text-sm text-muted-foreground">{test.challenge}</p>
                     </div>
                     
@@ -350,7 +333,7 @@ while i < 10:
                     </div>
                     
                     <div>
-                      <h5 className="font-semibold text-primary mb-2 font-mono text-sm">EVALUATION</h5>
+                      <h5 className="font-semibold text-primary mb-2 font-mono text-sm">{t.gptCodeTracer.problemDomain.oodGeneralization.labels.evaluation}</h5>
                       <p className="text-xs text-muted-foreground">{test.evaluation}</p>
                     </div>
                   </div>
@@ -366,23 +349,19 @@ while i < 10:
                 <span className="text-white text-2xl font-bold">!</span>
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-4">Critical Research Constraint</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t.gptCodeTracer.problemDomain.criticalConstraint.title}</h3>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                   <span className="text-red-400 font-bold font-mono">CONSTRAINT_VIOLATED = FALSE</span><br/>
-                  No external datasets or pre-trained models permitted. The model must learn 
-                  TinyPy language rules from a controlled corpus, proving that 
-                  <span className="text-primary font-semibold"> architectural innovation</span>, 
-                  not massive pre-training, drives performance.
+                  {t.gptCodeTracer.problemDomain.criticalConstraint.description}
                 </p>
                 
                 <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 font-mono text-sm">
                   <div className="text-red-400 font-bold mb-2">RESEARCH_VALIDATION:</div>
                   <div className="text-muted-foreground">
-                    • No GPT-4, BERT, or foundation model usage<br/>
-                    • No external code repositories or datasets<br/>
-                    • Architecture-first approach to AI breakthrough<br/>
-                    • Proves specialized design beats brute force scaling
+                    {t.gptCodeTracer.problemDomain.criticalConstraint.validationItems.map((item, index) => (
+                      <div key={index}>• {item}</div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -404,7 +383,8 @@ while i < 10:
                 </div>
                 <div className="w-1 h-4 bg-border"></div>
                 <div className="flex items-center gap-2">
-                  
+                  <div className="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
+                  <span className="text-secondary">2025-08-29</span>
                 </div>
               </div>
             </div>

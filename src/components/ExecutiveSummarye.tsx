@@ -1,48 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { SummaryIcon, BrainIcon, MemoryIcon, CPUIcon, ResultsIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const ExecutiveSummary: React.FC = () => {
+  const t = useTranslation();
   const [activeMetric, setActiveMetric] = useState(0);
   const [animatedValues, setAnimatedValues] = useState<Record<string, number>>({});
 
   const metrics = [
     { 
       id: 'ood_accuracy',
-      label: 'OOD Accuracy', 
+      label: t.gptCodeTracer.executiveSummary.metrics.oodAccuracy.label, 
       value: 55,
       suffix: '%+',
-      description: 'Out-of-distribution generalization performance',
-      detail: 'Model maintains high accuracy on unseen code patterns with longer loops and 4-digit numbers',
+      description: t.gptCodeTracer.executiveSummary.metrics.oodAccuracy.description,
+      detail: t.gptCodeTracer.executiveSummary.metrics.oodAccuracy.detail,
       icon: ResultsIcon,
       color: 'text-green-400'
     },
     { 
       id: 'architecture',
-      label: 'Architecture', 
+      label: t.gptCodeTracer.executiveSummary.metrics.architecture.label, 
       value: 100,
       suffix: '% Custom',
-      description: 'From-scratch GPT with specialized components',
-      detail: 'Memory-Augmented Attention + Execution Step Embedding innovations',
+      description: t.gptCodeTracer.executiveSummary.metrics.architecture.description,
+      detail: t.gptCodeTracer.executiveSummary.metrics.architecture.detail,
       icon: BrainIcon,
       color: 'text-primary'
     },
     { 
       id: 'parameters',
-      label: 'Parameters', 
+      label: t.gptCodeTracer.executiveSummary.metrics.parameters.label, 
       value: 2.1,
       suffix: 'M',
-      description: 'Efficient model size without pre-training',
-      detail: '8 layers, 384 embedding dimensions, 8 attention heads - optimized architecture',
+      description: t.gptCodeTracer.executiveSummary.metrics.parameters.description,
+      detail: t.gptCodeTracer.executiveSummary.metrics.parameters.detail,
       icon: CPUIcon,
       color: 'text-purple-400'
     },
     { 
       id: 'memory_scaling',
-      label: 'Memory Scaling', 
+      label: t.gptCodeTracer.executiveSummary.metrics.memoryScaling.label, 
       value: 100,
       suffix: '% Linear',
-      description: 'Linear complexity vs quadratic standard attention',
-      detail: 'External dynamic memory overcomes 256-token window limitation efficiently',
+      description: t.gptCodeTracer.executiveSummary.metrics.memoryScaling.description,
+      detail: t.gptCodeTracer.executiveSummary.metrics.memoryScaling.detail,
       icon: MemoryIcon,
       color: 'text-secondary'
     }
@@ -50,18 +52,18 @@ const ExecutiveSummary: React.FC = () => {
 
   const innovations = [
     {
-      title: 'Memory-Augmented Attention',
-      problem: 'Standard transformers limited by fixed context window for long code sequences',
-      solution: 'External dynamic memory enables theoretically infinite temporal range',
-      impact: 'Linear complexity scaling for processing complex while loops efficiently',
+      title: t.gptCodeTracer.executiveSummary.innovations.memoryAugmented.title,
+      problem: t.gptCodeTracer.executiveSummary.innovations.memoryAugmented.problem,
+      solution: t.gptCodeTracer.executiveSummary.innovations.memoryAugmented.solution,
+      impact: t.gptCodeTracer.executiveSummary.innovations.memoryAugmented.impact,
       icon: MemoryIcon,
       gradient: 'from-primary to-secondary'
     },
     {
-      title: 'Execution Step Embedding',
-      problem: 'No explicit mechanism for tracking execution state in neural networks',
-      solution: 'Unique step IDs converted to numerical vectors via specialized embedding',
-      impact: 'Precise state transitions enabling loop iteration disambiguation',
+      title: t.gptCodeTracer.executiveSummary.innovations.executionStep.title,
+      problem: t.gptCodeTracer.executiveSummary.innovations.executionStep.problem,
+      solution: t.gptCodeTracer.executiveSummary.innovations.executionStep.solution,
+      impact: t.gptCodeTracer.executiveSummary.innovations.executionStep.impact,
       icon: CPUIcon,
       gradient: 'from-secondary to-accent'
     }
@@ -98,13 +100,13 @@ const ExecutiveSummary: React.FC = () => {
                 <SummaryIcon className="text-primary" size={24} />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold neural-gradient">
-                Executive Summary
+                {t.gptCodeTracer.executiveSummary.title}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto font-mono leading-relaxed">
               <span className="text-accent">{`def`}</span> <span className="text-secondary">breakthrough_research</span>():
               <br />
-              <span className="ml-4 text-muted-foreground"># Revolutionary approach to symbolic reasoning</span>
+              <span className="ml-4 text-muted-foreground"># {t.gptCodeTracer.executiveSummary.subtitle}</span>
             </p>
           </div>
 
@@ -116,55 +118,52 @@ const ExecutiveSummary: React.FC = () => {
               <div className="w-8 h-8 rounded-lg bg-warning/20 flex items-center justify-center">
                 <span className="text-warning font-bold">!</span>
               </div>
-              The Technical Challenge
+              {t.gptCodeTracer.executiveSummary.challenge.title}
             </h3>
             
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  The <span className="text-primary font-semibold">Datahack TinyPy Language Model Challenge</span> presented 
-                  a formidable technical problem: creating a GPT-based model capable of "tracing" Python code execution. 
-                  This task demands <span className="text-secondary font-semibold">absolute deterministic correctness</span> - 
-                  a domain where Large Language Models traditionally struggle.
+                  {t.gptCodeTracer.executiveSummary.challenge.intro} <span className="text-primary font-semibold">{t.gptCodeTracer.executiveSummary.challenge.challengeName}</span> {t.gptCodeTracer.executiveSummary.challenge.description} 
+                  {t.gptCodeTracer.executiveSummary.challenge.demand} <span className="text-secondary font-semibold">{t.gptCodeTracer.executiveSummary.challenge.requirement}</span> {t.gptCodeTracer.executiveSummary.challenge.struggle}
                 </p>
                 
                 <div className="cyber-card p-4 rounded-lg bg-warning/5 border border-warning/20">
                   <h4 className="font-semibold text-warning mb-2 flex items-center gap-2">
                     <span className="w-2 h-2 bg-warning rounded-full animate-pulse"></span>
-                    Critical Constraint
+                    {t.gptCodeTracer.executiveSummary.challenge.constraint.title}
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    <span className="text-warning font-semibold">No external datasets or pre-trained models allowed.</span> 
-                    The model must learn TinyPy language rules from scratch, proving architectural design 
-                    drives performance over brute-force scaling.
+                    <span className="text-warning font-semibold">{t.gptCodeTracer.executiveSummary.challenge.constraint.description}</span> 
+                    {t.gptCodeTracer.executiveSummary.challenge.constraint.explanation}
                   </p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <h4 className="font-semibold text-foreground mb-4">Challenge Dimensions:</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t.gptCodeTracer.executiveSummary.challenge.dimensions.title}</h4>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-red-500/5 border border-red-500/20">
                     <div className="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
                     <div>
-                      <div className="font-semibold text-red-400 text-sm">Deterministic Correctness</div>
-                      <div className="text-xs text-muted-foreground">Unlike natural language - zero tolerance for errors</div>
+                      <div className="font-semibold text-red-400 text-sm">{t.gptCodeTracer.executiveSummary.challenge.dimensions.deterministic.title}</div>
+                      <div className="text-xs text-muted-foreground">{t.gptCodeTracer.executiveSummary.challenge.dimensions.deterministic.description}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-yellow-500/5 border border-yellow-500/20">
                     <div className="w-2 h-2 rounded-full bg-yellow-400 mt-2 flex-shrink-0"></div>
                     <div>
-                      <div className="font-semibold text-yellow-400 text-sm">OOD Generalization</div>
-                      <div className="text-xs text-muted-foreground">Performance on fundamentally different test data</div>
+                      <div className="font-semibold text-yellow-400 text-sm">{t.gptCodeTracer.executiveSummary.challenge.dimensions.oodGeneralization.title}</div>
+                      <div className="text-xs text-muted-foreground">{t.gptCodeTracer.executiveSummary.challenge.dimensions.oodGeneralization.description}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3 p-3 rounded-lg bg-blue-500/5 border border-blue-500/20">
                     <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
                     <div>
-                      <div className="font-semibold text-blue-400 text-sm">Long Sequences</div>
-                      <div className="text-xs text-muted-foreground">Complex while loops exceeding context windows</div>
+                      <div className="font-semibold text-blue-400 text-sm">{t.gptCodeTracer.executiveSummary.challenge.dimensions.longSequences.title}</div>
+                      <div className="text-xs text-muted-foreground">{t.gptCodeTracer.executiveSummary.challenge.dimensions.longSequences.description}</div>
                     </div>
                   </div>
                 </div>
@@ -223,7 +222,7 @@ const ExecutiveSummary: React.FC = () => {
                   metrics.{metrics[activeMetric].id}()
                 </h4>
                 <div className="text-sm text-muted-foreground">
-                  Performance Analysis
+                  {t.gptCodeTracer.executiveSummary.metrics.performanceAnalysis}
                 </div>
               </div>
             </div>
@@ -235,7 +234,7 @@ const ExecutiveSummary: React.FC = () => {
           {/* Innovation Showcase */}
           <div className="space-y-8">
             <h3 className="text-3xl font-bold text-center neural-gradient mb-12">
-              Architectural Breakthroughs
+              {t.gptCodeTracer.executiveSummary.innovations.title}
             </h3>
             
             {innovations.map((innovation, index) => {
@@ -255,7 +254,7 @@ const ExecutiveSummary: React.FC = () => {
                         <div className="cyber-card p-4 rounded-lg bg-red-500/5 border border-red-500/20">
                           <h5 className="font-semibold text-red-400 mb-3 font-mono flex items-center gap-2">
                             <span className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
-                            PROBLEM
+                            {t.gptCodeTracer.executiveSummary.innovations.labels.problem}
                           </h5>
                           <p className="text-sm text-muted-foreground leading-relaxed">{innovation.problem}</p>
                         </div>
@@ -263,7 +262,7 @@ const ExecutiveSummary: React.FC = () => {
                         <div className="cyber-card p-4 rounded-lg bg-blue-500/5 border border-blue-500/20">
                           <h5 className="font-semibold text-blue-400 mb-3 font-mono flex items-center gap-2">
                             <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-                            SOLUTION
+                            {t.gptCodeTracer.executiveSummary.innovations.labels.solution}
                           </h5>
                           <p className="text-sm text-muted-foreground leading-relaxed">{innovation.solution}</p>
                         </div>
@@ -271,7 +270,7 @@ const ExecutiveSummary: React.FC = () => {
                         <div className="cyber-card p-4 rounded-lg bg-green-500/5 border border-green-500/20">
                           <h5 className="font-semibold text-green-400 mb-3 font-mono flex items-center gap-2">
                             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                            IMPACT
+                            {t.gptCodeTracer.executiveSummary.innovations.labels.impact}
                           </h5>
                           <p className="text-sm text-muted-foreground leading-relaxed">{innovation.impact}</p>
                         </div>
@@ -290,27 +289,25 @@ const ExecutiveSummary: React.FC = () => {
                 <BrainIcon className="text-white" size={24} />
               </div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-6">Research Hypothesis Validated</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">{t.gptCodeTracer.executiveSummary.validation.title}</h3>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  This project validates a <span className="text-primary font-semibold">critical hypothesis</span>: 
-                  for specialized, logic-driven tasks, a bespoke neural architecture with carefully engineered components 
-                  can outperform generic, scaled-up models. By integrating <span className="text-secondary font-semibold">neuro-symbolic elements</span> and 
-                  a robust distributed training pipeline, this work demonstrates a systematic approach to bridging 
-                  <span className="text-accent font-semibold"> statistical pattern recognition</span> and 
-                  <span className="text-warning font-semibold"> deterministic symbolic reasoning</span>.
+                  {t.gptCodeTracer.executiveSummary.validation.intro} <span className="text-primary font-semibold">{t.gptCodeTracer.executiveSummary.validation.hypothesis}</span>{t.gptCodeTracer.executiveSummary.validation.explanation} 
+                  {t.gptCodeTracer.executiveSummary.validation.integration} <span className="text-secondary font-semibold">{t.gptCodeTracer.executiveSummary.validation.elements}</span> {t.gptCodeTracer.executiveSummary.validation.demonstration} 
+                  <span className="text-accent font-semibold">{t.gptCodeTracer.executiveSummary.validation.recognition}</span> {t.gptCodeTracer.executiveSummary.validation.and} 
+                  <span className="text-warning font-semibold">{t.gptCodeTracer.executiveSummary.validation.reasoning}</span>.
                 </p>
               </div>
               
               <div className="flex items-center justify-center gap-4 mt-8">
                 <div className="flex items-center gap-2 text-sm font-mono">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400">HYPOTHESIS_CONFIRMED</span>
+                  <span className="text-green-400">{t.gptCodeTracer.executiveSummary.validation.status.confirmed}</span>
                 </div>
                 <div className="w-1 h-4 bg-border"></div>
                 <div className="flex items-center gap-2 text-sm font-mono">
                   <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  <span className="text-blue-400">RESEARCH_VALIDATED</span>
+                  <span className="text-blue-400">{t.gptCodeTracer.executiveSummary.validation.status.validated}</span>
                 </div>
               </div>
             </div>

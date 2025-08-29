@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { BrainIcon, MemoryIcon, CPUIcon, NeuralIcon, ResultsIcon, CodeIcon } from './CustomIcon';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Hero: React.FC = () => {
+  const t = useTranslation();
   const [currentLine, setCurrentLine] = useState(0);
   const [currentChar, setCurrentChar] = useState(0);
   const [displayText, setDisplayText] = useState<string[]>(['']);
@@ -11,14 +13,14 @@ const Hero: React.FC = () => {
     '    def __init__(self):',
     '        self.memory_attention = MemoryAugmentedAttention()',
     '        self.step_embedding = ExecutionStepEmbedding()',
-    '        self.ood_accuracy = 0.552  # Breakthrough achieved!',
+    '        self.ood_accuracy = 0.557  # Breakthrough achieved!',
     '',
     '    def symbolic_reasoning(self):',
     '        """Bridge neural and symbolic AI"""',
     '        return self.neural_flow() + self.symbolic_logic()',
     '',
     '# Research Status: VALIDATED ✓',
-    '# Date: 2025-02-22 | Author: nirdidev05'
+    '# Date: 2025-08-29 | Author: nirdidev05'
   ];
 
   useEffect(() => {
@@ -77,25 +79,23 @@ const Hero: React.FC = () => {
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-green-400 font-mono text-sm tracking-wider">
-                    RESEARCH_STATUS: VALIDATED
+                    {t.gptCodeTracer.status.researchStatus}
                   </span>
                   <div className="px-2 py-1 bg-green-400/20 rounded text-xs font-mono text-green-400">
-                    55.7% OOD
+                    {t.gptCodeTracer.status.oodAccuracy}
                   </div>
                 </div>
                 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="neural-gradient">GPT-Based</span><br/>
-                  <span className="text-foreground">Code Tracing</span><br/>
+                  <span className="neural-gradient">{t.gptCodeTracer.hero.title.main}</span><br/>
+                  <span className="text-foreground">{t.gptCodeTracer.hero.title.secondary}</span><br/>
                   <span className="text-muted-foreground text-3xl md:text-4xl lg:text-5xl">
-                    Research Breakthrough
+                    {t.gptCodeTracer.hero.title.subtitle}
                   </span>
                 </h1>
                 
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                  Revolutionary approach to <span className="text-primary font-semibold">symbolic reasoning</span> through 
-                  custom neural architecture. Achieving unprecedented <span className="text-secondary font-semibold">55.7% accuracy</span> 
-                  in out-of-distribution generalization for the Datahack TinyPy Challenge.
+                  {t.gptCodeTracer.hero.description.intro} <span className="text-primary font-semibold">{t.gptCodeTracer.hero.description.concept}</span> {t.gptCodeTracer.hero.description.achievement} <span className="text-secondary font-semibold">{t.gptCodeTracer.hero.description.accuracy}</span> {t.gptCodeTracer.hero.description.context}
                 </p>
               </div>
 
@@ -104,33 +104,33 @@ const Hero: React.FC = () => {
                 <div className="cyber-card p-4 rounded-xl cyber-glow">
                   <div className="flex items-center gap-3 mb-3">
                     <BrainIcon className="text-primary" size={20} />
-                    <h3 className="font-semibold text-primary">Memory-Augmented</h3>
+                    <h3 className="font-semibold text-primary">{t.gptCodeTracer.hero.features.memoryAugmented.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">Infinite context through external dynamic memory</p>
+                  <p className="text-sm text-muted-foreground">{t.gptCodeTracer.hero.features.memoryAugmented.description}</p>
                 </div>
                 
                 <div className="cyber-card p-4 rounded-xl cyber-glow">
                   <div className="flex items-center gap-3 mb-3">
                     <CPUIcon className="text-secondary" size={20} />
-                    <h3 className="font-semibold text-secondary">Step Embedding</h3>
+                    <h3 className="font-semibold text-secondary">{t.gptCodeTracer.hero.features.stepEmbedding.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">Explicit execution state tracking</p>
+                  <p className="text-sm text-muted-foreground">{t.gptCodeTracer.hero.features.stepEmbedding.description}</p>
                 </div>
                 
                 <div className="cyber-card p-4 rounded-xl cyber-glow">
                   <div className="flex items-center gap-3 mb-3">
                     <ResultsIcon className="text-accent" size={20} />
-                    <h3 className="font-semibold text-accent">OOD Excellence</h3>
+                    <h3 className="font-semibold text-accent">{t.gptCodeTracer.hero.features.oodExcellence.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">True understanding beyond training data</p>
+                  <p className="text-sm text-muted-foreground">{t.gptCodeTracer.hero.features.oodExcellence.description}</p>
                 </div>
                 
                 <div className="cyber-card p-4 rounded-xl cyber-glow">
                   <div className="flex items-center gap-3 mb-3">
                     <NeuralIcon className="text-warning" size={20} />
-                    <h3 className="font-semibold text-warning">From Scratch</h3>
+                    <h3 className="font-semibold text-warning">{t.gptCodeTracer.hero.features.fromScratch.title}</h3>
                   </div>
-                  <p className="text-sm text-muted-foreground">No pre-trained models required</p>
+                  <p className="text-sm text-muted-foreground">{t.gptCodeTracer.hero.features.fromScratch.description}</p>
                 </div>
               </div>
 
@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
                 >
                   <span className="flex items-center gap-2">
                     <BrainIcon size={18} />
-                    Explore Research
+                    {t.gptCodeTracer.hero.actions.exploreResearch}
                   </span>
                 </button>
                 <button 
@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
                 >
                   <span className="flex items-center gap-2">
                     <CodeIcon size={18} />
-                    View Implementation
+                    {t.gptCodeTracer.hero.actions.viewImplementation}
                   </span>
                 </button>
               </div>
@@ -160,15 +160,15 @@ const Hero: React.FC = () => {
               <div className="flex items-center gap-6 pt-6 text-sm font-mono">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-muted-foreground">2.1M params</span>
+                  <span className="text-muted-foreground">{t.gptCodeTracer.hero.metrics.parameters}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                  <span className="text-muted-foreground">12h training</span>
+                  <span className="text-muted-foreground">{t.gptCodeTracer.hero.metrics.training}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-                  <span className="text-muted-foreground">O(n) scaling</span>
+                  <span className="text-muted-foreground">{t.gptCodeTracer.hero.metrics.scaling}</span>
                 </div>
               </div>
             </div>
@@ -180,10 +180,10 @@ const Hero: React.FC = () => {
                 <div className="dot dot-yellow"></div>
                 <div className="dot dot-green"></div>
                 <span className="text-muted-foreground font-mono text-sm ml-4 flex-1">
-                  gpt_code_tracer.py
+                  {t.gptCodeTracer.hero.terminal.filename}
                 </span>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                  <span>Research Implementation</span>
+                  <span>{t.gptCodeTracer.hero.terminal.status}</span>
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 </div>
               </div>
@@ -198,11 +198,11 @@ const Hero: React.FC = () => {
                       className={
                         line.includes('class') || line.includes('def') ? 'text-primary font-semibold' :
                         line.includes('self.') ? 'text-secondary' :
-                        line.includes('0.957') ? 'text-accent font-bold' :
+                        line.includes('0.557') ? 'text-accent font-bold' :
                         line.includes('#') ? 'text-muted-foreground italic' :
                         line.includes('"""') ? 'text-green-400 italic' :
                         line.includes('return') ? 'text-warning' :
-                        line.includes('2025-08-26') ? 'text-blue-400' :
+                        line.includes('2025-08-29') ? 'text-blue-400' :
                         line.includes('nirdidev05') ? 'text-purple-400' :
                         ''
                       }
@@ -228,7 +228,7 @@ const Hero: React.FC = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex flex-col items-center gap-3 text-muted-foreground animate-bounce">
-          <span className="text-sm font-mono">scroll.down()</span>
+          <span className="text-sm font-mono">{t.gptCodeTracer.hero.terminal.scrollIndicator}</span>
           <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center">
             <div className="w-1 h-3 bg-current rounded-full mt-2 animate-pulse" />
           </div>

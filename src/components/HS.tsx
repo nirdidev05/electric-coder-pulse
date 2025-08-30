@@ -200,7 +200,7 @@ const HeroSection: React.FC = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "https://github.com/nirdidev05/HAICK_TSA/blob/main/haick_protein/protein.ipynb",
+                    "https://github.com/nirdidev05/HAICK_TSA/tree/protein/haick_protein",
                     "_blank"
                   )
                 }

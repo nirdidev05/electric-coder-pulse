@@ -28,7 +28,7 @@ const FooterProtein: React.FC = () => {
 
   const handleCodeView = () => {
     window.open(
-      "https://github.com/nirdidev05/HAICK_TSA/blob/main/haick_protein/protein.ipynb",
+      "https://github.com/nirdidev05/HAICK_TSA/tree/protein/haick_protein",
       "_blank"
     );
   };

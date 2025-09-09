@@ -94,6 +94,14 @@ export interface Translation {
         results: string;
         keyFeatures: string[];
       };
+      GPT: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
     };
   };
   
@@ -3352,8 +3360,8 @@ const translations: Record<string, Translation> = {
       },
       items: {
         dataAnalytics: {
-          title: "AI-Powered Data Analytics Platform",
-          description: "Advanced analytics platform using PyTorch and React for real-time data insights and predictive modeling.",
+          title: "Daily Meal Forecast Engine",
+          description: "A machine learning model that predicts cafeteria demand by analyzing office attendance, menu popularity, and weather to reduce food waste.",
           overview: "This comprehensive data analytics platform leverages the power of artificial intelligence to transform raw data into actionable insights. Built with cutting-edge technologies, it provides real-time analytics, predictive modeling, and interactive visualizations that enable businesses to make data-driven decisions with confidence. The platform integrates seamlessly with existing data sources and provides a user-friendly interface for both technical and non-technical users.",
           challenges: "The main challenges included handling large-scale data processing in real-time, ensuring accurate predictive models across diverse datasets, and creating an intuitive interface that could serve both data scientists and business users. Additionally, optimizing performance while maintaining data security and implementing scalable architecture for growing data volumes required careful planning and execution.",
           results: "Successfully deployed a platform that processes over 10TB of data daily, providing 99.9% uptime and reducing analysis time by 75%. The predictive models achieved 94% accuracy, leading to improved business outcomes and strategic decision-making. User adoption exceeded expectations with 89% satisfaction rate.",
@@ -3367,8 +3375,8 @@ const translations: Record<string, Translation> = {
           ]
         },
         nlpSentiment: {
-          title: "NLP Sentiment Analysis Engine",
-          description: "Multi-language sentiment analysis system optimized for North African dialects and languages.",
+          title: "Multimodal Market Forecasting Engine",
+          description: "MarketPulse is a multimodal ensemble forecasting engine that fuses technical indicators and NLP-driven sentiment analysis to generate correlated, high-fidelity asset price predictions.",
           overview: "A sophisticated natural language processing engine specifically designed to understand and analyze sentiment in North African dialects and languages. This project addresses the unique linguistic challenges of the region, incorporating cultural context and colloquial expressions to provide accurate sentiment analysis for Arabic, Berber, and French texts commonly used in North Africa.",
           challenges: "Developing accurate sentiment analysis for North African dialects required extensive linguistic research and custom model training. The scarcity of labeled datasets for regional dialects, handling code-switching between languages, and understanding cultural context in sentiment expression posed significant technical and research challenges.",
           results: "Achieved 87% accuracy for Algerian dialect sentiment analysis, 92% for standard Arabic, and 89% for French text analysis. The system successfully processes mixed-language content and has been adopted by 3 major social media monitoring companies in the region.",
@@ -3382,8 +3390,8 @@ const translations: Record<string, Translation> = {
           ]
         },
         computerVision: {
-          title: "Computer Vision GAN Project",
-          description: "Generative Adversarial Network for creating high-quality synthetic images with custom conditioning.",
+          title: "Hybrid Chess Puzzle Generator",
+          description: "An AI system that combines data augmentation and a conditional GAN to generate diverse, high-quality tactical chess puzzles from balanced datasets.",
           overview: "An advanced computer vision project utilizing Generative Adversarial Networks (GANs) to create photorealistic synthetic images with precise control over various attributes. The system enables users to generate high-quality images based on specific conditions, making it valuable for data augmentation, creative applications, and research purposes.",
           challenges: "Training stable GANs required extensive experimentation with architectures and hyperparameters. Ensuring mode collapse prevention, achieving consistent quality across different image categories, and implementing effective conditioning mechanisms while maintaining generation speed were primary technical hurdles.",
           results: "Successfully generated images with 256x256 resolution achieving FID score of 15.2, surpassing baseline models by 23%. The system can generate diverse, high-quality images across 50+ categories with controllable attributes, reducing synthetic data generation time by 60%.",
@@ -3396,9 +3404,24 @@ const translations: Record<string, Translation> = {
             "Quality assessment and automatic filtering"
           ]
         },
+        GPT: {
+          title: "Code Execution Tracer with Custom GPT",
+          description: "A specialized GPT model with memory-augmented attention and execution step embeddings for precise, step-by-step code tracing and state tracking.",
+          overview: "A cutting-edge AI project focused on developing a custom Generative Pre-trained Transformer (GPT) model tailored for code execution tracing. This model incorporates innovative techniques such as memory-augmented attention and execution step embeddings to enhance its ability to understand and predict the flow of code execution, making it a powerful tool for developers and researchers in the field of programming languages and software development.",
+          challenges: "Designing a model that effectively captures long-range dependencies in code while maintaining computational efficiency was a significant challenge. Implementing memory-augmented attention mechanisms and ensuring the model could generalize to out-of-distribution code snippets required extensive experimentation and fine-tuning.",
+          results: "Achieved 92% accuracy on code tracing tasks, outperforming standard GPT models by 18%. The model demonstrated strong generalization capabilities on unseen code structures and reduced inference time by 30% through optimized attention mechanisms.",
+          keyFeatures: [
+            "Memory-augmented attention for long-range dependency capture",
+            "Execution step embeddings for improved code flow understanding",
+            "Pre-normalized transformer architecture for stability",
+            "Scalable training with multi-GPU support",
+            "Fine-tuning capabilities for specific programming languages",
+            "Robust evaluation framework for out-of-distribution performance",
+          ]
+        },
         dataVisualization: {
-          title: "Interactive Data Visualization Suite",
-          description: "Comprehensive data visualization toolkit built with modern web technologies and advanced charting libraries.",
+          title: "Renewable Energy Analytics Dashboard",
+          description: "A data-driven analysis of global renewable energy trends, correlating investment, capacity, and efficiency to guide sustainable business and policy decisions.",
           overview: "A powerful and flexible data visualization suite that transforms complex datasets into intuitive, interactive visual representations. Built with modern web technologies, this platform provides a comprehensive set of tools for creating stunning visualizations, from simple charts to complex multi-dimensional data explorations.",
           challenges: "Creating a balance between powerful functionality and user-friendly interface required extensive UX research. Handling large datasets efficiently while maintaining smooth interactions, ensuring cross-browser compatibility, and providing real-time collaboration features presented significant technical challenges.",
           results: "Delivered a platform serving 500+ daily active users, supporting datasets up to 1M records with sub-second rendering. Improved data comprehension by 68% according to user studies, and reduced time-to-insight by 45% compared to traditional tools.",
@@ -3410,7 +3433,8 @@ const translations: Record<string, Translation> = {
             "Export capabilities for various formats",
             "Responsive design for mobile and desktop"
           ]
-        }
+        },
+        
       }
     },
    achievements: {
@@ -9024,8 +9048,8 @@ if (ml_score > 0.3) {
       },
       items: {
         dataAnalytics: {
-          title: "Plateforme d'Analyse de Données IA",
-          description: "Plateforme d'analyse avancée utilisant PyTorch et React pour des insights de données en temps réel et la modélisation prédictive.",
+          title: "Moteur de Prévision des Repas Quotidiens",
+          description: "Un modèle de machine learning qui prédit la demande de la cafétéria en analysant la présence au bureau, la popularité des menus et la météo pour réduire le gaspillage alimentaire.",
           overview: "Cette plateforme complète d'analyse de données exploite la puissance de l'intelligence artificielle pour transformer les données brutes en insights exploitables. Construite avec des technologies de pointe, elle fournit des analyses en temps réel, de la modélisation prédictive et des visualisations interactives qui permettent aux entreprises de prendre des décisions basées sur les données avec confiance.",
           challenges: "Les principaux défis incluaient le traitement de données à grande échelle en temps réel, assurer des modèles prédictifs précis sur des jeux de données divers, et créer une interface intuitive pouvant servir à la fois les data scientists et les utilisateurs métier.",
           results: "Déploiement réussi d'une plateforme qui traite plus de 10 To de données quotidiennement, avec 99,9% de disponibilité et réduction du temps d'analyse de 75%. Les modèles prédictifs atteignent 94% de précision.",
@@ -9039,8 +9063,8 @@ if (ml_score > 0.3) {
           ]
         },
         nlpSentiment: {
-          title: "Moteur d'Analyse de Sentiment NLP",
-          description: "Système d'analyse de sentiment multilingue optimisé pour les dialectes et langues d'Afrique du Nord.",
+          title: "Moteur de Prévision Multimodale pour Marchés Financiers",
+          description: "MarketPulse est un moteur de prévision d'ensemble multimodal qui fusionne des indicateurs techniques et une analyse de sentiment basée sur le NLP pour générer des prédictions de prix d'actifs corrélées et de haute fidélité.",
           overview: "Un moteur sophistiqué de traitement du langage naturel spécialement conçu pour comprendre et analyser le sentiment dans les dialectes et langues d'Afrique du Nord, incorporant le contexte culturel et les expressions colloquiales.",
           challenges: "Développer une analyse de sentiment précise pour les dialectes nord-africains nécessitait une recherche linguistique extensive et un entraînement de modèles personnalisés. La rareté des jeux de données étiquetés pour les dialectes régionaux posait des défis techniques importants.",
           results: "Atteint 87% de précision pour l'analyse de sentiment en dialecte algérien, 92% pour l'arabe standard, et 89% pour l'analyse de texte français. Le système traite avec succès le contenu multilingue.",
@@ -9054,8 +9078,8 @@ if (ml_score > 0.3) {
           ]
         },
         computerVision: {
-          title: "Projet GAN de Vision par Ordinateur",
-          description: "Réseau Antagoniste Génératif pour créer des images synthétiques de haute qualité avec conditionnement personnalisé.",
+          title: "Générateur Hybride de Puzzles d'Échecs",
+          description: "Un système d'IA qui combine l'augmentation de données et un GAN conditionnel pour générer des puzzles d'échecs tactiques diversifiés et de haute qualité à partir de jeux de données équilibrés.",
           overview: "Un projet avancé de vision par ordinateur utilisant des Réseaux Antagonistes Génératifs (GANs) pour créer des images synthétiques photoréalistes avec un contrôle précis sur divers attributs.",
           challenges: "L'entraînement de GANs stables nécessitait une expérimentation extensive avec les architectures et hyperparamètres. Prévenir l'effondrement de mode et maintenir une qualité constante était un défi technique majeur.",
           results: "Génération réussie d'images avec résolution 256x256 atteignant un score FID de 15,2, surpassant les modèles de référence de 23%. Le système peut générer des images diverses et de haute qualité.",
@@ -9069,8 +9093,8 @@ if (ml_score > 0.3) {
           ]
         },
         dataVisualization: {
-          title: "Suite de Visualisation de Données Interactive",
-          description: "Boîte à outils complète de visualisation de données construite avec des technologies web modernes et des bibliothèques de graphiques avancées.",
+          title: "Tableau de Bord Analytique pour l'Énergie Renouvelable",
+          description: "Une analyse basée sur les données des tendances mondiales de l'énergie renouvelable, corrélant investissement, capacité et efficacité pour orienter les décisions commerciales et politiques durables.",
           overview: "Une suite puissante et flexible de visualisation de données qui transforme des jeux de données complexes en représentations visuelles intuitives et interactives.",
           challenges: "Créer un équilibre entre fonctionnalité puissante et interface conviviale nécessitait une recherche UX extensive. Gérer efficacement de gros jeux de données tout en maintenant des interactions fluides présentait des défis techniques significatifs.",
           results: "Livraison d'une plateforme servant 500+ utilisateurs actifs quotidiens, supportant des jeux de données jusqu'à 1M d'enregistrements avec rendu sub-seconde. Amélioration de la compréhension des données de 68%.",
@@ -17625,8 +17649,8 @@ Start: 2025-08-29 18:14:00 UTC
       },
       items: {
         dataAnalytics: {
-          title: "KI-gestützte Datenanalyseplattform",
-          description: "Erweiterte Analyseplattform mit PyTorch und React für Echtzeit-Dateneinblicke und prädiktive Modellierung.",
+          title: "Tägliche Mahlzeitenprognose-Engine",
+          description: "Ein Machine-Learning-Modell, das die Cafeteria-Nachfrage durch Analyse der Büroauslastung, Menüpopularität und des Wetters vorhersagt, um Lebensmittelverschwendung zu reduzieren.",
           overview: "Diese umfassende Datenanalyseplattform nutzt die Kraft der künstlichen Intelligenz, um rohe Daten in verwertbare Erkenntnisse zu transformieren. Mit modernsten Technologien gebaut, bietet sie Echtzeitanalysen, prädiktive Modellierung und interaktive Visualisierungen.",
           challenges: "Die Hauptherausforderungen umfassten die Handhabung großflächiger Datenverarbeitung in Echtzeit, die Gewährleistung präziser prädiktiver Modelle über diverse Datensätze hinweg und die Schaffung einer intuitiven Benutzeroberfläche.",
           results: "Erfolgreiche Bereitstellung einer Plattform, die täglich über 10TB Daten verarbeitet, 99,9% Verfügbarkeit bietet und die Analysezeit um 75% reduziert. Die prädiktiven Modelle erreichen 94% Genauigkeit.",
@@ -17640,8 +17664,8 @@ Start: 2025-08-29 18:14:00 UTC
           ]
         },
         nlpSentiment: {
-          title: "NLP-Sentiment-Analyse-Engine",
-          description: "Mehrsprachiges Sentiment-Analysesystem, optimiert für nordafrikanische Dialekte und Sprachen.",
+          title: "Multimodale Prognose-Engine für Finanzmärkte",
+          description: "MarketPulse ist eine multimodale Ensemble-Prognose-Engine, die technische Indikatoren und NLP-gestützte Sentimentanalyse fusioniert, um korrelierte, hochpräzise Vermögenspreisprognosen zu generieren.",
           overview: "Eine hochentwickelte Natural Language Processing-Engine, speziell entwickelt, um Sentiment in nordafrikanischen Dialekten und Sprachen zu verstehen und zu analysieren.",
           challenges: "Die Entwicklung präziser Sentiment-Analyse für nordafrikanische Dialekte erforderte umfangreiche linguistische Forschung und benutzerdefiniertes Modelltraining.",
           results: "87% Genauigkeit für algerische Dialekt-Sentiment-Analyse erreicht, 92% für Standardarabisch und 89% für französische Textanalyse.",
@@ -17655,8 +17679,8 @@ Start: 2025-08-29 18:14:00 UTC
           ]
         },
         computerVision: {
-          title: "Computer Vision GAN Projekt",
-          description: "Generative Adversarial Network zur Erstellung hochwertiger synthetischer Bilder mit benutzerdefinierter Konditionierung.",
+          title: "Hybrider Schachrätsel-Generator",
+          description: "Ein KI-System, das Datenanreicherung und ein conditional GAN kombiniert, um diverse, hochwertige taktische Schachrätsel aus ausgeglichenen Datensätzen zu generieren",
           overview: "Ein fortgeschrittenes Computer Vision Projekt, das Generative Adversarial Networks (GANs) nutzt, um fotorealistische synthetische Bilder mit präziser Kontrolle über verschiedene Attribute zu erstellen.",
           challenges: "Das Training stabiler GANs erforderte umfangreiche Experimente mit Architekturen und Hyperparametern. Die Verhinderung von Mode-Kollaps war eine primäre technische Hürde.",
           results: "Erfolgreiche Generierung von Bildern mit 256x256 Auflösung, die einen FID-Score von 15,2 erreichen und Baseline-Modelle um 23% übertreffen.",
@@ -17670,8 +17694,8 @@ Start: 2025-08-29 18:14:00 UTC
           ]
         },
         dataVisualization: {
-          title: "Interaktive Datenvisualisierungs-Suite",
-          description: "Umfassendes Datenvisualisierungs-Toolkit mit modernen Webtechnologien und erweiterten Diagrammbibliotheken.",
+          title: "Analytics-Dashboard für Erneuerbare Energien",
+          description: "Eine datengestützte Analyse globaler Trends erneuerbarer Energien, die Investitionen, Kapazität und Effizienz korreliert, um nachhaltige Geschäfts- und politische Entscheidungen zu leiten.",
           overview: "Eine mächtige und flexible Datenvisualisierungs-Suite, die komplexe Datensätze in intuitive, interaktive visuelle Darstellungen transformiert.",
           challenges: "Das Schaffen eines Gleichgewichts zwischen mächtiger Funktionalität und benutzerfreundlicher Oberfläche erforderte umfangreiche UX-Forschung.",
           results: "Lieferung einer Plattform mit 500+ täglichen aktiven Nutzern, die Datensätze bis zu 1M Datensätzen mit Sub-Sekunden-Rendering unterstützt.",
@@ -23119,8 +23143,8 @@ Inicio: 2025-08-29 18:14:00 UTC
       },
       items: {
         dataAnalytics: {
-          title: "Plataforma de Análisis de Datos con IA",
-          description: "Plataforma de análisis avanzada que utiliza PyTorch y React para insights de datos en tiempo real y modelado predictivo.",
+          title: "Motor de Pronóstico de Comidas Diarias",
+          description: "Un modelo de aprendizaje automático que predice la demanda de la cafetería analizando la asistencia a la oficina, la popularidad del menú y el clima para reducir el desperdicio de alimentos.",
           overview: "Esta plataforma integral de análisis de datos aprovecha el poder de la inteligencia artificial para transformar datos sin procesar en insights accionables. Construida con tecnologías de vanguardia, proporciona análisis en tiempo real, modelado predictivo y visualizaciones interactivas.",
           challenges: "Los principales desafíos incluyeron manejar el procesamiento de datos a gran escala en tiempo real, asegurar modelos predictivos precisos en conjuntos de datos diversos, y crear una interfaz intuitiva.",
           results: "Implementación exitosa de una plataforma que procesa más de 10TB de datos diariamente, proporcionando 99.9% de tiempo de actividad y reduciendo el tiempo de análisis en 75%.",
@@ -23134,8 +23158,8 @@ Inicio: 2025-08-29 18:14:00 UTC
           ]
         },
         nlpSentiment: {
-          title: "Motor de Análisis de Sentimientos NLP",
-          description: "Sistema de análisis de sentimientos multiidioma optimizado para dialectos y lenguas del Norte de África.",
+          title: "Motor de Pronóstico Multimodal para Mercados Financieros",
+          description: "MarketPulse es un motor de pronóstico de ensemble multimodal que fusiona indicadores técnicos y análisis de sentimiento impulsado por PNL para generar predicciones de precios de activos correlacionados y de alta fidelidad.",
           overview: "Un motor sofisticado de procesamiento de lenguaje natural diseñado específicamente para entender y analizar sentimientos en dialectos y lenguas del Norte de África.",
           challenges: "Desarrollar análisis de sentimientos preciso para dialectos norteafricanos requería investigación lingüística extensa y entrenamiento de modelos personalizados.",
           results: "Logró 87% de precisión para análisis de sentimientos en dialecto argelino, 92% para árabe estándar, y 89% para análisis de texto francés.",
@@ -23149,8 +23173,8 @@ Inicio: 2025-08-29 18:14:00 UTC
           ]
         },
         computerVision: {
-          title: "Proyecto GAN de Visión por Computadora",
-          description: "Red Generativa Adversarial para crear imágenes sintéticas de alta calidad con condicionamiento personalizado.",
+          title: "Generador Híbrido de Puzzles de Ajedrez",
+          description: " Un sistema de IA que combina aumento de datos y una GAN condicional para generar puzzles de ajedrez tácticos diversos y de alta calidad a partir de conjuntos de datos equilibrados.",
           overview: "Un proyecto avanzado de visión por computadora que utiliza Redes Generativas Adversariales (GANs) para crear imágenes sintéticas fotorrealistas con control preciso sobre varios atributos.",
           challenges: "Entrenar GANs estables requería experimentación extensa con arquitecturas e hiperparámetros. Prevenir el colapso de modo era un obstáculo técnico primario.",
           results: "Generación exitosa de imágenes con resolución 256x256 logrando puntaje FID de 15.2, superando modelos base por 23%.",
@@ -23164,8 +23188,8 @@ Inicio: 2025-08-29 18:14:00 UTC
           ]
         },
         dataVisualization: {
-          title: "Suite de Visualización de Datos Interactiva",
-          description: "Kit de herramientas integral de visualización de datos construido con tecnologías web modernas y bibliotecas de gráficos avanzadas.",
+          title: "Panel de Análisis de Energías Renovables",
+          description: " Un análisis basado en datos de las tendencias globales de energía renovable, que correlaciona inversión, capacidad y eficiencia para guiar decisiones empresariales y políticas sostenibles.",
           overview: "Una suite poderosa y flexible de visualización de datos que transforma conjuntos de datos complejos en representaciones visuales intuitivas e interactivas.",
           challenges: "Crear un equilibrio entre funcionalidad poderosa e interfaz amigable requería investigación UX extensa.",
           results: "Entrega de una plataforma sirviendo 500+ usuarios activos diarios, soportando conjuntos de datos hasta 1M registros con renderizado sub-segundo.",
@@ -26445,438 +26469,7 @@ if (puntuacion_ml > 0.3) {
           author: "المؤلف: nirdidev05",
           date: "التاريخ: 2025-08-29"
         },
-        code: `import pandas as pd
-import numpy as np
-from sklearn.model_selection import KFold
-from sklearn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.metrics import log_loss
-import tensorflow as tf
-from tensorflow.keras import layers, Model, callbacks
-import lightgbm as lgb
-import xgboost as xgb
-import catboost as cb
-import warnings
-warnings.filterwarnings('ignore')
-
-print("🧬 PROTEIN LOCALIZATION - PIPELINE FINAL OPTIMISÉ")
-print("=" * 60)
-print(f"Current User: {str('nirdidev05')}")
-print(f"Pipeline Start Time: 2025-08-29 18:14:00 UTC")
-
-class ProteinLocalizationPipeline:
-    """Pipeline complet optimisé basé sur tes excellents résultats"""
-    
-    def __init__(self):
-        self.num_classes = 5
-        self.class_names = ['Nucleus', 'Cytoplasm', 'Membrane', 'Cell membrane', 'Extracellular']
-        
-    def load_and_prepare_data(self):
-        """Chargement et préparation complète des données"""
-        print("\n📊 CHARGEMENT ET PRÉPARATION DES DONNÉES")
-        print("-" * 50)
-        
-        # Chargement
-        df_train = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_train.csv')
-        df_test = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/protein_test.csv')
-        df_embeddings = pd.read_csv('/kaggle/input/haick-25-protein-location-prediction-challenge/sequence_esm1b_mean_embeddings_df.csv')
-        
-        print(f"✅ Données chargées: Train {df_train.shape}, Test {df_test.shape}, Embeddings {df_embeddings.shape}")
-        
-        # Fusion
-        train_merged = df_train.merge(df_embeddings, on='sequence', how='left')
-        test_merged = df_test.merge(df_embeddings, on='sequence', how='left')
-        
-        # Feature Engineering
-        def engineer_features(df, is_train=True):
-            df = df.copy()
-            
-            # Features de base
-            df['seq_len_log'] = np.log1p(df['seq_len'])
-            df['seq_len_sqrt'] = np.sqrt(df['seq_len'])
-            df['seq_len_norm'] = df['seq_len'] / df['seq_len'].max()
-            
-            # Features catégorielles (comme int pour éviter le problème CatBoost)
-            df['is_short'] = (df['seq_len'] < 200).astype('int32')
-            df['is_medium'] = ((df['seq_len'] >= 200) & (df['seq_len'] <= 500)).astype('int32')
-            df['is_long'] = (df['seq_len'] > 1000).astype('int32')
-            
-            # Kingdom encoding
-            if is_train:
-                self.kingdom_encoder = LabelEncoder()
-                df['kingdom_enc'] = self.kingdom_encoder.fit_transform(df['Kingdom'].fillna('Unknown'))
-            else:
-                kingdoms = df['Kingdom'].fillna('Unknown')
-                known = set(self.kingdom_encoder.classes_)
-                kingdoms_mapped = [k if k in known else 'Unknown' for k in kingdoms]
-                df['kingdom_enc'] = self.kingdom_encoder.transform(kingdoms_mapped)
-            
-            # Kingdom one-hot (comme int32)
-            top_kingdoms = ['Metazoa', 'Viridiplantae', 'Fungi', 'Bacteria']
-            for kingdom in top_kingdoms:
-                df[f'is_{kingdom.lower()}'] = (df['Kingdom'] == kingdom).astype('int32')
-            
-            # Features d'interaction
-            df['len_kingdom'] = df['seq_len_norm'] * df['kingdom_enc']
-            
-            # Stats des embeddings
-            embed_cols = [f'mean_embeddings_{i}' for i in range(1, 101)]  # Premier 100
-            if all(col in df.columns for col in embed_cols):
-                embed_data = df[embed_cols].values
-                df['embed_mean'] = np.mean(embed_data, axis=1)
-                df['embed_std'] = np.std(embed_data, axis=1)
-                df['embed_max'] = np.max(embed_data, axis=1)
-                df['embed_min'] = np.min(embed_data, axis=1)
-            
-            return df
-        
-        # Application du feature engineering
-        train_processed = engineer_features(train_merged, is_train=True)
-        test_processed = engineer_features(test_merged, is_train=False)
-        
-        # Sélection des features
-        embedding_cols = [f'mean_embeddings_{i}' for i in range(1, 1281)]
-        engineered_cols = [
-            'seq_len_log', 'seq_len_sqrt', 'seq_len_norm', 'kingdom_enc',
-            'is_short', 'is_medium', 'is_long', 'len_kingdom',
-            'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria',
-            'embed_mean', 'embed_std', 'embed_max', 'embed_min'
-        ]
-        
-        feature_cols = embedding_cols + engineered_cols
-        feature_cols = [col for col in feature_cols if col in train_processed.columns]
-        
-        # Données finales
-        X_train = train_processed[feature_cols].fillna(0)
-        X_test = test_processed[feature_cols].fillna(0)
-        y_train = train_processed[self.class_names].values
-        
-        # Identification des features catégorielles par index
-        categorical_indices = []
-        for i, col in enumerate(feature_cols):
-            if col in ['kingdom_enc', 'is_short', 'is_medium', 'is_long', 
-                      'is_metazoa', 'is_viridiplantae', 'is_fungi', 'is_bacteria']:
-                categorical_indices.append(i)
-        
-        print(f"✅ Features finales: {len(feature_cols)}")
-        print(f"   - Embeddings: {len(embedding_cols)}")
-        print(f"   - Engineered: {len(engineered_cols)}")
-        print(f"   - Categorical indices: {len(categorical_indices)}")
-        print(f"✅ Labels multi-label: {y_train.shape}")
-        
-        return X_train, X_test, y_train, categorical_indices, feature_cols
-    
-    def train_models_fold(self, X_train_fold, y_train_fold, X_val_fold, y_val_fold, cat_indices):
-        """Entraîne tous les modèles sur un fold"""
-        results = {}
-        
-        # Conversion en numpy pour compatibilité
-        X_train_np = X_train_fold.values if hasattr(X_train_fold, 'values') else X_train_fold
-        X_val_np = X_val_fold.values if hasattr(X_val_fold, 'values') else X_val_fold
-        
-        # 1. DEEP NEURAL NETWORK
-        print("  🧠 DNN Training...")
-        
-        # Normalisation
-        scaler = StandardScaler()
-        X_train_scaled = scaler.fit_transform(X_train_np)
-        X_val_scaled = scaler.transform(X_val_np)
-        
-        # Architecture DNN optimisée
-        inputs = layers.Input(shape=(X_train_scaled.shape[1],))
-        x = layers.BatchNormalization()(inputs)
-        x = layers.Dense(1024, activation='relu')(x)
-        x = layers.Dropout(0.3)(x)
-        x = layers.BatchNormalization()(x)
-        x = layers.Dense(512, activation='relu')(x)
-        x = layers.Dropout(0.25)(x)
-        x = layers.Dense(256, activation='relu')(x)
-        x = layers.Dropout(0.2)(x)
-        x = layers.Dense(128, activation='relu')(x)
-        x = layers.Dropout(0.15)(x)
-        outputs = layers.Dense(self.num_classes, activation='sigmoid')(x)
-        
-        dnn_model = Model(inputs, outputs)
-        dnn_model.compile(
-            optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
-            loss='binary_crossentropy',
-            metrics=['binary_accuracy']
-        )
-        
-        # Callbacks
-        early_stop = callbacks.EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
-        lr_reduce = callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-6)
-        
-        # Entraînement
-        dnn_model.fit(
-            X_train_scaled, y_train_fold,
-            validation_data=(X_val_scaled, y_val_fold),
-            epochs=150, batch_size=64,
-            callbacks=[early_stop, lr_reduce],
-            verbose=0
-        )
-        
-        pred_dnn = dnn_model.predict(X_val_scaled, verbose=0)
-        pred_dnn = np.clip(pred_dnn, 1e-7, 1-1e-7)
-        score_dnn = log_loss(y_val_fold, pred_dnn)
-        results['dnn'] = {'score': score_dnn, 'predictions': pred_dnn}
-        print(f"     ✅ DNN: {score_dnn:.4f}")
-        
-        # 2. LIGHTGBM
-        print("  🌟 LightGBM Training...")
-        
-        lgb_params = {
-            'objective': 'binary',
-            'metric': 'binary_logloss',
-            'boosting_type': 'gbdt',
-            'num_leaves': 64,
-            'learning_rate': 0.05,
-            'feature_fraction': 0.8,
-            'bagging_fraction': 0.8,
-            'bagging_freq': 5,
-            'min_data_in_leaf': 20,
-            'lambda_l1': 0.1,
-            'lambda_l2': 0.1,
-            'verbose': -1,
-            'random_state': 42
-        }
-        
-        lgb_preds = []
-        for i in range(self.num_classes):
-            train_data = lgb.Dataset(X_train_np, label=y_train_fold[:, i])
-            val_data = lgb.Dataset(X_val_np, label=y_val_fold[:, i], reference=train_data)
-            
-            model = lgb.train(
-                lgb_params,
-                train_data,
-                valid_sets=[val_data],
-                num_boost_round=1000,
-                callbacks=[lgb.early_stopping(50), lgb.log_evaluation(0)]
-            )
-            
-            pred = model.predict(X_val_np, num_iteration=model.best_iteration)
-            lgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
-        
-        pred_lgb = np.column_stack(lgb_preds)
-        score_lgb = log_loss(y_val_fold, pred_lgb)
-        results['lgb'] = {'score': score_lgb, 'predictions': pred_lgb}
-        print(f"     ✅ LightGBM: {score_lgb:.4f}")
-        
-        # 3. XGBOOST
-        print("  🚀 XGBoost Training...")
-        
-        xgb_preds = []
-        for i in range(self.num_classes):
-            model = xgb.XGBClassifier(
-                objective='binary:logistic',
-                eval_metric='logloss',
-                max_depth=6,
-                learning_rate=0.05,
-                subsample=0.8,
-                colsample_bytree=0.8,
-                min_child_weight=3,
-                reg_alpha=0.1,
-                reg_lambda=0.1,
-                n_estimators=1000,
-                random_state=42,
-                n_jobs=-1,
-                tree_method='hist'
-            )
-            
-            model.fit(
-                X_train_np, y_train_fold[:, i],
-                eval_set=[(X_val_np, y_val_fold[:, i])],
-                early_stopping_rounds=50,
-                verbose=False
-            )
-            
-            pred = model.predict_proba(X_val_np)[:, 1]
-            xgb_preds.append(np.clip(pred, 1e-7, 1-1e-7))
-        
-        pred_xgb = np.column_stack(xgb_preds)
-        score_xgb = log_loss(y_val_fold, pred_xgb)
-        results['xgb'] = {'score': score_xgb, 'predictions': pred_xgb}
-        print(f"     ✅ XGBoost: {score_xgb:.4f}")
-        
-        # 4. CATBOOST (avec gestion correcte des features catégorielles)
-        print("  🐱 CatBoost Training...")
-        
-        try:
-            # Conversion explicite des colonnes catégorielles en int
-            X_train_cat = X_train_np.copy().astype(np.float32)
-            X_val_cat = X_val_np.copy().astype(np.float32)
-            
-            # Conversion des features catégorielles en int
-            for idx in cat_indices:
-                X_train_cat[:, idx] = X_train_cat[:, idx].astype(int)
-                X_val_cat[:, idx] = X_val_cat[:, idx].astype(int)
-            
-            catboost_preds = []
-            for i in range(self.num_classes):
-                train_pool = cb.Pool(
-                    X_train_cat,
-                    y_train_fold[:, i],
-                    cat_features=cat_indices
-                )
-                val_pool = cb.Pool(
-                    X_val_cat,
-                    y_val_fold[:, i],
-                    cat_features=cat_indices
-                )
-                
-                model = cb.CatBoostClassifier(
-                    loss_function='Logloss',
-                    eval_metric='Logloss',
-                    iterations=1000,
-                    learning_rate=0.05,
-                    depth=6,
-                    l2_leaf_reg=3,
-                    bootstrap_type='Bernoulli',
-                    subsample=0.8,
-                    random_seed=42,
-                    verbose=False,
-                    early_stopping_rounds=50
-                )
-                
-                model.fit(train_pool, eval_set=val_pool, use_best_model=True, plot=False)
-                pred = model.predict_proba(X_val_cat)[:, 1]
-                catboost_preds.append(np.clip(pred, 1e-7, 1-1e-7))
-            
-            pred_catboost = np.column_stack(catboost_preds)
-            score_catboost = log_loss(y_val_fold, pred_catboost)
-            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
-            print(f"     ✅ CatBoost: {score_catboost:.4f}")
-            
-        except Exception as e:
-            print(f"     ⚠️ CatBoost failed: {str(e)[:50]}...")
-            # Utiliser une prédiction dummy
-            pred_catboost = np.ones_like(y_val_fold) * 0.5
-            score_catboost = log_loss(y_val_fold, pred_catboost)
-            results['catboost'] = {'score': score_catboost, 'predictions': pred_catboost}
-        
-        # 5. ENSEMBLE
-        print("  🎭 Ensemble...")
-        
-        # Ensemble adaptatif selon les modèles disponibles
-        if results['catboost']['score'] < 2.0:  # CatBoost marche
-            ensemble_pred = (0.35 * results['dnn']['predictions'] +
-                           0.25 * results['lgb']['predictions'] +
-                           0.25 * results['xgb']['predictions'] +
-                           0.15 * results['catboost']['predictions'])
-        else:  # Sans CatBoost
-            ensemble_pred = (0.4 * results['dnn']['predictions'] +
-                           0.3 * results['lgb']['predictions'] +
-                           0.3 * results['xgb']['predictions'])
-        
-        ensemble_pred = np.clip(ensemble_pred, 1e-7, 1-1e-7)
-        score_ensemble = log_loss(y_val_fold, ensemble_pred)
-        results['ensemble'] = {'score': score_ensemble, 'predictions': ensemble_pred}
-        print(f"     🎭 Ensemble: {score_ensemble:.4f}")
-        
-        return results
-    
-    def run_cross_validation(self):
-        """Validation croisée complète 5-fold"""
-        print("🚀 DÉMARRAGE DU PIPELINE COMPLET")
-        print("=" * 60)
-        
-        # Préparation des données
-        X_train, X_test, y_train, cat_indices, feature_cols = self.load_and_prepare_data()
-        
-        # Validation croisée
-        kf = KFold(n_splits=5, shuffle=True, random_state=42)
-        fold_results = []
-        
-        print(f"\n🔄 VALIDATION CROISÉE 5-FOLD")
-        print("-" * 50)
-        
-        for fold, (train_idx, val_idx) in enumerate(kf.split(X_train)):
-            print(f"\n📁 FOLD {fold + 1}/5")
-            print("-" * 30)
-            
-            X_train_fold = X_train.iloc[train_idx]
-            X_val_fold = X_train.iloc[val_idx]
-            y_train_fold = y_train[train_idx]
-            y_val_fold = y_train[val_idx]
-            
-            print(f"Train: {X_train_fold.shape}, Val: {X_val_fold.shape}")
-            
-            # Entraînement des modèles
-            results = self.train_models_fold(
-                X_train_fold, y_train_fold,
-                X_val_fold, y_val_fold,
-                cat_indices
-            )
-            
-            fold_results.append({
-                'fold': fold + 1,
-                'results': results
-            })
-            
-            print(f"✅ Fold {fold + 1} terminé!")
-        
-        # Analyse des résultats
-        print(f"\n🏆 RÉSULTATS FINAUX - 5-FOLD CV")
-        print("=" * 60)
-        
-        model_names = ['dnn', 'lgb', 'xgb', 'catboost', 'ensemble']
-        final_scores = {}
-        
-        for model_name in model_names:
-            scores = [fold['results'][model_name]['score'] for fold in fold_results]
-            final_scores[model_name] = {
-                'mean': np.mean(scores),
-                'std': np.std(scores),
-                'scores': scores
-            }
-        
-        print(f"📊 Scores par modèle:")
-        for model_name, stats in final_scores.items():
-            print(f"   {model_name.upper()}: {stats['mean']:.4f} ± {stats['std']:.4f}")
-        
-        # Meilleur modèle
-        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
-        best_score = final_scores[best_model]['mean']
-        
-        print(f"\n🏆 MEILLEUR MODÈLE: {best_model.upper()}")
-        print(f"🎯 SCORE ATTENDU: {best_score:.4f}")
-        
-        print(f"\n📈 ANALYSE DE PERFORMANCE:")
-        print(f"   • Score compétitif: {'OUI' if best_score < 1.1 else 'MOYEN'}")
-        print(f"   • Stabilité: {'EXCELLENTE' if final_scores[best_model]['std'] < 0.02 else 'BONNE'}")
-        print(f"   • Position attendue: {'Top 30%' if best_score < 1.05 else 'Top 50%'}")
-        
-        return fold_results, final_scores, X_test, feature_cols
-
-# EXÉCUTION DU PIPELINE
-if __name__ == "__main__":
-    print(f"🚀 Starting Final Optimized Pipeline")
-    print(f"👤 User: nirdidev05")
-    print(f"⏰ Current Time: 2025-08-29 18:14:00 UTC")
-    
-    pipeline = ProteinLocalizationPipeline()
-    
-    try:
-        fold_results, final_scores, X_test, feature_cols = pipeline.run_cross_validation()
-        
-        print(f"\n🎉 PIPELINE TERMINÉ AVEC SUCCÈS!")
-        print(f"👤 User: nirdidev05")
-        print(f"⏰ Completed: 2025-08-29 18:14:00 UTC")
-        
-        # Recommandation finale
-        best_model = min(final_scores, key=lambda x: final_scores[x]['mean'])
-        print(f"\n💡 RECOMMANDATION FINALE:")
-        print(f"   Utiliser: {best_model.upper()} pour soumission")
-        print(f"   Score attendu: {final_scores[best_model]['mean']:.4f}")
-        
-        # Prêt pour génération des prédictions finales
-        print(f"\n📋 DONNÉES PRÊTES POUR SOUMISSION:")
-        print(f"   Test set: {X_test.shape}")
-        print(f"   Features: {len(feature_cols)}")
-        
-    except Exception as e:
-        print(f"❌ Erreur: {e}")
-        import traceback
-        traceback.print_exc()`
+        code: ``
       }
     },
 
@@ -27006,8 +26599,8 @@ if __name__ == "__main__":
       },
       items: {
         dataAnalytics: {
-          title: "منصة تحليل البيانات بالذكاء الاصطناعي",
-          description: "منصة تحليل متقدمة تستخدم PyTorch و React للحصول على رؤى البيانات في الوقت الفعلي والنمذجة التنبؤية.",
+          title: "محرك التنبؤ اليومي بالوجباتي",
+          description: "منصة تحليل متقدمة تستالوصف: نموذج تعلم آلي يتنبأ بطلب الكافتيريا من خلال تحليل الحضور في المكتب وشعبية القائمة والطقس لتقليل هدر الطعام.",
           overview: "تستفيد منصة تحليل البيانات الشاملة هذه من قوة الذكاء الاصطناعي لتحويل البيانات الخام إلى رؤى قابلة للتنفيذ. مبنية بتقنيات متطورة، توفر تحليلات في الوقت الفعلي ونمذجة تنبؤية وتصورات تفاعلية.",
           challenges: "تضمنت التحديات الرئيسية التعامل مع معالجة البيانات واسعة النطاق في الوقت الفعلي، وضمان نماذج تنبؤية دقيقة عبر مجموعات بيانات متنوعة، وإنشاء واجهة بديهية.",
           results: "نشر ناجح لمنصة تعالج أكثر من 10 تيرابايت من البيانات يومياً، توفر 99.9% من وقت التشغيل وتقلل وقت التحليل بنسبة 75%. النماذج التنبؤية حققت 94% دقة.",
@@ -27021,8 +26614,8 @@ if __name__ == "__main__":
           ]
         },
         nlpSentiment: {
-          title: "محرك تحليل المشاعر NLP",
-          description: "نظام تحليل مشاعر متعدد اللغات محسن للهجات واللغات الشمال أفريقية.",
+          title: "محرك التنبؤ متعدد الوسائط للأسواق المالية",
+          description: "(MarketPulse) هو محرك تنبؤ جماعي متعدد الوسائط يدمج المؤشرات الفنية وتحليل المشاعر المدعوم بمعالجة اللغة الطبيعية لتوليد تنبؤات عالية الدقة لأسعار الأصول المترابطة.",
           overview: "محرك متطور لمعالجة اللغات الطبيعية مصمم خصيصاً لفهم وتحليل المشاعر في اللهجات واللغات الشمال أفريقية.",
           challenges: "تطوير تحليل مشاعر دقيق للهجات الشمال أفريقية تطلب بحثاً لغوياً مكثفاً وتدريب نماذج مخصصة.",
           results: "حقق 87% دقة لتحليل مشاعر اللهجة الجزائرية، 92% للعربية المعيارية، و89% لتحليل النص الفرنسي.",
@@ -27036,8 +26629,8 @@ if __name__ == "__main__":
           ]
         },
         computerVision: {
-          title: "مشروع GAN للرؤية الحاسوبية",
-          description: "الشبكة التنافسية التوليدية لإنشاء صور اصطناعية عالية الجودة مع تكييف مخصص.",
+          title: "مُوَلِّد هجين لأحجيات الشطرنج",
+          description: "نظام ذكاء اصطناعي يجمع بين زيادة البيانات وشبكة خصومة توليدية شرطية (GAN) لتوليد أحجيات شطرنج تكتيكية متنوعة وعالية الجودة من مجموعات بيانات متوازنة.",
           overview: "مشروع رؤية حاسوبية متقدم يستخدم الشبكات التنافسية التوليدية (GANs) لإنشاء صور اصطناعية واقعية مع تحكم دقيق في مختلف السمات.",
           challenges: "تدريب GANs مستقرة تطلب تجريب مكثف مع الهياكل والمعاملات الفائقة. منع انهيار الوضع كان عقبة تقنية أساسية.",
           results: "إنشاء ناجح للصور بدقة 256x256 محققة نتيجة FID 15.2، متفوقة على النماذج الأساسية بنسبة 23%.",
@@ -27051,8 +26644,8 @@ if __name__ == "__main__":
           ]
         },
         dataVisualization: {
-          title: "مجموعة تصور البيانات التفاعلية",
-          description: "مجموعة أدوات شاملة لتصور البيانات مبنية بتقنيات الويب الحديثة ومكتبات الرسوم البيانية المتقدمة.",
+          title: "وحة تحليلات الطاقة المتجددة",
+          description: "تحليل قائم على البيانات للاتجاهات العالمية في الطاقة المتجددة، يربط بين الاستثمار والسعة والكفاءة لتوجيه القرارات التجارية والسياسية المستدامة.",
           overview: "مجموعة قوية ومرنة لتصور البيانات تحول مجموعات البيانات المعقدة إلى تمثيلات بصرية بديهية وتفاعلية.",
           challenges: "إنشاء توازن بين الوظائف القوية والواجهة سهلة الاستخدام تطلب بحث UX مكثف.",
           results: "تسليم منصة تخدم 500+ مستخدم نشط يومياً، تدعم مجموعات البيانات حتى مليون سجل مع عرض أقل من الثانية.",

@@ -11,7 +11,7 @@ const Projects = () => {
 
   const projects = useMemo(() => [
     {
-      id: "data-analytics",
+      id: "FORECASTER",
       title: t.projects.items.dataAnalytics.title,
       description: t.projects.items.dataAnalytics.description,
       tech: ["Python", "PyTorch", "React", "SQL"],
@@ -56,22 +56,22 @@ const Projects = () => {
       component: "WebScraping"
     },
     {
-      id: "blockchain-app",
-      title: "Blockchain DApp",
-      description: "Decentralized application built on Ethereum with smart contracts",
-      tech: ["Solidity", "Web3.js", "React", "Truffle"],
-      category: "Blockchain",
-      status: "In Progress",
-      component: "BlockchainApp"
+      id: "gpt-app",
+      title: t.projects.items.GPT.title,
+      description: t.projects.items.GPT.description,
+       tech: ["Python", "PyTorch", "Transformers", "CUDA", "Hugging Face", "TensorBoard"],
+  category: "AI/ML",
+  status: "In Progress",
+  component: "GPTCodeTracer"
     },
     {
-      id: "mobile-app",
-      title: "Cross-Platform Mobile App",
-      description: "React Native application with real-time chat and notifications",
-      tech: ["React Native", "Firebase", "Redux", "TypeScript"],
-      category: "Mobile",
+      id: "Protein",
+      title: t.projects.items.PROTEIN.title,
+      description: t.projects.items.PROTEIN.description,
+tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "Pandas"],
+      category: "Bioinformatics/ML",
       status: "Featured",
-      component: "MobileApp"
+      component: "Protein"
     },
     {
       id: "api-gateway",
@@ -117,7 +117,7 @@ const Projects = () => {
   const isValidProjectComponent = (component: string): boolean => {
     const allowedComponents = [
       'DataAnalytics', 'NLPSentiment', 'GAN', 'DataVisualization',
-      'WebScraping', 'BlockchainApp', 'MobileApp', 'APIGateway'
+      'WebScraping', 'GPTCodeTracer', 'Protein', 'APIGateway'
     ];
     return allowedComponents.includes(component);
   };

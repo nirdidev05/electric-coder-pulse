@@ -57,13 +57,13 @@ const ProjectDetail = () => {
   
   // Project mapping with security validation
   const projectComponents: Record<string, React.LazyExoticComponent<() => JSX.Element>> = {
-    'data-analytics': DataAnalytics,
+    'FORECASTER': DataAnalytics,
     'nlp-sentiment': NLPSentiment,
     'computer-vision': GAN,
     'data-visualization': DataVisualization,
     'web-scraping': WebScraping,
-    'blockchain-app': BlockchainApp,
-    'mobile-app': MobileApp,
+    'gpt-app': BlockchainApp,
+    'Protein': MobileApp,
     'api-gateway': APIGateway,
   };
   

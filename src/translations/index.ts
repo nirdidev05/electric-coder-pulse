@@ -102,6 +102,14 @@ export interface Translation {
         results: string;
         keyFeatures: string[];
       };
+       PROTEIN: {
+        title: string;
+        description: string;
+        overview: string;
+        challenges: string;
+        results: string;
+        keyFeatures: string[];
+      };
     };
   };
   
@@ -3373,6 +3381,22 @@ const translations: Record<string, Translation> = {
             "API integration for seamless data connectivity",
             "Role-based access control and data security"
           ]
+        },
+        PROTEIN:{
+            title: "Protein Subcellular Localization Prediction",
+  description: "A comprehensive machine learning pipeline combining ESM-1b protein embeddings with ensemble models to predict protein subcellular compartments from amino acid sequences.",
+  overview: "An advanced bioinformatics project that addresses the critical challenge of predicting where proteins reside within cells based solely on their amino acid sequences. This multi-label classification system leverages state-of-the-art protein language model embeddings (ESM-1b) combined with sophisticated feature engineering and ensemble methods. The project successfully handles the complex nature of protein localization, where proteins can exist in multiple cellular compartments simultaneously, achieving competitive performance through a balanced approach of deep learning and gradient boosting techniques.",
+  challenges: "The primary challenges included handling multi-label classification where proteins can belong to multiple subcellular compartments, addressing significant class imbalances (some classes representing only 11% of the dataset), managing domain shifts across different organism kingdoms (Metazoa, Fungi, Viridiplantae), and effectively utilizing high-dimensional protein embeddings (1,280 dimensions) while preventing overfitting. The complexity was further increased by the need to integrate sequence-based features with precomputed embeddings from protein language models.",
+  results: "Achieved ensemble model performance of ~0.94 log-loss across 5-fold cross-validation, outperforming individual models (DNN: ~1.02, LightGBM: ~0.98, XGBoost: ~1.00, CatBoost: ~0.95). The system successfully predicted protein localization across five compartments (Nucleus: 34%, Cytoplasm: 35%, Membrane: 31%, Cell membrane: 15%, Extracellular: 11%) with robust performance stability and competitive ranking potential in bioinformatics competitions.",
+  keyFeatures: [
+    "ESM-1b protein language model embeddings (1,280-dimensional vectors)",
+    "Multi-label classification supporting simultaneous compartment predictions",
+    "Ensemble approach combining neural networks and gradient boosting models",
+    "Advanced feature engineering including sequence statistics and kingdom encoding",
+    "Cross-validation framework with robust performance evaluation",
+    "Kingdom-aware modeling handling organism-specific localization patterns",
+    "Class imbalance handling through specialized loss functions"
+  ],
         },
         nlpSentiment: {
           title: "Multimodal Market Forecasting Engine",
@@ -9062,6 +9086,22 @@ if (ml_score > 0.3) {
             "Contrôle d'accès basé sur les rôles"
           ]
         },
+        PROTEIN: {
+          title: "Prédiction de Localisation Subcellulaire des Protéines",
+  description: "Un pipeline d'apprentissage automatique compréhensif combinant les embeddings protéiques ESM-1b avec des modèles d'ensemble pour prédire les compartiments subcellulaires des protéines à partir de séquences d'acides aminés.",
+  overview: "Un projet de bioinformatique avancé qui aborde le défi critique de prédire où les protéines résident dans les cellules basé uniquement sur leurs séquences d'acides aminés. Ce système de classification multi-étiquettes exploite les embeddings de modèles de langage protéique de pointe (ESM-1b) combinés avec de l'ingénierie de caractéristiques sophistiquée et des méthodes d'ensemble. Le projet gère avec succès la nature complexe de la localisation protéique, où les protéines peuvent exister dans plusieurs compartiments cellulaires simultanément, atteignant une performance compétitive grâce à une approche équilibrée d'apprentissage profond et de techniques de gradient boosting.",
+  challenges: "Les défis principaux incluaient la gestion de classification multi-étiquettes où les protéines peuvent appartenir à plusieurs compartiments subcellulaires, l'adresse des déséquilibres de classes significatifs (certaines classes représentant seulement 11% du dataset), la gestion des changements de domaine à travers différents royaumes d'organismes (Metazoa, Fungi, Viridiplantae), et l'utilisation efficace d'embeddings protéiques haute-dimensionnels (1 280 dimensions) tout en prévenant le surapprentissage. La complexité était encore augmentée par le besoin d'intégrer des caractéristiques basées sur la séquence avec des embeddings précomputés de modèles de langage protéique.",
+  results: "Atteint une performance de modèle d'ensemble de ~0.94 log-loss à travers une validation croisée 5-fold, surpassant les modèles individuels (DNN: ~1.02, LightGBM: ~0.98, XGBoost: ~1.00, CatBoost: ~0.95). Le système prédit avec succès la localisation protéique à travers cinq compartiments (Noyau: 34%, Cytoplasme: 35%, Membrane: 31%, Membrane cellulaire: 15%, Extracellulaire: 11%) avec une stabilité de performance robuste et un potentiel de classement compétitif dans les compétitions de bioinformatique.",
+  keyFeatures: [
+    "Embeddings de modèle de langage protéique ESM-1b (vecteurs 1 280-dimensionnels)",
+    "Classification multi-étiquettes supportant les prédictions de compartiments simultanées",
+    "Approche d'ensemble combinant réseaux de neurones et modèles de gradient boosting",
+    "Ingénierie de caractéristiques avancée incluant statistiques de séquence et encodage de royaume",
+    "Framework de validation croisée avec évaluation de performance robuste",
+    "Modélisation consciente du royaume gérant les patterns de localisation spécifiques aux organismes",
+    "Gestion de déséquilibre de classes à travers des fonctions de perte spécialisées"
+  ]
+        },
         nlpSentiment: {
           title: "Moteur de Prévision Multimodale pour Marchés Financiers",
           description: "MarketPulse est un moteur de prévision d'ensemble multimodal qui fusionne des indicateurs techniques et une analyse de sentiment basée sur le NLP pour générer des prédictions de prix d'actifs corrélées et de haute fidélité.",
@@ -9092,6 +9132,21 @@ if (ml_score > 0.3) {
             "Évaluation de qualité et filtrage automatique"
           ]
         },
+        GPT: {
+  title: "Traceur d'Exécution de Code avec GPT Personnalisé",
+  description: "Un modèle GPT spécialisé avec attention augmentée par mémoire et embeddings d'étapes d'exécution pour un traçage précis et étape par étape du code et le suivi des états.",
+  overview: "Un projet d'IA de pointe axé sur le développement d'un modèle de Transformateur Génératif Pré-entraîné (GPT) personnalisé, adapté au traçage d'exécution de code. Ce modèle intègre des techniques innovantes telles que l'attention augmentée par mémoire et les embeddings d'étapes d'exécution pour améliorer sa capacité à comprendre et prédire le flux d'exécution du code, en faisant un outil puissant pour les développeurs et chercheurs dans le domaine des langages de programmation et du développement logiciel.",
+  challenges: "Concevoir un modèle qui capture efficacement les dépendances à long terme dans le code tout en maintenant l'efficacité computationnelle était un défi significatif. Implémenter des mécanismes d'attention augmentée par mémoire et s'assurer que le modèle puisse généraliser à des extraits de code hors distribution a nécessité une expérimentation et un ajustement fin extensifs.",
+  results: "Atteint 92% de précision sur les tâches de traçage de code, surpassant les modèles GPT standard de 18%. Le modèle a démontré de fortes capacités de généralisation sur des structures de code non vues et a réduit le temps d'inférence de 30% grâce aux mécanismes d'attention optimisés.",
+  keyFeatures: [
+    "Attention augmentée par mémoire pour capturer les dépendances à long terme",
+    "Embeddings d'étapes d'exécution pour une meilleure compréhension du flux de code",
+    "Architecture de transformateur pré-normalisée pour la stabilité",
+    "Entraînement évolutif avec support multi-GPU",
+    "Capacités d'ajustement fin pour des langages de programmation spécifiques",
+    "Cadre d'évaluation robuste pour les performances hors distribution"
+  ]
+},
         dataVisualization: {
           title: "Tableau de Bord Analytique pour l'Énergie Renouvelable",
           description: "Une analyse basée sur les données des tendances mondiales de l'énergie renouvelable, corrélant investissement, capacité et efficacité pour orienter les décisions commerciales et politiques durables.",
@@ -17663,6 +17718,37 @@ Start: 2025-08-29 18:14:00 UTC
             "Rollenbasierte Zugriffskontrolle"
           ]
         },
+        PROTEIN:{
+title: "Vorhersage der Subzellulären Proteinlokalisation",
+  description: "Eine umfassende maschinelle Lernpipeline, die ESM-1b Protein-Embeddings mit Ensemble-Modellen kombiniert, um subzelluläre Proteinkompartimente aus Aminosäuresequenzen vorherzusagen.",
+  overview: "Ein fortgeschrittenes Bioinformatik-Projekt, das die kritische Herausforderung angeht, vorherzusagen, wo Proteine innerhalb von Zellen lokalisiert sind, basierend ausschließlich auf ihren Aminosäuresequenzen. Dieses Multi-Label-Klassifikationssystem nutzt modernste Protein-Sprachmodell-Embeddings (ESM-1b) kombiniert mit ausgeklügeltem Feature Engineering und Ensemble-Methoden. Das Projekt bewältigt erfolgreich die komplexe Natur der Proteinlokalisation, bei der Proteine gleichzeitig in mehreren zellulären Kompartimenten existieren können, und erreicht wettbewerbsfähige Leistung durch einen ausgewogenen Ansatz aus Deep Learning und Gradient Boosting Techniken.",
+  challenges: "Die primären Herausforderungen umfassten die Handhabung von Multi-Label-Klassifikation, bei der Proteine zu mehreren subzellulären Kompartimenten gehören können, die Behandlung erheblicher Klassenungleichgewichte (einige Klassen repräsentieren nur 11% des Datensatzes), das Management von Domain-Shifts über verschiedene Organismenkönigreiche (Metazoa, Fungi, Viridiplantae) und die effektive Nutzung hochdimensionaler Protein-Embeddings (1.280 Dimensionen) bei gleichzeitiger Vermeidung von Überanpassung. Die Komplexität wurde weiter erhöht durch die Notwendigkeit, sequenzbasierte Features mit vorberechneten Embeddings aus Protein-Sprachmodellen zu integrieren.",
+  results: "Erreichte Ensemble-Modell-Leistung von ~0.94 Log-Loss über 5-fache Kreuzvalidierung, übertraf individuelle Modelle (DNN: ~1.02, LightGBM: ~0.98, XGBoost: ~1.00, CatBoost: ~0.95). Das System sagte erfolgreich Proteinlokalisation über fünf Kompartimente vorher (Nucleus: 34%, Zytoplasma: 35%, Membran: 31%, Zellmembran: 15%, Extrazellulär: 11%) mit robuster Leistungsstabilität und wettbewerbsfähigem Ranking-Potenzial in Bioinformatik-Wettbewerben.",
+  keyFeatures: [
+    "ESM-1b Protein-Sprachmodell-Embeddings (1.280-dimensionale Vektoren)",
+    "Multi-Label-Klassifikation mit simultanen Kompartiment-Vorhersagen",
+    "Ensemble-Ansatz kombiniert neuronale Netzwerke und Gradient Boosting Modelle",
+    "Erweiterte Feature-Engineering einschließlich Sequenzstatistiken und Königreich-Kodierung",
+    "Kreuzvalidierungs-Framework mit robuster Leistungsevaluierung",
+    "Königreich-bewusste Modellierung für organismspezifische Lokalisationsmuster",
+    "Klassenungleichgewichts-Behandlung durch spezialisierte Verlustfunktionen"
+  ]
+        },
+        GPT: {
+  title: "Code-Ausführungs-Tracer mit benutzerdefiniertem GPT",
+  description: "Ein spezialisiertes GPT-Modell mit speicher-verstärkter Aufmerksamkeit und Ausführungsschritt-Embeddings für präzise, schrittweise Code-Verfolgung und Zustandsüberwachung.",
+  overview: "Ein hochmodernes KI-Projekt, das sich auf die Entwicklung eines benutzerdefinierten Generativen Vortrainierten Transformers (GPT) konzentriert, der für die Code-Ausführungsverfolgung maßgeschneidert ist. Dieses Modell integriert innovative Techniken wie speicher-verstärkte Aufmerksamkeit und Ausführungsschritt-Embeddings, um seine Fähigkeit zu verbessern, den Ausführungsfluss von Code zu verstehen und vorherzusagen, was es zu einem mächtigen Werkzeug für Entwickler und Forscher im Bereich der Programmiersprachen und Softwareentwicklung macht.",
+  challenges: "Ein Modell zu entwerfen, das langreichende Abhängigkeiten im Code effektiv erfasst und dabei die rechnerische Effizienz beibehält, war eine bedeutende Herausforderung. Die Implementierung von speicher-verstärkten Aufmerksamkeitsmechanismen und die Gewährleistung, dass das Modell auf außerhalb der Verteilung liegende Code-Snippets verallgemeinern kann, erforderte umfangreiche Experimente und Feinabstimmung.",
+  results: "Erreichte 92% Genauigkeit bei Code-Verfolgungsaufgaben und übertraf Standard-GPT-Modelle um 18%. Das Modell zeigte starke Verallgemeinerungsfähigkeiten bei ungesehenen Code-Strukturen und reduzierte die Inferenzzeit um 30% durch optimierte Aufmerksamkeitsmechanismen.",
+  keyFeatures: [
+    "Speicher-verstärkte Aufmerksamkeit für die Erfassung langreichender Abhängigkeiten",
+    "Ausführungsschritt-Embeddings für besseres Verständnis des Code-Flusses",
+    "Vornormalisierte Transformer-Architektur für Stabilität",
+    "Skalierbares Training mit Multi-GPU-Unterstützung",
+    "Feinabstimmungsfähigkeiten für spezifische Programmiersprachen",
+    "Robustes Evaluierungsframework für Leistung außerhalb der Verteilung"
+  ]
+},
         nlpSentiment: {
           title: "Multimodale Prognose-Engine für Finanzmärkte",
           description: "MarketPulse ist eine multimodale Ensemble-Prognose-Engine, die technische Indikatoren und NLP-gestützte Sentimentanalyse fusioniert, um korrelierte, hochpräzise Vermögenspreisprognosen zu generieren.",
@@ -23157,6 +23243,37 @@ Inicio: 2025-08-29 18:14:00 UTC
             "Control de acceso basado en roles"
           ]
         },
+        PROTEIN:{
+          title: "Predicción de Localización Subcelular de Proteínas",
+  description: "Un pipeline integral de aprendizaje automático que combina embeddings proteicos ESM-1b con modelos de ensemble para predecir compartimentos subcelulares de proteínas a partir de secuencias de aminoácidos.",
+  overview: "Un proyecto avanzado de bioinformática que aborda el desafío crítico de predecir dónde residen las proteínas dentro de las células basándose únicamente en sus secuencias de aminoácidos. Este sistema de clasificación multi-etiqueta aprovecha embeddings de modelos de lenguaje proteico de vanguardia (ESM-1b) combinados con ingeniería de características sofisticada y métodos de ensemble. El proyecto maneja exitosamente la naturaleza compleja de la localización proteica, donde las proteínas pueden existir en múltiples compartimentos celulares simultáneamente, logrando rendimiento competitivo a través de un enfoque equilibrado de aprendizaje profundo y técnicas de gradient boosting.",
+  challenges: "Los desafíos primarios incluyeron el manejo de clasificación multi-etiqueta donde las proteínas pueden pertenecer a múltiples compartimentos subcelulares, abordar desequilibrios de clase significativos (algunas clases representando solo el 11% del dataset), manejar cambios de dominio a través de diferentes reinos de organismos (Metazoa, Fungi, Viridiplantae), y utilizar efectivamente embeddings proteicos de alta dimensión (1,280 dimensiones) mientras se previene el sobreajuste. La complejidad se incrementó por la necesidad de integrar características basadas en secuencia con embeddings precomputados de modelos de lenguaje proteico.",
+  results: "Logró rendimiento de modelo ensemble de ~0.94 log-loss a través de validación cruzada de 5 pliegues, superando modelos individuales (DNN: ~1.02, LightGBM: ~0.98, XGBoost: ~1.00, CatBoost: ~0.95). El sistema predijo exitosamente localización proteica a través de cinco compartimentos (Núcleo: 34%, Citoplasma: 35%, Membrana: 31%, Membrana celular: 15%, Extracelular: 11%) con estabilidad de rendimiento robusta y potencial de ranking competitivo en competencias de bioinformática.",
+  keyFeatures: [
+    "Embeddings de modelo de lenguaje proteico ESM-1b (vectores de 1,280 dimensiones)",
+    "Clasificación multi-etiqueta soportando predicciones simultáneas de compartimentos",
+    "Enfoque de ensemble combinando redes neuronales y modelos de gradient boosting",
+    "Ingeniería de características avanzada incluyendo estadísticas de secuencia y codificación de reino",
+    "Framework de validación cruzada con evaluación robusta de rendimiento",
+    "Modelado consciente del reino manejando patrones de localización específicos del organismo",
+    "Manejo de desequilibrio de clases a través de funciones de pérdida especializadas"
+  ]
+        },
+        GPT: {
+  title: "Rastreador de Ejecución de Código con GPT Personalizado",
+  description: "Un modelo GPT especializado con atención aumentada por memoria e incrustaciones de pasos de ejecución para un rastreo preciso, paso a paso del código y seguimiento de estados.",
+  overview: "Un proyecto de IA de vanguardia enfocado en desarrollar un modelo de Transformador Generativo Pre-entrenado (GPT) personalizado, adaptado para el rastreo de ejecución de código. Este modelo incorpora técnicas innovadoras como mecanismos de atención aumentada por memoria e incrustaciones de pasos de ejecución para mejorar su capacidad de entender y predecir el flujo de ejecución del código, convirtiéndolo en una herramienta poderosa para desarrolladores e investigadores en el campo de lenguajes de programación y desarrollo de software.",
+  challenges: "Diseñar un modelo que capture efectivamente dependencias de largo alcance en el código mientras mantiene la eficiencia computacional fue un desafío significativo. Implementar mecanismos de atención aumentada por memoria y asegurar que el modelo pudiera generalizar a fragmentos de código fuera de distribución requirió experimentación extensa y ajuste fino.",
+  results: "Logró 92% de precisión en tareas de rastreo de código, superando a los modelos GPT estándar en un 18%. El modelo demostró fuertes capacidades de generalización en estructuras de código no vistas y redujo el tiempo de inferencia en un 30% a través de mecanismos de atención optimizados.",
+  keyFeatures: [
+    "Atención aumentada por memoria para captura de dependencias de largo alcance",
+    "Incrustaciones de pasos de ejecución para mejor comprensión del flujo de código",
+    "Arquitectura de transformador pre-normalizada para estabilidad",
+    "Entrenamiento escalable con soporte multi-GPU",
+    "Capacidades de ajuste fino para lenguajes de programación específicos",
+    "Marco de evaluación robusto para rendimiento fuera de distribución"
+  ]
+},
         nlpSentiment: {
           title: "Motor de Pronóstico Multimodal para Mercados Financieros",
           description: "MarketPulse es un motor de pronóstico de ensemble multimodal que fusiona indicadores técnicos y análisis de sentimiento impulsado por PNL para generar predicciones de precios de activos correlacionados y de alta fidelidad.",
@@ -26613,6 +26730,37 @@ if (puntuacion_ml > 0.3) {
             "التحكم في الوصول القائم على الأدوار"
           ]
         },
+        PROTEIN:{
+          title: "التنبؤ بالتوطين تحت الخلوي للبروتينات",
+  description: "خط أنابيب شامل للتعلم الآلي يجمع بين تضمينات البروتين ESM-1b ونماذج المجموعة للتنبؤ بالحجرات تحت الخلوية للبروتين من تسلسلات الأحماض الأمينية.",
+  overview: "مشروع متقدم في المعلوماتية الحيوية يتناول التحدي الحاسم للتنبؤ بمكان إقامة البروتينات داخل الخلايا بناءً فقط على تسلسلات الأحماض الأمينية الخاصة بها. يستفيد نظام التصنيف متعدد التسميات هذا من تضمينات نماذج لغة البروتين المتطورة (ESM-1b) مجتمعة مع هندسة الخصائص المتطورة وطرق المجموعة. يتعامل المشروع بنجاح مع الطبيعة المعقدة لتوطين البروتين، حيث يمكن للبروتينات أن توجد في حجرات خلوية متعددة في وقت واحد، محققاً أداءً تنافسياً من خلال نهج متوازن من التعلم العميق وتقنيات تعزيز التدرج.",
+  challenges: "شملت التحديات الأساسية التعامل مع التصنيف متعدد التسميات حيث يمكن للبروتينات أن تنتمي إلى حجرات تحت خلوية متعددة، ومعالجة عدم التوازن الكبير في الفئات (بعض الفئات تمثل 11% فقط من مجموعة البيانات)، وإدارة تحولات المجال عبر ممالك الكائنات الحية المختلفة (Metazoa, Fungi, Viridiplantae)، والاستخدام الفعال لتضمينات البروتين عالية الأبعاد (1,280 بُعد) مع منع الإفراط في التجهيز. تم زيادة التعقيد بسبب الحاجة إلى دمج الخصائص القائمة على التسلسل مع التضمينات المحسوبة مسبقاً من نماذج لغة البروتين.",
+  results: "حقق أداء نموذج المجموعة ~0.94 log-loss عبر التحقق المتقاطع 5-fold، متفوقاً على النماذج الفردية (DNN: ~1.02, LightGBM: ~0.98, XGBoost: ~1.00, CatBoost: ~0.95). تنبأ النظام بنجاح بتوطين البروتين عبر خمس حجرات (النواة: 34%، السيتوبلازم: 35%، الغشاء: 31%، غشاء الخلية: 15%، خارج الخلية: 11%) مع استقرار أداء قوي وإمكانية ترتيب تنافسية في مسابقات المعلوماتية الحيوية.",
+  keyFeatures: [
+    "تضمينات نموذج لغة البروتين ESM-1b (متجهات 1,280 بُعد)",
+    "تصنيف متعدد التسميات يدعم التنبؤات المتزامنة للحجرات",
+    "نهج المجموعة يجمع بين الشبكات العصبية ونماذج تعزيز التدرج",
+    "هندسة خصائص متقدمة تشمل إحصائيات التسلسل وترميز المملكة",
+    "إطار عمل التحقق المتقاطع مع تقييم أداء قوي",
+    "نمذجة واعية بالمملكة تتعامل مع أنماط التوطين الخاصة بالكائن الحي",
+    "معالجة عدم توازن الفئات من خلال دوال الخسارة المتخصصة"
+  ]
+        },
+        GPT: {
+  title: "متتبع تنفيذ الكود مع GPT مخصص",
+  description: "نموذج GPT متخصص مع انتباه معزز بالذاكرة وتضمينات خطوات التنفيذ لتتبع دقيق خطوة بخطوة للكود وتتبع الحالات.",
+  overview: "مشروع ذكاء اصطناعي متطور يركز على تطوير نموذج محول توليدي مُدرب مسبقاً (GPT) مخصص، مصمم خصيصاً لتتبع تنفيذ الكود. يدمج هذا النموذج تقنيات مبتكرة مثل آليات الانتباه المعززة بالذاكرة وتضمينات خطوات التنفيذ لتحسين قدرته على فهم والتنبؤ بتدفق تنفيذ الكود، مما يجعله أداة قوية للمطورين والباحثين في مجال لغات البرمجة وتطوير البرمجيات.",
+  challenges: "كان تصميم نموذج يلتقط بفعالية التبعيات طويلة المدى في الكود مع الحفاظ على الكفاءة الحاسوبية تحدياً كبيراً. تطبيق آليات الانتباه المعززة بالذاكرة وضمان قدرة النموذج على التعميم على مقاطع الكود خارج التوزيع تطلب تجارب واسعة وضبطاً دقيقاً.",
+  results: "حقق 92% دقة في مهام تتبع الكود، متفوقاً على نماذج GPT القياسية بنسبة 18%. أظهر النموذج قدرات تعميم قوية على هياكل الكود غير المرئية وقلل وقت الاستنتاج بنسبة 30% من خلال آليات الانتباه المحسنة.",
+  keyFeatures: [
+    "انتباه معزز بالذاكرة لالتقاط التبعيات طويلة المدى",
+    "تضمينات خطوات التنفيذ لفهم أفضل لتدفق الكود",
+    "بنية محول مُطبعة مسبقاً للاستقرار",
+    "تدريب قابل للتوسع مع دعم متعدد GPU",
+    "قدرات الضبط الدقيق للغات برمجة محددة",
+    "إطار تقييم قوي للأداء خارج التوزيع"
+  ]
+},
         nlpSentiment: {
           title: "محرك التنبؤ متعدد الوسائط للأسواق المالية",
           description: "(MarketPulse) هو محرك تنبؤ جماعي متعدد الوسائط يدمج المؤشرات الفنية وتحليل المشاعر المدعوم بمعالجة اللغة الطبيعية لتوليد تنبؤات عالية الدقة لأسعار الأصول المترابطة.",

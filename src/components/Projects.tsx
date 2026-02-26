@@ -74,13 +74,13 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
       component: "Protein"
     },
     {
-      id: "api-gateway",
-      title: "Microservices API Gateway",
-      description: "High-performance API gateway with load balancing and authentication",
-      tech: ["Node.js", "Express", "Redis", "Docker"],
-      category: "Backend",
-      status: "Completed",
-      component: "APIGateway"
+      id: "pfas-tracking",
+      title: "Tracking Forever Pollution: PFAS Knowledge Graph",
+      description: "Research project: Unification of 104 European datasets and MCDA risk scoring algorithm using Neo4j and Python",
+      tech: ["Python", "Neo4j", "Cypher", "Pandas", "ETL Pipeline", "MCDA"],
+      category: "Data Engineering",
+      status: "Featured",
+      component: "PFASTracking"
     }
   ], [t]);
 
@@ -117,7 +117,7 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
   const isValidProjectComponent = (component: string): boolean => {
     const allowedComponents = [
       'DataAnalytics', 'NLPSentiment', 'GAN', 'DataVisualization',
-      'WebScraping', 'GPTCodeTracer', 'Protein', 'APIGateway'
+      'WebScraping', 'GPTCodeTracer', 'Protein', 'PFASTracking'
     ];
     return allowedComponents.includes(component);
   };

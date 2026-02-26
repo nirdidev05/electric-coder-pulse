@@ -61,3 +61,48 @@
 .animate-grid {
   animation: subtle-shift 20s ease-in-out infinite;
 }
+/* Animations personnalisées pour le Hero PFAS */
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+/* Effet de scan pour les badges */
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Glow pulse pour les éléments critiques */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.6);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Transition fluide pour les compteurs */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s ease;
+}

@@ -10,7 +10,7 @@ const DataVisualization = lazy(() => import('./projects/DataVisualization'));
 const WebScraping = lazy(() => import('./projects/WebScraping'));
 const BlockchainApp = lazy(() => import('./projects/BlockchainApp'));
 const MobileApp = lazy(() => import('./projects/MobileApp'));
-const APIGateway = lazy(() => import('./projects/APIGateway'));
+const PFASTracking = lazy(() => import('./projects/PFAS/page'));
 
 // Loading component
 const ProjectLoader = () => (
@@ -64,7 +64,7 @@ const ProjectDetail = () => {
     'web-scraping': WebScraping,
     'gpt-app': BlockchainApp,
     'Protein': MobileApp,
-    'api-gateway': APIGateway,
+    'pfas-tracking': PFASTracking,
   };
   
   // Validate project ID

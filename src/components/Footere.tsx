@@ -4,6 +4,8 @@ import React from 'react';
 import { Brain, BookOpen, Code, Target } from "lucide-react"
 
 const Footer: React.FC = () => {
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
+
   const handleDocumentationDownload = () => {
     const link = document.createElement("a")
     link.href = "/Meal Count Forecasting Model for BNP Paribas Cafeteria.pdf"
@@ -34,6 +36,7 @@ const Footer: React.FC = () => {
               <span>•</span>
               <span>60+ engineered features</span>
             </p>
+            <p className="text-xs text-primary/80 mt-2 font-medium">{profileLine}</p>
           </div>
           <div className="flex gap-4">
             <button

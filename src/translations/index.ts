@@ -3317,9 +3317,9 @@ const translations: Record<string, Translation> = {
     hero: {
       greeting: "Hello, I'm",
       name: "Walid BENBOUTA",
-      title: "AI Engineer & Data Scientist",
+      title: "AI & Data Engineer | Data Scientist | AI Agents",
       me:"Crafting bold, responsible AI from raw data to real-world impact. With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.",
-      description: "Final-year student at ESI Algiers, majoring in Information Systems and data-driven technologies.",
+      description: "M1 student in Computer Science at Claude Bernard University and fresh graduate from the National Higher School of Computer Science (ESI Algiers).",
       getInTouch: "Get In Touch",
       downloadResume: "Download Resume"
     },
@@ -3329,20 +3329,20 @@ const translations: Record<string, Translation> = {
       subtitle: "Passionate about creating intelligent solutions that make a difference",
       journey: {
         title: "My Journey",
-        intro: "As a final-year student at the National Higher School of Computer Science (ESI Algiers), specializing in Information Systems, I've cultivated a passion for data that goes beyond theory.",
-        background: "From my early years, a strong background in mathematics and computer science shaped my analytical mindset — and ESI gave me the perfect playground to turn that curiosity into skill.",
-        foundation: "Over the years, I've built a solid foundation in databases, algorithms, and software engineering, reinforced by hands-on experience in data engineering and business intelligence. I've designed automated ETL pipelines, modeled data warehouses, built interactive dashboards with real-time KPIs, and integrated APIs to streamline decision-making across complex systems.",
-        focus: "My focus has always been clear: turn raw data into meaningful insight.",
-        professional: "Professionally, I contributed to impactful projects such as RNA — a platform enhancing commune management in Algeria — where I tackled large-scale data analysis and full-stack development. I've also led academic projects, including a zero-paper e-commerce solution, a hotel management system, and an e-tourism prototype, often working as a full-stack developer and data analyst.",
-        drive: "What drives me is the thrill of solving real-world problems with elegant, data-driven solutions. I don't just write code — I build intelligent systems that empower people to make smarter decisions. Whether it's optimizing queries for massive datasets or transforming scattered business data into clear visual stories, I bring rigor, creativity, and a commitment to excellence.",
-        aspiration: "I aspire to bridge the gap between traditional information systems and the transformative power of AI. With a hybrid profile in data engineering, machine learning, and system integration, I'm ready to help shape the next generation of intelligent organizations."
+        intro: "Currently advancing my expertise in the M1 Computer Science program at Université Claude Bernard Lyon 1, alongside my final year at the National Higher School of Computer Science (ESI Algiers), my journey is driven by a deep passion for data and intelligent systems.",
+        background: "With a strong foundation in mathematics and software engineering, my path naturally evolved from building traditional information systems to engineering AI-driven solutions that can reason, automate, and support better decisions.",
+        foundation: "Over the years, I built a solid data foundation: automated ETL pipelines, complex data warehouses, API integrations, real-time dashboards, and scalable end-to-end architectures shaped through projects like the RNA commune management platform and several full-stack applications.",
+        focus: "The 2025/2026 academic year marked my AI pivot: I moved from organizing data to extracting predictive, generative, and agentic value from it through Machine Learning, Image Analysis, Game Theory, and Multi-Agent Systems.",
+        professional: "I applied this shift through demanding academic work, including multi-agent negotiation simulations and advanced data projects under Angela Bonifati's guidance, while also preparing ERP infrastructure for AI integration with OCR and HR chatbot use cases during my final-year internship.",
+        drive: "What drives me is the thrill of solving real-world problems with elegant, data-driven solutions. I do not just write code; I build systems that connect data engineering, software architecture, and artificial intelligence into useful products.",
+        aspiration: "My ambition is to pursue an M2 in AI and keep building intelligent, autonomous systems that help organizations make smarter decisions with clarity, reliability, and measurable impact."
       },
       languages: {
         title: "Languages",
         items: ["Arabic", "French", "English"]
       },
       techStack: {
-        title: "Tech Stack"
+        title: "Tech Stack & Expertise"
       },
       specializations: {
         title: "Specializations",
@@ -9021,9 +9021,9 @@ if (ml_score > 0.3) {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Walid BENBOUTA",
-      title: "Ingénieur IA & Data Scientist",
+      title: "Ingénieur IA & Data | Data Scientist | Agents IA",
       me:"Je crée une IA audacieuse et responsable, à partir de données brutes et pour un impact concret. Fort de mon expertise en IA, science des données et apprentissage profond, je transforme les données en informations par l'exploration, la modélisation et le déploiement. Récompensé lors des plus grands concours algériens, je construis des systèmes intelligents qui parlent, pensent et résolvent des problèmes.",
-      description: "Étudiant en dernière année à l'ESI Alger, spécialisé en Systèmes d'Information et technologies axées sur les données.",
+      description: "Étudiant en M1 Informatique à l'Université Claude Bernard et fraîchement diplômé de l'École Nationale Supérieure d'Informatique (ESI Alger).",
       getInTouch: "Contactez-moi",
       downloadResume: "Télécharger CV"
     },
@@ -9033,20 +9033,20 @@ if (ml_score > 0.3) {
       subtitle: "Passionné par la création de solutions intelligentes qui font la différence",
       journey: {
         title: "Mon Parcours",
-        intro: "En tant qu'étudiant en dernière année à l'École Nationale Supérieure d'Informatique (ESI Alger), spécialisé en Systèmes d'Information, j'ai cultivé une passion pour les données qui va au-delà de la théorie.",
-        background: "Depuis mes premières années, une solide formation en mathématiques et informatique a façonné mon esprit analytique — et ESI m'a donné le terrain de jeu parfait pour transformer cette curiosité en compétence.",
-        foundation: "Au fil des années, j'ai construit une base solide en bases de données, algorithmes et génie logiciel, renforcée par une expérience pratique en ingénierie des données et intelligence d'affaires. J'ai conçu des pipelines ETL automatisés, modélisé des entrepôts de données, créé des tableaux de bord interactifs avec des KPI en temps réel, et intégré des API pour rationaliser la prise de décision dans des systèmes complexes.",
-        focus: "Mon objectif a toujours été clair : transformer les données brutes en insights significatifs.",
-        professional: "Professionnellement, j'ai contribué à des projets impactants comme RNA — une plateforme améliorant la gestion communale en Algérie — où j'ai abordé l'analyse de données à grande échelle et le développement full-stack. J'ai également dirigé des projets académiques, notamment une solution e-commerce zéro papier, un système de gestion hôtelière et un prototype e-tourisme, travaillant souvent comme développeur full-stack et analyste de données.",
-        drive: "Ce qui me motive, c'est le frisson de résoudre des problèmes du monde réel avec des solutions élégantes basées sur les données. Je n'écris pas seulement du code — je construis des systèmes intelligents qui permettent aux gens de prendre des décisions plus intelligentes. Qu'il s'agisse d'optimiser des requêtes pour des jeux de données massifs ou de transformer des données d'entreprise dispersées en histoires visuelles claires, j'apporte rigueur, créativité et engagement envers l'excellence.",
-        aspiration: "J'aspire à combler le fossé entre les systèmes d'information traditionnels et le pouvoir transformateur de l'IA. Avec un profil hybride en ingénierie des données, apprentissage automatique et intégration de systèmes, je suis prêt à aider à façonner la prochaine génération d'organisations intelligentes."
+        intro: "Je développe actuellement mon expertise en M1 Informatique à l'Université Claude Bernard Lyon 1, en parallèle de ma dernière année à l'École Nationale Supérieure d'Informatique (ESI Alger), avec une passion profonde pour les données et les systèmes intelligents.",
+        background: "Grâce à une base solide en mathématiques et en génie logiciel, mon parcours a naturellement évolué de la construction de systèmes d'information classiques vers l'ingénierie de solutions pilotées par l'IA, capables de raisonner, d'automatiser et d'aider à décider.",
+        foundation: "Au fil des années, j'ai construit une base data robuste : pipelines ETL automatisés, entrepôts de données complexes, intégrations API, tableaux de bord temps réel et architectures end-to-end scalables, notamment à travers la plateforme RNA de gestion communale et plusieurs applications full-stack.",
+        focus: "L'année académique 2025/2026 marque mon pivot vers l'IA : je suis passé de l'organisation des données à l'extraction de valeur prédictive, générative et agentique grâce au Machine Learning, à l'analyse d'images, à la théorie des jeux et aux systèmes multi-agents.",
+        professional: "J'ai appliqué cette transition dans des travaux académiques exigeants, comme des simulations de négociation multi-agents et des projets data avancés encadrés par Angela Bonifati, tout en préparant une infrastructure ERP à l'intégration IA avec des cas d'usage OCR et chatbot RH durant mon stage de fin d'études.",
+        drive: "Ce qui me motive, c'est le plaisir de résoudre des problèmes réels avec des solutions élégantes et guidées par les données. Je n'écris pas seulement du code ; je construis des systèmes qui relient data engineering, architecture logicielle et intelligence artificielle dans des produits utiles.",
+        aspiration: "Mon ambition est de poursuivre en M2 IA et de continuer à construire des systèmes intelligents et autonomes qui aident les organisations à prendre de meilleures décisions avec clarté, fiabilité et impact mesurable."
       },
       languages: {
         title: "Langues",
         items: ["Arabe", "Français", "Anglais"]
       },
       techStack: {
-        title: "Stack Technique"
+        title: "Stack Technique & Expertise"
       },
       specializations: {
         title: "Spécialisations",
@@ -16037,9 +16037,9 @@ Start: 2025-08-29 18:14:00 UTC
     hero: {
       greeting: "Hallo, ich bin",
       name: "Walid BENBOUTA", 
-      title: "KI-Ingenieur & Data Scientist",
+      title: "KI- und Daten-Ingenieur | Data Scientist | KI-Agenten",
       me:"Ich habe eine kühne und verantwortungsbewusste IA geschaffen, die aus rohen Menschen besteht und einen stoßfesten Beton ausgießt. Ich verfüge über mein Fachwissen in IA, die Wissensvermittlung und die umfassende Ausbildung, ich wandele die Daten in Informationen für die Erkundung, die Modellierung und den Einsatz um. Für mehr als 100.000 Teilnehmer in Algerien wurden die intelligenten Systeme, mit denen ich gesprochen habe, konstruiert, nachgedacht und die Probleme gelöst.",
-      description: "Student im letzten Jahr an der ESI Algier mit Schwerpunkt auf Informationssysteme und datengetriebene Technologien.",
+      description: "Masterstudent (M1) in Informatik an der Universität Claude Bernard und frischgebackener Absolvent der Nationalen Hochschule für Informatik (ESI Algier).",
       getInTouch: "Kontakt aufnehmen",
       downloadResume: "Lebenslauf herunterladen"
     },
@@ -16049,20 +16049,20 @@ Start: 2025-08-29 18:14:00 UTC
       subtitle: "Leidenschaftlich über die Erschaffung intelligenter Lösungen, die einen Unterschied machen",
       journey: {
         title: "Mein Werdegang",
-        intro: "Als Absolvent der Nationalen Höheren Schule für Informatik (ESI Algier) mit Spezialisierung auf Informationssysteme habe ich eine Leidenschaft für Daten entwickelt, die über die Theorie hinausgeht.",
-        background: "Von frühen Jahren an prägten eine starke Grundlage in Mathematik und Informatik meine analytische Denkweise — und ESI gab mir den perfekten Spielplatz, um diese Neugier in Fähigkeiten umzuwandeln.",
-        foundation: "Über die Jahre habe ich eine solide Grundlage in Datenbanken, Algorithmen und Software-Engineering aufgebaut, verstärkt durch praktische Erfahrung in Data Engineering und Business Intelligence. Ich habe automatisierte ETL-Pipelines entworfen, Data Warehouses modelliert, interaktive Dashboards mit Echtzeit-KPIs erstellt und APIs integriert, um die Entscheidungsfindung in komplexen Systemen zu rationalisieren.",
-        focus: "Mein Fokus war immer klar: rohe Daten in bedeutungsvolle Erkenntnisse umwandeln.",
-        professional: "Beruflich habe ich zu wirkungsvollen Projekten wie RNA beigetragen — einer Plattform zur Verbesserung der Gemeindeverwaltung in Algerien — wo ich großskalige Datenanalyse und Full-Stack-Entwicklung anging. Ich habe auch akademische Projekte geleitet, einschließlich einer papierlosen E-Commerce-Lösung, eines Hotelmanagementsystems und eines E-Tourismus-Prototyps, oft als Full-Stack-Entwickler und Datenanalyst arbeitend.",
-        drive: "Was mich antreibt, ist der Nervenkitzel, reale Probleme mit eleganten, datengetriebenen Lösungen zu lösen. Ich schreibe nicht nur Code — ich baue intelligente Systeme, die Menschen befähigen, intelligentere Entscheidungen zu treffen. Ob es um die Optimierung von Abfragen für massive Datensätze oder die Transformation verstreuter Geschäftsdaten in klare visuelle Geschichten geht, ich bringe Rigorosität, Kreativität und ein Engagement für Exzellenz mit.",
-        aspiration: "Ich strebe danach, die Lücke zwischen traditionellen Informationssystemen und der transformativen Kraft der KI zu schließen. Mit einem hybriden Profil in Data Engineering, maschinellem Lernen und Systemintegration bin ich bereit, dabei zu helfen, die nächste Generation intelligenter Organisationen zu formen."
+        intro: "Derzeit vertiefe ich meine Expertise im M1-Studiengang Informatik an der Université Claude Bernard Lyon 1, parallel zu meinem Abschlussjahr an der Nationalen Höheren Schule für Informatik (ESI Algier), getragen von einer starken Leidenschaft für Daten und intelligente Systeme.",
+        background: "Mit einer soliden Grundlage in Mathematik und Software Engineering hat sich mein Weg natürlich von klassischen Informationssystemen hin zu KI-gestützten Lösungen entwickelt, die schlussfolgern, automatisieren und bessere Entscheidungen unterstützen können.",
+        foundation: "Über die Jahre habe ich eine robuste Datengrundlage aufgebaut: automatisierte ETL-Pipelines, komplexe Data Warehouses, API-Integrationen, Echtzeit-Dashboards und skalierbare End-to-End-Architekturen, geprägt durch Projekte wie die RNA-Plattform für Gemeindeverwaltung und mehrere Full-Stack-Anwendungen.",
+        focus: "Das akademische Jahr 2025/2026 markiert meinen KI-Pivot: Ich wechselte vom Organisieren von Daten zur Gewinnung prädiktiver, generativer und agentischer Werte durch Machine Learning, Bildanalyse, Spieltheorie und Multi-Agenten-Systeme.",
+        professional: "Diesen Wandel habe ich in anspruchsvollen akademischen Arbeiten angewendet, darunter Multi-Agenten-Verhandlungssimulationen und fortgeschrittene Datenprojekte unter der Betreuung von Angela Bonifati, sowie bei der Vorbereitung einer ERP-Infrastruktur für KI-Integration mit OCR- und HR-Chatbot-Anwendungsfällen während meines Abschlusspraktikums.",
+        drive: "Was mich antreibt, ist die Freude daran, reale Probleme mit eleganten, datengetriebenen Lösungen zu lösen. Ich schreibe nicht nur Code; ich baue Systeme, die Data Engineering, Softwarearchitektur und künstliche Intelligenz zu nützlichen Produkten verbinden.",
+        aspiration: "Mein Ziel ist es, ein M2 in KI zu verfolgen und weiterhin intelligente, autonome Systeme zu entwickeln, die Organisationen dabei helfen, klarere, zuverlässigere und messbar wirksamere Entscheidungen zu treffen."
       },
       languages: {
         title: "Sprachen",
         items: ["Arabisch", "Französisch", "Englisch"]
       },
       techStack: {
-        title: "Tech Stack"
+        title: "Tech Stack & Expertise"
       },
       specializations: {
         title: "Spezialisierungen",
@@ -23178,9 +23178,9 @@ Inicio: 2025-08-29 18:14:00 UTC
     hero: {
       greeting: "Hola, soy",
       name: "Walid BENBOUTA",
-      title: "Ingeniero de IA & Científico de Datos",
+      title: "Ingeniero de IA y Datos | Científico de Datos | Agentes de IA",
       me:"Creo IA audaz y responsable a partir de datos sin procesar para lograr un impacto concreto. Basándome en mi experiencia en IA, ciencia de datos y aprendizaje profundo, transformo los datos en conocimiento mediante la exploración, el modelado y la implementación. Tras haber ganado premios en importantes competiciones argelinas, construyo sistemas inteligentes que hablan, piensan y resuelven problemas.",
-      description: "Estudiante de último año en ESI Argel, especializado en Sistemas de Información y tecnologías basadas en datos.",
+      description: "Estudiante de primer año de máster (M1) en Informática en la Universidad Claude Bernard y recién graduado de la Escuela Nacional Superior de Informática (ESI Argel).",
       getInTouch: "Contactar",
       downloadResume: "Descargar CV"
     },
@@ -23190,20 +23190,20 @@ Inicio: 2025-08-29 18:14:00 UTC
       subtitle: "Apasionado por crear soluciones inteligentes que marcan la diferencia",
       journey: {
         title: "Mi Trayectoria",
-        intro: "Como estudiante de último año en la Escuela Nacional Superior de Informática (ESI Argel), especializándome en Sistemas de Información, he cultivado una pasión por los datos que va más allá de la teoría.",
-        background: "Desde mis primeros años, una sólida formación en matemáticas e informática moldeó mi mentalidad analítica — y ESI me dio el campo de juego perfecto para convertir esa curiosidad en habilidad.",
-        foundation: "A lo largo de los años, he construido una base sólida en bases de datos, algoritmos e ingeniería de software, reforzada por experiencia práctica en ingeniería de datos e inteligencia de negocios. He diseñado pipelines ETL automatizados, modelado almacenes de datos, construido dashboards interactivos con KPIs en tiempo real, e integrado APIs para optimizar la toma de decisiones en sistemas complejos.",
-        focus: "Mi enfoque siempre ha sido claro: convertir datos en bruto en insights significativos.",
-        professional: "Profesionalmente, contribuí a proyectos impactantes como RNA — una plataforma que mejora la gestión comunal en Argelia — donde abordé análisis de datos a gran escala y desarrollo full-stack. También he liderado proyectos académicos, incluyendo una solución de comercio electrónico sin papel, un sistema de gestión hotelera y un prototipo de e-turismo, trabajando a menudo como desarrollador full-stack y analista de datos.",
-        drive: "Lo que me impulsa es la emoción de resolver problemas del mundo real con soluciones elegantes basadas en datos. No solo escribo código — construyo sistemas inteligentes que empoderan a las personas para tomar decisiones más inteligentes. Ya sea optimizando consultas para conjuntos de datos masivos o transformando datos empresariales dispersos en historias visuales claras, aporto rigor, creatividad y compromiso con la excelencia.",
-        aspiration: "Aspiro a cerrar la brecha entre los sistemas de información tradicionales y el poder transformador de la IA. Con un perfil híbrido en ingeniería de datos, aprendizaje automático e integración de sistemas, estoy listo para ayudar a dar forma a la próxima generación de organizaciones inteligentes."
+        intro: "Actualmente profundizo mi experiencia en el programa M1 de Informática en la Université Claude Bernard Lyon 1, junto con mi último año en la Escuela Nacional Superior de Informática (ESI Argel), guiado por una profunda pasión por los datos y los sistemas inteligentes.",
+        background: "Con una sólida base en matemáticas e ingeniería de software, mi camino evolucionó naturalmente desde la construcción de sistemas de información tradicionales hacia la ingeniería de soluciones impulsadas por IA que razonan, automatizan y apoyan mejores decisiones.",
+        foundation: "A lo largo de los años, construí una base de datos robusta: pipelines ETL automatizados, almacenes de datos complejos, integraciones API, dashboards en tiempo real y arquitecturas escalables de extremo a extremo, especialmente mediante la plataforma RNA de gestión comunal y varias aplicaciones full-stack.",
+        focus: "El año académico 2025/2026 marcó mi pivote hacia la IA: pasé de organizar datos a extraer valor predictivo, generativo y agéntico mediante Machine Learning, análisis de imágenes, teoría de juegos y sistemas multiagente.",
+        professional: "Apliqué esta transición en trabajos académicos exigentes, como simulaciones de negociación multiagente y proyectos avanzados de datos bajo la guía de Angela Bonifati, además de preparar una infraestructura ERP para integración de IA con casos de uso OCR y chatbots de RR. HH. durante mi práctica de fin de estudios.",
+        drive: "Lo que me impulsa es resolver problemas reales con soluciones elegantes basadas en datos. No solo escribo código; construyo sistemas que conectan ingeniería de datos, arquitectura de software e inteligencia artificial en productos útiles.",
+        aspiration: "Mi ambición es continuar hacia un M2 en IA y seguir construyendo sistemas inteligentes y autónomos que ayuden a las organizaciones a tomar decisiones más claras, fiables y con impacto medible."
       },
       languages: {
         title: "Idiomas",
         items: ["Árabe", "Francés", "Inglés"]
       },
       techStack: {
-        title: "Stack Técnico"
+        title: "Stack Técnico & Experiencia"
       },
       specializations: {
         title: "Especializaciones",
@@ -26665,9 +26665,9 @@ if (puntuacion_ml > 0.3) {
     hero: {
       greeting: "مرحباً، أنا",
       name: "وليد بن بوتة",
-      title: "مهندس ذكاء اصطناعي وعالم بيانات",
+      title: "مهندس ذكاء اصطناعي وبيانات | عالم بيانات | وكلاء الذكاء الاصطناعي",
       me:"أُنشئ ذكاءً اصطناعيًا جريئًا ومسؤولًا من البيانات الخام لتحقيق تأثير ملموس. بالاعتماد على خبرتي في الذكاء الاصطناعي وعلوم البيانات والتعلم العميق، أُحوّل البيانات إلى معرفة من خلال الاستكشاف والنمذجة والتطبيق. بعد فوزي بجوائز في مسابقات جزائرية كبرى، أبني أنظمة ذكية تتحدث وتفكر وتحل المشكلات.",
-      description: "طالب في السنة النهائية بالمدرسة العليا للإعلام الآلي بالجزائر، متخصص في نظم المعلومات والتقنيات القائمة على البيانات.",
+      description: "طالب سنة أولى ماستر (M1) في الإعلام الآلي بجامعة كلود برنارد، وخريج حديث من المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر).",
       getInTouch: "تواصل معي",
       downloadResume: "تحميل السيرة الذاتية"
     },
@@ -26677,20 +26677,20 @@ if (puntuacion_ml > 0.3) {
       subtitle: "شغوف بإنشاء حلول ذكية تحدث فرقاً",
       journey: {
         title: "رحلتي",
-        intro: "كطالب في السنة الأخيرة في المدرسة العليا الوطنية للإعلام الآلي (ESI الجزائر)، متخصص في أنظمة المعلومات، طورت شغفاً بالبيانات يتجاوز النظرية.",
-        background: "منذ سنواتي الأولى، شكلت خلفية قوية في الرياضيات وعلوم الحاسوب عقليتي التحليلية — و ESI أعطتني الساحة المثالية لتحويل هذا الفضول إلى مهارة.",
-        foundation: "على مر السنين، بنيت أساساً قوياً في قواعد البيانات والخوارزميات وهندسة البرمجيات، معززاً بخبرة عملية في هندسة البيانات وذكاء الأعمال. صممت خطوط أنابيب ETL آلية، ونمذجت مستودعات البيانات، وبنيت لوحات تحكم تفاعلية مع مؤشرات الأداء الرئيسية في الوقت الفعلي، ودمجت واجهات برمجة التطبيقات لتبسيط اتخاذ القرارات عبر الأنظمة المعقدة.",
-        focus: "تركيزي كان واضحاً دائماً: تحويل البيانات الخام إلى رؤى ذات معنى.",
-        professional: "مهنياً، ساهمت في مشاريع مؤثرة مثل RNA — منصة تعزز إدارة البلديات في الجزائر — حيث تعاملت مع تحليل البيانات على نطاق واسع والتطوير الشامل. كما قدت مشاريع أكاديمية، بما في ذلك حل التجارة الإلكترونية بدون ورق، ونظام إدارة الفنادق، ونموذج أولي للسياحة الإلكترونية، غالباً ما أعمل كمطور شامل ومحلل بيانات.",
-        drive: "ما يحفزني هو إثارة حل مشاكل العالم الحقيقي بحلول أنيقة مدفوعة بالبيانات. لا أكتب الكود فقط — أبني أنظمة ذكية تمكن الناس من اتخاذ قرارات أذكى. سواء كان الأمر يتعلق بتحسين الاستعلامات لمجموعات البيانات الضخمة أو تحويل بيانات الأعمال المتناثرة إلى قصص بصرية واضحة، أحضر الصرامة والإبداع والالتزام بالتميز.",
-        aspiration: "أطمح إلى سد الفجوة بين أنظمة المعلومات التقليدية والقوة التحويلية للذكاء الاصطناعي. مع ملف شخصي مختلط في هندسة البيانات والتعلم الآلي وتكامل الأنظمة، أنا مستعد للمساعدة في تشكيل الجيل القادم من المنظمات الذكية."
+        intro: "أعمل حالياً على تطوير خبرتي في السنة الأولى ماستر إعلام آلي بجامعة كلود برنارد ليون 1، بالتوازي مع سنتي الأخيرة في المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر)، بدافع شغف عميق بالبيانات والأنظمة الذكية.",
+        background: "بفضل قاعدة قوية في الرياضيات وهندسة البرمجيات، تطور مساري بشكل طبيعي من بناء أنظمة معلومات تقليدية إلى هندسة حلول مدعومة بالذكاء الاصطناعي قادرة على الاستدلال والأتمتة ودعم قرارات أفضل.",
+        foundation: "على مر السنين، بنيت أساساً قوياً في البيانات: خطوط ETL آلية، مستودعات بيانات معقدة، تكاملات API، لوحات قيادة في الوقت الحقيقي، ومعماريات قابلة للتوسع من البداية إلى النهاية، خاصة عبر منصة RNA لإدارة البلديات وتطبيقات Full-Stack متعددة.",
+        focus: "شكّلت السنة الأكاديمية 2025/2026 نقطة تحول نحو الذكاء الاصطناعي: انتقلت من تنظيم البيانات إلى استخراج قيمة تنبؤية وتوليدية ووكيلة منها عبر التعلم الآلي، تحليل الصور، نظرية الألعاب، والأنظمة متعددة الوكلاء.",
+        professional: "طبقت هذا التحول في أعمال أكاديمية متقدمة، مثل محاكاة التفاوض بين الوكلاء ومشاريع بيانات متقدمة تحت إشراف Angela Bonifati، إلى جانب تحضير بنية ERP لدمج الذكاء الاصطناعي من خلال حالات استخدام OCR وروبوتات محادثة للموارد البشرية خلال تربصي النهائي.",
+        drive: "ما يدفعني هو حل مشاكل حقيقية بحلول أنيقة قائمة على البيانات. أنا لا أكتب الكود فقط؛ بل أبني أنظمة تربط هندسة البيانات، معمارية البرمجيات، والذكاء الاصطناعي داخل منتجات مفيدة.",
+        aspiration: "طموحي هو متابعة M2 في الذكاء الاصطناعي والاستمرار في بناء أنظمة ذكية ومستقلة تساعد المؤسسات على اتخاذ قرارات أوضح وأكثر موثوقية وذات أثر قابل للقياس."
       },
       languages: {
         title: "اللغات",
         items: ["العربية", "الفرنسية", "الإنجليزية"]
       },
       techStack: {
-        title: "المكدس التقني"
+        title: "المكدس التقني والخبرة"
       },
       specializations: {
         title: "التخصصات",

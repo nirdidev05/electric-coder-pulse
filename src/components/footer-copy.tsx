@@ -4,6 +4,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 export function Footer() {
   const t = useTranslation();
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const handleDocumentationDownload = () => {
     const link1 = document.createElement("a")
@@ -38,6 +39,7 @@ export function Footer() {
               {t.gan.footer.subtitle}
             </p>
             <p className="text-xs text-muted-foreground mt-1">{t.gan.footer.author}</p>
+            <p className="text-xs text-primary/80 mt-1 font-medium">{profileLine}</p>
           </div>
           <div className="flex gap-4">
             <button

@@ -4,6 +4,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 export default function ConclusionSection() {
   const t = useTranslation();
   const conclusionData = t.MarketPulseContentType.conclusion;
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const iconMap = {
     [conclusionData.features[0]?.text]: Database,
@@ -82,6 +83,9 @@ export default function ConclusionSection() {
           </p>
           <p className="text-xs text-muted-foreground mt-1">
             {conclusionData.attribution.showcase}
+          </p>
+          <p className="text-xs text-primary/80 mt-2 font-medium">
+            {profileLine}
           </p>
         </div>
       </div>

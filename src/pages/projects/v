@@ -3,6 +3,8 @@ import { ArrowLeft, BarChart3, Database, Globe, TrendingUp, Zap, LineChart, PieC
 import { Link } from "react-router-dom";
 
 const DataVisualization = () => {
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
+
   const codeExamples = [
     {
       title: "Data Scraping & Collection",
@@ -567,6 +569,9 @@ const DataVisualization = () => {
               Empowering organizations with comprehensive renewable energy analytics and data-driven insights 
               for sustainable future planning and strategic decision making.
             </p>
+            <p className="text-sm text-primary/80 mb-6 font-medium max-w-2xl mx-auto">
+              {profileLine}
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Database className="w-4 h-4" />
@@ -600,6 +605,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 const DataVisualization = () => {
   const t = useTranslation();
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const codeExamples = [
     {
@@ -1156,6 +1162,9 @@ const DataVisualization = () => {
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               {t.renewable.footer.description}
+            </p>
+            <p className="text-sm text-primary/80 mb-6 font-medium max-w-2xl mx-auto">
+              {profileLine}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">

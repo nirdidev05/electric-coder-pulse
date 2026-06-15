@@ -7,6 +7,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 
 const DataVisualization = () => {
   const t = useTranslation();
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const codeExamples = [
     {
@@ -562,6 +563,9 @@ const DataVisualization = () => {
         </h3>
         <p className="text-muted-foreground mb-8 max-w-2xl">
           {t.renewable.footer.description}
+        </p>
+        <p className="text-sm text-primary/80 mb-6 font-medium max-w-2xl">
+          {profileLine}
         </p>
         <div className="flex flex-col sm:flex-row items-start gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">

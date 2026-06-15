@@ -4,6 +4,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 const Footer: React.FC = () => {
   const t = useTranslation();
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const handleDocumentationClick = () => {
     // Create a temporary link element for downloading
@@ -42,6 +43,7 @@ const Footer: React.FC = () => {
               <span>•</span>
               <span>{t.gptCodeTracer.footer.metadata.timestamp}</span>
             </p>
+            <p className="text-xs text-primary/80 mt-2 font-medium">{profileLine}</p>
           </div>
           <div className="flex gap-4">
             <button

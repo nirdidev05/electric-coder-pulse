@@ -18,6 +18,7 @@ import { useTranslation } from "@/hooks/useTranslation";
 const FooterProtein: React.FC = () => {
   const t = useTranslation();
   const f = t.Protein.footer;
+  const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   const handleDocumentationDownload = () => {
     const link = document.createElement("a");
@@ -52,6 +53,9 @@ const FooterProtein: React.FC = () => {
                 {f.researchLine}
               </p>
             </div>
+            <p className="text-xs text-primary/80 mt-2 font-medium">
+              {profileLine}
+            </p>
           </div>
 
           {/* Action Buttons */}
@@ -92,6 +96,9 @@ const FooterProtein: React.FC = () => {
         <div className="mt-6 pt-4 border-t border-border/20 text-center">
           <p className="text-xs text-muted-foreground">
             {f.copyright}
+          </p>
+          <p className="text-xs text-primary/80 mt-1 font-medium">
+            {profileLine}
           </p>
         </div>
       </div>

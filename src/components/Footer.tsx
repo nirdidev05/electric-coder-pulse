@@ -27,6 +27,7 @@ const FooterSection = ({ title, links }: FooterSectionProps) => (
 
 const Footer = () => {
  const t = useTranslation();
+ const profileLine = "M1 en Informatique - Lyon 1 • Fraîchement diplômé Ingénieur d'État SI - ESI Alger";
 
   // Social links - only the 'name' needs translation, not the URLs or Icons.
   // The 'name' here should ideally be the same as the 'label' in contactMethods
@@ -128,9 +129,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <span>© {new Date().getFullYear()} {t.footer.copyrightName}</span> {/* Translated Copyright Name */}
             <span>•</span>
-            <span>{t.footer.roleEngineer}</span> {/* Translated Role */}
-            <span>•</span>
-            <span>{t.footer.roleGraduate}</span> {/* Translated Affiliation */}
+            <span>{profileLine}</span>
           </div>
         </div>
       </div>

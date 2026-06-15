@@ -3342,7 +3342,7 @@ const translations: Record<string, Translation> = {
         items: ["Arabic", "French", "English"]
       },
       techStack: {
-        title: "Tech Stack & Expertise"
+        title: "Technologie-Stack & Expertise"
       },
       specializations: {
         title: "Specializations",

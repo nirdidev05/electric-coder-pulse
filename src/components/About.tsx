@@ -60,112 +60,253 @@ const journeySteps = [
 const About = () => {
   const t = useTranslation();
 
-  const techExpertiseSections = [
-    {
-      title: "Core Languages & Databases",
-      index: "01",
-      summary: "Programming foundations, relational databases, search, and graph querying.",
-      groups: [
-        { label: "Programmation", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] },
-        { label: "Databases & Graphs", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] },
-        { label: "Data Science & Scripting", items: ["R", "Bash"] },
-      ],
-    },
-    {
-      title: "AI, Machine Learning & Deep Learning",
-      index: "02",
-      summary: "Predictive models, GenAI, NLP, LLMs, computer vision, and optimization tooling.",
-      groups: [
-        { label: "DL & GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] },
-        { label: "Predictive ML", items: ["XGBoost", "LightGBM", "Scikit-learn", "Time Series"] },
-        { label: "NLP & LLM", items: ["RAG", "LLM Fine-tuning", "Word Embeddings", "TF-IDF"] },
-        { label: "Vision & Image", items: ["Computer Vision", "Image Analysis", "Image Generation", "GANs", "C++"] },
-      ],
-    },
-    {
-      title: "Advanced Algorithmic & Agentic AI",
-      index: "03",
-      summary: "From-scratch agentic reasoning, negotiation protocols, coalitions, and decision algorithms.",
-      featured: true,
-      groups: [
-        { label: "IA Agentique", items: ["SMA", "BDI", "FIPA-ACL", "Async Routing"] },
-        { label: "Game Theory & Decision", items: ["Rubinstein/Zeuthen", "Shapley Value", "MCDA"] },
-        { label: "Operations Research", items: ["IDP Coalition Generation", "Dynamic Programming", "Pruning"] },
-      ],
-    },
-    {
-      title: "Data Engineering & Architecture",
-      index: "04",
-      summary: "Automated pipelines, graph modeling, heterogeneous data parsing, and deployment tooling.",
-      groups: [
-        { label: "Big Data & Pipelines", items: ["Automated ETL", "Pandas", "NumPy", "API Integration", "Kafka"] },
-        { label: "Graph Modeling", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "Polymorphic JSON"] },
-        { label: "DevOps & Deployment", items: ["Docker", "Git", "Linux", "Postman"] },
-      ],
-    },
-    {
-      title: "Software Engineering & BI",
-      index: "05",
-      summary: "Full-stack delivery, BI dashboards, prototyping, design, process modeling, and ERP systems.",
-      groups: [
-        { label: "Web & Mobile", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] },
-        { label: "BI & Data Viz", items: ["PowerBI", "Streamlit", "Dashboards", "Real-time KPIs", "EDA"] },
-        { label: "Design & Process", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
-      ],
-    },
-  ];
+  const localeKey =
+    t.about.languages.title === "Langues" ? "fr" :
+    t.about.languages.title === "Sprachen" ? "de" :
+    t.about.languages.title === "Idiomas" ? "es" :
+    t.about.languages.title === "اللغات" ? "ar" :
+    "en";
 
-  const specializationFocus = [
-    {
-      title: "Data Engineering & Graph Architecture",
-      score: 4,
-      proof: "Complex ETL pipelines for heterogeneous data, spatial unification, and property graph modeling with Neo4j/Cypher for MCDA decision analysis.",
+  const localizedAboutContent = {
+    en: {
+      techIntro: "A structured map of the tools, paradigms, and architectures I use to move from data to reliable intelligent systems.",
+      featuredBadge: "Algorithmic depth",
+      focusAreas: "Focus Areas",
+      communication: "Communication",
+      languagesCount: "3 Languages",
+      levels: { native: "Native", fluent: "Fluent" },
+      techSections: [
+        {
+          title: "Core Languages & Databases",
+          index: "01",
+          summary: "Programming foundations, relational databases, search, and graph querying.",
+          groups: [
+            { label: "Programming", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] },
+            { label: "Databases & Graphs", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] },
+            { label: "Data Science & Scripting", items: ["R", "Bash"] },
+          ],
+        },
+        {
+          title: "AI, Machine Learning & Deep Learning",
+          index: "02",
+          summary: "Predictive models, GenAI, NLP, LLMs, computer vision, and optimization tooling.",
+          groups: [
+            { label: "DL & GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] },
+            { label: "Predictive ML", items: ["XGBoost", "LightGBM", "Scikit-learn", "Time Series"] },
+            { label: "NLP & LLM", items: ["RAG", "LLM Fine-tuning", "Word Embeddings", "TF-IDF"] },
+            { label: "Vision & Image", items: ["Computer Vision", "Image Analysis", "Image Generation", "GANs", "C++"] },
+          ],
+        },
+        {
+          title: "Advanced Algorithmic & Agentic AI",
+          index: "03",
+          summary: "From-scratch agentic reasoning, negotiation protocols, coalitions, and decision algorithms.",
+          featured: true,
+          groups: [
+            { label: "Agentic AI", items: ["MAS", "BDI", "FIPA-ACL", "Async Routing"] },
+            { label: "Game Theory & Decision", items: ["Rubinstein/Zeuthen", "Shapley Value", "MCDA"] },
+            { label: "Operations Research", items: ["IDP Coalition Generation", "Dynamic Programming", "Pruning"] },
+          ],
+        },
+        {
+          title: "Data Engineering & Architecture",
+          index: "04",
+          summary: "Automated pipelines, graph modeling, heterogeneous data parsing, and deployment tooling.",
+          groups: [
+            { label: "Big Data & Pipelines", items: ["Automated ETL", "Pandas", "NumPy", "API Integration", "Kafka"] },
+            { label: "Graph Modeling", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "Polymorphic JSON"] },
+            { label: "DevOps & Deployment", items: ["Docker", "Git", "Linux", "Postman"] },
+          ],
+        },
+        {
+          title: "Software Engineering & BI",
+          index: "05",
+          summary: "Full-stack delivery, BI dashboards, prototyping, design, process modeling, and ERP systems.",
+          groups: [
+            { label: "Web & Mobile", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] },
+            { label: "BI & Data Viz", items: ["PowerBI", "Streamlit", "Dashboards", "Real-time KPIs", "EDA"] },
+            { label: "Design & Process", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
+          ],
+        },
+      ],
+      specializations: [
+        { title: "Data Engineering & Graph Architecture", score: 4, proof: "Complex ETL pipelines for heterogeneous data, spatial unification, and property graph modeling with Neo4j/Cypher for MCDA decision analysis." },
+        { title: "Predictive AI & Data Science", score: 4, proof: "Data cleaning, feature engineering, and advanced regression models such as XGBoost and LightGBM, validated through hackathon podiums including HAICK 2025 and ADC 4.0 BNP Paribas." },
+        { title: "Natural Language Processing & LLMs", score: 4.5, proof: "Modern NLP ecosystem: RAG architectures, LLM fine-tuning, entity extraction, word embeddings, and document intelligence workflows." },
+        { title: "Agentic AI & Multi-Agent Systems", score: 4.5, proof: "Autonomous BDI agents, negotiation protocols, game theory with Rubinstein/Zeuthen, coalition algorithms, and Shapley-value reasoning." },
+        { title: "Deep Learning & Computer Vision", score: 4, proof: "Neural networks with PyTorch and TensorFlow for image analysis, image generation with GANs, and sequential modeling with LSTM-style pipelines." },
+        { title: "Full-Stack Software Architecture", score: 3, proof: "End-to-end delivery with React, NextJS, Django, Laravel, VueJS, Flutter, ERP integration, and production-oriented prototyping." },
+      ],
     },
-    {
-      title: "Predictive AI & Data Science",
-      score: 4,
-      proof: "Data cleaning, feature engineering, and advanced regression models such as XGBoost and LightGBM, validated through hackathon podiums including HAICK 2025 and ADC 4.0 BNP Paribas.",
+    fr: {
+      techIntro: "Une cartographie structurée des outils, paradigmes et architectures que j'utilise pour transformer la donnée en systèmes intelligents fiables.",
+      featuredBadge: "Profondeur algorithmique",
+      focusAreas: "Domaines de spécialisation",
+      communication: "Communication",
+      languagesCount: "3 langues",
+      levels: { native: "Natif", fluent: "Courant" },
+      techSections: [
+        { title: "Langages, bases de données & graphes", index: "01", summary: "Bases de programmation, bases relationnelles, recherche et requêtage graphe.", groups: [
+          { label: "Programmation", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] },
+          { label: "Bases de données & graphes", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] },
+          { label: "Data science & scripting", items: ["R", "Bash"] },
+        ]},
+        { title: "IA, Machine Learning & Deep Learning", index: "02", summary: "Modèles prédictifs, GenAI, NLP, LLMs, vision par ordinateur et optimisation.", groups: [
+          { label: "DL & GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] },
+          { label: "ML prédictif", items: ["XGBoost", "LightGBM", "Scikit-learn", "Séries temporelles"] },
+          { label: "NLP & LLM", items: ["RAG", "Fine-tuning LLM", "Word Embeddings", "TF-IDF"] },
+          { label: "Vision & image", items: ["Computer Vision", "Analyse d'image", "Génération d'image", "GANs", "C++"] },
+        ]},
+        { title: "IA algorithmique & agentique avancée", index: "03", summary: "Raisonnement agentique from scratch, protocoles de négociation, coalitions et algorithmes de décision.", featured: true, groups: [
+          { label: "IA agentique", items: ["SMA", "BDI", "FIPA-ACL", "Routage asynchrone"] },
+          { label: "Théorie des jeux & décision", items: ["Rubinstein/Zeuthen", "Valeur de Shapley", "MCDA"] },
+          { label: "Recherche opérationnelle", items: ["Génération IDP de coalitions", "Programmation dynamique", "Élagage"] },
+        ]},
+        { title: "Data Engineering & architecture", index: "04", summary: "Pipelines automatisés, modélisation graphe, parsing de données hétérogènes et outils de déploiement.", groups: [
+          { label: "Big data & pipelines", items: ["ETL automatisé", "Pandas", "NumPy", "Intégration API", "Kafka"] },
+          { label: "Modélisation graphe", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "JSON polymorphe"] },
+          { label: "DevOps & déploiement", items: ["Docker", "Git", "Linux", "Postman"] },
+        ]},
+        { title: "Software Engineering & BI", index: "05", summary: "Développement full-stack, tableaux de bord BI, prototypage, design, modélisation processus et ERP.", groups: [
+          { label: "Web & mobile", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] },
+          { label: "BI & data viz", items: ["PowerBI", "Streamlit", "Dashboards", "KPI temps réel", "EDA"] },
+          { label: "Design & processus", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
+        ]},
+      ],
+      specializations: [
+        { title: "Data Engineering & architecture graphe", score: 4, proof: "Conception de pipelines ETL complexes pour données hétérogènes, unification spatiale et modélisation avancée en graphes de propriétés avec Neo4j/Cypher pour l'analyse décisionnelle MCDA." },
+        { title: "IA prédictive & Data Science", score: 4, proof: "Nettoyage de données, feature engineering et modèles de régression avancés comme XGBoost et LightGBM, validés par des podiums en hackathons dont HAICK 2025 et ADC 4.0 BNP Paribas." },
+        { title: "NLP & LLMs", score: 4.5, proof: "Maîtrise de l'écosystème NLP moderne : architectures RAG, fine-tuning de LLMs, extraction d'entités, embeddings et workflows d'intelligence documentaire." },
+        { title: "IA agentique & systèmes multi-agents", score: 4.5, proof: "Agents autonomes BDI, protocoles de négociation, théorie des jeux avec Rubinstein/Zeuthen, algorithmes de coalition et raisonnement par valeur de Shapley." },
+        { title: "Deep Learning & Computer Vision", score: 4, proof: "Réseaux de neurones avec PyTorch et TensorFlow pour l'analyse d'image, la génération avec GANs et les pipelines séquentiels de type LSTM." },
+        { title: "Architecture logicielle full-stack", score: 3, proof: "Livraison end-to-end avec React, NextJS, Django, Laravel, VueJS, Flutter, intégration ERP et prototypage orienté production." },
+      ],
     },
-    {
-      title: "Natural Language Processing & LLMs",
-      score: 4.5,
-      proof: "Modern NLP ecosystem: RAG architectures, LLM fine-tuning, entity extraction, word embeddings, and document intelligence workflows.",
+    de: {
+      techIntro: "Eine strukturierte Karte der Tools, Paradigmen und Architekturen, mit denen ich Daten in zuverlässige intelligente Systeme verwandle.",
+      featuredBadge: "Algorithmische Tiefe",
+      focusAreas: "Schwerpunkte",
+      communication: "Kommunikation",
+      languagesCount: "3 Sprachen",
+      levels: { native: "Muttersprache", fluent: "Fließend" },
+      techSections: [
+        { title: "Kernsprachen & Datenbanken", index: "01", summary: "Programmiergrundlagen, relationale Datenbanken, Suche und Graph-Abfragen.", groups: [
+          { label: "Programmierung", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] }, { label: "Datenbanken & Graphen", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] }, { label: "Data Science & Scripting", items: ["R", "Bash"] },
+        ]},
+        { title: "KI, Machine Learning & Deep Learning", index: "02", summary: "Prädiktive Modelle, GenAI, NLP, LLMs, Computer Vision und Optimierung.", groups: [
+          { label: "DL & GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] }, { label: "Prädiktives ML", items: ["XGBoost", "LightGBM", "Scikit-learn", "Zeitreihen"] }, { label: "NLP & LLM", items: ["RAG", "LLM Fine-tuning", "Word Embeddings", "TF-IDF"] }, { label: "Vision & Bild", items: ["Computer Vision", "Bildanalyse", "Bildgenerierung", "GANs", "C++"] },
+        ]},
+        { title: "Fortgeschrittene algorithmische & agentische KI", index: "03", summary: "Agentisches Reasoning from scratch, Verhandlungsprotokolle, Koalitionen und Entscheidungsalgorithmen.", featured: true, groups: [
+          { label: "Agentische KI", items: ["MAS", "BDI", "FIPA-ACL", "Asynchrones Routing"] }, { label: "Spieltheorie & Entscheidung", items: ["Rubinstein/Zeuthen", "Shapley-Wert", "MCDA"] }, { label: "Operations Research", items: ["IDP-Koalitionsgenerierung", "Dynamische Programmierung", "Pruning"] },
+        ]},
+        { title: "Data Engineering & Architektur", index: "04", summary: "Automatisierte Pipelines, Graphmodellierung, heterogenes Datenparsing und Deployment-Tools.", groups: [
+          { label: "Big Data & Pipelines", items: ["Automatisiertes ETL", "Pandas", "NumPy", "API-Integration", "Kafka"] }, { label: "Graphmodellierung", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "Polymorphes JSON"] }, { label: "DevOps & Deployment", items: ["Docker", "Git", "Linux", "Postman"] },
+        ]},
+        { title: "Software Engineering & BI", index: "05", summary: "Full-Stack-Entwicklung, BI-Dashboards, Prototyping, Design, Prozessmodellierung und ERP.", groups: [
+          { label: "Web & Mobile", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] }, { label: "BI & Data Viz", items: ["PowerBI", "Streamlit", "Dashboards", "Echtzeit-KPIs", "EDA"] }, { label: "Design & Prozess", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
+        ]},
+      ],
+      specializations: [
+        { title: "Data Engineering & Grapharchitektur", score: 4, proof: "Komplexe ETL-Pipelines für heterogene Daten, räumliche Vereinheitlichung und Property-Graph-Modellierung mit Neo4j/Cypher für MCDA-Entscheidungsanalysen." },
+        { title: "Prädiktive KI & Data Science", score: 4, proof: "Datenbereinigung, Feature Engineering und fortgeschrittene Regressionsmodelle wie XGBoost und LightGBM, validiert durch Hackathon-Podien wie HAICK 2025 und ADC 4.0 BNP Paribas." },
+        { title: "NLP & LLMs", score: 4.5, proof: "Modernes NLP-Ökosystem: RAG-Architekturen, LLM-Fine-tuning, Entitätsextraktion, Embeddings und Document-Intelligence-Workflows." },
+        { title: "Agentische KI & Multi-Agenten-Systeme", score: 4.5, proof: "Autonome BDI-Agenten, Verhandlungsprotokolle, Spieltheorie mit Rubinstein/Zeuthen, Koalitionsalgorithmen und Shapley-Wert-Reasoning." },
+        { title: "Deep Learning & Computer Vision", score: 4, proof: "Neuronale Netze mit PyTorch und TensorFlow für Bildanalyse, Bildgenerierung mit GANs und sequentielle LSTM-artige Pipelines." },
+        { title: "Full-Stack-Softwarearchitektur", score: 3, proof: "End-to-End-Umsetzung mit React, NextJS, Django, Laravel, VueJS, Flutter, ERP-Integration und produktionsorientiertem Prototyping." },
+      ],
     },
-    {
-      title: "Agentic AI & Multi-Agent Systems",
-      score: 4.5,
-      proof: "Autonomous BDI agents, negotiation protocols, game theory with Rubinstein/Zeuthen, coalition algorithms, and Shapley-value reasoning.",
+    es: {
+      techIntro: "Un mapa estructurado de las herramientas, paradigmas y arquitecturas que uso para convertir datos en sistemas inteligentes fiables.",
+      featuredBadge: "Profundidad algorítmica",
+      focusAreas: "Áreas de enfoque",
+      communication: "Comunicación",
+      languagesCount: "3 idiomas",
+      levels: { native: "Nativo", fluent: "Fluido" },
+      techSections: [
+        { title: "Lenguajes principales y bases de datos", index: "01", summary: "Fundamentos de programación, bases relacionales, búsqueda y consultas en grafos.", groups: [
+          { label: "Programación", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] }, { label: "Bases de datos y grafos", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] }, { label: "Data Science y scripting", items: ["R", "Bash"] },
+        ]},
+        { title: "IA, Machine Learning y Deep Learning", index: "02", summary: "Modelos predictivos, GenAI, NLP, LLMs, visión por computadora y optimización.", groups: [
+          { label: "DL y GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] }, { label: "ML predictivo", items: ["XGBoost", "LightGBM", "Scikit-learn", "Series temporales"] }, { label: "NLP y LLM", items: ["RAG", "Fine-tuning LLM", "Word Embeddings", "TF-IDF"] }, { label: "Visión e imagen", items: ["Computer Vision", "Análisis de imagen", "Generación de imagen", "GANs", "C++"] },
+        ]},
+        { title: "IA algorítmica y agéntica avanzada", index: "03", summary: "Razonamiento agéntico desde cero, protocolos de negociación, coaliciones y algoritmos de decisión.", featured: true, groups: [
+          { label: "IA agéntica", items: ["SMA", "BDI", "FIPA-ACL", "Enrutamiento asíncrono"] }, { label: "Teoría de juegos y decisión", items: ["Rubinstein/Zeuthen", "Valor de Shapley", "MCDA"] }, { label: "Investigación operativa", items: ["Generación IDP de coaliciones", "Programación dinámica", "Poda"] },
+        ]},
+        { title: "Ingeniería de datos y arquitectura", index: "04", summary: "Pipelines automatizados, modelado de grafos, parsing de datos heterogéneos y herramientas de despliegue.", groups: [
+          { label: "Big Data y pipelines", items: ["ETL automatizado", "Pandas", "NumPy", "Integración API", "Kafka"] }, { label: "Modelado de grafos", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "JSON polimórfico"] }, { label: "DevOps y despliegue", items: ["Docker", "Git", "Linux", "Postman"] },
+        ]},
+        { title: "Ingeniería de software y BI", index: "05", summary: "Entrega full-stack, dashboards BI, prototipado, diseño, modelado de procesos y ERP.", groups: [
+          { label: "Web y móvil", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] }, { label: "BI y data viz", items: ["PowerBI", "Streamlit", "Dashboards", "KPIs en tiempo real", "EDA"] }, { label: "Diseño y proceso", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
+        ]},
+      ],
+      specializations: [
+        { title: "Ingeniería de datos y arquitectura de grafos", score: 4, proof: "Pipelines ETL complejos para datos heterogéneos, unificación espacial y modelado de grafos de propiedades con Neo4j/Cypher para análisis de decisión MCDA." },
+        { title: "IA predictiva y Data Science", score: 4, proof: "Limpieza de datos, feature engineering y modelos avanzados de regresión como XGBoost y LightGBM, validados por podios en hackathons como HAICK 2025 y ADC 4.0 BNP Paribas." },
+        { title: "NLP y LLMs", score: 4.5, proof: "Ecosistema NLP moderno: arquitecturas RAG, fine-tuning de LLMs, extracción de entidades, embeddings y workflows de inteligencia documental." },
+        { title: "IA agéntica y sistemas multiagente", score: 4.5, proof: "Agentes autónomos BDI, protocolos de negociación, teoría de juegos con Rubinstein/Zeuthen, algoritmos de coalición y razonamiento con valor de Shapley." },
+        { title: "Deep Learning y Computer Vision", score: 4, proof: "Redes neuronales con PyTorch y TensorFlow para análisis de imagen, generación con GANs y pipelines secuenciales tipo LSTM." },
+        { title: "Arquitectura software full-stack", score: 3, proof: "Entrega end-to-end con React, NextJS, Django, Laravel, VueJS, Flutter, integración ERP y prototipado orientado a producción." },
+      ],
     },
-    {
-      title: "Deep Learning & Computer Vision",
-      score: 4,
-      proof: "Neural networks with PyTorch and TensorFlow for image analysis, image generation with GANs, and sequential modeling with LSTM-style pipelines.",
+    ar: {
+      techIntro: "خريطة منظمة للأدوات والنماذج المعمارية التي أستخدمها لتحويل البيانات إلى أنظمة ذكية موثوقة.",
+      featuredBadge: "عمق خوارزمي",
+      focusAreas: "مجالات التخصص",
+      communication: "التواصل",
+      languagesCount: "3 لغات",
+      levels: { native: "لغة أم", fluent: "طلاقة" },
+      techSections: [
+        { title: "لغات البرمجة وقواعد البيانات", index: "01", summary: "أساسيات البرمجة، قواعد البيانات العلائقية، البحث، والاستعلامات على الرسوم البيانية.", groups: [
+          { label: "البرمجة", items: ["Python", "Multithreading", "OOP", "C++", "Java", "JavaScript"] }, { label: "قواعد البيانات والرسوم", items: ["Cypher", "Neo4j", "SQL", "PostgreSQL", "MySQL", "Elasticsearch"] }, { label: "علم البيانات والسكربتات", items: ["R", "Bash"] },
+        ]},
+        { title: "الذكاء الاصطناعي، التعلم الآلي والتعلم العميق", index: "02", summary: "نماذج تنبؤية، ذكاء اصطناعي توليدي، NLP، LLMs، رؤية حاسوبية وأدوات تحسين.", groups: [
+          { label: "DL و GenAI", items: ["PyTorch", "TensorFlow", "Keras", "Transformers", "Hugging Face"] }, { label: "ML تنبؤي", items: ["XGBoost", "LightGBM", "Scikit-learn", "Time Series"] }, { label: "NLP و LLM", items: ["RAG", "LLM Fine-tuning", "Word Embeddings", "TF-IDF"] }, { label: "الرؤية والصورة", items: ["Computer Vision", "تحليل الصور", "توليد الصور", "GANs", "C++"] },
+        ]},
+        { title: "ذكاء اصطناعي خوارزمي ووكيل متقدم", index: "03", summary: "استدلال وكيل من الصفر، بروتوكولات تفاوض، ائتلافات وخوارزميات قرار.", featured: true, groups: [
+          { label: "ذكاء اصطناعي وكيل", items: ["SMA", "BDI", "FIPA-ACL", "توجيه غير متزامن"] }, { label: "نظرية الألعاب والقرار", items: ["Rubinstein/Zeuthen", "قيمة Shapley", "MCDA"] }, { label: "بحوث العمليات", items: ["توليد ائتلافات IDP", "برمجة ديناميكية", "تقليم"] },
+        ]},
+        { title: "هندسة البيانات والمعمارية", index: "04", summary: "خطوط معالجة آلية، نمذجة رسوم بيانية، تحليل بيانات غير متجانسة وأدوات نشر.", groups: [
+          { label: "Big Data و Pipelines", items: ["ETL آلي", "Pandas", "NumPy", "تكامل API", "Kafka"] }, { label: "نمذجة الرسوم", items: ["Neo4j", "Property Graph", "Data Importer", "Aura", "JSON متعدد الأشكال"] }, { label: "DevOps والنشر", items: ["Docker", "Git", "Linux", "Postman"] },
+        ]},
+        { title: "هندسة البرمجيات وذكاء الأعمال", index: "05", summary: "تطوير full-stack، لوحات BI، نمذجة أولية، تصميم، نمذجة عمليات وأنظمة ERP.", groups: [
+          { label: "ويب وموبايل", items: ["React", "NextJS", "Django", "Laravel", "VueJS", "Flutter"] }, { label: "BI وتصور البيانات", items: ["PowerBI", "Streamlit", "Dashboards", "مؤشرات فورية", "EDA"] }, { label: "التصميم والعمليات", items: ["UI/UX", "Figma", "BPMN", "ERP", "Odoo"] },
+        ]},
+      ],
+      specializations: [
+        { title: "هندسة البيانات ومعمارية الرسوم", score: 4, proof: "خطوط ETL معقدة لبيانات غير متجانسة، توحيد مكاني، ونمذجة Property Graph باستخدام Neo4j/Cypher لتحليل القرار MCDA." },
+        { title: "الذكاء التنبؤي و Data Science", score: 4, proof: "تنظيف البيانات، هندسة الخصائص، ونماذج انحدار متقدمة مثل XGBoost و LightGBM، مع نتائج قوية في مسابقات مثل HAICK 2025 و ADC 4.0 BNP Paribas." },
+        { title: "NLP و LLMs", score: 4.5, proof: "إتقان منظومة NLP الحديثة: معماريات RAG، fine-tuning للـ LLMs، استخراج الكيانات، embeddings وسير عمل ذكاء الوثائق." },
+        { title: "الذكاء الوكيل والأنظمة متعددة الوكلاء", score: 4.5, proof: "وكلاء BDI مستقلون، بروتوكولات تفاوض، نظرية ألعاب Rubinstein/Zeuthen، خوارزميات ائتلاف واستدلال بقيمة Shapley." },
+        { title: "Deep Learning و Computer Vision", score: 4, proof: "شبكات عصبية باستخدام PyTorch و TensorFlow لتحليل الصور، توليد الصور بـ GANs، وخطوط معالجة تسلسلية من نوع LSTM." },
+        { title: "معمارية برمجيات Full-Stack", score: 3, proof: "تسليم end-to-end باستخدام React و NextJS و Django و Laravel و VueJS و Flutter، مع تكامل ERP ونمذجة أولية موجهة للإنتاج." },
+      ],
     },
-    {
-      title: "Full-Stack Software Architecture",
-      score: 3,
-      proof: "End-to-end delivery with React, NextJS, Django, Laravel, VueJS, Flutter, ERP integration, and production-oriented prototyping.",
-    },
-  ];
+  } as const;
+
+  const localizedContent = localizedAboutContent[localeKey];
+
+  const techExpertiseSections = localizedContent.techSections;
+
+  const specializationFocus = localizedContent.specializations;
 
   const languageLevels = [
     {
       name: t.about.languages.items[0] ?? "Arabic",
-      level: t.about.languages.items[0] === "Arabe" ? "Natif" : t.about.languages.items[0] === "Árabe" ? "Nativo" : t.about.languages.items[0] === "Arabisch" ? "Muttersprache" : t.about.languages.items[0] === "العربية" ? "لغة أم" : "Native",
+      level: localizedContent.levels.native,
       score: 5,
       accent: "text-emerald-400 border-emerald-400/30 bg-emerald-400/10",
       gradient: "from-emerald-500/20 via-cyan-400/10 to-transparent",
     },
     {
       name: t.about.languages.items[1] ?? "French",
-      level: t.about.languages.items[1] === "Français" ? "Courant" : t.about.languages.items[1] === "Francés" ? "Fluido" : t.about.languages.items[1] === "Französisch" ? "Fließend" : t.about.languages.items[1] === "الفرنسية" ? "طلاقة" : "Fluent",
+      level: localizedContent.levels.fluent,
       score: 4,
       accent: "text-blue-400 border-blue-400/30 bg-blue-400/10",
       gradient: "from-blue-500/20 via-primary/10 to-transparent",
     },
     {
       name: t.about.languages.items[2] ?? "English",
-      level: t.about.languages.items[2] === "Anglais" ? "Courant" : t.about.languages.items[2] === "Inglés" ? "Fluido" : t.about.languages.items[2] === "Englisch" ? "Fließend" : t.about.languages.items[2] === "الإنجليزية" ? "طلاقة" : "Fluent",
+      level: localizedContent.levels.fluent,
       score: 4,
       accent: "text-violet-300 border-violet-400/30 bg-violet-400/10",
       gradient: "from-violet-500/20 via-secondary/10 to-transparent",
@@ -379,7 +520,7 @@ const About = () => {
                                 <span className="font-mono text-xs font-bold text-primary/80">{section.index}</span>
                                 {section.featured && (
                                   <span className="rounded-full border border-primary/25 bg-primary/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                                    Algorithmic depth
+                                    {localizedContent.featuredBadge}
                                   </span>
                                 )}
                               </div>
@@ -424,7 +565,7 @@ const About = () => {
               className="rounded-3xl border border-border/60 bg-background/80 p-5 shadow-xl backdrop-blur-sm sm:p-6 lg:p-7"
             >
               <div className="mb-6">
-                <p className="text-xs font-black uppercase tracking-[0.22em] text-muted-foreground">Focus Areas</p>
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-muted-foreground">{localizedContent.focusAreas}</p>
                 <h3 className="mt-1 text-2xl font-bold gradient-text">{t.about.specializations.title}</h3>
               </div>
 
@@ -490,11 +631,11 @@ const About = () => {
               <div className="relative">
                 <div className="mb-6 flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs font-black uppercase tracking-[0.22em] text-muted-foreground">Communication</p>
+                    <p className="text-xs font-black uppercase tracking-[0.22em] text-muted-foreground">{localizedContent.communication}</p>
                     <h3 className="mt-1 text-2xl font-bold text-secondary">{t.about.languages.title}</h3>
                   </div>
                   <div className="hidden rounded-2xl border border-secondary/30 bg-secondary/10 px-3 py-2 text-sm font-bold text-secondary sm:block">
-                    3 Languages
+                    {localizedContent.languagesCount}
                   </div>
                 </div>
 

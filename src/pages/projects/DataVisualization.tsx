@@ -4,6 +4,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ProjectTechShowcase } from "@/components/ProjectTechShowcase";
 
 const DataVisualization = () => {
   const t = useTranslation();
@@ -278,6 +279,8 @@ const DataVisualization = () => {
             </div>
           </div>
         </motion.section>
+
+        <ProjectTechShowcase projectId="data-visualization" className="mb-20" />
 
         {/* Features Grid */}
         <motion.section

@@ -13,6 +13,7 @@ import Appendix from "@/components/Appendix";
 import FooterProtein from "@/components/FooterProtein";
 import Navigation from "@/components/NavBat";
 import HeroSection from "@/components/HS";
+import { ProjectTechShowcase } from "@/components/ProjectTechShowcase";
 function App() {
   return (
     <div className="min-h-screen bg-background">
@@ -44,6 +45,7 @@ function App() {
           </div>
         </div>
         
+        <ProjectTechShowcase projectId="Protein" className="py-16" />
         <FooterProtein />
       </main>
     </div>

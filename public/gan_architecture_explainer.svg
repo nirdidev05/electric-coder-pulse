@@ -1,0 +1,141 @@
+<svg width="900" height="1500" viewBox="0 0 900 1500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Hybrid Chess Puzzle GAN explanatory infographic</title>
+  <desc id="desc">A vertical five-step infographic explaining how chess data, conditioning, generation, validation and engine checks produce a validated tactical puzzle.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="1500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.52" stop-color="#111827"/>
+      <stop offset="1" stop-color="#162033"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="80" y1="80" x2="820" y2="1420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0.94"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#DDD6FE"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#A7F3D0"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-18%" y="-18%" width="136%" height="136%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.34"/>
+    </filter>
+    <filter id="soft" x="-16%" y="-16%" width="132%" height="132%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" stroke="#94A3B8" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="1500" fill="url(#bg)"/>
+  <rect width="900" height="1500" fill="url(#grid)"/>
+  <circle cx="120" cy="210" r="260" fill="#0EA5E9" opacity="0.12"/>
+  <circle cx="820" cy="590" r="300" fill="#8B5CF6" opacity="0.12"/>
+  <circle cx="720" cy="1260" r="300" fill="#10B981" opacity="0.12"/>
+
+  <rect x="44" y="46" width="812" height="1408" rx="40" fill="url(#panel)" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="72" y="74" width="756" height="1352" rx="30" fill="#020617" fill-opacity="0.32" stroke="#475569" stroke-opacity="0.34"/>
+
+  <text x="110" y="142" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="900">Hybrid Chess Puzzle GAN</text>
+  <text x="112" y="184" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500">Clear pipeline from chess data to a validated tactical puzzle.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <g filter="url(#soft)">
+      <rect x="110" y="250" width="680" height="170" rx="26" fill="#0B1220" stroke="#38BDF8" stroke-opacity="0.62" stroke-width="2"/>
+      <circle cx="162" cy="310" r="28" fill="url(#blue)"/>
+      <text x="150" y="321" fill="#082F49" font-size="28" font-weight="900">1</text>
+      <text x="212" y="303" fill="#F8FAFC" font-size="31" font-weight="900">Balanced FEN dataset</text>
+      <text x="212" y="342" fill="#BAE6FD" font-size="22" font-weight="550">Chess positions are cleaned and grouped by tactic.</text>
+      <rect x="214" y="370" width="126" height="34" rx="14" fill="#0E7490" fill-opacity="0.35"/>
+      <text x="238" y="393" fill="#ECFEFF" font-size="17" font-weight="850">mate</text>
+      <rect x="354" y="370" width="126" height="34" rx="14" fill="#0E7490" fill-opacity="0.25"/>
+      <text x="386" y="393" fill="#ECFEFF" font-size="17" font-weight="850">fork</text>
+      <rect x="494" y="370" width="126" height="34" rx="14" fill="#0E7490" fill-opacity="0.18"/>
+      <text x="528" y="393" fill="#ECFEFF" font-size="17" font-weight="850">pin</text>
+    </g>
+
+    <g>
+      <path d="M450 438V474" stroke="#A7F3D0" stroke-width="7" stroke-linecap="round"/>
+      <path d="M432 472L450 493L468 472Z" fill="#A7F3D0"/>
+    </g>
+
+    <g filter="url(#soft)">
+      <rect x="110" y="505" width="680" height="170" rx="26" fill="#102033" stroke="#67E8F9" stroke-opacity="0.52" stroke-width="2"/>
+      <circle cx="162" cy="565" r="28" fill="url(#blue)"/>
+      <text x="150" y="576" fill="#082F49" font-size="28" font-weight="900">2</text>
+      <text x="212" y="558" fill="#F8FAFC" font-size="31" font-weight="900">Condition signal</text>
+      <text x="212" y="597" fill="#BAE6FD" font-size="22" font-weight="550">Random noise z is combined with labels and masks.</text>
+      <text x="212" y="636" fill="#E0F2FE" font-size="20" font-weight="800">z + theme + board template</text>
+    </g>
+
+    <g>
+      <path d="M450 693V729" stroke="#A7F3D0" stroke-width="7" stroke-linecap="round"/>
+      <path d="M432 727L450 748L468 727Z" fill="#A7F3D0"/>
+    </g>
+
+    <g filter="url(#soft)">
+      <rect x="110" y="760" width="680" height="170" rx="26" fill="#17112F" stroke="#A78BFA" stroke-opacity="0.66" stroke-width="2"/>
+      <circle cx="162" cy="820" r="28" fill="url(#violet)"/>
+      <text x="150" y="831" fill="#2E1065" font-size="28" font-weight="900">3</text>
+      <text x="212" y="813" fill="#F8FAFC" font-size="31" font-weight="900">Generator G</text>
+      <text x="212" y="852" fill="#DDD6FE" font-size="22" font-weight="550">The neural model fills missing squares into a board.</text>
+      <g transform="translate(214 878)">
+        <rect width="220" height="34" rx="14" fill="#312E81" fill-opacity="0.7"/>
+        <circle cx="35" cy="17" r="7" fill="#C4B5FD"/>
+        <circle cx="75" cy="17" r="7" fill="#C4B5FD"/>
+        <circle cx="115" cy="17" r="7" fill="#C4B5FD"/>
+        <circle cx="155" cy="17" r="7" fill="#C4B5FD"/>
+        <circle cx="195" cy="17" r="7" fill="#C4B5FD"/>
+      </g>
+    </g>
+
+    <g>
+      <path d="M450 948V984" stroke="#A7F3D0" stroke-width="7" stroke-linecap="round"/>
+      <path d="M432 982L450 1003L468 982Z" fill="#A7F3D0"/>
+    </g>
+
+    <g filter="url(#soft)">
+      <rect x="110" y="1015" width="680" height="190" rx="26" fill="#251706" stroke="#F59E0B" stroke-opacity="0.64" stroke-width="2"/>
+      <circle cx="162" cy="1075" r="28" fill="url(#amber)"/>
+      <text x="150" y="1086" fill="#451A03" font-size="28" font-weight="900">4</text>
+      <text x="212" y="1068" fill="#F8FAFC" font-size="31" font-weight="900">Candidate puzzle board</text>
+      <text x="212" y="1107" fill="#FDE68A" font-size="22" font-weight="550">A complete chess position is produced.</text>
+      <text x="212" y="1140" fill="#FDE68A" font-size="22" font-weight="550">It may look good, but it still must be checked.</text>
+      <g transform="translate(616 1045)">
+        <rect width="116" height="116" rx="10" fill="#FEF3C7"/>
+        <rect width="29" height="29" fill="#FFFBEB"/><rect x="29" width="29" height="29" fill="#92400E"/><rect x="58" width="29" height="29" fill="#FFFBEB"/><rect x="87" width="29" height="29" fill="#92400E"/>
+        <rect y="29" width="29" height="29" fill="#92400E"/><rect x="29" y="29" width="29" height="29" fill="#FFFBEB"/><rect x="58" y="29" width="29" height="29" fill="#92400E"/><rect x="87" y="29" width="29" height="29" fill="#FFFBEB"/>
+        <rect y="58" width="29" height="29" fill="#FFFBEB"/><rect x="29" y="58" width="29" height="29" fill="#92400E"/><rect x="58" y="58" width="29" height="29" fill="#FFFBEB"/><rect x="87" y="58" width="29" height="29" fill="#92400E"/>
+        <rect y="87" width="29" height="29" fill="#92400E"/><rect x="29" y="87" width="29" height="29" fill="#FFFBEB"/><rect x="58" y="87" width="29" height="29" fill="#92400E"/><rect x="87" y="87" width="29" height="29" fill="#FFFBEB"/>
+        <text x="12" y="27" fill="#111827" font-size="22" font-weight="900">K</text>
+        <text x="64" y="56" fill="#111827" font-size="22" font-weight="900">Q</text>
+        <text x="35" y="112" fill="#111827" font-size="22" font-weight="900">N</text>
+      </g>
+    </g>
+
+    <g>
+      <path d="M450 1223V1259" stroke="#A7F3D0" stroke-width="7" stroke-linecap="round"/>
+      <path d="M432 1257L450 1278L468 1257Z" fill="#A7F3D0"/>
+    </g>
+
+    <g filter="url(#soft)">
+      <rect x="110" y="1290" width="680" height="135" rx="26" fill="#052E2B" stroke="#34D399" stroke-opacity="0.72" stroke-width="2"/>
+      <circle cx="162" cy="1358" r="32" fill="url(#green)"/>
+      <path d="M147 1357L160 1370L181 1344" stroke="#052E16" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="212" y="1348" fill="#ECFDF5" font-size="31" font-weight="900">Validated tactical puzzle</text>
+      <text x="212" y="1387" fill="#A7F3D0" font-size="22" font-weight="550">Discriminator + python-chess + Stockfish keep only legal, useful puzzles.</text>
+    </g>
+  </g>
+</svg>

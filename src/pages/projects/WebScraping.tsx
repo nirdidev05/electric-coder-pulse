@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, Globe, Shield, Zap, Server } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ProjectTechShowcase } from "@/components/ProjectTechShowcase";
 
 const WebScraping = () => {
   return (
@@ -58,6 +59,8 @@ const WebScraping = () => {
           </div>
         </div>
       </motion.section>
+
+      <ProjectTechShowcase projectId="web-scraping" className="py-16" />
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

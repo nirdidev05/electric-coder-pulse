@@ -44,7 +44,7 @@ export function Footer({ project = "gan" }: FooterProps) {
     link1.href = "/TP_Echecs.pdf"
     link1.download = "TP_Echecs.pdf"
     const link2 = document.createElement("a")
-    link2.href = "/Rapport_Technique_Global.pdf"
+    link2.href = "/Rapport Technique Global (1).pdf"
     link2.download = "Rapport_Technique_Global.pdf"
     link1.click()
     setTimeout(() => {

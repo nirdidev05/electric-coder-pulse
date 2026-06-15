@@ -1,6 +1,19 @@
 import { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '@/hooks/useTranslation';
+import { projectTechnologyProfiles, type ProjectTechnologyId } from '@/lib/project-technologies';
+
+interface ProjectCardData {
+  id: ProjectTechnologyId;
+  title: string;
+  description: string;
+  tech: string[];
+  focus: string;
+  highlights: string[];
+  category: string;
+  status: string;
+  component: string;
+}
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
@@ -9,12 +22,14 @@ const Projects = () => {
 
   const PROJECTS_PER_PAGE = 4;
 
-  const projects = useMemo(() => [
+  const projects = useMemo<ProjectCardData[]>(() => [
     {
       id: "FORECASTER",
       title: t.projects.items.dataAnalytics.title,
       description: t.projects.items.dataAnalytics.description,
-      tech: ["Python", "PyTorch", "React", "SQL"],
+      tech: projectTechnologyProfiles.FORECASTER.cardTech,
+      focus: projectTechnologyProfiles.FORECASTER.cardFocus,
+      highlights: projectTechnologyProfiles.FORECASTER.cardHighlights,
       category: "Data Science",
       status: "Featured",
       component: "DataAnalytics"
@@ -23,7 +38,9 @@ const Projects = () => {
       id: "nlp-sentiment",
       title: t.projects.items.nlpSentiment.title,
       description: t.projects.items.nlpSentiment.description,
-      tech: ["Python", "NLP", "Transformers", "FastAPI"],
+      tech: projectTechnologyProfiles["nlp-sentiment"].cardTech,
+      focus: projectTechnologyProfiles["nlp-sentiment"].cardFocus,
+      highlights: projectTechnologyProfiles["nlp-sentiment"].cardHighlights,
       category: "AI/ML",
       status: "In Progress",
       component: "NLPSentiment"
@@ -32,7 +49,9 @@ const Projects = () => {
       id: "computer-vision",
       title: t.projects.items.computerVision.title,
       description: t.projects.items.computerVision.description,
-      tech: ["PyTorch", "GANs", "OpenCV", "Python"],
+      tech: projectTechnologyProfiles["computer-vision"].cardTech,
+      focus: projectTechnologyProfiles["computer-vision"].cardFocus,
+      highlights: projectTechnologyProfiles["computer-vision"].cardHighlights,
       category: "Deep Learning",
       status: "Completed",
       component: "GAN"
@@ -41,7 +60,9 @@ const Projects = () => {
       id: "data-visualization",
       title: t.projects.items.dataVisualization.title,
       description: t.projects.items.dataVisualization.description,
-      tech: ["React", "D3.js", "Python", "Tailwind"],
+      tech: projectTechnologyProfiles["data-visualization"].cardTech,
+      focus: projectTechnologyProfiles["data-visualization"].cardFocus,
+      highlights: projectTechnologyProfiles["data-visualization"].cardHighlights,
       category: "Frontend",
       status: "Featured",
       component: "DataVisualization"
@@ -50,7 +71,9 @@ const Projects = () => {
       id: "web-scraping",
       title: "Web Scraping Tool",
       description: "Advanced web scraping tool with proxy rotation and anti-detection features",
-      tech: ["Python", "Selenium", "BeautifulSoup", "Scrapy"],
+      tech: projectTechnologyProfiles["web-scraping"].cardTech,
+      focus: projectTechnologyProfiles["web-scraping"].cardFocus,
+      highlights: projectTechnologyProfiles["web-scraping"].cardHighlights,
       category: "Automation",
       status: "Completed",
       component: "WebScraping"
@@ -59,16 +82,20 @@ const Projects = () => {
       id: "gpt-app",
       title: t.projects.items.GPT.title,
       description: t.projects.items.GPT.description,
-       tech: ["Python", "PyTorch", "Transformers", "CUDA", "Hugging Face", "TensorBoard"],
-  category: "AI/ML",
-  status: "In Progress",
-  component: "GPTCodeTracer"
+      tech: projectTechnologyProfiles["gpt-app"].cardTech,
+      focus: projectTechnologyProfiles["gpt-app"].cardFocus,
+      highlights: projectTechnologyProfiles["gpt-app"].cardHighlights,
+      category: "AI/ML",
+      status: "In Progress",
+      component: "GPTCodeTracer"
     },
     {
       id: "Protein",
       title: t.projects.items.PROTEIN.title,
       description: t.projects.items.PROTEIN.description,
-tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "Pandas"],
+      tech: projectTechnologyProfiles.Protein.cardTech,
+      focus: projectTechnologyProfiles.Protein.cardFocus,
+      highlights: projectTechnologyProfiles.Protein.cardHighlights,
       category: "Bioinformatics/ML",
       status: "Featured",
       component: "Protein"
@@ -77,7 +104,9 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
       id: "pfas-tracking",
       title: "Tracking Forever Pollution: PFAS Knowledge Graph",
       description: "Research project: Unification of 104 European datasets and MCDA risk scoring algorithm using Neo4j and Python",
-      tech: ["Python", "Neo4j", "Cypher", "Pandas", "ETL Pipeline", "MCDA"],
+      tech: projectTechnologyProfiles["pfas-tracking"].cardTech,
+      focus: projectTechnologyProfiles["pfas-tracking"].cardFocus,
+      highlights: projectTechnologyProfiles["pfas-tracking"].cardHighlights,
       category: "Data Engineering",
       status: "Featured",
       component: "PFASTracking"
@@ -122,7 +151,7 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
     return allowedComponents.includes(component);
   };
 
-  const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+  const ProjectCard = ({ project, index }: { project: ProjectCardData; index: number }) => {
     const isHovered = hoveredProject === index;
     const isValidComponent = isValidProjectComponent(project.component);
 
@@ -159,6 +188,18 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
                 <span className="text-sm text-muted-foreground font-medium">{project.category}</span>
                 <h3 className="text-xl font-bold mt-1 mb-3">{project.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+              </div>
+
+              <div className="pt-3 border-t border-border/50 space-y-2">
+                <p className="text-sm font-medium text-foreground">{project.focus}</p>
+                <ul className="space-y-1">
+                  {project.highlights.map((highlight: string) => (
+                    <li key={highlight} className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
+                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -232,6 +273,18 @@ tech: ["Python", "PyTorch", "Scikit-learn", "CatBoost", "LightGBM", "XGBoost", "
               <span className="text-sm text-muted-foreground font-medium">{project.category}</span>
               <h3 className="text-xl font-bold mt-1 mb-3">{project.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{project.description}</p>
+            </div>
+
+            <div className="pt-3 border-t border-border/50 space-y-2">
+              <p className="text-sm font-medium text-foreground">{project.focus}</p>
+              <ul className="space-y-1">
+                {project.highlights.map((highlight: string) => (
+                  <li key={highlight} className="flex gap-2 text-xs text-muted-foreground leading-relaxed">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div className="flex flex-wrap gap-2">

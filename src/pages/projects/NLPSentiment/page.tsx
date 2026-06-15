@@ -8,6 +8,7 @@ import FutureDirections from "@/components/future-directions"
 import CompetitionResults from "@/components/competition-results"
 import TechnicalInnovations from "@/components/technical-innovations"
 import ConclusionSection from "@/components/conclusion-section"
+import { ProjectTechShowcase } from "@/components/ProjectTechShowcase"
 
 export default function MarketPulseTechnicalShowcase() {
   return (
@@ -47,6 +48,7 @@ export default function MarketPulseTechnicalShowcase() {
         <ProjectContext />
         <TechnicalMethodology />
         <PortfolioDocumentation />
+        <ProjectTechShowcase projectId="nlp-sentiment" className="py-20" />
         <FutureDirections />
         <CompetitionResults />
         <TechnicalInnovations />

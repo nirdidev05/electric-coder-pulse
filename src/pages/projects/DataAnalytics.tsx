@@ -9,6 +9,7 @@ import CodeExamples from '@/components/CodeExamples';
 import ResultsMetrics from '@/components/ResultsMetrics';
 import TechnologyStack from '@/components/TechnologyStack';
 import Footer from '@/components/Footere';
+import { ProjectTechShowcase } from '@/components/ProjectTechShowcase';
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <CodeExamples />
         <ResultsMetrics />
         <TechnologyStack />
+        <ProjectTechShowcase projectId="FORECASTER" className="py-20 bg-background" />
       </main>
       <Footer />
     </div>

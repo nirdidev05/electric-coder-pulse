@@ -9,6 +9,7 @@ import Results from '@/components/Resultss';
 import Implementation from '@/components/Implementation';
 import Footer from '@/components/Foter';
 import MatrixBackground from '@/components/MatrixBackground';
+import { ProjectTechShowcase } from '@/components/ProjectTechShowcase';
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <section className="relative z-10">
           <Implementation />
         </section>
+        <ProjectTechShowcase projectId="gpt-app" className="py-20" />
       </main>
       
       {/* Footer - Highest z-index to ensure all buttons are clickable */}

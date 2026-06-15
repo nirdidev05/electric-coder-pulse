@@ -6,6 +6,7 @@ import { NavigationBar } from "@/components/navigation-bar"
 import { MainContent } from "@/components/main-content"
 import { Footer } from "@/components/footer-copy"
 import { ScrollToTop } from "@/components/ui/scroll-to-top"
+import { ProjectTechShowcase } from "@/components/ProjectTechShowcase"
 import { sections } from "@/lib/constants"
 
 export default function ChessGANProject() {
@@ -21,6 +22,7 @@ export default function ChessGANProject() {
       <HeroSection />
       <NavigationBar sections={sections} activeSection={activeSection} setActiveSection={setActiveSection} />
       <MainContent activeSection={activeSection} expandedCards={expandedCards} toggleCard={toggleCard} />
+      <ProjectTechShowcase projectId="computer-vision" className="py-16" />
       <Footer />
       <ScrollToTop />
     </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Layout, ChevronDown } from "lucide-react"
+import { ChevronDown, Layout } from "lucide-react"
 import { useTranslation } from '@/hooks/useTranslation'
 
 interface ArchitectureDiagramProps {
@@ -24,11 +24,11 @@ export function ArchitectureDiagram({ expanded, toggle }: ArchitectureDiagramPro
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="relative">
+        <div className="relative scroll-mt-28 rounded-xl border border-border bg-card/40 p-2 overflow-hidden">
           <img
-            src="/architecture_diagram.png"
-            alt={t.gan.ganArchitecture.title}
-            className="w-full rounded-md max-w-full h-auto"
+            src="/gan_architecture_explainer.svg"
+            alt="Hybrid Chess Puzzle GAN explanatory image showing FEN data, conditional generation, discriminator quality control and Stockfish validation"
+            className="w-full rounded-lg max-w-full h-auto"
             loading="lazy"
           />
         </div>

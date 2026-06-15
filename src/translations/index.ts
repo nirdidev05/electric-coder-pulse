@@ -3317,7 +3317,7 @@ const translations: Record<string, Translation> = {
     hero: {
       greeting: "Hello, I'm",
       name: "Walid BENBOUTA",
-      title: "AI & Data Engineer | Data Scientist | AI Agents",
+      title: "AI & Data Engineer",
       me:"Crafting bold, responsible AI from raw data to real-world impact. With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.",
       description: "M1 student in Computer Science at Claude Bernard University and fresh graduate from the National Higher School of Computer Science (ESI Algiers).",
       getInTouch: "Get In Touch",
@@ -9021,7 +9021,7 @@ if (ml_score > 0.3) {
     hero: {
       greeting: "Bonjour, je suis",
       name: "Walid BENBOUTA",
-      title: "Ingénieur IA & Data | Data Scientist | Agents IA",
+      title: "Ingénieur IA & Data",
       me:"Je crée une IA audacieuse et responsable, à partir de données brutes et pour un impact concret. Fort de mon expertise en IA, science des données et apprentissage profond, je transforme les données en informations par l'exploration, la modélisation et le déploiement. Récompensé lors des plus grands concours algériens, je construis des systèmes intelligents qui parlent, pensent et résolvent des problèmes.",
       description: "Étudiant en M1 Informatique à l'Université Claude Bernard et fraîchement diplômé de l'École Nationale Supérieure d'Informatique (ESI Alger).",
       getInTouch: "Contactez-moi",
@@ -16037,7 +16037,7 @@ Start: 2025-08-29 18:14:00 UTC
     hero: {
       greeting: "Hallo, ich bin",
       name: "Walid BENBOUTA", 
-      title: "KI- und Daten-Ingenieur | Data Scientist | KI-Agenten",
+      title: "KI & Data Engineer",
       me:"Ich habe eine kühne und verantwortungsbewusste IA geschaffen, die aus rohen Menschen besteht und einen stoßfesten Beton ausgießt. Ich verfüge über mein Fachwissen in IA, die Wissensvermittlung und die umfassende Ausbildung, ich wandele die Daten in Informationen für die Erkundung, die Modellierung und den Einsatz um. Für mehr als 100.000 Teilnehmer in Algerien wurden die intelligenten Systeme, mit denen ich gesprochen habe, konstruiert, nachgedacht und die Probleme gelöst.",
       description: "Masterstudent (M1) in Informatik an der Universität Claude Bernard und frischgebackener Absolvent der Nationalen Hochschule für Informatik (ESI Algier).",
       getInTouch: "Kontakt aufnehmen",
@@ -23178,7 +23178,7 @@ Inicio: 2025-08-29 18:14:00 UTC
     hero: {
       greeting: "Hola, soy",
       name: "Walid BENBOUTA",
-      title: "Ingeniero de IA y Datos | Científico de Datos | Agentes de IA",
+      title: "Ingeniero IA & Data",
       me:"Creo IA audaz y responsable a partir de datos sin procesar para lograr un impacto concreto. Basándome en mi experiencia en IA, ciencia de datos y aprendizaje profundo, transformo los datos en conocimiento mediante la exploración, el modelado y la implementación. Tras haber ganado premios en importantes competiciones argelinas, construyo sistemas inteligentes que hablan, piensan y resuelven problemas.",
       description: "Estudiante de primer año de máster (M1) en Informática en la Universidad Claude Bernard y recién graduado de la Escuela Nacional Superior de Informática (ESI Argel).",
       getInTouch: "Contactar",
@@ -26665,7 +26665,7 @@ if (puntuacion_ml > 0.3) {
     hero: {
       greeting: "مرحباً، أنا",
       name: "وليد بن بوتة",
-      title: "مهندس ذكاء اصطناعي وبيانات | عالم بيانات | وكلاء الذكاء الاصطناعي",
+      title: "مهندس ذكاء اصطناعي وبيانات",
       me:"أُنشئ ذكاءً اصطناعيًا جريئًا ومسؤولًا من البيانات الخام لتحقيق تأثير ملموس. بالاعتماد على خبرتي في الذكاء الاصطناعي وعلوم البيانات والتعلم العميق، أُحوّل البيانات إلى معرفة من خلال الاستكشاف والنمذجة والتطبيق. بعد فوزي بجوائز في مسابقات جزائرية كبرى، أبني أنظمة ذكية تتحدث وتفكر وتحل المشكلات.",
       description: "طالب سنة أولى ماستر (M1) في الإعلام الآلي بجامعة كلود برنارد، وخريج حديث من المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر).",
       getInTouch: "تواصل معي",

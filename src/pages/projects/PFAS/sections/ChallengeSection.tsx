@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 import { AlertTriangle, Database, FileQuestion, Network } from "lucide-react";
 
 export const ChallengeSection = () => {
+  const datasetStats = [
+    { value: "952,727", label: "Measurements collected across Europe" },
+    { value: "104", label: "Agencies and heterogeneous data sources" },
+    { value: "287,431", label: "Unique contaminated or suspected sites" },
+    { value: "600 MB", label: "Cleaned dataset ready for analysis" },
+  ];
+
   return (
     <div className="space-y-12">
       <motion.div
@@ -14,6 +21,42 @@ export const ChallengeSection = () => {
           The "Forever Pollution Project" released 104 heterogeneous datasets covering European PFAS contamination sites. 
           Traditional relational database approaches failed due to extreme structural variability across sources.
         </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {datasetStats.map((stat) => (
+            <div key={stat.value} className="bg-card rounded-xl border border-border p-4 shadow-lg">
+              <p className="text-2xl font-bold text-blue-400">{stat.value}</p>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="bg-gradient-to-br from-red-500/10 via-orange-500/5 to-blue-500/5 rounded-xl p-8 border border-red-500/20 shadow-lg"
+      >
+        <h3 className="text-2xl font-bold mb-4 text-foreground">Real Case: Rhône River, South of Lyon</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+          The poster focuses on the Pierre-Bénite industrial platform because it makes the problem tangible: PFAS are not only
+          abstract database rows, they move through rivers, aquifers, tap water, soil, eggs, poultry, and fish.
+        </p>
+        <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="rounded-lg border border-red-500/20 bg-red-500/5 p-4">
+            <p className="text-xl font-bold text-red-400">3.5 tonnes/year</p>
+            <p className="mt-2 text-muted-foreground">PFAS discharged into the Rhône every year since 2011 from the Arkema industrial context.</p>
+          </div>
+          <div className="rounded-lg border border-amber-500/20 bg-amber-500/5 p-4">
+            <p className="text-xl font-bold text-amber-400">695 ng/L</p>
+            <p className="mt-2 text-muted-foreground">Measured in wells 14 km away through underground aquifer transfer, around 7x the EU limit.</p>
+          </div>
+          <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4">
+            <p className="text-xl font-bold text-blue-400">67%</p>
+            <p className="mt-2 text-muted-foreground">Of local tap water samples exceeded the EU limit in affected communes around Lyon.</p>
+          </div>
+        </div>
       </motion.div>
 
       {/* Challenge Cards */}
@@ -176,6 +219,26 @@ export const ChallengeSection = () => {
             <p className="text-muted-foreground">
               Connecting sites, substances, and measurements via foreign keys creates 
               deeply nested queries with poor performance on large datasets.
+            </p>
+          </div>
+        </div>
+        <div className="mt-6 grid md:grid-cols-3 gap-4 text-xs">
+          <div className="rounded-lg border border-red-500/20 bg-background/60 p-4">
+            <p className="font-semibold text-red-400 mb-2">JSON fields silently disappear</p>
+            <p className="text-muted-foreground">
+              A query such as <code className="bg-muted px-1 py-0.5 rounded">json_extract(details, '$.id_station')</code> returns NULL for many sources because each country hides different keys.
+            </p>
+          </div>
+          <div className="rounded-lg border border-amber-500/20 bg-background/60 p-4">
+            <p className="font-semibold text-amber-400 mb-2">Suspected sites are undercounted</p>
+            <p className="text-muted-foreground">
+              Aggregates like <code className="bg-muted px-1 py-0.5 rounded">AVG(pfas_sum)</code> ignore NULL measurements, making contamination look lower than the evidence suggests.
+            </p>
+          </div>
+          <div className="rounded-lg border border-blue-500/20 bg-background/60 p-4">
+            <p className="font-semibold text-blue-400 mb-2">Coordinate systems collide</p>
+            <p className="text-muted-foreground">
+              Mixing Lambert-93 and WGS84 without reprojection can place French industrial sites in impossible locations. The graph pipeline normalizes all locations before loading.
             </p>
           </div>
         </div>

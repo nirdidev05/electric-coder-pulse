@@ -16,6 +16,33 @@ export const ResultsSection = () => {
         </p>
       </motion.div>
 
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        className="bg-gradient-to-r from-red-500/10 to-orange-500/5 rounded-xl p-8 border border-red-500/20 shadow-lg"
+      >
+        <h3 className="text-2xl font-bold mb-4 text-foreground">What 17,500,000 ng/L Actually Means</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+          The graph query did more than rank sites: it exposed a concentration value so high that it needed a dedicated reality check.
+          In the poster narrative, this number is used as the clearest proof that reputation-only scoring is not enough.
+        </p>
+        <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-4">
+            <p className="font-semibold text-emerald-400">Low concern baseline</p>
+            <p className="mt-2 text-muted-foreground">Regulatory thresholds are typically discussed at the tens to hundreds of ng/L scale.</p>
+          </div>
+          <div className="rounded-lg border border-amber-500/20 bg-amber-500/5 p-4">
+            <p className="font-semibold text-amber-400">Arkema comparison</p>
+            <p className="mt-2 text-muted-foreground">Arkema reached 109,000 ng/L in groundwater, already an important contamination signal.</p>
+          </div>
+          <div className="rounded-lg border border-red-500/20 bg-red-500/5 p-4">
+            <p className="font-semibold text-red-400">Salindres hotspot</p>
+            <p className="mt-2 text-muted-foreground">17.5M ng/L is roughly 160x higher than the Arkema peak and would be missed without trace validation.</p>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Vallée de la Chimie Case Study */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
@@ -271,6 +298,15 @@ export const ResultsSection = () => {
               This methodology proves that <strong>Property Graphs are superior to SQL databases</strong> for 
               integrating heterogeneous environmental data, offering a reusable pipeline for tracking other 
               "forever chemicals" (heavy metals, dioxins, microplastics).
+            </p>
+          </div>
+
+          <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-4">
+            <p className="text-sm font-semibold text-blue-400 mb-2">People & Nature</p>
+            <p className="text-xs text-muted-foreground">
+              Around Pierre-Bénite, the same contamination chain reaches taps, soils, eggs, poultry, and Rhône fish.
+              The graph makes these connections explicit, so scientists, governments, and journalists can prioritize
+              urgent clean-up instead of treating each measurement as an isolated spreadsheet row.
             </p>
           </div>
         </div>

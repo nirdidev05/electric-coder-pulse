@@ -66,9 +66,30 @@ export const SolutionSection = () => {
                 </ul>
                 <div className="bg-muted/30 rounded-lg p-4 font-mono text-sm">
                   <p className="text-emerald-500 mb-2"># Output Statistics</p>
-                  <p>Total rows processed: <span className="text-foreground">952,439</span></p>
-                  <p>Unique sites identified: <span className="text-foreground">287,643</span></p>
+                  <p>Total rows processed: <span className="text-foreground">952,727</span></p>
+                  <p>Unique sites identified: <span className="text-foreground">287,431</span></p>
                   <p>Data completeness: <span className="text-foreground">87.3%</span></p>
+                  <p>Geolocation correctness: <span className="text-foreground">97.9%</span></p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="rounded-lg border border-orange-500/20 bg-orange-500/5 p-4">
+                    <p className="text-sm font-semibold text-orange-400 mb-2">Extract</p>
+                    <p className="text-xs leading-relaxed">
+                      Read the 104 original Python scripts and recovered hidden country-specific rules, data conventions, and parser errors.
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-blue-500/20 bg-blue-500/5 p-4">
+                    <p className="text-sm font-semibold text-blue-400 mb-2">Transform</p>
+                    <p className="text-xs leading-relaxed">
+                      Fixed 127 chemical names, converted 9 coordinate systems to WGS84, normalized all units to ng/L, and decoded polymorphic JSON.
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-emerald-500/20 bg-emerald-500/5 p-4">
+                    <p className="text-sm font-semibold text-emerald-400 mb-2">Load</p>
+                    <p className="text-xs leading-relaxed">
+                      Produced 4 clean import files: sites, measurements, substances, and graph connections ready for Neo4j Data Importer.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

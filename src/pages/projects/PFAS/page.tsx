@@ -19,7 +19,7 @@ export default function PFASTracking() {
         setActiveSection={setActiveSection} 
       />
       <MainContentPFAS activeSection={activeSection} />
-      <Footer />
+      <Footer project="pfas" />
     </div>
   );
 }

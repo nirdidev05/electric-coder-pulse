@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import {
   Brain,
+  ArrowLeft,
   Menu,
   X,
   Dna,
@@ -70,6 +71,14 @@ const Navigation: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="hidden sm:inline">Back to Projects</span>
+          </a>
+
           {/* Logo (now clickable to scroll to top) */}
           <button
             type="button"

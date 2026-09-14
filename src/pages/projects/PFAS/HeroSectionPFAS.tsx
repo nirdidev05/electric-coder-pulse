@@ -8,6 +8,7 @@ import {
   MapPin,
   Activity,
   Layers,
+  ArrowLeft,
   ArrowRight,
   ChevronDown,
   Sparkles,
@@ -286,8 +287,16 @@ export const HeroSectionPFAS = () => {
         <motion.nav 
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="absolute top-0 left-0 right-0 p-6 flex justify-between items-center"
+          className="absolute top-0 left-0 right-0 p-6 flex items-center gap-6"
         >
+          <a
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 transition-colors hover:text-white"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="hidden sm:inline">Back to Projects</span>
+          </a>
+
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0080FF] to-[#00BFFF] flex items-center justify-center">
               <Database className="w-4 h-4 text-white" />

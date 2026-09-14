@@ -93,6 +93,13 @@ export default function HeroSection() {
       { icon: Brain, value: t.MarketPulseContentType.hero.metrics.features.value, label: t.MarketPulseContentType.hero.metrics.features.label, color: "#61dafb" }
   ];
 
+  const forecastBars = [38, 52, 45, 64, 58, 72, 67, 84, 76, 92];
+  const forecastSignals = [
+    { label: "Price momentum", value: "+12.8%", color: "#61dafb" },
+    { label: "News sentiment", value: "Positive", color: "#34d399" },
+    { label: "Model confidence", value: "94.2%", color: "#a78bfa" },
+  ];
+
 
   return (
     <section className="relative overflow-hidden min-h-screen flex flex-col">
@@ -209,17 +216,17 @@ export default function HeroSection() {
       </nav>
 
       {/* Content */}
-      <div id="home" className="relative z-10 max-w-7xl mx-auto flex-1 px-4 pt-24 pb-16 sm:px-6 lg:px-8 flex flex-col justify-center">
-        <div className="text-center">
+      <div id="home" className="relative z-10 max-w-7xl mx-auto flex-1 px-4 pt-28 pb-16 sm:px-6 lg:px-8 flex flex-col justify-center">
+        <div className="grid lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)] gap-12 xl:gap-20 items-center">
           {/* Achievement Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="mb-8"
+            className="lg:col-span-2 justify-self-start"
           >
             <Badge
-              className="mb-4 px-6 py-3 text-lg font-semibold backdrop-blur-sm"
+              className="px-5 py-2.5 text-sm font-semibold backdrop-blur-sm"
               style={{
                 background: 'linear-gradient(to right, #646cff20, #61dafb20)',
                 color: '#61dafb',
@@ -231,103 +238,152 @@ export default function HeroSection() {
             </Badge>
           </motion.div>
 
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
-          >
-            <span
-              className="bg-clip-text text-transparent drop-shadow-2xl"
-              style={{
-                backgroundImage: `linear-gradient(to right, #646cff, #61dafb, #646cff)`,
-              }}
+          <div className="space-y-8">
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[0.98]"
             >
-              {t.MarketPulseContentType.hero.title.main}
-            </span>
-            <span className="block text-slate-200 text-2xl sm:text-3xl lg:text-4xl mt-4 font-light">
-              {t.MarketPulseContentType.hero.title.subtitle}
-            </span>
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="mb-8"
-          >
-            <p className="text-xl sm:text-2xl text-slate-300 mb-4">
-              {t.MarketPulseContentType.hero.description.primary}
-            </p>
-            {/* Note: The secondary description is a single string in the object. For complex styling, you might need a component that handles HTML or interpolation. */}
-            <p className="text-lg text-slate-400 max-w-3xl mx-auto">
-              {t.MarketPulseContentType.hero.description.secondary}
-            </p>
-          </motion.div>
-
-          {/* Key Metrics */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
-          >
-            {metrics.map(({ icon: Icon, value, label, color }, index) => (
-              <motion.div
-                key={label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-                className="p-6 backdrop-blur-sm rounded-xl border transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: 'rgba(100, 108, 255, 0.1)',
-                  borderColor: 'rgba(100, 108, 255, 0.3)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = color + '80';
-                  e.currentTarget.style.boxShadow = `0 0 20px ${color}40`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(100, 108, 255, 0.3)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                <Icon className="w-8 h-8 mx-auto mb-3" style={{ color }} />
-                <div className="text-2xl font-bold mb-1" style={{ color }}>{value}</div>
-                <div className="text-slate-300 text-sm">{label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {/* Technical Highlights */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-3 text-sm"
-          >
-            {technologies.map((tech, index) => (
               <span
-                key={tech}
-                className="px-4 py-2 text-slate-300 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: index % 2 === 0 ? '#646cff20' : '#61dafb20',
-                  borderColor: index % 2 === 0 ? '#646cff40' : '#61dafb40',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = index % 2 === 0 ? '#646cff' : '#61dafb';
-                  e.currentTarget.style.borderColor = index % 2 === 0 ? '#646cff' : '#61dafb';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#cbd5e1';
-                  e.currentTarget.style.borderColor = index % 2 === 0 ? '#646cff40' : '#61dafb40';
-                }}
+                className="bg-clip-text text-transparent drop-shadow-2xl"
+                style={{ backgroundImage: `linear-gradient(to right, #646cff, #61dafb, #646cff)` }}
               >
-                {tech}
+                {t.MarketPulseContentType.hero.title.main}
               </span>
-            ))}
+              <span className="block text-slate-200 text-2xl sm:text-3xl lg:text-4xl mt-5 font-light leading-tight">
+                {t.MarketPulseContentType.hero.title.subtitle}
+              </span>
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="space-y-4 max-w-2xl"
+            >
+              <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed">
+                {t.MarketPulseContentType.hero.description.primary}
+              </p>
+              <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+                {t.MarketPulseContentType.hero.description.secondary}
+              </p>
+            </motion.div>
+
+            {/* Key Metrics */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="grid grid-cols-3 gap-3 max-w-2xl"
+            >
+              {metrics.map(({ icon: Icon, value, label, color }, index) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
+                  className="p-4 rounded-xl border backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+                  style={{ backgroundColor: 'rgba(100, 108, 255, 0.1)', borderColor: 'rgba(100, 108, 255, 0.3)' }}
+                >
+                  <Icon className="w-5 h-5 mb-3" style={{ color }} />
+                  <div className="text-xl font-bold mb-1" style={{ color }}>{value}</div>
+                  <div className="text-slate-400 text-xs leading-tight">{label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Technical Highlights */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="flex flex-wrap gap-2 text-sm"
+            >
+              {technologies.map((tech, index) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1.5 text-slate-300 rounded-full border backdrop-blur-sm transition-all duration-300 hover:scale-105"
+                  style={{ backgroundColor: index % 2 === 0 ? '#646cff20' : '#61dafb20', borderColor: index % 2 === 0 ? '#646cff40' : '#61dafb40' }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Animated Forecast Visualization */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
+            className="relative"
+          >
+            <div className="absolute -inset-5 rounded-[2rem] bg-[#646cff]/10 blur-3xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-slate-700/80 bg-[#111827]/85 shadow-2xl backdrop-blur-xl">
+              <div className="flex items-center gap-3 border-b border-slate-700/70 px-5 py-4">
+                <div className="flex gap-1.5">
+                  <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
+                </div>
+                <span className="font-mono text-xs text-slate-400">marketpulse_forecast.py</span>
+                <span className="ml-auto flex items-center gap-2 font-mono text-xs text-emerald-400">
+                  <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" /> LIVE MODEL
+                </span>
+              </div>
+
+              <div className="p-5 sm:p-7">
+                <div className="mb-7 flex items-start justify-between">
+                  <div>
+                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-500">Multimodal signal</p>
+                    <p className="mt-2 text-2xl font-semibold text-white">Forecast horizon</p>
+                    <p className="mt-1 text-sm text-slate-400">Price + news sentiment + technical features</p>
+                  </div>
+                  <div className="rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-right">
+                    <div className="text-lg font-bold text-emerald-300">+8.6%</div>
+                    <div className="text-[10px] uppercase tracking-wider text-emerald-400/70">Expected move</div>
+                  </div>
+                </div>
+
+                <div className="relative mb-7 flex h-44 items-end gap-2 border-b border-l border-slate-700/70 px-3 pb-0 pt-5">
+                  <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_49%,rgba(100,108,255,0.12)_50%,transparent_51%)] bg-[length:100%_33.33%]" />
+                  {forecastBars.map((barValue, index) => (
+                    <motion.div
+                      key={`${barValue}-${index}`}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: `${barValue}%`, opacity: 1 }}
+                      transition={{ delay: 0.7 + index * 0.08, duration: 0.7, ease: "easeOut" }}
+                      className={`relative flex-1 rounded-t-sm ${index > 6 ? "bg-gradient-to-t from-[#646cff] to-[#61dafb]" : "bg-slate-600/80"}`}
+                    >
+                      {index === forecastBars.length - 1 && (
+                        <motion.span
+                          animate={{ opacity: [0.3, 1, 0.3], scale: [0.8, 1.2, 0.8] }}
+                          transition={{ duration: 1.8, repeat: Infinity }}
+                          className="absolute -right-1 -top-1 h-2.5 w-2.5 rounded-full bg-[#61dafb] shadow-[0_0_14px_#61dafb]"
+                        />
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                  {forecastSignals.map((signal, index) => (
+                    <motion.div
+                      key={signal.label}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.1 + index * 0.12 }}
+                      className="rounded-lg border border-slate-700/70 bg-slate-900/60 p-3"
+                    >
+                      <span className="block text-xs text-slate-500">{signal.label}</span>
+                      <span className="mt-1 block text-sm font-semibold" style={{ color: signal.color }}>{signal.value}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

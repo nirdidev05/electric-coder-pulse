@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BarChart3, CalendarDays, ChefHat, Clock3, Database, Sparkles, TrendingDown, Users, Utensils } from "lucide-react";
+import { BarChart3, CalendarDays, ChefHat, Clock3, Database, Sparkles, TrendingDown, Users, Utensils } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
 const demandBars = [48, 62, 56, 71, 65, 78, 69, 86, 74, 92, 81, 88];
@@ -27,10 +27,7 @@ const FeastHero = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-10 flex items-center justify-between gap-4 border-b border-border/50 pb-4">
-          <a href="/" className="group flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-            <span>Back to Projects</span>
-          </a>
+          <span className="hidden w-32 sm:block" aria-hidden="true" />
           <div className="flex items-center gap-2 text-sm font-semibold text-primary">
             <ChefHat className="h-4 w-4" />
             <span className="hidden sm:inline">BNP Paribas Meal Forecasting</span>

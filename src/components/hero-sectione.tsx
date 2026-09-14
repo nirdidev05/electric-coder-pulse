@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Award, BarChart3, Brain, GitBranch, Lightbulb, Target, Trophy, Menu, X } from "lucide-react";
+import { ArrowLeft, Award, BarChart3, Brain, GitBranch, Lightbulb, Target, TrendingUp, Trophy, Menu, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "@/hooks/useTranslation"; // Assuming this is your translation hook
 

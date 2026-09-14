@@ -1,5 +1,6 @@
 "use client"
 import { Brain, ArrowLeft, Sparkles, CheckCircle2, Cpu, ShieldCheck, Zap } from "lucide-react"
+import { motion } from "framer-motion"
 import { useTranslation } from '@/hooks/useTranslation'
 import { useCallback } from 'react'
 

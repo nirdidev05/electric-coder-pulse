@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# Walid Benbouta - AI / ML Portfolio
 
-## Project info
+Personal portfolio of **Walid Benbouta**, an AI and Data Science student focused on machine learning, deep learning, data engineering, NLP and applied research.
 
-**URL**: https://lovable.dev/projects/cce8afe1-7403-44be-a837-4eeadb001003
+The portfolio presents selected projects, technical case studies, competition work and research-oriented experiments through an interactive React interface.
 
-## How can I edit this code?
+## Overview
 
-There are several ways of editing your application.
+This website is designed to help recruiters, collaborators and technical teams quickly explore:
 
-**Use Lovable**
+- AI, machine learning and data engineering projects
+- Technical methodologies, model results and implementation details
+- Research work involving generative AI, NLP and graph data
+- Competition achievements and professional skills
+- Project reports, notebooks, CVs and supporting documents
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/cce8afe1-7403-44be-a837-4eeadb001003) and start prompting.
+## Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- React 18
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS
+- shadcn/ui and Radix UI
+- Framer Motion and Motion
+- Recharts
+- KaTeX for mathematical notation
+- Vercel Analytics
 
-**Use your preferred IDE**
+## Architecture
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The application is a client-side single-page application:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```text
+src/
+├── App.tsx                 # Providers and application routes
+├── pages/
+│   ├── Index.tsx           # Portfolio homepage
+│   ├── ProjectDetail.tsx   # Dynamic project pages
+│   └── projects/           # Project case studies
+├── components/             # Navigation, sections and reusable UI
+├── contexts/               # Shared application context
+├── hooks/                  # Reusable React hooks
+├── lib/                    # Constants and project metadata
+└── translations/           # Multilingual content
 
-Follow these steps:
+public/                     # Images, reports, notebooks and downloadable documents
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The homepage is composed of the navigation, hero, about, projects, achievements, contact and footer sections. Project pages are loaded lazily through React Router to keep the initial bundle focused.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Featured Projects
 
-# Step 3: Install the necessary dependencies.
-npm i
+The portfolio currently includes detailed pages for:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **Daily Meal Forecast Engine** - machine learning for cafeteria demand forecasting
+- **Multimodal Market Forecasting** - financial prediction using market data and news sentiment
+- **Chess GAN** - constrained tactical puzzle generation with neural and symbolic validation
+- **Renewable Energy Analytics** - data collection, clustering and interactive visualization
+- **Web Scraping Platform** - browser automation and scalable data extraction concepts
+- **GPT Code Tracing** - research-oriented code understanding and execution tracing
+- **Protein Subcellular Localization** - applied machine learning for protein analysis
+- **PFAS Tracking** - knowledge graphs and environmental contamination analysis
+
+## Screenshots
+
+![Walid Benbouta AI and Data Science portfolio](public/website.png)
+
+## Demo
+
+The production URL can be added here once the Vercel deployment domain is finalized:
+
+**Live demo:** `https://your-domain.example`
+
+For a local preview, follow the installation steps below.
+
+## Installation
+
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Run locally
+
+```bash
+git clone https://github.com/nirdidev05/electric-coder-pulse.git
+cd electric-coder-pulse
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server is then available at `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Production build
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Quality checks
 
-## What technologies are used for this project?
+```bash
+npm run lint
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The project is a static Vite application and can be deployed on Vercel with the following settings:
 
-## How can I deploy this project?
+| Setting | Value |
+| --- | --- |
+| Framework preset | Vite |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Install command | `npm install` |
 
-Simply open [Lovable](https://lovable.dev/projects/cce8afe1-7403-44be-a837-4eeadb001003) and click on Share -> Publish.
+Connect the GitHub repository to Vercel to enable automatic deployments from the `main` branch.
 
-## Can I connect a custom domain to my Lovable project?
+## Contact
 
-Yes, you can!
+- GitHub: [nirdidev05](https://github.com/nirdidev05)
+- LinkedIn: [Walid Benbouta](https://www.linkedin.com/in/benbouta-walid-416870291/)
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+The source code is published for portfolio and educational purposes. Project reports, research material and third-party assets may have their own terms of use.

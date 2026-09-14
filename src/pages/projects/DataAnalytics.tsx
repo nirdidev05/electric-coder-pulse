@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '@/components/navigatione';
-import HeroSection from '@/components/HeroSectionn';
+import HeroSection from '@/components/FeastHero';
 import ExecutiveSummary from '@/components/ExecutiveSummary';
 import TechnicalOverview from '@/components/TechnicalOverview';
 import DataInsights from '@/components/DataInsights';

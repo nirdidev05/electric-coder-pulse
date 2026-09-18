@@ -3,11 +3,11 @@ import { Check, ChevronDown, Globe } from "lucide-react";
 import { useLanguage, type Language } from "@/contexts/LanguageContext";
 
 const languages: Array<{ code: Language; name: string; flag: string }> = [
-  { code: "en", name: "English", flag: "US" },
-  { code: "fr", name: "Francais", flag: "FR" },
-  { code: "de", name: "Deutsch", flag: "DE" },
-  { code: "es", name: "Espanol", flag: "ES" },
-  { code: "ar", name: "العربية", flag: "AR" },
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "ar", name: "العربية", flag: "🇸🇦" },
 ];
 
 const LanguageSwitcher = () => {
@@ -35,15 +35,16 @@ const LanguageSwitcher = () => {
         aria-haspopup="listbox"
         aria-label="Choose language"
         onClick={() => setIsOpen((open) => !open)}
-        className="inline-flex items-center gap-2 rounded-lg border border-border/70 bg-background/60 px-3 py-2 text-xs font-semibold text-muted-foreground backdrop-blur-sm transition-colors hover:border-primary/50 hover:text-foreground"
+        className="flex items-center space-x-2 rounded-lg border border-slate-700/50 bg-slate-800/50 px-3 py-2 text-slate-300 transition-all duration-300 hover:bg-slate-700/50 hover:text-white"
       >
         <Globe className="h-4 w-4" />
-        <span>{currentLanguage.code.toUpperCase()}</span>
-        <ChevronDown className={`h-3.5 w-3.5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+        <span className="hidden text-sm font-medium lg:inline">{currentLanguage.flag}</span>
+        <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
+        <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
       {isOpen && (
-        <div role="listbox" className="absolute right-0 top-full z-[70] mt-2 w-40 overflow-hidden rounded-lg border border-border bg-background/95 p-1 shadow-xl backdrop-blur-xl">
+        <div role="listbox" className="absolute right-0 top-full z-[70] mt-2 w-48 overflow-hidden rounded-lg border border-slate-700/50 bg-slate-900/95 p-0 shadow-xl backdrop-blur-md">
           {languages.map((item) => (
             <button
               key={item.code}
@@ -54,11 +55,11 @@ const LanguageSwitcher = () => {
                 setLanguage(item.code);
                 setIsOpen(false);
               }}
-              className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-primary/10 ${language === item.code ? "text-primary" : "text-muted-foreground"}`}
+              className={`flex w-full items-center space-x-3 px-4 py-3 text-left transition-colors first:rounded-t-lg last:rounded-b-lg hover:bg-slate-800/50 ${language === item.code ? "bg-blue-500/10 text-blue-400" : "text-slate-300"}`}
             >
-              <span className="w-6 font-mono text-[10px] opacity-70">{item.flag}</span>
-              <span className="flex-1">{item.name}</span>
-              {language === item.code && <Check className="h-3.5 w-3.5" />}
+              <span className="text-lg">{item.flag}</span>
+              <span className="flex-1 font-medium">{item.name}</span>
+              {language === item.code && <Check className="ml-auto h-3.5 w-3.5 text-blue-400" />}
             </button>
           ))}
         </div>

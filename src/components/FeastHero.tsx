@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BarChart3, CalendarDays, ChefHat, Clock3, Database, Sparkles, TrendingDown, Users, Utensils } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const demandBars = [48, 62, 56, 71, 65, 78, 69, 86, 74, 92, 81, 88];
 
@@ -33,9 +34,12 @@ const FeastHero = () => {
             <span className="hidden sm:inline">BNP Paribas Meal Forecasting</span>
             <span className="sm:hidden">FEAST</span>
           </div>
+          <div className="flex items-center gap-3">
+          <LanguageSwitcher />
           <div className="flex items-center gap-2 font-mono text-xs text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
             <span className="hidden sm:inline">MODEL ONLINE</span>
+          </div>
           </div>
         </div>
 

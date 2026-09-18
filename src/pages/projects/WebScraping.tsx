@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Globe, Shield, Zap, Server } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ProjectTechShowcase } from "@/components/ProjectTechShowcase";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const WebScraping = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -16,6 +17,7 @@ const WebScraping = () => {
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
           </Link>
+          <LanguageSwitcher />
         </div>
       </nav>
 

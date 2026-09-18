@@ -14,6 +14,7 @@ import {
   ExternalLink
 } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navigation: React.FC = () => {
   const t = useTranslation();
@@ -105,6 +106,8 @@ const Navigation: React.FC = () => {
               </p>
             </div>
           </button>
+
+          <LanguageSwitcher />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">

@@ -22,6 +22,7 @@ import {
   GraduationCap
 } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 // Composant pour les nœuds du graphe animé en arrière-plan
 const GraphNetwork = () => {
@@ -287,7 +288,7 @@ export const HeroSectionPFAS = () => {
         <motion.nav 
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="absolute top-0 left-0 right-0 p-6 flex items-center gap-6"
+          className="absolute top-0 left-0 right-0 p-6 flex items-center justify-between gap-6"
         >
           <a
             href="/"
@@ -308,6 +309,7 @@ export const HeroSectionPFAS = () => {
             <span className="w-1 h-1 rounded-full bg-slate-600" />
             <span>2025/2026</span>
           </div>
+          <LanguageSwitcher />
         </motion.nav>
 
         {/* Contenu principal - Layout asymétrique */}

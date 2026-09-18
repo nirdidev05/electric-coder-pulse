@@ -3,6 +3,7 @@ import { Brain, ArrowLeft, Sparkles, CheckCircle2, Cpu, ShieldCheck, Zap } from 
 import { motion } from "framer-motion"
 import { useTranslation } from '@/hooks/useTranslation'
 import { useCallback } from 'react'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export function HeroSection() {
   const t = useTranslation()
@@ -78,9 +79,12 @@ export function HeroSection() {
             <span className="hidden sm:inline">Hybrid Chess Puzzle Generation</span>
             <span className="sm:hidden">Chess GAN</span>
           </div>
+          <div className="flex items-center gap-3">
+          <LanguageSwitcher />
           <div className="flex items-center gap-2 font-mono text-xs text-emerald-400">
             <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
             <span className="hidden sm:inline">PIPELINE READY</span>
+          </div>
           </div>
         </div>
 

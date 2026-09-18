@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 // Simple ArrowLeft icon component
 const ArrowLeft: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -83,6 +84,8 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -96,6 +99,7 @@ const Navigation: React.FC = () => {
                 )}
               </svg>
             </button>
+          </div>
           </div>
         </div>
 

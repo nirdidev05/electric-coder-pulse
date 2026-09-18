@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrainIcon, SummaryIcon, ProblemIcon, ArchitectureIcon, InnovationIcon, ResultsIcon, CodeIcon } from './CustomIcon';
 import { useTranslation } from '@/hooks/useTranslation';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 // ArrowLeft icon component
 const ArrowLeft: React.FC<{ className?: string }> = ({ className = '' }) => (
@@ -129,6 +130,7 @@ const Header: React.FC = () => {
 
           {/* Right Side: Research Status + Mobile Menu */}
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
           
             {/* Mobile menu button */}
             <button 

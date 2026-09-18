@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Award, BarChart3, Brain, GitBranch, Lightbulb, Target, TrendingUp, Trophy, Menu, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/hooks/useTranslation"; // Assuming this is your translation hook
 
 export default function HeroSection() {
@@ -184,6 +185,8 @@ export default function HeroSection() {
               ))}
             </div>
 
+            <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <button
               type="button"
               aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -192,6 +195,7 @@ export default function HeroSection() {
             >
               {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
+            </div>
           </div>
 
           <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? "max-h-96 mt-4" : "max-h-0"}`}>

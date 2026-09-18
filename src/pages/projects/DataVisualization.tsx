@@ -5,6 +5,7 @@ import {
 import { Link } from "react-router-dom";
 import { useTranslation } from "@/hooks/useTranslation";
 import { ProjectTechShowcase } from "@/components/ProjectTechShowcase";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const DataVisualization = () => {
   const t = useTranslation();
@@ -142,7 +143,7 @@ const DataVisualization = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -150,6 +151,7 @@ const DataVisualization = () => {
             <ArrowLeft className="w-4 h-4" />
             {t.renewable.navigation.backToProjects}
           </Link>
+          <LanguageSwitcher />
         </div>
       </nav>
 

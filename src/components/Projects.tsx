@@ -53,7 +53,7 @@ const Projects = () => {
       focus: projectTechnologyProfiles["computer-vision"].cardFocus,
       highlights: projectTechnologyProfiles["computer-vision"].cardHighlights,
       category: "Deep Learning",
-      status: "Completed",
+      status: "In Progress",
       component: "GAN"
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
       focus: projectTechnologyProfiles["data-visualization"].cardFocus,
       highlights: projectTechnologyProfiles["data-visualization"].cardHighlights,
       category: "Frontend",
-      status: "Featured",
+      status: "Completed",
       component: "DataVisualization"
     },
     {
@@ -108,7 +108,7 @@ const Projects = () => {
       focus: projectTechnologyProfiles["pfas-tracking"].cardFocus,
       highlights: projectTechnologyProfiles["pfas-tracking"].cardHighlights,
       category: "Data Engineering",
-      status: "Featured",
+      status: "Completed",
       component: "PFASTracking"
     }
   ], [t]);

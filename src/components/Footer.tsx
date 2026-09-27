@@ -56,7 +56,7 @@ const Footer = () => {
     projects: [
       { name: t.footer.links.projects.viewProjects, href: '#projects' },
       { name: t.footer.links.projects.achievements, href: '#achievements' },
-      { name: t.footer.links.projects.resume, href: '/walid\'s CV (1).pdf' },
+      { name: t.footer.links.projects.resume, href: '/CV_BENBOUTA_Walid.pdf' },
     ],
     resources: [
       { name: t.footer.links.resources.aboutMe, href: '#about' },

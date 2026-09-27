@@ -3319,7 +3319,7 @@ const translations: Record<string, Translation> = {
       name: "Walid BENBOUTA",
       title: "AI & Data Engineer",
       me:"Crafting bold, responsible AI from raw data to real-world impact. With humble expertise in AI, Data Science, and Deep Learning, I turn data into insight through exploration, modeling, and deployment. Awarded in top Algerian competitions, I build intelligent systems that speak, think, and solve.",
-      description: "M1 student in Computer Science at Claude Bernard University and fresh graduate from the National Higher School of Computer Science (ESI Algiers).",
+      description: "Second-year Master's student in Artificial Intelligence at Claude Bernard University Lyon 1 and a recent graduate of the National Higher School of Computer Science (ESI Algiers).",
       getInTouch: "Get In Touch",
       downloadResume: "Download Resume"
     },

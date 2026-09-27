@@ -3329,7 +3329,7 @@ const translations: Record<string, Translation> = {
       subtitle: "Passionate about creating intelligent solutions that make a difference",
       journey: {
         title: "My Journey",
-        intro: "Currently advancing my expertise in the M1 Computer Science program at Université Claude Bernard Lyon 1, alongside my final year at the National Higher School of Computer Science (ESI Algiers), my journey is driven by a deep passion for data and intelligent systems.",
+        intro: "Currently pursuing a second-year Master's degree in Artificial Intelligence at Université Claude Bernard Lyon 1, after graduating from the National Higher School of Computer Science (ESI Algiers), my journey is driven by a deep passion for data and intelligent systems.",
         background: "With a strong foundation in mathematics and software engineering, my path naturally evolved from building traditional information systems to engineering AI-driven solutions that can reason, automate, and support better decisions.",
         foundation: "Over the years, I built a solid data foundation: automated ETL pipelines, complex data warehouses, API integrations, real-time dashboards, and scalable end-to-end architectures shaped through projects like the RNA commune management platform and several full-stack applications.",
         focus: "The 2025/2026 academic year marked my AI pivot: I moved from organizing data to extracting predictive, generative, and agentic value from it through Machine Learning, Image Analysis, Game Theory, and Multi-Agent Systems.",
@@ -9023,7 +9023,7 @@ if (ml_score > 0.3) {
       name: "Walid BENBOUTA",
       title: "Ingénieur IA & Data",
       me:"Je crée une IA audacieuse et responsable, à partir de données brutes et pour un impact concret. Fort de mon expertise en IA, science des données et apprentissage profond, je transforme les données en informations par l'exploration, la modélisation et le déploiement. Récompensé lors des plus grands concours algériens, je construis des systèmes intelligents qui parlent, pensent et résolvent des problèmes.",
-      description: "Étudiant en M1 Informatique à l'Université Claude Bernard et fraîchement diplômé de l'École Nationale Supérieure d'Informatique (ESI Alger).",
+      description: "Étudiant en deuxième année de master en intelligence artificielle à l'Université Claude Bernard Lyon 1 et récemment diplômé de l'École Nationale Supérieure d'Informatique (ESI Alger).",
       getInTouch: "Contactez-moi",
       downloadResume: "Télécharger CV"
     },
@@ -9033,7 +9033,7 @@ if (ml_score > 0.3) {
       subtitle: "Passionné par la création de solutions intelligentes qui font la différence",
       journey: {
         title: "Mon Parcours",
-        intro: "Je développe actuellement mon expertise en M1 Informatique à l'Université Claude Bernard Lyon 1, en parallèle de ma dernière année à l'École Nationale Supérieure d'Informatique (ESI Alger), avec une passion profonde pour les données et les systèmes intelligents.",
+        intro: "Je poursuis actuellement un master 2 en intelligence artificielle à l'Université Claude Bernard Lyon 1, après avoir obtenu mon diplôme de l'École Nationale Supérieure d'Informatique (ESI Alger), avec une passion profonde pour les données et les systèmes intelligents.",
         background: "Grâce à une base solide en mathématiques et en génie logiciel, mon parcours a naturellement évolué de la construction de systèmes d'information classiques vers l'ingénierie de solutions pilotées par l'IA, capables de raisonner, d'automatiser et d'aider à décider.",
         foundation: "Au fil des années, j'ai construit une base data robuste : pipelines ETL automatisés, entrepôts de données complexes, intégrations API, tableaux de bord temps réel et architectures end-to-end scalables, notamment à travers la plateforme RNA de gestion communale et plusieurs applications full-stack.",
         focus: "L'année académique 2025/2026 marque mon pivot vers l'IA : je suis passé de l'organisation des données à l'extraction de valeur prédictive, générative et agentique grâce au Machine Learning, à l'analyse d'images, à la théorie des jeux et aux systèmes multi-agents.",
@@ -16039,7 +16039,7 @@ Start: 2025-08-29 18:14:00 UTC
       name: "Walid BENBOUTA", 
       title: "KI & Data Engineer",
       me:"Ich habe eine kühne und verantwortungsbewusste IA geschaffen, die aus rohen Menschen besteht und einen stoßfesten Beton ausgießt. Ich verfüge über mein Fachwissen in IA, die Wissensvermittlung und die umfassende Ausbildung, ich wandele die Daten in Informationen für die Erkundung, die Modellierung und den Einsatz um. Für mehr als 100.000 Teilnehmer in Algerien wurden die intelligenten Systeme, mit denen ich gesprochen habe, konstruiert, nachgedacht und die Probleme gelöst.",
-      description: "Masterstudent (M1) in Informatik an der Universität Claude Bernard und frischgebackener Absolvent der Nationalen Hochschule für Informatik (ESI Algier).",
+      description: "Masterstudent im zweiten Jahr des Studiengangs Künstliche Intelligenz an der Université Claude Bernard Lyon 1 und kürzlich Absolvent der Nationalen Hochschule für Informatik (ESI Algier).",
       getInTouch: "Kontakt aufnehmen",
       downloadResume: "Lebenslauf herunterladen"
     },
@@ -16049,7 +16049,7 @@ Start: 2025-08-29 18:14:00 UTC
       subtitle: "Leidenschaftlich über die Erschaffung intelligenter Lösungen, die einen Unterschied machen",
       journey: {
         title: "Mein Werdegang",
-        intro: "Derzeit vertiefe ich meine Expertise im M1-Studiengang Informatik an der Université Claude Bernard Lyon 1, parallel zu meinem Abschlussjahr an der Nationalen Höheren Schule für Informatik (ESI Algier), getragen von einer starken Leidenschaft für Daten und intelligente Systeme.",
+        intro: "Derzeit absolviere ich ein zweites Masterjahr im Bereich Künstliche Intelligenz an der Université Claude Bernard Lyon 1. Zuvor habe ich meinen Abschluss an der Nationalen Höheren Schule für Informatik (ESI Algier) erworben; meine Arbeit wird von einer starken Leidenschaft für Daten und intelligente Systeme getragen.",
         background: "Mit einer soliden Grundlage in Mathematik und Software Engineering hat sich mein Weg natürlich von klassischen Informationssystemen hin zu KI-gestützten Lösungen entwickelt, die schlussfolgern, automatisieren und bessere Entscheidungen unterstützen können.",
         foundation: "Über die Jahre habe ich eine robuste Datengrundlage aufgebaut: automatisierte ETL-Pipelines, komplexe Data Warehouses, API-Integrationen, Echtzeit-Dashboards und skalierbare End-to-End-Architekturen, geprägt durch Projekte wie die RNA-Plattform für Gemeindeverwaltung und mehrere Full-Stack-Anwendungen.",
         focus: "Das akademische Jahr 2025/2026 markiert meinen KI-Pivot: Ich wechselte vom Organisieren von Daten zur Gewinnung prädiktiver, generativer und agentischer Werte durch Machine Learning, Bildanalyse, Spieltheorie und Multi-Agenten-Systeme.",
@@ -23180,7 +23180,7 @@ Inicio: 2025-08-29 18:14:00 UTC
       name: "Walid BENBOUTA",
       title: "Ingeniero IA & Data",
       me:"Creo IA audaz y responsable a partir de datos sin procesar para lograr un impacto concreto. Basándome en mi experiencia en IA, ciencia de datos y aprendizaje profundo, transformo los datos en conocimiento mediante la exploración, el modelado y la implementación. Tras haber ganado premios en importantes competiciones argelinas, construyo sistemas inteligentes que hablan, piensan y resuelven problemas.",
-      description: "Estudiante de primer año de máster (M1) en Informática en la Universidad Claude Bernard y recién graduado de la Escuela Nacional Superior de Informática (ESI Argel).",
+      description: "Estudiante de segundo año de máster en Inteligencia Artificial en la Universidad Claude Bernard Lyon 1 y recién graduado de la Escuela Nacional Superior de Informática (ESI Argel).",
       getInTouch: "Contactar",
       downloadResume: "Descargar CV"
     },
@@ -23190,7 +23190,7 @@ Inicio: 2025-08-29 18:14:00 UTC
       subtitle: "Apasionado por crear soluciones inteligentes que marcan la diferencia",
       journey: {
         title: "Mi Trayectoria",
-        intro: "Actualmente profundizo mi experiencia en el programa M1 de Informática en la Université Claude Bernard Lyon 1, junto con mi último año en la Escuela Nacional Superior de Informática (ESI Argel), guiado por una profunda pasión por los datos y los sistemas inteligentes.",
+        intro: "Actualmente curso el segundo año del máster en Inteligencia Artificial en la Université Claude Bernard Lyon 1, después de graduarme en la Escuela Nacional Superior de Informática (ESI Argel), guiado por una profunda pasión por los datos y los sistemas inteligentes.",
         background: "Con una sólida base en matemáticas e ingeniería de software, mi camino evolucionó naturalmente desde la construcción de sistemas de información tradicionales hacia la ingeniería de soluciones impulsadas por IA que razonan, automatizan y apoyan mejores decisiones.",
         foundation: "A lo largo de los años, construí una base de datos robusta: pipelines ETL automatizados, almacenes de datos complejos, integraciones API, dashboards en tiempo real y arquitecturas escalables de extremo a extremo, especialmente mediante la plataforma RNA de gestión comunal y varias aplicaciones full-stack.",
         focus: "El año académico 2025/2026 marcó mi pivote hacia la IA: pasé de organizar datos a extraer valor predictivo, generativo y agéntico mediante Machine Learning, análisis de imágenes, teoría de juegos y sistemas multiagente.",
@@ -26667,7 +26667,7 @@ if (puntuacion_ml > 0.3) {
       name: "وليد بن بوتة",
       title: "مهندس ذكاء اصطناعي وبيانات",
       me:"أُنشئ ذكاءً اصطناعيًا جريئًا ومسؤولًا من البيانات الخام لتحقيق تأثير ملموس. بالاعتماد على خبرتي في الذكاء الاصطناعي وعلوم البيانات والتعلم العميق، أُحوّل البيانات إلى معرفة من خلال الاستكشاف والنمذجة والتطبيق. بعد فوزي بجوائز في مسابقات جزائرية كبرى، أبني أنظمة ذكية تتحدث وتفكر وتحل المشكلات.",
-      description: "طالب سنة أولى ماستر (M1) في الإعلام الآلي بجامعة كلود برنارد، وخريج حديث من المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر).",
+      description: "طالب في السنة الثانية من الماستر في الذكاء الاصطناعي بجامعة كلود برنارد ليون 1، وخريج حديث من المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر).",
       getInTouch: "تواصل معي",
       downloadResume: "تحميل السيرة الذاتية"
     },
@@ -26677,7 +26677,7 @@ if (puntuacion_ml > 0.3) {
       subtitle: "شغوف بإنشاء حلول ذكية تحدث فرقاً",
       journey: {
         title: "رحلتي",
-        intro: "أعمل حالياً على تطوير خبرتي في السنة الأولى ماستر إعلام آلي بجامعة كلود برنارد ليون 1، بالتوازي مع سنتي الأخيرة في المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر)، بدافع شغف عميق بالبيانات والأنظمة الذكية.",
+        intro: "أتابع حالياً السنة الثانية من الماستر في الذكاء الاصطناعي بجامعة كلود برنارد ليون 1، بعد تخرجي من المدرسة الوطنية العليا للإعلام الآلي (ESI الجزائر)، بدافع شغف عميق بالبيانات والأنظمة الذكية.",
         background: "بفضل قاعدة قوية في الرياضيات وهندسة البرمجيات، تطور مساري بشكل طبيعي من بناء أنظمة معلومات تقليدية إلى هندسة حلول مدعومة بالذكاء الاصطناعي قادرة على الاستدلال والأتمتة ودعم قرارات أفضل.",
         foundation: "على مر السنين، بنيت أساساً قوياً في البيانات: خطوط ETL آلية، مستودعات بيانات معقدة، تكاملات API، لوحات قيادة في الوقت الحقيقي، ومعماريات قابلة للتوسع من البداية إلى النهاية، خاصة عبر منصة RNA لإدارة البلديات وتطبيقات Full-Stack متعددة.",
         focus: "شكّلت السنة الأكاديمية 2025/2026 نقطة تحول نحو الذكاء الاصطناعي: انتقلت من تنظيم البيانات إلى استخراج قيمة تنبؤية وتوليدية ووكيلة منها عبر التعلم الآلي، تحليل الصور، نظرية الألعاب، والأنظمة متعددة الوكلاء.",

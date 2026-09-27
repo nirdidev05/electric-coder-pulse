@@ -8,6 +8,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProjectDetail from "./pages/ProjectDetail";
+import PostHogRouteAnalytics from "@/components/PostHogRouteAnalytics";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { inject } from "@vercel/analytics"
 
 const queryClient = new QueryClient();
@@ -31,8 +33,10 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
+        <AnalyticsConsent />
         <BrowserRouter>
           <ScrollToRouteTop />
+          <PostHogRouteAnalytics />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/project/:id" element={<ProjectDetail />} />

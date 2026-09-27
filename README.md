@@ -118,6 +118,32 @@ The project is a static Vite application and can be deployed on Vercel with the 
 
 Connect the GitHub repository to Vercel to enable automatic deployments from the `main` branch.
 
+## Analytics with PostHog
+
+The portfolio supports privacy-conscious PostHog analytics for route pageviews, UTM campaign attribution and referrer domains. The application uses the European PostHog endpoint and `person_profiles: "identified_only"`; it does not collect raw IP addresses or identify visitors without an explicit identification flow.
+
+Install the SDK with Bun:
+
+```bash
+bun add posthog-js
+```
+
+Create `.env.local` locally and add the same variables in Vercel under **Project Settings > Environment Variables**:
+
+```bash
+VITE_PUBLIC_POSTHOG_KEY=phc_your_project_key
+VITE_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
+```
+
+Use these campaign URLs for attribution:
+
+- LinkedIn: `https://benbouta-ai-portfolio.vercel.app/?utm_source=linkedin&utm_medium=social&utm_campaign=portfolio`
+- CV PDF: `https://benbouta-ai-portfolio.vercel.app/?utm_source=cv&utm_medium=pdf&utm_campaign=portfolio`
+
+Google organic traffic should be measured through the referrer domain and search-console data; an exact Google query is not reliably available to client-side analytics because of browser and search-engine privacy controls.
+
+In PostHog, verify events in **Activity** or **Live events** and inspect `$pageview` properties such as `route`, `utm_source`, `utm_medium`, `utm_campaign` and `referrer_domain`. Keep IP anonymisation enabled and configure your consent/privacy policy before enabling analytics for EU visitors.
+
 ## Contact
 
 - GitHub: [nirdidev05](https://github.com/nirdidev05)

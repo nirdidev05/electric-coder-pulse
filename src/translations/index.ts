@@ -3335,7 +3335,7 @@ const translations: Record<string, Translation> = {
         focus: "The 2025/2026 academic year marked my AI pivot: I moved from organizing data to extracting predictive, generative, and agentic value from it through Machine Learning, Image Analysis, Game Theory, and Multi-Agent Systems.",
         professional: "I applied this shift through demanding academic work, including multi-agent negotiation simulations and advanced data projects under Angela Bonifati's guidance, while also preparing ERP infrastructure for AI integration with OCR and HR chatbot use cases during my final-year internship.",
         drive: "What drives me is the thrill of solving real-world problems with elegant, data-driven solutions. I do not just write code; I build systems that connect data engineering, software architecture, and artificial intelligence into useful products.",
-        aspiration: "My ambition is to pursue an M2 in AI and keep building intelligent, autonomous systems that help organizations make smarter decisions with clarity, reliability, and measurable impact."
+        aspiration: "My ambition is to secure an internship in artificial intelligence, build a strong long-term career in the field, and grow into an AI consultant or a CTO leading AI and information systems teams."
       },
       languages: {
         title: "Languages",
@@ -9039,7 +9039,7 @@ if (ml_score > 0.3) {
         focus: "L'année académique 2025/2026 marque mon pivot vers l'IA : je suis passé de l'organisation des données à l'extraction de valeur prédictive, générative et agentique grâce au Machine Learning, à l'analyse d'images, à la théorie des jeux et aux systèmes multi-agents.",
         professional: "J'ai appliqué cette transition dans des travaux académiques exigeants, comme des simulations de négociation multi-agents et des projets data avancés encadrés par Angela Bonifati, tout en préparant une infrastructure ERP à l'intégration IA avec des cas d'usage OCR et chatbot RH durant mon stage de fin d'études.",
         drive: "Ce qui me motive, c'est le plaisir de résoudre des problèmes réels avec des solutions élégantes et guidées par les données. Je n'écris pas seulement du code ; je construis des systèmes qui relient data engineering, architecture logicielle et intelligence artificielle dans des produits utiles.",
-        aspiration: "Mon ambition est de poursuivre en M2 IA et de continuer à construire des systèmes intelligents et autonomes qui aident les organisations à prendre de meilleures décisions avec clarté, fiabilité et impact mesurable."
+        aspiration: "Mon ambition est de décrocher un stage en intelligence artificielle, de construire une carrière solide et durable dans ce domaine, puis d'évoluer vers un rôle de consultant en IA ou de CTO à la tête d'équipes dédiées à l'IA et aux systèmes d'information."
       },
       languages: {
         title: "Langues",
@@ -16055,7 +16055,7 @@ Start: 2025-08-29 18:14:00 UTC
         focus: "Das akademische Jahr 2025/2026 markiert meinen KI-Pivot: Ich wechselte vom Organisieren von Daten zur Gewinnung prädiktiver, generativer und agentischer Werte durch Machine Learning, Bildanalyse, Spieltheorie und Multi-Agenten-Systeme.",
         professional: "Diesen Wandel habe ich in anspruchsvollen akademischen Arbeiten angewendet, darunter Multi-Agenten-Verhandlungssimulationen und fortgeschrittene Datenprojekte unter der Betreuung von Angela Bonifati, sowie bei der Vorbereitung einer ERP-Infrastruktur für KI-Integration mit OCR- und HR-Chatbot-Anwendungsfällen während meines Abschlusspraktikums.",
         drive: "Was mich antreibt, ist die Freude daran, reale Probleme mit eleganten, datengetriebenen Lösungen zu lösen. Ich schreibe nicht nur Code; ich baue Systeme, die Data Engineering, Softwarearchitektur und künstliche Intelligenz zu nützlichen Produkten verbinden.",
-        aspiration: "Mein Ziel ist es, ein M2 in KI zu verfolgen und weiterhin intelligente, autonome Systeme zu entwickeln, die Organisationen dabei helfen, klarere, zuverlässigere und messbar wirksamere Entscheidungen zu treffen."
+        aspiration: "Mein Ziel ist es, ein Praktikum im Bereich künstliche Intelligenz zu absolvieren, eine starke langfristige Karriere in diesem Feld aufzubauen und mich zu einem KI-Berater oder CTO für Teams im Bereich KI und Informationssysteme weiterzuentwickeln."
       },
       languages: {
         title: "Sprachen",
@@ -23196,7 +23196,7 @@ Inicio: 2025-08-29 18:14:00 UTC
         focus: "El año académico 2025/2026 marcó mi pivote hacia la IA: pasé de organizar datos a extraer valor predictivo, generativo y agéntico mediante Machine Learning, análisis de imágenes, teoría de juegos y sistemas multiagente.",
         professional: "Apliqué esta transición en trabajos académicos exigentes, como simulaciones de negociación multiagente y proyectos avanzados de datos bajo la guía de Angela Bonifati, además de preparar una infraestructura ERP para integración de IA con casos de uso OCR y chatbots de RR. HH. durante mi práctica de fin de estudios.",
         drive: "Lo que me impulsa es resolver problemas reales con soluciones elegantes basadas en datos. No solo escribo código; construyo sistemas que conectan ingeniería de datos, arquitectura de software e inteligencia artificial en productos útiles.",
-        aspiration: "Mi ambición es continuar hacia un M2 en IA y seguir construyendo sistemas inteligentes y autónomos que ayuden a las organizaciones a tomar decisiones más claras, fiables y con impacto medible."
+        aspiration: "Mi ambición es conseguir unas prácticas en inteligencia artificial, construir una carrera sólida y duradera en este campo y evolucionar hacia un puesto de consultor de IA o CTO al frente de equipos de IA y sistemas de información."
       },
       languages: {
         title: "Idiomas",
@@ -26683,7 +26683,7 @@ if (puntuacion_ml > 0.3) {
         focus: "شكّلت السنة الأكاديمية 2025/2026 نقطة تحول نحو الذكاء الاصطناعي: انتقلت من تنظيم البيانات إلى استخراج قيمة تنبؤية وتوليدية ووكيلة منها عبر التعلم الآلي، تحليل الصور، نظرية الألعاب، والأنظمة متعددة الوكلاء.",
         professional: "طبقت هذا التحول في أعمال أكاديمية متقدمة، مثل محاكاة التفاوض بين الوكلاء ومشاريع بيانات متقدمة تحت إشراف Angela Bonifati، إلى جانب تحضير بنية ERP لدمج الذكاء الاصطناعي من خلال حالات استخدام OCR وروبوتات محادثة للموارد البشرية خلال تربصي النهائي.",
         drive: "ما يدفعني هو حل مشاكل حقيقية بحلول أنيقة قائمة على البيانات. أنا لا أكتب الكود فقط؛ بل أبني أنظمة تربط هندسة البيانات، معمارية البرمجيات، والذكاء الاصطناعي داخل منتجات مفيدة.",
-        aspiration: "طموحي هو متابعة M2 في الذكاء الاصطناعي والاستمرار في بناء أنظمة ذكية ومستقلة تساعد المؤسسات على اتخاذ قرارات أوضح وأكثر موثوقية وذات أثر قابل للقياس."
+        aspiration: "طموحي هو الحصول على تدريب في مجال الذكاء الاصطناعي، وبناء مسيرة مهنية قوية ومستدامة في هذا المجال، ثم التطور إلى دور مستشار في الذكاء الاصطناعي أو مدير تقني CTO يقود فرق الذكاء الاصطناعي ونظم المعلومات."
       },
       languages: {
         title: "اللغات",

@@ -113,7 +113,7 @@ const Hero = () => {
               </animated.button>
 
               <a
-                href="/CV_BENBOUTA_Walid.pdf"
+                href="/CV_BENBOUTA_Walid_AI.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"

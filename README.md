@@ -68,9 +68,7 @@ The portfolio currently includes detailed pages for:
 
 ## Demo
 
-The production URL can be added here once the Vercel deployment domain is finalized:
-
-**Live demo:** `https://your-domain.example`
+**Live demo:** [benbouta-ai-portfolio.vercel.app](https://benbouta-ai-portfolio.vercel.app/)
 
 For a local preview, follow the installation steps below.
 
